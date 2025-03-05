@@ -4,10 +4,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
   MapPin,
   Compass,
   FishIcon as Whale,
@@ -16,6 +12,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { contactLinks, socialLinks } from '@/config/mediaLinks'
+import { MediaLink } from '@/components/ui/media-link'
+import { SocialLinks } from '@/components/social-links'
+import { ContactLinks } from '@/components/contacts-links'
 
 export default function TurismoLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -116,34 +116,7 @@ export default function TurismoLanding() {
 
           <div className="hidden md:flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <Link
-                href="https://facebook.com"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://instagram.com"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
+              <SocialLinks />
             </div>
             <Button variant="outline" size="sm">
               Iniciar Sesión
@@ -182,34 +155,7 @@ export default function TurismoLanding() {
               Contacto
             </Link>
             <div className="flex items-center gap-3 px-3 py-2">
-              <Link
-                href="https://facebook.com"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://instagram.com"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5 text-gray-600 hover:text-cerulean transition-colors" />
-              </Link>
+              <ContactLinks />
             </div>
             <div className="flex flex-col gap-2 px-3 py-2">
               <Button variant="outline" size="sm" className="justify-center">
@@ -431,7 +377,9 @@ export default function TurismoLanding() {
             </div>
 
             <div className="text-center mt-12">
-              <Button variant="outline">Ver más fotos</Button>
+              <Button variant="outline">
+                <Link href={socialLinks?.[0].url}>Ver mas fotos</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -561,38 +509,7 @@ export default function TurismoLanding() {
                 <div className="flex items-center gap-4">
                   <p className="font-medium">Síguenos:</p>
                   <div className="flex gap-3">
-                    <Link
-                      href="https://facebook.com"
-                      target="_blank"
-                      className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-cadet-200 transition-colors"
-                      aria-label="Facebook"
-                    >
-                      <Facebook className="h-5 w-5 text-gray-600 hover:text-white" />
-                    </Link>
-                    <Link
-                      href="https://instagram.com"
-                      target="_blank"
-                      className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-cadet-200 transition-colors"
-                      aria-label="Instagram"
-                    >
-                      <Instagram className="h-5 w-5 text-gray-600 hover:text-white" />
-                    </Link>
-                    <Link
-                      href="https://twitter.com"
-                      target="_blank"
-                      className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-cadet-200 transition-colors"
-                      aria-label="Twitter"
-                    >
-                      <Twitter className="h-5 w-5 text-gray-600 hover:text-white" />
-                    </Link>
-                    <Link
-                      href="https://youtube.com"
-                      target="_blank"
-                      className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-cadet-200 transition-colors"
-                      aria-label="YouTube"
-                    >
-                      <Youtube className="h-5 w-5 text-gray-600 hover:text-white" />
-                    </Link>
+                    <SocialLinks />
                   </div>
                 </div>
               </div>
@@ -656,7 +573,7 @@ export default function TurismoLanding() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 bg-slate text-white">
+        <section className="py-12 ">
           <div className="container">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
@@ -696,38 +613,7 @@ export default function TurismoLanding() {
                 Descubre la magia del agua y la tierra con nosotros.
               </p>
               <div className="flex gap-4">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  className="text-gray-400 hover:text-skyblue transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  className="text-gray-400 hover:text-skyblue transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  className="text-gray-400 hover:text-skyblue transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="https://youtube.com"
-                  target="_blank"
-                  className="text-gray-400 hover:text-skyblue transition-colors"
-                  aria-label="YouTube"
-                >
-                  <Youtube className="h-5 w-5" />
-                </Link>
+                <SocialLinks />
               </div>
             </div>
 
