@@ -24,7 +24,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif']
+        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        trend: ['var(--font-trend-sans-one)', 'system-ui', 'sans-serif'] // Nueva fuente
       }
     }
   },

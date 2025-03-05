@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Montserrat, Poppins } from 'next/font/google'
+import './globals.css'
+
 //TREND SANS ONE
 //Montserrat light
-import './globals.css'
 // Configura fuentes primaria y secundaria
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -16,10 +17,17 @@ const poppins = Poppins({
   display: 'swap',
   variable: '--font-poppins'
 })
+
 export const metadata: Metadata = {
   title: 'Keabelmet expteditions',
   description: 'keabelmet expteditions. Siendo agua y tierra',
-  generator: 'raulzarza.dev'
+  generator: 'raulzarza.dev',
+  appleWebApp: {
+    title: 'keablemet',
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    startupImage: []
+  }
 }
 
 export default function RootLayout({

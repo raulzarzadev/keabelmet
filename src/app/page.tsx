@@ -47,7 +47,7 @@ export default function TurismoLanding() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className=" flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/keabelmet-logo.jpeg"
@@ -879,6 +879,16 @@ export default function TurismoLanding() {
             </div>
           </div>
         </div>
+        <p className="text-xs text-center mt-8">
+          Fonts made by{' '}
+          <a href="http://www.webfontfree.com" target="_blank">
+            Web Free Fonts
+          </a>{' '}
+          is licensed by{' '}
+          <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+            CC 4.0 BY
+          </a>
+        </p>
       </footer>
     </div>
   )
