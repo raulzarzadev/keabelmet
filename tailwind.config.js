@@ -21,6 +21,10 @@ module.exports = {
       },
       borderColor: {
         border: 'hsl(var(--border))'
+      },
+      fontFamily: {
+        sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif']
       }
     }
   },
