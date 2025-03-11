@@ -3,20 +3,14 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  MapPin,
-  Compass,
-  FishIcon as Whale,
-  Send,
-  ChevronRight
-} from 'lucide-react'
+import { MapPin, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { contactLinks, socialLinks } from '@/config/mediaLinks'
-import { MediaLink } from '@/components/ui/media-link'
+import { Card } from '@/components/ui/card'
+import { socialLinks } from '@/config/mediaLinks'
 import { SocialLinks } from '@/components/social-links'
 import { ContactLinks } from '@/components/contacts-links'
 import { Hero } from '@/components/sections/Hero'
+import { Expeditions } from '@/components/sections/Expeditions'
 
 export default function TurismoLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -178,137 +172,8 @@ export default function TurismoLanding() {
         <Hero />
 
         {/* Expediciones */}
-        <section id="expediciones" className="py-16 bg-bone">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-sans mb-4 text-slate">
-                Nuestras Expediciones
-              </h2>
-              <p className="text-gray-700 max-w-2xl mx-auto">
-                Descubre nuestras increíbles aventuras diseñadas para que vivas
-                experiencias inolvidables en contacto con la naturaleza.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Avistamiento de Ballenas */}
-              <Card className="overflow-hidden">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Avistamiento de ballenas"
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Whale className="h-5 w-5 text-cerulean" />
-                    <h3 className="font-semibold text-lg">
-                      Avistamiento de Ballenas
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Observa estos majestuosos mamíferos marinos en su hábitat
-                    natural durante la temporada de migración.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cerulean font-semibold">
-                      Desde $99
-                    </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex items-center gap-1"
-                    >
-                      Detalles <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Sandboard */}
-              <Card className="overflow-hidden">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Sandboard en dunas"
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Compass className="h-5 w-5 text-slate" />
-                    <h3 className="font-semibold text-lg">
-                      Sandboard en Dunas
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Deslízate por impresionantes dunas de arena y siente la
-                    adrenalina en este deporte extremo.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate font-semibold">Desde $79</span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex items-center gap-1"
-                    >
-                      Detalles <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Tour de Playas */}
-              <Card className="overflow-hidden">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Tour de playas"
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <MapPin className="h-5 w-5 text-cerulean" />
-                    <h3 className="font-semibold text-lg">
-                      Tour de Playas Secretas
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Visita las playas más hermosas y escondidas de la costa,
-                    lejos del turismo masivo.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cerulean font-semibold">
-                      Desde $129
-                    </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex items-center gap-1"
-                    >
-                      Detalles <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="text-center mt-12">
-              <Button className="bg-cerulean hover:bg-cerulean/90">
-                Ver todas las expediciones
-              </Button>
-            </div>
-          </div>
-        </section>
-
+        <Expeditions />
         {/* Galería */}
         <section id="galeria" className="py-16">
           <div className="container">
