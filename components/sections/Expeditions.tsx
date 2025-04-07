@@ -52,49 +52,53 @@ export const Expeditions = () => {
             experiencias inolvidables en contacto con la naturaleza.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Avistamiento de Ballenas */}
           {expeditions.map((expedition, index) => (
-            <Card key={index} className="overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src={
-                    expedition.image || '/placeholder.svg?height=400&width=600'
-                  }
-                  alt={expedition.title}
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
+            <div
+              key={index}
+              className="relative rounded-lg overflow-hidden h-[400px] group"
+            >
+              {/* Imagen de fondo */}
+              <Image
+                src={
+                  expedition.image || '/placeholder.svg?height=400&width=600'
+                }
+                alt={expedition.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+
+              {/* Gradiente para mejorar legibilidad */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+              {/* Contenido */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                 <div className="flex items-center gap-2 mb-3">
-                  <Compass className="h-5 w-5 text-slate" />
-                  <h3 className="font-semibold text-lg">{expedition.title}</h3>
+                  <Compass className="h-5 w-5" />
+                  <h3 className="font-semibold text-xl">{expedition.title}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{expedition.description}</p>
+
+                <p className="text-gray-200 mb-4">{expedition.description}</p>
+
                 <div className="flex items-center justify-between">
-                  <span className="text-slate font-semibold">
+                  <span className="font-semibold text-lg">
                     Desde $
-                    {new Intl.NumberFormat('en-US', {
+                    {new Intl.NumberFormat('es-MX', {
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0
                     }).format(expedition.price)}{' '}
-                    usd
+                    USD
                   </span>
-                </div>
-                <div className="flex justify-end">
+
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex items-center gap-1 mt-4"
+                    className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white"
                   >
-                    Detalles <ChevronRight className="h-4 w-4" />
+                    Detalles <ChevronRight className="h-4 w-4 ml-1" />
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
