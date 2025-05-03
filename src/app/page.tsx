@@ -11,6 +11,7 @@ import { SocialLinks } from '@/components/social-links'
 import { ContactLinks } from '@/components/contacts-links'
 import { Hero } from '@/components/sections/Hero'
 import { Expeditions } from '@/components/sections/Expeditions'
+import Gallery from '@/components/sections/Gallery'
 
 export default function TurismoLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -175,43 +176,7 @@ export default function TurismoLanding() {
 
         <Expeditions />
         {/* Galería */}
-        <section id="galeria" className="py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-sans mb-4 text-slate">
-                Galería de Aventuras
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Imágenes de nuestras expediciones y los momentos inolvidables
-                que nuestros clientes han vivido.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                <div
-                  key={item}
-                  className="relative aspect-square overflow-hidden rounded-lg"
-                >
-                  <Image
-                    src={`/placeholder.svg?height=400&width=400&text=Foto ${item}`}
-                    alt={`Galería de aventuras ${item}`}
-                    width={400}
-                    height={400}
-                    className="h-full w-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Button variant="outline">
-                <Link href={socialLinks?.[0].url}>Ver mas fotos</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
+        <Gallery />
         {/* Testimonios */}
         <section className="py-16 bg-cadet/20">
           <div className="container">
