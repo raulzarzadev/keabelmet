@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, UtensilsCrossed, Clock } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Renta de Yate",
+  description:
+    "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes.",
+}
 
 export default function RentaYatePage() {
   return (
@@ -14,7 +21,7 @@ export default function RentaYatePage() {
         <div className="mx-auto max-w-6xl px-6 py-32">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-medium text-white backdrop-blur">
             <MapPin className="h-4 w-4" />
-            Premium Experience
+            Experiencia Premium
           </div>
           <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             Renta de Yate de Lujo

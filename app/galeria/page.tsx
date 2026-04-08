@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Galeria de Aventuras",
+  description:
+    "Explora nuestra galeria de fotos de expediciones marinas en Baja California Sur. Ballenas, lobos marinos, surf y paisajes increibles del Mar de Cortes.",
+}
+
 export default function Galeria() {
   const images = [
     { url: "/sea-lions-swimming-underwater.jpg", alt: "Lobos marinos" },

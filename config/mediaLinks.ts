@@ -32,26 +32,26 @@ export const socialLinks = [
 export const contactLinks = [
   {
     name: "Email",
-    value: "info@keabelmet.com",
-    url: "mailto:info@keabelmet.com",
+    value: "keabelmet@gmail.com",
+    url: "mailto:keabelmet@gmail.com",
     icon: Mail,
   },
   {
     name: "Teléfono",
-    value: "+52 624 123 4567",
-    url: "tel:+526241234567",
+    value: "+52 442 205 6214",
+    url: "tel:+524422056214",
     icon: Phone,
   },
   {
     name: "WhatsApp",
-    value: "+52 624 123 4567",
-    url: "https://wa.me/526241234567",
+    value: "+52 442 205 6214",
+    url: "https://wa.me/524422056214",
     icon: Send,
   },
   {
     name: "Dirección",
-    value: "La Paz, Baja California Sur, México",
-    url: "https://maps.google.com/?q=La+Paz+BCS+Mexico",
+    value: "La Ventana, Baja California Sur, México C.P. 23232",
+    url: "https://maps.google.com/?q=La+Ventana+BCS+Mexico",
     icon: MapPin,
   },
 ]

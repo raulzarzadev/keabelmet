@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Users, Star } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Experiencias y Tours",
+  description:
+    "Descubre nuestras experiencias marinas en Baja California Sur: safaris, surf camp, buceo y mas. Aventuras unicas en el Mar de Cortes con guias expertos.",
+}
 
 export default function Experiencias() {
   const expeditions = [

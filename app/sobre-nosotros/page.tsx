@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import { Compass, Heart, Shield, Users } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description:
+    "Conoce al equipo de Keabelmet Expeditions. Mas de 15 anos de experiencia en expediciones marinas en Baja California Sur. Pasion, seguridad y respeto por el mar.",
+}
 
 export default function SobreNosotros() {
   return (

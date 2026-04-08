@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Users, MapPin, Clock, Anchor } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Renta de Velero",
+  description:
+    "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles.",
+}
 
 export default function RentaVeleroPage() {
   return (

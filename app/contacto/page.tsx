@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description:
+    "Contacta a Keabelmet Expeditions en La Paz, BCS. Escríbenos a info@keabelmet.com o llama al +52 612 123 4567. Reserva tu aventura marina hoy mismo.",
+}
 
 export default function Contacto() {
   return (

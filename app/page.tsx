@@ -11,9 +11,10 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/cachalotecta.jpeg"
-            alt="Keabelmet Expeditions - Safari Marino"
+            alt="Keabelmet Expeditions - Safari Marino en Baja California Sur"
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/35" />
@@ -49,15 +50,15 @@ export default function HomePage() {
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
             <div className="text-center">
               <div className="text-4xl font-bold text-white sm:text-5xl">15+</div>
-              <div className="mt-2 text-sm text-white/80 sm:text-base">Unique Tours</div>
+              <div className="mt-2 text-sm text-white/80 sm:text-base">Experiencias unicas</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-white sm:text-5xl">10K+</div>
-              <div className="mt-2 text-sm text-white/80 sm:text-base">Happy Adventurers</div>
+              <div className="mt-2 text-sm text-white/80 sm:text-base">Aventureros satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white sm:text-5xl">5.0</div>
-              <div className="mt-2 text-sm text-white/80 sm:text-base">Average Rating</div>
+              <div className="text-4xl font-bold text-white sm:text-5xl">9.8</div>
+              <div className="mt-2 text-sm text-white/80 sm:text-base">Calificacion promedio</div>
             </div>
           </div>
         </div>
@@ -83,10 +84,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/tour-espiritu-santo" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
+                  <Image
                     src="/lobo-marino-espiritu-santo.jpg"
-                    alt="Espíritu Santo Island"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Isla Espiritu Santo - Snorkel con lobos marinos"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -122,10 +125,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/tour-ballena-gris" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
+                  <Image
                     src="/ballena-gris-spyhop-new.jpg"
-                    alt="Gray Whale Tour"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Tour de avistamiento de ballena gris en Bahia Magdalena"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -161,10 +166,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/buceo-cabo-pulmo" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
+                  <Image
                     src="/buceo-cabo-pulmo-cardumen.jpg"
-                    alt="Cabo Pulmo Diving"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Buceo en Cabo Pulmo - Cardumen de peces en arrecife"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -200,10 +207,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/buceo-la-paz" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
+                  <Image
                     src="/buceo-la-paz-buzo.jpg"
-                    alt="La Paz Diving"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Buceo en La Paz - Buzo con lobos marinos"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -217,7 +226,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900">{"Buceo en La Paz\n"}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Buceo en La Paz</h3>
                   <p className="mt-3 text-gray-600">Nada con juguetones lobos marinos en su hábitat natural</p>
                   <div className="mt-6 flex items-center justify-between">
                     <div className="text-teal-700">
@@ -239,10 +248,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/renta-velero" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
-                    src="/ sailboat-sailing-sunset-sea-of-cortez-romantic.jpg"
-                    alt="Sailboat Rental"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  <Image
+                    src="/sailboat-sailing-sunset-sea-of-cortez-romantic.jpg"
+                    alt="Renta de velero en el Golfo de California al atardecer"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -252,19 +263,19 @@ export default function HomePage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-sm font-medium text-gray-900">{"Golfo de California"}</span>
+                    <span className="text-sm font-medium text-gray-900">Golfo de California</span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900">{"Renta un velero"}</h3>
-                  <p className="mt-3 text-gray-600">{"Ya sea por unas horas o para dormir"}</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Renta un velero</h3>
+                  <p className="mt-3 text-gray-600">Ideal para unas horas de navegacion o para pasar la noche a bordo</p>
                   <div className="mt-6 flex items-center justify-between">
                     <div className="text-teal-700">
-                      <span className="text-sm">From</span>
-                      <span className="ml-1 text-2xl font-bold">$140</span>
+                      <span className="text-sm">Desde</span>
+                      <span className="ml-1 text-2xl font-bold">$600</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-900">
-                      <span className="text-sm font-medium">Learn More</span>
+                      <span className="text-sm font-medium">Saber mas</span>
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -278,10 +289,12 @@ export default function HomePage() {
             <article className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
               <Link href="/actividades/renta-yate" className="block focus:outline-none">
                 <div className="relative h-72 w-full overflow-hidden">
-                  <img
+                  <Image
                     src="/luxury-yacht-ocean-balandra-beach-turquoise-lagoon.jpg"
-                    alt="Yacht Rental"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Renta de yate en Balandra - Laguna turquesa"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
                     <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
@@ -291,19 +304,19 @@ export default function HomePage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-sm font-medium text-gray-900">Protected Natural Area</span>
+                    <span className="text-sm font-medium text-gray-900">Golfo de California</span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900">{"Renta un Yate"}</h3>
-                  <p className="mt-3 text-gray-600">{"El Golfo de California como te lo mereces"}</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Renta un Yate</h3>
+                  <p className="mt-3 text-gray-600">Vive el Golfo de California como te lo mereces</p>
                   <div className="mt-6 flex items-center justify-between">
                     <div className="text-teal-700">
-                      <span className="text-sm">From</span>
-                      <span className="ml-1 text-2xl font-bold">$80</span>
+                      <span className="text-sm">Desde</span>
+                      <span className="ml-1 text-2xl font-bold">$1,700</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-900">
-                      <span className="text-sm font-medium">Learn More</span>
+                      <span className="text-sm font-medium">Saber mas</span>
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -550,7 +563,7 @@ export default function HomePage() {
                 reviews: 156,
                 duration: "6 días",
                 capacity: "6-8 Personas",
-                features: ["Surf lessons", "Fisioterapeuta", "Video-análisis diario", "Hospedaje", "All meals"],
+                features: ["Clases de surf", "Fisioterapeuta", "Video-analisis diario", "Hospedaje", "Todas las comidas"],
                 price: 195,
               },
             ].map((expedition, i) => (
@@ -561,10 +574,12 @@ export default function HomePage() {
                 <Link href={expedition.href} className="block focus:outline-none">
                   {/* Image with rating badge */}
                   <div className="relative h-64 w-full overflow-hidden">
-                    <img
+                    <Image
                       src={expedition.img || "/placeholder.svg"}
                       alt={expedition.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     {/* Rating badge */}
                     <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
@@ -628,7 +643,7 @@ export default function HomePage() {
                         <div className="text-2xl font-bold text-teal-700">${expedition.price}</div>
                       </div>
                       <button className="rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-800">
-                        Book Now
+                        Reservar
                       </button>
                     </div>
                   </div>
@@ -791,7 +806,7 @@ export default function HomePage() {
       {/* 7) PREGUNTAS FRECUENTES */}
       <section id="faq" className="relative bg-neutral-50">
         <div className="absolute inset-0 -z-10 opacity-10">
-          <Image src="/faq.jpg" alt="" fill className="object-cover" />
+          <Image src="/faq.jpg" alt="Fondo marino de Baja California Sur" fill className="object-cover" sizes="100vw" />
         </div>
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-3xl font-bold">Preguntas frecuentes</h2>
@@ -825,9 +840,9 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/ballenagriscta.jpg"
-            alt="Keabelmet Expeditions - Safari Marino"
+            alt="Keabelmet Expeditions - Aventura en el Mar de Cortes"
             fill
-            priority
+            sizes="100vw"
             className="object-cover brightness-95"
           />
           <div className="absolute inset-0 bg-white/15" />
@@ -844,7 +859,7 @@ export default function HomePage() {
           <div className="mt-8 flex justify-center gap-4">
             {/* Ajusta los href si tus rutas usan otros slugs */}
             <Link
-              href="/bahia-magdalena#inicio"
+              href="/expediciones/safari-bahia-magdalena"
               className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700 transition drop-shadow-md inline-flex items-center justify-center"
               aria-label="Reservar Safari Bahía Magdalena (ir al inicio de la landing)"
             >
@@ -852,7 +867,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/la-ventana#inicio"
+              href="/expediciones/safari-la-ventana"
               className="rounded-lg border border-white px-6 py-3 font-semibold text-white hover:bg-white/10 transition drop-shadow-md inline-flex items-center justify-center"
               aria-label="Reservar Safari La Ventana (ir al inicio de la landing)"
             >

@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Clock, Check, Star, Users } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Tour Isla Espiritu Santo",
+  description:
+    "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS.",
+}
 
 export default function TourEspirituSantoPage() {
   return (
@@ -495,7 +502,7 @@ export default function TourEspirituSantoPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2025 Keabelmet. Todos los derechos reservados.</p>
+          <p className="text-gray-400">© 2026 Keabelmet. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

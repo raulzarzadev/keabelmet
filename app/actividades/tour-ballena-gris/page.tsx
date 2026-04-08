@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Clock, MapPin, Check, Star, Anchor } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Tour Ballena Gris en Bahia Magdalena",
+  description:
+    "Vive la experiencia de avistar ballenas grises en Bahia Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproduccion.",
+}
 
 export default function TourBallenaGrisPage() {
   return (
@@ -698,7 +705,7 @@ export default function TourBallenaGrisPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2025 Keabelmet. Todos los derechos reservados.</p>
+          <p className="text-gray-400">© 2026 Keabelmet. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

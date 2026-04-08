@@ -97,18 +97,18 @@ export const Expeditions = () => {
 
                 <div className="flex items-center justify-between pt-6 border-t border-border">
                   <div>
-                    <div className="text-xs text-muted-foreground mb-1">Per person</div>
+                    <div className="text-xs text-muted-foreground mb-1">Por persona</div>
                     <div className="text-2xl font-semibold text-primary">{expedition.price}</div>
                   </div>
                   {expedition.link ? (
                     <Link href={expedition.link}>
                       <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-                        Book Now
+                        Reservar
                       </Button>
                     </Link>
                   ) : (
                     <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-                      Book Now
+                      Reservar
                     </Button>
                   )}
                 </div>

@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Clock } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Blog de Aventuras",
+  description:
+    "Lee historias, consejos y guias sobre vida marina en Baja California Sur. Temporadas de ballenas, tips de surf, buceo y mas en nuestro blog de aventuras.",
+}
 
 export default function Blog() {
   const posts = [

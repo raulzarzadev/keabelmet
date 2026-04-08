@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, Camera, Clock } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Buceo en La Paz",
+  description:
+    "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
+}
 
 export default function BuceoLaPazPage() {
   return (
@@ -14,7 +21,7 @@ export default function BuceoLaPazPage() {
         <div className="mx-auto max-w-6xl px-6 py-32">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-medium text-white backdrop-blur">
             <MapPin className="h-4 w-4" />
-            Sea Lion Colony
+            Colonia de Lobos Marinos
           </div>
           <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Buceo en La Paz</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/90">

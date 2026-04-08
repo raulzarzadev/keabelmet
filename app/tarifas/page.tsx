@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import { Check } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Tarifas y Precios",
+  description:
+    "Consulta las tarifas y precios de nuestras expediciones marinas en Baja California Sur. Paquetes transparentes con todo incluido para tu aventura perfecta.",
+}
 
 export default function Tarifas() {
   const packages = [

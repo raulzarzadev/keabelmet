@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, Clock, CheckCircle2, Anchor } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Buceo en Cabo Pulmo",
+  description:
+    "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan.",
+}
 
 export default function BuceoCaboPulmoPage() {
   return (

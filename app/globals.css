@@ -11,9 +11,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Usar las fuentes que definiste en layout.tsx */
+/* Fuente principal */
 body {
-  font-family: var(--font-montserrat), var(--font-poppins), sans-serif;
+  font-family: var(--font-geist), sans-serif;
 }
 
 /* Fondo cachalote (ejemplo para sección hero/cta) */
