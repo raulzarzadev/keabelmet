@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Clock, Check, Star, Users } from "lucide-react"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Tour Isla Espiritu Santo",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
     "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS.",
 }
 
-export default function TourEspirituSantoPage() {
+export default async function TourEspirituSantoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <main className="flex-1">
@@ -489,7 +493,7 @@ export default function TourEspirituSantoPage() {
               <button className="bg-white hover:bg-gray-100 text-teal-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg">
                 Reserva tu aventura ahora
               </button>
-              <Link href="/">
+              <Link href={l("/")}>
                 <button className="text-white border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                   Ver más expediciones
                 </button>

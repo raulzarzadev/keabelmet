@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, Camera, Clock } from "lucide-react"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Buceo en La Paz",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
     "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
 }
 
-export default function BuceoLaPazPage() {
+export default async function BuceoLaPazPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -136,13 +140,13 @@ export default function BuceoLaPazPage() {
           <p className="mt-4 text-lg">Una experiencia que nunca olvidarás. Reserva hoy</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href="/contacto"
+              href={l("/contacto")}
               className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-teal-700 transition hover:bg-gray-100"
             >
               Reservar Ahora
             </Link>
             <Link
-              href="/"
+              href={l("/")}
               className="inline-flex items-center justify-center rounded-xl border border-white px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               Ver Más Tours

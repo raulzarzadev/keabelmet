@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Users, Star } from "lucide-react"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Experiencias y Tours",
@@ -8,7 +9,10 @@ export const metadata: Metadata = {
     "Descubre nuestras experiencias marinas en Baja California Sur: safaris, surf camp, buceo y mas. Aventuras unicas en el Mar de Cortes con guias expertos.",
 }
 
-export default function Experiencias() {
+export default async function Experiencias({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   const expeditions = [
     {
       title: "Safari Bahía Magdalena",
@@ -20,7 +24,7 @@ export default function Experiencias() {
       reviews: 156,
       price: 165,
       features: ["Lobos Marinos", "Marlines", "Snorkel", "Almuerzo"],
-      href: "/expediciones/safari-bahia-magdalena",
+      href: l("/expediciones/safari-bahia-magdalena"),
     },
     {
       title: "Safari La Ventana",
@@ -32,7 +36,7 @@ export default function Experiencias() {
       reviews: 243,
       price: 180,
       features: ["Móbulas", "Ballenas", "Guía Experto", "Fotos"],
-      href: "/expediciones/safari-la-ventana",
+      href: l("/expediciones/safari-la-ventana"),
     },
     {
       title: "Surf Camp La Paz (6 días)",
@@ -44,7 +48,7 @@ export default function Experiencias() {
       reviews: 89,
       price: 195,
       features: ["Clases Diarias", "Video Análisis", "Transporte", "Snacks"],
-      href: "/surf-camp",
+      href: l("/surf-camp"),
     },
   ]
 

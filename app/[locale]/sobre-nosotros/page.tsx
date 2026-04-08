@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Compass, Heart, Shield, Users } from "lucide-react"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros",
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
     "Conoce al equipo de Keabelmet Expeditions. Mas de 15 anos de experiencia en expediciones marinas en Baja California Sur. Pasion, seguridad y respeto por el mar.",
 }
 
-export default function SobreNosotros() {
+export default async function SobreNosotros({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

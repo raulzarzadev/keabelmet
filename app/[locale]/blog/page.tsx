@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Clock } from "lucide-react"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Blog de Aventuras",
@@ -8,7 +9,10 @@ export const metadata: Metadata = {
     "Lee historias, consejos y guias sobre vida marina en Baja California Sur. Temporadas de ballenas, tips de surf, buceo y mas en nuestro blog de aventuras.",
 }
 
-export default function Blog() {
+export default async function Blog({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   const posts = [
     {
       title: "La Temporada de Ballenas Grises en Baja California Sur",
@@ -61,7 +65,7 @@ export default function Blog() {
                 </div>
                 <div className="p-6 md:w-2/3">
                   <h2 className="text-2xl font-bold mb-3 hover:text-teal-600 transition-colors">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    <Link href={l(`/blog/${post.slug}`)}>{post.title}</Link>
                   </h2>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500">

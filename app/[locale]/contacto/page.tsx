@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
     "Contacta a Keabelmet Expeditions en La Paz, BCS. Escríbenos a info@keabelmet.com o llama al +52 612 123 4567. Reserva tu aventura marina hoy mismo.",
 }
 
-export default function Contacto() {
+export default async function Contacto({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
   return (
     <div className="min-h-screen">
       {/* Hero */}

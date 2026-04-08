@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Check } from "lucide-react"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Tarifas y Precios",
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
     "Consulta las tarifas y precios de nuestras expediciones marinas en Baja California Sur. Paquetes transparentes con todo incluido para tu aventura perfecta.",
 }
 
-export default function Tarifas() {
+export default async function Tarifas({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
   const packages = [
     {
       title: "Safari Bahía Magdalena",

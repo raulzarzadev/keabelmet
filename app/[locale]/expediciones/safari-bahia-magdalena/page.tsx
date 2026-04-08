@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { SafariBahiaMagdalena } from "@/components/safari-bahia-magdalena"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Safari Bahia Magdalena",
@@ -7,6 +8,9 @@ export const metadata: Metadata = {
     "Safari marino en Bahia Magdalena, BCS. Nada con lobos marinos, avista marlines y disfruta la corrida de sardinas. Una expedicion unica de noviembre a diciembre.",
 }
 
-export default function SafariBahiaMagdalenaPage() {
+export default async function SafariBahiaMagdalenaPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+
   return <SafariBahiaMagdalena />
 }

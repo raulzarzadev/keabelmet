@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BallenaGrisLanding } from "@/components/ballena-gris-landing"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Expedicion Ballena Gris",
@@ -7,6 +8,9 @@ export const metadata: Metadata = {
     "Expedicion para avistar ballenas grises en Baja California Sur. Encuentros cercanos en su santuario natural con guias certificados y embarcaciones seguras.",
 }
 
-export default function BallenaGrisPage() {
+export default async function BallenaGrisPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+
   return <BallenaGrisLanding />
 }

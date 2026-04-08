@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, UtensilsCrossed, Clock } from "lucide-react"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Renta de Yate",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
     "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes.",
 }
 
-export default function RentaYatePage() {
+export default async function RentaYatePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -145,13 +149,13 @@ export default function RentaYatePage() {
           <p className="mt-4 text-lg">Experiencia exclusiva. Consulta disponibilidad</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href="/contacto"
+              href={l("/contacto")}
               className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-teal-700 transition hover:bg-gray-100"
             >
               Consultar Ahora
             </Link>
             <Link
-              href="/"
+              href={l("/")}
               className="inline-flex items-center justify-center rounded-xl border border-white px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               Ver Más Experiencias

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, Clock, CheckCircle2, Anchor } from "lucide-react"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Buceo en Cabo Pulmo",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
     "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan.",
 }
 
-export default function BuceoCaboPulmoPage() {
+export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -172,7 +176,7 @@ export default function BuceoCaboPulmoPage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/contacto"
+                  href={l("/contacto")}
                   className="block w-full rounded-xl bg-teal-600 py-3 text-center font-semibold text-white transition hover:bg-teal-700"
                 >
                   Reservar Ahora
@@ -223,7 +227,7 @@ export default function BuceoCaboPulmoPage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/contacto"
+                  href={l("/contacto")}
                   className="block w-full rounded-xl bg-teal-600 py-3 text-center font-semibold text-white transition hover:bg-teal-700"
                 >
                   Reservar Ahora
@@ -268,7 +272,7 @@ export default function BuceoCaboPulmoPage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/contacto"
+                  href={l("/contacto")}
                   className="block w-full rounded-xl bg-teal-600 py-3 text-center font-semibold text-white transition hover:bg-teal-700"
                 >
                   Reservar Ahora
@@ -316,7 +320,7 @@ export default function BuceoCaboPulmoPage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/contacto"
+                  href={l("/contacto")}
                   className="block w-full rounded-xl bg-teal-600 py-3 text-center font-semibold text-white transition hover:bg-teal-700"
                 >
                   Reservar Ahora
@@ -561,13 +565,13 @@ export default function BuceoCaboPulmoPage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href="/contacto"
+              href={l("/contacto")}
               className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 font-semibold text-teal-700 transition hover:bg-gray-100"
             >
               Reservar Ahora
             </Link>
             <Link
-              href="/"
+              href={l("/")}
               className="inline-flex items-center justify-center rounded-xl border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white/10"
             >
               Ver Más Experiencias

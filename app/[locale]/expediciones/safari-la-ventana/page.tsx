@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { SafariLanding } from "@/components/safari-landing"
+import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Safari La Ventana",
@@ -7,6 +8,9 @@ export const metadata: Metadata = {
     "Expedicion marina en La Ventana, BCS. Observa la migracion de mobulas y ballenas con guias expertos. Aventura de medio dia de abril a junio en el Mar de Cortes.",
 }
 
-export default function SafariLaVentanaPage() {
+export default async function SafariLaVentanaPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
+
   return <SafariLanding />
 }

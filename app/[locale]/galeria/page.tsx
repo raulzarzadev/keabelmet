@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Galeria de Aventuras",
@@ -6,7 +7,9 @@ export const metadata: Metadata = {
     "Explora nuestra galeria de fotos de expediciones marinas en Baja California Sur. Ballenas, lobos marinos, surf y paisajes increibles del Mar de Cortes.",
 }
 
-export default function Galeria() {
+export default async function Galeria({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: loc } = await params
+  const locale = isValidLocale(loc) ? loc : defaultLocale
   const images = [
     { url: "/sea-lions-swimming-underwater.jpg", alt: "Lobos marinos" },
     { url: "/whale-breaching-ocean.jpg", alt: "Ballena saltando" },
