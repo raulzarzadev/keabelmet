@@ -1,0 +1,62 @@
+{
+  "es": {
+    "title": "Galería",
+    "subtitle": "Momentos capturados en nuestras expediciones",
+    "images": {
+      "seaLions": "Lobos marinos",
+      "whaleBreaching": "Ballena saltando",
+      "surfer": "Surfista",
+      "stripedMarlin": "Marlin rayado",
+      "mantaRay": "Móbula nadando",
+      "kayak": "Kayak en playa",
+      "snorkeling": "Snorkel en arrecife",
+      "grayWhale": "Ballena gris de cerca",
+      "landscape": "Paisaje de Baja"
+    }
+  },
+  "en": {
+    "title": "Gallery",
+    "subtitle": "Moments captured during our expeditions",
+    "images": {
+      "seaLions": "Sea lions",
+      "whaleBreaching": "Whale breaching",
+      "surfer": "Surfer",
+      "stripedMarlin": "Striped marlin",
+      "mantaRay": "Mobula ray swimming",
+      "kayak": "Beach kayaking",
+      "snorkeling": "Snorkeling at the reef",
+      "grayWhale": "Gray whale close-up",
+      "landscape": "Baja landscape"
+    }
+  },
+  "fr": {
+    "title": "Galerie",
+    "subtitle": "Moments capturés lors de nos expéditions",
+    "images": {
+      "seaLions": "Lions de mer",
+      "whaleBreaching": "Baleine sautant hors de l'eau",
+      "surfer": "Surfeur",
+      "stripedMarlin": "Marlin rayé",
+      "mantaRay": "Mobula nageant",
+      "kayak": "Kayak sur la plage",
+      "snorkeling": "Plongée en apnée sur le récif",
+      "grayWhale": "Baleine grise de près",
+      "landscape": "Paysage de Baja"
+    }
+  },
+  "zh": {
+    "title": "相册",
+    "subtitle": "我们探险中捕捉的精彩瞬间",
+    "images": {
+      "seaLions": "海狮",
+      "whaleBreaching": "鲸鱼跃出水面",
+      "surfer": "冲浪者",
+      "stripedMarlin": "条纹马林鱼",
+      "mantaRay": "蝠鲼游泳",
+      "kayak": "海滩皮划艇",
+      "snorkeling": "珊瑚礁浮潜",
+      "grayWhale": "灰鲸近景",
+      "landscape": "Baja 风景"
+    }
+  }
+}

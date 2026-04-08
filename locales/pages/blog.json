@@ -1,0 +1,102 @@
+{
+  "es": {
+    "title": "Blog",
+    "subtitle": "Historias, consejos y noticias sobre la vida marina",
+    "readTimeUnit": "min",
+    "posts": {
+      "grayWhales": {
+        "title": "La Temporada de Ballenas Grises en Baja California Sur",
+        "excerpt": "Descubre cuándo y dónde observar las ballenas grises en su migración anual.",
+        "date": "15 Nov 2024",
+        "readTime": "5 min"
+      },
+      "seaLions": {
+        "title": "Consejos para Nadar con Lobos Marinos",
+        "excerpt": "Todo lo que necesitas saber para tener un encuentro seguro y memorable.",
+        "date": "8 Nov 2024",
+        "readTime": "4 min"
+      },
+      "surfing": {
+        "title": "Las Mejores Playas para Surfear en La Paz",
+        "excerpt": "Guía completa de los spots de surf más increíbles de la región.",
+        "date": "1 Nov 2024",
+        "readTime": "6 min"
+      }
+    }
+  },
+  "en": {
+    "title": "Blog",
+    "subtitle": "Stories, tips, and news about marine life",
+    "readTimeUnit": "min",
+    "posts": {
+      "grayWhales": {
+        "title": "Gray Whale Season in Baja California Sur",
+        "excerpt": "Discover when and where to observe gray whales during their annual migration.",
+        "date": "Nov 15, 2024",
+        "readTime": "5 min"
+      },
+      "seaLions": {
+        "title": "Tips for Swimming with Sea Lions",
+        "excerpt": "Everything you need to know for a safe and memorable encounter.",
+        "date": "Nov 8, 2024",
+        "readTime": "4 min"
+      },
+      "surfing": {
+        "title": "The Best Surfing Beaches in La Paz",
+        "excerpt": "A complete guide to the most incredible surf spots in the region.",
+        "date": "Nov 1, 2024",
+        "readTime": "6 min"
+      }
+    }
+  },
+  "fr": {
+    "title": "Blog",
+    "subtitle": "Récits, conseils et actualités sur la vie marine",
+    "readTimeUnit": "min",
+    "posts": {
+      "grayWhales": {
+        "title": "La saison des baleines grises en Baja California Sur",
+        "excerpt": "Découvrez quand et où observer les baleines grises lors de leur migration annuelle.",
+        "date": "15 nov. 2024",
+        "readTime": "5 min"
+      },
+      "seaLions": {
+        "title": "Conseils pour nager avec les lions de mer",
+        "excerpt": "Tout ce que vous devez savoir pour une rencontre sûre et mémorable.",
+        "date": "8 nov. 2024",
+        "readTime": "4 min"
+      },
+      "surfing": {
+        "title": "Les meilleures plages pour surfer à La Paz",
+        "excerpt": "Guide complet des spots de surf les plus incroyables de la région.",
+        "date": "1er nov. 2024",
+        "readTime": "6 min"
+      }
+    }
+  },
+  "zh": {
+    "title": "博客",
+    "subtitle": "关于海洋生物的故事、建议和新闻",
+    "readTimeUnit": "分钟",
+    "posts": {
+      "grayWhales": {
+        "title": "Baja California Sur 的灰鲸季节",
+        "excerpt": "了解何时何地观赏灰鲸的年度迁徙。",
+        "date": "2024年11月15日",
+        "readTime": "5 分钟"
+      },
+      "seaLions": {
+        "title": "与海狮一起游泳的建议",
+        "excerpt": "安全而难忘的邂逅所需了解的一切。",
+        "date": "2024年11月8日",
+        "readTime": "4 分钟"
+      },
+      "surfing": {
+        "title": "La Paz 最佳冲浪海滩",
+        "excerpt": "该地区最令人惊叹的冲浪点完整指南。",
+        "date": "2024年11月1日",
+        "readTime": "6 分钟"
+      }
+    }
+  }
+}

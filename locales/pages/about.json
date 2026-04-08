@@ -1,0 +1,54 @@
+{
+  "es": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Expertos en expediciones marinas en Baja California Sur",
+    "historyTitle": "Nuestra Historia",
+    "historyP1": "Keabelmet nacio de la pasion por la vida marina y el deseo de compartir las maravillas de Baja California Sur con el mundo. Con mas de 15 anos de experiencia, nos especializamos en crear encuentros memorables con la fauna marina de la region.",
+    "historyP2": "Desde nadar con lobos marinos hasta observar ballenas en su habitat natural, cada expedicion esta disenada para ser segura, educativa y respetuosa con el medio ambiente.",
+    "values": [
+      { "title": "Pasion por la Naturaleza", "text": "Amamos lo que hacemos y cuidamos el ecosistema marino" },
+      { "title": "Seguridad Primero", "text": "Equipos certificados y guias experimentados" },
+      { "title": "Experiencia Local", "text": "Conocemos cada rincon de Baja California Sur" },
+      { "title": "Grupos Pequenos", "text": "Expediciones intimas para mejores experiencias" }
+    ]
+  },
+  "en": {
+    "title": "About Us",
+    "subtitle": "Marine expedition experts in Baja California Sur",
+    "historyTitle": "Our Story",
+    "historyP1": "Keabelmet was born from a passion for marine life and the desire to share the wonders of Baja California Sur with the world. With over 15 years of experience, we specialize in creating memorable encounters with the region's marine wildlife.",
+    "historyP2": "From swimming with sea lions to observing whales in their natural habitat, every expedition is designed to be safe, educational, and respectful of the environment.",
+    "values": [
+      { "title": "Passion for Nature", "text": "We love what we do and protect the marine ecosystem" },
+      { "title": "Safety First", "text": "Certified equipment and experienced guides" },
+      { "title": "Local Expertise", "text": "We know every corner of Baja California Sur" },
+      { "title": "Small Groups", "text": "Intimate expeditions for better experiences" }
+    ]
+  },
+  "fr": {
+    "title": "A Propos",
+    "subtitle": "Experts en expeditions marines en Baja California Sur",
+    "historyTitle": "Notre Histoire",
+    "historyP1": "Keabelmet est ne d'une passion pour la vie marine et du desir de partager les merveilles de Baja California Sur avec le monde. Avec plus de 15 ans d'experience, nous nous specialisons dans la creation de rencontres memorables avec la faune marine de la region.",
+    "historyP2": "De la nage avec les lions de mer a l'observation des baleines dans leur habitat naturel, chaque expedition est concue pour etre sure, educative et respectueuse de l'environnement.",
+    "values": [
+      { "title": "Passion pour la Nature", "text": "Nous aimons ce que nous faisons et protegeons l'ecosysteme marin" },
+      { "title": "Securite d'Abord", "text": "Equipement certifie et guides experimentes" },
+      { "title": "Expertise Locale", "text": "Nous connaissons chaque recoin de Baja California Sur" },
+      { "title": "Petits Groupes", "text": "Expeditions intimistes pour de meilleures experiences" }
+    ]
+  },
+  "zh": {
+    "title": "\u5173\u4e8e\u6211\u4eec",
+    "subtitle": "\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u6d77\u6d0b\u63a2\u9669\u4e13\u5bb6",
+    "historyTitle": "\u6211\u4eec\u7684\u6545\u4e8b",
+    "historyP1": "Keabelmet\u8bde\u751f\u4e8e\u5bf9\u6d77\u6d0b\u751f\u547d\u7684\u70ed\u7231\u548c\u4e0e\u4e16\u754c\u5206\u4eab\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u5947\u89c2\u7684\u613f\u671b\u3002\u62e5\u6709\u8d8515\u5e74\u7684\u7ecf\u9a8c\uff0c\u6211\u4eec\u4e13\u6ce8\u4e8e\u521b\u9020\u4e0e\u8be5\u5730\u533a\u6d77\u6d0b\u91ce\u751f\u52a8\u7269\u7684\u96be\u5fd8\u76f8\u9047\u3002",
+    "historyP2": "\u4ece\u4e0e\u6d77\u72ee\u5171\u6cf3\u5230\u5728\u81ea\u7136\u6816\u606f\u5730\u89c2\u5bdf\u9cb8\u9c7c\uff0c\u6bcf\u6b21\u63a2\u9669\u90fd\u65e8\u5728\u5b89\u5168\u3001\u6559\u80b2\u548c\u5c0a\u91cd\u73af\u5883\u3002",
+    "values": [
+      { "title": "\u70ed\u7231\u81ea\u7136", "text": "\u6211\u4eec\u70ed\u7231\u6240\u505a\u7684\u4e8b\u4e1a\uff0c\u4fdd\u62a4\u6d77\u6d0b\u751f\u6001\u7cfb\u7edf" },
+      { "title": "\u5b89\u5168\u7b2c\u4e00", "text": "\u8ba4\u8bc1\u8bbe\u5907\u548c\u7ecf\u9a8c\u4e30\u5bcc\u7684\u5411\u5bfc" },
+      { "title": "\u5f53\u5730\u4e13\u4e1a\u77e5\u8bc6", "text": "\u6211\u4eec\u719f\u6089\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u7684\u6bcf\u4e2a\u89d2\u843d" },
+      { "title": "\u5c0f\u56e2\u4f53", "text": "\u5c0f\u578b\u63a2\u9669\u56e2\u5e26\u6765\u66f4\u597d\u7684\u4f53\u9a8c" }
+    ]
+  }
+}

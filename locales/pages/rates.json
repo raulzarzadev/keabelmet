@@ -1,0 +1,182 @@
+{
+  "es": {
+    "title": "Tarifas",
+    "subtitle": "Precios transparentes para experiencias inolvidables",
+    "mostPopular": "Más Popular",
+    "currency": "USD",
+    "bookNow": "Reservar Ahora",
+    "packages": {
+      "safariBahiaMagdalena": {
+        "title": "Safari Bahía Magdalena",
+        "duration": "Día completo",
+        "includes": [
+          "Transporte desde La Paz",
+          "Equipo de snorkel",
+          "Guía certificado",
+          "Almuerzo y bebidas",
+          "Fotos del tour",
+          "Seguro de accidentes"
+        ]
+      },
+      "safariLaVentana": {
+        "title": "Safari La Ventana",
+        "duration": "Medio día",
+        "includes": [
+          "Transporte desde La Paz",
+          "Equipo de snorkel",
+          "Guía experto",
+          "Bebidas y snacks",
+          "Sesión de fotos profesional",
+          "Seguro de accidentes"
+        ]
+      },
+      "surfCamp": {
+        "title": "Surf Camp (6 días)",
+        "duration": "Por día",
+        "includes": [
+          "Clases diarias de surf",
+          "Análisis de video",
+          "Equipo completo",
+          "Transporte diario",
+          "Snacks y bebidas",
+          "Feedback personalizado"
+        ]
+      }
+    }
+  },
+  "en": {
+    "title": "Rates",
+    "subtitle": "Transparent pricing for unforgettable experiences",
+    "mostPopular": "Most Popular",
+    "currency": "USD",
+    "bookNow": "Book Now",
+    "packages": {
+      "safariBahiaMagdalena": {
+        "title": "Safari Bahía Magdalena",
+        "duration": "Full day",
+        "includes": [
+          "Transportation from La Paz",
+          "Snorkel gear",
+          "Certified guide",
+          "Lunch and drinks",
+          "Tour photos",
+          "Accident insurance"
+        ]
+      },
+      "safariLaVentana": {
+        "title": "Safari La Ventana",
+        "duration": "Half day",
+        "includes": [
+          "Transportation from La Paz",
+          "Snorkel gear",
+          "Expert guide",
+          "Drinks and snacks",
+          "Professional photo session",
+          "Accident insurance"
+        ]
+      },
+      "surfCamp": {
+        "title": "Surf Camp (6 days)",
+        "duration": "Per day",
+        "includes": [
+          "Daily surf lessons",
+          "Video analysis",
+          "Full equipment",
+          "Daily transportation",
+          "Snacks and drinks",
+          "Personalized feedback"
+        ]
+      }
+    }
+  },
+  "fr": {
+    "title": "Tarifs",
+    "subtitle": "Des prix transparents pour des expériences inoubliables",
+    "mostPopular": "Le plus populaire",
+    "currency": "USD",
+    "bookNow": "Réserver maintenant",
+    "packages": {
+      "safariBahiaMagdalena": {
+        "title": "Safari Bahía Magdalena",
+        "duration": "Journée complète",
+        "includes": [
+          "Transport depuis La Paz",
+          "Équipement de plongée en apnée",
+          "Guide certifié",
+          "Déjeuner et boissons",
+          "Photos de l'excursion",
+          "Assurance accidents"
+        ]
+      },
+      "safariLaVentana": {
+        "title": "Safari La Ventana",
+        "duration": "Demi-journée",
+        "includes": [
+          "Transport depuis La Paz",
+          "Équipement de plongée en apnée",
+          "Guide expert",
+          "Boissons et en-cas",
+          "Séance photo professionnelle",
+          "Assurance accidents"
+        ]
+      },
+      "surfCamp": {
+        "title": "Surf Camp (6 jours)",
+        "duration": "Par jour",
+        "includes": [
+          "Cours de surf quotidiens",
+          "Analyse vidéo",
+          "Équipement complet",
+          "Transport quotidien",
+          "En-cas et boissons",
+          "Retour personnalisé"
+        ]
+      }
+    }
+  },
+  "zh": {
+    "title": "价格",
+    "subtitle": "透明的价格，难忘的体验",
+    "mostPopular": "最受欢迎",
+    "currency": "USD",
+    "bookNow": "立即预订",
+    "packages": {
+      "safariBahiaMagdalena": {
+        "title": "Safari Bahía Magdalena",
+        "duration": "全天",
+        "includes": [
+          "从 La Paz 出发的交通",
+          "浮潜装备",
+          "持证导游",
+          "午餐和饮品",
+          "行程照片",
+          "意外保险"
+        ]
+      },
+      "safariLaVentana": {
+        "title": "Safari La Ventana",
+        "duration": "半天",
+        "includes": [
+          "从 La Paz 出发的交通",
+          "浮潜装备",
+          "专业导游",
+          "饮品和小食",
+          "专业摄影服务",
+          "意外保险"
+        ]
+      },
+      "surfCamp": {
+        "title": "Surf Camp（6天）",
+        "duration": "每天",
+        "includes": [
+          "每日冲浪课程",
+          "视频分析",
+          "全套装备",
+          "每日交通",
+          "小食和饮品",
+          "个性化反馈"
+        ]
+      }
+    }
+  }
+}
