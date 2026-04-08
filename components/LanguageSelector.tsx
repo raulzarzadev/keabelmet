@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { locales, type Locale, defaultLocale, pathnameForLocale, getLocaleFromPathname } from "@/lib/i18n"
 
 const localeLabels: Record<Locale, { label: string; flag: string }> = {
-  es: { label: "ES", flag: "\u{1F1EA}\u{1F1F8}" },
+  es: { label: "ES", flag: "\u{1F1F2}\u{1F1FD}" },
   en: { label: "EN", flag: "\u{1F1FA}\u{1F1F8}" },
   fr: { label: "FR", flag: "\u{1F1EB}\u{1F1F7}" },
   zh: { label: "ZH", flag: "\u{1F1E8}\u{1F1F3}" },
