@@ -1,5 +1,5 @@
-import { MediaLink } from '@/components/ui/media-link'
-import { socialLinks } from '@/config/mediaLinks'
+import { MediaLink } from "@/components/ui/media-link"
+import { socialLinks } from "@/config/mediaLinks"
 
 interface SocialLinksProps {
   className?: string
@@ -7,15 +7,9 @@ interface SocialLinksProps {
   vertical?: boolean
 }
 
-export function SocialLinks({
-  className,
-  iconSize = 20,
-  vertical = false
-}: SocialLinksProps) {
+export function SocialLinks({ className, iconSize = 20, vertical = false }: SocialLinksProps) {
   return (
-    <div
-      className={`flex ${vertical ? 'flex-col' : ''} gap-4 ${className || ''}`}
-    >
+    <div className={`flex ${vertical ? "flex-col" : ""} gap-4 ${className || ""}`}>
       {socialLinks.map((social) => (
         <MediaLink
           key={social.name}

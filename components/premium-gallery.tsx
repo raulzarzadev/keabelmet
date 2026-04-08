@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import type React from 'react'
+import type React from "react"
 
-import { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
-import { useSwipeable } from 'react-swipeable'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
+import { useSwipeable } from "react-swipeable"
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight, X } from "lucide-react"
 
 interface GalleryImage {
   src: string
@@ -27,12 +27,12 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
   // Bloquear el scroll cuando el modal está abierto
   useEffect(() => {
     if (selectedIndex !== null) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto"
     }
     return () => {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto"
     }
   }, [selectedIndex])
 
@@ -64,15 +64,15 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
   const handlers = useSwipeable({
     onSwipedLeft: () => navigateImage(1),
     onSwipedRight: () => navigateImage(-1),
-    //preventDefaultTouchmoveEvent: true,
-    trackMouse: false
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: false,
   })
 
   // Keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeLightbox()
-    if (e.key === 'ArrowRight') navigateImage(1)
-    if (e.key === 'ArrowLeft') navigateImage(-1)
+    if (e.key === "Escape") closeLightbox()
+    if (e.key === "ArrowRight") navigateImage(1)
+    if (e.key === "ArrowLeft") navigateImage(-1)
   }
 
   return (
@@ -89,16 +89,14 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Image
-              src={image.src || '/placeholder.svg'}
+              src={image.src || "/placeholder.svg"}
               alt={image.alt}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <p className="text-white text-sm font-medium line-clamp-2">
-                {image.alt}
-              </p>
+              <p className="text-white text-sm font-medium line-clamp-2">{image.alt}</p>
             </div>
           </motion.div>
         ))}
@@ -142,13 +140,13 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                   initial={{ opacity: 0, x: direction * 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -direction * 100 }}
-                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                   className="w-full max-w-5xl flex flex-col items-center"
                 >
                   {/* Image container with white border */}
                   <div
                     className={`relative w-full max-w-4xl overflow-hidden rounded-lg border border-white/20 shadow-2xl ${
-                      isZooming ? 'cursor-zoom-out' : 'cursor-zoom-in'
+                      isZooming ? "cursor-zoom-out" : "cursor-zoom-in"
                     }`}
                     onClick={(e) => {
                       e.stopPropagation()
@@ -157,13 +155,13 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                   >
                     <motion.div
                       animate={{
-                        scale: isZooming ? 1.5 : 1
+                        scale: isZooming ? 1.5 : 1,
                       }}
                       transition={{ duration: 0.3 }}
                       className="relative aspect-[4/3] w-full"
                     >
                       <Image
-                        src={images[selectedIndex].src || '/placeholder.svg'}
+                        src={images[selectedIndex].src || "/placeholder.svg"}
                         alt={images[selectedIndex].alt}
                         fill
                         sizes="(max-width: 1024px) 90vw, 1200px"
@@ -180,9 +178,7 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="mt-6 max-w-2xl text-center px-4"
                   >
-                    <p className="text-white/90 text-lg md:text-xl italic font-light">
-                      {images[selectedIndex].story}
-                    </p>
+                    <p className="text-white/90 text-lg md:text-xl italic font-light">{images[selectedIndex].story}</p>
                   </motion.div>
                 </motion.div>
               </AnimatePresence>
@@ -190,10 +186,7 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
               {/* Navigation arrows */}
               <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 sm:px-6 md:px-10">
                 <motion.button
-                  whileHover={{
-                    scale: 1.1,
-                    backgroundColor: 'rgba(255,255,255,0.2)'
-                  }}
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.2)" }}
                   whileTap={{ scale: 0.95 }}
                   className="p-3 rounded-full bg-black/30 text-white backdrop-blur-sm transition-all"
                   onClick={(e) => {
@@ -206,10 +199,7 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                   <ChevronLeft className="h-6 w-6" />
                 </motion.button>
                 <motion.button
-                  whileHover={{
-                    scale: 1.1,
-                    backgroundColor: 'rgba(255,255,255,0.2)'
-                  }}
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.2)" }}
                   whileTap={{ scale: 0.95 }}
                   className="p-3 rounded-full bg-black/30 text-white backdrop-blur-sm transition-all"
                   onClick={(e) => {
@@ -217,9 +207,7 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                     navigateImage(1)
                   }}
                   disabled={selectedIndex === images.length - 1}
-                  style={{
-                    opacity: selectedIndex === images.length - 1 ? 0.5 : 1
-                  }}
+                  style={{ opacity: selectedIndex === images.length - 1 ? 0.5 : 1 }}
                 >
                   <ChevronRight className="h-6 w-6" />
                 </motion.button>
@@ -232,7 +220,8 @@ export function PremiumGallery({ images }: PremiumGalleryProps) {
                 </div>
               </div>
               {/* Mobile swipe instruction */}
-              <div className="absolute bottom-16 left-0 right-0 text-center text-white/60 text-sm md:hidden"></div>
+              <div className="absolute bottom-16 left-0 right-0 text-center text-white/60 text-sm md:hidden">
+              </div>
             </div>
           </motion.div>
         )}

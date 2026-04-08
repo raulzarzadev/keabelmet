@@ -1,5 +1,5 @@
-import { MediaLink } from '@/components/ui/media-link'
-import { contactLinks } from '@/config/mediaLinks'
+import { MediaLink } from "@/components/ui/media-link"
+import { contactLinks } from "@/config/mediaLinks"
 
 interface ContactLinksProps {
   className?: string
@@ -7,13 +7,9 @@ interface ContactLinksProps {
   hideLabels?: boolean
 }
 
-export function ContactLinks({
-  className,
-  iconSize = 20,
-  hideLabels = false
-}: ContactLinksProps) {
+export function ContactLinks({ className, iconSize = 20, hideLabels = false }: ContactLinksProps) {
   return (
-    <div className={`flex flex-col gap-3 ${className || ''}`}>
+    <div className={`flex flex-col gap-3 ${className || ""}`}>
       {contactLinks.map((contact) => (
         <MediaLink
           key={contact.name}
