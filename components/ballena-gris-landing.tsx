@@ -1,6 +1,3 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -11,112 +8,14 @@ import {
   Coffee,
   Binary as Binoculars,
   Check,
-  Menu,
-  X,
   Heart,
   Users,
   AlertCircle,
 } from "lucide-react"
 
 export function BallenaGrisLanding() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      {/* Header/Navbar */}
-      <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Ballena Gris Logo" width={40} height={40} className="rounded-full" />
-            <span className="text-xl font-medium text-slate-800">Ballena Gris</span>
-          </Link>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Abrir menú principal</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
-
-          {/* Desktop menu */}
-          <nav className="hidden md:flex gap-8">
-            <Link href="#story" className="text-sm font-medium text-gray-700 hover:text-slate-600 transition-colors">
-              La Experiencia
-            </Link>
-            <Link
-              href="#itinerary"
-              className="text-sm font-medium text-gray-700 hover:text-slate-600 transition-colors"
-            >
-              Itinerario
-            </Link>
-            <Link href="#includes" className="text-sm font-medium text-gray-700 hover:text-slate-600 transition-colors">
-              Incluye
-            </Link>
-            <Link href="#details" className="text-sm font-medium text-gray-700 hover:text-slate-600 transition-colors">
-              Detalles
-            </Link>
-          </nav>
-
-          <div className="hidden md:block">
-            <Link href="/">
-              <button className="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                Volver a Expediciones
-              </button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        <div className={`${mobileMenuOpen ? "block" : "hidden"} md:hidden`}>
-          <div className="space-y-1 px-2 pb-3 pt-2">
-            <Link
-              href="#story"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-slate-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              La Experiencia
-            </Link>
-            <Link
-              href="#itinerary"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-slate-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Itinerario
-            </Link>
-            <Link
-              href="#includes"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-slate-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Incluye
-            </Link>
-            <Link
-              href="#details"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-slate-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Detalles
-            </Link>
-            <div className="mt-4 px-3">
-              <Link href="/">
-                <button className="w-full bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-md text-base font-medium transition-colors">
-                  Volver a Expediciones
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
