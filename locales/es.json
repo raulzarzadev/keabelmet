@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "experiences": "Experiencias",
+    "rates": "Tarifas",
+    "gallery": "Galeria",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "book": "Reservar"
+  },
+  "hero": {
+    "badge": "Siendo agua y tierra",
+    "title": "Descubre La Paz, donde el desierto conoce el mar",
+    "subtitle": "Vive aventuras imborrables en las aguas de Baja California Sur. Nada con lobos marinos, mobulas, avista ballenas por primera vez, y explora playas virgenes.",
+    "cta1": "Explora expediciones",
+    "cta2": "Ver testimonios",
+    "stat1_value": "15+",
+    "stat1_label": "Experiencias unicas",
+    "stat2_value": "10K+",
+    "stat2_label": "Aventureros satisfechos",
+    "stat3_value": "9.8",
+    "stat3_label": "Calificacion promedio"
+  },
+  "adventures": {
+    "title": "Aventuras",
+    "titleHighlight": "destacadas",
+    "subtitle": "Experiencias seleccionadas que muestran lo mejor de las maravillas marinas y la belleza desertica de La Paz",
+    "from": "Desde",
+    "learnMore": "Saber mas",
+    "items": [
+      {
+        "title": "Isla Espiritu Santo",
+        "badge": "Reserva de la Biosfera UNESCO",
+        "description": "Playas virgenes, aguas turquesas y snorkel increible",
+        "price": "$120"
+      },
+      {
+        "title": "Ve una ballena por primera vez",
+        "badge": "Mar de Cortes",
+        "description": "Ver ballenas en Mexico es posible, aqui como:",
+        "price": "$180"
+      },
+      {
+        "title": "Buceo en Cabo Pulmo",
+        "badge": "Arrecifes de Coral",
+        "description": "Descubre el mejor lugar para bucear en Mexico, ya sea tu primera vez o seas un apasionado",
+        "price": "$110"
+      },
+      {
+        "title": "Buceo en La Paz",
+        "badge": "Colonia de Lobos Marinos",
+        "description": "Nada con juguetones lobos marinos en su habitat natural",
+        "price": "$150"
+      },
+      {
+        "title": "Renta un velero",
+        "badge": "Golfo de California",
+        "description": "Ideal para unas horas de navegacion o para pasar la noche a bordo",
+        "price": "$600"
+      },
+      {
+        "title": "Renta un Yate",
+        "badge": "Golfo de California",
+        "description": "Vive el Golfo de California como te lo mereces",
+        "price": "$1,700"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros viajeros",
+    "subtitle": "Experiencias reales en Baja California Sur.",
+    "items": [
+      {
+        "name": "Maria G.",
+        "text": "Ver el baitball de sardinas con marlines fue magico. Equipo amable y super seguro."
+      },
+      {
+        "name": "James P.",
+        "text": "La Ventana y las mobulas a centimetros... inolvidable. Muy bien organizado."
+      },
+      {
+        "name": "Alejandro R.",
+        "text": "Guia biologo, panga comoda, fotos y video incluidos. Lo repetiria sin dudar."
+      }
+    ]
+  },
+  "comparison": {
+    "badge": "Comparativa Directa",
+    "title": "Lo que suele arruinar un safari...",
+    "titleHighlight": "y como lo hacemos distinto",
+    "subtitle": "Comparativa directa: lo que pasa con muchos tours vs. como trabajamos en Keabelmet",
+    "problems": [
+      {
+        "title": "Demasiada gente en la panga",
+        "text": "Te ha pasado que reservas un tour y hay 20 personas? La experiencia se vuelve caotica y poco personal."
+      },
+      {
+        "title": "Poca etica y cero ciencia",
+        "text": "Guias que no respetan a los animales ni explican nada... y eso cambia todo."
+      },
+      {
+        "title": "Fotos prometidas... que no llegan",
+        "text": "Te las cobran aparte o nunca aparecen. No es serio."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Grupos reducidos",
+        "text": "Con nosotros, nunca mas de 8 por panga. Mas espacio, calma y seguridad."
+      },
+      {
+        "title": "Guia Keabelmet",
+        "text": "Te compartimos historias, comportamientos y buenas practicas para cuidar la fauna."
+      },
+      {
+        "title": "Foto y video incluidos",
+        "text": "Lo que vivas, te lo llevas. Siempre incluimos material para revivir tu safari."
+      }
+    ]
+  },
+  "expeditions": {
+    "title": "Nuestras expediciones",
+    "subtitle": "Disenadas para encuentros responsables con fauna marina y paisajes unicos.",
+    "perPerson": "Por persona",
+    "book": "Reservar",
+    "fullDay": "Dia completo",
+    "halfDay": "Medio dia",
+    "days6": "6 dias",
+    "people": "Personas"
+  },
+  "whyUs": {
+    "title": "Por que",
+    "titleHighlight": "Keabelmet",
+    "subtitle": "Somos apasionados por compartir la magia de La Paz con aventuras autenticas, sustentables e inolvidables",
+    "features": [
+      {
+        "title": "Experiencia Local",
+        "text": "Nacidos y criados en La Paz, conocemos cada rincon y los mejores momentos para visitar cada lugar"
+      },
+      {
+        "title": "Seguridad Primero",
+        "text": "Guias certificados, equipo de calidad y seguro comprensivo para tu tranquilidad absoluta"
+      },
+      {
+        "title": "Grupos Pequenos",
+        "text": "Experiencias intimas con maximo 8-12 personas para atencion personalizada y conexiones autenticas"
+      },
+      {
+        "title": "Eco-Conscientes",
+        "text": "Comprometidos con el turismo sustentable y la proteccion de los increibles ecosistemas marinos y deserticos de La Paz"
+      }
+    ],
+    "bio_title": "Liderado por Biologos Marinos",
+    "bio_text": "Nuestro equipo esta formado por biologos marinos de La Paz con anos de experiencia organizando campamentos y expediciones en zonas remotas.",
+    "edu_title": "Educacion y Conservacion",
+    "edu_text": "La educacion, conservacion y turismo responsable son la base de todo lo que hacemos. Cada expedicion es una oportunidad para aprender y proteger."
+  },
+  "consequences": {
+    "title": "Si eliges mal, te puedes perder...",
+    "items": [
+      "Encuentros reales por mala logistica o grupos masivos.",
+      "Seguridad deficiente en el agua y poca orientacion.",
+      "Impacto negativo en fauna por malas practicas.",
+      "Sin fotos ni video...y recuerdos que no vuelven."
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "Necesito experiencia previa en snorkel?",
+        "a": "No necesitas experiencia previa. Te damos chaleco, traje y todo el acompanamiento para que te sientas seguro."
+      },
+      {
+        "q": "Que incluye?",
+        "a": "Panga con capitan, guia biologo marino, equipo de snorkel, agua y snacks, chaleco salvavidas, wetsuit, fotos/video, material dinamico y binoculares."
+      },
+      {
+        "q": "Las fechas son garantizadas?",
+        "a": "Son experiencias de temporada y dependemos de la naturaleza. Lo que si aseguramos es el esfuerzo: trabajamos con capitanes y guias locales expertos."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Tu aventura en el Mar de Cortes comienza aqui",
+    "subtitle": "Cupo limitado. Expediciones seguras, responsables y documentadas en foto/video.",
+    "btn1": "Reservar Safari Bahia Magdalena",
+    "btn2": "Reservar Safari La Ventana"
+  },
+  "language": {
+    "label": "Idioma",
+    "es": "Espanol",
+    "en": "English",
+    "fr": "Francais",
+    "zh": "Zhongwen"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "experiences": "Experiences",
+    "rates": "Rates",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact",
+    "book": "Book Now"
+  },
+  "hero": {
+    "badge": "Being water and land",
+    "title": "Discover La Paz, where the desert meets the sea",
+    "subtitle": "Live unforgettable adventures in the waters of Baja California Sur. Swim with sea lions, mobula rays, watch whales for the first time, and explore pristine beaches.",
+    "cta1": "Explore expeditions",
+    "cta2": "See testimonials",
+    "stat1_value": "15+",
+    "stat1_label": "Unique experiences",
+    "stat2_value": "10K+",
+    "stat2_label": "Satisfied adventurers",
+    "stat3_value": "9.8",
+    "stat3_label": "Average rating"
+  },
+  "adventures": {
+    "title": "Featured",
+    "titleHighlight": "Adventures",
+    "subtitle": "Curated experiences showcasing the best of La Paz's marine wonders and desert beauty",
+    "from": "From",
+    "learnMore": "Learn more",
+    "items": [
+      {
+        "title": "Espiritu Santo Island",
+        "badge": "UNESCO Biosphere Reserve",
+        "description": "Pristine beaches, turquoise waters, and incredible snorkeling",
+        "price": "$120"
+      },
+      {
+        "title": "See a whale for the first time",
+        "badge": "Mar de Cortes",
+        "description": "Whale watching in Mexico is possible — here's how:",
+        "price": "$180"
+      },
+      {
+        "title": "Diving in Cabo Pulmo",
+        "badge": "Coral Reefs",
+        "description": "Discover the best diving spot in Mexico, whether it's your first time or you're a passionate diver",
+        "price": "$110"
+      },
+      {
+        "title": "Diving in La Paz",
+        "badge": "Sea Lion Colony",
+        "description": "Swim with playful sea lions in their natural habitat",
+        "price": "$150"
+      },
+      {
+        "title": "Rent a sailboat",
+        "badge": "Gulf of California",
+        "description": "Ideal for a few hours of sailing or an overnight stay on board",
+        "price": "$600"
+      },
+      {
+        "title": "Rent a Yacht",
+        "badge": "Gulf of California",
+        "description": "Experience the Gulf of California the way you deserve",
+        "price": "$1,700"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What our travelers say",
+    "subtitle": "Real experiences in Baja California Sur.",
+    "items": [
+      {
+        "name": "Maria G.",
+        "text": "Watching the sardine baitball with marlins was magical. Friendly crew and super safe."
+      },
+      {
+        "name": "James P.",
+        "text": "La Ventana and mobula rays just inches away... unforgettable. Very well organized."
+      },
+      {
+        "name": "Alejandro R.",
+        "text": "Marine biologist guide, comfortable panga, photos and video included. I'd do it again without hesitation."
+      }
+    ]
+  },
+  "comparison": {
+    "badge": "Direct Comparison",
+    "title": "What usually ruins a safari...",
+    "titleHighlight": "and how we do it differently",
+    "subtitle": "Direct comparison: what happens with many tours vs. how we work at Keabelmet",
+    "problems": [
+      {
+        "title": "Too many people on the boat",
+        "text": "Ever booked a tour and there were 20 people? The experience becomes chaotic and impersonal."
+      },
+      {
+        "title": "No ethics and zero science",
+        "text": "Guides who don't respect the animals or explain anything... and that changes everything."
+      },
+      {
+        "title": "Promised photos... that never arrive",
+        "text": "They charge you extra or they never show up. That's not professional."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Small groups",
+        "text": "With us, never more than 8 per boat. More space, calm, and safety."
+      },
+      {
+        "title": "Keabelmet Guide",
+        "text": "We share stories, animal behaviors, and best practices to protect wildlife."
+      },
+      {
+        "title": "Photos and video included",
+        "text": "What you experience, you take home. We always include media to relive your safari."
+      }
+    ]
+  },
+  "expeditions": {
+    "title": "Our expeditions",
+    "subtitle": "Designed for responsible encounters with marine wildlife and unique landscapes.",
+    "perPerson": "Per person",
+    "book": "Book Now",
+    "fullDay": "Full day",
+    "halfDay": "Half day",
+    "days6": "6 days",
+    "people": "People"
+  },
+  "whyUs": {
+    "title": "Why",
+    "titleHighlight": "Keabelmet",
+    "subtitle": "We are passionate about sharing the magic of La Paz through authentic, sustainable, and unforgettable adventures",
+    "features": [
+      {
+        "title": "Local Expertise",
+        "text": "Born and raised in La Paz, we know every corner and the best times to visit each spot"
+      },
+      {
+        "title": "Safety First",
+        "text": "Certified guides, quality equipment, and comprehensive insurance for your complete peace of mind"
+      },
+      {
+        "title": "Small Groups",
+        "text": "Intimate experiences with a maximum of 8-12 people for personalized attention and authentic connections"
+      },
+      {
+        "title": "Eco-Conscious",
+        "text": "Committed to sustainable tourism and protecting the incredible marine and desert ecosystems of La Paz"
+      }
+    ],
+    "bio_title": "Led by Marine Biologists",
+    "bio_text": "Our team is made up of marine biologists from La Paz with years of experience organizing camps and expeditions in remote areas.",
+    "edu_title": "Education and Conservation",
+    "edu_text": "Education, conservation, and responsible tourism are the foundation of everything we do. Every expedition is an opportunity to learn and protect."
+  },
+  "consequences": {
+    "title": "If you choose wrong, you could miss out on...",
+    "items": [
+      "Real encounters due to poor logistics or massive groups.",
+      "Inadequate water safety and little guidance.",
+      "Negative impact on wildlife from bad practices.",
+      "No photos or video... and memories that won't come back."
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Do I need prior snorkeling experience?",
+        "a": "No prior experience needed. We provide a life vest, wetsuit, and full support so you feel safe."
+      },
+      {
+        "q": "What's included?",
+        "a": "Boat with captain, marine biologist guide, snorkeling gear, water and snacks, life vest, wetsuit, photos/video, educational materials, and binoculars."
+      },
+      {
+        "q": "Are the dates guaranteed?",
+        "a": "These are seasonal experiences and we depend on nature. What we do guarantee is the effort: we work with expert local captains and guides."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your adventure in the Mar de Cortes starts here",
+    "subtitle": "Limited spots. Safe, responsible expeditions documented in photo/video.",
+    "btn1": "Book Bahia Magdalena Safari",
+    "btn2": "Book La Ventana Safari"
+  },
+  "language": {
+    "label": "Language",
+    "es": "Espanol",
+    "en": "English",
+    "fr": "Francais",
+    "zh": "Zhongwen"
+  }
+}

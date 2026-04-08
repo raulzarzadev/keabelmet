@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "A propos",
+    "experiences": "Experiences",
+    "rates": "Tarifs",
+    "gallery": "Galerie",
+    "blog": "Blog",
+    "contact": "Contact",
+    "book": "Reserver"
+  },
+  "hero": {
+    "badge": "Entre eau et terre",
+    "title": "Decouvrez La Paz, la ou le desert rencontre la mer",
+    "subtitle": "Vivez des aventures inoubliables dans les eaux de Baja California Sur. Nagez avec les lions de mer, les mobulas, observez les baleines pour la premiere fois, et explorez des plages vierges.",
+    "cta1": "Explorer les expeditions",
+    "cta2": "Voir les temoignages",
+    "stat1_value": "15+",
+    "stat1_label": "Experiences uniques",
+    "stat2_value": "10K+",
+    "stat2_label": "Aventuriers satisfaits",
+    "stat3_value": "9.8",
+    "stat3_label": "Note moyenne"
+  },
+  "adventures": {
+    "title": "Aventures",
+    "titleHighlight": "en vedette",
+    "subtitle": "Des experiences selectionnees qui mettent en valeur le meilleur des merveilles marines et de la beaute desertique de La Paz",
+    "from": "A partir de",
+    "learnMore": "En savoir plus",
+    "items": [
+      {
+        "title": "Ile Espiritu Santo",
+        "badge": "Reserve de Biosphere UNESCO",
+        "description": "Plages vierges, eaux turquoise et snorkeling incroyable",
+        "price": "$120"
+      },
+      {
+        "title": "Observez une baleine pour la premiere fois",
+        "badge": "Mar de Cortes",
+        "description": "Observer les baleines au Mexique, c'est possible. Voici comment :",
+        "price": "$180"
+      },
+      {
+        "title": "Plongee a Cabo Pulmo",
+        "badge": "Recifs Coralliens",
+        "description": "Decouvrez le meilleur site de plongee au Mexique, que ce soit votre premiere fois ou que vous soyez un passionne",
+        "price": "$110"
+      },
+      {
+        "title": "Plongee a La Paz",
+        "badge": "Colonie de Lions de Mer",
+        "description": "Nagez avec de joueurs lions de mer dans leur habitat naturel",
+        "price": "$150"
+      },
+      {
+        "title": "Location de voilier",
+        "badge": "Golfe de Californie",
+        "description": "Ideal pour quelques heures de navigation ou pour passer la nuit a bord",
+        "price": "$600"
+      },
+      {
+        "title": "Location de yacht",
+        "badge": "Golfe de Californie",
+        "description": "Vivez le Golfe de Californie comme vous le meritez",
+        "price": "$1,700"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos voyageurs",
+    "subtitle": "Experiences reelles en Baja California Sur.",
+    "items": [
+      {
+        "name": "Maria G.",
+        "text": "Voir le baitball de sardines avec les marlins etait magique. Equipe sympathique et tres securisee."
+      },
+      {
+        "name": "James P.",
+        "text": "La Ventana et les mobulas a quelques centimetres... inoubliable. Tres bien organise."
+      },
+      {
+        "name": "Alejandro R.",
+        "text": "Guide biologiste, panga confortable, photos et video incluses. Je le referais sans hesiter."
+      }
+    ]
+  },
+  "comparison": {
+    "badge": "Comparatif Direct",
+    "title": "Ce qui gache souvent un safari...",
+    "titleHighlight": "et comment nous faisons la difference",
+    "subtitle": "Comparatif direct : ce qui se passe avec de nombreux tours vs. comment nous travaillons chez Keabelmet",
+    "problems": [
+      {
+        "title": "Trop de monde dans la panga",
+        "text": "Vous est-il deja arrive de reserver un tour et de vous retrouver a 20 ? L'experience devient chaotique et impersonnelle."
+      },
+      {
+        "title": "Peu d'ethique et zero science",
+        "text": "Des guides qui ne respectent pas les animaux et n'expliquent rien... et cela change tout."
+      },
+      {
+        "title": "Photos promises... qui n'arrivent jamais",
+        "text": "On vous les facture en supplement ou elles n'arrivent jamais. Ce n'est pas serieux."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Petits groupes",
+        "text": "Avec nous, jamais plus de 8 par panga. Plus d'espace, de calme et de securite."
+      },
+      {
+        "title": "Guide Keabelmet",
+        "text": "Nous partageons des histoires, des comportements et les bonnes pratiques pour proteger la faune."
+      },
+      {
+        "title": "Photo et video incluses",
+        "text": "Ce que vous vivez, vous le ramenez. Nous incluons toujours du materiel pour revivre votre safari."
+      }
+    ]
+  },
+  "expeditions": {
+    "title": "Nos expeditions",
+    "subtitle": "Concues pour des rencontres responsables avec la faune marine et des paysages uniques.",
+    "perPerson": "Par personne",
+    "book": "Reserver",
+    "fullDay": "Journee complete",
+    "halfDay": "Demi-journee",
+    "days6": "6 jours",
+    "people": "Personnes"
+  },
+  "whyUs": {
+    "title": "Pourquoi",
+    "titleHighlight": "Keabelmet",
+    "subtitle": "Nous sommes passionnes par le partage de la magie de La Paz a travers des aventures authentiques, durables et inoubliables",
+    "features": [
+      {
+        "title": "Expertise Locale",
+        "text": "Nes et eleves a La Paz, nous connaissons chaque recoin et les meilleurs moments pour visiter chaque lieu"
+      },
+      {
+        "title": "Securite Avant Tout",
+        "text": "Guides certifies, equipement de qualite et assurance complete pour votre tranquillite absolue"
+      },
+      {
+        "title": "Petits Groupes",
+        "text": "Experiences intimistes avec un maximum de 8 a 12 personnes pour une attention personnalisee et des connexions authentiques"
+      },
+      {
+        "title": "Eco-Responsables",
+        "text": "Engages dans le tourisme durable et la protection des incroyables ecosystemes marins et desertiques de La Paz"
+      }
+    ],
+    "bio_title": "Dirige par des Biologistes Marins",
+    "bio_text": "Notre equipe est composee de biologistes marins de La Paz avec des annees d'experience dans l'organisation de campements et d'expeditions en zones reculees.",
+    "edu_title": "Education et Conservation",
+    "edu_text": "L'education, la conservation et le tourisme responsable sont la base de tout ce que nous faisons. Chaque expedition est une occasion d'apprendre et de proteger."
+  },
+  "consequences": {
+    "title": "Si vous faites le mauvais choix, vous risquez de manquer...",
+    "items": [
+      "Des rencontres authentiques a cause d'une mauvaise logistique ou de groupes trop nombreux.",
+      "Une securite insuffisante dans l'eau et peu d'orientation.",
+      "Un impact negatif sur la faune a cause de mauvaises pratiques.",
+      "Pas de photos ni de video... et des souvenirs qui ne reviennent pas."
+    ]
+  },
+  "faq": {
+    "title": "Questions frequentes",
+    "items": [
+      {
+        "q": "Ai-je besoin d'une experience prealable en snorkeling ?",
+        "a": "Aucune experience prealable n'est necessaire. Nous vous fournissons un gilet, une combinaison et tout l'accompagnement pour que vous vous sentiez en securite."
+      },
+      {
+        "q": "Qu'est-ce qui est inclus ?",
+        "a": "Panga avec capitaine, guide biologiste marin, equipement de snorkeling, eau et collations, gilet de sauvetage, combinaison, photos/video, materiel pedagogique et jumelles."
+      },
+      {
+        "q": "Les dates sont-elles garanties ?",
+        "a": "Ce sont des experiences saisonnieres et nous dependons de la nature. Ce que nous garantissons, c'est l'effort : nous travaillons avec des capitaines et des guides locaux experts."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Votre aventure dans le Mar de Cortes commence ici",
+    "subtitle": "Places limitees. Expeditions securisees, responsables et documentees en photo/video.",
+    "btn1": "Reserver Safari Bahia Magdalena",
+    "btn2": "Reserver Safari La Ventana"
+  },
+  "language": {
+    "label": "Langue",
+    "es": "Espanol",
+    "en": "English",
+    "fr": "Francais",
+    "zh": "Zhongwen"
+  }
+}
