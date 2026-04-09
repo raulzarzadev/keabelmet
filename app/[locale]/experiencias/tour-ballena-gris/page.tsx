@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Clock, MapPin, Check, Star, Anchor } from "lucide-react"
-import { isValidLocale, defaultLocale } from "@/lib/i18n"
+import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Tour Ballena Gris en Bahia Magdalena",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default async function TourBallenaGrisPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
+  const t = await getPageDictionary("tour-ballena-gris", locale) as Record<string, any>
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -22,7 +23,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
           <div className="absolute inset-0">
             <Image
               src="/gray-whale-breaching-sunset-sea-of-cortez.jpg"
-              alt="Ballena gris saltando al atardecer en el Mar de Cortés"
+              alt={t.hero.image_alt}
               width={1920}
               height={1080}
               className="h-full w-full object-cover"
@@ -33,22 +34,20 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
           <div className="container mx-auto relative py-20 md:py-28 lg:py-36 px-4">
             <div className="max-w-2xl space-y-6">
               <div className="inline-block bg-teal-600/90 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-                🐋 Enero – Marzo
+                {t.hero.badge}
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                Ballena Gris: Un Encuentro Ancestral en Puerto Chale
+                {t.hero.title}
               </h1>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                Una travesía que toca el alma en Bahía Magdalena, Baja California Sur. Cada invierno, miles de ballenas
-                grises viajan desde el Ártico hasta esta laguna tranquila para dar a luz y aparearse. Tú estás a punto
-                de entrar a ese santuario.
+                {t.hero.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg">
-                  Reserva tu aventura
+                  {t.hero.cta_primary}
                 </button>
                 <button className="text-white border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-3 rounded-lg font-medium transition-colors">
-                  Ver detalles
+                  {t.hero.cta_secondary}
                 </button>
               </div>
             </div>
@@ -60,16 +59,13 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Esto no es un tour. Es un privilegio.
+                {t.about.title}
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Cada invierno, algo sagrado sucede en el Pacífico mexicano. Miles de ballenas grises viajan miles de
-                kilómetros desde el Ártico hasta una laguna tranquila en medio del desierto… para dar a luz, para
-                aparearse, para estar.
+                {t.about.description_1}
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Un regalo de la naturaleza que solo existe unos meses al año. Y lo vas a vivir desde el corazón de la
-                Baja.
+                {t.about.description_2}
               </p>
             </div>
 
@@ -77,7 +73,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="/gray-whale-mother-calf-magdalena.jpg"
-                  alt="Ballena gris madre con su cría en Bahía Magdalena"
+                  alt={t.about.image_alt}
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
@@ -89,8 +85,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <div className="flex items-start gap-3">
                     <MapPin className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Punto de Encuentro</h3>
-                      <p className="text-gray-700">La Paz - Te recogemos en tu hotel / Airbnb a las 5:00 AM</p>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.about.meeting_title}</h3>
+                      <p className="text-gray-700">{t.about.meeting_text}</p>
                     </div>
                   </div>
                 </div>
@@ -99,9 +95,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <div className="flex items-start gap-3">
                     <Clock className="h-6 w-6 text-emerald-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Duración Total</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.about.duration_title}</h3>
                       <p className="text-gray-700">
-                        9 horas aproximadamente: 2.5 hrs de camino + 2-3 hrs en lancha + 2.5 hrs de regreso
+                        {t.about.duration_text}
                       </p>
                     </div>
                   </div>
@@ -111,9 +107,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <div className="flex items-start gap-3">
                     <Anchor className="h-6 w-6 text-teal-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Temporada Oficial</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.about.season_title}</h3>
                       <p className="text-gray-700">
-                        Enero – Marzo únicamente. Fuera de estos meses no existe esta experiencia.
+                        {t.about.season_text}
                       </p>
                     </div>
                   </div>
@@ -127,11 +123,10 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         <section id="experience" className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              🌅 ¿Cómo es la experiencia?
+              {t.itinerary.title}
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              El camino hacia la magia: la aventura comienza temprano y te lleva por el desierto de la Baja hasta uno de
-              los lugares más especiales de México.
+              {t.itinerary.subtitle}
             </p>
 
             <div className="max-w-4xl mx-auto">
@@ -144,10 +139,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">🌄 Salida al Amanecer</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.itinerary.step1_title}</h3>
                     <p className="text-gray-700">
-                      La aventura comienza temprano: te pasamos a ver y partimos rumbo al norte. La luz del amanecer va
-                      pintando el desierto de la Baja, los cardones gigantes aparecen como guardianes del camino.
+                      {t.itinerary.step1_text}
                     </p>
                   </div>
                 </div>
@@ -160,10 +154,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">🏜️ Camino al Pacífico</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.itinerary.step2_title}</h3>
                     <p className="text-gray-700">
-                      2.5 horas de travesía por paisajes únicos. Antes de darte cuenta, ya estás entrando en Puerto
-                      Chale, donde tu lancha ya te espera. El aire huele a mar, a manglar y a historia.
+                      {t.itinerary.step2_text}
                     </p>
                   </div>
                 </div>
@@ -176,14 +169,12 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">🐋 Encuentro con las Ballenas</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.itinerary.step3_title}</h3>
                     <p className="text-gray-700 mb-3">
-                      Durante 2 o 3 horas navegamos dentro de la laguna, hogar temporal de estos gigantes. Aquí se
-                      aparean, aquí nacen sus crías, aquí descansan después de la migración más larga del reino animal.
+                      {t.itinerary.step3_text}
                     </p>
                     <p className="text-gray-700 font-medium">
-                      Es común verlas pasar junto al bote, sacar la cabeza para mirarte, jugar con sus bebés. Y si
-                      tienes suerte… alguna se acercará. Son ellas las que deciden. Siempre.
+                      {t.itinerary.step3_extra}
                     </p>
                   </div>
                 </div>
@@ -196,10 +187,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">🦭 Vida Marina del Pacífico</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.itinerary.step4_title}</h3>
                     <p className="text-gray-700">
-                      En el camino también puedes ver delfines, lobos marinos, fragatas, pelícanos, águilas pescadoras y
-                      otras aves que llenan el aire del Pacífico. Te compartimos un snack local delicioso.
+                      {t.itinerary.step4_text}
                     </p>
                   </div>
                 </div>
@@ -212,10 +202,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">🌅 Regreso a La Paz</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.itinerary.step5_title}</h3>
                     <p className="text-gray-700">
-                      Regresamos con la piel salada, el corazón suave y una historia que te va a acompañar siempre.
-                      Llegada estimada entre 5:00 PM - 6:00 PM.
+                      {t.itinerary.step5_text}
                     </p>
                   </div>
                 </div>
@@ -228,11 +217,10 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         <section id="especies" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              🐬 Especies que puedes encontrar
+              {t.species.title}
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Bahía Magdalena es un ecosistema rico donde convergen múltiples especies marinas durante la temporada de
-              ballenas.
+              {t.species.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -240,21 +228,19 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/gray-whale-mother-and-calf-swimming-together-in-ba.jpg"
-                    alt="Ballena gris madre con cría nadando en Bahía Magdalena"
+                    alt={t.species.gray_whale.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Dic - Abr
+                    {t.species.gray_whale.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Ballena Gris</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.gray_whale.name}</h3>
                   <p className="text-gray-700">
-                    Las ballenas grises viajan más de 20,000 km desde Alaska hasta estas lagunas cálidas para dar a luz
-                    y criar a sus ballenatos. Son conocidas por su curiosidad y acercamiento amigable a las
-                    embarcaciones.
+                    {t.species.gray_whale.description}
                   </p>
                 </div>
               </div>
@@ -263,20 +249,19 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/sea-lions-resting-on-rocks-in-baja-california-sur.jpg"
-                    alt="Lobos marinos descansando en las rocas de Baja California Sur"
+                    alt={t.species.sea_lions.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
+                    {t.species.sea_lions.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Lobos Marinos</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.sea_lions.name}</h3>
                   <p className="text-gray-700">
-                    Curiosos y carismáticos, los lobos marinos habitan las costas rocosas de la región. Frecuentemente
-                    se les observa descansando en grupos y nadando cerca de las embarcaciones.
+                    {t.species.sea_lions.description}
                   </p>
                 </div>
               </div>
@@ -285,20 +270,19 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/dolphins-jumping-in-the-sea-of-cortez.jpg"
-                    alt="Delfines saltando en el Mar de Cortés"
+                    alt={t.species.dolphins.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
+                    {t.species.dolphins.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Delfines</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.dolphins.name}</h3>
                   <p className="text-gray-700">
-                    Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectáculo
-                    natural con sus saltos y acrobacias. Varias especies habitan estas aguas.
+                    {t.species.dolphins.description}
                   </p>
                 </div>
               </div>
@@ -307,20 +291,19 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/osprey-fishing-eagle-diving-for-fish-in-baja.jpg"
-                    alt="Águila pescadora cazando en Baja California"
+                    alt={t.species.ospreys.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Oct - Abr
+                    {t.species.ospreys.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Águilas Pescadoras</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.ospreys.name}</h3>
                   <p className="text-gray-700">
-                    Estas majestuosas aves rapaces son expertas pescadoras. Se les puede observar volando sobre las
-                    aguas y realizando espectaculares clavados para capturar peces.
+                    {t.species.ospreys.description}
                   </p>
                 </div>
               </div>
@@ -329,20 +312,19 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/brown-pelicans-flying-over-ocean-in-baja-californi.jpg"
-                    alt="Pelícanos cafés volando sobre el océano en Baja California"
+                    alt={t.species.pelicans.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
+                    {t.species.pelicans.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Pelícanos</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.pelicans.name}</h3>
                   <p className="text-gray-700">
-                    Los pelícanos cafés son habitantes comunes de las costas. Con sus bolsas gulares distintivas, pescan
-                    en formaciones coordinadas y descansan en los manglares.
+                    {t.species.pelicans.description}
                   </p>
                 </div>
               </div>
@@ -351,31 +333,28 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                 <div className="h-64 relative">
                   <Image
                     src="/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg"
-                    alt="Fragata magnífica volando sobre el océano en Baja"
+                    alt={t.species.frigatebirds.name}
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
+                    {t.species.frigatebirds.season}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Fragatas</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.species.frigatebirds.name}</h3>
                   <p className="text-gray-700">
-                    Con sus alas largas y cola ahorquillada, las fragatas son maestras del vuelo. Los machos inflan su
-                    saco gular rojo durante la temporada de apareamiento, creando un espectáculo visual único.
+                    {t.species.frigatebirds.description}
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="mt-12 bg-teal-50 p-6 rounded-lg border border-teal-100 max-w-3xl mx-auto">
-              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">Nota de Realismo</h3>
+              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">{t.species.disclaimer_title}</h3>
               <p className="text-gray-700 text-center">
-                Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos de todas las
-                especies, pero sí garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus
-                posibilidades de vivir momentos únicos con la naturaleza.
+                {t.species.disclaimer_text}
               </p>
             </div>
           </div>
@@ -385,10 +364,10 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         <section className="py-16 md:py-24 bg-teal-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              ✅ ¿Qué incluye tu experiencia?
+              {t.includes.title}
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Todo lo necesario para que vivas una aventura segura, cómoda y memorable.
+              {t.includes.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -397,8 +376,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Transporte Redondo</h3>
-                  <p className="text-sm text-gray-600">Desde La Paz hasta Puerto Chale y regreso</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.transport_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.transport_text}</p>
                 </div>
               </div>
 
@@ -407,8 +386,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Lancha con Capitán Local</h3>
-                  <p className="text-sm text-gray-600">Experto en fauna y navegación segura</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.captain_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.captain_text}</p>
                 </div>
               </div>
 
@@ -417,8 +396,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Guía Biólogo Marino</h3>
-                  <p className="text-sm text-gray-600">Con material educativo sobre ballenas</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.guide_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.guide_text}</p>
                 </div>
               </div>
 
@@ -427,8 +406,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Fotos y Videos Profesionales</h3>
-                  <p className="text-sm text-gray-600">Documentamos tu experiencia</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.photos_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.photos_text}</p>
                 </div>
               </div>
 
@@ -437,8 +416,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Snack Local y Bebidas</h3>
-                  <p className="text-sm text-gray-600">Fruta fresca y agua purificada</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.snacks_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.snacks_text}</p>
                 </div>
               </div>
 
@@ -447,8 +426,8 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <Check className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Binoculares y Guía de Fauna</h3>
-                  <p className="text-sm text-gray-600">Para identificar todas las especies</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{t.includes.binoculars_title}</h3>
+                  <p className="text-sm text-gray-600">{t.includes.binoculars_text}</p>
                 </div>
               </div>
             </div>
@@ -458,42 +437,32 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         {/* Pricing Section */}
         <section id="pricing" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">💲 Tarifas</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">{t.pricing.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Elige la experiencia que mejor se adapte a tu grupo y presupuesto.
+              {t.pricing.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Shared 2 hours */}
               <div className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:border-teal-300 transition-colors">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Experiencia Compartida</h3>
-                  <p className="text-gray-600 mb-4">2 horas en lancha</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.shared_2h.name}</h3>
+                  <p className="text-gray-600 mb-4">{t.pricing.shared_2h.duration}</p>
                   <div className="text-4xl font-bold text-teal-600 mb-2">
-                    $2,400 <span className="text-lg font-normal text-gray-600">MXN</span>
+                    {t.pricing.shared_2h.price} <span className="text-lg font-normal text-gray-600">{t.pricing.shared_2h.currency}</span>
                   </div>
-                  <p className="text-sm text-gray-600">por persona</p>
+                  <p className="text-sm text-gray-600">{t.pricing.shared_2h.per}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Transporte redondo desde La Paz</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Guía biólogo marino</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Fotos y videos profesionales</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Snacks y bebidas</span>
-                  </li>
+                  {t.pricing.shared_2h.features.map((feature: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 <button className="w-full bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                  Reservar
+                  {t.pricing.shared_2h.cta}
                 </button>
               </div>
 
@@ -501,41 +470,27 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
               <div className="bg-gradient-to-br from-teal-600 to-cyan-600 p-8 rounded-xl border-2 border-teal-600 relative transform scale-105 shadow-xl">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-yellow-400 text-gray-900 text-xs font-bold px-4 py-1 rounded-full">
-                    MÁS POPULAR
+                    {t.pricing.shared_3h.badge}
                   </span>
                 </div>
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Experiencia Compartida</h3>
-                  <p className="text-teal-50 mb-4">3 horas en lancha</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.shared_3h.name}</h3>
+                  <p className="text-teal-50 mb-4">{t.pricing.shared_3h.duration}</p>
                   <div className="text-4xl font-bold text-white mb-2">
-                    $3,000 <span className="text-lg font-normal text-teal-100">MXN</span>
+                    {t.pricing.shared_3h.price} <span className="text-lg font-normal text-teal-100">{t.pricing.shared_3h.currency}</span>
                   </div>
-                  <p className="text-sm text-teal-100">por persona</p>
+                  <p className="text-sm text-teal-100">{t.pricing.shared_3h.per}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-white">Transporte redondo desde La Paz</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-white">Guía biólogo marino</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-white">Fotos y videos profesionales</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-white">Snacks y bebidas</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-white font-medium">+ 1 hora más de avistamiento</span>
-                  </li>
+                  {t.pricing.shared_3h.features.map((feature: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="h-5 w-5 text-yellow-300 flex-shrink-0 mt-0.5" />
+                      <span className={`text-sm text-white${i === t.pricing.shared_3h.features.length - 1 ? " font-medium" : ""}`}>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 <button className="w-full bg-white hover:bg-gray-100 text-teal-600 px-6 py-3 rounded-lg font-medium transition-colors">
-                  Reservar
+                  {t.pricing.shared_3h.cta}
                 </button>
               </div>
 
@@ -543,39 +498,25 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
               <div className="bg-white p-8 rounded-xl border-2 border-orange-200 hover:border-orange-400 transition-colors">
                 <div className="text-center mb-6">
                   <div className="inline-block bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full mb-3">
-                    PREMIUM
+                    {t.pricing.private.badge}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Experiencia Privada</h3>
-                  <p className="text-gray-600 mb-4">5 horas en el mar</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.private.name}</h3>
+                  <p className="text-gray-600 mb-4">{t.pricing.private.duration}</p>
                   <div className="text-4xl font-bold text-orange-600 mb-2">
-                    $14,000 <span className="text-lg font-normal text-gray-600">MXN</span>
+                    {t.pricing.private.price} <span className="text-lg font-normal text-gray-600">{t.pricing.private.currency}</span>
                   </div>
-                  <p className="text-sm text-gray-600">hasta 6 personas</p>
+                  <p className="text-sm text-gray-600">{t.pricing.private.per}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 font-medium">Todo lo anterior +</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Snorkel con lobos marinos</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Equipo completo de snorkel</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Atención personalizada</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">Flexibilidad total de horarios</span>
-                  </li>
+                  {t.pricing.private.features.map((feature: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                      <span className={`text-sm text-gray-700${i === 0 ? " font-medium" : ""}`}>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 <button className="w-full bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                  Reservar Privado
+                  {t.pricing.private.cta}
                 </button>
               </div>
             </div>
@@ -585,46 +526,20 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         {/* Recommendations Section */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">💡 Recomendaciones</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">{t.recommendations.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">🏊 Saber nadar</h3>
-                <p className="text-sm text-gray-600">Solo aplica para la experiencia privada con snorkel</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">🩱 Traje de baño o wetsuit</h3>
-                <p className="text-sm text-gray-600">Y cambio de ropa seca para después</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">🧥 Ropa de abrigo</h3>
-                <p className="text-sm text-gray-600">Rompevientos o sudadera (enero-febrero son fríos)</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">🧴 Protector solar biodegradable</h3>
-                <p className="text-sm text-gray-600">Para cuidar el ecosistema marino</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">🕶️ Lentes de sol y gorra</h3>
-                <p className="text-sm text-gray-600">Protección contra el sol del Pacífico</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">❤️ Actitud respetuosa</h3>
-                <p className="text-sm text-gray-600">Y corazón abierto para la experiencia</p>
-              </div>
+              {t.recommendations.items.map((item: { title: string; text: string }, i: number) => (
+                <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.text}</p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-12 max-w-3xl mx-auto bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">Nota importante</h3>
+              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">{t.recommendations.important_title}</h3>
               <p className="text-gray-700 text-center">
-                Las ballenas grises son animales totalmente salvajes y libres.{" "}
-                <strong>No está permitido nadar con ballenas barbadas ni cachalotes en México.</strong> Nuestra
-                experiencia es 100% de observación, ética y responsable. Por eso cada encuentro es real, natural y
-                profundamente humano.
+                {t.recommendations.important_text}
               </p>
             </div>
           </div>
@@ -634,51 +549,24 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         <section id="testimonials" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Lo que dicen nuestros viajeros
+              {t.testimonials.title}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+              {t.testimonials.items.map((item: { text: string; author: string; location: string }, i: number) => (
+                <div key={i} className="bg-gray-50 p-6 rounded-lg">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    &ldquo;{item.text}&rdquo;
+                  </p>
+                  <p className="font-semibold text-gray-900">&mdash; {item.author}</p>
+                  <p className="text-sm text-gray-600">{item.location}</p>
                 </div>
-                <p className="text-gray-700 mb-4 italic">
-                  "Una experiencia que no tiene palabras. Ver a las ballenas grises tan cerca, con sus bebés, fue algo
-                  que nunca voy a olvidar. El equipo de Keabelmet es súper profesional y respetuoso con los animales."
-                </p>
-                <p className="font-semibold text-gray-900">— María Rodríguez</p>
-                <p className="text-sm text-gray-600">Ciudad de México</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 italic">
-                  "El tour privado valió cada peso. Pudimos tomarnos nuestro tiempo, hacer snorkel con lobos marinos y
-                  ver ballenas en un ambiente súper tranquilo. Lo recomiendo 100%."
-                </p>
-                <p className="font-semibold text-gray-900">— Carlos Méndez</p>
-                <p className="text-sm text-gray-600">Guadalajara</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 italic">
-                  "Fue mi primera vez viendo ballenas y superó todas mis expectativas. El biólogo nos explicó todo sobre
-                  su migración y comportamiento. Una aventura increíble desde La Paz."
-                </p>
-                <p className="font-semibold text-gray-900">— Ana Torres</p>
-                <p className="text-sm text-gray-600">Monterrey</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -687,18 +575,18 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
         <section className="py-16 md:py-24 bg-gradient-to-r from-teal-600 to-cyan-600">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              ¿Listo para vivir este encuentro ancestral?
+              {t.cta.title}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Las ballenas grises solo están aquí de enero a marzo. No dejes pasar esta oportunidad única.
+              {t.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white hover:bg-gray-100 text-teal-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg">
-                Reserva tu lugar ahora
+                {t.cta.cta_primary}
               </button>
               <Link href={l("/")}>
                 <button className="text-white border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                  Ver más expediciones
+                  {t.cta.cta_secondary}
                 </button>
               </Link>
             </div>
@@ -709,7 +597,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2026 Keabelmet. Todos los derechos reservados.</p>
+          <p className="text-gray-400">&copy; {t.footer.copyright}</p>
         </div>
       </footer>
     </div>

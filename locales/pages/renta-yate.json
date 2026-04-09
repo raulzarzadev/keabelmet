@@ -1,0 +1,194 @@
+{
+  "es": {
+    "meta": {
+      "title": "Renta de Yate",
+      "description": "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes."
+    },
+    "hero": {
+      "badge": "Experiencia Premium",
+      "title": "Renta de Yate de Lujo",
+      "description": "La maxima experiencia en el Mar de Cortes con yates de lujo, servicio premium y comodidades de primera clase",
+      "cta": "Reservar Ahora",
+      "image_alt": "Renta de Yate"
+    },
+    "details": {
+      "duration_title": "Duracion",
+      "duration_text": "Flexible (dia o multiples dias)",
+      "capacity_title": "Capacidad",
+      "capacity_text": "Hasta 12 personas",
+      "availability_title": "Disponibilidad",
+      "availability_text": "Todo el ano",
+      "chef_title": "Chef",
+      "chef_text": "Chef a bordo incluido"
+    },
+    "about": {
+      "title": "Sobre la Experiencia",
+      "description": "Disfruta de la maxima experiencia de lujo en el Mar de Cortes a bordo de nuestros yates premium. Perfecto para celebraciones especiales, eventos corporativos, o simplemente para disfrutar del mar con el mas alto nivel de confort. Nuestros yates cuentan con camarotes lujosos, amplias areas de entretenimiento, jacuzzi, y todas las comodidades que esperas de una experiencia de cinco estrellas."
+    },
+    "includes": {
+      "title": "Que Incluye",
+      "items": [
+        "Capitan y tripulacion profesional",
+        "Chef a bordo",
+        "Menu gourmet personalizado",
+        "Bebidas premium ilimitadas",
+        "Equipo de snorkel y deportes acuaticos",
+        "Jet skis y paddleboards",
+        "Sistema de sonido premium",
+        "Servicio de mayordomo"
+      ],
+      "premium_note_title": "Experiencia Premium:",
+      "premium_note_text": "Itinerario completamente personalizable. Contactanos para disenar tu experiencia perfecta."
+    },
+    "cta": {
+      "title": "Lujo sin limites",
+      "description": "Experiencia exclusiva. Consulta disponibilidad",
+      "cta_primary": "Consultar Ahora",
+      "cta_secondary": "Ver Mas Experiencias"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Yacht Rental",
+      "description": "Rent a luxury yacht in La Paz, BCS. Onboard chef, premium drinks, water sports and VIP service. The ultimate experience in the Sea of Cortez."
+    },
+    "hero": {
+      "badge": "Premium Experience",
+      "title": "Luxury Yacht Rental",
+      "description": "The ultimate experience in the Sea of Cortez with luxury yachts, premium service and first-class amenities",
+      "cta": "Book Now",
+      "image_alt": "Yacht Rental"
+    },
+    "details": {
+      "duration_title": "Duration",
+      "duration_text": "Flexible (day or multi-day)",
+      "capacity_title": "Capacity",
+      "capacity_text": "Up to 12 people",
+      "availability_title": "Availability",
+      "availability_text": "Year-round",
+      "chef_title": "Chef",
+      "chef_text": "Onboard chef included"
+    },
+    "about": {
+      "title": "About the Experience",
+      "description": "Enjoy the ultimate luxury experience in the Sea of Cortez aboard our premium yachts. Perfect for special celebrations, corporate events, or simply enjoying the sea with the highest level of comfort. Our yachts feature luxurious cabins, spacious entertainment areas, jacuzzi, and all the amenities you expect from a five-star experience."
+    },
+    "includes": {
+      "title": "What's Included",
+      "items": [
+        "Professional captain and crew",
+        "Onboard chef",
+        "Personalized gourmet menu",
+        "Unlimited premium drinks",
+        "Snorkel gear and water sports equipment",
+        "Jet skis and paddleboards",
+        "Premium sound system",
+        "Butler service"
+      ],
+      "premium_note_title": "Premium Experience:",
+      "premium_note_text": "Fully customizable itinerary. Contact us to design your perfect experience."
+    },
+    "cta": {
+      "title": "Limitless luxury",
+      "description": "Exclusive experience. Check availability",
+      "cta_primary": "Inquire Now",
+      "cta_secondary": "See More Experiences"
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Location de Yacht",
+      "description": "Louez un yacht de luxe a La Paz, BCS. Chef a bord, boissons premium, sports nautiques et service VIP. L'experience ultime dans la mer de Cortez."
+    },
+    "hero": {
+      "badge": "Experience Premium",
+      "title": "Location de Yacht de Luxe",
+      "description": "L'experience ultime dans la mer de Cortez avec des yachts de luxe, un service premium et des commodites de premiere classe",
+      "cta": "Reserver Maintenant",
+      "image_alt": "Location de Yacht"
+    },
+    "details": {
+      "duration_title": "Duree",
+      "duration_text": "Flexible (journee ou plusieurs jours)",
+      "capacity_title": "Capacite",
+      "capacity_text": "Jusqu'a 12 personnes",
+      "availability_title": "Disponibilite",
+      "availability_text": "Toute l'annee",
+      "chef_title": "Chef",
+      "chef_text": "Chef a bord inclus"
+    },
+    "about": {
+      "title": "A propos de l'Experience",
+      "description": "Profitez de l'experience de luxe ultime dans la mer de Cortez a bord de nos yachts premium. Parfait pour les celebrations speciales, les evenements corporatifs, ou simplement pour profiter de la mer avec le plus haut niveau de confort. Nos yachts disposent de cabines luxueuses, de vastes espaces de divertissement, de jacuzzi et de toutes les commodites que vous attendez d'une experience cinq etoiles."
+    },
+    "includes": {
+      "title": "Ce qui est Inclus",
+      "items": [
+        "Capitaine et equipage professionnel",
+        "Chef a bord",
+        "Menu gastronomique personnalise",
+        "Boissons premium illimitees",
+        "Equipement de snorkeling et sports nautiques",
+        "Jet skis et paddleboards",
+        "Systeme audio premium",
+        "Service de majordome"
+      ],
+      "premium_note_title": "Experience Premium :",
+      "premium_note_text": "Itineraire entierement personnalisable. Contactez-nous pour concevoir votre experience parfaite."
+    },
+    "cta": {
+      "title": "Luxe sans limites",
+      "description": "Experience exclusive. Verifiez la disponibilite",
+      "cta_primary": "Renseigner Maintenant",
+      "cta_secondary": "Voir Plus d'Experiences"
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "游艇租赁",
+      "description": "在 La Paz, BCS 租赁豪华游艇。船上厨师、高级饮品、水上运动和 VIP 服务。科尔特斯海的终极体验。"
+    },
+    "hero": {
+      "badge": "尊享体验",
+      "title": "豪华游艇租赁",
+      "description": "科尔特斯海的终极体验，配备豪华游艇、尊享服务和一流设施",
+      "cta": "立即预订",
+      "image_alt": "游艇租赁"
+    },
+    "details": {
+      "duration_title": "时长",
+      "duration_text": "灵活（单日或多日）",
+      "capacity_title": "容量",
+      "capacity_text": "最多 12 人",
+      "availability_title": "可用性",
+      "availability_text": "全年",
+      "chef_title": "厨师",
+      "chef_text": "包含船上厨师"
+    },
+    "about": {
+      "title": "关于体验",
+      "description": "在我们的高端游艇上尽享科尔特斯海的终极奢华体验。适合特殊庆典、企业活动，或以最高水平的舒适度享受大海。我们的游艇配备豪华客舱、宽敞的娱乐区、按摩浴缸以及五星级体验应有的一切设施。"
+    },
+    "includes": {
+      "title": "包含项目",
+      "items": [
+        "专业船长和船员",
+        "船上厨师",
+        "个性化美食菜单",
+        "无限量高级饮品",
+        "浮潜装备和水上运动设备",
+        "水上摩托艇和桨板",
+        "高级音响系统",
+        "管家服务"
+      ],
+      "premium_note_title": "尊享体验：",
+      "premium_note_text": "完全可定制的行程。联系我们设计您的完美体验。"
+    },
+    "cta": {
+      "title": "无限奢华",
+      "description": "独家体验。查询可用性",
+      "cta_primary": "立即咨询",
+      "cta_secondary": "查看更多体验"
+    }
+  }
+}

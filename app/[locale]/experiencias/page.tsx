@@ -18,7 +18,7 @@ export default async function Experiencias({ params }: { params: Promise<{ local
 
   const expKeys = ["safariBahiaMagdalena", "safariLaVentana", "surfCamp"]
   const expImages = ["/striped-marlin-underwater.jpg", "/killer-whale-breaching.jpg", "/surfer-riding-wave.jpg"]
-  const expHrefs = ["/expediciones/safari-bahia-magdalena", "/expediciones/safari-la-ventana", "/surf-camp"]
+  const expHrefs = ["/experiencias/safari-bahia-magdalena", "/experiencias/safari-la-ventana", "/surf-camp"]
   const expPrices = [165, 180, 195]
   const expRatings = [4.9, 5.0, 4.9]
   const expReviews = [156, 243, 89]

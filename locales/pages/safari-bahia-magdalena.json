@@ -1,0 +1,666 @@
+{
+  "es": {
+    "hero": {
+      "title": "Safari Bahia Magdalena: El safari mas salvaje",
+      "subtitle": "Un espectaculo unico de vida marina, donde miles de sardinas atraen a los depredadores mas impresionantes del oceano.",
+      "cta": "Reserva tu aventura",
+      "ctaSecondary": "Ver detalles",
+      "imageAlt": "Marlin rayado nadando elegantemente en las aguas azules de Bahia Magdalena durante la corrida de sardinas"
+    },
+    "about": {
+      "title": "Que es la Corrida de Sardinas?",
+      "description1": "Cada ano, durante los meses de Noviembre y Diciembre sucede uno de los fenomenos mas salvajes de la naturaleza. Un evento tan breve como poderoso, donde las aguas de Bahia Magdalena se convierten en el epicentro de la vida salvaje marina: miles de sardinas migran en enormes bancos, atrayendo a depredadores tope como marlines, peces dorados, lobos marinos e incluso ballenas.",
+      "description2": "Este evento natural no solo es visualmente impresionante. Es una leccion viva sobre el equilibrio del oceano y el poder de la naturaleza en su estado mas crudo. Y ahora puedes presenciarlo desde adentro.",
+      "features": {
+        "migration": {
+          "title": "Migracion Masiva",
+          "description": "Miles de sardinas forman bancos gigantescos que se mueven como una sola entidad a traves de las aguas."
+        },
+        "frenzy": {
+          "title": "Frenesi Alimentario",
+          "description": "Los depredadores aprovechan esta abundancia en un espectaculo de caza coordinada y feroz."
+        },
+        "unique": {
+          "title": "Experiencia Unica",
+          "description": "Un fenomeno que solo ocurre dos meses al ano y que pocos tienen la oportunidad de presenciar."
+        }
+      }
+    },
+    "experience": {
+      "title": "La experiencia Keabelmet",
+      "description1": "No es un tour. Es un must para los amantes del oceano. Zarparas hacia el gran azul desde uno de los puntos mas virgenes de la peninsula, en un safari guiado por biologos marinos con anos de experiencia, y seras parte de uno de los espectaculos mas intensos del Pacifico mexicano.",
+      "description2": "Te sumergiras (si las condiciones lo permiten) en el corazon de la accion, flotando sobre un ecosistema en movimiento, donde cada segundo puede cambiar todo.",
+      "imageAlt": "Marlin rayado cazando sardinas en accion durante el safari",
+      "itinerary": {
+        "title": "Itinerario del Safari",
+        "step1": {
+          "time": "5:00 AM | Salida desde La Paz",
+          "description": "Partimos rumbo a Puerto Chale, el punto de acceso a Bahia Magdalena."
+        },
+        "step2": {
+          "time": "7:30 AM - 2:30 PM | Safari en mar abierto",
+          "description": "Navegacion en busca de los bancos de sardinas y sus depredadores.",
+          "activities": [
+            "Avistamiento de vida marina",
+            "Snorkel en el corazon de la accion (condiciones permitiendo)",
+            "Fotografia submarina",
+            "Refrigerio a bordo"
+          ]
+        },
+        "step3": {
+          "time": "6:00 PM aprox. | Regreso a La Paz",
+          "description": "Regreso con la satisfaccion de haber vivido uno de los espectaculos mas salvajes del oceano."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Especies que puedes encontrar",
+      "subtitle": "Durante la corrida de sardinas, Bahia Magdalena se convierte en un teatro natural donde convergen algunas de las especies mas impresionantes del Pacifico.",
+      "season": "Nov - Dic",
+      "species": {
+        "sardines": {
+          "name": "Sardinas",
+          "description": "Las protagonistas del espectaculo. Forman bancos masivos que pueden extenderse por kilometros, creando una \"bola de sardinas\" que atrae a todos los depredadores."
+        },
+        "stripedMarlin": {
+          "name": "Marlin Rayado",
+          "description": "Veloces y letales, los marlines rayados son los cazadores mas espectaculares. Su velocidad y agilidad los convierte en los reyes de la corrida."
+        },
+        "seaLions": {
+          "name": "Lobos Marinos",
+          "description": "Agiles y coordinados, los lobos marinos cazan en grupos, aprovechando su velocidad bajo el agua para atrapar sardinas."
+        },
+        "dorado": {
+          "name": "Pez Dorado",
+          "description": "Conocidos por su coloracion dorada brillante, estos peces son cazadores oportunistas que aprovechan el frenesi alimentario."
+        },
+        "humpbackWhales": {
+          "name": "Ballenas Jorobadas",
+          "description": "Las gigantes del oceano aprovechan la abundancia de sardinas para alimentarse antes de continuar su migracion."
+        },
+        "brydeWhales": {
+          "name": "Ballenas de Bryde",
+          "description": "Residentes del Pacifico mexicano, estas ballenas son expertas en aprovechar las agregaciones de sardinas para alimentarse."
+        }
+      },
+      "limitedSeason": {
+        "title": "Temporada Limitada",
+        "description": "La corrida de sardinas solo ocurre durante noviembre y diciembre. Es un fenomeno natural impredecible que depende de las condiciones oceanicas, lo que hace cada avistamiento aun mas especial."
+      }
+    },
+    "includes": {
+      "title": "Incluye la expedicion",
+      "subtitle": "Todo lo que necesitas para vivir el safari mas salvaje del Pacifico mexicano.",
+      "items": {
+        "transport": {
+          "title": "Transporte terrestre y maritimo",
+          "description": "Traslado desde La Paz a Puerto Chale y embarcacion especializada para safari marino."
+        },
+        "guide": {
+          "title": "Guia biologo marino especializado",
+          "description": "Experto en el comportamiento de la corrida de sardinas y la vida marina del Pacifico."
+        },
+        "snorkel": {
+          "title": "Equipo completo de snorkel",
+          "description": "Mascara, tubo y aletas profesionales para sumergirte en la accion."
+        },
+        "photo": {
+          "title": "Fotografia y video submarino",
+          "description": "Capturas profesionales del espectaculo para que tengas un recuerdo epico."
+        },
+        "refreshment": {
+          "title": "Refrigerio e hidratacion",
+          "description": "Snacks energeticos y agua purificada para mantenerte con energia durante el safari."
+        },
+        "observation": {
+          "title": "Equipo de observacion",
+          "description": "Binoculares de alta calidad para no perderte ningun detalle del espectaculo."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Precios y Reservas",
+      "subtitle": "Una experiencia unica y exclusiva con cupo limitado para garantizar la mejor experiencia posible.",
+      "card": {
+        "name": "Safari Bahia Magdalena",
+        "price": "$3,500",
+        "currency": "MXN / persona",
+        "features": [
+          "Cupo maximo: 6 personas",
+          "Experiencia exclusiva y personalizada",
+          "Temporada limitada (Nov - Dic)",
+          "Todos los servicios incluidos"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "availability": {
+        "title": "Disponibilidad Limitada",
+        "description": "Solo operamos durante la temporada de corrida de sardinas (noviembre y diciembre). Las fechas exactas dependen de las condiciones naturales y se confirman con anticipacion."
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros aventureros",
+      "subtitle": "Experiencias reales de quienes han vivido el safari mas salvaje del Pacifico.",
+      "reviews": [
+        {
+          "name": "Alejandro Ruiz",
+          "location": "Monterrey",
+          "text": "Increible experiencia. Ver a los marlines cazando sardinas fue como estar en un documental de National Geographic. La adrenalina y la emocion son indescriptibles."
+        },
+        {
+          "name": "Sofia Mendoza",
+          "location": "Ciudad de Mexico",
+          "text": "Una experiencia que te cambia la perspectiva del oceano. Estar en medio de la corrida de sardinas es algo que no se puede explicar con palabras. Absolutamente recomendado!"
+        },
+        {
+          "name": "Diego Herrera",
+          "location": "Guadalajara",
+          "text": "El safari mas intenso que he vivido. Los guias son expertos y te hacen sentir seguro mientras vives esta experiencia unica. Las fotos y videos quedaron espectaculares."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para vivir el safari mas salvaje del Pacifico?",
+      "subtitle": "Solo dos meses al ano. Solo 6 personas por safari. Una experiencia que recordaras para toda la vida.",
+      "button": "Reserva Ahora"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Safari Bahia Magdalena: The Wildest Safari",
+      "subtitle": "A unique spectacle of marine life, where thousands of sardines attract the most impressive predators in the ocean.",
+      "cta": "Book your adventure",
+      "ctaSecondary": "View details",
+      "imageAlt": "Striped marlin swimming elegantly in the blue waters of Bahia Magdalena during the sardine run"
+    },
+    "about": {
+      "title": "What is the Sardine Run?",
+      "description1": "Every year, during the months of November and December, one of nature's wildest phenomena takes place. An event as brief as it is powerful, where the waters of Bahia Magdalena become the epicenter of marine wildlife: thousands of sardines migrate in enormous schools, attracting apex predators such as marlins, dorado fish, sea lions, and even whales.",
+      "description2": "This natural event is not only visually stunning. It is a living lesson about the balance of the ocean and the power of nature in its rawest state. And now you can witness it from the inside.",
+      "features": {
+        "migration": {
+          "title": "Massive Migration",
+          "description": "Thousands of sardines form gigantic schools that move as a single entity through the waters."
+        },
+        "frenzy": {
+          "title": "Feeding Frenzy",
+          "description": "Predators take advantage of this abundance in a spectacle of coordinated and fierce hunting."
+        },
+        "unique": {
+          "title": "Unique Experience",
+          "description": "A phenomenon that only occurs two months a year and that few have the opportunity to witness."
+        }
+      }
+    },
+    "experience": {
+      "title": "The Keabelmet experience",
+      "description1": "It's not a tour. It's a must for ocean lovers. You'll set sail toward the deep blue from one of the most pristine points on the peninsula, on a safari guided by marine biologists with years of experience, and you'll be part of one of the most intense spectacles of the Mexican Pacific.",
+      "description2": "You'll dive in (if conditions allow) to the heart of the action, floating over an ecosystem in motion, where every second can change everything.",
+      "imageAlt": "Striped marlin hunting sardines in action during the safari",
+      "itinerary": {
+        "title": "Safari Itinerary",
+        "step1": {
+          "time": "5:00 AM | Departure from La Paz",
+          "description": "We head to Puerto Chale, the access point to Bahia Magdalena."
+        },
+        "step2": {
+          "time": "7:30 AM - 2:30 PM | Open sea safari",
+          "description": "Navigation in search of sardine schools and their predators.",
+          "activities": [
+            "Marine wildlife sighting",
+            "Snorkeling in the heart of the action (conditions permitting)",
+            "Underwater photography",
+            "Refreshments on board"
+          ]
+        },
+        "step3": {
+          "time": "6:00 PM approx. | Return to La Paz",
+          "description": "Return with the satisfaction of having witnessed one of the ocean's wildest spectacles."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Species you can encounter",
+      "subtitle": "During the sardine run, Bahia Magdalena becomes a natural theater where some of the most impressive species of the Pacific converge.",
+      "season": "Nov - Dec",
+      "species": {
+        "sardines": {
+          "name": "Sardines",
+          "description": "The stars of the show. They form massive schools that can stretch for kilometers, creating a \"bait ball\" that attracts all predators."
+        },
+        "stripedMarlin": {
+          "name": "Striped Marlin",
+          "description": "Fast and lethal, striped marlins are the most spectacular hunters. Their speed and agility make them the kings of the run."
+        },
+        "seaLions": {
+          "name": "Sea Lions",
+          "description": "Agile and coordinated, sea lions hunt in groups, leveraging their underwater speed to catch sardines."
+        },
+        "dorado": {
+          "name": "Dorado",
+          "description": "Known for their brilliant golden coloring, these fish are opportunistic hunters that take advantage of the feeding frenzy."
+        },
+        "humpbackWhales": {
+          "name": "Humpback Whales",
+          "description": "The giants of the ocean take advantage of the abundance of sardines to feed before continuing their migration."
+        },
+        "brydeWhales": {
+          "name": "Bryde's Whales",
+          "description": "Residents of the Mexican Pacific, these whales are experts at taking advantage of sardine aggregations to feed."
+        }
+      },
+      "limitedSeason": {
+        "title": "Limited Season",
+        "description": "The sardine run only occurs during November and December. It is an unpredictable natural phenomenon that depends on ocean conditions, making each sighting even more special."
+      }
+    },
+    "includes": {
+      "title": "Expedition includes",
+      "subtitle": "Everything you need to experience the wildest safari of the Mexican Pacific.",
+      "items": {
+        "transport": {
+          "title": "Land and sea transport",
+          "description": "Transfer from La Paz to Puerto Chale and specialized boat for the marine safari."
+        },
+        "guide": {
+          "title": "Specialized marine biologist guide",
+          "description": "Expert in sardine run behavior and Pacific marine life."
+        },
+        "snorkel": {
+          "title": "Complete snorkel gear",
+          "description": "Professional mask, snorkel, and fins to immerse yourself in the action."
+        },
+        "photo": {
+          "title": "Underwater photography and video",
+          "description": "Professional captures of the spectacle so you have an epic souvenir."
+        },
+        "refreshment": {
+          "title": "Refreshments and hydration",
+          "description": "Energy snacks and purified water to keep you fueled during the safari."
+        },
+        "observation": {
+          "title": "Observation equipment",
+          "description": "High-quality binoculars so you don't miss a single detail of the spectacle."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Pricing and Reservations",
+      "subtitle": "A unique and exclusive experience with limited capacity to guarantee the best possible experience.",
+      "card": {
+        "name": "Safari Bahia Magdalena",
+        "price": "$3,500",
+        "currency": "MXN / person",
+        "features": [
+          "Maximum capacity: 6 people",
+          "Exclusive and personalized experience",
+          "Limited season (Nov - Dec)",
+          "All services included"
+        ],
+        "cta": "Book Now"
+      },
+      "availability": {
+        "title": "Limited Availability",
+        "description": "We only operate during the sardine run season (November and December). Exact dates depend on natural conditions and are confirmed in advance."
+      }
+    },
+    "testimonials": {
+      "title": "What our adventurers say",
+      "subtitle": "Real experiences from those who have lived the wildest safari of the Pacific.",
+      "reviews": [
+        {
+          "name": "Alejandro Ruiz",
+          "location": "Monterrey",
+          "text": "Incredible experience. Watching the marlins hunting sardines was like being in a National Geographic documentary. The adrenaline and emotion are indescribable."
+        },
+        {
+          "name": "Sofia Mendoza",
+          "location": "Mexico City",
+          "text": "An experience that changes your perspective of the ocean. Being in the middle of the sardine run is something that cannot be explained with words. Absolutely recommended!"
+        },
+        {
+          "name": "Diego Herrera",
+          "location": "Guadalajara",
+          "text": "The most intense safari I've ever experienced. The guides are experts and make you feel safe while you live this unique experience. The photos and videos came out spectacular."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to experience the wildest safari of the Pacific?",
+      "subtitle": "Only two months a year. Only 6 people per safari. An experience you'll remember for the rest of your life.",
+      "button": "Book Now"
+    }
+  },
+  "fr": {
+    "hero": {
+      "title": "Safari Bahia Magdalena : Le safari le plus sauvage",
+      "subtitle": "Un spectacle unique de vie marine, ou des milliers de sardines attirent les predateurs les plus impressionnants de l'ocean.",
+      "cta": "Reservez votre aventure",
+      "ctaSecondary": "Voir les details",
+      "imageAlt": "Marlin raye nageant elegamment dans les eaux bleues de Bahia Magdalena pendant la course des sardines"
+    },
+    "about": {
+      "title": "Qu'est-ce que la Course des Sardines ?",
+      "description1": "Chaque annee, durant les mois de novembre et decembre, l'un des phenomenes les plus sauvages de la nature se produit. Un evenement aussi bref que puissant, ou les eaux de Bahia Magdalena deviennent l'epicentre de la vie marine sauvage : des milliers de sardines migrent en bancs enormes, attirant des predateurs de pointe comme les marlins, les dorades, les lions de mer et meme les baleines.",
+      "description2": "Cet evenement naturel n'est pas seulement visuellement impressionnant. C'est une lecon vivante sur l'equilibre de l'ocean et la puissance de la nature dans son etat le plus brut. Et maintenant, vous pouvez en etre temoin de l'interieur.",
+      "features": {
+        "migration": {
+          "title": "Migration massive",
+          "description": "Des milliers de sardines forment des bancs gigantesques qui se deplacent comme une seule entite a travers les eaux."
+        },
+        "frenzy": {
+          "title": "Frenesie alimentaire",
+          "description": "Les predateurs profitent de cette abondance dans un spectacle de chasse coordonnee et feroce."
+        },
+        "unique": {
+          "title": "Experience unique",
+          "description": "Un phenomene qui ne se produit que deux mois par an et que peu de personnes ont l'occasion de voir."
+        }
+      }
+    },
+    "experience": {
+      "title": "L'experience Keabelmet",
+      "description1": "Ce n'est pas un tour. C'est un incontournable pour les amoureux de l'ocean. Vous prendrez la mer vers le grand bleu depuis l'un des points les plus vierges de la peninsule, lors d'un safari guide par des biologistes marins experimentes, et vous ferez partie de l'un des spectacles les plus intenses du Pacifique mexicain.",
+      "description2": "Vous plongerez (si les conditions le permettent) au coeur de l'action, flottant au-dessus d'un ecosysteme en mouvement, ou chaque seconde peut tout changer.",
+      "imageAlt": "Marlin raye chassant des sardines en action pendant le safari",
+      "itinerary": {
+        "title": "Itineraire du Safari",
+        "step1": {
+          "time": "5h00 | Depart depuis La Paz",
+          "description": "Nous partons en direction de Puerto Chale, le point d'acces a Bahia Magdalena."
+        },
+        "step2": {
+          "time": "7h30 - 14h30 | Safari en pleine mer",
+          "description": "Navigation a la recherche des bancs de sardines et de leurs predateurs.",
+          "activities": [
+            "Observation de la vie marine",
+            "Snorkeling au coeur de l'action (selon les conditions)",
+            "Photographie sous-marine",
+            "Collation a bord"
+          ]
+        },
+        "step3": {
+          "time": "18h00 environ | Retour a La Paz",
+          "description": "Retour avec la satisfaction d'avoir vecu l'un des spectacles les plus sauvages de l'ocean."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Especes que vous pouvez rencontrer",
+      "subtitle": "Pendant la course des sardines, Bahia Magdalena devient un theatre naturel ou convergent certaines des especes les plus impressionnantes du Pacifique.",
+      "season": "Nov - Dec",
+      "species": {
+        "sardines": {
+          "name": "Sardines",
+          "description": "Les protagonistes du spectacle. Elles forment des bancs massifs qui peuvent s'etendre sur des kilometres, creant une \"boule de sardines\" qui attire tous les predateurs."
+        },
+        "stripedMarlin": {
+          "name": "Marlin raye",
+          "description": "Rapides et letaux, les marlins rayes sont les chasseurs les plus spectaculaires. Leur vitesse et leur agilite en font les rois de la course."
+        },
+        "seaLions": {
+          "name": "Lions de mer",
+          "description": "Agiles et coordonnes, les lions de mer chassent en groupes, tirant parti de leur vitesse sous l'eau pour attraper les sardines."
+        },
+        "dorado": {
+          "name": "Dorade",
+          "description": "Connues pour leur coloration doree brillante, ces poissons sont des chasseurs opportunistes qui profitent de la frenesie alimentaire."
+        },
+        "humpbackWhales": {
+          "name": "Baleines a bosse",
+          "description": "Les geantes de l'ocean profitent de l'abondance de sardines pour se nourrir avant de poursuivre leur migration."
+        },
+        "brydeWhales": {
+          "name": "Baleines de Bryde",
+          "description": "Residentes du Pacifique mexicain, ces baleines sont expertes pour tirer parti des aggregations de sardines pour se nourrir."
+        }
+      },
+      "limitedSeason": {
+        "title": "Saison limitee",
+        "description": "La course des sardines ne se produit qu'en novembre et decembre. C'est un phenomene naturel imprevisible qui depend des conditions oceaniques, rendant chaque observation encore plus speciale."
+      }
+    },
+    "includes": {
+      "title": "L'expedition comprend",
+      "subtitle": "Tout ce dont vous avez besoin pour vivre le safari le plus sauvage du Pacifique mexicain.",
+      "items": {
+        "transport": {
+          "title": "Transport terrestre et maritime",
+          "description": "Transfert depuis La Paz jusqu'a Puerto Chale et embarcation specialisee pour le safari marin."
+        },
+        "guide": {
+          "title": "Guide biologiste marin specialise",
+          "description": "Expert du comportement de la course des sardines et de la vie marine du Pacifique."
+        },
+        "snorkel": {
+          "title": "Equipement complet de snorkeling",
+          "description": "Masque, tuba et palmes professionnels pour vous immerger dans l'action."
+        },
+        "photo": {
+          "title": "Photographie et video sous-marines",
+          "description": "Captures professionnelles du spectacle pour que vous gardiez un souvenir epique."
+        },
+        "refreshment": {
+          "title": "Collation et hydratation",
+          "description": "Snacks energetiques et eau purifiee pour vous maintenir en forme pendant le safari."
+        },
+        "observation": {
+          "title": "Equipement d'observation",
+          "description": "Jumelles de haute qualite pour ne manquer aucun detail du spectacle."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Tarifs et reservations",
+      "subtitle": "Une experience unique et exclusive avec une capacite limitee pour garantir la meilleure experience possible.",
+      "card": {
+        "name": "Safari Bahia Magdalena",
+        "price": "$3,500",
+        "currency": "MXN / personne",
+        "features": [
+          "Capacite maximale : 6 personnes",
+          "Experience exclusive et personnalisee",
+          "Saison limitee (Nov - Dec)",
+          "Tous les services inclus"
+        ],
+        "cta": "Reserver maintenant"
+      },
+      "availability": {
+        "title": "Disponibilite limitee",
+        "description": "Nous operons uniquement pendant la saison de la course des sardines (novembre et decembre). Les dates exactes dependent des conditions naturelles et sont confirmees a l'avance."
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos aventuriers",
+      "subtitle": "Experiences reelles de ceux qui ont vecu le safari le plus sauvage du Pacifique.",
+      "reviews": [
+        {
+          "name": "Alejandro Ruiz",
+          "location": "Monterrey",
+          "text": "Experience incroyable. Voir les marlins chasser les sardines, c'etait comme etre dans un documentaire de National Geographic. L'adrenaline et l'emotion sont indescriptibles."
+        },
+        {
+          "name": "Sofia Mendoza",
+          "location": "Mexico",
+          "text": "Une experience qui change votre perspective de l'ocean. Etre au milieu de la course des sardines est quelque chose qui ne s'explique pas avec des mots. Absolument recommande !"
+        },
+        {
+          "name": "Diego Herrera",
+          "location": "Guadalajara",
+          "text": "Le safari le plus intense que j'aie vecu. Les guides sont des experts et vous font sentir en securite pendant que vous vivez cette experience unique. Les photos et videos sont spectaculaires."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pret a vivre le safari le plus sauvage du Pacifique ?",
+      "subtitle": "Seulement deux mois par an. Seulement 6 personnes par safari. Une experience dont vous vous souviendrez toute votre vie.",
+      "button": "Reserver maintenant"
+    }
+  },
+  "zh": {
+    "hero": {
+      "title": "Bahia Magdalena 探险之旅：最狂野的海洋探险",
+      "subtitle": "一场独一无二的海洋生命奇观，成千上万的沙丁鱼吸引着海洋中最令人印象深刻的掠食者。",
+      "cta": "预订你的冒险",
+      "ctaSecondary": "查看详情",
+      "imageAlt": "沙丁鱼大迁徙期间，条纹马林鱼在 Bahia Magdalena 蔚蓝海水中优雅游弋"
+    },
+    "about": {
+      "title": "什么是沙丁鱼大迁徙？",
+      "description1": "每年十一月和十二月，大自然最狂野的现象之一就会上演。这是一场既短暂又震撼的盛事——Bahia Magdalena 的海域成为海洋野生动物的中心：成千上万的沙丁鱼以巨大的鱼群迁徙，吸引马林鱼、鬼头刀、海狮甚至鲸鱼等顶级掠食者。",
+      "description2": "这一自然奇观不仅视觉震撼，更是关于海洋平衡和大自然最原始力量的生动一课。现在，你可以从内部亲眼见证。",
+      "features": {
+        "migration": {
+          "title": "大规模迁徙",
+          "description": "成千上万的沙丁鱼形成巨大鱼群，在水中如同一个整体般移动。"
+        },
+        "frenzy": {
+          "title": "疯狂捕食",
+          "description": "掠食者们利用这一丰富资源，上演一场协调而凶猛的捕猎盛宴。"
+        },
+        "unique": {
+          "title": "独特体验",
+          "description": "一年仅两个月出现的自然现象，只有少数人有机会亲眼目睹。"
+        }
+      }
+    },
+    "experience": {
+      "title": "Keabelmet 探险体验",
+      "description1": "这不是普通的旅游。对于海洋爱好者来说，这是必去之旅。你将从半岛最原始的地点之一出发驶向蔚蓝深海，在拥有多年经验的海洋生物学家引导下，成为墨西哥太平洋最激动人心的奇观之一的一部分。",
+      "description2": "你将潜入（如果条件允许）行动的核心，漂浮在一个不断变化的生态系统之上，每一秒都可能改变一切。",
+      "imageAlt": "探险期间条纹马林鱼正在捕猎沙丁鱼",
+      "itinerary": {
+        "title": "探险行程",
+        "step1": {
+          "time": "早上 5:00 | 从 La Paz 出发",
+          "description": "我们前往 Puerto Chale——进入 Bahia Magdalena 的入口。"
+        },
+        "step2": {
+          "time": "早上 7:30 - 下午 2:30 | 深海探险",
+          "description": "航行寻找沙丁鱼群及其掠食者。",
+          "activities": [
+            "海洋生物观察",
+            "在行动核心浮潜（视条件而定）",
+            "水下摄影",
+            "船上茶点"
+          ]
+        },
+        "step3": {
+          "time": "下午 6:00 左右 | 返回 La Paz",
+          "description": "带着亲历海洋最狂野奇观的满足感返回。"
+        }
+      }
+    },
+    "wildlife": {
+      "title": "你可能遇到的物种",
+      "subtitle": "沙丁鱼大迁徙期间，Bahia Magdalena 变成一座天然剧场，太平洋最壮观的物种在此汇聚。",
+      "season": "11月 - 12月",
+      "species": {
+        "sardines": {
+          "name": "沙丁鱼",
+          "description": "这场盛宴的主角。它们形成可绵延数公里的巨大鱼群，创造出吸引所有掠食者的「沙丁鱼球」。"
+        },
+        "stripedMarlin": {
+          "name": "条纹马林鱼",
+          "description": "迅速而致命，条纹马林鱼是最壮观的猎手。它们的速度和敏捷性使其成为迁徙中的王者。"
+        },
+        "seaLions": {
+          "name": "海狮",
+          "description": "敏捷且协调，海狮成群捕猎，利用水下速度捕捉沙丁鱼。"
+        },
+        "dorado": {
+          "name": "鬼头刀",
+          "description": "以其灿烂的金色外表闻名，这些鱼是利用捕食狂潮的机会主义猎手。"
+        },
+        "humpbackWhales": {
+          "name": "座头鲸",
+          "description": "海洋巨人们利用丰富的沙丁鱼资源进食，然后继续它们的迁徙之旅。"
+        },
+        "brydeWhales": {
+          "name": "布氏鲸",
+          "description": "墨西哥太平洋的常住居民，这些鲸鱼擅长利用沙丁鱼的聚集来觅食。"
+        }
+      },
+      "limitedSeason": {
+        "title": "限定季节",
+        "description": "沙丁鱼大迁徙仅在十一月和十二月发生。这是一种不可预测的自然现象，取决于海洋条件，使每次观赏更加珍贵。"
+      }
+    },
+    "includes": {
+      "title": "探险包含内容",
+      "subtitle": "体验墨西哥太平洋最狂野探险所需的一切。",
+      "items": {
+        "transport": {
+          "title": "陆路和海路交通",
+          "description": "从 La Paz 到 Puerto Chale 的接送以及专业海洋探险船只。"
+        },
+        "guide": {
+          "title": "专业海洋生物学家向导",
+          "description": "精通沙丁鱼迁徙行为和太平洋海洋生物的专家。"
+        },
+        "snorkel": {
+          "title": "完整浮潜装备",
+          "description": "专业面罩、呼吸管和脚蹼，让你沉浸在行动中。"
+        },
+        "photo": {
+          "title": "水下摄影和录像",
+          "description": "专业拍摄的奇观画面，为你留下震撼的回忆。"
+        },
+        "refreshment": {
+          "title": "茶点和饮水",
+          "description": "能量零食和纯净水，让你在探险中保持活力。"
+        },
+        "observation": {
+          "title": "观察设备",
+          "description": "高品质双筒望远镜，让你不错过奇观的任何细节。"
+        }
+      }
+    },
+    "pricing": {
+      "title": "价格与预订",
+      "subtitle": "独特而专属的体验，限量名额以确保最佳体验。",
+      "card": {
+        "name": "Bahia Magdalena 探险之旅",
+        "price": "$3,500",
+        "currency": "墨西哥比索 / 人",
+        "features": [
+          "最多容纳：6人",
+          "专属个性化体验",
+          "限定季节（11月 - 12月）",
+          "包含所有服务"
+        ],
+        "cta": "立即预订"
+      },
+      "availability": {
+        "title": "限量开放",
+        "description": "我们仅在沙丁鱼大迁徙季节（十一月和十二月）运营。确切日期取决于自然条件，提前确认。"
+      }
+    },
+    "testimonials": {
+      "title": "探险者们怎么说",
+      "subtitle": "亲历太平洋最狂野探险的真实体验。",
+      "reviews": [
+        {
+          "name": "Alejandro Ruiz",
+          "location": "Monterrey",
+          "text": "令人难以置信的体验。看到马林鱼捕猎沙丁鱼就像身临国家地理纪录片。那种肾上腺素和激动无法用语言形容。"
+        },
+        {
+          "name": "Sofia Mendoza",
+          "location": "墨西哥城",
+          "text": "一次改变你对海洋看法的体验。身处沙丁鱼大迁徙之中，无法用言语表达。绝对推荐！"
+        },
+        {
+          "name": "Diego Herrera",
+          "location": "Guadalajara",
+          "text": "我经历过的最激烈的探险。向导们是专家，在你体验这独一无二的经历时让你感到安全。照片和视频效果惊人。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好体验太平洋最狂野的探险了吗？",
+      "subtitle": "一年仅两个月。每次探险仅6人。一生难忘的体验。",
+      "button": "立即预订"
+    }
+  }
+}

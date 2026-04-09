@@ -13,7 +13,7 @@ const expeditions = [
     image: "/images/marlin-cazando.jpeg",
     highlights: ["Corrida de Sardinas", "Marlines", "Lobos Marinos", "Lunch Included"],
     price: "$165",
-    link: "/expediciones/safari-bahia-magdalena",
+    link: "/experiencias/safari-bahia-magdalena",
   },
   {
     title: "Safari La Ventana",
@@ -24,7 +24,7 @@ const expeditions = [
     image: "/images/orcalaventana.jpeg",
     highlights: ["Migración Móbulas", "Abril–Junio", "Expert Guide", "Photos"],
     price: "$180",
-    link: "/expediciones/safari-la-ventana",
+    link: "/experiencias/safari-la-ventana",
   },
   {
     title: "Surf Camp La Paz (6 días)",

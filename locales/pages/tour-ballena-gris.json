@@ -1,0 +1,742 @@
+{
+  "es": {
+    "meta": {
+      "title": "Tour Ballena Gris en Bahia Magdalena",
+      "description": "Vive la experiencia de avistar ballenas grises en Bahia Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproduccion."
+    },
+    "hero": {
+      "badge": "Enero - Marzo",
+      "title": "Ballena Gris: Un Encuentro Ancestral en Puerto Chale",
+      "description": "Una travesia que toca el alma en Bahia Magdalena, Baja California Sur. Cada invierno, miles de ballenas grises viajan desde el Artico hasta esta laguna tranquila para dar a luz y aparearse. Tu estas a punto de entrar a ese santuario.",
+      "cta_primary": "Reserva tu aventura",
+      "cta_secondary": "Ver detalles",
+      "image_alt": "Ballena gris saltando al atardecer en el Mar de Cortes"
+    },
+    "about": {
+      "title": "Esto no es un tour. Es un privilegio.",
+      "description_1": "Cada invierno, algo sagrado sucede en el Pacifico mexicano. Miles de ballenas grises viajan miles de kilometros desde el Artico hasta una laguna tranquila en medio del desierto... para dar a luz, para aparearse, para estar.",
+      "description_2": "Un regalo de la naturaleza que solo existe unos meses al ano. Y lo vas a vivir desde el corazon de la Baja.",
+      "image_alt": "Ballena gris madre con su cria en Bahia Magdalena",
+      "meeting_title": "Punto de Encuentro",
+      "meeting_text": "La Paz - Te recogemos en tu hotel / Airbnb a las 5:00 AM",
+      "duration_title": "Duracion Total",
+      "duration_text": "9 horas aproximadamente: 2.5 hrs de camino + 2-3 hrs en lancha + 2.5 hrs de regreso",
+      "season_title": "Temporada Oficial",
+      "season_text": "Enero - Marzo unicamente. Fuera de estos meses no existe esta experiencia."
+    },
+    "itinerary": {
+      "title": "Como es la experiencia?",
+      "subtitle": "El camino hacia la magia: la aventura comienza temprano y te lleva por el desierto de la Baja hasta uno de los lugares mas especiales de Mexico.",
+      "step1_title": "Salida al Amanecer",
+      "step1_text": "La aventura comienza temprano: te pasamos a ver y partimos rumbo al norte. La luz del amanecer va pintando el desierto de la Baja, los cardones gigantes aparecen como guardianes del camino.",
+      "step2_title": "Camino al Pacifico",
+      "step2_text": "2.5 horas de travesia por paisajes unicos. Antes de darte cuenta, ya estas entrando en Puerto Chale, donde tu lancha ya te espera. El aire huele a mar, a manglar y a historia.",
+      "step3_title": "Encuentro con las Ballenas",
+      "step3_text": "Durante 2 o 3 horas navegamos dentro de la laguna, hogar temporal de estos gigantes. Aqui se aparean, aqui nacen sus crias, aqui descansan despues de la migracion mas larga del reino animal.",
+      "step3_extra": "Es comun verlas pasar junto al bote, sacar la cabeza para mirarte, jugar con sus bebes. Y si tienes suerte... alguna se acercara. Son ellas las que deciden. Siempre.",
+      "step4_title": "Vida Marina del Pacifico",
+      "step4_text": "En el camino tambien puedes ver delfines, lobos marinos, fragatas, pelicanos, aguilas pescadoras y otras aves que llenan el aire del Pacifico. Te compartimos un snack local delicioso.",
+      "step5_title": "Regreso a La Paz",
+      "step5_text": "Regresamos con la piel salada, el corazon suave y una historia que te va a acompanar siempre. Llegada estimada entre 5:00 PM - 6:00 PM."
+    },
+    "species": {
+      "title": "Especies que puedes encontrar",
+      "subtitle": "Bahia Magdalena es un ecosistema rico donde convergen multiples especies marinas durante la temporada de ballenas.",
+      "gray_whale": {
+        "name": "Ballena Gris",
+        "season": "Dic - Abr",
+        "description": "Las ballenas grises viajan mas de 20,000 km desde Alaska hasta estas lagunas calidas para dar a luz y criar a sus ballenatos. Son conocidas por su curiosidad y acercamiento amigable a las embarcaciones."
+      },
+      "sea_lions": {
+        "name": "Lobos Marinos",
+        "season": "Todo el ano",
+        "description": "Curiosos y carismaticos, los lobos marinos habitan las costas rocosas de la region. Frecuentemente se les observa descansando en grupos y nadando cerca de las embarcaciones."
+      },
+      "dolphins": {
+        "name": "Delfines",
+        "season": "Todo el ano",
+        "description": "Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectaculo natural con sus saltos y acrobacias. Varias especies habitan estas aguas."
+      },
+      "ospreys": {
+        "name": "Aguilas Pescadoras",
+        "season": "Oct - Abr",
+        "description": "Estas majestuosas aves rapaces son expertas pescadoras. Se les puede observar volando sobre las aguas y realizando espectaculares clavados para capturar peces."
+      },
+      "pelicans": {
+        "name": "Pelicanos",
+        "season": "Todo el ano",
+        "description": "Los pelicanos cafes son habitantes comunes de las costas. Con sus bolsas gulares distintivas, pescan en formaciones coordinadas y descansan en los manglares."
+      },
+      "frigatebirds": {
+        "name": "Fragatas",
+        "season": "Todo el ano",
+        "description": "Con sus alas largas y cola ahorquillada, las fragatas son maestras del vuelo. Los machos inflan su saco gular rojo durante la temporada de apareamiento, creando un espectaculo visual unico."
+      },
+      "disclaimer_title": "Nota de Realismo",
+      "disclaimer_text": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos de todas las especies, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos unicos con la naturaleza."
+    },
+    "includes": {
+      "title": "Que incluye tu experiencia?",
+      "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
+      "transport_title": "Transporte Redondo",
+      "transport_text": "Desde La Paz hasta Puerto Chale y regreso",
+      "captain_title": "Lancha con Capitan Local",
+      "captain_text": "Experto en fauna y navegacion segura",
+      "guide_title": "Guia Biologo Marino",
+      "guide_text": "Con material educativo sobre ballenas",
+      "photos_title": "Fotos y Videos Profesionales",
+      "photos_text": "Documentamos tu experiencia",
+      "snacks_title": "Snack Local y Bebidas",
+      "snacks_text": "Fruta fresca y agua purificada",
+      "binoculars_title": "Binoculares y Guia de Fauna",
+      "binoculars_text": "Para identificar todas las especies"
+    },
+    "pricing": {
+      "title": "Tarifas",
+      "subtitle": "Elige la experiencia que mejor se adapte a tu grupo y presupuesto.",
+      "shared_2h": {
+        "name": "Experiencia Compartida",
+        "duration": "2 horas en lancha",
+        "price": "$2,400",
+        "currency": "MXN",
+        "per": "por persona",
+        "features": [
+          "Transporte redondo desde La Paz",
+          "Guia biologo marino",
+          "Fotos y videos profesionales",
+          "Snacks y bebidas"
+        ],
+        "cta": "Reservar"
+      },
+      "shared_3h": {
+        "badge": "MAS POPULAR",
+        "name": "Experiencia Compartida",
+        "duration": "3 horas en lancha",
+        "price": "$3,000",
+        "currency": "MXN",
+        "per": "por persona",
+        "features": [
+          "Transporte redondo desde La Paz",
+          "Guia biologo marino",
+          "Fotos y videos profesionales",
+          "Snacks y bebidas",
+          "+ 1 hora mas de avistamiento"
+        ],
+        "cta": "Reservar"
+      },
+      "private": {
+        "badge": "PREMIUM",
+        "name": "Experiencia Privada",
+        "duration": "5 horas en el mar",
+        "price": "$14,000",
+        "currency": "MXN",
+        "per": "hasta 6 personas",
+        "features": [
+          "Todo lo anterior +",
+          "Snorkel con lobos marinos",
+          "Equipo completo de snorkel",
+          "Atencion personalizada",
+          "Flexibilidad total de horarios"
+        ],
+        "cta": "Reservar Privado"
+      }
+    },
+    "recommendations": {
+      "title": "Recomendaciones",
+      "items": [
+        { "title": "Saber nadar", "text": "Solo aplica para la experiencia privada con snorkel" },
+        { "title": "Traje de bano o wetsuit", "text": "Y cambio de ropa seca para despues" },
+        { "title": "Ropa de abrigo", "text": "Rompevientos o sudadera (enero-febrero son frios)" },
+        { "title": "Protector solar biodegradable", "text": "Para cuidar el ecosistema marino" },
+        { "title": "Lentes de sol y gorra", "text": "Proteccion contra el sol del Pacifico" },
+        { "title": "Actitud respetuosa", "text": "Y corazon abierto para la experiencia" }
+      ],
+      "important_title": "Nota importante",
+      "important_text": "Las ballenas grises son animales totalmente salvajes y libres. No esta permitido nadar con ballenas barbadas ni cachalotes en Mexico. Nuestra experiencia es 100% de observacion, etica y responsable. Por eso cada encuentro es real, natural y profundamente humano."
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros viajeros",
+      "items": [
+        {
+          "text": "Una experiencia que no tiene palabras. Ver a las ballenas grises tan cerca, con sus bebes, fue algo que nunca voy a olvidar. El equipo de Keabelmet es super profesional y respetuoso con los animales.",
+          "author": "Maria Rodriguez",
+          "location": "Ciudad de Mexico"
+        },
+        {
+          "text": "El tour privado valio cada peso. Pudimos tomarnos nuestro tiempo, hacer snorkel con lobos marinos y ver ballenas en un ambiente super tranquilo. Lo recomiendo 100%.",
+          "author": "Carlos Mendez",
+          "location": "Guadalajara"
+        },
+        {
+          "text": "Fue mi primera vez viendo ballenas y supero todas mis expectativas. El biologo nos explico todo sobre su migracion y comportamiento. Una aventura increible desde La Paz.",
+          "author": "Ana Torres",
+          "location": "Monterrey"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para vivir este encuentro ancestral?",
+      "description": "Las ballenas grises solo estan aqui de enero a marzo. No dejes pasar esta oportunidad unica.",
+      "cta_primary": "Reserva tu lugar ahora",
+      "cta_secondary": "Ver mas expediciones"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Todos los derechos reservados."
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Gray Whale Tour in Magdalena Bay",
+      "description": "Experience gray whale watching in Magdalena Bay, BCS. Guided tour with close encounters at their natural breeding sanctuary."
+    },
+    "hero": {
+      "badge": "January - March",
+      "title": "Gray Whale: An Ancestral Encounter in Puerto Chale",
+      "description": "A soul-touching journey in Magdalena Bay, Baja California Sur. Every winter, thousands of gray whales travel from the Arctic to this tranquil lagoon to give birth and mate. You are about to enter that sanctuary.",
+      "cta_primary": "Book your adventure",
+      "cta_secondary": "See details",
+      "image_alt": "Gray whale breaching at sunset in the Sea of Cortez"
+    },
+    "about": {
+      "title": "This is not a tour. It is a privilege.",
+      "description_1": "Every winter, something sacred happens in the Mexican Pacific. Thousands of gray whales travel thousands of kilometers from the Arctic to a tranquil lagoon in the middle of the desert... to give birth, to mate, to simply be.",
+      "description_2": "A gift of nature that only exists a few months a year. And you are going to experience it from the heart of the Baja.",
+      "image_alt": "Gray whale mother with her calf in Magdalena Bay",
+      "meeting_title": "Meeting Point",
+      "meeting_text": "La Paz - We pick you up at your hotel / Airbnb at 5:00 AM",
+      "duration_title": "Total Duration",
+      "duration_text": "Approximately 9 hours: 2.5 hrs driving + 2-3 hrs on the boat + 2.5 hrs return",
+      "season_title": "Official Season",
+      "season_text": "January - March only. Outside these months this experience does not exist."
+    },
+    "itinerary": {
+      "title": "What is the experience like?",
+      "subtitle": "The path to magic: the adventure begins early and takes you through the Baja desert to one of the most special places in Mexico.",
+      "step1_title": "Sunrise Departure",
+      "step1_text": "The adventure starts early: we pick you up and head north. The dawn light paints the Baja desert, with giant cardon cacti standing like guardians along the way.",
+      "step2_title": "Road to the Pacific",
+      "step2_text": "2.5 hours of travel through unique landscapes. Before you know it, you are entering Puerto Chale, where your boat is already waiting. The air smells of sea, mangrove and history.",
+      "step3_title": "Encounter with the Whales",
+      "step3_text": "For 2 to 3 hours we navigate inside the lagoon, temporary home of these giants. Here they mate, here their calves are born, here they rest after the longest migration in the animal kingdom.",
+      "step3_extra": "It is common to see them pass by the boat, lift their heads to look at you, play with their babies. And if you are lucky... one will come closer. They are the ones who decide. Always.",
+      "step4_title": "Pacific Marine Life",
+      "step4_text": "Along the way you can also see dolphins, sea lions, frigatebirds, pelicans, ospreys and other birds that fill the Pacific air. We share a delicious local snack with you.",
+      "step5_title": "Return to La Paz",
+      "step5_text": "We return with salty skin, a soft heart and a story that will stay with you forever. Estimated arrival between 5:00 PM - 6:00 PM."
+    },
+    "species": {
+      "title": "Species you may encounter",
+      "subtitle": "Magdalena Bay is a rich ecosystem where multiple marine species converge during whale season.",
+      "gray_whale": {
+        "name": "Gray Whale",
+        "season": "Dec - Apr",
+        "description": "Gray whales travel over 20,000 km from Alaska to these warm lagoons to give birth and raise their calves. They are known for their curiosity and friendly approach to boats."
+      },
+      "sea_lions": {
+        "name": "Sea Lions",
+        "season": "Year-round",
+        "description": "Curious and charismatic, sea lions inhabit the rocky coasts of the region. They are frequently seen resting in groups and swimming near boats."
+      },
+      "dolphins": {
+        "name": "Dolphins",
+        "season": "Year-round",
+        "description": "Playful and social, dolphins often approach boats and offer a natural show with their jumps and acrobatics. Several species inhabit these waters."
+      },
+      "ospreys": {
+        "name": "Ospreys",
+        "season": "Oct - Apr",
+        "description": "These majestic birds of prey are expert fishers. They can be seen flying over the water and performing spectacular dives to catch fish."
+      },
+      "pelicans": {
+        "name": "Pelicans",
+        "season": "Year-round",
+        "description": "Brown pelicans are common coastal inhabitants. With their distinctive gular pouches, they fish in coordinated formations and rest in the mangroves."
+      },
+      "frigatebirds": {
+        "name": "Frigatebirds",
+        "season": "Year-round",
+        "description": "With their long wings and forked tails, frigatebirds are masters of flight. Males inflate their red gular sac during mating season, creating a unique visual spectacle."
+      },
+      "disclaimer_title": "Realism Note",
+      "disclaimer_text": "We work with wild animals in freedom. We do not guarantee sightings of all species, but we do guarantee commitment, experience and a respectful approach that maximizes your chances of experiencing unique moments with nature."
+    },
+    "includes": {
+      "title": "What's included in your experience?",
+      "subtitle": "Everything you need for a safe, comfortable and memorable adventure.",
+      "transport_title": "Round-trip Transportation",
+      "transport_text": "From La Paz to Puerto Chale and back",
+      "captain_title": "Boat with Local Captain",
+      "captain_text": "Expert in wildlife and safe navigation",
+      "guide_title": "Marine Biologist Guide",
+      "guide_text": "With educational material about whales",
+      "photos_title": "Professional Photos and Videos",
+      "photos_text": "We document your experience",
+      "snacks_title": "Local Snacks and Drinks",
+      "snacks_text": "Fresh fruit and purified water",
+      "binoculars_title": "Binoculars and Wildlife Guide",
+      "binoculars_text": "To identify all species"
+    },
+    "pricing": {
+      "title": "Rates",
+      "subtitle": "Choose the experience that best suits your group and budget.",
+      "shared_2h": {
+        "name": "Shared Experience",
+        "duration": "2 hours on the boat",
+        "price": "$2,400",
+        "currency": "MXN",
+        "per": "per person",
+        "features": [
+          "Round-trip transportation from La Paz",
+          "Marine biologist guide",
+          "Professional photos and videos",
+          "Snacks and drinks"
+        ],
+        "cta": "Book Now"
+      },
+      "shared_3h": {
+        "badge": "MOST POPULAR",
+        "name": "Shared Experience",
+        "duration": "3 hours on the boat",
+        "price": "$3,000",
+        "currency": "MXN",
+        "per": "per person",
+        "features": [
+          "Round-trip transportation from La Paz",
+          "Marine biologist guide",
+          "Professional photos and videos",
+          "Snacks and drinks",
+          "+ 1 extra hour of whale watching"
+        ],
+        "cta": "Book Now"
+      },
+      "private": {
+        "badge": "PREMIUM",
+        "name": "Private Experience",
+        "duration": "5 hours at sea",
+        "price": "$14,000",
+        "currency": "MXN",
+        "per": "up to 6 people",
+        "features": [
+          "Everything above +",
+          "Snorkeling with sea lions",
+          "Complete snorkel gear",
+          "Personalized attention",
+          "Full schedule flexibility"
+        ],
+        "cta": "Book Private"
+      }
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "items": [
+        { "title": "Know how to swim", "text": "Only applies to the private experience with snorkeling" },
+        { "title": "Swimsuit or wetsuit", "text": "And a change of dry clothes for after" },
+        { "title": "Warm clothing", "text": "Windbreaker or sweater (January-February are cold)" },
+        { "title": "Biodegradable sunscreen", "text": "To protect the marine ecosystem" },
+        { "title": "Sunglasses and cap", "text": "Protection from the Pacific sun" },
+        { "title": "Respectful attitude", "text": "And an open heart for the experience" }
+      ],
+      "important_title": "Important note",
+      "important_text": "Gray whales are completely wild and free animals. Swimming with baleen whales or sperm whales is not permitted in Mexico. Our experience is 100% observation-based, ethical and responsible. That is why every encounter is real, natural and profoundly human."
+    },
+    "testimonials": {
+      "title": "What our travelers say",
+      "items": [
+        {
+          "text": "An experience beyond words. Seeing the gray whales so close, with their babies, was something I will never forget. The Keabelmet team is super professional and respectful with the animals.",
+          "author": "Maria Rodriguez",
+          "location": "Mexico City"
+        },
+        {
+          "text": "The private tour was worth every peso. We could take our time, snorkel with sea lions and see whales in a super calm atmosphere. I recommend it 100%.",
+          "author": "Carlos Mendez",
+          "location": "Guadalajara"
+        },
+        {
+          "text": "It was my first time seeing whales and it exceeded all my expectations. The biologist explained everything about their migration and behavior. An incredible adventure from La Paz.",
+          "author": "Ana Torres",
+          "location": "Monterrey"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to experience this ancestral encounter?",
+      "description": "The gray whales are only here from January to March. Don't miss this unique opportunity.",
+      "cta_primary": "Book your spot now",
+      "cta_secondary": "See more expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. All rights reserved."
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Tour Baleine Grise dans la Baie de Magdalena",
+      "description": "Vivez l'experience d'observation des baleines grises dans la Baie de Magdalena, BCS. Tour guide avec rencontres rapprochees dans leur sanctuaire naturel de reproduction."
+    },
+    "hero": {
+      "badge": "Janvier - Mars",
+      "title": "Baleine Grise : Une Rencontre Ancestrale a Puerto Chale",
+      "description": "Un voyage qui touche l'ame dans la Baie de Magdalena, Baja California Sur. Chaque hiver, des milliers de baleines grises voyagent depuis l'Arctique jusqu'a ce lagon tranquille pour mettre bas et s'accoupler. Vous etes sur le point d'entrer dans ce sanctuaire.",
+      "cta_primary": "Reservez votre aventure",
+      "cta_secondary": "Voir les details",
+      "image_alt": "Baleine grise sautant au coucher du soleil dans la mer de Cortez"
+    },
+    "about": {
+      "title": "Ce n'est pas un tour. C'est un privilege.",
+      "description_1": "Chaque hiver, quelque chose de sacre se produit dans le Pacifique mexicain. Des milliers de baleines grises parcourent des milliers de kilometres depuis l'Arctique jusqu'a un lagon tranquille au milieu du desert... pour mettre bas, pour s'accoupler, pour simplement etre.",
+      "description_2": "Un cadeau de la nature qui n'existe que quelques mois par an. Et vous allez le vivre depuis le coeur de la Baja.",
+      "image_alt": "Baleine grise mere avec son petit dans la Baie de Magdalena",
+      "meeting_title": "Point de Rencontre",
+      "meeting_text": "La Paz - Nous vous recuperons a votre hotel / Airbnb a 5h00",
+      "duration_title": "Duree Totale",
+      "duration_text": "Environ 9 heures : 2h30 de route + 2-3h en bateau + 2h30 de retour",
+      "season_title": "Saison Officielle",
+      "season_text": "Janvier - Mars uniquement. En dehors de ces mois, cette experience n'existe pas."
+    },
+    "itinerary": {
+      "title": "Comment se deroule l'experience ?",
+      "subtitle": "Le chemin vers la magie : l'aventure commence tot et vous emmene a travers le desert de la Baja jusqu'a l'un des endroits les plus speciaux du Mexique.",
+      "step1_title": "Depart a l'Aube",
+      "step1_text": "L'aventure commence tot : nous venons vous chercher et partons vers le nord. La lumiere de l'aube peint le desert de la Baja, les cactus cardon geants apparaissent comme des gardiens le long du chemin.",
+      "step2_title": "Route vers le Pacifique",
+      "step2_text": "2h30 de traversee a travers des paysages uniques. Avant de vous en rendre compte, vous entrez a Puerto Chale, ou votre bateau vous attend deja. L'air sent la mer, la mangrove et l'histoire.",
+      "step3_title": "Rencontre avec les Baleines",
+      "step3_text": "Pendant 2 a 3 heures, nous naviguons a l'interieur du lagon, foyer temporaire de ces geants. Ici elles s'accouplent, ici naissent leurs petits, ici elles se reposent apres la plus longue migration du regne animal.",
+      "step3_extra": "Il est courant de les voir passer pres du bateau, sortir la tete pour vous regarder, jouer avec leurs bebes. Et si vous avez de la chance... l'une d'elles s'approchera. Ce sont elles qui decident. Toujours.",
+      "step4_title": "Vie Marine du Pacifique",
+      "step4_text": "En chemin, vous pouvez aussi voir des dauphins, des lions de mer, des fregates, des pelicans, des balbuzards pecheurs et d'autres oiseaux qui remplissent l'air du Pacifique. Nous partageons un delicieux en-cas local avec vous.",
+      "step5_title": "Retour a La Paz",
+      "step5_text": "Nous rentrons la peau salee, le coeur tendre et une histoire qui vous accompagnera pour toujours. Arrivee estimee entre 17h00 et 18h00."
+    },
+    "species": {
+      "title": "Especes que vous pouvez rencontrer",
+      "subtitle": "La Baie de Magdalena est un ecosysteme riche ou convergent de multiples especes marines pendant la saison des baleines.",
+      "gray_whale": {
+        "name": "Baleine Grise",
+        "season": "Dec - Avr",
+        "description": "Les baleines grises parcourent plus de 20 000 km depuis l'Alaska jusqu'a ces lagons chauds pour mettre bas et elever leurs baleineaux. Elles sont connues pour leur curiosite et leur approche amicale des embarcations."
+      },
+      "sea_lions": {
+        "name": "Lions de Mer",
+        "season": "Toute l'annee",
+        "description": "Curieux et charismatiques, les lions de mer habitent les cotes rocheuses de la region. On les observe frequemment se reposer en groupe et nager pres des embarcations."
+      },
+      "dolphins": {
+        "name": "Dauphins",
+        "season": "Toute l'annee",
+        "description": "Joueurs et sociaux, les dauphins s'approchent souvent des embarcations et offrent un spectacle naturel avec leurs sauts et acrobaties. Plusieurs especes habitent ces eaux."
+      },
+      "ospreys": {
+        "name": "Balbuzards Pecheurs",
+        "season": "Oct - Avr",
+        "description": "Ces majestueux rapaces sont des pecheurs experts. On peut les observer volant au-dessus des eaux et effectuant des plongeons spectaculaires pour attraper des poissons."
+      },
+      "pelicans": {
+        "name": "Pelicans",
+        "season": "Toute l'annee",
+        "description": "Les pelicans bruns sont des habitants communs des cotes. Avec leurs poches gulaires distinctives, ils pechent en formations coordonnees et se reposent dans les mangroves."
+      },
+      "frigatebirds": {
+        "name": "Fregates",
+        "season": "Toute l'annee",
+        "description": "Avec leurs longues ailes et leur queue fourchue, les fregates sont des maitrises du vol. Les males gonflent leur sac gulaire rouge pendant la saison de reproduction, creant un spectacle visuel unique."
+      },
+      "disclaimer_title": "Note de Realisme",
+      "disclaimer_text": "Nous travaillons avec des animaux sauvages en liberte. Nous ne garantissons pas l'observation de toutes les especes, mais nous garantissons engagement, experience et une approche respectueuse qui maximise vos chances de vivre des moments uniques avec la nature."
+    },
+    "includes": {
+      "title": "Que comprend votre experience ?",
+      "subtitle": "Tout le necessaire pour vivre une aventure sure, confortable et memorable.",
+      "transport_title": "Transport Aller-Retour",
+      "transport_text": "De La Paz a Puerto Chale et retour",
+      "captain_title": "Bateau avec Capitaine Local",
+      "captain_text": "Expert en faune et navigation securisee",
+      "guide_title": "Guide Biologiste Marin",
+      "guide_text": "Avec materiel educatif sur les baleines",
+      "photos_title": "Photos et Videos Professionnelles",
+      "photos_text": "Nous documentons votre experience",
+      "snacks_title": "En-cas Locaux et Boissons",
+      "snacks_text": "Fruits frais et eau purifiee",
+      "binoculars_title": "Jumelles et Guide de Faune",
+      "binoculars_text": "Pour identifier toutes les especes"
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "subtitle": "Choisissez l'experience qui convient le mieux a votre groupe et budget.",
+      "shared_2h": {
+        "name": "Experience Partagee",
+        "duration": "2 heures en bateau",
+        "price": "$2,400",
+        "currency": "MXN",
+        "per": "par personne",
+        "features": [
+          "Transport aller-retour depuis La Paz",
+          "Guide biologiste marin",
+          "Photos et videos professionnelles",
+          "En-cas et boissons"
+        ],
+        "cta": "Reserver"
+      },
+      "shared_3h": {
+        "badge": "LE PLUS POPULAIRE",
+        "name": "Experience Partagee",
+        "duration": "3 heures en bateau",
+        "price": "$3,000",
+        "currency": "MXN",
+        "per": "par personne",
+        "features": [
+          "Transport aller-retour depuis La Paz",
+          "Guide biologiste marin",
+          "Photos et videos professionnelles",
+          "En-cas et boissons",
+          "+ 1 heure supplementaire d'observation"
+        ],
+        "cta": "Reserver"
+      },
+      "private": {
+        "badge": "PREMIUM",
+        "name": "Experience Privee",
+        "duration": "5 heures en mer",
+        "price": "$14,000",
+        "currency": "MXN",
+        "per": "jusqu'a 6 personnes",
+        "features": [
+          "Tout ce qui precede +",
+          "Snorkeling avec les lions de mer",
+          "Equipement complet de snorkeling",
+          "Attention personnalisee",
+          "Flexibilite totale des horaires"
+        ],
+        "cta": "Reserver Prive"
+      }
+    },
+    "recommendations": {
+      "title": "Recommandations",
+      "items": [
+        { "title": "Savoir nager", "text": "S'applique uniquement a l'experience privee avec snorkeling" },
+        { "title": "Maillot de bain ou combinaison", "text": "Et un change de vetements secs pour apres" },
+        { "title": "Vetements chauds", "text": "Coupe-vent ou sweat (janvier-fevrier sont frais)" },
+        { "title": "Creme solaire biodegradable", "text": "Pour proteger l'ecosysteme marin" },
+        { "title": "Lunettes de soleil et casquette", "text": "Protection contre le soleil du Pacifique" },
+        { "title": "Attitude respectueuse", "text": "Et un coeur ouvert pour l'experience" }
+      ],
+      "important_title": "Note importante",
+      "important_text": "Les baleines grises sont des animaux totalement sauvages et libres. La nage avec les baleines a fanons ou les cachalots n'est pas autorisee au Mexique. Notre experience est 100% d'observation, ethique et responsable. C'est pourquoi chaque rencontre est reelle, naturelle et profondement humaine."
+    },
+    "testimonials": {
+      "title": "Ce que disent nos voyageurs",
+      "items": [
+        {
+          "text": "Une experience au-dela des mots. Voir les baleines grises si pres, avec leurs bebes, c'est quelque chose que je n'oublierai jamais. L'equipe de Keabelmet est super professionnelle et respectueuse envers les animaux.",
+          "author": "Maria Rodriguez",
+          "location": "Mexico"
+        },
+        {
+          "text": "Le tour prive valait chaque peso. Nous avons pu prendre notre temps, faire du snorkeling avec les lions de mer et voir des baleines dans une atmosphere super calme. Je le recommande a 100%.",
+          "author": "Carlos Mendez",
+          "location": "Guadalajara"
+        },
+        {
+          "text": "C'etait ma premiere fois a voir des baleines et cela a depasse toutes mes attentes. Le biologiste nous a tout explique sur leur migration et leur comportement. Une aventure incroyable depuis La Paz.",
+          "author": "Ana Torres",
+          "location": "Monterrey"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pret a vivre cette rencontre ancestrale ?",
+      "description": "Les baleines grises ne sont ici que de janvier a mars. Ne laissez pas passer cette opportunite unique.",
+      "cta_primary": "Reservez votre place maintenant",
+      "cta_secondary": "Voir plus d'expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Tous droits reserves."
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "Magdalena 湾灰鲸之旅",
+      "description": "在 Baja California Sur 的 Magdalena 湾体验观赏灰鲸。在其天然繁殖保护区进行近距离接触的导览旅程。"
+    },
+    "hero": {
+      "badge": "一月 - 三月",
+      "title": "灰鲸：Puerto Chale 的远古邂逅",
+      "description": "在 Baja California Sur 的 Magdalena 湾进行一次触动灵魂的旅程。每年冬天，成千上万的灰鲸从北极游到这片宁静的泻湖分娩和交配。您即将进入这个神圣的保护区。",
+      "cta_primary": "预订您的冒险",
+      "cta_secondary": "查看详情",
+      "image_alt": "灰鲸在科尔特斯海日落时跃出水面"
+    },
+    "about": {
+      "title": "这不是一次旅游。这是一种特权。",
+      "description_1": "每年冬天，墨西哥太平洋都会发生一些神圣的事情。成千上万的灰鲸从北极跋涉数千公里，来到沙漠中央的一片宁静泻湖......来分娩，来交配，来栖息。",
+      "description_2": "这是大自然的恩赐，一年只存在几个月。而您将在 Baja 的心脏地带亲身体验。",
+      "image_alt": "灰鲸母亲和幼崽在 Magdalena 湾",
+      "meeting_title": "集合地点",
+      "meeting_text": "La Paz - 我们凌晨 5:00 到您的酒店/Airbnb 接您",
+      "duration_title": "总时长",
+      "duration_text": "约 9 小时：2.5 小时车程 + 2-3 小时船程 + 2.5 小时返程",
+      "season_title": "官方季节",
+      "season_text": "仅限一月至三月。在此之外的月份没有此体验。"
+    },
+    "itinerary": {
+      "title": "体验是怎样的？",
+      "subtitle": "通往奇迹的道路：冒险从清晨开始，带您穿越 Baja 沙漠，到达墨西哥最特别的地方之一。",
+      "step1_title": "日出出发",
+      "step1_text": "冒险从清晨开始：我们来接您，然后向北出发。黎明的光芒为 Baja 沙漠染上色彩，巨大的柱状仙人掌如同道路的守护者。",
+      "step2_title": "前往太平洋",
+      "step2_text": "2.5 小时穿越独特的风景。不知不觉中，您已经进入 Puerto Chale，您的船已在等待。空气中弥漫着大海、红树林和历史的气息。",
+      "step3_title": "与鲸鱼邂逅",
+      "step3_text": "我们在泻湖内航行 2 到 3 小时，这里是这些巨型生物的临时家园。它们在这里交配，它们的幼崽在这里出生，它们在完成动物王国最长的迁徙后在这里休憩。",
+      "step3_extra": "经常能看到它们从船旁游过，探出头来看你，和它们的宝宝嬉戏。如果你幸运的话......会有一头靠近你。决定权在它们。永远如此。",
+      "step4_title": "太平洋海洋生物",
+      "step4_text": "途中您还可以看到海豚、海狮、军舰鸟、鹈鹕、鱼鹰和其他充满太平洋天空的鸟类。我们为您准备了美味的当地小吃。",
+      "step5_title": "返回 La Paz",
+      "step5_text": "我们带着咸咸的皮肤、柔软的心灵和一个将永远陪伴您的故事返回。预计下午 5:00 - 6:00 到达。"
+    },
+    "species": {
+      "title": "您可能遇到的物种",
+      "subtitle": "Magdalena 湾是一个丰富的生态系统，在鲸鱼季节有多种海洋物种在此汇聚。",
+      "gray_whale": {
+        "name": "灰鲸",
+        "season": "12月 - 4月",
+        "description": "灰鲸从阿拉斯加长途跋涉超过 20,000 公里来到这些温暖的泻湖分娩和养育幼鲸。它们以好奇心和对船只友好的接近而闻名。"
+      },
+      "sea_lions": {
+        "name": "海狮",
+        "season": "全年",
+        "description": "好奇而有魅力的海狮栖息在该地区的岩石海岸上。经常可以看到它们成群休息并在船只附近游泳。"
+      },
+      "dolphins": {
+        "name": "海豚",
+        "season": "全年",
+        "description": "活泼而善于交际的海豚经常靠近船只，用跳跃和特技表演带来自然的精彩演出。这片水域栖息着多种海豚。"
+      },
+      "ospreys": {
+        "name": "鱼鹰",
+        "season": "10月 - 4月",
+        "description": "这些雄伟的猛禽是捕鱼专家。可以看到它们在水面上飞翔，进行壮观的俯冲捕鱼。"
+      },
+      "pelicans": {
+        "name": "鹈鹕",
+        "season": "全年",
+        "description": "褐鹈鹕是海岸常见的居民。凭借其独特的喉囊，它们以协调的编队捕鱼，并在红树林中休息。"
+      },
+      "frigatebirds": {
+        "name": "军舰鸟",
+        "season": "全年",
+        "description": "凭借长长的翅膀和叉形尾巴，军舰鸟是飞行大师。雄鸟在交配季节会鼓起红色的喉囊，形成独特的视觉奇观。"
+      },
+      "disclaimer_title": "现实说明",
+      "disclaimer_text": "我们与自由生活的野生动物合作。我们不保证能看到所有物种，但我们保证承诺、经验和尊重的态度，最大限度地提高您与大自然共度独特时刻的机会。"
+    },
+    "includes": {
+      "title": "您的体验包含什么？",
+      "subtitle": "为您提供安全、舒适和难忘冒险所需的一切。",
+      "transport_title": "往返交通",
+      "transport_text": "从 La Paz 到 Puerto Chale 往返",
+      "captain_title": "配有当地船长的快艇",
+      "captain_text": "野生动物和安全航行专家",
+      "guide_title": "海洋生物学家导游",
+      "guide_text": "附带鲸鱼教育资料",
+      "photos_title": "专业照片和视频",
+      "photos_text": "我们记录您的体验",
+      "snacks_title": "当地小吃和饮料",
+      "snacks_text": "新鲜水果和纯净水",
+      "binoculars_title": "望远镜和野生动物指南",
+      "binoculars_text": "用于识别所有物种"
+    },
+    "pricing": {
+      "title": "价格",
+      "subtitle": "选择最适合您的团队和预算的体验。",
+      "shared_2h": {
+        "name": "共享体验",
+        "duration": "2 小时船程",
+        "price": "$2,400",
+        "currency": "MXN",
+        "per": "每人",
+        "features": [
+          "从 La Paz 往返交通",
+          "海洋生物学家导游",
+          "专业照片和视频",
+          "小吃和饮料"
+        ],
+        "cta": "立即预订"
+      },
+      "shared_3h": {
+        "badge": "最受欢迎",
+        "name": "共享体验",
+        "duration": "3 小时船程",
+        "price": "$3,000",
+        "currency": "MXN",
+        "per": "每人",
+        "features": [
+          "从 La Paz 往返交通",
+          "海洋生物学家导游",
+          "专业照片和视频",
+          "小吃和饮料",
+          "+ 额外 1 小时观鲸"
+        ],
+        "cta": "立即预订"
+      },
+      "private": {
+        "badge": "尊享",
+        "name": "私人体验",
+        "duration": "5 小时海上时光",
+        "price": "$14,000",
+        "currency": "MXN",
+        "per": "最多 6 人",
+        "features": [
+          "包含以上所有内容 +",
+          "与海狮浮潜",
+          "全套浮潜装备",
+          "个性化服务",
+          "完全灵活的时间安排"
+        ],
+        "cta": "预订私人体验"
+      }
+    },
+    "recommendations": {
+      "title": "建议",
+      "items": [
+        { "title": "会游泳", "text": "仅适用于带浮潜的私人体验" },
+        { "title": "泳衣或潜水服", "text": "以及事后更换的干燥衣物" },
+        { "title": "保暖衣物", "text": "防风衣或卫衣（一月至二月较冷）" },
+        { "title": "可生物降解的防晒霜", "text": "保护海洋生态系统" },
+        { "title": "太阳镜和帽子", "text": "防止太平洋阳光照射" },
+        { "title": "尊重的态度", "text": "和一颗敞开的心去体验" }
+      ],
+      "important_title": "重要说明",
+      "important_text": "灰鲸是完全野生和自由的动物。在墨西哥不允许与须鲸或抹香鲸一起游泳。我们的体验是 100% 基于观察的，道德且负责任的。因此每一次邂逅都是真实的、自然的、深刻的。"
+    },
+    "testimonials": {
+      "title": "旅客评价",
+      "items": [
+        {
+          "text": "一次无法用言语形容的体验。如此近距离地看到灰鲸和它们的宝宝，是我永远不会忘记的事情。Keabelmet 团队非常专业，对动物也非常尊重。",
+          "author": "Maria Rodriguez",
+          "location": "墨西哥城"
+        },
+        {
+          "text": "私人旅游物超所值。我们可以慢慢来，与海狮浮潜，在超级安静的氛围中观看鲸鱼。100% 推荐。",
+          "author": "Carlos Mendez",
+          "location": "Guadalajara"
+        },
+        {
+          "text": "这是我第一次看到鲸鱼，超出了我所有的期望。生物学家向我们详细解释了它们的迁徙和行为。从 La Paz 出发的一次令人难以置信的冒险。",
+          "author": "Ana Torres",
+          "location": "Monterrey"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好体验这次远古邂逅了吗？",
+      "description": "灰鲸仅在一月至三月出现在这里。不要错过这个独特的机会。",
+      "cta_primary": "立即预订您的位置",
+      "cta_secondary": "查看更多探险"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. 版权所有。"
+    }
+  }
+}

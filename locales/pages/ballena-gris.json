@@ -1,0 +1,734 @@
+{
+  "es": {
+    "hero": {
+      "title": "Ballena Gris: Encuentro en Bahia Magdalena",
+      "subtitle": "Cada invierno, un milagro ocurre frente a nuestras costas. Ven a ser parte de el.",
+      "cta": "Explora esta experiencia",
+      "ctaSecondary": "Ver detalles",
+      "imageAlt": "Ballena gris emergiendo tranquilamente en las aguas de Bahia Magdalena con las montanas de Baja California Sur al fondo"
+    },
+    "story": {
+      "title": "Una migracion milenaria",
+      "intro": "Cada invierno, cientos de ballenas grises cruzan el Pacifico desde el Artico hasta las costas de Baja California Sur. Puerto Chale, una comunidad remota y autentica, se convierte por unas semanas en el mejor escenario para conocerlas de cerca.",
+      "description": "En esta experiencia, navegaras en panga durante tres horas dentro de la laguna costera donde las ballenas paren, amamantan y descansan. No hay show, no hay guion: solo tu, el mar... y la posibilidad de ver a un gigante acercarse con calma.",
+      "highlight": "No es un tour cualquiera. Es una expedicion para los que valoran lo real, lo intimo y lo salvaje.",
+      "features": {
+        "puertoChale": {
+          "title": "Puerto Chale",
+          "description": "Comunidad autentica en el corazon de Bahia Magdalena"
+        },
+        "lagoon": {
+          "title": "Laguna Protegida",
+          "description": "Aguas tranquilas donde las ballenas descansan y se reproducen"
+        },
+        "intimate": {
+          "title": "Experiencia Intima",
+          "description": "Grupos pequenos para una conexion autentica con la naturaleza"
+        }
+      }
+    },
+    "itinerary": {
+      "title": "Itinerario del dia",
+      "subtitle": "Un dia completo disenado para maximizar tu conexion con las ballenas grises en su santuario natural.",
+      "steps": {
+        "departure": {
+          "time": "5:30 AM | Salida desde La Paz",
+          "description": "Partimos en transporte compartido hacia Puerto Chale. El viaje es parte de la aventura, cruzando paisajes unicos de Baja California Sur."
+        },
+        "arrival": {
+          "time": "8:00 AM | Llegada y embarque",
+          "description": "Llegamos a Puerto Chale y embarcamos en panga con capitan local. Briefing de seguridad y preparacion para el encuentro."
+        },
+        "navigation": {
+          "time": "8:30 AM - 11:30 AM | Navegacion",
+          "description": "Tres horas navegando en la laguna costera observando ballenas grises. Cada encuentro es unico e impredecible.",
+          "activitiesLabel": "Durante la navegacion:",
+          "activities": [
+            "Observacion respetuosa de ballenas madres con crias",
+            "Aprendizaje sobre comportamiento y migracion",
+            "Fotografia y contemplacion silenciosa"
+          ]
+        },
+        "snack": {
+          "time": "12:00 PM | Snack frente al mar",
+          "description": "Descanso en tierra firme con snack local y tiempo para procesar la experiencia vivida."
+        },
+        "return": {
+          "time": "1:00 PM - 3:30 PM | Regreso a La Paz",
+          "description": "Viaje de regreso con tiempo para reflexionar sobre el encuentro con estos gigantes gentiles."
+        }
+      }
+    },
+    "includes": {
+      "title": "Que incluye?",
+      "subtitle": "Todo lo necesario para vivir esta experiencia de manera comoda, segura y memorable.",
+      "items": {
+        "transport": {
+          "title": "Transporte redondo compartido",
+          "description": "Desde La Paz hasta Puerto Chale en vehiculo comodo y seguro."
+        },
+        "boat": {
+          "title": "Tour en panga con capitan local",
+          "description": "Embarcacion tradicional manejada por pescadores locales con anos de experiencia."
+        },
+        "guide": {
+          "title": "Guia biologo marino",
+          "description": "Acompanamiento especializado para enriquecer tu comprension de las ballenas grises."
+        },
+        "photo": {
+          "title": "Fotos y videos incluidos",
+          "description": "Capturas profesionales de tu experiencia para que tengas un recuerdo duradero."
+        },
+        "snack": {
+          "title": "Snack local e hidratacion",
+          "description": "Fruta fresca, snack regional y agua purificada durante todo el dia."
+        },
+        "observation": {
+          "title": "Equipo de observacion",
+          "description": "Binoculares de calidad para no perderte ningun detalle del encuentro."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Especies que puedes encontrar",
+      "subtitle": "Bahia Magdalena es un santuario natural donde convergen diferentes especies marinas durante la temporada de ballenas grises.",
+      "species": {
+        "grayWhale": {
+          "name": "Ballena Gris",
+          "season": "Ene - Mar",
+          "description": "Las protagonistas de la experiencia. Madres con crias que descansan en las aguas protegidas de la laguna durante su migracion desde el Artico."
+        },
+        "dolphins": {
+          "name": "Delfines",
+          "season": "Todo el ano",
+          "description": "Residentes permanentes de la bahia, suelen acompanar las pangas con su curiosidad natural y acrobacias espontaneas."
+        },
+        "seaLions": {
+          "name": "Lobos Marinos",
+          "season": "Todo el ano",
+          "description": "Colonias que descansan en las rocas y manglares. Su curiosidad los lleva a acercarse a observar a los visitantes."
+        },
+        "seabirds": {
+          "name": "Aves Marinas",
+          "season": "Todo el ano",
+          "description": "Fragatas, pelicanos y cormoranes que aprovechan la abundancia de peces en la laguna para alimentarse."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Testimonios de viajeros",
+      "subtitle": "Experiencias reales de quienes han vivido el encuentro con ballenas grises.",
+      "reviews": [
+        {
+          "name": "Lucia",
+          "location": "CDMX",
+          "text": "Siempre sone con ver ballenas. Pero esto fue mas que eso. Llore de emocion. Gracias por respetar la naturaleza asi."
+        },
+        {
+          "name": "Pablo",
+          "location": "Alemania",
+          "text": "No fue un tour, fue una experiencia real. La cercania con las ballenas, el silencio, todo fue magico."
+        },
+        {
+          "name": "Karla",
+          "location": "Espana",
+          "text": "El equipo fue increible. Nos explicaron todo con tanta pasion que ahora veo el oceano con otros ojos."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Precios",
+      "subtitle": "Una experiencia autentica con cupo limitado para garantizar un encuentro intimo con las ballenas grises.",
+      "card": {
+        "name": "Encuentro con Ballena Gris",
+        "price": "$2,800",
+        "currency": "MXN / persona",
+        "features": [
+          "Cupo limitado: 8 personas por salida",
+          "Experiencia compartida (no privada)",
+          "Transporte redondo desde La Paz",
+          "Guia biologo marino especializado",
+          "Fotos profesionales incluidas"
+        ],
+        "cta": "Reserva tu lugar"
+      },
+      "limitedSeason": {
+        "title": "Temporada Limitada",
+        "description": "Solo operamos durante la temporada de ballenas grises (enero-marzo). Las fechas exactas pueden variar segun las condiciones naturales."
+      }
+    },
+    "details": {
+      "title": "Informacion importante",
+      "subtitle": "Todo lo que necesitas saber para vivir esta experiencia autentica",
+      "realisticNote": {
+        "title": "Nota realista",
+        "description": "Trabajamos con vida salvaje en libertad. Aunque las probabilidades de avistamiento son altisimas en temporada, no podemos garantizarlas. Lo que si garantizamos: un equipo comprometido y un respeto profundo por el oceano."
+      },
+      "sharedExperience": {
+        "title": "Experiencia compartida",
+        "description": "Compartiras esta aventura con otros viajeros que, como tu, valoran la autenticidad y el respeto por la naturaleza. Creemos que estos encuentros se enriquecen cuando se viven en comunidad."
+      },
+      "forWhom": {
+        "title": "Para quien es esta experiencia",
+        "description": "Ideal para quienes buscan conexion genuina con la naturaleza, no entretenimiento artificial. Si valoras la autenticidad, el aprendizaje y los encuentros reales con la vida marina, esta experiencia transformara tu forma de ver el oceano."
+      },
+      "seasonBadge": "Temporada: Enero - Marzo - Cupos limitados"
+    },
+    "cta": {
+      "title": "Este invierno, no vayas a otro tour. Ve a un milagro.",
+      "subtitle": "Viaja con nosotros a Puerto Chale y deja que la naturaleza te sorprenda. Algunos encuentros cambian la forma en que vemos el mundo para siempre.",
+      "button": "Reserva tu lugar",
+      "buttonSecondary": "Habla con un guia",
+      "footnote": "Cupos limitados - Temporada enero-marzo - Experiencia autentica"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Gray Whale: Encounter at Bahia Magdalena",
+      "subtitle": "Every winter, a miracle happens off our shores. Come be part of it.",
+      "cta": "Explore this experience",
+      "ctaSecondary": "View details",
+      "imageAlt": "Gray whale calmly surfacing in the waters of Bahia Magdalena with the mountains of Baja California Sur in the background"
+    },
+    "story": {
+      "title": "A millennial migration",
+      "intro": "Every winter, hundreds of gray whales cross the Pacific from the Arctic to the shores of Baja California Sur. Puerto Chale, a remote and authentic community, becomes for a few weeks the best setting to meet them up close.",
+      "description": "In this experience, you'll navigate by panga for three hours inside the coastal lagoon where the whales give birth, nurse, and rest. There's no show, no script: just you, the sea... and the possibility of seeing a giant approach you calmly.",
+      "highlight": "This is not just any tour. It's an expedition for those who value what's real, intimate, and wild.",
+      "features": {
+        "puertoChale": {
+          "title": "Puerto Chale",
+          "description": "An authentic community in the heart of Bahia Magdalena"
+        },
+        "lagoon": {
+          "title": "Protected Lagoon",
+          "description": "Calm waters where whales rest and reproduce"
+        },
+        "intimate": {
+          "title": "Intimate Experience",
+          "description": "Small groups for an authentic connection with nature"
+        }
+      }
+    },
+    "itinerary": {
+      "title": "Day itinerary",
+      "subtitle": "A full day designed to maximize your connection with gray whales in their natural sanctuary.",
+      "steps": {
+        "departure": {
+          "time": "5:30 AM | Departure from La Paz",
+          "description": "We depart in shared transport toward Puerto Chale. The journey is part of the adventure, crossing unique landscapes of Baja California Sur."
+        },
+        "arrival": {
+          "time": "8:00 AM | Arrival and boarding",
+          "description": "We arrive at Puerto Chale and board a panga with a local captain. Safety briefing and preparation for the encounter."
+        },
+        "navigation": {
+          "time": "8:30 AM - 11:30 AM | Navigation",
+          "description": "Three hours navigating the coastal lagoon observing gray whales. Each encounter is unique and unpredictable.",
+          "activitiesLabel": "During the navigation:",
+          "activities": [
+            "Respectful observation of mother whales with calves",
+            "Learning about behavior and migration",
+            "Photography and silent contemplation"
+          ]
+        },
+        "snack": {
+          "time": "12:00 PM | Snack by the sea",
+          "description": "Rest on solid ground with a local snack and time to process the experience."
+        },
+        "return": {
+          "time": "1:00 PM - 3:30 PM | Return to La Paz",
+          "description": "Return journey with time to reflect on the encounter with these gentle giants."
+        }
+      }
+    },
+    "includes": {
+      "title": "What's included?",
+      "subtitle": "Everything you need to live this experience comfortably, safely, and memorably.",
+      "items": {
+        "transport": {
+          "title": "Round-trip shared transport",
+          "description": "From La Paz to Puerto Chale in a comfortable and safe vehicle."
+        },
+        "boat": {
+          "title": "Panga tour with local captain",
+          "description": "Traditional boat operated by local fishermen with years of experience."
+        },
+        "guide": {
+          "title": "Marine biologist guide",
+          "description": "Specialized accompaniment to enrich your understanding of gray whales."
+        },
+        "photo": {
+          "title": "Photos and videos included",
+          "description": "Professional captures of your experience so you have a lasting memory."
+        },
+        "snack": {
+          "title": "Local snack and hydration",
+          "description": "Fresh fruit, regional snack, and purified water throughout the day."
+        },
+        "observation": {
+          "title": "Observation equipment",
+          "description": "Quality binoculars so you don't miss any detail of the encounter."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Species you can encounter",
+      "subtitle": "Bahia Magdalena is a natural sanctuary where different marine species converge during gray whale season.",
+      "species": {
+        "grayWhale": {
+          "name": "Gray Whale",
+          "season": "Jan - Mar",
+          "description": "The stars of the experience. Mothers with calves resting in the protected waters of the lagoon during their migration from the Arctic."
+        },
+        "dolphins": {
+          "name": "Dolphins",
+          "season": "Year-round",
+          "description": "Permanent residents of the bay, they often accompany the pangas with their natural curiosity and spontaneous acrobatics."
+        },
+        "seaLions": {
+          "name": "Sea Lions",
+          "season": "Year-round",
+          "description": "Colonies that rest on rocks and mangroves. Their curiosity leads them to approach and observe visitors."
+        },
+        "seabirds": {
+          "name": "Seabirds",
+          "season": "Year-round",
+          "description": "Frigatebirds, pelicans, and cormorants that take advantage of the abundance of fish in the lagoon to feed."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Traveler testimonials",
+      "subtitle": "Real experiences from those who have lived the encounter with gray whales.",
+      "reviews": [
+        {
+          "name": "Lucia",
+          "location": "Mexico City",
+          "text": "I always dreamed of seeing whales. But this was more than that. I cried with emotion. Thank you for respecting nature like this."
+        },
+        {
+          "name": "Pablo",
+          "location": "Germany",
+          "text": "It wasn't a tour, it was a real experience. The closeness with the whales, the silence, everything was magical."
+        },
+        {
+          "name": "Karla",
+          "location": "Spain",
+          "text": "The team was incredible. They explained everything with such passion that now I see the ocean with different eyes."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "An authentic experience with limited capacity to guarantee an intimate encounter with gray whales.",
+      "card": {
+        "name": "Gray Whale Encounter",
+        "price": "$2,800",
+        "currency": "MXN / person",
+        "features": [
+          "Limited capacity: 8 people per departure",
+          "Shared experience (not private)",
+          "Round-trip transport from La Paz",
+          "Specialized marine biologist guide",
+          "Professional photos included"
+        ],
+        "cta": "Reserve your spot"
+      },
+      "limitedSeason": {
+        "title": "Limited Season",
+        "description": "We only operate during gray whale season (January-March). Exact dates may vary depending on natural conditions."
+      }
+    },
+    "details": {
+      "title": "Important information",
+      "subtitle": "Everything you need to know to live this authentic experience",
+      "realisticNote": {
+        "title": "Realistic note",
+        "description": "We work with wildlife in its natural habitat. Although sighting probabilities are very high during the season, we cannot guarantee them. What we do guarantee: a committed team and deep respect for the ocean."
+      },
+      "sharedExperience": {
+        "title": "Shared experience",
+        "description": "You'll share this adventure with other travelers who, like you, value authenticity and respect for nature. We believe these encounters are enriched when experienced in community."
+      },
+      "forWhom": {
+        "title": "Who is this experience for",
+        "description": "Ideal for those seeking a genuine connection with nature, not artificial entertainment. If you value authenticity, learning, and real encounters with marine life, this experience will transform the way you see the ocean."
+      },
+      "seasonBadge": "Season: January - March - Limited spots"
+    },
+    "cta": {
+      "title": "This winter, don't go on another tour. Go to a miracle.",
+      "subtitle": "Travel with us to Puerto Chale and let nature surprise you. Some encounters change the way we see the world forever.",
+      "button": "Reserve your spot",
+      "buttonSecondary": "Talk to a guide",
+      "footnote": "Limited spots - Season January-March - Authentic experience"
+    }
+  },
+  "fr": {
+    "hero": {
+      "title": "Baleine grise : Rencontre a Bahia Magdalena",
+      "subtitle": "Chaque hiver, un miracle se produit au large de nos cotes. Venez en faire partie.",
+      "cta": "Explorez cette experience",
+      "ctaSecondary": "Voir les details",
+      "imageAlt": "Baleine grise emergeant calmement dans les eaux de Bahia Magdalena avec les montagnes de Baja California Sur en arriere-plan"
+    },
+    "story": {
+      "title": "Une migration millenaire",
+      "intro": "Chaque hiver, des centaines de baleines grises traversent le Pacifique depuis l'Arctique jusqu'aux cotes de Baja California Sur. Puerto Chale, une communaute isolee et authentique, devient pendant quelques semaines le meilleur endroit pour les rencontrer de pres.",
+      "description": "Lors de cette experience, vous naviguerez en panga pendant trois heures dans la lagune cotiere ou les baleines mettent bas, allaitent et se reposent. Il n'y a pas de spectacle, pas de scenario : juste vous, la mer... et la possibilite de voir un geant s'approcher calmement.",
+      "highlight": "Ce n'est pas un tour ordinaire. C'est une expedition pour ceux qui valorisent le reel, l'intime et le sauvage.",
+      "features": {
+        "puertoChale": {
+          "title": "Puerto Chale",
+          "description": "Une communaute authentique au coeur de Bahia Magdalena"
+        },
+        "lagoon": {
+          "title": "Lagune protegee",
+          "description": "Des eaux calmes ou les baleines se reposent et se reproduisent"
+        },
+        "intimate": {
+          "title": "Experience intime",
+          "description": "Petits groupes pour une connexion authentique avec la nature"
+        }
+      }
+    },
+    "itinerary": {
+      "title": "Itineraire de la journee",
+      "subtitle": "Une journee complete concue pour maximiser votre connexion avec les baleines grises dans leur sanctuaire naturel.",
+      "steps": {
+        "departure": {
+          "time": "5h30 | Depart depuis La Paz",
+          "description": "Nous partons en transport partage vers Puerto Chale. Le trajet fait partie de l'aventure, traversant des paysages uniques de Baja California Sur."
+        },
+        "arrival": {
+          "time": "8h00 | Arrivee et embarquement",
+          "description": "Nous arrivons a Puerto Chale et embarquons en panga avec un capitaine local. Briefing de securite et preparation pour la rencontre."
+        },
+        "navigation": {
+          "time": "8h30 - 11h30 | Navigation",
+          "description": "Trois heures de navigation dans la lagune cotiere a observer les baleines grises. Chaque rencontre est unique et imprevisible.",
+          "activitiesLabel": "Pendant la navigation :",
+          "activities": [
+            "Observation respectueuse des baleines meres avec leurs petits",
+            "Apprentissage du comportement et de la migration",
+            "Photographie et contemplation silencieuse"
+          ]
+        },
+        "snack": {
+          "time": "12h00 | Collation face a la mer",
+          "description": "Repos sur la terre ferme avec collation locale et temps pour assimiler l'experience vecue."
+        },
+        "return": {
+          "time": "13h00 - 15h30 | Retour a La Paz",
+          "description": "Voyage de retour avec du temps pour reflechir a la rencontre avec ces doux geants."
+        }
+      }
+    },
+    "includes": {
+      "title": "Qu'est-ce qui est inclus ?",
+      "subtitle": "Tout le necessaire pour vivre cette experience de maniere confortable, sure et memorable.",
+      "items": {
+        "transport": {
+          "title": "Transport aller-retour partage",
+          "description": "Depuis La Paz jusqu'a Puerto Chale dans un vehicule confortable et sur."
+        },
+        "boat": {
+          "title": "Tour en panga avec capitaine local",
+          "description": "Embarcation traditionnelle pilotee par des pecheurs locaux experimentes."
+        },
+        "guide": {
+          "title": "Guide biologiste marin",
+          "description": "Accompagnement specialise pour enrichir votre comprehension des baleines grises."
+        },
+        "photo": {
+          "title": "Photos et videos incluses",
+          "description": "Captures professionnelles de votre experience pour un souvenir durable."
+        },
+        "snack": {
+          "title": "Collation locale et hydratation",
+          "description": "Fruits frais, collation regionale et eau purifiee tout au long de la journee."
+        },
+        "observation": {
+          "title": "Equipement d'observation",
+          "description": "Jumelles de qualite pour ne manquer aucun detail de la rencontre."
+        }
+      }
+    },
+    "wildlife": {
+      "title": "Especes que vous pouvez rencontrer",
+      "subtitle": "Bahia Magdalena est un sanctuaire naturel ou convergent differentes especes marines pendant la saison des baleines grises.",
+      "species": {
+        "grayWhale": {
+          "name": "Baleine grise",
+          "season": "Jan - Mar",
+          "description": "Les protagonistes de l'experience. Des meres avec leurs petits qui se reposent dans les eaux protegees de la lagune pendant leur migration depuis l'Arctique."
+        },
+        "dolphins": {
+          "name": "Dauphins",
+          "season": "Toute l'annee",
+          "description": "Residents permanents de la baie, ils accompagnent souvent les pangas avec leur curiosite naturelle et leurs acrobaties spontanees."
+        },
+        "seaLions": {
+          "name": "Lions de mer",
+          "season": "Toute l'annee",
+          "description": "Des colonies qui se reposent sur les rochers et les mangroves. Leur curiosite les pousse a s'approcher pour observer les visiteurs."
+        },
+        "seabirds": {
+          "name": "Oiseaux marins",
+          "season": "Toute l'annee",
+          "description": "Fregates, pelicans et cormorans qui profitent de l'abondance de poissons dans la lagune pour se nourrir."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Temoignages de voyageurs",
+      "subtitle": "Experiences reelles de ceux qui ont vecu la rencontre avec les baleines grises.",
+      "reviews": [
+        {
+          "name": "Lucia",
+          "location": "Mexico",
+          "text": "J'ai toujours reve de voir des baleines. Mais c'etait bien plus que cela. J'ai pleure d'emotion. Merci de respecter la nature ainsi."
+        },
+        {
+          "name": "Pablo",
+          "location": "Allemagne",
+          "text": "Ce n'etait pas un tour, c'etait une experience reelle. La proximite avec les baleines, le silence, tout etait magique."
+        },
+        {
+          "name": "Karla",
+          "location": "Espagne",
+          "text": "L'equipe etait incroyable. Ils nous ont tout explique avec tellement de passion que maintenant je vois l'ocean avec d'autres yeux."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "subtitle": "Une experience authentique avec une capacite limitee pour garantir une rencontre intime avec les baleines grises.",
+      "card": {
+        "name": "Rencontre avec la baleine grise",
+        "price": "$2,800",
+        "currency": "MXN / personne",
+        "features": [
+          "Capacite limitee : 8 personnes par depart",
+          "Experience partagee (non privee)",
+          "Transport aller-retour depuis La Paz",
+          "Guide biologiste marin specialise",
+          "Photos professionnelles incluses"
+        ],
+        "cta": "Reservez votre place"
+      },
+      "limitedSeason": {
+        "title": "Saison limitee",
+        "description": "Nous operons uniquement pendant la saison des baleines grises (janvier-mars). Les dates exactes peuvent varier selon les conditions naturelles."
+      }
+    },
+    "details": {
+      "title": "Informations importantes",
+      "subtitle": "Tout ce que vous devez savoir pour vivre cette experience authentique",
+      "realisticNote": {
+        "title": "Note realiste",
+        "description": "Nous travaillons avec la faune sauvage en liberte. Bien que les probabilites d'observation soient tres elevees en saison, nous ne pouvons pas les garantir. Ce que nous garantissons : une equipe engagee et un respect profond pour l'ocean."
+      },
+      "sharedExperience": {
+        "title": "Experience partagee",
+        "description": "Vous partagerez cette aventure avec d'autres voyageurs qui, comme vous, valorisent l'authenticite et le respect de la nature. Nous croyons que ces rencontres s'enrichissent quand elles sont vecues en communaute."
+      },
+      "forWhom": {
+        "title": "Pour qui est cette experience",
+        "description": "Ideale pour ceux qui recherchent une connexion authentique avec la nature, pas du divertissement artificiel. Si vous valorisez l'authenticite, l'apprentissage et les rencontres reelles avec la vie marine, cette experience transformera votre facon de voir l'ocean."
+      },
+      "seasonBadge": "Saison : Janvier - Mars - Places limitees"
+    },
+    "cta": {
+      "title": "Cet hiver, ne faites pas un autre tour. Allez voir un miracle.",
+      "subtitle": "Voyagez avec nous a Puerto Chale et laissez la nature vous surprendre. Certaines rencontres changent a jamais notre facon de voir le monde.",
+      "button": "Reservez votre place",
+      "buttonSecondary": "Parlez a un guide",
+      "footnote": "Places limitees - Saison janvier-mars - Experience authentique"
+    }
+  },
+  "zh": {
+    "hero": {
+      "title": "灰鲸：Bahia Magdalena 的邂逅",
+      "subtitle": "每年冬天，一个奇迹在我们的海岸发生。来成为其中的一部分。",
+      "cta": "探索这次体验",
+      "ctaSecondary": "查看详情",
+      "imageAlt": "灰鲸在 Bahia Magdalena 的水域中平静地浮出水面，背景是 Baja California Sur 的山脉"
+    },
+    "story": {
+      "title": "千年迁徙",
+      "intro": "每年冬天，数百头灰鲸从北极穿越太平洋，来到 Baja California Sur 的海岸。Puerto Chale，一个偏远而真实的社区，在几周内成为近距离了解灰鲸的最佳场所。",
+      "description": "在这次体验中，你将乘坐小艇在灰鲸分娩、哺乳和休息的沿海泻湖中航行三个小时。没有表演，没有剧本：只有你、大海……以及看到一只巨兽平静地向你靠近的可能。",
+      "highlight": "这不是普通的旅游。这是为那些珍视真实、亲密和野性的人准备的探险。",
+      "features": {
+        "puertoChale": {
+          "title": "Puerto Chale",
+          "description": "Bahia Magdalena 中心的真实社区"
+        },
+        "lagoon": {
+          "title": "受保护的泻湖",
+          "description": "鲸鱼休息和繁殖的平静水域"
+        },
+        "intimate": {
+          "title": "私密体验",
+          "description": "小团体，与大自然真正连接"
+        }
+      }
+    },
+    "itinerary": {
+      "title": "当日行程",
+      "subtitle": "精心安排的一整天，最大化你在灰鲸自然保护区与它们的联系。",
+      "steps": {
+        "departure": {
+          "time": "早上 5:30 | 从 La Paz 出发",
+          "description": "我们乘坐拼车前往 Puerto Chale。旅途本身就是冒险的一部分，穿越 Baja California Sur 独特的风景。"
+        },
+        "arrival": {
+          "time": "早上 8:00 | 到达和登船",
+          "description": "到达 Puerto Chale，与当地船长一起登上小艇。安全简报和邂逅准备。"
+        },
+        "navigation": {
+          "time": "早上 8:30 - 11:30 | 航行",
+          "description": "在沿海泻湖中航行三小时，观察灰鲸。每次邂逅都是独一无二且不可预测的。",
+          "activitiesLabel": "航行期间：",
+          "activities": [
+            "尊重地观察带幼崽的母鲸",
+            "学习行为和迁徙知识",
+            "摄影和静默沉思"
+          ]
+        },
+        "snack": {
+          "time": "中午 12:00 | 海边小食",
+          "description": "在陆地上休息，品尝当地小食，给自己时间消化所经历的一切。"
+        },
+        "return": {
+          "time": "下午 1:00 - 3:30 | 返回 La Paz",
+          "description": "返程途中，有时间回味与这些温柔巨人的邂逅。"
+        }
+      }
+    },
+    "includes": {
+      "title": "包含什么？",
+      "subtitle": "舒适、安全和难忘地体验所需的一切。",
+      "items": {
+        "transport": {
+          "title": "往返拼车交通",
+          "description": "从 La Paz 到 Puerto Chale 的舒适安全车辆。"
+        },
+        "boat": {
+          "title": "当地船长驾驶的小艇游览",
+          "description": "由经验丰富的当地渔民驾驶的传统船只。"
+        },
+        "guide": {
+          "title": "海洋生物学家向导",
+          "description": "专业陪伴，丰富你对灰鲸的理解。"
+        },
+        "photo": {
+          "title": "包含照片和视频",
+          "description": "专业拍摄你的体验，留下持久的回忆。"
+        },
+        "snack": {
+          "title": "当地小食和饮水",
+          "description": "全天提供新鲜水果、地方小食和纯净水。"
+        },
+        "observation": {
+          "title": "观察设备",
+          "description": "优质双筒望远镜，不错过邂逅的任何细节。"
+        }
+      }
+    },
+    "wildlife": {
+      "title": "你可能遇到的物种",
+      "subtitle": "Bahia Magdalena 是一个天然保护区，灰鲸季节期间不同的海洋物种在此汇聚。",
+      "species": {
+        "grayWhale": {
+          "name": "灰鲸",
+          "season": "1月 - 3月",
+          "description": "体验的主角。带着幼崽的母鲸在从北极迁徙途中，在泻湖受保护的水域中休息。"
+        },
+        "dolphins": {
+          "name": "海豚",
+          "season": "全年",
+          "description": "海湾的常住居民，常以天生的好奇心和自发的特技表演陪伴小艇。"
+        },
+        "seaLions": {
+          "name": "海狮",
+          "season": "全年",
+          "description": "在岩石和红树林上休息的群落。它们的好奇心驱使它们靠近观察游客。"
+        },
+        "seabirds": {
+          "name": "海鸟",
+          "season": "全年",
+          "description": "军舰鸟、鹈鹕和鸬鹚利用泻湖丰富的鱼类资源觅食。"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "旅行者感言",
+      "subtitle": "亲历灰鲸邂逅的真实体验。",
+      "reviews": [
+        {
+          "name": "Lucia",
+          "location": "墨西哥城",
+          "text": "我一直梦想看到鲸鱼。但这远不止如此。我激动得流泪了。感谢你们如此尊重大自然。"
+        },
+        {
+          "name": "Pablo",
+          "location": "德国",
+          "text": "这不是一次旅游，而是一次真实的体验。与鲸鱼的亲近、那份寂静，一切都很神奇。"
+        },
+        {
+          "name": "Karla",
+          "location": "西班牙",
+          "text": "团队太棒了。他们充满激情地解释一切，现在我用不同的眼光看待海洋。"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "价格",
+      "subtitle": "限量名额的真实体验，保证与灰鲸的私密邂逅。",
+      "card": {
+        "name": "灰鲸邂逅",
+        "price": "$2,800",
+        "currency": "墨西哥比索 / 人",
+        "features": [
+          "限量名额：每次出发 8 人",
+          "共享体验（非私人）",
+          "从 La Paz 往返交通",
+          "专业海洋生物学家向导",
+          "包含专业照片"
+        ],
+        "cta": "预留你的位置"
+      },
+      "limitedSeason": {
+        "title": "限定季节",
+        "description": "我们仅在灰鲸季节（一月至三月）运营。确切日期可能因自然条件而异。"
+      }
+    },
+    "details": {
+      "title": "重要信息",
+      "subtitle": "体验这次真实旅程所需知道的一切",
+      "realisticNote": {
+        "title": "真实说明",
+        "description": "我们与自由生活的野生动物合作。虽然在季节期间观赏到的概率非常高，但我们不能保证。我们能保证的是：一支敬业的团队和对海洋的深深敬意。"
+      },
+      "sharedExperience": {
+        "title": "共享体验",
+        "description": "你将与其他旅行者共同分享这次冒险，他们和你一样珍视真实性和对自然的尊重。我们相信，这些邂逅在群体中体验会更加丰富。"
+      },
+      "forWhom": {
+        "title": "这次体验适合谁",
+        "description": "适合寻求与自然真正连接的人，而非人造娱乐。如果你珍视真实性、学习和与海洋生物的真实邂逅，这次体验将改变你看待海洋的方式。"
+      },
+      "seasonBadge": "季节：一月 - 三月 - 名额有限"
+    },
+    "cta": {
+      "title": "这个冬天，别再参加普通旅游了。去见证一个奇迹。",
+      "subtitle": "与我们一起前往 Puerto Chale，让大自然给你惊喜。有些邂逅会永远改变我们看世界的方式。",
+      "button": "预留你的位置",
+      "buttonSecondary": "与向导交流",
+      "footnote": "名额有限 - 季节一月至三月 - 真实体验"
+    }
+  }
+}

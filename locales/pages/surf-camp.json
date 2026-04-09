@@ -1,0 +1,754 @@
+{
+  "es": {
+    "hero": {
+      "title": "Surf Camp La Paz: 6 Dias de Pura Adrenalina",
+      "subtitle": "Aprende a surfear en las mejores olas de Baja California Sur con instructores certificados, equipo profesional y la magia del Mar de Cortes.",
+      "cta": "Reserva tu semana",
+      "ctaSecondary": "Ver programa",
+      "imageAlt": "Surfista cabalgando una ola perfecta en las cristalinas aguas de La Paz, Baja California Sur"
+    },
+    "about": {
+      "title": "Por que La Paz es perfecta para aprender surf?",
+      "description1": "La Paz ofrece condiciones ideales para principiantes y surfistas intermedios: olas consistentes pero amigables, aguas calidas todo el ano, vientos offshore por las mananas y una comunidad local apasionada por el surf.",
+      "description2": "Nuestro surf camp de 6 dias esta disenado para llevarte desde cero hasta surfear tus primeras olas con confianza, o perfeccionar tu tecnica si ya tienes experiencia.",
+      "features": {
+        "waves": {
+          "title": "Olas Perfectas",
+          "description": "Spots protegidos con olas de 1-3 metros, ideales para aprender y progresar de forma segura."
+        },
+        "instructors": {
+          "title": "Instructores Certificados",
+          "description": "Equipo de instructores locales con certificacion ISA y anos de experiencia ensenando surf."
+        },
+        "progress": {
+          "title": "Progreso Garantizado",
+          "description": "Metodologia probada que garantiza tu progreso desde el primer dia hasta ponerte de pie en la tabla."
+        }
+      }
+    },
+    "program": {
+      "title": "Programa de 6 dias",
+      "subtitle": "Un programa estructurado que combina teoria, practica y diversion para maximizar tu aprendizaje.",
+      "days": {
+        "day1": {
+          "title": "Dia 1: Fundamentos y Seguridad",
+          "description": "Introduccion al surf, seguridad en el agua, lectura de olas y primeras practicas en la arena.",
+          "activities": [
+            "Teoria basica del surf y oceanografia",
+            "Tecnicas de remada y posicionamiento",
+            "Practica de pop-up en la playa",
+            "Primera sesion en espuma blanca"
+          ]
+        },
+        "day2_3": {
+          "title": "Dia 2-3: Primeras Olas",
+          "description": "Transicion a olas verdes, trabajo en el timing y perfeccionamiento del pop-up.",
+          "activities": [
+            "Lectura avanzada de olas",
+            "Tecnicas de take-off",
+            "Postura y equilibrio en la tabla",
+            "Sesiones de video analisis"
+          ]
+        },
+        "day4_5": {
+          "title": "Dia 4-5: Tecnica y Estilo",
+          "description": "Refinamiento de la tecnica, primeros giros y desarrollo del estilo personal.",
+          "activities": [
+            "Tecnicas de giro basico",
+            "Posicionamiento en el lineup",
+            "Etiqueta del surf",
+            "Sesiones en diferentes spots"
+          ]
+        },
+        "day6": {
+          "title": "Dia 6: Graduacion y Celebracion",
+          "description": "Sesion libre supervisada, evaluacion del progreso y celebracion del logro.",
+          "activities": [
+            "Sesion libre con supervision",
+            "Evaluacion y feedback personalizado",
+            "Entrega de certificado",
+            "Celebracion con ceviche en la playa"
+          ]
+        }
+      }
+    },
+    "includes": {
+      "title": "Que incluye el surf camp?",
+      "subtitle": "Todo lo necesario para que te enfoques unicamente en aprender y disfrutar del surf.",
+      "items": {
+        "board": {
+          "title": "Tabla y wetsuit",
+          "description": "Tabla de surf adecuada para tu nivel y wetsuit de calidad para todas las sesiones."
+        },
+        "instructor": {
+          "title": "Instructor certificado",
+          "description": "Instructor personal con certificacion ISA para grupos maximo de 4 personas."
+        },
+        "transport": {
+          "title": "Transporte a spots",
+          "description": "Traslado diario a los mejores spots segun condiciones y nivel del grupo."
+        },
+        "media": {
+          "title": "Fotos y videos",
+          "description": "Documentacion completa de tu progreso con fotos y videos para analisis tecnico."
+        },
+        "snacks": {
+          "title": "Snacks e hidratacion",
+          "description": "Frutas frescas, snacks energeticos y agua durante todas las sesiones."
+        },
+        "certificate": {
+          "title": "Certificado de participacion",
+          "description": "Certificado oficial que acredita tu nivel alcanzado al finalizar el camp."
+        }
+      }
+    },
+    "levels": {
+      "title": "Niveles disponibles",
+      "subtitle": "Adaptamos el programa a tu nivel actual para garantizar el maximo progreso y diversion.",
+      "beginner": {
+        "title": "Principiante",
+        "description": "Nunca has surfeado o tienes muy poca experiencia. Empezamos desde cero con total seguridad.",
+        "skills": [
+          "Fundamentos basicos",
+          "Seguridad en el agua",
+          "Primeras olas en espuma",
+          "Pop-up basico"
+        ]
+      },
+      "intermediate": {
+        "title": "Intermedio",
+        "description": "Ya te pones de pie ocasionalmente y quieres mejorar tu tecnica y consistencia.",
+        "skills": [
+          "Perfeccionamiento del take-off",
+          "Primeros giros",
+          "Lectura avanzada de olas",
+          "Posicionamiento en el lineup"
+        ]
+      },
+      "advanced": {
+        "title": "Avanzado",
+        "description": "Surfeas con confianza y quieres perfeccionar maniobras especificas y desarrollar tu estilo.",
+        "skills": [
+          "Maniobras avanzadas",
+          "Desarrollo de estilo personal",
+          "Surf en diferentes condiciones",
+          "Competencia amistosa"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Precios",
+      "subtitle": "Inversion completa para 6 dias de surf intensivo con todo incluido.",
+      "card": {
+        "name": "Surf Camp 6 Dias",
+        "price": "$7,500",
+        "currency": "MXN / persona",
+        "features": [
+          "6 dias de clases (2 sesiones diarias)",
+          "Instructor certificado ISA",
+          "Equipo completo incluido",
+          "Transporte a spots",
+          "Fotos y videos profesionales",
+          "Certificado de participacion"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "dates": {
+        "title": "Fechas disponibles",
+        "description": "Camps disponibles todo el ano. Las mejores condiciones son de octubre a abril. Grupos maximo 4 personas para garantizar atencion personalizada."
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros surfistas",
+      "subtitle": "Experiencias reales de quienes han vivido el Surf Camp La Paz.",
+      "reviews": [
+        {
+          "name": "Ana Martinez",
+          "location": "Ciudad de Mexico",
+          "text": "Llegue sin saber nada de surf y en 6 dias ya estaba surfeando olas verdes. Los instructores son increibles y el ambiente super relajado. Ya quiero volver!"
+        },
+        {
+          "name": "Carlos Ruiz",
+          "location": "Guadalajara",
+          "text": "Tenia algo de experiencia pero aqui realmente aprendi la tecnica correcta. Los videos de analisis fueron clave para mejorar mi postura. Excelente inversion."
+        },
+        {
+          "name": "Lucia Fernandez",
+          "location": "Monterrey",
+          "text": "La atencion personalizada hace toda la diferencia. Grupos pequenos, instructores dedicados y las olas de La Paz son perfectas para aprender. Experiencia inolvidable!"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para conquistar las olas de La Paz?",
+      "subtitle": "6 dias que cambiaran tu relacion con el oceano para siempre. Aprende surf con los mejores instructores en el paraiso de Baja California Sur.",
+      "button": "Reserva tu semana",
+      "buttonSecondary": "Consultar fechas",
+      "footnote": "Grupos maximo 4 personas - Disponible todo el ano - Certificado incluido"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Surf Camp La Paz: 6 Days of Pure Adrenaline",
+      "subtitle": "Learn to surf the best waves of Baja California Sur with certified instructors, professional equipment, and the magic of the Mar de Cortes.",
+      "cta": "Book your week",
+      "ctaSecondary": "View program",
+      "imageAlt": "Surfer riding a perfect wave in the crystal-clear waters of La Paz, Baja California Sur"
+    },
+    "about": {
+      "title": "Why is La Paz perfect for learning to surf?",
+      "description1": "La Paz offers ideal conditions for beginners and intermediate surfers: consistent but friendly waves, warm water year-round, offshore winds in the mornings, and a local community passionate about surfing.",
+      "description2": "Our 6-day surf camp is designed to take you from zero to surfing your first waves with confidence, or perfect your technique if you already have experience.",
+      "features": {
+        "waves": {
+          "title": "Perfect Waves",
+          "description": "Protected spots with 1-3 meter waves, ideal for learning and progressing safely."
+        },
+        "instructors": {
+          "title": "Certified Instructors",
+          "description": "Team of local instructors with ISA certification and years of experience teaching surfing."
+        },
+        "progress": {
+          "title": "Guaranteed Progress",
+          "description": "Proven methodology that guarantees your progress from day one to standing up on the board."
+        }
+      }
+    },
+    "program": {
+      "title": "6-Day Program",
+      "subtitle": "A structured program that combines theory, practice, and fun to maximize your learning.",
+      "days": {
+        "day1": {
+          "title": "Day 1: Fundamentals and Safety",
+          "description": "Introduction to surfing, water safety, wave reading, and first practice sessions on the sand.",
+          "activities": [
+            "Basic surf theory and oceanography",
+            "Paddling and positioning techniques",
+            "Pop-up practice on the beach",
+            "First session in white water"
+          ]
+        },
+        "day2_3": {
+          "title": "Days 2-3: First Waves",
+          "description": "Transition to green waves, timing work, and pop-up perfection.",
+          "activities": [
+            "Advanced wave reading",
+            "Take-off techniques",
+            "Board stance and balance",
+            "Video analysis sessions"
+          ]
+        },
+        "day4_5": {
+          "title": "Days 4-5: Technique and Style",
+          "description": "Technique refinement, first turns, and personal style development.",
+          "activities": [
+            "Basic turning techniques",
+            "Lineup positioning",
+            "Surf etiquette",
+            "Sessions at different spots"
+          ]
+        },
+        "day6": {
+          "title": "Day 6: Graduation and Celebration",
+          "description": "Supervised free session, progress evaluation, and achievement celebration.",
+          "activities": [
+            "Free session with supervision",
+            "Evaluation and personalized feedback",
+            "Certificate presentation",
+            "Celebration with ceviche on the beach"
+          ]
+        }
+      }
+    },
+    "includes": {
+      "title": "What does the surf camp include?",
+      "subtitle": "Everything you need so you can focus solely on learning and enjoying surfing.",
+      "items": {
+        "board": {
+          "title": "Board and wetsuit",
+          "description": "Surfboard suited to your level and quality wetsuit for all sessions."
+        },
+        "instructor": {
+          "title": "Certified instructor",
+          "description": "Personal ISA-certified instructor for groups of maximum 4 people."
+        },
+        "transport": {
+          "title": "Transport to spots",
+          "description": "Daily transfer to the best spots based on conditions and group level."
+        },
+        "media": {
+          "title": "Photos and videos",
+          "description": "Complete documentation of your progress with photos and videos for technical analysis."
+        },
+        "snacks": {
+          "title": "Snacks and hydration",
+          "description": "Fresh fruits, energy snacks, and water during all sessions."
+        },
+        "certificate": {
+          "title": "Certificate of participation",
+          "description": "Official certificate accrediting your level achieved upon completing the camp."
+        }
+      }
+    },
+    "levels": {
+      "title": "Available levels",
+      "subtitle": "We adapt the program to your current level to guarantee maximum progress and fun.",
+      "beginner": {
+        "title": "Beginner",
+        "description": "You've never surfed or have very little experience. We start from zero with complete safety.",
+        "skills": [
+          "Basic fundamentals",
+          "Water safety",
+          "First waves in foam",
+          "Basic pop-up"
+        ]
+      },
+      "intermediate": {
+        "title": "Intermediate",
+        "description": "You can stand up occasionally and want to improve your technique and consistency.",
+        "skills": [
+          "Take-off perfection",
+          "First turns",
+          "Advanced wave reading",
+          "Lineup positioning"
+        ]
+      },
+      "advanced": {
+        "title": "Advanced",
+        "description": "You surf with confidence and want to perfect specific maneuvers and develop your style.",
+        "skills": [
+          "Advanced maneuvers",
+          "Personal style development",
+          "Surfing in different conditions",
+          "Friendly competition"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Complete investment for 6 days of intensive surfing with everything included.",
+      "card": {
+        "name": "Surf Camp 6 Days",
+        "price": "$7,500",
+        "currency": "MXN / person",
+        "features": [
+          "6 days of lessons (2 daily sessions)",
+          "ISA-certified instructor",
+          "Complete equipment included",
+          "Transport to spots",
+          "Professional photos and videos",
+          "Certificate of participation"
+        ],
+        "cta": "Book Now"
+      },
+      "dates": {
+        "title": "Available dates",
+        "description": "Camps available year-round. Best conditions are from October to April. Groups of maximum 4 people to guarantee personalized attention."
+      }
+    },
+    "testimonials": {
+      "title": "What our surfers say",
+      "subtitle": "Real experiences from those who have lived the Surf Camp La Paz.",
+      "reviews": [
+        {
+          "name": "Ana Martinez",
+          "location": "Mexico City",
+          "text": "I arrived knowing nothing about surfing and in 6 days I was already surfing green waves. The instructors are amazing and the vibe super relaxed. I already want to go back!"
+        },
+        {
+          "name": "Carlos Ruiz",
+          "location": "Guadalajara",
+          "text": "I had some experience but here I really learned the correct technique. The analysis videos were key to improving my stance. Excellent investment."
+        },
+        {
+          "name": "Lucia Fernandez",
+          "location": "Monterrey",
+          "text": "The personalized attention makes all the difference. Small groups, dedicated instructors, and the waves of La Paz are perfect for learning. Unforgettable experience!"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to conquer the waves of La Paz?",
+      "subtitle": "6 days that will change your relationship with the ocean forever. Learn to surf with the best instructors in the paradise of Baja California Sur.",
+      "button": "Book your week",
+      "buttonSecondary": "Check dates",
+      "footnote": "Groups of maximum 4 people - Available year-round - Certificate included"
+    }
+  },
+  "fr": {
+    "hero": {
+      "title": "Surf Camp La Paz : 6 jours de pure adrenaline",
+      "subtitle": "Apprenez a surfer sur les meilleures vagues de Baja California Sur avec des moniteurs certifies, un equipement professionnel et la magie du Mar de Cortes.",
+      "cta": "Reservez votre semaine",
+      "ctaSecondary": "Voir le programme",
+      "imageAlt": "Surfeur chevauchant une vague parfaite dans les eaux cristallines de La Paz, Baja California Sur"
+    },
+    "about": {
+      "title": "Pourquoi La Paz est-elle parfaite pour apprendre le surf ?",
+      "description1": "La Paz offre des conditions ideales pour les debutants et les surfeurs intermediaires : des vagues regulieres mais accessibles, des eaux chaudes toute l'annee, des vents offshore le matin et une communaute locale passionnee de surf.",
+      "description2": "Notre surf camp de 6 jours est concu pour vous emmener de zero a surfer vos premieres vagues avec confiance, ou perfectionner votre technique si vous avez deja de l'experience.",
+      "features": {
+        "waves": {
+          "title": "Vagues parfaites",
+          "description": "Spots proteges avec des vagues de 1 a 3 metres, ideaux pour apprendre et progresser en toute securite."
+        },
+        "instructors": {
+          "title": "Moniteurs certifies",
+          "description": "Equipe de moniteurs locaux avec certification ISA et des annees d'experience dans l'enseignement du surf."
+        },
+        "progress": {
+          "title": "Progres garanti",
+          "description": "Methodologie eprouvee qui garantit votre progression du premier jour jusqu'a vous tenir debout sur la planche."
+        }
+      }
+    },
+    "program": {
+      "title": "Programme de 6 jours",
+      "subtitle": "Un programme structure qui combine theorie, pratique et plaisir pour maximiser votre apprentissage.",
+      "days": {
+        "day1": {
+          "title": "Jour 1 : Fondamentaux et securite",
+          "description": "Introduction au surf, securite dans l'eau, lecture des vagues et premieres pratiques sur le sable.",
+          "activities": [
+            "Theorie de base du surf et oceanographie",
+            "Techniques de rame et positionnement",
+            "Pratique du pop-up sur la plage",
+            "Premiere session dans la mousse blanche"
+          ]
+        },
+        "day2_3": {
+          "title": "Jours 2-3 : Premieres vagues",
+          "description": "Transition vers les vagues vertes, travail du timing et perfectionnement du pop-up.",
+          "activities": [
+            "Lecture avancee des vagues",
+            "Techniques de take-off",
+            "Posture et equilibre sur la planche",
+            "Sessions d'analyse video"
+          ]
+        },
+        "day4_5": {
+          "title": "Jours 4-5 : Technique et style",
+          "description": "Perfectionnement de la technique, premiers virages et developpement du style personnel.",
+          "activities": [
+            "Techniques de virage de base",
+            "Positionnement dans le lineup",
+            "Etiquette du surf",
+            "Sessions sur differents spots"
+          ]
+        },
+        "day6": {
+          "title": "Jour 6 : Remise de diplome et celebration",
+          "description": "Session libre supervisee, evaluation de la progression et celebration de la reussite.",
+          "activities": [
+            "Session libre avec supervision",
+            "Evaluation et retour personnalise",
+            "Remise du certificat",
+            "Celebration avec ceviche sur la plage"
+          ]
+        }
+      }
+    },
+    "includes": {
+      "title": "Que comprend le surf camp ?",
+      "subtitle": "Tout le necessaire pour que vous vous concentriez uniquement sur l'apprentissage et le plaisir du surf.",
+      "items": {
+        "board": {
+          "title": "Planche et combinaison",
+          "description": "Planche de surf adaptee a votre niveau et combinaison de qualite pour toutes les sessions."
+        },
+        "instructor": {
+          "title": "Moniteur certifie",
+          "description": "Moniteur personnel avec certification ISA pour des groupes de 4 personnes maximum."
+        },
+        "transport": {
+          "title": "Transport vers les spots",
+          "description": "Transfert quotidien vers les meilleurs spots selon les conditions et le niveau du groupe."
+        },
+        "media": {
+          "title": "Photos et videos",
+          "description": "Documentation complete de votre progression avec photos et videos pour analyse technique."
+        },
+        "snacks": {
+          "title": "Collations et hydratation",
+          "description": "Fruits frais, collations energetiques et eau pendant toutes les sessions."
+        },
+        "certificate": {
+          "title": "Certificat de participation",
+          "description": "Certificat officiel attestant de votre niveau atteint a la fin du camp."
+        }
+      }
+    },
+    "levels": {
+      "title": "Niveaux disponibles",
+      "subtitle": "Nous adaptons le programme a votre niveau actuel pour garantir un maximum de progres et de plaisir.",
+      "beginner": {
+        "title": "Debutant",
+        "description": "Vous n'avez jamais surfe ou avez tres peu d'experience. Nous commencons a zero en toute securite.",
+        "skills": [
+          "Fondamentaux de base",
+          "Securite dans l'eau",
+          "Premieres vagues dans la mousse",
+          "Pop-up de base"
+        ]
+      },
+      "intermediate": {
+        "title": "Intermediaire",
+        "description": "Vous vous levez occasionnellement et souhaitez ameliorer votre technique et votre regularite.",
+        "skills": [
+          "Perfectionnement du take-off",
+          "Premiers virages",
+          "Lecture avancee des vagues",
+          "Positionnement dans le lineup"
+        ]
+      },
+      "advanced": {
+        "title": "Avance",
+        "description": "Vous surfez avec confiance et souhaitez perfectionner des manoeuvres specifiques et developper votre style.",
+        "skills": [
+          "Manoeuvres avancees",
+          "Developpement du style personnel",
+          "Surf dans differentes conditions",
+          "Competition amicale"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "subtitle": "Investissement complet pour 6 jours de surf intensif tout compris.",
+      "card": {
+        "name": "Surf Camp 6 jours",
+        "price": "$7,500",
+        "currency": "MXN / personne",
+        "features": [
+          "6 jours de cours (2 sessions quotidiennes)",
+          "Moniteur certifie ISA",
+          "Equipement complet inclus",
+          "Transport vers les spots",
+          "Photos et videos professionnelles",
+          "Certificat de participation"
+        ],
+        "cta": "Reserver maintenant"
+      },
+      "dates": {
+        "title": "Dates disponibles",
+        "description": "Camps disponibles toute l'annee. Les meilleures conditions sont d'octobre a avril. Groupes de 4 personnes maximum pour garantir une attention personnalisee."
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos surfeurs",
+      "subtitle": "Experiences reelles de ceux qui ont vecu le Surf Camp La Paz.",
+      "reviews": [
+        {
+          "name": "Ana Martinez",
+          "location": "Mexico",
+          "text": "Je suis arrivee sans rien connaitre au surf et en 6 jours je surfais deja des vagues vertes. Les moniteurs sont incroyables et l'ambiance super detendue. J'ai deja envie d'y retourner !"
+        },
+        {
+          "name": "Carlos Ruiz",
+          "location": "Guadalajara",
+          "text": "J'avais un peu d'experience mais ici j'ai vraiment appris la bonne technique. Les videos d'analyse ont ete cles pour ameliorer ma posture. Excellent investissement."
+        },
+        {
+          "name": "Lucia Fernandez",
+          "location": "Monterrey",
+          "text": "L'attention personnalisee fait toute la difference. Petits groupes, moniteurs dedies et les vagues de La Paz sont parfaites pour apprendre. Experience inoubliable !"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pret a conquerir les vagues de La Paz ?",
+      "subtitle": "6 jours qui changeront votre relation avec l'ocean pour toujours. Apprenez a surfer avec les meilleurs moniteurs au paradis de Baja California Sur.",
+      "button": "Reservez votre semaine",
+      "buttonSecondary": "Consulter les dates",
+      "footnote": "Groupes de 4 personnes maximum - Disponible toute l'annee - Certificat inclus"
+    }
+  },
+  "zh": {
+    "hero": {
+      "title": "La Paz 冲浪营：6 天纯粹肾上腺素",
+      "subtitle": "在 Baja California Sur 最好的海浪中学习冲浪，配备认证教练、专业装备和 Mar de Cortes 的魅力。",
+      "cta": "预订你的一周",
+      "ctaSecondary": "查看课程",
+      "imageAlt": "冲浪者在 La Paz 清澈的海水中驾驭一道完美的浪"
+    },
+    "about": {
+      "title": "为什么 La Paz 是学习冲浪的理想之地？",
+      "description1": "La Paz 为初学者和中级冲浪者提供理想条件：稳定而友好的海浪、全年温暖的海水、早晨的离岸风以及热爱冲浪的当地社区。",
+      "description2": "我们的 6 天冲浪营旨在带你从零开始，自信地冲第一道浪，或者如果你已有经验，则完善你的技术。",
+      "features": {
+        "waves": {
+          "title": "完美海浪",
+          "description": "受保护的冲浪点，1-3 米浪高，非常适合安全学习和进步。"
+        },
+        "instructors": {
+          "title": "认证教练",
+          "description": "拥有 ISA 认证和多年冲浪教学经验的当地教练团队。"
+        },
+        "progress": {
+          "title": "进步保证",
+          "description": "经过验证的教学方法，保证你从第一天起不断进步，直到站在冲浪板上。"
+        }
+      }
+    },
+    "program": {
+      "title": "6 天课程",
+      "subtitle": "一个结合理论、实践和乐趣的结构化课程，最大化你的学习效果。",
+      "days": {
+        "day1": {
+          "title": "第 1 天：基础与安全",
+          "description": "冲浪入门、水上安全、读浪和沙滩上的初次练习。",
+          "activities": [
+            "冲浪基础理论和海洋学",
+            "划水和定位技巧",
+            "沙滩上的起身练习",
+            "白浪区的首次练习"
+          ]
+        },
+        "day2_3": {
+          "title": "第 2-3 天：初次冲浪",
+          "description": "过渡到绿浪，掌握时机和完善起身动作。",
+          "activities": [
+            "高级读浪技巧",
+            "起乘技巧",
+            "冲浪板上的姿势和平衡",
+            "视频分析课程"
+          ]
+        },
+        "day4_5": {
+          "title": "第 4-5 天：技巧与风格",
+          "description": "技巧精修、初次转向和个人风格发展。",
+          "activities": [
+            "基础转向技巧",
+            "浪区定位",
+            "冲浪礼仪",
+            "不同冲浪点的练习"
+          ]
+        },
+        "day6": {
+          "title": "第 6 天：毕业与庆祝",
+          "description": "有监督的自由练习、进步评估和成就庆祝。",
+          "activities": [
+            "有监督的自由练习",
+            "评估和个性化反馈",
+            "颁发证书",
+            "在海滩上用酸橘汁腌鱼庆祝"
+          ]
+        }
+      }
+    },
+    "includes": {
+      "title": "冲浪营包含什么？",
+      "subtitle": "所有必需品，让你专注于学习和享受冲浪。",
+      "items": {
+        "board": {
+          "title": "冲浪板和防寒衣",
+          "description": "适合你水平的冲浪板和所有课程的优质防寒衣。"
+        },
+        "instructor": {
+          "title": "认证教练",
+          "description": "ISA 认证的个人教练，最多 4 人小组。"
+        },
+        "transport": {
+          "title": "前往冲浪点的交通",
+          "description": "根据条件和团队水平每日接送至最佳冲浪点。"
+        },
+        "media": {
+          "title": "照片和视频",
+          "description": "完整记录你的进步，配有照片和视频用于技术分析。"
+        },
+        "snacks": {
+          "title": "零食和饮水",
+          "description": "所有课程期间提供新鲜水果、能量零食和饮用水。"
+        },
+        "certificate": {
+          "title": "参与证书",
+          "description": "营地结束后颁发的官方证书，证明你达到的水平。"
+        }
+      }
+    },
+    "levels": {
+      "title": "可选级别",
+      "subtitle": "我们根据你的当前水平调整课程，保证最大进步和乐趣。",
+      "beginner": {
+        "title": "初学者",
+        "description": "你从未冲浪或经验很少。我们从零开始，确保完全安全。",
+        "skills": [
+          "基本功",
+          "水上安全",
+          "泡沫区初次冲浪",
+          "基础起身"
+        ]
+      },
+      "intermediate": {
+        "title": "中级",
+        "description": "你偶尔能站起来，想提高技巧和稳定性。",
+        "skills": [
+          "完善起乘",
+          "初次转向",
+          "高级读浪",
+          "浪区定位"
+        ]
+      },
+      "advanced": {
+        "title": "高级",
+        "description": "你自信地冲浪，想完善特定动作并发展个人风格。",
+        "skills": [
+          "高级动作",
+          "个人风格发展",
+          "不同条件下冲浪",
+          "友谊赛"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "价格",
+      "subtitle": "6 天密集冲浪的全包投资。",
+      "card": {
+        "name": "6 天冲浪营",
+        "price": "$7,500",
+        "currency": "墨西哥比索 / 人",
+        "features": [
+          "6 天课程（每天 2 节）",
+          "ISA 认证教练",
+          "包含全套装备",
+          "前往冲浪点的交通",
+          "专业照片和视频",
+          "参与证书"
+        ],
+        "cta": "立即预订"
+      },
+      "dates": {
+        "title": "可选日期",
+        "description": "全年开营。最佳条件为十月至四月。最多 4 人小组，保证个性化关注。"
+      }
+    },
+    "testimonials": {
+      "title": "我们的冲浪者怎么说",
+      "subtitle": "亲历 La Paz 冲浪营的真实体验。",
+      "reviews": [
+        {
+          "name": "Ana Martinez",
+          "location": "墨西哥城",
+          "text": "我来的时候对冲浪一无所知，6 天后我已经在冲绿浪了。教练们太棒了，氛围超级放松。已经想再去了！"
+        },
+        {
+          "name": "Carlos Ruiz",
+          "location": "Guadalajara",
+          "text": "我有一些经验，但在这里我真正学到了正确的技巧。分析视频是改善姿势的关键。非常值得的投资。"
+        },
+        {
+          "name": "Lucia Fernandez",
+          "location": "Monterrey",
+          "text": "个性化关注真的很不同。小团体、专注的教练，La Paz 的浪非常适合学习。难忘的体验！"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好征服 La Paz 的海浪了吗？",
+      "subtitle": "6 天将永远改变你与海洋的关系。在 Baja California Sur 的天堂，跟最好的教练学习冲浪。",
+      "button": "预订你的一周",
+      "buttonSecondary": "咨询日期",
+      "footnote": "最多 4 人小组 - 全年开放 - 包含证书"
+    }
+  }
+}

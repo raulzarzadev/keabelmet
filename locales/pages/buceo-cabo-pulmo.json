@@ -1,0 +1,750 @@
+{
+  "es": {
+    "meta": {
+      "title": "Buceo en Cabo Pulmo",
+      "description": "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan."
+    },
+    "hero": {
+      "badge": "Parque Nacional Cabo Pulmo",
+      "title": "Buceo en Cabo Pulmo",
+      "description": "Descubre un santuario submarino unico con el unico arrecife de coral en el Mar de Cortes",
+      "cta_primary": "Ver Tarifas",
+      "cta_secondary": "Mas Informacion",
+      "image_alt": "Buceo en Cabo Pulmo"
+    },
+    "details": {
+      "duration_title": "Duracion",
+      "duration_text": "Dia completo",
+      "group_title": "Grupo",
+      "group_text": "Max. 6 buzos",
+      "season_title": "Temporada",
+      "season_text": "Todo el ano",
+      "dives_title": "Inmersiones",
+      "dives_text": "2 por tour"
+    },
+    "about": {
+      "title": "Sobre el Tour",
+      "description_1": "Descubre un santuario submarino unico en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral en el Mar de Cortes, un ecosistema vibrante que ha prosperado por mas de 25,000 anos. Cabo Pulmo es una de las reservas marinas mas exitosas del mundo, donde la vida marina ha aumentado exponencialmente gracias a la proteccion de sus aguas.",
+      "description_2": "Bucear aqui es una experiencia inigualable: enormes cardumenes de peces, tortugas marinas, tiburones toro, mantarrayas, y hasta juguetones lobos marinos te acompanaran en esta aventura. No por nada, el legendario Jacques Cousteau llamo al Mar de Cortes \"El Acuario del Mundo\".",
+      "description_3": "Sumergete en aguas cristalinas y explora este paraiso submarino protegido, considerado uno de los mejores destinos de buceo a nivel mundial."
+    },
+    "pricing": {
+      "title": "Opciones y Tarifas",
+      "subtitle": "Elige la experiencia que mejor se adapte a ti",
+      "collective": {
+        "name": "Buceo Colectivo",
+        "subtitle": "Para buzos certificados",
+        "price_own_gear": "$2,800",
+        "price_own_gear_note": "Con tu propio equipo (BCD y regulador)",
+        "price_full_gear": "$3,000",
+        "price_full_gear_note": "Incluye equipo completo",
+        "currency": "MXN",
+        "features": [
+          "Grupos de hasta 6 personas",
+          "2 inmersiones compartidas",
+          "Agua y galletas a bordo",
+          "Minimo 2 participantes si necesitas equipo"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "private": {
+        "badge": "EXPERIENCIA PREMIUM",
+        "name": "Buceo Privado",
+        "subtitle": "Exclusivo para tu grupo",
+        "price_base": "$12,000",
+        "price_base_note": "Para 1 a 3 buzos (precio fijo)",
+        "price_extra": "+$3,400",
+        "price_extra_note": "Por cada buzo adicional (max. 6 total)",
+        "currency": "MXN",
+        "features": [
+          "Experiencia totalmente personalizada",
+          "2 inmersiones exclusivas",
+          "Refrescos, bebidas energeticas y agua",
+          "Galletas y fruta de temporada"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "discovery": {
+        "name": "Discovery Scuba Diver",
+        "subtitle": "Para principiantes sin experiencia",
+        "price": "$3,600",
+        "price_note": "Por persona",
+        "currency": "MXN",
+        "features": [
+          "Grupos de 1 a 6 personas",
+          "Instruccion teorica completa",
+          "Practica en aguas poco profundas",
+          "2 inmersiones supervisadas por instructor certificado",
+          "Agua y galletas a bordo"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "discovery_private": {
+        "name": "Discovery DSD Privado",
+        "subtitle": "Experiencia exclusiva para principiantes",
+        "price_base": "$12,000",
+        "price_base_note": "Para 1 a 3 personas (precio fijo)",
+        "price_extra": "+$3,800",
+        "price_extra_note": "Por cada persona adicional (max. 4 total)",
+        "currency": "MXN",
+        "features": [
+          "Instructor dedicado solo para tu grupo",
+          "Instruccion personalizada",
+          "2 inmersiones en el arrecife",
+          "Bebidas energeticas y agua natural"
+        ],
+        "cta": "Reservar Ahora"
+      }
+    },
+    "includes": {
+      "title": "Que Incluye",
+      "gear_title": "Equipo de Buceo Completo",
+      "gear_text": "BCD, regulador, tanque, traje de neopreno, aletas, mascara",
+      "divemaster_title": "Dive Master Certificado",
+      "divemaster_text": "Guia profesional con amplia experiencia en Cabo Pulmo",
+      "dives_title": "2 Inmersiones",
+      "dives_text": "Dos inmersiones en diferentes sitios del arrecife",
+      "park_title": "Entrada al Parque",
+      "park_text": "Acceso al Parque Nacional Cabo Pulmo",
+      "refreshments_title": "Refrigerios",
+      "refreshments_text": "Agua, galletas y snacks durante el tour",
+      "insurance_title": "Seguro",
+      "insurance_text": "Seguro de responsabilidad civil incluido"
+    },
+    "requirements": {
+      "title": "Requisitos Importantes",
+      "certified": "Buceo Certificado: Se requiere certificacion Open Water o superior",
+      "discovery": "Discovery Scuba: No se requiere experiencia previa, incluye instruccion completa",
+      "health": "Salud: Los participantes deben estar en buen estado fisico y completar un cuestionario medico"
+    },
+    "marine_life": {
+      "title": "Vida Marina que Puedes Encontrar",
+      "subtitle": "Cabo Pulmo alberga una biodiversidad marina excepcional en el unico arrecife de coral del Golfo de California",
+      "species": [
+        {
+          "name": "Cardumenes Masivos",
+          "description": "Impresionantes bancos de miles de peces incluyendo jureles, barracudas y peces soldado que forman verdaderas nubes submarinas.",
+          "season": "Todo el ano"
+        },
+        {
+          "name": "Tiburones Toro",
+          "description": "Encuentros con tiburones toro, una de las especies mas impresionantes del arrecife. Inofensivos y majestuosos.",
+          "season": "Oct - May"
+        },
+        {
+          "name": "Mantarrayas",
+          "description": "Elegantes mantarrayas y rayas aguila planean sobre el arrecife en un espectaculo de gracia submarina.",
+          "season": "Todo el ano"
+        },
+        {
+          "name": "Tortugas Marinas",
+          "description": "Tortugas verdes y carey se alimentan en el arrecife. Cabo Pulmo es un importante sitio de alimentacion para estas especies en peligro.",
+          "season": "Todo el ano"
+        },
+        {
+          "name": "Lobos Marinos",
+          "description": "Juguetones lobos marinos californianos que a menudo nadan con los buzos, creando encuentros magicos.",
+          "season": "Todo el ano"
+        },
+        {
+          "name": "Arrecife de Coral",
+          "description": "Coral duro y blando de mas de 25,000 anos de antiguedad, con colores vibrantes y estructura compleja llena de vida.",
+          "season": "Todo el ano"
+        }
+      ],
+      "disclaimer": "Nota: La vida silvestre marina es impredecible. Aunque Cabo Pulmo tiene una abundancia excepcional, los avistamientos especificos no pueden garantizarse y varian segun las condiciones del dia."
+    },
+    "recommendations": {
+      "title": "Recomendaciones",
+      "items": [
+        {
+          "title": "Llega preparado:",
+          "text": "Trae tu certificacion de buceo, traje de bano, toalla, protector solar biodegradable y cambio de ropa."
+        },
+        {
+          "title": "Hidratacion:",
+          "text": "Mantente bien hidratado antes y despues del buceo. Evita el alcohol el dia anterior."
+        },
+        {
+          "title": "Respeta el arrecife:",
+          "text": "No toques ni te pares sobre el coral. Manten una flotabilidad neutra perfecta para proteger este ecosistema fragil."
+        },
+        {
+          "title": "Fotografia:",
+          "text": "Si traes camara submarina, asegurate de que este bien asegurada y que sepas usarla sin afectar tu flotabilidad."
+        },
+        {
+          "title": "Condiciones:",
+          "text": "El tour puede cancelarse por condiciones climaticas adversas. Tu seguridad es lo primero."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sumergete en el Acuario del Mundo",
+      "description": "Cabo Pulmo te espera con una biodiversidad marina sin igual. Reserva tu aventura submarina hoy.",
+      "cta_primary": "Reservar Ahora",
+      "cta_secondary": "Ver Mas Experiencias"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Diving in Cabo Pulmo",
+      "description": "Dive in Cabo Pulmo National Park, home to the only coral reef in the Sea of Cortez. Sharks, turtles, fish schools and sea lions await you."
+    },
+    "hero": {
+      "badge": "Cabo Pulmo National Park",
+      "title": "Diving in Cabo Pulmo",
+      "description": "Discover a unique underwater sanctuary with the only coral reef in the Sea of Cortez",
+      "cta_primary": "See Rates",
+      "cta_secondary": "More Information",
+      "image_alt": "Diving in Cabo Pulmo"
+    },
+    "details": {
+      "duration_title": "Duration",
+      "duration_text": "Full day",
+      "group_title": "Group",
+      "group_text": "Max. 6 divers",
+      "season_title": "Season",
+      "season_text": "Year-round",
+      "dives_title": "Dives",
+      "dives_text": "2 per tour"
+    },
+    "about": {
+      "title": "About the Tour",
+      "description_1": "Discover a unique underwater sanctuary in Cabo Pulmo National Park, home to the only coral reef in the Sea of Cortez, a vibrant ecosystem that has thrived for over 25,000 years. Cabo Pulmo is one of the most successful marine reserves in the world, where marine life has increased exponentially thanks to the protection of its waters.",
+      "description_2": "Diving here is an unparalleled experience: enormous schools of fish, sea turtles, bull sharks, manta rays, and even playful sea lions will accompany you on this adventure. It is no wonder that the legendary Jacques Cousteau called the Sea of Cortez \"The Aquarium of the World\".",
+      "description_3": "Immerse yourself in crystal-clear waters and explore this protected underwater paradise, considered one of the best diving destinations in the world."
+    },
+    "pricing": {
+      "title": "Options and Rates",
+      "subtitle": "Choose the experience that best suits you",
+      "collective": {
+        "name": "Group Diving",
+        "subtitle": "For certified divers",
+        "price_own_gear": "$2,800",
+        "price_own_gear_note": "With your own gear (BCD and regulator)",
+        "price_full_gear": "$3,000",
+        "price_full_gear_note": "Includes full equipment",
+        "currency": "MXN",
+        "features": [
+          "Groups of up to 6 people",
+          "2 shared dives",
+          "Water and cookies on board",
+          "Minimum 2 participants if you need equipment"
+        ],
+        "cta": "Book Now"
+      },
+      "private": {
+        "badge": "PREMIUM EXPERIENCE",
+        "name": "Private Diving",
+        "subtitle": "Exclusive for your group",
+        "price_base": "$12,000",
+        "price_base_note": "For 1 to 3 divers (fixed price)",
+        "price_extra": "+$3,400",
+        "price_extra_note": "Per additional diver (max. 6 total)",
+        "currency": "MXN",
+        "features": [
+          "Fully personalized experience",
+          "2 exclusive dives",
+          "Soft drinks, energy drinks and water",
+          "Cookies and seasonal fruit"
+        ],
+        "cta": "Book Now"
+      },
+      "discovery": {
+        "name": "Discovery Scuba Diver",
+        "subtitle": "For beginners with no experience",
+        "price": "$3,600",
+        "price_note": "Per person",
+        "currency": "MXN",
+        "features": [
+          "Groups of 1 to 6 people",
+          "Complete theoretical instruction",
+          "Shallow water practice",
+          "2 dives supervised by certified instructor",
+          "Water and cookies on board"
+        ],
+        "cta": "Book Now"
+      },
+      "discovery_private": {
+        "name": "Private Discovery DSD",
+        "subtitle": "Exclusive experience for beginners",
+        "price_base": "$12,000",
+        "price_base_note": "For 1 to 3 people (fixed price)",
+        "price_extra": "+$3,800",
+        "price_extra_note": "Per additional person (max. 4 total)",
+        "currency": "MXN",
+        "features": [
+          "Dedicated instructor just for your group",
+          "Personalized instruction",
+          "2 dives on the reef",
+          "Energy drinks and natural water"
+        ],
+        "cta": "Book Now"
+      }
+    },
+    "includes": {
+      "title": "What's Included",
+      "gear_title": "Complete Diving Equipment",
+      "gear_text": "BCD, regulator, tank, wetsuit, fins, mask",
+      "divemaster_title": "Certified Dive Master",
+      "divemaster_text": "Professional guide with extensive Cabo Pulmo experience",
+      "dives_title": "2 Dives",
+      "dives_text": "Two dives at different reef sites",
+      "park_title": "Park Entrance",
+      "park_text": "Access to Cabo Pulmo National Park",
+      "refreshments_title": "Refreshments",
+      "refreshments_text": "Water, cookies and snacks during the tour",
+      "insurance_title": "Insurance",
+      "insurance_text": "Liability insurance included"
+    },
+    "requirements": {
+      "title": "Important Requirements",
+      "certified": "Certified Diving: Open Water certification or higher required",
+      "discovery": "Discovery Scuba: No prior experience needed, includes complete instruction",
+      "health": "Health: Participants must be in good physical condition and complete a medical questionnaire"
+    },
+    "marine_life": {
+      "title": "Marine Life You May Encounter",
+      "subtitle": "Cabo Pulmo hosts exceptional marine biodiversity on the only coral reef in the Gulf of California",
+      "species": [
+        {
+          "name": "Massive Fish Schools",
+          "description": "Impressive banks of thousands of fish including jacks, barracudas and soldierfish that form true underwater clouds.",
+          "season": "Year-round"
+        },
+        {
+          "name": "Bull Sharks",
+          "description": "Encounters with bull sharks, one of the most impressive species on the reef. Harmless and majestic.",
+          "season": "Oct - May"
+        },
+        {
+          "name": "Manta Rays",
+          "description": "Elegant manta rays and eagle rays glide over the reef in a spectacle of underwater grace.",
+          "season": "Year-round"
+        },
+        {
+          "name": "Sea Turtles",
+          "description": "Green and hawksbill turtles feed on the reef. Cabo Pulmo is an important feeding site for these endangered species.",
+          "season": "Year-round"
+        },
+        {
+          "name": "Sea Lions",
+          "description": "Playful California sea lions that often swim with divers, creating magical encounters.",
+          "season": "Year-round"
+        },
+        {
+          "name": "Coral Reef",
+          "description": "Hard and soft coral over 25,000 years old, with vibrant colors and complex structure full of life.",
+          "season": "Year-round"
+        }
+      ],
+      "disclaimer": "Note: Marine wildlife is unpredictable. Although Cabo Pulmo has exceptional abundance, specific sightings cannot be guaranteed and vary according to daily conditions."
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "items": [
+        {
+          "title": "Come prepared:",
+          "text": "Bring your diving certification, swimsuit, towel, biodegradable sunscreen and a change of clothes."
+        },
+        {
+          "title": "Hydration:",
+          "text": "Stay well hydrated before and after diving. Avoid alcohol the day before."
+        },
+        {
+          "title": "Respect the reef:",
+          "text": "Do not touch or stand on the coral. Maintain perfect neutral buoyancy to protect this fragile ecosystem."
+        },
+        {
+          "title": "Photography:",
+          "text": "If you bring an underwater camera, make sure it is secure and you know how to use it without affecting your buoyancy."
+        },
+        {
+          "title": "Conditions:",
+          "text": "The tour may be cancelled due to adverse weather conditions. Your safety comes first."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Dive into the Aquarium of the World",
+      "description": "Cabo Pulmo awaits you with unmatched marine biodiversity. Book your underwater adventure today.",
+      "cta_primary": "Book Now",
+      "cta_secondary": "See More Experiences"
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Plongee a Cabo Pulmo",
+      "description": "Plongez dans le Parc National Cabo Pulmo, abritant le seul recif corallien de la mer de Cortez. Requins, tortues, bancs de poissons et lions de mer vous attendent."
+    },
+    "hero": {
+      "badge": "Parc National Cabo Pulmo",
+      "title": "Plongee a Cabo Pulmo",
+      "description": "Decouvrez un sanctuaire sous-marin unique avec le seul recif corallien de la mer de Cortez",
+      "cta_primary": "Voir les Tarifs",
+      "cta_secondary": "Plus d'Informations",
+      "image_alt": "Plongee a Cabo Pulmo"
+    },
+    "details": {
+      "duration_title": "Duree",
+      "duration_text": "Journee complete",
+      "group_title": "Groupe",
+      "group_text": "Max. 6 plongeurs",
+      "season_title": "Saison",
+      "season_text": "Toute l'annee",
+      "dives_title": "Plongees",
+      "dives_text": "2 par tour"
+    },
+    "about": {
+      "title": "A propos du Tour",
+      "description_1": "Decouvrez un sanctuaire sous-marin unique dans le Parc National Cabo Pulmo, abritant le seul recif corallien de la mer de Cortez, un ecosysteme vibrant qui prospere depuis plus de 25 000 ans. Cabo Pulmo est l'une des reserves marines les plus reussies au monde, ou la vie marine a augmente de maniere exponentielle grace a la protection de ses eaux.",
+      "description_2": "Plonger ici est une experience inegalable : d'enormes bancs de poissons, des tortues marines, des requins-taureaux, des raies manta et meme de joueurs lions de mer vous accompagneront dans cette aventure. Ce n'est pas pour rien que le legendaire Jacques Cousteau a appele la mer de Cortez \"L'Aquarium du Monde\".",
+      "description_3": "Plongez dans des eaux cristallines et explorez ce paradis sous-marin protege, considere comme l'une des meilleures destinations de plongee au monde."
+    },
+    "pricing": {
+      "title": "Options et Tarifs",
+      "subtitle": "Choisissez l'experience qui vous convient le mieux",
+      "collective": {
+        "name": "Plongee Collective",
+        "subtitle": "Pour plongeurs certifies",
+        "price_own_gear": "$2,800",
+        "price_own_gear_note": "Avec votre propre equipement (gilet et detendeur)",
+        "price_full_gear": "$3,000",
+        "price_full_gear_note": "Equipement complet inclus",
+        "currency": "MXN",
+        "features": [
+          "Groupes jusqu'a 6 personnes",
+          "2 plongees partagees",
+          "Eau et biscuits a bord",
+          "Minimum 2 participants si vous avez besoin d'equipement"
+        ],
+        "cta": "Reserver Maintenant"
+      },
+      "private": {
+        "badge": "EXPERIENCE PREMIUM",
+        "name": "Plongee Privee",
+        "subtitle": "Exclusif pour votre groupe",
+        "price_base": "$12,000",
+        "price_base_note": "Pour 1 a 3 plongeurs (prix fixe)",
+        "price_extra": "+$3,400",
+        "price_extra_note": "Par plongeur supplementaire (max. 6 au total)",
+        "currency": "MXN",
+        "features": [
+          "Experience entierement personnalisee",
+          "2 plongees exclusives",
+          "Boissons gazeuses, boissons energetiques et eau",
+          "Biscuits et fruits de saison"
+        ],
+        "cta": "Reserver Maintenant"
+      },
+      "discovery": {
+        "name": "Discovery Scuba Diver",
+        "subtitle": "Pour debutants sans experience",
+        "price": "$3,600",
+        "price_note": "Par personne",
+        "currency": "MXN",
+        "features": [
+          "Groupes de 1 a 6 personnes",
+          "Instruction theorique complete",
+          "Pratique en eaux peu profondes",
+          "2 plongees supervisees par un instructeur certifie",
+          "Eau et biscuits a bord"
+        ],
+        "cta": "Reserver Maintenant"
+      },
+      "discovery_private": {
+        "name": "Discovery DSD Prive",
+        "subtitle": "Experience exclusive pour debutants",
+        "price_base": "$12,000",
+        "price_base_note": "Pour 1 a 3 personnes (prix fixe)",
+        "price_extra": "+$3,800",
+        "price_extra_note": "Par personne supplementaire (max. 4 au total)",
+        "currency": "MXN",
+        "features": [
+          "Instructeur dedie uniquement a votre groupe",
+          "Instruction personnalisee",
+          "2 plongees sur le recif",
+          "Boissons energetiques et eau naturelle"
+        ],
+        "cta": "Reserver Maintenant"
+      }
+    },
+    "includes": {
+      "title": "Ce qui est Inclus",
+      "gear_title": "Equipement de Plongee Complet",
+      "gear_text": "Gilet, detendeur, bouteille, combinaison, palmes, masque",
+      "divemaster_title": "Dive Master Certifie",
+      "divemaster_text": "Guide professionnel avec une vaste experience a Cabo Pulmo",
+      "dives_title": "2 Plongees",
+      "dives_text": "Deux plongees sur differents sites du recif",
+      "park_title": "Entree au Parc",
+      "park_text": "Acces au Parc National Cabo Pulmo",
+      "refreshments_title": "Rafraichissements",
+      "refreshments_text": "Eau, biscuits et en-cas pendant le tour",
+      "insurance_title": "Assurance",
+      "insurance_text": "Assurance responsabilite civile incluse"
+    },
+    "requirements": {
+      "title": "Exigences Importantes",
+      "certified": "Plongee Certifiee : Certification Open Water ou superieure requise",
+      "discovery": "Discovery Scuba : Aucune experience prealable requise, instruction complete incluse",
+      "health": "Sante : Les participants doivent etre en bonne condition physique et remplir un questionnaire medical"
+    },
+    "marine_life": {
+      "title": "Vie Marine que Vous Pouvez Rencontrer",
+      "subtitle": "Cabo Pulmo abrite une biodiversite marine exceptionnelle sur le seul recif corallien du Golfe de Californie",
+      "species": [
+        {
+          "name": "Bancs de Poissons Massifs",
+          "description": "D'impressionnants bancs de milliers de poissons comprenant des carangues, barracudas et poissons-soldats qui forment de veritables nuages sous-marins.",
+          "season": "Toute l'annee"
+        },
+        {
+          "name": "Requins-Taureaux",
+          "description": "Rencontres avec des requins-taureaux, l'une des especes les plus impressionnantes du recif. Inoffensifs et majestueux.",
+          "season": "Oct - Mai"
+        },
+        {
+          "name": "Raies Manta",
+          "description": "D'elegantes raies manta et raies aigles planent au-dessus du recif dans un spectacle de grace sous-marine.",
+          "season": "Toute l'annee"
+        },
+        {
+          "name": "Tortues Marines",
+          "description": "Les tortues vertes et imbriquees se nourrissent sur le recif. Cabo Pulmo est un site d'alimentation important pour ces especes menacees.",
+          "season": "Toute l'annee"
+        },
+        {
+          "name": "Lions de Mer",
+          "description": "De joueurs lions de mer californiens qui nagent souvent avec les plongeurs, creant des rencontres magiques.",
+          "season": "Toute l'annee"
+        },
+        {
+          "name": "Recif Corallien",
+          "description": "Corail dur et mou de plus de 25 000 ans, aux couleurs vibrantes et a la structure complexe pleine de vie.",
+          "season": "Toute l'annee"
+        }
+      ],
+      "disclaimer": "Note : La vie marine sauvage est imprevisible. Bien que Cabo Pulmo ait une abondance exceptionnelle, les observations specifiques ne peuvent etre garanties et varient selon les conditions du jour."
+    },
+    "recommendations": {
+      "title": "Recommandations",
+      "items": [
+        {
+          "title": "Venez prepare :",
+          "text": "Apportez votre certification de plongee, maillot de bain, serviette, creme solaire biodegradable et un change de vetements."
+        },
+        {
+          "title": "Hydratation :",
+          "text": "Restez bien hydrate avant et apres la plongee. Evitez l'alcool la veille."
+        },
+        {
+          "title": "Respectez le recif :",
+          "text": "Ne touchez pas et ne marchez pas sur le corail. Maintenez une flottabilite neutre parfaite pour proteger cet ecosysteme fragile."
+        },
+        {
+          "title": "Photographie :",
+          "text": "Si vous apportez un appareil photo sous-marin, assurez-vous qu'il est bien fixe et que vous savez l'utiliser sans affecter votre flottabilite."
+        },
+        {
+          "title": "Conditions :",
+          "text": "Le tour peut etre annule en cas de conditions meteorologiques defavorables. Votre securite est la priorite."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Plongez dans l'Aquarium du Monde",
+      "description": "Cabo Pulmo vous attend avec une biodiversite marine inegalee. Reservez votre aventure sous-marine aujourd'hui.",
+      "cta_primary": "Reserver Maintenant",
+      "cta_secondary": "Voir Plus d'Experiences"
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "Cabo Pulmo 潜水",
+      "description": "在 Cabo Pulmo 国家公园潜水，这里拥有科尔特斯海唯一的珊瑚礁。鲨鱼、海龟、鱼群和海狮在此等待着您。"
+    },
+    "hero": {
+      "badge": "Cabo Pulmo 国家公园",
+      "title": "Cabo Pulmo 潜水",
+      "description": "探索一个独特的水下保护区，拥有科尔特斯海唯一的珊瑚礁",
+      "cta_primary": "查看价格",
+      "cta_secondary": "更多信息",
+      "image_alt": "Cabo Pulmo 潜水"
+    },
+    "details": {
+      "duration_title": "时长",
+      "duration_text": "全天",
+      "group_title": "团体",
+      "group_text": "最多 6 名潜水员",
+      "season_title": "季节",
+      "season_text": "全年",
+      "dives_title": "潜水次数",
+      "dives_text": "每次旅程 2 次"
+    },
+    "about": {
+      "title": "关于本次旅程",
+      "description_1": "在 Cabo Pulmo 国家公园探索独特的水下保护区，这里拥有科尔特斯海唯一的珊瑚礁，一个繁荣了超过 25,000 年的充满活力的生态系统。Cabo Pulmo 是世界上最成功的海洋保护区之一，由于水域保护，海洋生物呈指数级增长。",
+      "description_2": "在这里潜水是无与伦比的体验：巨大的鱼群、海龟、牛鲨、蝠鲼，甚至顽皮的海狮都会在这次冒险中陪伴您。难怪传奇人物 Jacques Cousteau 将科尔特斯海称为\"世界水族馆\"。",
+      "description_3": "沉浸在清澈的水域中，探索这个受保护的水下天堂，被认为是世界上最佳潜水目的地之一。"
+    },
+    "pricing": {
+      "title": "选项和价格",
+      "subtitle": "选择最适合您的体验",
+      "collective": {
+        "name": "团体潜水",
+        "subtitle": "适合持证潜水员",
+        "price_own_gear": "$2,800",
+        "price_own_gear_note": "自带装备（BCD 和调节器）",
+        "price_full_gear": "$3,000",
+        "price_full_gear_note": "包含全套装备",
+        "currency": "MXN",
+        "features": [
+          "最多 6 人一组",
+          "2 次共享潜水",
+          "船上提供水和饼干",
+          "需要装备时至少 2 名参与者"
+        ],
+        "cta": "立即预订"
+      },
+      "private": {
+        "badge": "尊享体验",
+        "name": "私人潜水",
+        "subtitle": "专属您的团队",
+        "price_base": "$12,000",
+        "price_base_note": "1 至 3 名潜水员（固定价格）",
+        "price_extra": "+$3,400",
+        "price_extra_note": "每增加一名潜水员（最多 6 人）",
+        "currency": "MXN",
+        "features": [
+          "完全个性化的体验",
+          "2 次专属潜水",
+          "软饮料、能量饮料和水",
+          "饼干和时令水果"
+        ],
+        "cta": "立即预订"
+      },
+      "discovery": {
+        "name": "Discovery Scuba Diver",
+        "subtitle": "适合无经验的初学者",
+        "price": "$3,600",
+        "price_note": "每人",
+        "currency": "MXN",
+        "features": [
+          "1 至 6 人一组",
+          "完整的理论培训",
+          "浅水练习",
+          "2 次由认证教练监督的潜水",
+          "船上提供水和饼干"
+        ],
+        "cta": "立即预订"
+      },
+      "discovery_private": {
+        "name": "私人 Discovery DSD",
+        "subtitle": "初学者专属体验",
+        "price_base": "$12,000",
+        "price_base_note": "1 至 3 人（固定价格）",
+        "price_extra": "+$3,800",
+        "price_extra_note": "每增加一人（最多 4 人）",
+        "currency": "MXN",
+        "features": [
+          "专属教练只为您的团队服务",
+          "个性化培训",
+          "2 次珊瑚礁潜水",
+          "能量饮料和天然水"
+        ],
+        "cta": "立即预订"
+      }
+    },
+    "includes": {
+      "title": "包含项目",
+      "gear_title": "全套潜水装备",
+      "gear_text": "BCD、调节器、气瓶、潜水衣、脚蹼、面镜",
+      "divemaster_title": "认证潜水长",
+      "divemaster_text": "拥有丰富 Cabo Pulmo 经验的专业导游",
+      "dives_title": "2 次潜水",
+      "dives_text": "在不同的珊瑚礁点进行两次潜水",
+      "park_title": "公园门票",
+      "park_text": "进入 Cabo Pulmo 国家公园",
+      "refreshments_title": "茶点",
+      "refreshments_text": "旅程中提供水、饼干和零食",
+      "insurance_title": "保险",
+      "insurance_text": "包含责任险"
+    },
+    "requirements": {
+      "title": "重要要求",
+      "certified": "持证潜水：需要 Open Water 或更高级别的认证",
+      "discovery": "Discovery Scuba：无需先前经验，包含完整培训",
+      "health": "健康：参与者必须身体状况良好并填写健康问卷"
+    },
+    "marine_life": {
+      "title": "您可能遇到的海洋生物",
+      "subtitle": "Cabo Pulmo 在加利福尼亚湾唯一的珊瑚礁上拥有卓越的海洋生物多样性",
+      "species": [
+        {
+          "name": "大型鱼群",
+          "description": "令人印象深刻的数千条鱼的鱼群，包括鲹鱼、梭鱼和兵鱼，形成真正的水下云层。",
+          "season": "全年"
+        },
+        {
+          "name": "牛鲨",
+          "description": "与牛鲨的邂逅，珊瑚礁上最令人印象深刻的物种之一。无害而雄伟。",
+          "season": "10月 - 5月"
+        },
+        {
+          "name": "蝠鲼",
+          "description": "优雅的蝠鲼和鹰鳐在珊瑚礁上方滑翔，展现水下优雅的壮观景象。",
+          "season": "全年"
+        },
+        {
+          "name": "海龟",
+          "description": "绿海龟和玳瑁在珊瑚礁觅食。Cabo Pulmo 是这些濒危物种的重要觅食地。",
+          "season": "全年"
+        },
+        {
+          "name": "海狮",
+          "description": "顽皮的加利福尼亚海狮经常与潜水员一起游泳，创造神奇的邂逅。",
+          "season": "全年"
+        },
+        {
+          "name": "珊瑚礁",
+          "description": "超过 25,000 年历史的硬珊瑚和软珊瑚，色彩鲜艳，结构复杂，充满生机。",
+          "season": "全年"
+        }
+      ],
+      "disclaimer": "注意：海洋野生动物不可预测。虽然 Cabo Pulmo 拥有卓越的丰富度，但无法保证特定的目击，会因当天条件而异。"
+    },
+    "recommendations": {
+      "title": "建议",
+      "items": [
+        {
+          "title": "做好准备：",
+          "text": "携带潜水证书、泳衣、毛巾、可生物降解的防晒霜和换洗衣物。"
+        },
+        {
+          "title": "补水：",
+          "text": "潜水前后保持充足水分。前一天避免饮酒。"
+        },
+        {
+          "title": "尊重珊瑚礁：",
+          "text": "不要触碰或踩踏珊瑚。保持完美的中性浮力以保护这个脆弱的生态系统。"
+        },
+        {
+          "title": "摄影：",
+          "text": "如果携带水下相机，确保其固定牢靠，并且您知道如何使用而不影响浮力。"
+        },
+        {
+          "title": "天气条件：",
+          "text": "恶劣天气条件下旅程可能取消。您的安全是第一位的。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "潜入世界水族馆",
+      "description": "Cabo Pulmo 以无与伦比的海洋生物多样性等待着您。今天就预订您的水下冒险。",
+      "cta_primary": "立即预订",
+      "cta_secondary": "查看更多体验"
+    }
+  }
+}

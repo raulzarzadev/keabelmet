@@ -1,0 +1,794 @@
+{
+  "es": {
+    "hero": {
+      "title": "Safari La Ventana: Encuentro Intimo con Gigantes del Oceano",
+      "subtitle": "Una experiencia unica en La Ventana e Isla Cerralvo, Baja California Sur. Descubre la magia del Golfo de California como nunca antes.",
+      "cta": "Reserva tu aventura",
+      "ctaSecondary": "Ver detalles",
+      "imageAlt": "Orca nadando en el oceano azul"
+    },
+    "about": {
+      "title": "Que es el Safari La Ventana?",
+      "description": "Zarpamos desde las costas tranquilas de La Ventana rumbo al azul profundo. A bordo de la lancha, guiados por biologos marinos y capitanes locales, navegamos en busca de lo inesperado: mobulas que vuelan, delfines que nos escoltan, ballenas que emergen como leyendas vivas. No hay guion. No hay show. Porque cada encuentro con la fauna es autentico, espontaneo e irrepetible. Porque esto no es un tour turistico... es una aventura real. Solo es la naturaleza... salvaje y sin filtros.",
+      "commitment": {
+        "title": "Nuestro Compromiso",
+        "description": "Respetamos profundamente la vida marina. Nuestros safaris estan disenados para observar sin perturbar, aprender sin interferir, y maravillarse sin danar el ecosistema que nos acoge."
+      },
+      "guidedExperience": {
+        "title": "Experiencia Guiada",
+        "description": "Cada expedicion es liderada por biologos marinos con anos de experiencia en el Golfo de California, quienes comparten su conocimiento y pasion por este ecosistema unico."
+      },
+      "imageAlt": "Guia entusiasta con equipo de snorkel disfrutando de una experiencia marina en Safari La Ventana"
+    },
+    "experience": {
+      "title": "Como es la experiencia?",
+      "subtitle": "Un dia completo de aventura marina, disenado para maximizar las posibilidades de encuentros con vida salvaje mientras disfrutas del impresionante paisaje del Mar de Cortes.",
+      "cards": {
+        "meetingPoint": {
+          "title": "Punto de Encuentro",
+          "description": "Playa Central, La Ventana. Facil de encontrar y con estacionamiento disponible."
+        },
+        "schedule": {
+          "title": "Horario",
+          "description": "Salida: 8:00 AM\nDuracion: 6 horas de aventura marina."
+        },
+        "activities": {
+          "title": "Actividades",
+          "description": "Navegacion, snorkel (si las condiciones lo permiten), exploracion en Isla Cerralvo."
+        },
+        "refreshment": {
+          "title": "Refrigerio",
+          "description": "Disfrutaras de ceviche fresco, frutas de temporada y agua durante la expedicion."
+        }
+      },
+      "itinerary": {
+        "title": "Itinerario Detallado",
+        "steps": [
+          {
+            "title": "Bienvenida y Briefing (8:00 AM)",
+            "description": "Conoce a tu guia biologo marino y recibe una introduccion sobre la vida marina que podrias encontrar."
+          },
+          {
+            "title": "Navegacion y Busqueda (8:30 AM - 11:30 AM)",
+            "description": "Navegamos en busca de vida marina, siguiendo patrones de comportamiento y senales naturales."
+          },
+          {
+            "title": "Exploracion en Isla Cerralvo (11:30 AM - 1:00 PM)",
+            "description": "Dependiendo de las condiciones, podremos hacer snorkel o explorar las aguas cristalinas alrededor de la isla."
+          },
+          {
+            "title": "Refrigerio y Descanso (1:00 PM - 1:30 PM)",
+            "description": "Disfrutamos de un delicioso ceviche fresco y frutas mientras descansamos."
+          },
+          {
+            "title": "Regreso Escenico (1:30 PM - 2:00 PM)",
+            "description": "Navegamos de regreso a La Ventana, con posibilidad de mas avistamientos en el camino."
+          }
+        ]
+      }
+    },
+    "wildlife": {
+      "title": "Especies que puedes encontrar",
+      "subtitle": "El Golfo de California es uno de los mares mas biodiversos del planeta. Estas son algunas de las especies que podrias avistar durante tu safari.",
+      "species": {
+        "mobulas": {
+          "name": "Mobulas",
+          "season": "Abr - Jul",
+          "description": "Conocidas como \"diablos de mar\", estas mantarrayas realizan impresionantes saltos fuera del agua, creando un espectaculo unico. Suelen formar grandes agregaciones durante su temporada de apareamiento."
+        },
+        "dolphins": {
+          "name": "Delfines",
+          "season": "Todo el ano",
+          "description": "Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectaculo natural con sus saltos y acrobacias."
+        },
+        "humpbackWhale": {
+          "name": "Ballena Jorobada",
+          "season": "Dic - Abr",
+          "description": "Conocidas por sus impresionantes saltos y cantos complejos. Las ballenas jorobadas migran anualmente a las calidas aguas del Golfo de California."
+        },
+        "seaLions": {
+          "name": "Lobos Marinos",
+          "season": "Todo el ano",
+          "description": "Curiosos y carismaticos, los lobos marinos suelen descansar en las rocas y, si tienes suerte, podrias nadar cerca de ellos."
+        },
+        "spermWhales": {
+          "name": "Cachalotes",
+          "season": "Jun - Nov",
+          "description": "Los cachalotes son los depredadores con dientes mas grandes del planeta. Impresionantes buceadores que pueden sumergirse a profundidades extremas."
+        },
+        "orcas": {
+          "name": "Orcas",
+          "season": "Todo el ano",
+          "description": "Conocidas como \"ballenas asesinas\", las orcas son en realidad delfines grandes. Inteligentes y sociales, cazan en grupos coordinados."
+        }
+      },
+      "realismNote": {
+        "title": "Nota de Realismo",
+        "description": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos unicos."
+      }
+    },
+    "includes": {
+      "title": "Incluye la expedicion",
+      "subtitle": "Todo lo que necesitas para disfrutar de una experiencia segura, comoda y enriquecedora.",
+      "items": {
+        "boat": {
+          "title": "Transporte en panga",
+          "description": "Embarcacion segura y comoda, perfecta para navegar en el Golfo de California."
+        },
+        "guide": {
+          "title": "Guia biologo marino",
+          "description": "Expertos que compartiran su conocimiento sobre el ecosistema y la vida marina."
+        },
+        "snorkel": {
+          "title": "Equipo completo de snorkel",
+          "description": "Mascara, tubo y aletas de calidad para explorar bajo el agua."
+        },
+        "photo": {
+          "title": "Fotografias y videos",
+          "description": "Capturas profesionales de tu experiencia para que te lleves un recuerdo inolvidable."
+        },
+        "food": {
+          "title": "Ceviche fresco y refrigerio",
+          "description": "Delicioso ceviche preparado con pescado local, frutas frescas y agua purificada."
+        },
+        "binoculars": {
+          "title": "Binoculares y guia de fauna",
+          "description": "Herramientas para mejorar tu experiencia de avistamiento y aprendizaje."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Precios",
+      "subtitle": "Opciones flexibles para individuos, parejas, familias o grupos que desean vivir esta experiencia unica.",
+      "group": {
+        "name": "Safari Grupal",
+        "price": "$2,800",
+        "currency": "MXN / persona",
+        "features": [
+          "Grupos de hasta 8 personas",
+          "Experiencia compartida",
+          "Ideal para viajeros individuales o parejas",
+          "Todos los servicios incluidos"
+        ],
+        "cta": "Reservar Ahora"
+      },
+      "private": {
+        "name": "Safari Privado",
+        "price": "$14,000",
+        "currency": "MXN / grupo",
+        "features": [
+          "Embarcacion exclusiva para tu grupo",
+          "Hasta 8 personas",
+          "Itinerario personalizable",
+          "Atencion exclusiva del guia"
+        ],
+        "cta": "Reservar Privado"
+      },
+      "kids": {
+        "title": "Viajas con ninos?",
+        "line1": "Ninos menores de 5 anos: Gratis",
+        "line2": "Ninos de 6 a 12 anos: 50% de descuento"
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros aventureros",
+      "subtitle": "Experiencias reales de quienes han vivido la magia de Safari La Ventana.",
+      "reviews": [
+        {
+          "name": "Maria Rodriguez",
+          "location": "Ciudad de Mexico",
+          "text": "Una experiencia magica. Ver a las ballenas jorobadas tan cerca fue indescriptible. Los guias son muy profesionales y respetuosos con los animales. Volvere el proximo ano!"
+        },
+        {
+          "name": "Juan Martinez",
+          "location": "Guadalajara",
+          "text": "Increible safari. Vimos delfines, mobulas saltando y hasta una ballena azul a lo lejos. El ceviche estaba delicioso y los guias muy conocedores. Una experiencia autentica."
+        },
+        {
+          "name": "Laura Sanchez",
+          "location": "Monterrey",
+          "text": "Fuimos con nuestros hijos de 8 y 10 anos y quedaron maravillados. Los guias son excelentes explicando a los ninos sobre la vida marina. Una aventura educativa y emocionante para toda la familia."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para vivir el mar de verdad?",
+      "subtitle": "Reserva tu safari ahora y preparate para una experiencia que cambiara tu forma de ver el oceano.",
+      "button": "Reserva Ahora"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Safari La Ventana: An Intimate Encounter with Ocean Giants",
+      "subtitle": "A unique experience in La Ventana and Isla Cerralvo, Baja California Sur. Discover the magic of the Gulf of California like never before.",
+      "cta": "Book your adventure",
+      "ctaSecondary": "View details",
+      "imageAlt": "Orca swimming in the blue ocean"
+    },
+    "about": {
+      "title": "What is Safari La Ventana?",
+      "description": "We set sail from the tranquil shores of La Ventana toward the deep blue. Aboard the boat, guided by marine biologists and local captains, we navigate in search of the unexpected: flying mobulas, dolphins escorting us, whales that emerge like living legends. There is no script. There is no show. Because every encounter with wildlife is authentic, spontaneous, and unrepeatable. Because this is not a tourist tour... it's a real adventure. It's just nature... wild and unfiltered.",
+      "commitment": {
+        "title": "Our Commitment",
+        "description": "We deeply respect marine life. Our safaris are designed to observe without disturbing, learn without interfering, and marvel without harming the ecosystem that hosts us."
+      },
+      "guidedExperience": {
+        "title": "Guided Experience",
+        "description": "Each expedition is led by marine biologists with years of experience in the Gulf of California, who share their knowledge and passion for this unique ecosystem."
+      },
+      "imageAlt": "Enthusiastic guide with snorkel gear enjoying a marine experience at Safari La Ventana"
+    },
+    "experience": {
+      "title": "What is the experience like?",
+      "subtitle": "A full day of marine adventure, designed to maximize the chances of wildlife encounters while you enjoy the stunning landscape of the Mar de Cortes.",
+      "cards": {
+        "meetingPoint": {
+          "title": "Meeting Point",
+          "description": "Playa Central, La Ventana. Easy to find with available parking."
+        },
+        "schedule": {
+          "title": "Schedule",
+          "description": "Departure: 8:00 AM\nDuration: 6 hours of marine adventure."
+        },
+        "activities": {
+          "title": "Activities",
+          "description": "Navigation, snorkeling (if conditions allow), exploration at Isla Cerralvo."
+        },
+        "refreshment": {
+          "title": "Refreshments",
+          "description": "Enjoy fresh ceviche, seasonal fruits, and water during the expedition."
+        }
+      },
+      "itinerary": {
+        "title": "Detailed Itinerary",
+        "steps": [
+          {
+            "title": "Welcome and Briefing (8:00 AM)",
+            "description": "Meet your marine biologist guide and receive an introduction about the marine life you might encounter."
+          },
+          {
+            "title": "Navigation and Search (8:30 AM - 11:30 AM)",
+            "description": "We navigate in search of marine life, following behavioral patterns and natural signals."
+          },
+          {
+            "title": "Exploration at Isla Cerralvo (11:30 AM - 1:00 PM)",
+            "description": "Depending on conditions, we can snorkel or explore the crystal-clear waters around the island."
+          },
+          {
+            "title": "Refreshments and Rest (1:00 PM - 1:30 PM)",
+            "description": "We enjoy delicious fresh ceviche and fruits while resting."
+          },
+          {
+            "title": "Scenic Return (1:30 PM - 2:00 PM)",
+            "description": "We sail back to La Ventana, with the possibility of more sightings along the way."
+          }
+        ]
+      }
+    },
+    "wildlife": {
+      "title": "Species you can encounter",
+      "subtitle": "The Gulf of California is one of the most biodiverse seas on the planet. These are some of the species you could spot during your safari.",
+      "species": {
+        "mobulas": {
+          "name": "Mobulas",
+          "season": "Apr - Jul",
+          "description": "Known as \"devil rays,\" these manta rays perform impressive leaps out of the water, creating a unique spectacle. They tend to form large aggregations during their mating season."
+        },
+        "dolphins": {
+          "name": "Dolphins",
+          "season": "Year-round",
+          "description": "Playful and social, dolphins often approach boats and put on a natural show with their jumps and acrobatics."
+        },
+        "humpbackWhale": {
+          "name": "Humpback Whale",
+          "season": "Dec - Apr",
+          "description": "Known for their impressive breaches and complex songs. Humpback whales migrate annually to the warm waters of the Gulf of California."
+        },
+        "seaLions": {
+          "name": "Sea Lions",
+          "season": "Year-round",
+          "description": "Curious and charismatic, sea lions often rest on rocks and, if you're lucky, you could swim near them."
+        },
+        "spermWhales": {
+          "name": "Sperm Whales",
+          "season": "Jun - Nov",
+          "description": "Sperm whales are the largest toothed predators on the planet. Impressive divers that can plunge to extreme depths."
+        },
+        "orcas": {
+          "name": "Orcas",
+          "season": "Year-round",
+          "description": "Known as \"killer whales,\" orcas are actually large dolphins. Intelligent and social, they hunt in coordinated groups."
+        }
+      },
+      "realismNote": {
+        "title": "A Note on Realism",
+        "description": "We work with wild animals in their natural habitat. We cannot guarantee sightings, but we do guarantee commitment, experience, and a respectful approach that maximizes your chances of living unique moments."
+      }
+    },
+    "includes": {
+      "title": "Expedition includes",
+      "subtitle": "Everything you need to enjoy a safe, comfortable, and enriching experience.",
+      "items": {
+        "boat": {
+          "title": "Panga boat transport",
+          "description": "Safe and comfortable boat, perfect for navigating the Gulf of California."
+        },
+        "guide": {
+          "title": "Marine biologist guide",
+          "description": "Experts who will share their knowledge about the ecosystem and marine life."
+        },
+        "snorkel": {
+          "title": "Complete snorkel gear",
+          "description": "Quality mask, snorkel, and fins to explore underwater."
+        },
+        "photo": {
+          "title": "Photos and videos",
+          "description": "Professional captures of your experience so you take home an unforgettable memory."
+        },
+        "food": {
+          "title": "Fresh ceviche and refreshments",
+          "description": "Delicious ceviche made with local fish, fresh fruits, and purified water."
+        },
+        "binoculars": {
+          "title": "Binoculars and wildlife guide",
+          "description": "Tools to enhance your sighting and learning experience."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Flexible options for individuals, couples, families, or groups who want to live this unique experience.",
+      "group": {
+        "name": "Group Safari",
+        "price": "$2,800",
+        "currency": "MXN / person",
+        "features": [
+          "Groups of up to 8 people",
+          "Shared experience",
+          "Ideal for solo travelers or couples",
+          "All services included"
+        ],
+        "cta": "Book Now"
+      },
+      "private": {
+        "name": "Private Safari",
+        "price": "$14,000",
+        "currency": "MXN / group",
+        "features": [
+          "Exclusive boat for your group",
+          "Up to 8 people",
+          "Customizable itinerary",
+          "Exclusive guide attention"
+        ],
+        "cta": "Book Private"
+      },
+      "kids": {
+        "title": "Traveling with children?",
+        "line1": "Children under 5: Free",
+        "line2": "Children ages 6 to 12: 50% discount"
+      }
+    },
+    "testimonials": {
+      "title": "What our adventurers say",
+      "subtitle": "Real experiences from those who have lived the magic of Safari La Ventana.",
+      "reviews": [
+        {
+          "name": "Maria Rodriguez",
+          "location": "Mexico City",
+          "text": "A magical experience. Seeing the humpback whales so close was indescribable. The guides are very professional and respectful with the animals. I'll come back next year!"
+        },
+        {
+          "name": "Juan Martinez",
+          "location": "Guadalajara",
+          "text": "Incredible safari. We saw dolphins, jumping mobulas, and even a blue whale in the distance. The ceviche was delicious and the guides very knowledgeable. An authentic experience."
+        },
+        {
+          "name": "Laura Sanchez",
+          "location": "Monterrey",
+          "text": "We went with our 8 and 10-year-old kids and they were amazed. The guides are excellent at explaining marine life to children. An educational and exciting adventure for the whole family."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to truly experience the sea?",
+      "subtitle": "Book your safari now and get ready for an experience that will change the way you see the ocean.",
+      "button": "Book Now"
+    }
+  },
+  "fr": {
+    "hero": {
+      "title": "Safari La Ventana : Rencontre intime avec les geants de l'ocean",
+      "subtitle": "Une experience unique a La Ventana et Isla Cerralvo, Baja California Sur. Decouvrez la magie du golfe de Californie comme jamais auparavant.",
+      "cta": "Reservez votre aventure",
+      "ctaSecondary": "Voir les details",
+      "imageAlt": "Orque nageant dans l'ocean bleu"
+    },
+    "about": {
+      "title": "Qu'est-ce que le Safari La Ventana ?",
+      "description": "Nous prenons la mer depuis les cotes tranquilles de La Ventana vers le bleu profond. A bord du bateau, guides par des biologistes marins et des capitaines locaux, nous naviguons a la recherche de l'inattendu : des mobulas qui s'envolent, des dauphins qui nous escortent, des baleines qui emergent comme des legendes vivantes. Il n'y a pas de scenario. Il n'y a pas de spectacle. Car chaque rencontre avec la faune est authentique, spontanee et unique. Car ce n'est pas un tour touristique... c'est une vraie aventure. C'est juste la nature... sauvage et sans filtre.",
+      "commitment": {
+        "title": "Notre engagement",
+        "description": "Nous respectons profondement la vie marine. Nos safaris sont concus pour observer sans perturber, apprendre sans interferer et s'emerveiller sans nuire a l'ecosysteme qui nous accueille."
+      },
+      "guidedExperience": {
+        "title": "Experience guidee",
+        "description": "Chaque expedition est dirigee par des biologistes marins avec des annees d'experience dans le golfe de Californie, qui partagent leurs connaissances et leur passion pour cet ecosysteme unique."
+      },
+      "imageAlt": "Guide enthousiaste avec equipement de snorkeling profitant d'une experience marine au Safari La Ventana"
+    },
+    "experience": {
+      "title": "Comment se deroule l'experience ?",
+      "subtitle": "Une journee complete d'aventure marine, concue pour maximiser les chances de rencontres avec la faune sauvage tout en profitant du paysage impressionnant du Mar de Cortes.",
+      "cards": {
+        "meetingPoint": {
+          "title": "Point de rencontre",
+          "description": "Playa Central, La Ventana. Facile a trouver avec stationnement disponible."
+        },
+        "schedule": {
+          "title": "Horaire",
+          "description": "Depart : 8h00\nDuree : 6 heures d'aventure marine."
+        },
+        "activities": {
+          "title": "Activites",
+          "description": "Navigation, snorkeling (si les conditions le permettent), exploration a Isla Cerralvo."
+        },
+        "refreshment": {
+          "title": "Collation",
+          "description": "Profitez d'un ceviche frais, de fruits de saison et d'eau pendant l'expedition."
+        }
+      },
+      "itinerary": {
+        "title": "Itineraire detaille",
+        "steps": [
+          {
+            "title": "Accueil et briefing (8h00)",
+            "description": "Rencontrez votre guide biologiste marin et recevez une introduction sur la vie marine que vous pourriez rencontrer."
+          },
+          {
+            "title": "Navigation et recherche (8h30 - 11h30)",
+            "description": "Nous naviguons a la recherche de la vie marine, suivant les comportements et les signaux naturels."
+          },
+          {
+            "title": "Exploration a Isla Cerralvo (11h30 - 13h00)",
+            "description": "Selon les conditions, nous pourrons faire du snorkeling ou explorer les eaux cristallines autour de l'ile."
+          },
+          {
+            "title": "Collation et repos (13h00 - 13h30)",
+            "description": "Nous degustons un delicieux ceviche frais et des fruits tout en nous reposant."
+          },
+          {
+            "title": "Retour panoramique (13h30 - 14h00)",
+            "description": "Nous naviguons de retour a La Ventana, avec la possibilite d'autres observations en chemin."
+          }
+        ]
+      }
+    },
+    "wildlife": {
+      "title": "Especes que vous pouvez rencontrer",
+      "subtitle": "Le golfe de Californie est l'un des mers les plus riches en biodiversite de la planete. Voici quelques-unes des especes que vous pourriez observer lors de votre safari.",
+      "species": {
+        "mobulas": {
+          "name": "Mobulas",
+          "season": "Avr - Jul",
+          "description": "Connues sous le nom de \"raies diables\", ces raies mantas realisent des sauts impressionnants hors de l'eau, creant un spectacle unique. Elles forment souvent de grandes aggregations pendant leur saison de reproduction."
+        },
+        "dolphins": {
+          "name": "Dauphins",
+          "season": "Toute l'annee",
+          "description": "Joueurs et sociaux, les dauphins s'approchent souvent des embarcations et offrent un spectacle naturel avec leurs sauts et acrobaties."
+        },
+        "humpbackWhale": {
+          "name": "Baleine a bosse",
+          "season": "Dec - Avr",
+          "description": "Connues pour leurs sauts impressionnants et leurs chants complexes. Les baleines a bosse migrent chaque annee vers les eaux chaudes du golfe de Californie."
+        },
+        "seaLions": {
+          "name": "Lions de mer",
+          "season": "Toute l'annee",
+          "description": "Curieux et charismatiques, les lions de mer se reposent souvent sur les rochers et, avec de la chance, vous pourriez nager pres d'eux."
+        },
+        "spermWhales": {
+          "name": "Cachalots",
+          "season": "Jun - Nov",
+          "description": "Les cachalots sont les plus grands predateurs a dents de la planete. Des plongeurs impressionnants capables de descendre a des profondeurs extremes."
+        },
+        "orcas": {
+          "name": "Orques",
+          "season": "Toute l'annee",
+          "description": "Connues comme \"baleines tueuses\", les orques sont en realite de grands dauphins. Intelligentes et sociales, elles chassent en groupes coordonnes."
+        }
+      },
+      "realismNote": {
+        "title": "Note de realisme",
+        "description": "Nous travaillons avec des animaux sauvages en liberte. Nous ne garantissons pas les observations, mais nous garantissons l'engagement, l'experience et une approche respectueuse qui maximise vos chances de vivre des moments uniques."
+      }
+    },
+    "includes": {
+      "title": "L'expedition comprend",
+      "subtitle": "Tout ce dont vous avez besoin pour profiter d'une experience sure, confortable et enrichissante.",
+      "items": {
+        "boat": {
+          "title": "Transport en panga",
+          "description": "Embarcation sure et confortable, parfaite pour naviguer dans le golfe de Californie."
+        },
+        "guide": {
+          "title": "Guide biologiste marin",
+          "description": "Des experts qui partageront leurs connaissances sur l'ecosysteme et la vie marine."
+        },
+        "snorkel": {
+          "title": "Equipement complet de snorkeling",
+          "description": "Masque, tuba et palmes de qualite pour explorer sous l'eau."
+        },
+        "photo": {
+          "title": "Photos et videos",
+          "description": "Captures professionnelles de votre experience pour un souvenir inoubliable."
+        },
+        "food": {
+          "title": "Ceviche frais et collation",
+          "description": "Delicieux ceviche prepare avec du poisson local, fruits frais et eau purifiee."
+        },
+        "binoculars": {
+          "title": "Jumelles et guide de la faune",
+          "description": "Outils pour ameliorer votre experience d'observation et d'apprentissage."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "subtitle": "Options flexibles pour les individuels, couples, familles ou groupes souhaitant vivre cette experience unique.",
+      "group": {
+        "name": "Safari en groupe",
+        "price": "$2,800",
+        "currency": "MXN / personne",
+        "features": [
+          "Groupes jusqu'a 8 personnes",
+          "Experience partagee",
+          "Ideal pour les voyageurs seuls ou les couples",
+          "Tous les services inclus"
+        ],
+        "cta": "Reserver maintenant"
+      },
+      "private": {
+        "name": "Safari prive",
+        "price": "$14,000",
+        "currency": "MXN / groupe",
+        "features": [
+          "Embarcation exclusive pour votre groupe",
+          "Jusqu'a 8 personnes",
+          "Itineraire personnalisable",
+          "Attention exclusive du guide"
+        ],
+        "cta": "Reserver en prive"
+      },
+      "kids": {
+        "title": "Vous voyagez avec des enfants ?",
+        "line1": "Enfants de moins de 5 ans : Gratuit",
+        "line2": "Enfants de 6 a 12 ans : 50 % de reduction"
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos aventuriers",
+      "subtitle": "Experiences reelles de ceux qui ont vecu la magie du Safari La Ventana.",
+      "reviews": [
+        {
+          "name": "Maria Rodriguez",
+          "location": "Mexico",
+          "text": "Une experience magique. Voir les baleines a bosse d'aussi pres etait indescriptible. Les guides sont tres professionnels et respectueux envers les animaux. Je reviendrai l'annee prochaine !"
+        },
+        {
+          "name": "Juan Martinez",
+          "location": "Guadalajara",
+          "text": "Safari incroyable. Nous avons vu des dauphins, des mobulas sautant hors de l'eau et meme une baleine bleue au loin. Le ceviche etait delicieux et les guides tres competents. Une experience authentique."
+        },
+        {
+          "name": "Laura Sanchez",
+          "location": "Monterrey",
+          "text": "Nous y sommes alles avec nos enfants de 8 et 10 ans et ils etaient emerveilles. Les guides sont excellents pour expliquer la vie marine aux enfants. Une aventure educative et passionnante pour toute la famille."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pret a vivre la mer pour de vrai ?",
+      "subtitle": "Reservez votre safari maintenant et preparez-vous a une experience qui changera votre facon de voir l'ocean.",
+      "button": "Reserver maintenant"
+    }
+  },
+  "zh": {
+    "hero": {
+      "title": "La Ventana 探险之旅：与海洋巨人的亲密邂逅",
+      "subtitle": "在 Baja California Sur 的 La Ventana 和 Isla Cerralvo 享受独一无二的体验。以前所未有的方式探索加利福尼亚湾的魅力。",
+      "cta": "预订你的冒险",
+      "ctaSecondary": "查看详情",
+      "imageAlt": "虎鲸在蔚蓝的海洋中游泳"
+    },
+    "about": {
+      "title": "什么是 La Ventana 探险之旅？",
+      "description": "我们从 La Ventana 宁静的海岸出发，驶向深蓝。在船上，由海洋生物学家和当地船长引导，我们寻找意想不到的惊喜：飞翔的蝠鲼、护航的海豚、如活着的传说般浮出水面的鲸鱼。没有剧本，没有表演。因为每一次与野生动物的相遇都是真实的、自发的、不可重复的。因为这不是一次观光旅游……这是一次真正的冒险。只有大自然……狂野而未经修饰。",
+      "commitment": {
+        "title": "我们的承诺",
+        "description": "我们深深尊重海洋生命。我们的探险旅程旨在观察而不打扰，学习而不干扰，惊叹而不伤害容纳我们的生态系统。"
+      },
+      "guidedExperience": {
+        "title": "专业向导体验",
+        "description": "每次探险都由在加利福尼亚湾拥有多年经验的海洋生物学家带领，他们分享对这一独特生态系统的知识和热情。"
+      },
+      "imageAlt": "热情的向导佩戴浮潜装备在 Safari La Ventana 享受海洋体验"
+    },
+    "experience": {
+      "title": "体验如何？",
+      "subtitle": "一整天的海洋探险，旨在最大化与野生动物相遇的机会，同时欣赏 Mar de Cortes 令人惊叹的风景。",
+      "cards": {
+        "meetingPoint": {
+          "title": "集合地点",
+          "description": "Playa Central，La Ventana。容易找到，有停车位。"
+        },
+        "schedule": {
+          "title": "时间安排",
+          "description": "出发：上午 8:00\n时长：6 小时海洋冒险。"
+        },
+        "activities": {
+          "title": "活动内容",
+          "description": "航行、浮潜（视条件而定）、Isla Cerralvo 探索。"
+        },
+        "refreshment": {
+          "title": "茶点",
+          "description": "在探险期间享用新鲜酸橘汁腌鱼、时令水果和饮用水。"
+        }
+      },
+      "itinerary": {
+        "title": "详细行程",
+        "steps": [
+          {
+            "title": "欢迎与简报（上午 8:00）",
+            "description": "认识你的海洋生物学家向导，了解你可能遇到的海洋生物。"
+          },
+          {
+            "title": "航行与搜寻（上午 8:30 - 11:30）",
+            "description": "我们航行寻找海洋生物，追踪行为模式和自然信号。"
+          },
+          {
+            "title": "Isla Cerralvo 探索（上午 11:30 - 下午 1:00）",
+            "description": "根据条件，我们可以浮潜或探索岛屿周围清澈的海水。"
+          },
+          {
+            "title": "茶点与休息（下午 1:00 - 1:30）",
+            "description": "休息时享用美味的新鲜酸橘汁腌鱼和水果。"
+          },
+          {
+            "title": "风景返程（下午 1:30 - 2:00）",
+            "description": "我们驶回 La Ventana，途中可能还有更多观赏机会。"
+          }
+        ]
+      }
+    },
+    "wildlife": {
+      "title": "你可能遇到的物种",
+      "subtitle": "加利福尼亚湾是地球上生物多样性最丰富的海域之一。以下是你在探险中可能观赏到的一些物种。",
+      "species": {
+        "mobulas": {
+          "name": "蝠鲼",
+          "season": "4月 - 7月",
+          "description": "被称为「魔鬼鱼」，这些蝠鲼能令人惊叹地跃出水面，形成独特的奇观。它们在交配季节通常会形成大规模聚集。"
+        },
+        "dolphins": {
+          "name": "海豚",
+          "season": "全年",
+          "description": "活泼而善于社交，海豚经常靠近船只，以跳跃和空翻呈现自然表演。"
+        },
+        "humpbackWhale": {
+          "name": "座头鲸",
+          "season": "12月 - 4月",
+          "description": "以令人印象深刻的跳跃和复杂歌声闻名。座头鲸每年迁徙到加利福尼亚湾温暖的海域。"
+        },
+        "seaLions": {
+          "name": "海狮",
+          "season": "全年",
+          "description": "好奇而有魅力，海狮经常在岩石上休息，如果你幸运的话，你可以在它们附近游泳。"
+        },
+        "spermWhales": {
+          "name": "抹香鲸",
+          "season": "6月 - 11月",
+          "description": "抹香鲸是地球上最大的齿类掠食者。令人印象深刻的潜水者，能潜到极端深度。"
+        },
+        "orcas": {
+          "name": "虎鲸",
+          "season": "全年",
+          "description": "被称为「杀手鲸」，虎鲸实际上是大型海豚。聪明而善于社交，以协调的群体方式捕猎。"
+        }
+      },
+      "realismNote": {
+        "title": "关于现实的说明",
+        "description": "我们与自由生活的野生动物合作。我们不能保证观赏到动物，但我们保证全力以赴、丰富的经验和尊重自然的方式，最大限度地提高你体验独特时刻的机会。"
+      }
+    },
+    "includes": {
+      "title": "探险包含内容",
+      "subtitle": "享受安全、舒适和丰富体验所需的一切。",
+      "items": {
+        "boat": {
+          "title": "小艇交通",
+          "description": "安全舒适的船只，非常适合在加利福尼亚湾航行。"
+        },
+        "guide": {
+          "title": "海洋生物学家向导",
+          "description": "专家将分享他们关于生态系统和海洋生物的知识。"
+        },
+        "snorkel": {
+          "title": "完整浮潜装备",
+          "description": "优质面罩、呼吸管和脚蹼，用于水下探索。"
+        },
+        "photo": {
+          "title": "照片和视频",
+          "description": "专业拍摄你的体验，带走难忘的回忆。"
+        },
+        "food": {
+          "title": "新鲜酸橘汁腌鱼和茶点",
+          "description": "用当地鱼制作的美味酸橘汁腌鱼、新鲜水果和纯净水。"
+        },
+        "binoculars": {
+          "title": "望远镜和野生动物指南",
+          "description": "增强你的观赏和学习体验的工具。"
+        }
+      }
+    },
+    "pricing": {
+      "title": "价格",
+      "subtitle": "为希望体验这一独特经历的个人、情侣、家庭或团体提供灵活选择。",
+      "group": {
+        "name": "团体探险",
+        "price": "$2,800",
+        "currency": "墨西哥比索 / 人",
+        "features": [
+          "最多 8 人团体",
+          "共享体验",
+          "适合独行旅客或情侣",
+          "包含所有服务"
+        ],
+        "cta": "立即预订"
+      },
+      "private": {
+        "name": "私人探险",
+        "price": "$14,000",
+        "currency": "墨西哥比索 / 团体",
+        "features": [
+          "专属船只",
+          "最多 8 人",
+          "可定制行程",
+          "向导专属服务"
+        ],
+        "cta": "预订私人探险"
+      },
+      "kids": {
+        "title": "带孩子旅行？",
+        "line1": "5 岁以下儿童：免费",
+        "line2": "6 至 12 岁儿童：50% 折扣"
+      }
+    },
+    "testimonials": {
+      "title": "探险者们怎么说",
+      "subtitle": "亲历 Safari La Ventana 魔力的真实体验。",
+      "reviews": [
+        {
+          "name": "Maria Rodriguez",
+          "location": "墨西哥城",
+          "text": "一次神奇的体验。如此近距离看到座头鲸，无法用语言形容。向导非常专业，对动物非常尊重。明年我还会来！"
+        },
+        {
+          "name": "Juan Martinez",
+          "location": "Guadalajara",
+          "text": "令人难以置信的探险。我们看到了海豚、跳跃的蝠鲼，甚至远处的蓝鲸。酸橘汁腌鱼很美味，向导非常博学。一次真正的体验。"
+        },
+        {
+          "name": "Laura Sanchez",
+          "location": "Monterrey",
+          "text": "我们带着 8 岁和 10 岁的孩子去的，他们惊叹不已。向导非常善于向孩子们讲解海洋生物。一次适合全家的教育性和激动人心的冒险。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好真正体验大海了吗？",
+      "subtitle": "立即预订你的探险之旅，准备好迎接一次改变你看待海洋方式的体验。",
+      "button": "立即预订"
+    }
+  }
+}

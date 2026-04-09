@@ -2,7 +2,48 @@ import Image from "next/image"
 import Link from "next/link"
 import { Clock, MapPin, Anchor, Camera, Coffee, TelescopeIcon as Binoculars, Check } from "lucide-react"
 
-export function SafariLanding() {
+interface SafariLandingProps {
+  translations: Record<string, any>
+}
+
+export function SafariLanding({ translations: t }: SafariLandingProps) {
+  const hero = t.hero || {}
+  const about = t.about || {}
+  const experience = t.experience || {}
+  const cards = experience.cards || {}
+  const itinerary = experience.itinerary || {}
+  const wildlife = t.wildlife || {}
+  const species = wildlife.species || {}
+  const includes = t.includes || {}
+  const includeItems = includes.items || {}
+  const pricing = t.pricing || {}
+  const testimonials = t.testimonials || {}
+  const cta = t.cta || {}
+
+  const speciesKeys = ["mobulas", "dolphins", "humpbackWhale", "seaLions", "spermWhales", "orcas"] as const
+  const speciesImages = [
+    "/images/especies/mobulaschafa.jpeg",
+    "/images/especies/delfinsaltando.jpeg",
+    "/images/especies/ballenasaltando2.jpeg",
+    "/images/especies/lobomarinonadando.jpeg",
+    "/images/especies/cachalote2.jpeg",
+    "/images/especies/orcalaventana.jpeg",
+  ]
+  const speciesAlts = [
+    "Grupo de mobulas nadando juntas en las aguas cristalinas del Mar de Cortes",
+    "Delfin saltando fuera del agua en el Mar de Cortes",
+    "Ballena jorobada saltando frente a las montanas de Baja California Sur",
+    "Lobo marino nadando bajo el agua en las cristalinas aguas del Mar de Cortes",
+    "Cachalote nadando en las profundidades del Mar de Cortes",
+    "Orca emergiendo en las aguas del Mar de Cortes",
+  ]
+
+  const includeKeys = ["boat", "guide", "snorkel", "photo", "food", "binoculars"] as const
+  const includeIcons = [Anchor, Check, Check, Camera, Coffee, Binoculars]
+
+  const experienceCardKeys = ["meetingPoint", "schedule", "activities", "refreshment"] as const
+  const experienceCardIcons = [MapPin, Clock, Anchor, Coffee]
+
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <main className="flex-1">
@@ -11,7 +52,7 @@ export function SafariLanding() {
           <div className="absolute inset-0">
             <Image
               src="/images/orca-safari.jpg"
-              alt="Orca nadando en el océano azul"
+              alt={hero.imageAlt || ""}
               width={1920}
               height={1080}
               className="h-full w-full object-cover"
@@ -22,18 +63,17 @@ export function SafariLanding() {
           <div className="container mx-auto relative py-20 md:py-28 lg:py-36 px-4">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                Safari La Ventana: Encuentro Íntimo con Gigantes del Océano
+                {hero.title}
               </h1>
               <p className="text-lg md:text-xl text-white/90">
-                Una experiencia única en La Ventana e Isla Cerralvo, Baja California Sur. Descubre la magia del Golfo de
-                California como nunca antes.
+                {hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                  Reserva tu aventura
+                  {hero.cta}
                 </button>
                 <button className="text-white border border-white/20 bg-transparent backdrop-blur-sm hover:bg-white/10 px-6 py-3 rounded-md font-medium transition-colors">
-                  Ver detalles
+                  {hero.ctaSecondary}
                 </button>
               </div>
             </div>
@@ -44,30 +84,24 @@ export function SafariLanding() {
         <section id="about" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">¿Qué es el Safari La Ventana?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{about.title}</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Zarpamos desde las costas tranquilas de La Ventana rumbo al azul profundo. A bordo de la lancha, guiados
-                por biólogos marinos y capitanes locales, navegamos en busca de lo inesperado: móbulas que vuelan,
-                delfines que nos escoltan, ballenas que emergen como leyendas vivas. No hay guión. No hay show. Porque
-                cada encuentro con la fauna es auténtico, espontáneo e irrepetible. Porque esto no es un tour turístico…
-                es una aventura real. Solo es la naturaleza… salvaje y sin filtros.
+                {about.description}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
               <div className="order-2 md:order-1 flex flex-col justify-center space-y-6">
                 <div className="bg-teal-50 p-6 rounded-lg border border-teal-100">
-                  <h3 className="text-xl font-semibold text-teal-800 mb-3">Nuestro Compromiso</h3>
+                  <h3 className="text-xl font-semibold text-teal-800 mb-3">{about.commitment?.title}</h3>
                   <p className="text-gray-700">
-                    Respetamos profundamente la vida marina. Nuestros safaris están diseñados para observar sin
-                    perturbar, aprender sin interferir, y maravillarse sin dañar el ecosistema que nos acoge.
+                    {about.commitment?.description}
                   </p>
                 </div>
                 <div className="bg-teal-50 p-6 rounded-lg border border-teal-100">
-                  <h3 className="text-xl font-semibold text-teal-800 mb-3">Experiencia Guiada</h3>
+                  <h3 className="text-xl font-semibold text-teal-800 mb-3">{about.guidedExperience?.title}</h3>
                   <p className="text-gray-700">
-                    Cada expedición es liderada por biólogos marinos con años de experiencia en el Golfo de California,
-                    quienes comparten su conocimiento y pasión por este ecosistema único.
+                    {about.guidedExperience?.description}
                   </p>
                 </div>
               </div>
@@ -75,7 +109,7 @@ export function SafariLanding() {
               <div className="order-1 md:order-2 rounded-xl overflow-hidden mx-auto md:mx-0 w-[80%] md:w-[60%] shadow-md">
                 <Image
                   src="/images/safari/nuestrocompromiso2.jpeg"
-                  alt="Guía entusiasta con equipo de snorkel disfrutando de una experiencia marina en Safari La Ventana"
+                  alt={about.imageAlt || ""}
                   width={400}
                   height={500}
                   className="w-full h-full object-cover"
@@ -89,117 +123,51 @@ export function SafariLanding() {
         {/* Experience Section */}
         <section id="experience" className="py-16 md:py-24 bg-teal-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">¿Cómo es la experiencia?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{experience.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Un día completo de aventura marina, diseñado para maximizar las posibilidades de encuentros con vida
-              salvaje mientras disfrutas del impresionante paisaje del Mar de Cortés.
+              {experience.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-teal-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Punto de Encuentro</h3>
-                <p className="text-gray-700">
-                  Playa Central, La Ventana. Fácil de encontrar y con estacionamiento disponible.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
-                  <Clock className="h-6 w-6 text-teal-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Horario</h3>
-                <p className="text-gray-700">
-                  Salida: 8:00 AM
-                  <br />
-                  Duración: 6 horas de aventura marina.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
-                  <Anchor className="h-6 w-6 text-teal-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Actividades</h3>
-                <p className="text-gray-700">
-                  Navegación, snorkel (si las condiciones lo permiten), exploración en Isla Cerralvo.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
-                  <Coffee className="h-6 w-6 text-teal-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Refrigerio</h3>
-                <p className="text-gray-700">
-                  Disfrutarás de ceviche fresco, frutas de temporada y agua durante la expedición.
-                </p>
-              </div>
+              {experienceCardKeys.map((key, i) => {
+                const card = cards[key] || {}
+                const Icon = experienceCardIcons[i]
+                return (
+                  <div key={key} className="bg-white p-6 rounded-lg shadow-sm">
+                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-teal-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
+                    <p className="text-gray-700">
+                      {key === "schedule"
+                        ? card.description?.split("\n").map((line: string, j: number) => (
+                            <span key={j}>
+                              {line}
+                              {j === 0 && <br />}
+                            </span>
+                          ))
+                        : card.description}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
 
             <div className="mt-16">
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Itinerario Detallado</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{itinerary.title}</h3>
                 <ol className="space-y-4">
-                  <li className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Bienvenida y Briefing (8:00 AM)</h4>
-                      <p className="text-gray-700">
-                        Conoce a tu guía biólogo marino y recibe una introducción sobre la vida marina que podrías
-                        encontrar.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Navegación y Búsqueda (8:30 AM - 11:30 AM)</h4>
-                      <p className="text-gray-700">
-                        Navegamos en busca de vida marina, siguiendo patrones de comportamiento y señales naturales.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Exploración en Isla Cerralvo (11:30 AM - 1:00 PM)</h4>
-                      <p className="text-gray-700">
-                        Dependiendo de las condiciones, podremos hacer snorkel o explorar las aguas cristalinas
-                        alrededor de la isla.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Refrigerio y Descanso (1:00 PM - 1:30 PM)</h4>
-                      <p className="text-gray-700">
-                        Disfrutamos de un delicioso ceviche fresco y frutas mientras descansamos.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
-                      5
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Regreso Escénico (1:30 PM - 2:00 PM)</h4>
-                      <p className="text-gray-700">
-                        Navegamos de regreso a La Ventana, con posibilidad de más avistamientos en el camino.
-                      </p>
-                    </div>
-                  </li>
+                  {(itinerary.steps || []).map((step: { title: string; description: string }, i: number) => (
+                    <li key={i} className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-semibold">
+                        {i + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">{step.title}</h4>
+                        <p className="text-gray-700">{step.description}</p>
+                      </div>
+                    </li>
+                  ))}
                 </ol>
               </div>
             </div>
@@ -209,153 +177,41 @@ export function SafariLanding() {
         {/* Wildlife Section */}
         <section id="wildlife" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Especies que puedes encontrar</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{wildlife.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              El Golfo de California es uno de los mares más biodiversos del planeta. Estas son algunas de las especies
-              que podrías avistar durante tu safari.
+              {wildlife.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/mobulaschafa.jpeg"
-                    alt="Grupo de móbulas nadando juntas en las aguas cristalinas del Mar de Cortés"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Abr - Jul
+              {speciesKeys.map((key, i) => {
+                const sp = species[key] || {}
+                return (
+                  <div key={key} className="bg-teal-50 rounded-lg overflow-hidden">
+                    <div className="h-64 relative">
+                      <Image
+                        src={speciesImages[i]}
+                        alt={speciesAlts[i]}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
+                        {sp.season}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{sp.name}</h3>
+                      <p className="text-gray-700">{sp.description}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Móbulas</h3>
-                  <p className="text-gray-700">
-                    Conocidas como "diablos de mar", estas mantarrayas realizan impresionantes saltos fuera del agua,
-                    creando un espectáculo único. Suelen formar grandes agregaciones durante su temporada de
-                    apareamiento.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/delfinsaltando.jpeg"
-                    alt="Delfín saltando fuera del agua en el Mar de Cortés"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Delfines</h3>
-                  <p className="text-gray-700">
-                    Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectáculo
-                    natural con sus saltos y acrobacias.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/ballenasaltando2.jpeg"
-                    alt="Ballena jorobada saltando frente a las montañas de Baja California Sur"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Dic - Abr
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Ballena Jorobada</h3>
-                  <p className="text-gray-700">
-                    Conocidas por sus impresionantes saltos y cantos complejos. Las ballenas jorobadas migran anualmente
-                    a las cálidas aguas del Golfo de California.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/lobomarinonadando.jpeg"
-                    alt="Lobo marino nadando bajo el agua en las cristalinas aguas del Mar de Cortés"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Lobos Marinos</h3>
-                  <p className="text-gray-700">
-                    Curiosos y carismáticos, los lobos marinos suelen descansar en las rocas y, si tienes suerte,
-                    podrías nadar cerca de ellos.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/cachalote2.jpeg"
-                    alt="Cachalote nadando en las profundidades del Mar de Cortés"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Jun - Nov
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Cachalotes</h3>
-                  <p className="text-gray-700">
-                    Los cachalotes son los depredadores con dientes más grandes del planeta. Impresionantes buceadores
-                    que pueden sumergirse a profundidades extremas.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-teal-50 rounded-lg overflow-hidden">
-                <div className="h-64 relative">
-                  <Image
-                    src="/images/especies/orcalaventana.jpeg"
-                    alt="Orca emergiendo en las aguas del Mar de Cortés"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-teal-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Todo el año
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Orcas</h3>
-                  <p className="text-gray-700">
-                    Conocidas como "ballenas asesinas", las orcas son en realidad delfines grandes. Inteligentes y
-                    sociales, cazan en grupos coordinados.
-                  </p>
-                </div>
-              </div>
+                )
+              })}
             </div>
 
             <div className="mt-12 bg-teal-50 p-6 rounded-lg border border-teal-100 max-w-3xl mx-auto">
-              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">Nota de Realismo</h3>
+              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">{wildlife.realismNote?.title}</h3>
               <p className="text-gray-700 text-center">
-                Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos, pero sí
-                garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir
-                momentos únicos.
+                {wildlife.realismNote?.description}
               </p>
             </div>
           </div>
@@ -364,79 +220,27 @@ export function SafariLanding() {
         {/* Includes Section */}
         <section className="py-16 md:py-24 bg-teal-800 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6 text-center">Incluye la expedición</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">{includes.title}</h2>
             <p className="text-lg opacity-90 max-w-3xl mx-auto text-center mb-16">
-              Todo lo que necesitas para disfrutar de una experiencia segura, cómoda y enriquecedora.
+              {includes.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Anchor className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Transporte en panga</h3>
-                  <p className="opacity-90">
-                    Embarcación segura y cómoda, perfecta para navegar en el Golfo de California.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Check className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Guía biólogo marino</h3>
-                  <p className="opacity-90">
-                    Expertos que compartirán su conocimiento sobre el ecosistema y la vida marina.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Check className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Equipo completo de snorkel</h3>
-                  <p className="opacity-90">Máscara, tubo y aletas de calidad para explorar bajo el agua.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Camera className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Fotografías y videos</h3>
-                  <p className="opacity-90">
-                    Capturas profesionales de tu experiencia para que te lleves un recuerdo inolvidable.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Coffee className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Ceviche fresco y refrigerio</h3>
-                  <p className="opacity-90">
-                    Delicioso ceviche preparado con pescado local, frutas frescas y agua purificada.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Binoculars className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Binoculares y guía de fauna</h3>
-                  <p className="opacity-90">Herramientas para mejorar tu experiencia de avistamiento y aprendizaje.</p>
-                </div>
-              </div>
+              {includeKeys.map((key, i) => {
+                const item = includeItems[key] || {}
+                const Icon = includeIcons[i]
+                return (
+                  <div key={key} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                      <p className="opacity-90">{item.description}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -444,75 +248,57 @@ export function SafariLanding() {
         {/* Pricing Section */}
         <section id="pricing" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Precios</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{pricing.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Opciones flexibles para individuos, parejas, familias o grupos que desean vivir esta experiencia única.
+              {pricing.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Group Safari */}
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Safari Grupal</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{pricing.group?.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  $2,800 <span className="text-lg text-gray-600 font-normal">MXN / persona</span>
+                  {pricing.group?.price} <span className="text-lg text-gray-600 font-normal">{pricing.group?.currency}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Grupos de hasta 8 personas</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Experiencia compartida</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Ideal para viajeros individuales o parejas</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Todos los servicios incluidos</span>
-                  </li>
+                  {(pricing.group?.features || []).map((feature: string, i: number) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-md font-medium transition-colors">
-                  Reservar Ahora
+                  {pricing.group?.cta}
                 </button>
               </div>
 
+              {/* Private Safari */}
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Safari Privado</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{pricing.private?.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  $14,000 <span className="text-lg text-gray-600 font-normal">MXN / grupo</span>
+                  {pricing.private?.price} <span className="text-lg text-gray-600 font-normal">{pricing.private?.currency}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Embarcación exclusiva para tu grupo</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Hasta 8 personas</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Itinerario personalizable</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
-                    <span className="text-gray-700">Atención exclusiva del guía</span>
-                  </li>
+                  {(pricing.private?.features || []).map((feature: string, i: number) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-teal-600 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-md font-medium transition-colors">
-                  Reservar Privado
+                  {pricing.private?.cta}
                 </button>
               </div>
             </div>
 
             <div className="mt-12 bg-teal-50 p-6 rounded-lg border border-teal-100 max-w-3xl mx-auto">
-              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">¿Viajas con niños?</h3>
+              <h3 className="text-xl font-semibold text-teal-800 mb-3 text-center">{pricing.kids?.title}</h3>
               <p className="text-gray-700 text-center">
-                Niños menores de 5 años: Gratis
+                {pricing.kids?.line1}
                 <br />
-                Niños de 6 a 12 años: 50% de descuento
+                {pricing.kids?.line2}
               </p>
             </div>
           </div>
@@ -521,98 +307,41 @@ export function SafariLanding() {
         {/* Testimonials Section */}
         <section id="testimonials" className="py-16 md:py-24 bg-teal-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Lo que dicen nuestros aventureros</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{testimonials.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              Experiencias reales de quienes han vivido la magia de Safari La Ventana.
+              {testimonials.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                    <Image
-                      src="/placeholder.svg?height=100&width=100&text=M"
-                      alt="María"
-                      width={100}
-                      height={100}
-                      className="h-full w-full object-cover"
-                    />
+              {(testimonials.reviews || []).map((review: { name: string; location: string; text: string }, i: number) => (
+                <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="flex items-center mb-4">
+                    <div className="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                      <Image
+                        src={`/placeholder.svg?height=100&width=100&text=${review.name?.charAt(0) || ""}`}
+                        alt={review.name || ""}
+                        width={100}
+                        height={100}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{review.name}</h4>
+                      <p className="text-sm text-gray-600">{review.location}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">María Rodríguez</h4>
-                    <p className="text-sm text-gray-600">Ciudad de México</p>
+                  <div className="mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <span key={star} className="text-yellow-400">
+                        ★
+                      </span>
+                    ))}
                   </div>
+                  <p className="text-gray-700">
+                    &ldquo;{review.text}&rdquo;
+                  </p>
                 </div>
-                <div className="mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-400">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-gray-700">
-                  "Una experiencia mágica. Ver a las ballenas jorobadas tan cerca fue indescriptible. Los guías son muy
-                  profesionales y respetuosos con los animales. ¡Volveré el próximo año!"
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                    <Image
-                      src="/placeholder.svg?height=100&width=100&text=J"
-                      alt="Juan"
-                      width={100}
-                      height={100}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Juan Martínez</h4>
-                    <p className="text-sm text-gray-600">Guadalajara</p>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-400">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-gray-700">
-                  "Increíble safari. Vimos delfines, mobulas saltando y hasta una ballena azul a lo lejos. El ceviche
-                  estaba delicioso y los guías muy conocedores. Una experiencia auténtica."
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                    <Image
-                      src="/placeholder.svg?height=100&width=100&text=L"
-                      alt="Laura"
-                      width={100}
-                      height={100}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Laura Sánchez</h4>
-                    <p className="text-sm text-gray-600">Monterrey</p>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-400">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-gray-700">
-                  "Fuimos con nuestros hijos de 8 y 10 años y quedaron maravillados. Los guías son excelentes explicando
-                  a los niños sobre la vida marina. Una aventura educativa y emocionante para toda la familia."
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -620,12 +349,12 @@ export function SafariLanding() {
         {/* CTA Final Section */}
         <section className="py-16 md:py-24 bg-teal-800 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para vivir el mar de verdad?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{cta.title}</h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto mb-8">
-              Reserva tu safari ahora y prepárate para una experiencia que cambiará tu forma de ver el océano.
+              {cta.subtitle}
             </p>
             <button className="bg-white text-teal-800 hover:bg-teal-100 px-8 py-4 rounded-md text-lg font-medium transition-colors">
-              Reserva Ahora
+              {cta.button}
             </button>
           </div>
         </section>

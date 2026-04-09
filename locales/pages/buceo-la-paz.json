@@ -1,0 +1,182 @@
+{
+  "es": {
+    "meta": {
+      "title": "Buceo en La Paz",
+      "description": "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo."
+    },
+    "hero": {
+      "badge": "Colonia de Lobos Marinos",
+      "title": "Buceo en La Paz",
+      "description": "Bucea con los juguetones lobos marinos de Los Islotes y explora los tesoros submarinos de La Paz",
+      "cta": "Reservar Ahora",
+      "image_alt": "Buceo en La Paz"
+    },
+    "details": {
+      "duration_title": "Duracion",
+      "duration_text": "Dia completo (7-8 horas)",
+      "group_title": "Grupo",
+      "group_text": "Maximo 8 buceadores",
+      "season_title": "Temporada",
+      "season_text": "Todo el ano",
+      "includes_title": "Incluye",
+      "includes_text": "Fotos y equipo"
+    },
+    "about": {
+      "title": "Sobre el Tour",
+      "description": "La Paz ofrece algunas de las mejores experiencias de buceo en el Mar de Cortes. El sitio mas popular es Los Islotes, hogar de una colonia de mas de 400 lobos marinos que son extremadamente curiosos y juguetones con los buceadores. Estos \"perritos del mar\" te rodearan, haran piruetas y crearan recuerdos inolvidables. Tambien visitaremos otros sitios con impresionantes formaciones rocosas, cuevas submarinas y vida marina diversa."
+    },
+    "includes": {
+      "title": "Que Incluye",
+      "items": [
+        "Transporte en panga",
+        "Equipo de buceo completo",
+        "Dive master certificado",
+        "2-3 inmersiones",
+        "Lunch y bebidas",
+        "Fotos y videos submarinos"
+      ],
+      "note": "Nota: Tambien disponible para snorkelers. No se requiere certificacion de buceo para snorkeling con lobos marinos."
+    },
+    "cta": {
+      "title": "Nada con lobos marinos",
+      "description": "Una experiencia que nunca olvidaras. Reserva hoy",
+      "cta_primary": "Reservar Ahora",
+      "cta_secondary": "Ver Mas Tours"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Diving in La Paz",
+      "description": "Dive with sea lions at Los Islotes, La Paz. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment."
+    },
+    "hero": {
+      "badge": "Sea Lion Colony",
+      "title": "Diving in La Paz",
+      "description": "Dive with the playful sea lions of Los Islotes and explore the underwater treasures of La Paz",
+      "cta": "Book Now",
+      "image_alt": "Diving in La Paz"
+    },
+    "details": {
+      "duration_title": "Duration",
+      "duration_text": "Full day (7-8 hours)",
+      "group_title": "Group",
+      "group_text": "Maximum 8 divers",
+      "season_title": "Season",
+      "season_text": "Year-round",
+      "includes_title": "Includes",
+      "includes_text": "Photos and equipment"
+    },
+    "about": {
+      "title": "About the Tour",
+      "description": "La Paz offers some of the best diving experiences in the Sea of Cortez. The most popular site is Los Islotes, home to a colony of over 400 sea lions that are extremely curious and playful with divers. These \"sea puppies\" will surround you, do pirouettes and create unforgettable memories. We will also visit other sites with impressive rock formations, underwater caves and diverse marine life."
+    },
+    "includes": {
+      "title": "What's Included",
+      "items": [
+        "Panga boat transportation",
+        "Complete diving equipment",
+        "Certified dive master",
+        "2-3 dives",
+        "Lunch and drinks",
+        "Underwater photos and videos"
+      ],
+      "note": "Note: Also available for snorkelers. No diving certification required for snorkeling with sea lions."
+    },
+    "cta": {
+      "title": "Swim with sea lions",
+      "description": "An experience you will never forget. Book today",
+      "cta_primary": "Book Now",
+      "cta_secondary": "See More Tours"
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Plongee a La Paz",
+      "description": "Plongez avec les lions de mer a Los Islotes, La Paz. Explorez des grottes sous-marines et des formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet."
+    },
+    "hero": {
+      "badge": "Colonie de Lions de Mer",
+      "title": "Plongee a La Paz",
+      "description": "Plongez avec les joueurs lions de mer de Los Islotes et explorez les tresors sous-marins de La Paz",
+      "cta": "Reserver Maintenant",
+      "image_alt": "Plongee a La Paz"
+    },
+    "details": {
+      "duration_title": "Duree",
+      "duration_text": "Journee complete (7-8 heures)",
+      "group_title": "Groupe",
+      "group_text": "Maximum 8 plongeurs",
+      "season_title": "Saison",
+      "season_text": "Toute l'annee",
+      "includes_title": "Inclus",
+      "includes_text": "Photos et equipement"
+    },
+    "about": {
+      "title": "A propos du Tour",
+      "description": "La Paz offre certaines des meilleures experiences de plongee de la mer de Cortez. Le site le plus populaire est Los Islotes, abritant une colonie de plus de 400 lions de mer extremement curieux et joueurs avec les plongeurs. Ces \"chiots de mer\" vous entoureront, feront des pirouettes et creeront des souvenirs inoubliables. Nous visiterons egalement d'autres sites avec d'impressionnantes formations rocheuses, des grottes sous-marines et une vie marine diversifiee."
+    },
+    "includes": {
+      "title": "Ce qui est Inclus",
+      "items": [
+        "Transport en panga",
+        "Equipement de plongee complet",
+        "Dive master certifie",
+        "2-3 plongees",
+        "Dejeuner et boissons",
+        "Photos et videos sous-marines"
+      ],
+      "note": "Note : Egalement disponible pour les snorkelers. Aucune certification de plongee requise pour le snorkeling avec les lions de mer."
+    },
+    "cta": {
+      "title": "Nagez avec les lions de mer",
+      "description": "Une experience que vous n'oublierez jamais. Reservez aujourd'hui",
+      "cta_primary": "Reserver Maintenant",
+      "cta_secondary": "Voir Plus de Tours"
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "La Paz 潜水",
+      "description": "在 La Paz 的 Los Islotes 与海狮一起潜水。在科尔特斯海探索水下洞穴和岩石地貌，配有认证导游和全套装备。"
+    },
+    "hero": {
+      "badge": "海狮栖息地",
+      "title": "La Paz 潜水",
+      "description": "与 Los Islotes 顽皮的海狮一起潜水，探索 La Paz 的水下宝藏",
+      "cta": "立即预订",
+      "image_alt": "La Paz 潜水"
+    },
+    "details": {
+      "duration_title": "时长",
+      "duration_text": "全天（7-8 小时）",
+      "group_title": "团体",
+      "group_text": "最多 8 名潜水员",
+      "season_title": "季节",
+      "season_text": "全年",
+      "includes_title": "包含",
+      "includes_text": "照片和装备"
+    },
+    "about": {
+      "title": "关于本次旅程",
+      "description": "La Paz 提供科尔特斯海最佳的潜水体验之一。最受欢迎的地点是 Los Islotes，这里栖息着一个由 400 多只海狮组成的群落，它们对潜水员极其好奇和顽皮。这些\"海中小狗\"会围绕着你，翻跟斗，创造难忘的回忆。我们还将参观其他拥有令人印象深刻的岩石地貌、水下洞穴和丰富海洋生物的地点。"
+    },
+    "includes": {
+      "title": "包含项目",
+      "items": [
+        "快艇交通",
+        "全套潜水装备",
+        "认证潜水长",
+        "2-3 次潜水",
+        "午餐和饮料",
+        "水下照片和视频"
+      ],
+      "note": "注意：也适用于浮潜者。与海狮浮潜不需要潜水认证。"
+    },
+    "cta": {
+      "title": "与海狮共游",
+      "description": "一次您永远不会忘记的体验。今天就预订",
+      "cta_primary": "立即预订",
+      "cta_secondary": "查看更多旅程"
+    }
+  }
+}

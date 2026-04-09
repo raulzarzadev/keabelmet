@@ -1,0 +1,558 @@
+{
+  "es": {
+    "meta": {
+      "title": "Tour Isla Espiritu Santo",
+      "description": "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS."
+    },
+    "hero": {
+      "badge": "Todo el ano",
+      "title": "Isla Espiritu Santo: El Acuario del Mundo",
+      "description": "Nada con lobos marinos juguetones, explora playas de arena blanca y aguas cristalinas, y descubre por que este paraiso es Patrimonio Mundial de la UNESCO.",
+      "cta_primary": "Reserva tu aventura",
+      "cta_secondary": "Ver detalles",
+      "image_alt": "Isla Espiritu Santo - Paraiso natural"
+    },
+    "about": {
+      "title": "Una joya del Mar de Cortes",
+      "description_1": "La Isla Espiritu Santo es hogar de la colonia mas grande de lobos marinos de California en el Golfo. Aqui viviras un encuentro responsable, seguro y guiado con estos animales en aguas cristalinas.",
+      "description_2": "Nuestros guias certificados te acompanaran con explicaciones sobre historia natural, conservacion marina y tecnicas seguras de interaccion con la fauna.",
+      "image_alt": "Picnic en playa de Isla Espiritu Santo",
+      "departure_title": "Punto de Salida",
+      "departure_text": "Marina de La Paz - Salida a las 8:00 AM",
+      "duration_title": "Duracion Total",
+      "duration_text": "6 horas aproximadamente: navegacion, snorkel, picnic y exploracion",
+      "group_title": "Grupo Reducido",
+      "group_text": "Maximo 10 personas para experiencia personalizada"
+    },
+    "itinerary": {
+      "title": "Itinerario del dia",
+      "subtitle": "Una aventura completa por el paraiso del Mar de Cortes.",
+      "step1_title": "Salida desde La Paz",
+      "step1_text": "Nos encontramos en la Marina de La Paz a las 8:00 AM. Zarpamos con el sol de la manana y navegamos hacia el norte por el Mar de Cortes, disfrutando de vistas espectaculares.",
+      "step2_title": "Nado con Lobos Marinos",
+      "step2_text": "Llegamos a Los Islotes, hogar de mas de 400 lobos marinos. Te proporcionamos equipo de snorkel y te acompanamos al agua. Los lobos son curiosos y juguetones, una experiencia unica e inolvidable!",
+      "step2_note": "Nota: Del 1 de junio al 31 de agosto (temporada de cria) no se permite nadar; solo observacion desde la embarcacion.",
+      "step3_title": "Playa Ensenada Grande",
+      "step3_text": "Navegamos hacia una de las playas mas hermosas de Mexico. Arena blanca, agua turquesa cristalina, y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte en este paraiso.",
+      "step4_title": "Picnic Gourmet",
+      "step4_text": "Disfrutamos de un delicioso almuerzo tipo picnic con ceviche fresco, tostadas, fruta de temporada y bebidas. Todo servido con vistas al paraiso.",
+      "step5_title": "Regreso a La Paz",
+      "step5_text": "Navegamos de regreso con el corazon lleno y la camara repleta de recuerdos. Llegada aproximada a las 2:00 PM - 3:00 PM. Te compartimos todas las fotos y videos del dia."
+    },
+    "includes": {
+      "title": "Que incluye tu experiencia?",
+      "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
+      "boat_title": "Transporte en Lancha",
+      "boat_text": "Desde Marina de La Paz ida y vuelta",
+      "guide_title": "Guia Certificado",
+      "guide_text": "Biologo marino bilingue",
+      "snorkel_title": "Equipo de Snorkel",
+      "snorkel_text": "Visor, aletas y chaleco salvavidas",
+      "picnic_title": "Picnic Gourmet",
+      "picnic_text": "Ceviche fresco, tostadas, fruta y bebidas",
+      "photos_title": "Fotos y Videos",
+      "photos_text": "Profesionales de tu experiencia",
+      "park_title": "Permiso de Parque",
+      "park_text": "Parque Nacional incluido"
+    },
+    "pricing": {
+      "title": "Opciones de Tour",
+      "subtitle": "Elige la experiencia que mejor se adapte a tu estilo de viaje.",
+      "standard": {
+        "name": "Tour Estandar",
+        "type": "Compartido en panga",
+        "price": "$2,200",
+        "currency": "MXN",
+        "per": "por persona",
+        "features": [
+          "Transporte en panga compartida",
+          "Guia biologo marino",
+          "Equipo completo de snorkel",
+          "Picnic gourmet incluido",
+          "Fotos y videos del tour",
+          "Maximo 10 personas"
+        ],
+        "cta": "Reservar"
+      },
+      "sailboat": {
+        "badge": "PRIVADO",
+        "name": "Tour en Velero",
+        "type": "Velero privado 40 pies",
+        "price": "Desde $16,000",
+        "currency": "MXN",
+        "per": "hasta 8 personas",
+        "features": [
+          "Todo lo del tour estandar +",
+          "Velero privado de lujo",
+          "Capitan y tripulacion dedicada",
+          "Itinerario flexible",
+          "Experiencia de navegacion a vela",
+          "Maxima privacidad y confort"
+        ],
+        "cta": "Consultar Disponibilidad"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Tour en Yate",
+        "type": "Flota de yates disponibles",
+        "price": "Consultar",
+        "per": "precio segun embarcacion",
+        "features": [
+          "Todo lo anterior +",
+          "Yates de lujo de 40-70 pies",
+          "Servicio completo de catering",
+          "Tripulacion profesional completa",
+          "Amenidades de primera clase",
+          "Experiencia VIP personalizada"
+        ],
+        "cta": "Preguntar por la Flota"
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros viajeros",
+      "items": [
+        {
+          "text": "Nadar con los lobos marinos fue la experiencia mas magica de mi vida. Son tan juguetones y curiosos. El equipo de Keabelmet es super profesional y respetuoso con los animales. 100% recomendado!",
+          "author": "Maria Gonzalez",
+          "location": "Ciudad de Mexico"
+        },
+        {
+          "text": "El picnic en la playa fue increible, el ceviche estaba delicioso. Las playas son paradisiacas y las fotos que nos tomaron quedaron espectaculares. Una aventura inolvidable.",
+          "author": "James Patterson",
+          "location": "Los Angeles, CA"
+        },
+        {
+          "text": "El biologo marino nos explico todo sobre la isla y la vida marina. Me senti seguro en todo momento. Las aguas son cristalinas y la fauna es impresionante. Volvere sin duda!",
+          "author": "Alejandro Rodriguez",
+          "location": "Guadalajara"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para vivir el acuario del mundo?",
+      "description": "La Isla Espiritu Santo te espera con sus aguas cristalinas, playas virgenes y vida marina increible.",
+      "cta_primary": "Reserva tu aventura ahora",
+      "cta_secondary": "Ver mas expediciones"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Todos los derechos reservados."
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Espiritu Santo Island Tour",
+      "description": "Swim with sea lions at Espiritu Santo Island, a UNESCO World Heritage Site. Snorkeling, pristine beaches and gourmet picnic in the Sea of Cortez from La Paz, BCS."
+    },
+    "hero": {
+      "badge": "Year-round",
+      "title": "Espiritu Santo Island: The Aquarium of the World",
+      "description": "Swim with playful sea lions, explore white sand beaches and crystal-clear waters, and discover why this paradise is a UNESCO World Heritage Site.",
+      "cta_primary": "Book your adventure",
+      "cta_secondary": "See details",
+      "image_alt": "Espiritu Santo Island - Natural paradise"
+    },
+    "about": {
+      "title": "A jewel of the Sea of Cortez",
+      "description_1": "Espiritu Santo Island is home to the largest colony of California sea lions in the Gulf. Here you will enjoy a responsible, safe and guided encounter with these animals in crystal-clear waters.",
+      "description_2": "Our certified guides will accompany you with explanations about natural history, marine conservation and safe techniques for interacting with wildlife.",
+      "image_alt": "Picnic on Espiritu Santo Island beach",
+      "departure_title": "Departure Point",
+      "departure_text": "La Paz Marina - Departure at 8:00 AM",
+      "duration_title": "Total Duration",
+      "duration_text": "Approximately 6 hours: sailing, snorkeling, picnic and exploration",
+      "group_title": "Small Group",
+      "group_text": "Maximum 10 people for a personalized experience"
+    },
+    "itinerary": {
+      "title": "Day itinerary",
+      "subtitle": "A complete adventure through the Sea of Cortez paradise.",
+      "step1_title": "Departure from La Paz",
+      "step1_text": "We meet at La Paz Marina at 8:00 AM. We set sail with the morning sun and navigate north through the Sea of Cortez, enjoying spectacular views.",
+      "step2_title": "Swimming with Sea Lions",
+      "step2_text": "We arrive at Los Islotes, home to over 400 sea lions. We provide you with snorkel gear and accompany you into the water. The sea lions are curious and playful — a unique and unforgettable experience!",
+      "step2_note": "Note: From June 1 to August 31 (breeding season) swimming is not permitted; observation from the boat only.",
+      "step3_title": "Ensenada Grande Beach",
+      "step3_text": "We sail to one of Mexico's most beautiful beaches. White sand, crystal-clear turquoise water, and impressive rock formations. Time to swim, snorkel or simply relax in this paradise.",
+      "step4_title": "Gourmet Picnic",
+      "step4_text": "We enjoy a delicious picnic-style lunch with fresh ceviche, tostadas, seasonal fruit and drinks. All served with views of paradise.",
+      "step5_title": "Return to La Paz",
+      "step5_text": "We sail back with full hearts and cameras packed with memories. Approximate arrival at 2:00 PM - 3:00 PM. We share all photos and videos of the day with you."
+    },
+    "includes": {
+      "title": "What's included in your experience?",
+      "subtitle": "Everything you need for a safe, comfortable and memorable adventure.",
+      "boat_title": "Boat Transportation",
+      "boat_text": "Round trip from La Paz Marina",
+      "guide_title": "Certified Guide",
+      "guide_text": "Bilingual marine biologist",
+      "snorkel_title": "Snorkel Gear",
+      "snorkel_text": "Mask, fins and life vest",
+      "picnic_title": "Gourmet Picnic",
+      "picnic_text": "Fresh ceviche, tostadas, fruit and drinks",
+      "photos_title": "Photos and Videos",
+      "photos_text": "Professional documentation of your experience",
+      "park_title": "Park Permit",
+      "park_text": "National Park fee included"
+    },
+    "pricing": {
+      "title": "Tour Options",
+      "subtitle": "Choose the experience that best suits your travel style.",
+      "standard": {
+        "name": "Standard Tour",
+        "type": "Shared panga boat",
+        "price": "$2,200",
+        "currency": "MXN",
+        "per": "per person",
+        "features": [
+          "Shared panga boat transportation",
+          "Marine biologist guide",
+          "Complete snorkel gear",
+          "Gourmet picnic included",
+          "Tour photos and videos",
+          "Maximum 10 people"
+        ],
+        "cta": "Book Now"
+      },
+      "sailboat": {
+        "badge": "PRIVATE",
+        "name": "Sailboat Tour",
+        "type": "Private 40-foot sailboat",
+        "price": "From $16,000",
+        "currency": "MXN",
+        "per": "up to 8 people",
+        "features": [
+          "Everything in the standard tour +",
+          "Luxury private sailboat",
+          "Dedicated captain and crew",
+          "Flexible itinerary",
+          "Sailing experience",
+          "Maximum privacy and comfort"
+        ],
+        "cta": "Check Availability"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Yacht Tour",
+        "type": "Yacht fleet available",
+        "price": "Inquire",
+        "per": "price depends on vessel",
+        "features": [
+          "Everything above +",
+          "Luxury yachts from 40-70 feet",
+          "Full catering service",
+          "Complete professional crew",
+          "First-class amenities",
+          "Personalized VIP experience"
+        ],
+        "cta": "Ask About the Fleet"
+      }
+    },
+    "testimonials": {
+      "title": "What our travelers say",
+      "items": [
+        {
+          "text": "Swimming with the sea lions was the most magical experience of my life. They are so playful and curious. The Keabelmet team is super professional and respectful with the animals. 100% recommended!",
+          "author": "Maria Gonzalez",
+          "location": "Mexico City"
+        },
+        {
+          "text": "The beach picnic was incredible, the ceviche was delicious. The beaches are paradisiacal and the photos they took of us turned out spectacular. An unforgettable adventure.",
+          "author": "James Patterson",
+          "location": "Los Angeles, CA"
+        },
+        {
+          "text": "The marine biologist explained everything about the island and marine life. I felt safe at all times. The waters are crystal clear and the wildlife is impressive. I will definitely return!",
+          "author": "Alejandro Rodriguez",
+          "location": "Guadalajara"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to experience the aquarium of the world?",
+      "description": "Espiritu Santo Island awaits you with its crystal-clear waters, pristine beaches and incredible marine life.",
+      "cta_primary": "Book your adventure now",
+      "cta_secondary": "See more expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. All rights reserved."
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Tour Ile Espiritu Santo",
+      "description": "Nagez avec les lions de mer sur l'ile Espiritu Santo, patrimoine mondial de l'UNESCO. Snorkeling, plages vierges et pique-nique gastronomique dans la mer de Cortez depuis La Paz, BCS."
+    },
+    "hero": {
+      "badge": "Toute l'annee",
+      "title": "Ile Espiritu Santo : L'Aquarium du Monde",
+      "description": "Nagez avec des lions de mer joueurs, explorez des plages de sable blanc et des eaux cristallines, et decouvrez pourquoi ce paradis est un site du patrimoine mondial de l'UNESCO.",
+      "cta_primary": "Reservez votre aventure",
+      "cta_secondary": "Voir les details",
+      "image_alt": "Ile Espiritu Santo - Paradis naturel"
+    },
+    "about": {
+      "title": "Un joyau de la mer de Cortez",
+      "description_1": "L'ile Espiritu Santo abrite la plus grande colonie de lions de mer de Californie dans le Golfe. Ici, vous vivrez une rencontre responsable, sure et guidee avec ces animaux dans des eaux cristallines.",
+      "description_2": "Nos guides certifies vous accompagneront avec des explications sur l'histoire naturelle, la conservation marine et les techniques sures d'interaction avec la faune.",
+      "image_alt": "Pique-nique sur la plage de l'ile Espiritu Santo",
+      "departure_title": "Point de Depart",
+      "departure_text": "Marina de La Paz - Depart a 8h00",
+      "duration_title": "Duree Totale",
+      "duration_text": "Environ 6 heures : navigation, snorkeling, pique-nique et exploration",
+      "group_title": "Petit Groupe",
+      "group_text": "Maximum 10 personnes pour une experience personnalisee"
+    },
+    "itinerary": {
+      "title": "Itineraire de la journee",
+      "subtitle": "Une aventure complete a travers le paradis de la mer de Cortez.",
+      "step1_title": "Depart de La Paz",
+      "step1_text": "Nous nous retrouvons a la Marina de La Paz a 8h00. Nous partons avec le soleil du matin et naviguons vers le nord a travers la mer de Cortez, profitant de vues spectaculaires.",
+      "step2_title": "Nage avec les Lions de Mer",
+      "step2_text": "Nous arrivons a Los Islotes, foyer de plus de 400 lions de mer. Nous vous fournissons l'equipement de snorkeling et vous accompagnons dans l'eau. Les lions de mer sont curieux et joueurs — une experience unique et inoubliable !",
+      "step2_note": "Note : Du 1er juin au 31 aout (saison de reproduction), la nage n'est pas autorisee ; observation depuis le bateau uniquement.",
+      "step3_title": "Plage Ensenada Grande",
+      "step3_text": "Nous naviguons vers l'une des plus belles plages du Mexique. Sable blanc, eau turquoise cristalline et formations rocheuses impressionnantes. Temps pour nager, faire du snorkeling ou simplement se detendre dans ce paradis.",
+      "step4_title": "Pique-nique Gastronomique",
+      "step4_text": "Nous degustons un delicieux dejeuner pique-nique avec du ceviche frais, des tostadas, des fruits de saison et des boissons. Le tout servi avec vue sur le paradis.",
+      "step5_title": "Retour a La Paz",
+      "step5_text": "Nous naviguons de retour le coeur plein et l'appareil photo rempli de souvenirs. Arrivee approximative entre 14h00 et 15h00. Nous partageons toutes les photos et videos de la journee avec vous."
+    },
+    "includes": {
+      "title": "Que comprend votre experience ?",
+      "subtitle": "Tout le necessaire pour vivre une aventure sure, confortable et memorable.",
+      "boat_title": "Transport en Bateau",
+      "boat_text": "Aller-retour depuis la Marina de La Paz",
+      "guide_title": "Guide Certifie",
+      "guide_text": "Biologiste marin bilingue",
+      "snorkel_title": "Equipement de Snorkeling",
+      "snorkel_text": "Masque, palmes et gilet de sauvetage",
+      "picnic_title": "Pique-nique Gastronomique",
+      "picnic_text": "Ceviche frais, tostadas, fruits et boissons",
+      "photos_title": "Photos et Videos",
+      "photos_text": "Documentation professionnelle de votre experience",
+      "park_title": "Permis du Parc",
+      "park_text": "Parc National inclus"
+    },
+    "pricing": {
+      "title": "Options de Tour",
+      "subtitle": "Choisissez l'experience qui convient le mieux a votre style de voyage.",
+      "standard": {
+        "name": "Tour Standard",
+        "type": "Panga partagee",
+        "price": "$2,200",
+        "currency": "MXN",
+        "per": "par personne",
+        "features": [
+          "Transport en panga partagee",
+          "Guide biologiste marin",
+          "Equipement complet de snorkeling",
+          "Pique-nique gastronomique inclus",
+          "Photos et videos du tour",
+          "Maximum 10 personnes"
+        ],
+        "cta": "Reserver"
+      },
+      "sailboat": {
+        "badge": "PRIVE",
+        "name": "Tour en Voilier",
+        "type": "Voilier prive de 40 pieds",
+        "price": "A partir de $16,000",
+        "currency": "MXN",
+        "per": "jusqu'a 8 personnes",
+        "features": [
+          "Tout le tour standard +",
+          "Voilier prive de luxe",
+          "Capitaine et equipage dedies",
+          "Itineraire flexible",
+          "Experience de navigation a voile",
+          "Intimite et confort maximaux"
+        ],
+        "cta": "Verifier la Disponibilite"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Tour en Yacht",
+        "type": "Flotte de yachts disponible",
+        "price": "Sur demande",
+        "per": "prix selon l'embarcation",
+        "features": [
+          "Tout ce qui precede +",
+          "Yachts de luxe de 40 a 70 pieds",
+          "Service traiteur complet",
+          "Equipage professionnel complet",
+          "Commodites de premiere classe",
+          "Experience VIP personnalisee"
+        ],
+        "cta": "Renseignez-vous sur la Flotte"
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos voyageurs",
+      "items": [
+        {
+          "text": "Nager avec les lions de mer a ete l'experience la plus magique de ma vie. Ils sont si joueurs et curieux. L'equipe de Keabelmet est super professionnelle et respectueuse envers les animaux. 100% recommande !",
+          "author": "Maria Gonzalez",
+          "location": "Mexico"
+        },
+        {
+          "text": "Le pique-nique sur la plage etait incroyable, le ceviche etait delicieux. Les plages sont paradisiaques et les photos qu'ils ont prises de nous sont spectaculaires. Une aventure inoubliable.",
+          "author": "James Patterson",
+          "location": "Los Angeles, CA"
+        },
+        {
+          "text": "Le biologiste marin nous a tout explique sur l'ile et la vie marine. Je me suis senti en securite a tout moment. Les eaux sont cristallines et la faune est impressionnante. J'y retournerai sans aucun doute !",
+          "author": "Alejandro Rodriguez",
+          "location": "Guadalajara"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pret a vivre l'aquarium du monde ?",
+      "description": "L'ile Espiritu Santo vous attend avec ses eaux cristallines, ses plages vierges et sa vie marine incroyable.",
+      "cta_primary": "Reservez votre aventure maintenant",
+      "cta_secondary": "Voir plus d'expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Tous droits reserves."
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "Espiritu Santo 岛之旅",
+      "description": "在联合国教科文组织世界遗产 Espiritu Santo 岛与海狮共游。浮潜、原始海滩和美食野餐，从 La Paz 出发探索科尔特斯海。"
+    },
+    "hero": {
+      "badge": "全年开放",
+      "title": "Espiritu Santo 岛：世界水族馆",
+      "description": "与顽皮的海狮共游，探索白色沙滩和清澈水域，发现这个天堂被列为联合国教科文组织世界遗产的原因。",
+      "cta_primary": "预订您的冒险",
+      "cta_secondary": "查看详情",
+      "image_alt": "Espiritu Santo 岛 - 自然天堂"
+    },
+    "about": {
+      "title": "科尔特斯海的瑰宝",
+      "description_1": "Espiritu Santo 岛是海湾中最大的加利福尼亚海狮栖息地。在这里，您将在清澈的水域中与这些动物进行负责任、安全且有导游陪伴的亲密接触。",
+      "description_2": "我们的认证导游将为您讲解自然历史、海洋保护知识以及与野生动物互动的安全技巧。",
+      "image_alt": "Espiritu Santo 岛海滩野餐",
+      "departure_title": "出发地点",
+      "departure_text": "La Paz 码头 - 上午 8:00 出发",
+      "duration_title": "总时长",
+      "duration_text": "约 6 小时：航行、浮潜、野餐和探索",
+      "group_title": "小团体",
+      "group_text": "最多 10 人，提供个性化体验"
+    },
+    "itinerary": {
+      "title": "当日行程",
+      "subtitle": "科尔特斯海天堂的完整冒险之旅。",
+      "step1_title": "从 La Paz 出发",
+      "step1_text": "我们上午 8:00 在 La Paz 码头集合。迎着晨曦启航，向北穿越科尔特斯海，欣赏壮观的景色。",
+      "step2_title": "与海狮共游",
+      "step2_text": "我们抵达 Los Islotes，这里栖息着 400 多只海狮。我们为您提供浮潜装备并陪伴您下水。海狮好奇而顽皮——这是一次独特而难忘的体验！",
+      "step2_note": "注意：6 月 1 日至 8 月 31 日（繁殖季节）不允许下水游泳；仅可从船上观察。",
+      "step3_title": "Ensenada Grande 海滩",
+      "step3_text": "我们驶向墨西哥最美丽的海滩之一。白色沙滩、清澈的碧绿海水和令人印象深刻的岩石地貌。您可以游泳、浮潜或在这个天堂里放松身心。",
+      "step4_title": "美食野餐",
+      "step4_text": "我们享用美味的野餐午餐，包括新鲜酸橘汁腌鱼、烤玉米饼、时令水果和饮料。所有美食都伴随着天堂般的美景。",
+      "step5_title": "返回 La Paz",
+      "step5_text": "我们满心欢喜地启航返回，相机里装满了回忆。大约下午 2:00 - 3:00 抵达。我们会与您分享当天所有的照片和视频。"
+    },
+    "includes": {
+      "title": "您的体验包含什么？",
+      "subtitle": "为您提供安全、舒适和难忘冒险所需的一切。",
+      "boat_title": "快艇交通",
+      "boat_text": "从 La Paz 码头往返",
+      "guide_title": "认证导游",
+      "guide_text": "双语海洋生物学家",
+      "snorkel_title": "浮潜装备",
+      "snorkel_text": "面镜、脚蹼和救生衣",
+      "picnic_title": "美食野餐",
+      "picnic_text": "新鲜酸橘汁腌鱼、烤玉米饼、水果和饮料",
+      "photos_title": "照片和视频",
+      "photos_text": "专业记录您的体验",
+      "park_title": "公园许可",
+      "park_text": "已包含国家公园费用"
+    },
+    "pricing": {
+      "title": "旅游选项",
+      "subtitle": "选择最适合您旅行风格的体验。",
+      "standard": {
+        "name": "标准旅游",
+        "type": "共享快艇",
+        "price": "$2,200",
+        "currency": "MXN",
+        "per": "每人",
+        "features": [
+          "共享快艇交通",
+          "海洋生物学家导游",
+          "全套浮潜装备",
+          "包含美食野餐",
+          "旅游照片和视频",
+          "最多 10 人"
+        ],
+        "cta": "立即预订"
+      },
+      "sailboat": {
+        "badge": "私人",
+        "name": "帆船之旅",
+        "type": "40 英尺私人帆船",
+        "price": "起价 $16,000",
+        "currency": "MXN",
+        "per": "最多 8 人",
+        "features": [
+          "包含标准旅游所有内容 +",
+          "豪华私人帆船",
+          "专属船长和船员",
+          "灵活行程",
+          "帆船航行体验",
+          "最大隐私和舒适度"
+        ],
+        "cta": "查询可用性"
+      },
+      "yacht": {
+        "badge": "尊享",
+        "name": "游艇之旅",
+        "type": "游艇船队可供选择",
+        "price": "请咨询",
+        "per": "价格取决于船只",
+        "features": [
+          "包含以上所有内容 +",
+          "40-70 英尺豪华游艇",
+          "全套餐饮服务",
+          "完整专业船员",
+          "一流设施",
+          "个性化 VIP 体验"
+        ],
+        "cta": "咨询船队详情"
+      }
+    },
+    "testimonials": {
+      "title": "旅客评价",
+      "items": [
+        {
+          "text": "与海狮一起游泳是我一生中最神奇的体验。它们如此顽皮和好奇。Keabelmet 团队非常专业，对动物也非常尊重。100% 推荐！",
+          "author": "Maria Gonzalez",
+          "location": "墨西哥城"
+        },
+        {
+          "text": "海滩野餐太棒了，酸橘汁腌鱼非常美味。海滩如同天堂，他们给我们拍的照片效果惊人。一次难忘的冒险。",
+          "author": "James Patterson",
+          "location": "Los Angeles, CA"
+        },
+        {
+          "text": "海洋生物学家向我们详细介绍了岛屿和海洋生物的一切。我始终感到安全。水域清澈透明，野生动物令人惊叹。我一定会再来！",
+          "author": "Alejandro Rodriguez",
+          "location": "Guadalajara"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好体验世界水族馆了吗？",
+      "description": "Espiritu Santo 岛以其清澈的海水、原始的海滩和令人难以置信的海洋生物等待着您。",
+      "cta_primary": "立即预订您的冒险",
+      "cta_secondary": "查看更多探险"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. 版权所有。"
+    }
+  }
+}

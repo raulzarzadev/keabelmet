@@ -1,0 +1,814 @@
+{
+  "es": {
+    "meta": {
+      "title": "Renta de Velero",
+      "description": "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles."
+    },
+    "hero": {
+      "badge": "Bahia de La Paz",
+      "title": "Renta de Velero Privado",
+      "description": "Navega por el Mar de Cortes en un velero completamente equipado. Perfecto para aventuras romanticas, celebraciones especiales o simplemente disfrutar del mar.",
+      "cta_primary": "Ver Opciones",
+      "cta_secondary": "Que Incluye",
+      "image_alt": "Renta de Velero en La Paz"
+    },
+    "details": {
+      "duration_title": "Duracion",
+      "duration_text": "3 a 8 horas",
+      "capacity_title": "Capacidad",
+      "capacity_text": "2-6 personas",
+      "vessel_title": "Embarcacion",
+      "vessel_text": "Velero 32-40 pies",
+      "season_title": "Temporada",
+      "season_text": "Todo el ano"
+    },
+    "about": {
+      "title": "Sobre la Experiencia",
+      "description_1": "Experimenta la libertad del mar a bordo de un velero privado completamente equipado con bano, cocina, camarote, chimenea y todas las comodidades para tu aventura.",
+      "description_2": "Navega hacia destinos iconicos como Playa Balandra, Isla Espiritu Santo o simplemente disfruta de un atardecer romantico en el Mar de Cortes. Cada experiencia incluye capitan profesional, equipo de snorkel, kayaks, paddle boards y todas las amenidades necesarias para un dia perfecto en el mar.",
+      "description_3": "Ya sea que busques una experiencia romantica con brunch gourmet, un dia completo de aventura acuatica, o simplemente relajarte mientras navegas, tenemos el paquete perfecto para ti."
+    },
+    "pricing": {
+      "title": "Opciones de Tours",
+      "subtitle": "Elige el paquete que mejor se adapte a tu aventura",
+      "premium": {
+        "name": "Tour Privado Premium",
+        "subtitle": "Velero 40 pies con todas las amenidades",
+        "price": "$10,000",
+        "currency": "MXN",
+        "features": [
+          "8 horas de servicio",
+          "Hasta 6 personas",
+          "Bano, cocina, camarote y chimenea",
+          "24 pack de cerveza, aguas y refrescos",
+          "Ceviche de pescado y camaron",
+          "Sashimi de atun",
+          "Equipo de snorkel, kayak, paddle boards",
+          "Avistamiento de lobos marinos",
+          "Capitan y marinero profesionales",
+          "Bocina bluetooth"
+        ],
+        "destinations": "Destinos: Playa Balandra, El Merito, El Zorrillo o Isla Espiritu Santo",
+        "extra_person": "*Persona extra: $1,000 MXN (maximo 1 persona extra)"
+      },
+      "sailboat_32": {
+        "name": "Velero 32 Pies",
+        "subtitle": "Dia completo de navegacion",
+        "price": "$8,000",
+        "currency": "MXN",
+        "features": [
+          "8 horas de servicio",
+          "Hasta 6 personas",
+          "Bano, cocina, TV y chimenea",
+          "18 pack de cerveza y refrescos",
+          "Ceviche de pescado y sashimi",
+          "Paddle boards y equipo de snorkel",
+          "Dinghy, sillas y sombra",
+          "Pulseras de acceso ANP",
+          "Capitan y marinero"
+        ],
+        "destinations": "Destino: Playa Balandra",
+        "extra_person": "*Persona extra: $1,000 MXN (maximo 1 persona extra)"
+      },
+      "san_rafaelito": {
+        "name": "San Rafaelito a Balandra",
+        "subtitle": "Avistamiento de lobos marinos",
+        "price": "$9,900",
+        "currency": "MXN",
+        "features": [
+          "5 horas de recorrido",
+          "1-6 personas",
+          "Avistamiento de lobos marinos",
+          "Uso de kayaks y paddle boards",
+          "Equipo de snorkel",
+          "Aguas y cervezas incluidas"
+        ],
+        "ideal_for": "Ideal para: Amantes de la vida marina y naturaleza"
+      },
+      "sunset": {
+        "name": "Atardecer en el Malecon",
+        "subtitle": "Experiencia romantica para 2",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "4 horas en el malecon y bahia",
+          "Servicio para 2 personas",
+          "Tabla de quesos y carnes frias",
+          "Botella de vino",
+          "Sonido inalambrico",
+          "Internet satelital",
+          "Capitan y marinero"
+        ],
+        "ideal_for": "Perfecto para: Aniversarios, propuestas, celebraciones especiales",
+        "extra_person": "*Persona extra: $750 MXN (maximo 4 personas extra)"
+      },
+      "brunch": {
+        "name": "Brunch Romantico en Velero",
+        "subtitle": "Experiencia gourmet para parejas",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "3 horas de navegacion",
+          "Servicio para 2 personas",
+          "Tabla de quesos y carnes frias gourmet",
+          "Mimosas (vino blanco espumoso con jugo de naranja)",
+          "Postre (rebanada de pastel)",
+          "Aguas y refrescos",
+          "Capitan profesional"
+        ],
+        "ideal_for": "Ideal para: Aniversarios, cumpleanos, ocasiones especiales",
+        "extra_person": "*Persona extra: $750 MXN (maximo 4 personas extra)"
+      }
+    },
+    "includes": {
+      "title": "Que Esta Incluido",
+      "subtitle": "Todas nuestras experiencias en velero incluyen las comodidades esenciales para tu aventura",
+      "vessel": {
+        "title": "Equipamiento del Velero",
+        "items": [
+          "Bano completo",
+          "Cocina equipada",
+          "Camarote privado",
+          "Chimenea",
+          "TV (en algunos modelos)",
+          "Sistema de sonido Bluetooth"
+        ]
+      },
+      "activities": {
+        "title": "Equipo de Actividades",
+        "items": [
+          "Equipo de snorkel",
+          "Kayaks",
+          "Paddle boards (SUP)",
+          "Tapete flotante",
+          "Dinghy (bote auxiliar)",
+          "Sillas y area con sombra"
+        ]
+      },
+      "food": {
+        "title": "Alimentos y Bebidas",
+        "items": [
+          "Cerveza (18-24 pack segun paquete)",
+          "Aguas embotelladas",
+          "Refrescos",
+          "Ceviche fresco",
+          "Sashimi de atun",
+          "Opciones gourmet en paquetes especiales"
+        ]
+      },
+      "crew": {
+        "title": "Tripulacion y Seguridad",
+        "items": [
+          "Capitan certificado",
+          "Marinero profesional",
+          "Equipo de seguridad completo",
+          "Chalecos salvavidas",
+          "Seguro de embarcacion",
+          "Pulseras de acceso ANP (cuando aplique)"
+        ]
+      }
+    },
+    "recommendations": {
+      "title": "Recomendaciones",
+      "what_to_bring": {
+        "title": "Que llevar",
+        "items": [
+          "Traje de bano y toalla",
+          "Protector solar biodegradable",
+          "Sombrero o gorra",
+          "Lentes de sol con correa",
+          "Camara (preferiblemente acuatica)",
+          "Ropa comoda de cambio"
+        ]
+      },
+      "schedules": {
+        "title": "Horarios recomendados",
+        "text": "Para tours de dia completo, recomendamos salida entre 9:00-10:00 AM. Para atardeceres, salida 2-3 horas antes del sunset."
+      },
+      "weather": {
+        "title": "Condiciones climaticas",
+        "text": "Los tours estan sujetos a condiciones climaticas. En caso de mal tiempo, se reprogramara sin costo adicional."
+      },
+      "customization": {
+        "title": "Personalizacion",
+        "text": "Quieres personalizar tu experiencia? Podemos organizar catering especial, decoracion para ocasiones especiales, sesion fotografica profesional y mas. Contactanos para detalles."
+      }
+    },
+    "cta": {
+      "title": "Listo para Zarpar?",
+      "description": "Reserva tu velero privado y vive una experiencia inolvidable en el Mar de Cortes",
+      "cta_primary": "Contactar para Reservar",
+      "cta_secondary": "Ver Mas Experiencias",
+      "note": "Preguntas? Escribenos por WhatsApp o email. Respondemos en menos de 24 horas."
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Sailboat Rental",
+      "description": "Rent a private sailboat in La Paz, BCS. Sail the Sea of Cortez with a captain, snorkel, kayaks and gourmet food. Romantic and adventure tours available."
+    },
+    "hero": {
+      "badge": "La Paz Bay",
+      "title": "Private Sailboat Rental",
+      "description": "Sail through the Sea of Cortez on a fully equipped sailboat. Perfect for romantic adventures, special celebrations or simply enjoying the sea.",
+      "cta_primary": "See Options",
+      "cta_secondary": "What's Included",
+      "image_alt": "Sailboat Rental in La Paz"
+    },
+    "details": {
+      "duration_title": "Duration",
+      "duration_text": "3 to 8 hours",
+      "capacity_title": "Capacity",
+      "capacity_text": "2-6 people",
+      "vessel_title": "Vessel",
+      "vessel_text": "32-40 foot sailboat",
+      "season_title": "Season",
+      "season_text": "Year-round"
+    },
+    "about": {
+      "title": "About the Experience",
+      "description_1": "Experience the freedom of the sea aboard a fully equipped private sailboat with bathroom, kitchen, cabin, fireplace and all the comforts for your adventure.",
+      "description_2": "Sail to iconic destinations like Playa Balandra, Espiritu Santo Island or simply enjoy a romantic sunset on the Sea of Cortez. Each experience includes a professional captain, snorkel gear, kayaks, paddle boards and all the amenities for a perfect day at sea.",
+      "description_3": "Whether you are looking for a romantic experience with gourmet brunch, a full day of aquatic adventure, or simply relaxing while sailing, we have the perfect package for you."
+    },
+    "pricing": {
+      "title": "Tour Options",
+      "subtitle": "Choose the package that best suits your adventure",
+      "premium": {
+        "name": "Premium Private Tour",
+        "subtitle": "40-foot sailboat with all amenities",
+        "price": "$10,000",
+        "currency": "MXN",
+        "features": [
+          "8 hours of service",
+          "Up to 6 people",
+          "Bathroom, kitchen, cabin and fireplace",
+          "24-pack of beer, water and soft drinks",
+          "Fish and shrimp ceviche",
+          "Tuna sashimi",
+          "Snorkel gear, kayak, paddle boards",
+          "Sea lion watching",
+          "Professional captain and sailor",
+          "Bluetooth speaker"
+        ],
+        "destinations": "Destinations: Playa Balandra, El Merito, El Zorrillo or Espiritu Santo Island",
+        "extra_person": "*Extra person: $1,000 MXN (maximum 1 extra person)"
+      },
+      "sailboat_32": {
+        "name": "32-Foot Sailboat",
+        "subtitle": "Full day of sailing",
+        "price": "$8,000",
+        "currency": "MXN",
+        "features": [
+          "8 hours of service",
+          "Up to 6 people",
+          "Bathroom, kitchen, TV and fireplace",
+          "18-pack of beer and soft drinks",
+          "Fish ceviche and sashimi",
+          "Paddle boards and snorkel gear",
+          "Dinghy, chairs and shade",
+          "ANP access wristbands",
+          "Captain and sailor"
+        ],
+        "destinations": "Destination: Playa Balandra",
+        "extra_person": "*Extra person: $1,000 MXN (maximum 1 extra person)"
+      },
+      "san_rafaelito": {
+        "name": "San Rafaelito to Balandra",
+        "subtitle": "Sea lion watching",
+        "price": "$9,900",
+        "currency": "MXN",
+        "features": [
+          "5-hour tour",
+          "1-6 people",
+          "Sea lion watching",
+          "Use of kayaks and paddle boards",
+          "Snorkel gear",
+          "Water and beer included"
+        ],
+        "ideal_for": "Ideal for: Marine life and nature lovers"
+      },
+      "sunset": {
+        "name": "Sunset on the Malecon",
+        "subtitle": "Romantic experience for 2",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "4 hours on the malecon and bay",
+          "Service for 2 people",
+          "Cheese and cold cuts board",
+          "Bottle of wine",
+          "Wireless sound",
+          "Satellite internet",
+          "Captain and sailor"
+        ],
+        "ideal_for": "Perfect for: Anniversaries, proposals, special celebrations",
+        "extra_person": "*Extra person: $750 MXN (maximum 4 extra people)"
+      },
+      "brunch": {
+        "name": "Romantic Brunch on a Sailboat",
+        "subtitle": "Gourmet experience for couples",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "3 hours of sailing",
+          "Service for 2 people",
+          "Gourmet cheese and cold cuts board",
+          "Mimosas (sparkling white wine with orange juice)",
+          "Dessert (slice of cake)",
+          "Water and soft drinks",
+          "Professional captain"
+        ],
+        "ideal_for": "Ideal for: Anniversaries, birthdays, special occasions",
+        "extra_person": "*Extra person: $750 MXN (maximum 4 extra people)"
+      }
+    },
+    "includes": {
+      "title": "What's Included",
+      "subtitle": "All our sailboat experiences include the essential comforts for your adventure",
+      "vessel": {
+        "title": "Sailboat Equipment",
+        "items": [
+          "Full bathroom",
+          "Equipped kitchen",
+          "Private cabin",
+          "Fireplace",
+          "TV (on some models)",
+          "Bluetooth sound system"
+        ]
+      },
+      "activities": {
+        "title": "Activity Equipment",
+        "items": [
+          "Snorkel gear",
+          "Kayaks",
+          "Paddle boards (SUP)",
+          "Floating mat",
+          "Dinghy (auxiliary boat)",
+          "Chairs and shade area"
+        ]
+      },
+      "food": {
+        "title": "Food and Drinks",
+        "items": [
+          "Beer (18-24 pack depending on package)",
+          "Bottled water",
+          "Soft drinks",
+          "Fresh ceviche",
+          "Tuna sashimi",
+          "Gourmet options in special packages"
+        ]
+      },
+      "crew": {
+        "title": "Crew and Safety",
+        "items": [
+          "Certified captain",
+          "Professional sailor",
+          "Complete safety equipment",
+          "Life vests",
+          "Boat insurance",
+          "ANP access wristbands (when applicable)"
+        ]
+      }
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "what_to_bring": {
+        "title": "What to bring",
+        "items": [
+          "Swimsuit and towel",
+          "Biodegradable sunscreen",
+          "Hat or cap",
+          "Sunglasses with strap",
+          "Camera (preferably waterproof)",
+          "Comfortable change of clothes"
+        ]
+      },
+      "schedules": {
+        "title": "Recommended schedules",
+        "text": "For full-day tours, we recommend departure between 9:00-10:00 AM. For sunsets, departure 2-3 hours before sunset."
+      },
+      "weather": {
+        "title": "Weather conditions",
+        "text": "Tours are subject to weather conditions. In case of bad weather, it will be rescheduled at no additional cost."
+      },
+      "customization": {
+        "title": "Customization",
+        "text": "Want to customize your experience? We can arrange special catering, decoration for special occasions, professional photo session and more. Contact us for details."
+      }
+    },
+    "cta": {
+      "title": "Ready to Set Sail?",
+      "description": "Book your private sailboat and enjoy an unforgettable experience in the Sea of Cortez",
+      "cta_primary": "Contact to Book",
+      "cta_secondary": "See More Experiences",
+      "note": "Questions? Write to us on WhatsApp or email. We respond in less than 24 hours."
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Location de Voilier",
+      "description": "Louez un voilier prive a La Paz, BCS. Naviguez sur la mer de Cortez avec capitaine, snorkeling, kayaks et cuisine gastronomique. Tours romantiques et d'aventure disponibles."
+    },
+    "hero": {
+      "badge": "Baie de La Paz",
+      "title": "Location de Voilier Prive",
+      "description": "Naviguez sur la mer de Cortez a bord d'un voilier entierement equipe. Parfait pour les aventures romantiques, les celebrations speciales ou simplement profiter de la mer.",
+      "cta_primary": "Voir les Options",
+      "cta_secondary": "Ce qui est Inclus",
+      "image_alt": "Location de Voilier a La Paz"
+    },
+    "details": {
+      "duration_title": "Duree",
+      "duration_text": "3 a 8 heures",
+      "capacity_title": "Capacite",
+      "capacity_text": "2-6 personnes",
+      "vessel_title": "Embarcation",
+      "vessel_text": "Voilier 32-40 pieds",
+      "season_title": "Saison",
+      "season_text": "Toute l'annee"
+    },
+    "about": {
+      "title": "A propos de l'Experience",
+      "description_1": "Vivez la liberte de la mer a bord d'un voilier prive entierement equipe avec salle de bain, cuisine, cabine, cheminee et tout le confort pour votre aventure.",
+      "description_2": "Naviguez vers des destinations iconiques comme Playa Balandra, l'ile Espiritu Santo ou profitez simplement d'un coucher de soleil romantique sur la mer de Cortez. Chaque experience inclut un capitaine professionnel, equipement de snorkeling, kayaks, paddle boards et toutes les commodites pour une journee parfaite en mer.",
+      "description_3": "Que vous cherchiez une experience romantique avec brunch gastronomique, une journee complete d'aventure aquatique, ou simplement vous detendre en naviguant, nous avons le forfait parfait pour vous."
+    },
+    "pricing": {
+      "title": "Options de Tours",
+      "subtitle": "Choisissez le forfait qui convient le mieux a votre aventure",
+      "premium": {
+        "name": "Tour Prive Premium",
+        "subtitle": "Voilier de 40 pieds avec toutes les commodites",
+        "price": "$10,000",
+        "currency": "MXN",
+        "features": [
+          "8 heures de service",
+          "Jusqu'a 6 personnes",
+          "Salle de bain, cuisine, cabine et cheminee",
+          "24 bieres, eaux et boissons gazeuses",
+          "Ceviche de poisson et crevettes",
+          "Sashimi de thon",
+          "Equipement de snorkeling, kayak, paddle boards",
+          "Observation des lions de mer",
+          "Capitaine et marin professionnels",
+          "Enceinte Bluetooth"
+        ],
+        "destinations": "Destinations : Playa Balandra, El Merito, El Zorrillo ou Ile Espiritu Santo",
+        "extra_person": "*Personne supplementaire : $1,000 MXN (maximum 1 personne supplementaire)"
+      },
+      "sailboat_32": {
+        "name": "Voilier 32 Pieds",
+        "subtitle": "Journee complete de navigation",
+        "price": "$8,000",
+        "currency": "MXN",
+        "features": [
+          "8 heures de service",
+          "Jusqu'a 6 personnes",
+          "Salle de bain, cuisine, TV et cheminee",
+          "18 bieres et boissons gazeuses",
+          "Ceviche de poisson et sashimi",
+          "Paddle boards et equipement de snorkeling",
+          "Dinghy, chaises et ombre",
+          "Bracelets d'acces ANP",
+          "Capitaine et marin"
+        ],
+        "destinations": "Destination : Playa Balandra",
+        "extra_person": "*Personne supplementaire : $1,000 MXN (maximum 1 personne supplementaire)"
+      },
+      "san_rafaelito": {
+        "name": "San Rafaelito a Balandra",
+        "subtitle": "Observation des lions de mer",
+        "price": "$9,900",
+        "currency": "MXN",
+        "features": [
+          "5 heures de parcours",
+          "1-6 personnes",
+          "Observation des lions de mer",
+          "Utilisation de kayaks et paddle boards",
+          "Equipement de snorkeling",
+          "Eaux et bieres incluses"
+        ],
+        "ideal_for": "Ideal pour : Amoureux de la vie marine et de la nature"
+      },
+      "sunset": {
+        "name": "Coucher de Soleil sur le Malecon",
+        "subtitle": "Experience romantique pour 2",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "4 heures sur le malecon et la baie",
+          "Service pour 2 personnes",
+          "Plateau de fromages et charcuterie",
+          "Bouteille de vin",
+          "Son sans fil",
+          "Internet satellite",
+          "Capitaine et marin"
+        ],
+        "ideal_for": "Parfait pour : Anniversaires, demandes en mariage, celebrations speciales",
+        "extra_person": "*Personne supplementaire : $750 MXN (maximum 4 personnes supplementaires)"
+      },
+      "brunch": {
+        "name": "Brunch Romantique en Voilier",
+        "subtitle": "Experience gastronomique pour couples",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "3 heures de navigation",
+          "Service pour 2 personnes",
+          "Plateau gastronomique de fromages et charcuterie",
+          "Mimosas (vin blanc petillant avec jus d'orange)",
+          "Dessert (part de gateau)",
+          "Eaux et boissons gazeuses",
+          "Capitaine professionnel"
+        ],
+        "ideal_for": "Ideal pour : Anniversaires, occasions speciales",
+        "extra_person": "*Personne supplementaire : $750 MXN (maximum 4 personnes supplementaires)"
+      }
+    },
+    "includes": {
+      "title": "Ce qui est Inclus",
+      "subtitle": "Toutes nos experiences en voilier comprennent le confort essentiel pour votre aventure",
+      "vessel": {
+        "title": "Equipement du Voilier",
+        "items": [
+          "Salle de bain complete",
+          "Cuisine equipee",
+          "Cabine privee",
+          "Cheminee",
+          "TV (sur certains modeles)",
+          "Systeme audio Bluetooth"
+        ]
+      },
+      "activities": {
+        "title": "Equipement d'Activites",
+        "items": [
+          "Equipement de snorkeling",
+          "Kayaks",
+          "Paddle boards (SUP)",
+          "Tapis flottant",
+          "Dinghy (bateau auxiliaire)",
+          "Chaises et coin ombre"
+        ]
+      },
+      "food": {
+        "title": "Nourriture et Boissons",
+        "items": [
+          "Biere (18-24 selon le forfait)",
+          "Eaux en bouteille",
+          "Boissons gazeuses",
+          "Ceviche frais",
+          "Sashimi de thon",
+          "Options gastronomiques dans les forfaits speciaux"
+        ]
+      },
+      "crew": {
+        "title": "Equipage et Securite",
+        "items": [
+          "Capitaine certifie",
+          "Marin professionnel",
+          "Equipement de securite complet",
+          "Gilets de sauvetage",
+          "Assurance embarcation",
+          "Bracelets d'acces ANP (le cas echeant)"
+        ]
+      }
+    },
+    "recommendations": {
+      "title": "Recommandations",
+      "what_to_bring": {
+        "title": "Que porter",
+        "items": [
+          "Maillot de bain et serviette",
+          "Creme solaire biodegradable",
+          "Chapeau ou casquette",
+          "Lunettes de soleil avec cordon",
+          "Appareil photo (de preference etanche)",
+          "Vetements de rechange confortables"
+        ]
+      },
+      "schedules": {
+        "title": "Horaires recommandes",
+        "text": "Pour les tours de journee complete, nous recommandons un depart entre 9h00 et 10h00. Pour les couchers de soleil, depart 2-3 heures avant le sunset."
+      },
+      "weather": {
+        "title": "Conditions meteorologiques",
+        "text": "Les tours sont soumis aux conditions meteorologiques. En cas de mauvais temps, il sera reprogramme sans frais supplementaires."
+      },
+      "customization": {
+        "title": "Personnalisation",
+        "text": "Vous souhaitez personnaliser votre experience ? Nous pouvons organiser un traiteur special, une decoration pour occasions speciales, une seance photo professionnelle et plus encore. Contactez-nous pour les details."
+      }
+    },
+    "cta": {
+      "title": "Pret a Prendre le Large ?",
+      "description": "Reservez votre voilier prive et vivez une experience inoubliable sur la mer de Cortez",
+      "cta_primary": "Contacter pour Reserver",
+      "cta_secondary": "Voir Plus d'Experiences",
+      "note": "Des questions ? Ecrivez-nous sur WhatsApp ou par email. Nous repondons en moins de 24 heures."
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "帆船租赁",
+      "description": "在 La Paz, BCS 租一艘私人帆船。与船长一起航行科尔特斯海，浮潜、皮划艇和美食。提供浪漫和冒险之旅。"
+    },
+    "hero": {
+      "badge": "La Paz 湾",
+      "title": "私人帆船租赁",
+      "description": "乘坐设施齐全的帆船航行科尔特斯海。非常适合浪漫冒险、特殊庆典或单纯享受大海。",
+      "cta_primary": "查看选项",
+      "cta_secondary": "包含项目",
+      "image_alt": "La Paz 帆船租赁"
+    },
+    "details": {
+      "duration_title": "时长",
+      "duration_text": "3 至 8 小时",
+      "capacity_title": "容量",
+      "capacity_text": "2-6 人",
+      "vessel_title": "船只",
+      "vessel_text": "32-40 英尺帆船",
+      "season_title": "季节",
+      "season_text": "全年"
+    },
+    "about": {
+      "title": "关于体验",
+      "description_1": "登上一艘设施齐全的私人帆船，体验海上自由，配备浴室、厨房、卧舱、壁炉以及冒险所需的一切便利设施。",
+      "description_2": "航向 Playa Balandra、Espiritu Santo 岛等标志性目的地，或在科尔特斯海上享受浪漫日落。每次体验都包含专业船长、浮潜装备、皮划艇、桨板以及海上完美一天所需的所有设施。",
+      "description_3": "无论您是寻找带有美食早午餐的浪漫体验、全天的水上冒险，还是边航行边放松，我们都有适合您的完美套餐。"
+    },
+    "pricing": {
+      "title": "旅游选项",
+      "subtitle": "选择最适合您冒险的套餐",
+      "premium": {
+        "name": "尊享私人之旅",
+        "subtitle": "40 英尺帆船，设施齐全",
+        "price": "$10,000",
+        "currency": "MXN",
+        "features": [
+          "8 小时服务",
+          "最多 6 人",
+          "浴室、厨房、卧舱和壁炉",
+          "24 罐啤酒、水和软饮",
+          "鱼虾酸橘汁腌鱼",
+          "金枪鱼刺身",
+          "浮潜装备、皮划艇、桨板",
+          "海狮观赏",
+          "专业船长和水手",
+          "蓝牙音箱"
+        ],
+        "destinations": "目的地：Playa Balandra、El Merito、El Zorrillo 或 Espiritu Santo 岛",
+        "extra_person": "*额外人员：$1,000 MXN（最多 1 名额外人员）"
+      },
+      "sailboat_32": {
+        "name": "32 英尺帆船",
+        "subtitle": "全天航行",
+        "price": "$8,000",
+        "currency": "MXN",
+        "features": [
+          "8 小时服务",
+          "最多 6 人",
+          "浴室、厨房、电视和壁炉",
+          "18 罐啤酒和软饮",
+          "鱼肉酸橘汁腌鱼和刺身",
+          "桨板和浮潜装备",
+          "小艇、椅子和遮阳设施",
+          "ANP 出入手环",
+          "船长和水手"
+        ],
+        "destinations": "目的地：Playa Balandra",
+        "extra_person": "*额外人员：$1,000 MXN（最多 1 名额外人员）"
+      },
+      "san_rafaelito": {
+        "name": "San Rafaelito 到 Balandra",
+        "subtitle": "海狮观赏",
+        "price": "$9,900",
+        "currency": "MXN",
+        "features": [
+          "5 小时行程",
+          "1-6 人",
+          "海狮观赏",
+          "使用皮划艇和桨板",
+          "浮潜装备",
+          "含水和啤酒"
+        ],
+        "ideal_for": "适合：海洋生物和自然爱好者"
+      },
+      "sunset": {
+        "name": "海滨大道日落",
+        "subtitle": "2 人浪漫体验",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "4 小时海滨大道和海湾",
+          "2 人服务",
+          "奶酪和冷肉拼盘",
+          "一瓶葡萄酒",
+          "无线音响",
+          "卫星网络",
+          "船长和水手"
+        ],
+        "ideal_for": "适合：纪念日、求婚、特殊庆典",
+        "extra_person": "*额外人员：$750 MXN（最多 4 名额外人员）"
+      },
+      "brunch": {
+        "name": "帆船浪漫早午餐",
+        "subtitle": "情侣美食体验",
+        "price": "$4,000",
+        "currency": "MXN",
+        "features": [
+          "3 小时航行",
+          "2 人服务",
+          "美食奶酪和冷肉拼盘",
+          "含羞草鸡尾酒（起泡白葡萄酒配橙汁）",
+          "甜点（蛋糕切片）",
+          "水和软饮",
+          "专业船长"
+        ],
+        "ideal_for": "适合：纪念日、生日、特殊场合",
+        "extra_person": "*额外人员：$750 MXN（最多 4 名额外人员）"
+      }
+    },
+    "includes": {
+      "title": "包含项目",
+      "subtitle": "我们所有的帆船体验都包含冒险所需的基本舒适设施",
+      "vessel": {
+        "title": "帆船设备",
+        "items": [
+          "完整浴室",
+          "配备齐全的厨房",
+          "私人卧舱",
+          "壁炉",
+          "电视（部分型号）",
+          "蓝牙音响系统"
+        ]
+      },
+      "activities": {
+        "title": "活动装备",
+        "items": [
+          "浮潜装备",
+          "皮划艇",
+          "桨板 (SUP)",
+          "浮垫",
+          "小艇（辅助船）",
+          "椅子和遮阳区"
+        ]
+      },
+      "food": {
+        "title": "食物和饮料",
+        "items": [
+          "啤酒（根据套餐 18-24 罐）",
+          "瓶装水",
+          "软饮料",
+          "新鲜酸橘汁腌鱼",
+          "金枪鱼刺身",
+          "特别套餐的美食选项"
+        ]
+      },
+      "crew": {
+        "title": "船员和安全",
+        "items": [
+          "认证船长",
+          "专业水手",
+          "完整安全设备",
+          "救生衣",
+          "船只保险",
+          "ANP 出入手环（适用时）"
+        ]
+      }
+    },
+    "recommendations": {
+      "title": "建议",
+      "what_to_bring": {
+        "title": "需要携带什么",
+        "items": [
+          "泳衣和毛巾",
+          "可生物降解的防晒霜",
+          "帽子",
+          "带绳太阳镜",
+          "相机（最好防水）",
+          "舒适的换洗衣物"
+        ]
+      },
+      "schedules": {
+        "title": "推荐时间",
+        "text": "全天行程建议上午 9:00-10:00 出发。日落行程建议在日落前 2-3 小时出发。"
+      },
+      "weather": {
+        "title": "天气条件",
+        "text": "行程取决于天气条件。如遇恶劣天气，将免费改期。"
+      },
+      "customization": {
+        "title": "个性化定制",
+        "text": "想要定制您的体验？我们可以安排特别餐饮、特殊场合装饰、专业摄影等。联系我们了解详情。"
+      }
+    },
+    "cta": {
+      "title": "准备好起航了吗？",
+      "description": "预订您的私人帆船，在科尔特斯海享受难忘的体验",
+      "cta_primary": "联系预订",
+      "cta_secondary": "查看更多体验",
+      "note": "有问题？通过 WhatsApp 或邮件联系我们。我们在 24 小时内回复。"
+    }
+  }
+}

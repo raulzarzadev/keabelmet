@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { BallenaGrisLanding } from "@/components/ballena-gris-landing"
-import { isValidLocale, defaultLocale } from "@/lib/i18n"
+import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Expedicion Ballena Gris",
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default async function BallenaGrisPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
+  const t = await getPageDictionary("ballena-gris", locale)
 
-  return <BallenaGrisLanding />
+  return <BallenaGrisLanding translations={t} />
 }

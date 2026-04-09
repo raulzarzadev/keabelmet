@@ -24,12 +24,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const cta = d.cta
 
   const adventureLinks = [
-    "/actividades/tour-espiritu-santo",
-    "/actividades/tour-ballena-gris",
-    "/actividades/buceo-cabo-pulmo",
-    "/actividades/buceo-la-paz",
-    "/actividades/renta-velero",
-    "/actividades/renta-yate",
+    "/experiencias/tour-espiritu-santo",
+    "/experiencias/tour-ballena-gris",
+    "/experiencias/buceo-cabo-pulmo",
+    "/experiencias/buceo-la-paz",
+    "/experiencias/renta-velero",
+    "/experiencias/renta-yate",
   ]
 
   const adventureImages = [
@@ -46,7 +46,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       title: "Safari Bahia Magdalena",
       description: exp.fullDay + " | Nov-Dic",
       img: "/images/marlin-bahia-magdalena-hero.jpeg",
-      href: "/expediciones/safari-bahia-magdalena",
+      href: "/experiencias/safari-bahia-magdalena",
       rating: 5.0,
       reviews: 187,
       duration: exp.fullDay,
@@ -58,7 +58,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       title: "Safari La Ventana",
       description: exp.halfDay + " | Abr-Jun",
       img: "/images/orca-la-ventana-hero.jpeg",
-      href: "/expediciones/safari-la-ventana",
+      href: "/experiencias/safari-la-ventana",
       rating: 5.0,
       reviews: 243,
       duration: exp.halfDay,
@@ -418,13 +418,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mt-4 text-lg drop-shadow-md">{cta.subtitle}</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href={l("/expediciones/safari-bahia-magdalena", locale)}
+              href={l("/experiencias/safari-bahia-magdalena", locale)}
               className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700 transition drop-shadow-md inline-flex items-center justify-center"
             >
               {cta.btn1}
             </Link>
             <Link
-              href={l("/expediciones/safari-la-ventana", locale)}
+              href={l("/experiencias/safari-la-ventana", locale)}
               className="rounded-lg border border-white px-6 py-3 font-semibold text-white hover:bg-white/10 transition drop-shadow-md inline-flex items-center justify-center"
             >
               {cta.btn2}

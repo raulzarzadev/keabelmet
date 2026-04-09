@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { SafariLanding } from "@/components/safari-landing"
-import { isValidLocale, defaultLocale } from "@/lib/i18n"
+import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
 export const metadata: Metadata = {
   title: "Safari La Ventana",
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default async function SafariLaVentanaPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
+  const t = await getPageDictionary("safari-la-ventana", locale)
 
-  return <SafariLanding />
+  return <SafariLanding translations={t} />
 }
