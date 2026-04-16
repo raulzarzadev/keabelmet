@@ -188,6 +188,20 @@
     "btn1": "预订La Ventana探险",
     "btn2": "初次邂逅鲸鱼"
   },
+  "googleReviews": {
+    "title": "Google 上的评价",
+    "subtitle": "来自探险者的真实评价",
+    "overallRating": "4.9",
+    "totalReviews": "50+",
+    "reviews": [
+      { "name": "Ana Lopez", "rating": 5, "date": "1 个月前", "text": "与 Keabelmet 的体验令人难以置信。导游非常专业，服务一流。我们与海狮一起游泳，太神奇了。100% 推荐。" },
+      { "name": "Roberto Diaz", "rating": 5, "date": "2 周前", "text": "Bahia Magdalena 的探险是我们旅行的亮点。我们看到了马林鱼、海狮，团队让我们全程感到安全。" },
+      { "name": "Patricia Hernandez", "rating": 5, "date": "3 周前", "text": "他们交付的照片和视频非常壮观。可以看出他们热爱自己的工作。我们明年一定会再来。" }
+    ],
+    "ctaAll": "在 Google 上查看全部",
+    "ctaLeave": "留下评价",
+    "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
+  },
   "language": {
     "label": "语言",
     "es": "西班牙语",

@@ -10,22 +10,22 @@
         "title": "Safari Bahía Magdalena",
         "description": "Corrida de sardinas, marlines, lobos marinos. Nov–Dic.",
         "duration": "Día completo",
-        "capacity": "4-8 personas",
-        "features": ["Lobos Marinos", "Marlines", "Snorkel", "Almuerzo"]
+        "capacity": "2-6 personas",
+        "features": ["Equipo de snorkel", "Vida marina", "Transporte", "Lunch", "Fotos y videos"]
       },
       "safariLaVentana": {
         "title": "Safari La Ventana",
         "description": "Migración de móbulas. Abril–Junio (según temporada).",
         "duration": "Medio día",
-        "capacity": "6-10 personas",
-        "features": ["Móbulas", "Ballenas", "Guía Experto", "Fotos"]
+        "capacity": "2-8 personas",
+        "features": ["Equipo de snorkel", "Vida marina", "Guía experto", "Lunch", "Fotos y videos"]
       },
       "surfCamp": {
-        "title": "Surf Camp La Paz (6 días)",
-        "description": "Clases, feedback diario, foto/video, transporte y snacks.",
+        "title": "Surf Camp La Paz",
+        "description": "Fisioterapeuta, video-análisis diario, hospedaje, alimentos y bebidas.",
         "duration": "6 días",
-        "capacity": "4-10 personas",
-        "features": ["Clases Diarias", "Video Análisis", "Transporte", "Snacks"]
+        "capacity": "6-8 personas",
+        "features": ["Fisioterapeuta", "Video-análisis diario", "Hospedaje", "Alimentos y bebidas", "Fotos y videos"]
       }
     }
   },
@@ -40,22 +40,22 @@
         "title": "Safari Bahía Magdalena",
         "description": "Sardine run, marlins, sea lions. Nov-Dec.",
         "duration": "Full day",
-        "capacity": "4-8 people",
-        "features": ["Sea Lions", "Marlins", "Snorkel", "Lunch"]
+        "capacity": "2-6 people",
+        "features": ["Snorkel gear", "Marine life", "Transportation", "Lunch", "Photos and videos"]
       },
       "safariLaVentana": {
         "title": "Safari La Ventana",
         "description": "Mobula ray migration. April-June (seasonal).",
         "duration": "Half day",
-        "capacity": "6-10 people",
-        "features": ["Mobula Rays", "Whales", "Expert Guide", "Photos"]
+        "capacity": "2-8 people",
+        "features": ["Snorkel gear", "Marine life", "Expert guide", "Lunch", "Photos and videos"]
       },
       "surfCamp": {
-        "title": "Surf Camp La Paz (6 days)",
-        "description": "Lessons, daily feedback, photo/video, transportation and snacks.",
+        "title": "Surf Camp La Paz",
+        "description": "Physiotherapist, daily video analysis, lodging, food and drinks.",
         "duration": "6 days",
-        "capacity": "4-10 people",
-        "features": ["Daily Lessons", "Video Analysis", "Transportation", "Snacks"]
+        "capacity": "6-8 people",
+        "features": ["Physiotherapist", "Daily video analysis", "Lodging", "Food and drinks", "Photos and videos"]
       }
     }
   },
@@ -70,22 +70,22 @@
         "title": "Safari Bahía Magdalena",
         "description": "Course aux sardines, marlins, lions de mer. Nov-Déc.",
         "duration": "Journée complète",
-        "capacity": "4-8 personnes",
-        "features": ["Lions de mer", "Marlins", "Plongée en apnée", "Déjeuner"]
+        "capacity": "2-6 personnes",
+        "features": ["Équipement de snorkeling", "Vie marine", "Transport", "Déjeuner", "Photos et vidéos"]
       },
       "safariLaVentana": {
         "title": "Safari La Ventana",
         "description": "Migration des mobulas. Avril-Juin (selon la saison).",
         "duration": "Demi-journée",
-        "capacity": "6-10 personnes",
-        "features": ["Mobulas", "Baleines", "Guide expert", "Photos"]
+        "capacity": "2-8 personnes",
+        "features": ["Équipement de snorkeling", "Vie marine", "Guide expert", "Déjeuner", "Photos et vidéos"]
       },
       "surfCamp": {
-        "title": "Surf Camp La Paz (6 jours)",
-        "description": "Cours, retour quotidien, photo/vidéo, transport et en-cas.",
+        "title": "Surf Camp La Paz",
+        "description": "Kinésithérapeute, analyse vidéo quotidienne, hébergement, repas et boissons.",
         "duration": "6 jours",
-        "capacity": "4-10 personnes",
-        "features": ["Cours quotidiens", "Analyse vidéo", "Transport", "En-cas"]
+        "capacity": "6-8 personnes",
+        "features": ["Kinésithérapeute", "Analyse vidéo quotidienne", "Hébergement", "Repas et boissons", "Photos et vidéos"]
       }
     }
   },
@@ -100,22 +100,22 @@
         "title": "Safari Bahía Magdalena",
         "description": "沙丁鱼群、马林鱼、海狮。11月至12月。",
         "duration": "全天",
-        "capacity": "4-8人",
-        "features": ["海狮", "马林鱼", "浮潜", "午餐"]
+        "capacity": "2-6人",
+        "features": ["浮潜装备", "海洋生物", "交通", "午餐", "照片和视频"]
       },
       "safariLaVentana": {
         "title": "Safari La Ventana",
         "description": "蝠鲼迁徙。4月至6月（视季节而定）。",
         "duration": "半天",
-        "capacity": "6-10人",
-        "features": ["蝠鲼", "鲸鱼", "专业导游", "摄影"]
+        "capacity": "2-8人",
+        "features": ["浮潜装备", "海洋生物", "专业导游", "午餐", "照片和视频"]
       },
       "surfCamp": {
-        "title": "Surf Camp La Paz（6天）",
-        "description": "课程、每日反馈、摄影/视频、交通和小食。",
+        "title": "Surf Camp La Paz",
+        "description": "理疗师、每日视频分析、住宿、餐饮。",
         "duration": "6天",
-        "capacity": "4-10人",
-        "features": ["每日课程", "视频分析", "交通", "小食"]
+        "capacity": "6-8人",
+        "features": ["理疗师", "每日视频分析", "住宿", "餐饮", "照片和视频"]
       }
     }
   }

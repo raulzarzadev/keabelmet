@@ -188,6 +188,20 @@
     "btn1": "Reserver Safari La Ventana",
     "btn2": "Observez les baleines pour la premiere fois"
   },
+  "googleReviews": {
+    "title": "Ce qu'ils disent sur Google",
+    "subtitle": "Avis reels de nos aventuriers",
+    "overallRating": "4.9",
+    "totalReviews": "50+",
+    "reviews": [
+      { "name": "Ana Lopez", "rating": 5, "date": "Il y a 1 mois", "text": "Experience incroyable avec Keabelmet. Les guides sont tres professionnels et le service est excellent. Nous avons nage avec des lions de mer et c'etait magique. 100% recommande." },
+      { "name": "Roberto Diaz", "rating": 5, "date": "Il y a 2 semaines", "text": "Le safari a Bahia Magdalena a ete le point fort de notre voyage. Nous avons vu des marlins, des lions de mer et l'equipe nous a fait sentir en securite tout le temps." },
+      { "name": "Patricia Hernandez", "rating": 5, "date": "Il y a 3 semaines", "text": "Les photos et videos qu'ils nous ont livres sont spectaculaires. On voit qu'ils aiment ce qu'ils font. Nous reviendrons certainement l'annee prochaine." }
+    ],
+    "ctaAll": "Voir tous sur Google",
+    "ctaLeave": "Laisser un avis",
+    "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
+  },
   "language": {
     "label": "Langue",
     "es": "Espanol",

@@ -13,99 +13,98 @@
       "image_alt": "Isla Espiritu Santo - Paraiso natural"
     },
     "about": {
-      "title": "Una joya del Mar de Cortes",
-      "description_1": "La Isla Espiritu Santo es hogar de la colonia mas grande de lobos marinos de California en el Golfo. Aqui viviras un encuentro responsable, seguro y guiado con estos animales en aguas cristalinas.",
-      "description_2": "Nuestros guias certificados te acompanaran con explicaciones sobre historia natural, conservacion marina y tecnicas seguras de interaccion con la fauna.",
+      "title": "Una joya del Golfo de California",
+      "description_1": "La Isla Espiritu Santo es hogar de una de las colonias de lobos marinos mas grandes del Golfo de California. Aqui viviras un encuentro responsable y guiado con estos animales en aguas cristalinas, dentro de un entorno natural unico.",
+      "description_2": "Nuestros guias especializados te acompanaran durante la experiencia, compartiendo conocimientos sobre historia natural, conservacion marina y buenas practicas para interactuar con la fauna de forma respetuosa.",
       "image_alt": "Picnic en playa de Isla Espiritu Santo",
       "departure_title": "Punto de Salida",
-      "departure_text": "Marina de La Paz - Salida a las 8:00 AM",
+      "departure_text": "Muelle fiscal de La Paz",
       "duration_title": "Duracion Total",
-      "duration_text": "6 horas aproximadamente: navegacion, snorkel, picnic y exploracion",
-      "group_title": "Grupo Reducido",
-      "group_text": "Maximo 10 personas para experiencia personalizada"
+      "duration_text": "6 horas aproximadamente",
+      "group_title": "Incluye",
+      "group_text": "Navegacion, visita a la lobera, snorkel y picnic"
     },
     "itinerary": {
       "title": "Itinerario del dia",
       "subtitle": "Una aventura completa por el paraiso del Mar de Cortes.",
       "step1_title": "Salida desde La Paz",
-      "step1_text": "Nos encontramos en la Marina de La Paz a las 8:00 AM. Zarpamos con el sol de la manana y navegamos hacia el norte por el Mar de Cortes, disfrutando de vistas espectaculares.",
+      "step1_text": "Nos encontramos en el Muelle fiscal de La Paz, zarpamos con el sol de la manana y navegamos hacia el norte por las aguas del Golfo de California, rodeados de paisajes espectaculares.",
       "step2_title": "Nado con Lobos Marinos",
-      "step2_text": "Llegamos a Los Islotes, hogar de mas de 400 lobos marinos. Te proporcionamos equipo de snorkel y te acompanamos al agua. Los lobos son curiosos y juguetones, una experiencia unica e inolvidable!",
-      "step2_note": "Nota: Del 1 de junio al 31 de agosto (temporada de cria) no se permite nadar; solo observacion desde la embarcacion.",
-      "step3_title": "Playa Ensenada Grande",
-      "step3_text": "Navegamos hacia una de las playas mas hermosas de Mexico. Arena blanca, agua turquesa cristalina, y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte en este paraiso.",
-      "step4_title": "Picnic Gourmet",
-      "step4_text": "Disfrutamos de un delicioso almuerzo tipo picnic con ceviche fresco, tostadas, fruta de temporada y bebidas. Todo servido con vistas al paraiso.",
+      "step2_text": "Llegamos a Los Islotes, hogar de una de las colonias mas grandes de lobos marinos en el Golfo de California. Te proporcionamos el equipo necesario y te acompanamos durante la actividad para vivir un encuentro respetuoso y emocionante con estos animales curiosos y juguetones, en un entorno natural unico.",
+      "step2_note": "Nota: Del 1 de junio al 31 de agosto (temporada de cria) no se permite nadar; la experiencia se realiza mediante observacion desde la embarcacion.",
+      "step3_title": "Parada en una playa del archipielago",
+      "step3_text": "Navegamos hacia una de las playas del archipielago. Arena clara, agua turquesa y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte y disfrutar de este paraiso.",
+      "step4_title": "Picnic en la playa",
+      "step4_text": "Disfrutamos de un almuerzo tipo picnic con ceviche fresco, tostadas, fruta de temporada y bebidas. Sabores locales servidos en un escenario natural inigualable.",
       "step5_title": "Regreso a La Paz",
-      "step5_text": "Navegamos de regreso con el corazon lleno y la camara repleta de recuerdos. Llegada aproximada a las 2:00 PM - 3:00 PM. Te compartimos todas las fotos y videos del dia."
+      "step5_text": "Emprendemos el regreso navegando en el atardecer, la camara llena de recuerdos y la experiencia aun fresca. Te compartimos las fotos y videos del dia."
     },
     "includes": {
       "title": "Que incluye tu experiencia?",
       "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
-      "boat_title": "Transporte en Lancha",
-      "boat_text": "Desde Marina de La Paz ida y vuelta",
-      "guide_title": "Guia Certificado",
-      "guide_text": "Biologo marino bilingue",
-      "snorkel_title": "Equipo de Snorkel",
-      "snorkel_text": "Visor, aletas y chaleco salvavidas",
-      "picnic_title": "Picnic Gourmet",
-      "picnic_text": "Ceviche fresco, tostadas, fruta y bebidas",
-      "photos_title": "Fotos y Videos",
-      "photos_text": "Profesionales de tu experiencia",
-      "park_title": "Permiso de Parque",
-      "park_text": "Parque Nacional incluido"
+      "boat_title": "Transporte en lancha",
+      "boat_text": "Salida y regreso desde el Muelle fiscal de La Paz.",
+      "guide_title": "Guia certificado",
+      "guide_text": "Equipo especializado bilingue que te acompana y comparte el conocimiento del lugar.",
+      "snorkel_title": "Equipo de snorkel",
+      "snorkel_text": "Visor, aletas y chaleco salvavidas para explorar con tranquilidad.",
+      "picnic_title": "Picnic en la playa",
+      "picnic_text": "Ceviche fresco, tostadas, fruta de temporada y bebidas para disfrutar en plena naturaleza.",
+      "photos_title": "Fotos y videos",
+      "photos_text": "Recuerdos autenticos de tu aventura, capturados en el momento.",
+      "park_title": "Permiso del parque",
+      "park_text": "Acceso autorizado al Parque Nacional, incluido."
     },
     "pricing": {
       "title": "Opciones de Tour",
       "subtitle": "Elige la experiencia que mejor se adapte a tu estilo de viaje.",
       "standard": {
         "name": "Tour Estandar",
-        "type": "Compartido en panga",
-        "price": "$2,200",
+        "type": "Experiencia compartida en panga",
+        "price": "$1,800",
         "currency": "MXN",
         "per": "por persona",
         "features": [
           "Transporte en panga compartida",
-          "Guia biologo marino",
-          "Equipo completo de snorkel",
-          "Picnic gourmet incluido",
-          "Fotos y videos del tour",
-          "Maximo 10 personas"
+          "Acompanamiento de guia certificado",
+          "Equipo de snorkel incluido",
+          "Picnic en la playa incluido",
+          "Fotos y videos de tu aventura"
         ],
         "cta": "Reservar"
       },
       "sailboat": {
         "badge": "PRIVADO",
         "name": "Tour en Velero",
-        "type": "Velero privado 40 pies",
+        "type": "Velero privado de 40 pies",
         "price": "Desde $16,000",
         "currency": "MXN",
-        "per": "hasta 8 personas",
+        "per": "Hasta 6 personas, costo extra por adulto o menor",
         "features": [
-          "Todo lo del tour estandar +",
-          "Velero privado de lujo",
-          "Capitan y tripulacion dedicada",
-          "Itinerario flexible",
-          "Experiencia de navegacion a vela",
-          "Maxima privacidad y confort"
+          "Todo lo incluido en el tour estandar +",
+          "Velero privado",
+          "Capitan y marinero",
+          "Kayak",
+          "Tapete de agua",
+          "Opciones de menu a elegir"
         ],
-        "cta": "Consultar Disponibilidad"
+        "cta": "Reservar"
       },
       "yacht": {
         "badge": "PREMIUM",
         "name": "Tour en Yate",
         "type": "Flota de yates disponibles",
-        "price": "Consultar",
-        "per": "precio segun embarcacion",
+        "price": "Desde $30,000",
+        "currency": "MXN",
+        "per": "Precio segun la embarcacion",
         "features": [
-          "Todo lo anterior +",
-          "Yates de lujo de 40-70 pies",
-          "Servicio completo de catering",
-          "Tripulacion profesional completa",
-          "Amenidades de primera clase",
+          "Todo lo incluido en las opciones anteriores +",
+          "Yates de lujo (40-70 pies)",
+          "Servicio de catering a bordo",
+          "Tripulacion",
           "Experiencia VIP personalizada"
         ],
-        "cta": "Preguntar por la Flota"
+        "cta": "Consulta con un asesor"
       }
     },
     "testimonials": {
@@ -129,8 +128,8 @@
       ]
     },
     "cta": {
-      "title": "Listo para vivir el acuario del mundo?",
-      "description": "La Isla Espiritu Santo te espera con sus aguas cristalinas, playas virgenes y vida marina increible.",
+      "title": "Listo para explorar el acuario del mundo?",
+      "description": "La Isla Espiritu Santo te espera con aguas cristalinas, playas virgenes y encuentros inolvidables con la vida marina.",
       "cta_primary": "Reserva tu aventura ahora",
       "cta_secondary": "Ver mas expediciones"
     },
@@ -152,64 +151,63 @@
       "image_alt": "Espiritu Santo Island - Natural paradise"
     },
     "about": {
-      "title": "A jewel of the Sea of Cortez",
-      "description_1": "Espiritu Santo Island is home to the largest colony of California sea lions in the Gulf. Here you will enjoy a responsible, safe and guided encounter with these animals in crystal-clear waters.",
-      "description_2": "Our certified guides will accompany you with explanations about natural history, marine conservation and safe techniques for interacting with wildlife.",
+      "title": "A jewel of the Gulf of California",
+      "description_1": "Espiritu Santo Island is home to one of the largest sea lion colonies in the Gulf of California. Here you will enjoy a responsible and guided encounter with these animals in crystal-clear waters, within a unique natural environment.",
+      "description_2": "Our specialized guides will accompany you throughout the experience, sharing knowledge about natural history, marine conservation and best practices for respectful interaction with wildlife.",
       "image_alt": "Picnic on Espiritu Santo Island beach",
       "departure_title": "Departure Point",
-      "departure_text": "La Paz Marina - Departure at 8:00 AM",
+      "departure_text": "La Paz Fiscal Pier",
       "duration_title": "Total Duration",
-      "duration_text": "Approximately 6 hours: sailing, snorkeling, picnic and exploration",
-      "group_title": "Small Group",
-      "group_text": "Maximum 10 people for a personalized experience"
+      "duration_text": "Approximately 6 hours",
+      "group_title": "Includes",
+      "group_text": "Navigation, sea lion colony visit, snorkeling and picnic"
     },
     "itinerary": {
       "title": "Day itinerary",
       "subtitle": "A complete adventure through the Sea of Cortez paradise.",
       "step1_title": "Departure from La Paz",
-      "step1_text": "We meet at La Paz Marina at 8:00 AM. We set sail with the morning sun and navigate north through the Sea of Cortez, enjoying spectacular views.",
+      "step1_text": "We meet at the La Paz Fiscal Pier, set sail with the morning sun and navigate north through the waters of the Gulf of California, surrounded by spectacular landscapes.",
       "step2_title": "Swimming with Sea Lions",
-      "step2_text": "We arrive at Los Islotes, home to over 400 sea lions. We provide you with snorkel gear and accompany you into the water. The sea lions are curious and playful — a unique and unforgettable experience!",
-      "step2_note": "Note: From June 1 to August 31 (breeding season) swimming is not permitted; observation from the boat only.",
-      "step3_title": "Ensenada Grande Beach",
-      "step3_text": "We sail to one of Mexico's most beautiful beaches. White sand, crystal-clear turquoise water, and impressive rock formations. Time to swim, snorkel or simply relax in this paradise.",
-      "step4_title": "Gourmet Picnic",
-      "step4_text": "We enjoy a delicious picnic-style lunch with fresh ceviche, tostadas, seasonal fruit and drinks. All served with views of paradise.",
+      "step2_text": "We arrive at Los Islotes, home to one of the largest sea lion colonies in the Gulf of California. We provide you with the necessary gear and accompany you throughout the activity for a respectful and exciting encounter with these curious and playful animals, in a unique natural setting.",
+      "step2_note": "Note: From June 1 to August 31 (breeding season) swimming is not permitted; the experience is conducted through observation from the boat.",
+      "step3_title": "Stop at an archipelago beach",
+      "step3_text": "We sail to one of the archipelago's beaches. Light sand, turquoise water and impressive rock formations. Time to swim, snorkel or simply relax and enjoy this paradise.",
+      "step4_title": "Beach picnic",
+      "step4_text": "We enjoy a picnic-style lunch with fresh ceviche, tostadas, seasonal fruit and drinks. Local flavors served in an unmatched natural setting.",
       "step5_title": "Return to La Paz",
-      "step5_text": "We sail back with full hearts and cameras packed with memories. Approximate arrival at 2:00 PM - 3:00 PM. We share all photos and videos of the day with you."
+      "step5_text": "We head back sailing into the sunset, cameras full of memories and the experience still fresh. We share the photos and videos of the day with you."
     },
     "includes": {
       "title": "What's included in your experience?",
       "subtitle": "Everything you need for a safe, comfortable and memorable adventure.",
-      "boat_title": "Boat Transportation",
-      "boat_text": "Round trip from La Paz Marina",
-      "guide_title": "Certified Guide",
-      "guide_text": "Bilingual marine biologist",
-      "snorkel_title": "Snorkel Gear",
-      "snorkel_text": "Mask, fins and life vest",
-      "picnic_title": "Gourmet Picnic",
-      "picnic_text": "Fresh ceviche, tostadas, fruit and drinks",
-      "photos_title": "Photos and Videos",
-      "photos_text": "Professional documentation of your experience",
-      "park_title": "Park Permit",
-      "park_text": "National Park fee included"
+      "boat_title": "Boat transportation",
+      "boat_text": "Departure and return from the La Paz Fiscal Pier.",
+      "guide_title": "Certified guide",
+      "guide_text": "Bilingual specialized team that accompanies you and shares knowledge of the area.",
+      "snorkel_title": "Snorkel gear",
+      "snorkel_text": "Mask, fins and life vest to explore with peace of mind.",
+      "picnic_title": "Beach picnic",
+      "picnic_text": "Fresh ceviche, tostadas, seasonal fruit and drinks to enjoy in nature.",
+      "photos_title": "Photos and videos",
+      "photos_text": "Authentic memories of your adventure, captured in the moment.",
+      "park_title": "Park permit",
+      "park_text": "Authorized access to the National Park, included."
     },
     "pricing": {
       "title": "Tour Options",
       "subtitle": "Choose the experience that best suits your travel style.",
       "standard": {
         "name": "Standard Tour",
-        "type": "Shared panga boat",
-        "price": "$2,200",
+        "type": "Shared panga experience",
+        "price": "$1,800",
         "currency": "MXN",
         "per": "per person",
         "features": [
           "Shared panga boat transportation",
-          "Marine biologist guide",
-          "Complete snorkel gear",
-          "Gourmet picnic included",
-          "Tour photos and videos",
-          "Maximum 10 people"
+          "Certified guide accompaniment",
+          "Snorkel gear included",
+          "Beach picnic included",
+          "Photos and videos of your adventure"
         ],
         "cta": "Book Now"
       },
@@ -219,32 +217,32 @@
         "type": "Private 40-foot sailboat",
         "price": "From $16,000",
         "currency": "MXN",
-        "per": "up to 8 people",
+        "per": "Up to 6 people, extra cost per adult or child",
         "features": [
           "Everything in the standard tour +",
-          "Luxury private sailboat",
-          "Dedicated captain and crew",
-          "Flexible itinerary",
-          "Sailing experience",
-          "Maximum privacy and comfort"
+          "Private sailboat",
+          "Captain and sailor",
+          "Kayak",
+          "Water mat",
+          "Menu options to choose from"
         ],
-        "cta": "Check Availability"
+        "cta": "Book Now"
       },
       "yacht": {
         "badge": "PREMIUM",
         "name": "Yacht Tour",
         "type": "Yacht fleet available",
-        "price": "Inquire",
-        "per": "price depends on vessel",
+        "price": "From $30,000",
+        "currency": "MXN",
+        "per": "Price depends on vessel",
         "features": [
-          "Everything above +",
-          "Luxury yachts from 40-70 feet",
-          "Full catering service",
-          "Complete professional crew",
-          "First-class amenities",
+          "Everything from previous options +",
+          "Luxury yachts (40-70 feet)",
+          "Onboard catering service",
+          "Crew",
           "Personalized VIP experience"
         ],
-        "cta": "Ask About the Fleet"
+        "cta": "Consult an advisor"
       }
     },
     "testimonials": {
@@ -268,8 +266,8 @@
       ]
     },
     "cta": {
-      "title": "Ready to experience the aquarium of the world?",
-      "description": "Espiritu Santo Island awaits you with its crystal-clear waters, pristine beaches and incredible marine life.",
+      "title": "Ready to explore the aquarium of the world?",
+      "description": "Espiritu Santo Island awaits you with crystal-clear waters, pristine beaches and unforgettable encounters with marine life.",
       "cta_primary": "Book your adventure now",
       "cta_secondary": "See more expeditions"
     },
@@ -291,16 +289,16 @@
       "image_alt": "Ile Espiritu Santo - Paradis naturel"
     },
     "about": {
-      "title": "Un joyau de la mer de Cortez",
-      "description_1": "L'ile Espiritu Santo abrite la plus grande colonie de lions de mer de Californie dans le Golfe. Ici, vous vivrez une rencontre responsable, sure et guidee avec ces animaux dans des eaux cristallines.",
-      "description_2": "Nos guides certifies vous accompagneront avec des explications sur l'histoire naturelle, la conservation marine et les techniques sures d'interaction avec la faune.",
+      "title": "Un joyau du Golfe de Californie",
+      "description_1": "L'ile Espiritu Santo abrite l'une des plus grandes colonies de lions de mer du Golfe de Californie. Ici, vous vivrez une rencontre responsable et guidee avec ces animaux dans des eaux cristallines, dans un environnement naturel unique.",
+      "description_2": "Nos guides specialises vous accompagneront tout au long de l'experience, partageant leurs connaissances sur l'histoire naturelle, la conservation marine et les bonnes pratiques d'interaction respectueuse avec la faune.",
       "image_alt": "Pique-nique sur la plage de l'ile Espiritu Santo",
       "departure_title": "Point de Depart",
-      "departure_text": "Marina de La Paz - Depart a 8h00",
+      "departure_text": "Quai fiscal de La Paz",
       "duration_title": "Duree Totale",
-      "duration_text": "Environ 6 heures : navigation, snorkeling, pique-nique et exploration",
-      "group_title": "Petit Groupe",
-      "group_text": "Maximum 10 personnes pour une experience personnalisee"
+      "duration_text": "Environ 6 heures",
+      "group_title": "Comprend",
+      "group_text": "Navigation, visite de la colonie de lions de mer, snorkeling et pique-nique"
     },
     "itinerary": {
       "title": "Itineraire de la journee",
@@ -338,17 +336,16 @@
       "subtitle": "Choisissez l'experience qui convient le mieux a votre style de voyage.",
       "standard": {
         "name": "Tour Standard",
-        "type": "Panga partagee",
-        "price": "$2,200",
+        "type": "Experience partagee en panga",
+        "price": "$1,800",
         "currency": "MXN",
         "per": "par personne",
         "features": [
           "Transport en panga partagee",
-          "Guide biologiste marin",
-          "Equipement complet de snorkeling",
-          "Pique-nique gastronomique inclus",
-          "Photos et videos du tour",
-          "Maximum 10 personnes"
+          "Accompagnement d'un guide certifie",
+          "Equipement de snorkeling inclus",
+          "Pique-nique sur la plage inclus",
+          "Photos et videos de votre aventure"
         ],
         "cta": "Reserver"
       },
@@ -358,32 +355,32 @@
         "type": "Voilier prive de 40 pieds",
         "price": "A partir de $16,000",
         "currency": "MXN",
-        "per": "jusqu'a 8 personnes",
+        "per": "Jusqu'a 6 personnes, supplement par adulte ou enfant",
         "features": [
           "Tout le tour standard +",
-          "Voilier prive de luxe",
-          "Capitaine et equipage dedies",
-          "Itineraire flexible",
-          "Experience de navigation a voile",
-          "Intimite et confort maximaux"
+          "Voilier prive",
+          "Capitaine et matelot",
+          "Kayak",
+          "Tapis de flottaison",
+          "Options de menu au choix"
         ],
-        "cta": "Verifier la Disponibilite"
+        "cta": "Reserver"
       },
       "yacht": {
         "badge": "PREMIUM",
         "name": "Tour en Yacht",
         "type": "Flotte de yachts disponible",
-        "price": "Sur demande",
-        "per": "prix selon l'embarcation",
+        "price": "A partir de $30,000",
+        "currency": "MXN",
+        "per": "Prix selon l'embarcation",
         "features": [
-          "Tout ce qui precede +",
-          "Yachts de luxe de 40 a 70 pieds",
-          "Service traiteur complet",
-          "Equipage professionnel complet",
-          "Commodites de premiere classe",
+          "Tout des options precedentes +",
+          "Yachts de luxe (40-70 pieds)",
+          "Service traiteur a bord",
+          "Equipage",
           "Experience VIP personnalisee"
         ],
-        "cta": "Renseignez-vous sur la Flotte"
+        "cta": "Consultez un conseiller"
       }
     },
     "testimonials": {
@@ -430,16 +427,16 @@
       "image_alt": "Espiritu Santo 岛 - 自然天堂"
     },
     "about": {
-      "title": "科尔特斯海的瑰宝",
-      "description_1": "Espiritu Santo 岛是海湾中最大的加利福尼亚海狮栖息地。在这里，您将在清澈的水域中与这些动物进行负责任、安全且有导游陪伴的亲密接触。",
-      "description_2": "我们的认证导游将为您讲解自然历史、海洋保护知识以及与野生动物互动的安全技巧。",
+      "title": "加利福尼亚湾的瑰宝",
+      "description_1": "Espiritu Santo 岛是加利福尼亚湾最大的海狮栖息地之一。在这里，您将在独特的自然环境中，在清澈的水域中与这些动物进行负责任的导游陪同亲密接触。",
+      "description_2": "我们的专业导游将全程陪伴您，分享自然历史、海洋保护知识以及与野生动物尊重互动的最佳实践。",
       "image_alt": "Espiritu Santo 岛海滩野餐",
       "departure_title": "出发地点",
-      "departure_text": "La Paz 码头 - 上午 8:00 出发",
+      "departure_text": "La Paz 财政码头",
       "duration_title": "总时长",
-      "duration_text": "约 6 小时：航行、浮潜、野餐和探索",
-      "group_title": "小团体",
-      "group_text": "最多 10 人，提供个性化体验"
+      "duration_text": "约 6 小时",
+      "group_title": "包含",
+      "group_text": "航行、海狮栖息地参观、浮潜和野餐"
     },
     "itinerary": {
       "title": "当日行程",
@@ -477,17 +474,16 @@
       "subtitle": "选择最适合您旅行风格的体验。",
       "standard": {
         "name": "标准旅游",
-        "type": "共享快艇",
-        "price": "$2,200",
+        "type": "共享快艇体验",
+        "price": "$1,800",
         "currency": "MXN",
         "per": "每人",
         "features": [
           "共享快艇交通",
-          "海洋生物学家导游",
-          "全套浮潜装备",
-          "包含美食野餐",
-          "旅游照片和视频",
-          "最多 10 人"
+          "认证导游陪同",
+          "浮潜装备已含",
+          "海滩野餐已含",
+          "冒险照片和视频"
         ],
         "cta": "立即预订"
       },
@@ -497,32 +493,32 @@
         "type": "40 英尺私人帆船",
         "price": "起价 $16,000",
         "currency": "MXN",
-        "per": "最多 8 人",
+        "per": "最多 6 人，额外成人或儿童需加费",
         "features": [
           "包含标准旅游所有内容 +",
-          "豪华私人帆船",
-          "专属船长和船员",
-          "灵活行程",
-          "帆船航行体验",
-          "最大隐私和舒适度"
+          "私人帆船",
+          "船长和水手",
+          "皮划艇",
+          "水上浮垫",
+          "可选菜单"
         ],
-        "cta": "查询可用性"
+        "cta": "立即预订"
       },
       "yacht": {
         "badge": "尊享",
         "name": "游艇之旅",
         "type": "游艇船队可供选择",
-        "price": "请咨询",
+        "price": "起价 $30,000",
+        "currency": "MXN",
         "per": "价格取决于船只",
         "features": [
-          "包含以上所有内容 +",
-          "40-70 英尺豪华游艇",
-          "全套餐饮服务",
-          "完整专业船员",
-          "一流设施",
+          "包含以上所有选项 +",
+          "豪华游艇（40-70 英尺）",
+          "船上餐饮服务",
+          "船员",
           "个性化 VIP 体验"
         ],
-        "cta": "咨询船队详情"
+        "cta": "咨询顾问"
       }
     },
     "testimonials": {

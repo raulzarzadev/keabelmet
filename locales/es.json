@@ -188,6 +188,35 @@
     "btn1": "Reservar Safari La Ventana",
     "btn2": "Ve ballenas por primera vez"
   },
+  "googleReviews": {
+    "title": "Lo que dicen en Google",
+    "subtitle": "Resenas reales de nuestros aventureros",
+    "overallRating": "4.9",
+    "totalReviews": "50+",
+    "reviews": [
+      {
+        "name": "Ana Lopez",
+        "rating": 5,
+        "date": "Hace 1 mes",
+        "text": "Experiencia increible con Keabelmet. Los guias son muy profesionales y el trato es excelente. Nadamos con lobos marinos y fue magico. 100% recomendado."
+      },
+      {
+        "name": "Roberto Diaz",
+        "rating": 5,
+        "date": "Hace 2 semanas",
+        "text": "El safari en Bahia Magdalena fue lo mejor de nuestro viaje. Vimos marlines, lobos marinos y el equipo nos hizo sentir seguros en todo momento."
+      },
+      {
+        "name": "Patricia Hernandez",
+        "rating": 5,
+        "date": "Hace 3 semanas",
+        "text": "Las fotos y videos que nos entregaron son espectaculares. Se nota que aman lo que hacen. Definitivamente volveremos el proximo ano."
+      }
+    ],
+    "ctaAll": "Ver todas en Google",
+    "ctaLeave": "Deja tu resena",
+    "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
+  },
   "language": {
     "label": "Idioma",
     "es": "Espanol",

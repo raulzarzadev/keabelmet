@@ -188,6 +188,20 @@
     "btn1": "Book La Ventana Safari",
     "btn2": "See whales for the first time"
   },
+  "googleReviews": {
+    "title": "What they say on Google",
+    "subtitle": "Real reviews from our adventurers",
+    "overallRating": "4.9",
+    "totalReviews": "50+",
+    "reviews": [
+      { "name": "Ana Lopez", "rating": 5, "date": "1 month ago", "text": "Incredible experience with Keabelmet. The guides are very professional and the service is excellent. We swam with sea lions and it was magical. 100% recommended." },
+      { "name": "Roberto Diaz", "rating": 5, "date": "2 weeks ago", "text": "The safari in Bahia Magdalena was the highlight of our trip. We saw marlins, sea lions, and the team made us feel safe the entire time." },
+      { "name": "Patricia Hernandez", "rating": 5, "date": "3 weeks ago", "text": "The photos and videos they delivered are spectacular. You can tell they love what they do. We will definitely come back next year." }
+    ],
+    "ctaAll": "See all on Google",
+    "ctaLeave": "Leave a review",
+    "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
+  },
   "language": {
     "label": "Language",
     "es": "Espanol",

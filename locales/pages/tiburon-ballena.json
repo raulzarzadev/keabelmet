@@ -1,0 +1,490 @@
+{
+  "es": {
+    "meta": {
+      "title": "Nado con Tiburon Ballena en La Paz",
+      "description": "Nada con el pez mas grande del mundo en La Paz, Baja California Sur. Experiencia responsable guiada por expertos en aguas protegidas del Golfo de California."
+    },
+    "hero": {
+      "badge": "Temporada Oct - Abr",
+      "title": "Tiburon Ballena: Nada con el pez mas grande del mundo",
+      "description": "El nado con tiburon ballena es una de las experiencias marinas mas emblematicas de La Paz, Baja California Sur. Cada temporada, estos gigantes del mar llegan a las aguas tranquilas de la bahia, creando una oportunidad unica para observarlos y nadar junto a ellos de manera responsable.",
+      "cta_primary": "Reserva tu aventura",
+      "cta_secondary": "Ver detalles",
+      "image_alt": "Tiburon ballena nadando en las aguas de La Paz"
+    },
+    "about": {
+      "title": "Nada con el pez mas grande del mundo",
+      "description_1": "El nado con tiburon ballena es una de las experiencias marinas mas emblematicas de La Paz, Baja California Sur. Cada temporada, estos gigantes del mar llegan a las aguas tranquilas de la bahia, creando una oportunidad unica para observarlos y nadar junto a ellos de manera responsable, siempre bajo lineamientos oficiales y con operadores autorizados.",
+      "description_2": "Nuestros guias especializados te acompanaran durante toda la experiencia, compartiendo informacion sobre la especie, su importancia ecologica y las buenas practicas para disfrutar este encuentro con respeto y conciencia.",
+      "image_alt": "Nado con tiburon ballena en La Paz",
+      "departure_title": "Punto de Salida",
+      "departure_text": "Muelle fiscal de La Paz",
+      "duration_title": "Duracion Total",
+      "duration_text": "2 horas aproximadamente",
+      "group_title": "Incluye",
+      "group_text": "Navegacion, busqueda, encuentro en agua con tiburon ballena y snack ligero"
+    },
+    "itinerary": {
+      "title": "Itinerario del dia",
+      "subtitle": "Una aventura inolvidable con el pez mas grande del mundo.",
+      "step1_title": "Salida desde La Paz",
+      "step1_text": "Nos encontramos en el Muelle fiscal de La Paz y salimos temprano rumbo a la zona autorizada de observacion. Durante la navegacion, nuestro equipo te dara una breve introduccion sobre la experiencia, el uso del equipo y las reglas para realizar la actividad de manera responsable.",
+      "step2_title": "Busqueda y localizacion",
+      "step2_text": "Navegamos dentro del area permitida en busca de tiburon ballena, siguiendo los protocolos establecidos por las autoridades y respetando los turnos y tiempos autorizados para cada embarcacion. En La Paz, el acceso a la zona de nado y observacion esta regulado y solo pueden ingresar embarcaciones con permiso vigente.",
+      "step2_note": "Nota: Actividad disponible unicamente en temporada oficial, generalmente de octubre a abril, las fechas exactas pueden variar cada ano.",
+      "step3_title": "Parada en una playa del archipielago",
+      "step3_text": "Navegamos hacia una de las playas del archipielago. Arena clara, agua turquesa y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte y disfrutar de este paraiso.",
+      "step4_title": "Picnic en la playa",
+      "step4_text": "Disfrutamos de un almuerzo tipo picnic con ceviche fresco, tostadas, fruta de temporada y bebidas. Sabores locales servidos en un escenario natural inigualable.",
+      "step5_title": "Regreso a La Paz",
+      "step5_text": "Emprendemos el regreso navegando en el atardecer, la camara llena de recuerdos y la experiencia aun fresca. Te compartimos las fotos y videos del dia."
+    },
+    "includes": {
+      "title": "Que incluye tu experiencia?",
+      "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
+      "boat_title": "Transporte en lancha",
+      "boat_text": "Salida y regreso desde el Muelle fiscal de La Paz.",
+      "guide_title": "Guia certificado",
+      "guide_text": "Equipo especializado bilingue que te acompana y comparte el conocimiento del lugar.",
+      "snorkel_title": "Equipo de snorkel",
+      "snorkel_text": "Visor, aletas y chaleco salvavidas para explorar con tranquilidad.",
+      "picnic_title": "Picnic en la playa",
+      "picnic_text": "Ceviche fresco, tostadas, fruta de temporada y bebidas para disfrutar en plena naturaleza.",
+      "photos_title": "Fotos y videos",
+      "photos_text": "Recuerdos autenticos de tu aventura, capturados en el momento.",
+      "park_title": "Permiso del parque",
+      "park_text": "Acceso autorizado al Parque Nacional, incluido."
+    },
+    "pricing": {
+      "title": "Opciones de Tour",
+      "subtitle": "Elige la experiencia que mejor se adapte a tu estilo de viaje.",
+      "standard": {
+        "name": "Tour Estandar",
+        "type": "Experiencia compartida en panga",
+        "price": "$1,800",
+        "currency": "MXN",
+        "per": "por persona",
+        "features": [
+          "Transporte en panga compartida",
+          "Acompanamiento de guia certificado",
+          "Equipo de snorkel incluido",
+          "Picnic en la playa incluido",
+          "Fotos y videos de tu aventura"
+        ],
+        "cta": "Reservar"
+      },
+      "sailboat": {
+        "badge": "PRIVADO",
+        "name": "Tour en Velero",
+        "type": "Velero privado de 40 pies",
+        "price": "Desde $16,000",
+        "currency": "MXN",
+        "per": "Hasta 6 personas, costo extra por adulto o menor",
+        "features": [
+          "Todo lo incluido en el tour estandar +",
+          "Velero privado",
+          "Capitan y marinero",
+          "Kayak",
+          "Tapete de agua",
+          "Opciones de menu a elegir"
+        ],
+        "cta": "Reservar"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Tour en Yate",
+        "type": "Flota de yates disponibles",
+        "price": "Desde $30,000",
+        "currency": "MXN",
+        "per": "Precio segun la embarcacion",
+        "features": [
+          "Todo lo incluido en las opciones anteriores +",
+          "Yates de lujo (40-70 pies)",
+          "Servicio de catering a bordo",
+          "Tripulacion",
+          "Experiencia VIP personalizada"
+        ],
+        "cta": "Consulta con un asesor"
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros viajeros",
+      "items": []
+    },
+    "cta": {
+      "title": "Listo para nadar con el pez mas grande del mundo?",
+      "description": "El tiburon ballena te espera en las aguas de La Paz. Una experiencia unica, responsable e inolvidable.",
+      "cta_primary": "Reserva tu aventura ahora",
+      "cta_secondary": "Ver mas expediciones"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Todos los derechos reservados."
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Whale Shark Swimming in La Paz",
+      "description": "Swim with the largest fish in the world in La Paz, Baja California Sur. A responsible experience guided by experts in the protected waters of the Gulf of California."
+    },
+    "hero": {
+      "badge": "Season Oct - Apr",
+      "title": "Whale Shark: Swim with the largest fish in the world",
+      "description": "Swimming with whale sharks is one of the most iconic marine experiences in La Paz, Baja California Sur. Each season, these ocean giants arrive in the calm waters of the bay, creating a unique opportunity to observe and swim alongside them responsibly.",
+      "cta_primary": "Book your adventure",
+      "cta_secondary": "See details",
+      "image_alt": "Whale shark swimming in the waters of La Paz"
+    },
+    "about": {
+      "title": "Swim with the largest fish in the world",
+      "description_1": "Swimming with whale sharks is one of the most iconic marine experiences in La Paz, Baja California Sur. Each season, these ocean giants arrive in the calm waters of the bay, creating a unique opportunity to observe and swim alongside them responsibly, always following official guidelines and with authorized operators.",
+      "description_2": "Our specialized guides will accompany you throughout the entire experience, sharing information about the species, its ecological importance and best practices for enjoying this encounter with respect and awareness.",
+      "image_alt": "Swimming with whale sharks in La Paz",
+      "departure_title": "Departure Point",
+      "departure_text": "La Paz Fiscal Pier",
+      "duration_title": "Total Duration",
+      "duration_text": "Approximately 2 hours",
+      "group_title": "Includes",
+      "group_text": "Navigation, search, in-water encounter with whale shark and light snack"
+    },
+    "itinerary": {
+      "title": "Day itinerary",
+      "subtitle": "An unforgettable adventure with the largest fish in the world.",
+      "step1_title": "Departure from La Paz",
+      "step1_text": "We meet at the La Paz Fiscal Pier and head out early toward the authorized observation zone. During the navigation, our team will give you a brief introduction about the experience, equipment use and rules for conducting the activity responsibly.",
+      "step2_title": "Search and location",
+      "step2_text": "We navigate within the permitted area searching for whale sharks, following protocols established by the authorities and respecting the authorized turns and times for each vessel. In La Paz, access to the swimming and observation zone is regulated and only vessels with current permits may enter.",
+      "step2_note": "Note: Activity available only during the official season, generally from October to April; exact dates may vary each year.",
+      "step3_title": "Stop at an archipelago beach",
+      "step3_text": "We sail to one of the archipelago's beaches. Light sand, turquoise water and impressive rock formations. Time to swim, snorkel or simply relax and enjoy this paradise.",
+      "step4_title": "Beach picnic",
+      "step4_text": "We enjoy a picnic-style lunch with fresh ceviche, tostadas, seasonal fruit and drinks. Local flavors served in an unmatched natural setting.",
+      "step5_title": "Return to La Paz",
+      "step5_text": "We head back sailing into the sunset, cameras full of memories and the experience still fresh. We share the photos and videos of the day with you."
+    },
+    "includes": {
+      "title": "What's included in your experience?",
+      "subtitle": "Everything you need for a safe, comfortable and memorable adventure.",
+      "boat_title": "Boat transportation",
+      "boat_text": "Departure and return from the La Paz Fiscal Pier.",
+      "guide_title": "Certified guide",
+      "guide_text": "Bilingual specialized team that accompanies you and shares knowledge of the area.",
+      "snorkel_title": "Snorkel gear",
+      "snorkel_text": "Mask, fins and life vest to explore with peace of mind.",
+      "picnic_title": "Beach picnic",
+      "picnic_text": "Fresh ceviche, tostadas, seasonal fruit and drinks to enjoy in nature.",
+      "photos_title": "Photos and videos",
+      "photos_text": "Authentic memories of your adventure, captured in the moment.",
+      "park_title": "Park permit",
+      "park_text": "Authorized access to the National Park, included."
+    },
+    "pricing": {
+      "title": "Tour Options",
+      "subtitle": "Choose the experience that best suits your travel style.",
+      "standard": {
+        "name": "Standard Tour",
+        "type": "Shared panga experience",
+        "price": "$1,800",
+        "currency": "MXN",
+        "per": "per person",
+        "features": [
+          "Shared panga boat transportation",
+          "Certified guide accompaniment",
+          "Snorkel gear included",
+          "Beach picnic included",
+          "Photos and videos of your adventure"
+        ],
+        "cta": "Book Now"
+      },
+      "sailboat": {
+        "badge": "PRIVATE",
+        "name": "Sailboat Tour",
+        "type": "Private 40-foot sailboat",
+        "price": "From $16,000",
+        "currency": "MXN",
+        "per": "Up to 6 people, extra cost per adult or child",
+        "features": [
+          "Everything in the standard tour +",
+          "Private sailboat",
+          "Captain and sailor",
+          "Kayak",
+          "Water mat",
+          "Menu options to choose from"
+        ],
+        "cta": "Book Now"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Yacht Tour",
+        "type": "Yacht fleet available",
+        "price": "From $30,000",
+        "currency": "MXN",
+        "per": "Price depends on vessel",
+        "features": [
+          "Everything from previous options +",
+          "Luxury yachts (40-70 feet)",
+          "Onboard catering service",
+          "Crew",
+          "Personalized VIP experience"
+        ],
+        "cta": "Consult an advisor"
+      }
+    },
+    "testimonials": {
+      "title": "What our travelers say",
+      "items": []
+    },
+    "cta": {
+      "title": "Ready to swim with the largest fish in the world?",
+      "description": "The whale shark awaits you in the waters of La Paz. A unique, responsible and unforgettable experience.",
+      "cta_primary": "Book your adventure now",
+      "cta_secondary": "See more expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. All rights reserved."
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Nage avec le Requin Baleine a La Paz",
+      "description": "Nagez avec le plus grand poisson du monde a La Paz, Baja California Sur. Une experience responsable guidee par des experts dans les eaux protegees du Golfe de Californie."
+    },
+    "hero": {
+      "badge": "Saison Oct - Avr",
+      "title": "Requin Baleine : Nagez avec le plus grand poisson du monde",
+      "description": "La nage avec le requin baleine est l'une des experiences marines les plus emblematiques de La Paz, Baja California Sur. Chaque saison, ces geants des mers arrivent dans les eaux calmes de la baie, creant une opportunite unique de les observer et de nager a leurs cotes de maniere responsable.",
+      "cta_primary": "Reservez votre aventure",
+      "cta_secondary": "Voir les details",
+      "image_alt": "Requin baleine nageant dans les eaux de La Paz"
+    },
+    "about": {
+      "title": "Nagez avec le plus grand poisson du monde",
+      "description_1": "La nage avec le requin baleine est l'une des experiences marines les plus emblematiques de La Paz, Baja California Sur. Chaque saison, ces geants des mers arrivent dans les eaux calmes de la baie, creant une opportunite unique de les observer et de nager a leurs cotes de maniere responsable, toujours selon les directives officielles et avec des operateurs autorises.",
+      "description_2": "Nos guides specialises vous accompagneront tout au long de l'experience, partageant des informations sur l'espece, son importance ecologique et les bonnes pratiques pour profiter de cette rencontre avec respect et conscience.",
+      "image_alt": "Nage avec le requin baleine a La Paz",
+      "departure_title": "Point de Depart",
+      "departure_text": "Quai fiscal de La Paz",
+      "duration_title": "Duree Totale",
+      "duration_text": "Environ 2 heures",
+      "group_title": "Comprend",
+      "group_text": "Navigation, recherche, rencontre dans l'eau avec le requin baleine et collation legere"
+    },
+    "itinerary": {
+      "title": "Itineraire de la journee",
+      "subtitle": "Une aventure inoubliable avec le plus grand poisson du monde.",
+      "step1_title": "Depart de La Paz",
+      "step1_text": "Nous nous retrouvons au Quai fiscal de La Paz et partons tot vers la zone d'observation autorisee. Pendant la navigation, notre equipe vous donnera une breve introduction sur l'experience, l'utilisation de l'equipement et les regles pour realiser l'activite de maniere responsable.",
+      "step2_title": "Recherche et localisation",
+      "step2_text": "Nous naviguons dans la zone autorisee a la recherche du requin baleine, en suivant les protocoles etablis par les autorites et en respectant les tours et horaires autorises pour chaque embarcation. A La Paz, l'acces a la zone de nage et d'observation est reglemente et seules les embarcations avec un permis en cours de validite peuvent y acceder.",
+      "step2_note": "Note : Activite disponible uniquement en saison officielle, generalement d'octobre a avril ; les dates exactes peuvent varier chaque annee.",
+      "step3_title": "Arret sur une plage de l'archipel",
+      "step3_text": "Nous naviguons vers l'une des plages de l'archipel. Sable clair, eau turquoise et formations rocheuses impressionnantes. Temps pour nager, faire du snorkeling ou simplement se detendre et profiter de ce paradis.",
+      "step4_title": "Pique-nique sur la plage",
+      "step4_text": "Nous degustons un dejeuner pique-nique avec du ceviche frais, des tostadas, des fruits de saison et des boissons. Saveurs locales servies dans un cadre naturel incomparable.",
+      "step5_title": "Retour a La Paz",
+      "step5_text": "Nous prenons le chemin du retour en naviguant au coucher du soleil, l'appareil photo plein de souvenirs et l'experience encore fraiche. Nous partageons les photos et videos de la journee avec vous."
+    },
+    "includes": {
+      "title": "Que comprend votre experience ?",
+      "subtitle": "Tout le necessaire pour vivre une aventure sure, confortable et memorable.",
+      "boat_title": "Transport en bateau",
+      "boat_text": "Depart et retour depuis le Quai fiscal de La Paz.",
+      "guide_title": "Guide certifie",
+      "guide_text": "Equipe specialisee bilingue qui vous accompagne et partage ses connaissances du lieu.",
+      "snorkel_title": "Equipement de snorkeling",
+      "snorkel_text": "Masque, palmes et gilet de sauvetage pour explorer en toute tranquillite.",
+      "picnic_title": "Pique-nique sur la plage",
+      "picnic_text": "Ceviche frais, tostadas, fruits de saison et boissons a deguster en pleine nature.",
+      "photos_title": "Photos et videos",
+      "photos_text": "Souvenirs authentiques de votre aventure, captures sur le moment.",
+      "park_title": "Permis du parc",
+      "park_text": "Acces autorise au Parc National, inclus."
+    },
+    "pricing": {
+      "title": "Options de Tour",
+      "subtitle": "Choisissez l'experience qui convient le mieux a votre style de voyage.",
+      "standard": {
+        "name": "Tour Standard",
+        "type": "Experience partagee en panga",
+        "price": "$1,800",
+        "currency": "MXN",
+        "per": "par personne",
+        "features": [
+          "Transport en panga partagee",
+          "Accompagnement d'un guide certifie",
+          "Equipement de snorkeling inclus",
+          "Pique-nique sur la plage inclus",
+          "Photos et videos de votre aventure"
+        ],
+        "cta": "Reserver"
+      },
+      "sailboat": {
+        "badge": "PRIVE",
+        "name": "Tour en Voilier",
+        "type": "Voilier prive de 40 pieds",
+        "price": "A partir de $16,000",
+        "currency": "MXN",
+        "per": "Jusqu'a 6 personnes, supplement par adulte ou enfant",
+        "features": [
+          "Tout le tour standard +",
+          "Voilier prive",
+          "Capitaine et matelot",
+          "Kayak",
+          "Tapis de flottaison",
+          "Options de menu au choix"
+        ],
+        "cta": "Reserver"
+      },
+      "yacht": {
+        "badge": "PREMIUM",
+        "name": "Tour en Yacht",
+        "type": "Flotte de yachts disponible",
+        "price": "A partir de $30,000",
+        "currency": "MXN",
+        "per": "Prix selon l'embarcation",
+        "features": [
+          "Tout des options precedentes +",
+          "Yachts de luxe (40-70 pieds)",
+          "Service traiteur a bord",
+          "Equipage",
+          "Experience VIP personnalisee"
+        ],
+        "cta": "Consultez un conseiller"
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos voyageurs",
+      "items": []
+    },
+    "cta": {
+      "title": "Pret a nager avec le plus grand poisson du monde ?",
+      "description": "Le requin baleine vous attend dans les eaux de La Paz. Une experience unique, responsable et inoubliable.",
+      "cta_primary": "Reservez votre aventure maintenant",
+      "cta_secondary": "Voir plus d'expeditions"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. Tous droits reserves."
+    }
+  },
+  "zh": {
+    "meta": {
+      "title": "La Paz 鲸鲨共游",
+      "description": "在墨西哥 Baja California Sur 的 La Paz 与世界上最大的鱼类共游。在加利福尼亚湾受保护水域中由专家引导的负责任体验。"
+    },
+    "hero": {
+      "badge": "季节 10月 - 4月",
+      "title": "鲸鲨：与世界上最大的鱼类共游",
+      "description": "与鲸鲨共游是 La Paz 最具代表性的海洋体验之一。每个季节，这些海洋巨人都会来到海湾平静的水域，创造了一个独特的机会，以负责任的方式观察和与它们一起游泳。",
+      "cta_primary": "预订您的冒险",
+      "cta_secondary": "查看详情",
+      "image_alt": "鲸鲨在 La Paz 水域中游泳"
+    },
+    "about": {
+      "title": "与世界上最大的鱼类共游",
+      "description_1": "与鲸鲨共游是 La Paz 最具代表性的海洋体验之一。每个季节，这些海洋巨人都会来到海湾平静的水域，创造了一个独特的机会，以负责任的方式观察和与它们一起游泳，始终遵循官方指南并与授权运营商合作。",
+      "description_2": "我们的专业导游将全程陪伴您，分享有关该物种、其生态重要性以及以尊重和意识享受这次邂逅的最佳实践信息。",
+      "image_alt": "在 La Paz 与鲸鲨共游",
+      "departure_title": "出发地点",
+      "departure_text": "La Paz 财政码头",
+      "duration_title": "总时长",
+      "duration_text": "约 2 小时",
+      "group_title": "包含",
+      "group_text": "航行、搜寻、水中与鲸鲨邂逅和轻食"
+    },
+    "itinerary": {
+      "title": "当日行程",
+      "subtitle": "与世界上最大的鱼类的难忘冒险。",
+      "step1_title": "从 La Paz 出发",
+      "step1_text": "我们在 La Paz 财政码头集合，清早出发前往授权观察区。航行途中，我们的团队将简要介绍体验、装备使用方法和负责任活动的规则。",
+      "step2_title": "搜寻和定位",
+      "step2_text": "我们在允许区域内航行寻找鲸鲨，遵循当局制定的协议，尊重每艘船的授权轮次和时间。在 La Paz，游泳和观察区的准入受到监管，只有持有有效许可证的船只才能进入。",
+      "step2_note": "注意：仅在官方季节期间可用，通常为 10 月至 4 月；确切日期每年可能有所不同。",
+      "step3_title": "群岛海滩停靠",
+      "step3_text": "我们驶向群岛的一处海滩。浅色沙滩、碧绿海水和令人印象深刻的岩石地貌。您可以游泳、浮潜或放松身心，享受这片天堂。",
+      "step4_title": "海滩野餐",
+      "step4_text": "我们享用野餐式午餐，包括新鲜酸橘汁腌鱼、烤玉米饼、时令水果和饮料。在无与伦比的自然环境中品尝当地风味。",
+      "step5_title": "返回 La Paz",
+      "step5_text": "我们在夕阳中启航返回，相机里装满了回忆，体验仍然鲜活。我们会与您分享当天的照片和视频。"
+    },
+    "includes": {
+      "title": "您的体验包含什么？",
+      "subtitle": "为您提供安全、舒适和难忘冒险所需的一切。",
+      "boat_title": "快艇交通",
+      "boat_text": "从 La Paz 财政码头出发和返回。",
+      "guide_title": "认证导游",
+      "guide_text": "双语专业团队陪伴您并分享当地知识。",
+      "snorkel_title": "浮潜装备",
+      "snorkel_text": "面镜、脚蹼和救生衣，让您安心探索。",
+      "picnic_title": "海滩野餐",
+      "picnic_text": "新鲜酸橘汁腌鱼、烤玉米饼、时令水果和饮料，在大自然中享用。",
+      "photos_title": "照片和视频",
+      "photos_text": "在当下捕捉您冒险的真实回忆。",
+      "park_title": "公园许可",
+      "park_text": "已包含国家公园授权入场。"
+    },
+    "pricing": {
+      "title": "旅游选项",
+      "subtitle": "选择最适合您旅行风格的体验。",
+      "standard": {
+        "name": "标准旅游",
+        "type": "共享快艇体验",
+        "price": "$1,800",
+        "currency": "MXN",
+        "per": "每人",
+        "features": [
+          "共享快艇交通",
+          "认证导游陪同",
+          "浮潜装备已含",
+          "海滩野餐已含",
+          "冒险照片和视频"
+        ],
+        "cta": "立即预订"
+      },
+      "sailboat": {
+        "badge": "私人",
+        "name": "帆船之旅",
+        "type": "40 英尺私人帆船",
+        "price": "起价 $16,000",
+        "currency": "MXN",
+        "per": "最多 6 人，额外成人或儿童需加费",
+        "features": [
+          "包含标准旅游所有内容 +",
+          "私人帆船",
+          "船长和水手",
+          "皮划艇",
+          "水上浮垫",
+          "可选菜单"
+        ],
+        "cta": "立即预订"
+      },
+      "yacht": {
+        "badge": "尊享",
+        "name": "游艇之旅",
+        "type": "游艇船队可供选择",
+        "price": "起价 $30,000",
+        "currency": "MXN",
+        "per": "价格取决于船只",
+        "features": [
+          "包含以上所有选项 +",
+          "豪华游艇（40-70 英尺）",
+          "船上餐饮服务",
+          "船员",
+          "个性化 VIP 体验"
+        ],
+        "cta": "咨询顾问"
+      }
+    },
+    "testimonials": {
+      "title": "旅客评价",
+      "items": []
+    },
+    "cta": {
+      "title": "准备好与世界上最大的鱼类共游了吗？",
+      "description": "鲸鲨在 La Paz 的水域等待着您。一次独特、负责任和难忘的体验。",
+      "cta_primary": "立即预订您的冒险",
+      "cta_secondary": "查看更多探险"
+    },
+    "footer": {
+      "copyright": "2026 Keabelmet. 版权所有。"
+    }
+  }
+}
