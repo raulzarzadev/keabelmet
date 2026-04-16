@@ -12,9 +12,10 @@
   "hero": {
     "badge": "Siendo agua y tierra",
     "title": "Descubre La Paz, donde el desierto conoce el mar",
-    "subtitle": "Vive aventuras imborrables en las aguas de Baja California Sur. Nada con lobos marinos, mobulas, avista ballenas por primera vez, y explora playas virgenes.",
+    "subtitle": "Vive aventuras imborrables en las aguas de Baja California Sur. Nada con lobos marinos y mobulas, avista ballenas por primera vez y explora playas virgenes.",
     "cta1": "Explora expediciones",
     "cta2": "Ver testimonios",
+    "cta3": "Reserva tu experiencia",
     "stat1_value": "15+",
     "stat1_label": "Experiencias unicas",
     "stat2_value": "10K+",
@@ -25,63 +26,66 @@
   "adventures": {
     "title": "Aventuras",
     "titleHighlight": "destacadas",
-    "subtitle": "Experiencias seleccionadas que muestran lo mejor de las maravillas marinas y la belleza desertica de La Paz",
+    "subtitle": "Experiencias seleccionadas que muestran lo mejor de las maravillas marinas y la belleza del desierto de La Paz.",
     "from": "Desde",
     "learnMore": "Saber mas",
     "items": [
       {
         "title": "Isla Espiritu Santo",
-        "badge": "Reserva de la Biosfera UNESCO",
-        "description": "Playas virgenes, aguas turquesas y snorkel increible",
-        "price": "$120"
+        "badge": "Reserva de la biosfera UNESCO",
+        "description": "Playas virgenes, aguas turquesas y snorkel inolvidable.",
+        "price": 2100
       },
       {
-        "title": "Ve una ballena por primera vez",
-        "badge": "Mar de Cortes",
-        "description": "Ver ballenas en Mexico es posible, aqui como:",
-        "price": "$180"
+        "title": "Ve ballenas por primera vez",
+        "badge": "Baja California Sur",
+        "description": "Una experiencia unica para observar ballenas en su entorno natural.",
+        "price": 3150
       },
       {
         "title": "Buceo en Cabo Pulmo",
-        "badge": "Arrecifes de Coral",
-        "description": "Descubre el mejor lugar para bucear en Mexico, ya sea tu primera vez o seas un apasionado",
-        "price": "$110"
+        "badge": "Parque Nacional Cabo Pulmo",
+        "description": "Descubre uno de los mejores sitios para bucear en Mexico, ideal tanto para principiantes como para expertos.",
+        "price": 3325
       },
       {
         "title": "Buceo en La Paz",
-        "badge": "Colonia de Lobos Marinos",
-        "description": "Nada con juguetones lobos marinos en su habitat natural",
-        "price": "$150"
+        "badge": "Archipielago Espiritu Santo",
+        "description": "Nada con juguetones lobos marinos en su habitat natural.",
+        "price": 3500
       },
       {
         "title": "Renta un velero",
         "badge": "Golfo de California",
         "description": "Ideal para unas horas de navegacion o para pasar la noche a bordo",
-        "price": "$600"
+        "price": 10500
       },
       {
         "title": "Renta un Yate",
         "badge": "Golfo de California",
         "description": "Vive el Golfo de California como te lo mereces",
-        "price": "$1,700"
+        "price": 29750
       }
     ]
   },
   "testimonials": {
-    "title": "Lo que dicen nuestros viajeros",
-    "subtitle": "Experiencias reales en Baja California Sur.",
+    "title": "Lo que dicen nuestros aventureros",
+    "subtitle": "Experiencias reales de quienes han vivido nuestras expediciones.",
     "items": [
       {
-        "name": "Maria G.",
-        "text": "Ver el baitball de sardinas con marlines fue magico. Equipo amable y super seguro."
+        "name": "Maria Gonzalez",
+        "location": "Ciudad de Mexico",
+        "text": "El avistamiento de ballenas fue una experiencia magica. Los guias son muy profesionales y cuidan cada detalle."
       },
       {
-        "name": "James P.",
-        "text": "La Ventana y las mobulas a centimetros... inolvidable. Muy bien organizado."
+        "name": "Carlos Ramirez",
+        "location": "Buenos Aires",
+        "text": "El sandboard fue increible! Nunca pense que deslizarme por las dunas seria tan divertido. Volvere pronto!"
       },
       {
-        "name": "Alejandro R.",
-        "text": "Guia biologo, panga comoda, fotos y video incluidos. Lo repetiria sin dudar."
+        "name": "Laura Martinez",
+        "location": "Santiago",
+        "text": "Las playas secretas son verdaderamente paradisiacas. Un tour muy bien organizado y con un servicio excelente."
       }
     ]
   },
@@ -100,22 +104,22 @@
         "text": "Guias que no respetan a los animales ni explican nada... y eso cambia todo."
       },
       {
-        "title": "Fotos prometidas... que no llegan",
-        "text": "Te las cobran aparte o nunca aparecen. No es serio."
+        "title": "Fotos prometidas... que nunca llegan",
+        "text": "Te las prometen, pero nunca llegan o no cumplen lo esperado. No es serio."
       }
     ],
     "solutions": [
       {
         "title": "Grupos reducidos",
-        "text": "Con nosotros, nunca mas de 8 por panga. Mas espacio, calma y seguridad."
+        "text": "Con nosotros, grupos reducidos por panga. Mas espacio, calma y seguridad."
       },
       {
         "title": "Guia Keabelmet",
-        "text": "Te compartimos historias, comportamientos y buenas practicas para cuidar la fauna."
+        "text": "Te compartimos historias, comportamientos de los animales y buenas practicas para cuidar la fauna."
       },
       {
-        "title": "Foto y video incluidos",
-        "text": "Lo que vivas, te lo llevas. Siempre incluimos material para revivir tu safari."
+        "title": "Fotos y videos incluidos",
+        "text": "Lo que vivas, te lo llevas. Incluimos fotos y videos con opciones premium de edicion e impresion."
       }
     ]
   },
@@ -136,57 +140,53 @@
     "features": [
       {
         "title": "Experiencia Local",
-        "text": "Nacidos y criados en La Paz, conocemos cada rincon y los mejores momentos para visitar cada lugar"
+        "text": "Con base en La Paz, conocemos cada rincon y los mejores momentos para visitar cada lugar."
       },
       {
         "title": "Seguridad Primero",
-        "text": "Guias certificados, equipo de calidad y seguro comprensivo para tu tranquilidad absoluta"
+        "text": "Guias certificados, equipo de calidad y protocolos de seguridad para tu total tranquilidad."
       },
       {
         "title": "Grupos Pequenos",
-        "text": "Experiencias intimas con maximo 8-12 personas para atencion personalizada y conexiones autenticas"
-      },
-      {
-        "title": "Eco-Conscientes",
-        "text": "Comprometidos con el turismo sustentable y la proteccion de los increibles ecosistemas marinos y deserticos de La Paz"
+        "text": "Experiencias en grupos reducidos para una atencion personalizada y conexiones autenticas."
       }
     ],
     "bio_title": "Liderado por Biologos Marinos",
-    "bio_text": "Nuestro equipo esta formado por biologos marinos de La Paz con anos de experiencia organizando campamentos y expediciones en zonas remotas.",
+    "bio_text": "Nuestro equipo cuenta con biologos marinos y especialistas con amplia experiencia en expediciones y campamentos en zonas remotas.",
     "edu_title": "Educacion y Conservacion",
-    "edu_text": "La educacion, conservacion y turismo responsable son la base de todo lo que hacemos. Cada expedicion es una oportunidad para aprender y proteger."
+    "edu_text": "Creemos en la educacion, la conservacion y el turismo responsable como base de todo lo que hacemos. Cada expedicion es una oportunidad para aprender y proteger."
   },
   "consequences": {
-    "title": "Si eliges mal, te puedes perder...",
+    "title": "Si eliges mal, podrias perderte...",
     "items": [
-      "Encuentros reales por mala logistica o grupos masivos.",
-      "Seguridad deficiente en el agua y poca orientacion.",
-      "Impacto negativo en fauna por malas practicas.",
-      "Sin fotos ni video...y recuerdos que no vuelven."
+      "Encuentros afectados por mala logistica o grupos masivos.",
+      "Impacto negativo en la fauna por malas practicas.",
+      "Seguridad deficiente en el agua y poca orientacion durante la experiencia.",
+      "Sin fotos ni video, y recuerdos que no vuelven."
     ]
   },
   "faq": {
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "q": "Necesito experiencia previa en snorkel?",
-        "a": "No necesitas experiencia previa. Te damos chaleco, traje y todo el acompanamiento para que te sientas seguro."
+        "q": "Necesito experiencia previa para participar?",
+        "a": "No siempre. El nivel requerido depende de la experiencia que elijas. En cada tour indicamos claramente los requisitos y te acompanamos para que te sientas seguro y disfrutes al maximo la experiencia."
       },
       {
-        "q": "Que incluye?",
-        "a": "Panga con capitan, guia biologo marino, equipo de snorkel, agua y snacks, chaleco salvavidas, wetsuit, fotos/video, material dinamico y binoculares."
+        "q": "Que incluye cada experiencia?",
+        "a": "Cada experiencia puede variar segun la actividad, pero generalmente incluye: guia especializado, embarcacion o transporte, equipo tecnico requerido, medidas y equipo de seguridad, agua y snacks, material fotografico y de video, y material educativo cuando aplica."
       },
       {
-        "q": "Las fechas son garantizadas?",
-        "a": "Son experiencias de temporada y dependemos de la naturaleza. Lo que si aseguramos es el esfuerzo: trabajamos con capitanes y guias locales expertos."
+        "q": "Las fechas estan garantizadas?",
+        "a": "Son experiencias de temporada y dependen de las condiciones naturales, por lo que no podemos garantizar un avistamiento especifico. Lo que si garantizamos es buena logistica y el mejor esfuerzo del equipo. Si el clima no es favorable, buscamos reprogramar la experiencia u ofrecer alternativas para que vivas la mejor experiencia."
       }
     ]
   },
   "cta": {
-    "title": "Tu aventura en el Mar de Cortes comienza aqui",
-    "subtitle": "Cupo limitado. Expediciones seguras, responsables y documentadas en foto/video.",
-    "btn1": "Reservar Safari Bahia Magdalena",
-    "btn2": "Reservar Safari La Ventana"
+    "title": "Tu aventura en La Baja comienza aqui",
+    "subtitle": "Cupo limitado. Experiencias autenticas, responsables y documentadas en foto y video.",
+    "btn1": "Reservar Safari La Ventana",
+    "btn2": "Ve ballenas por primera vez"
   },
   "language": {
     "label": "Idioma",

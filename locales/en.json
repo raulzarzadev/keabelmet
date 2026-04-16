@@ -12,9 +12,10 @@
   "hero": {
     "badge": "Being water and land",
     "title": "Discover La Paz, where the desert meets the sea",
-    "subtitle": "Live unforgettable adventures in the waters of Baja California Sur. Swim with sea lions, mobula rays, watch whales for the first time, and explore pristine beaches.",
+    "subtitle": "Live unforgettable adventures in the waters of Baja California Sur. Swim with sea lions and mobula rays, watch whales for the first time and explore pristine beaches.",
     "cta1": "Explore expeditions",
     "cta2": "See testimonials",
+    "cta3": "Book your experience",
     "stat1_value": "15+",
     "stat1_label": "Unique experiences",
     "stat2_value": "10K+",
@@ -25,63 +26,66 @@
   "adventures": {
     "title": "Featured",
     "titleHighlight": "Adventures",
-    "subtitle": "Curated experiences showcasing the best of La Paz's marine wonders and desert beauty",
+    "subtitle": "Curated experiences showcasing the best of La Paz's marine wonders and desert beauty.",
     "from": "From",
     "learnMore": "Learn more",
     "items": [
       {
         "title": "Espiritu Santo Island",
         "badge": "UNESCO Biosphere Reserve",
-        "description": "Pristine beaches, turquoise waters, and incredible snorkeling",
-        "price": "$120"
+        "description": "Pristine beaches, turquoise waters and unforgettable snorkeling.",
+        "price": 2100
       },
       {
-        "title": "See a whale for the first time",
-        "badge": "Mar de Cortes",
-        "description": "Whale watching in Mexico is possible — here's how:",
-        "price": "$180"
+        "title": "See whales for the first time",
+        "badge": "Baja California Sur",
+        "description": "A unique experience to observe whales in their natural environment.",
+        "price": 3150
       },
       {
         "title": "Diving in Cabo Pulmo",
-        "badge": "Coral Reefs",
-        "description": "Discover the best diving spot in Mexico, whether it's your first time or you're a passionate diver",
-        "price": "$110"
+        "badge": "Cabo Pulmo National Park",
+        "description": "Discover one of the best diving sites in Mexico, ideal for beginners and experts alike.",
+        "price": 3325
       },
       {
         "title": "Diving in La Paz",
-        "badge": "Sea Lion Colony",
-        "description": "Swim with playful sea lions in their natural habitat",
-        "price": "$150"
+        "badge": "Espiritu Santo Archipelago",
+        "description": "Swim with playful sea lions in their natural habitat.",
+        "price": 3500
       },
       {
         "title": "Rent a sailboat",
         "badge": "Gulf of California",
         "description": "Ideal for a few hours of sailing or an overnight stay on board",
-        "price": "$600"
+        "price": 10500
       },
       {
         "title": "Rent a Yacht",
         "badge": "Gulf of California",
         "description": "Experience the Gulf of California the way you deserve",
-        "price": "$1,700"
+        "price": 29750
       }
     ]
   },
   "testimonials": {
-    "title": "What our travelers say",
-    "subtitle": "Real experiences in Baja California Sur.",
+    "title": "What our adventurers say",
+    "subtitle": "Real experiences from those who have lived our expeditions.",
     "items": [
       {
-        "name": "Maria G.",
-        "text": "Watching the sardine baitball with marlins was magical. Friendly crew and super safe."
+        "name": "Maria Gonzalez",
+        "location": "Mexico City",
+        "text": "The whale watching was a magical experience. The guides are very professional and take care of every detail."
       },
       {
-        "name": "James P.",
-        "text": "La Ventana and mobula rays just inches away... unforgettable. Very well organized."
+        "name": "Carlos Ramirez",
+        "location": "Buenos Aires",
+        "text": "The sandboarding was incredible! I never thought sliding down the dunes would be so much fun. I'll be back soon!"
       },
       {
-        "name": "Alejandro R.",
-        "text": "Marine biologist guide, comfortable panga, photos and video included. I'd do it again without hesitation."
+        "name": "Laura Martinez",
+        "location": "Santiago",
+        "text": "The secret beaches are truly paradise. A very well-organized tour with excellent service."
       }
     ]
   },
@@ -101,21 +105,21 @@
       },
       {
         "title": "Promised photos... that never arrive",
-        "text": "They charge you extra or they never show up. That's not professional."
+        "text": "They promise them, but they never arrive or don't meet expectations. That's not professional."
       }
     ],
     "solutions": [
       {
         "title": "Small groups",
-        "text": "With us, never more than 8 per boat. More space, calm, and safety."
+        "text": "With us, small groups per boat. More space, calm, and safety."
       },
       {
         "title": "Keabelmet Guide",
         "text": "We share stories, animal behaviors, and best practices to protect wildlife."
       },
       {
-        "title": "Photos and video included",
-        "text": "What you experience, you take home. We always include media to relive your safari."
+        "title": "Photos and videos included",
+        "text": "What you experience, you take home. We include photos and videos with premium editing and printing options."
       }
     ]
   },
@@ -136,57 +140,53 @@
     "features": [
       {
         "title": "Local Expertise",
-        "text": "Born and raised in La Paz, we know every corner and the best times to visit each spot"
+        "text": "Based in La Paz, we know every corner and the best times to visit each spot."
       },
       {
         "title": "Safety First",
-        "text": "Certified guides, quality equipment, and comprehensive insurance for your complete peace of mind"
+        "text": "Certified guides, quality equipment, and safety protocols for your total peace of mind."
       },
       {
         "title": "Small Groups",
-        "text": "Intimate experiences with a maximum of 8-12 people for personalized attention and authentic connections"
-      },
-      {
-        "title": "Eco-Conscious",
-        "text": "Committed to sustainable tourism and protecting the incredible marine and desert ecosystems of La Paz"
+        "text": "Experiences in small groups for personalized attention and authentic connections."
       }
     ],
     "bio_title": "Led by Marine Biologists",
-    "bio_text": "Our team is made up of marine biologists from La Paz with years of experience organizing camps and expeditions in remote areas.",
+    "bio_text": "Our team includes marine biologists and specialists with extensive experience in expeditions and camps in remote areas.",
     "edu_title": "Education and Conservation",
-    "edu_text": "Education, conservation, and responsible tourism are the foundation of everything we do. Every expedition is an opportunity to learn and protect."
+    "edu_text": "We believe in education, conservation, and responsible tourism as the foundation of everything we do. Every expedition is an opportunity to learn and protect."
   },
   "consequences": {
     "title": "If you choose wrong, you could miss out on...",
     "items": [
-      "Real encounters due to poor logistics or massive groups.",
-      "Inadequate water safety and little guidance.",
+      "Encounters affected by poor logistics or massive groups.",
       "Negative impact on wildlife from bad practices.",
-      "No photos or video... and memories that won't come back."
+      "Inadequate water safety and little guidance during the experience.",
+      "No photos or video, and memories that won't come back."
     ]
   },
   "faq": {
     "title": "Frequently asked questions",
     "items": [
       {
-        "q": "Do I need prior snorkeling experience?",
-        "a": "No prior experience needed. We provide a life vest, wetsuit, and full support so you feel safe."
+        "q": "Do I need prior experience to participate?",
+        "a": "Not always. The required level depends on the experience you choose. For each tour we clearly indicate the requirements and accompany you so you feel safe and enjoy the experience to the fullest."
       },
       {
-        "q": "What's included?",
-        "a": "Boat with captain, marine biologist guide, snorkeling gear, water and snacks, life vest, wetsuit, photos/video, educational materials, and binoculars."
+        "q": "What does each experience include?",
+        "a": "Each experience may vary depending on the activity, but generally includes: specialized guide, boat or transportation, required technical equipment, safety measures and gear, water and snacks, photo and video material, and educational material when applicable."
       },
       {
         "q": "Are the dates guaranteed?",
-        "a": "These are seasonal experiences and we depend on nature. What we do guarantee is the effort: we work with expert local captains and guides."
+        "a": "These are seasonal experiences that depend on natural conditions, so we cannot guarantee a specific sighting. What we do guarantee is good logistics and the team's best effort. If the weather is not favorable, we look to reschedule the experience or offer alternatives so you have the best experience."
       }
     ]
   },
   "cta": {
-    "title": "Your adventure in the Mar de Cortes starts here",
-    "subtitle": "Limited spots. Safe, responsible expeditions documented in photo/video.",
-    "btn1": "Book Bahia Magdalena Safari",
-    "btn2": "Book La Ventana Safari"
+    "title": "Your adventure in Baja starts here",
+    "subtitle": "Limited spots. Authentic, responsible experiences documented in photo and video.",
+    "btn1": "Book La Ventana Safari",
+    "btn2": "See whales for the first time"
   },
   "language": {
     "label": "Language",
