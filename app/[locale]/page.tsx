@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Users, Ban, CameraOff, UserCheck, BookOpenCheck, Camera } from "lucide-react"
 import { getDictionary, type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -52,7 +53,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       duration: exp.fullDay,
       capacity: "2-6 " + exp.people,
       features: ["Snorkeling", "Vida marina", "Transporte", "Lunch", "Equipo", "Videos/fotos"],
-      price: 165,
+      price: 3500,
     },
     {
       title: "Safari La Ventana",
@@ -64,7 +65,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       duration: exp.halfDay,
       capacity: "2-8 " + exp.people,
       features: ["Snorkel", "Guia", "Binoculares", "Lunch", "Videos/fotos"],
-      price: 180,
+      price: 2800,
     },
     {
       title: "Surf Camp La Paz",
@@ -76,7 +77,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       duration: exp.days6,
       capacity: "6-8 " + exp.people,
       features: ["Surf", "Fisio", "Video", "Hospedaje", "Comidas"],
-      price: 195,
+      price: 3400,
     },
   ]
 
@@ -170,9 +171,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     <h3 className="text-2xl font-bold text-gray-900">{item.title}</h3>
                     <p className="mt-3 text-gray-600">{item.description}</p>
                     <div className="mt-6 flex items-center justify-between">
-                      <div className="text-teal-700">
-                        <span className="text-sm">{adv.from}</span>
-                        <span className="ml-1 text-2xl font-bold">{item.price}</span>
+                      <div className="text-teal-700 text-2xl font-bold">
+                        <Price amount={item.price} />
                       </div>
                       <div className="flex items-center gap-2 text-gray-900">
                         <span className="text-sm font-medium">{adv.learnMore}</span>
@@ -317,7 +317,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-xs text-gray-500">{exp.perPerson}</div>
-                        <div className="text-2xl font-bold text-teal-700">${expedition.price}</div>
+                        <div className="text-2xl font-bold text-teal-700"><Price amount={expedition.price} /></div>
                       </div>
                       <button className="rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-800">
                         {exp.book}
