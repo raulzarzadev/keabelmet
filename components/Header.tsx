@@ -110,9 +110,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-2">
-            <CurrencySelector />
-            <LanguageSelector locale={locale} />
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-gray-700"
@@ -144,6 +142,10 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
               >
                 {nav.book}
               </Link>
+              <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                <CurrencySelector />
+                <LanguageSelector locale={locale} />
+              </div>
             </div>
           </nav>
         )}
