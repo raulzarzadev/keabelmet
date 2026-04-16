@@ -202,6 +202,12 @@
     "ctaLeave": "Leave a review",
     "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
   },
+  "instagram": {
+    "title": "Adventure Gallery",
+    "subtitle": "Real moments captured during our expeditions",
+    "ctaFull": "See full gallery",
+    "follow": "Follow us on Instagram"
+  },
   "language": {
     "label": "Language",
     "es": "Espanol",

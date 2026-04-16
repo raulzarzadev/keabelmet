@@ -202,6 +202,12 @@
     "ctaLeave": "留下评价",
     "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
   },
+  "instagram": {
+    "title": "探险画廊",
+    "subtitle": "探险中捕捉的真实瞬间",
+    "ctaFull": "查看完整画廊",
+    "follow": "在 Instagram 上关注我们"
+  },
   "language": {
     "label": "语言",
     "es": "西班牙语",

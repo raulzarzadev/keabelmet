@@ -217,6 +217,12 @@
     "ctaLeave": "Deja tu resena",
     "googleMapsUrl": "https://www.google.com/maps/place/Keabelmet+Expeditions"
   },
+  "instagram": {
+    "title": "Galeria de Aventuras",
+    "subtitle": "Momentos reales capturados durante nuestras expediciones",
+    "ctaFull": "Ver galeria completa",
+    "follow": "Siguenos en Instagram"
+  },
   "language": {
     "label": "Idioma",
     "es": "Espanol",
