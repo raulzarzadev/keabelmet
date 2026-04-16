@@ -4,6 +4,8 @@ import { Users, Ban, CameraOff, UserCheck, BookOpenCheck, Camera } from "lucide-
 import GoogleReviews from "@/components/sections/GoogleReviews"
 import { getDictionary, type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
+import { getInstagramPosts } from "@/lib/instagram"
+import InstagramGallery from "@/components/sections/InstagramGallery"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -14,6 +16,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const d = await getDictionary(locale) as Record<string, any>
+  const instagramPosts = await getInstagramPosts(6)
 
   const hero = d.hero
   const adv = d.adventures
@@ -25,6 +28,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const faq = d.faq
   const cta = d.cta
   const gr = d.googleReviews
+  const ig = d.instagram
 
   const adventureLinks = [
     "/experiencias/tour-espiritu-santo",
@@ -386,6 +390,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
       </section>
+
+      {/* Instagram Gallery Preview */}
+      {instagramPosts && ig && (
+        <InstagramGallery
+          posts={instagramPosts}
+          title={ig.title}
+          subtitle={ig.subtitle}
+          ctaText={ig.ctaFull}
+          ctaHref={l("/galeria", locale)}
+          instagramUrl="https://www.instagram.com/keabelmet__expeditions/"
+          followText={ig.follow}
+        />
+      )}
 
       {/* 6) CONSECUENCIAS */}
       <section id="consecuencias" className="bg-white">
