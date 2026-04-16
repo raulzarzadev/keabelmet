@@ -5,7 +5,7 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, Check } from "lucide-react"
+import { ArrowLeft, Check, Thermometer, Waves } from "lucide-react"
 import { Price } from "@/contexts/CurrencyContext"
 import { defaultLocale } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
@@ -328,30 +328,62 @@ export default function QuizPage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-8">
                     {(t.questions as any).season.title}
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    {((t.questions as any).season.options as any[]).map((option: any) => (
-                      <button
-                        key={option.id}
-                        onClick={() => handleSeasonAnswer(option.id)}
-                        className={`flex flex-col items-start p-4 rounded-xl border-2 transition-colors text-left ${
-                          answers.season === option.id
-                            ? "border-teal-700 bg-teal-50"
-                            : "border-gray-200 hover:border-teal-500"
-                        }`}
-                      >
-                        <div className="text-lg font-bold">{option.name}</div>
-                        <div className="text-sm text-gray-500 mb-2">{option.months}</div>
-                        <div className="flex gap-3 mb-3 text-xs">
-                          <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">🌡 {option.airTemp}</span>
-                          <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">🌊 {option.waterTemp}</span>
-                        </div>
-                        <div className="flex flex-wrap gap-1">
-                          {option.species.map((s: string) => (
-                            <span key={s} className="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full">{s}</span>
-                          ))}
-                        </div>
-                      </button>
-                    ))}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {((t.questions as any).season.options as any[]).map((option: any) => {
+                      const isSelected = answers.season === option.id
+                      const accentMap: Record<string, string> = {
+                        spring: "border-t-emerald-400",
+                        summer: "border-t-amber-400",
+                        fall:   "border-t-orange-500",
+                        winter: "border-t-sky-400",
+                      }
+                      const accentColor = accentMap[option.id] ?? "border-t-gray-300"
+                      return (
+                        <button
+                          key={option.id}
+                          onClick={() => handleSeasonAnswer(option.id)}
+                          className={`group relative flex flex-col items-start text-left bg-white rounded-2xl border border-gray-100 border-t-4 ${accentColor} p-6 cursor-pointer transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
+                            isSelected
+                              ? "shadow-md ring-2 ring-teal-600 ring-offset-2"
+                              : "shadow-sm hover:shadow-md hover:border-gray-200"
+                          }`}
+                        >
+                          {/* Selected indicator */}
+                          {isSelected && (
+                            <span className="absolute top-4 right-4 flex items-center justify-center w-5 h-5 rounded-full bg-teal-600">
+                              <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                            </span>
+                          )}
+
+                          {/* Season name */}
+                          <span className="text-xl font-semibold text-gray-900 leading-tight mb-1">
+                            {option.name}
+                          </span>
+
+                          {/* Months */}
+                          <span className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-5">
+                            {option.months}
+                          </span>
+
+                          {/* Temperature row */}
+                          <div className="flex gap-4 mb-4">
+                            <span className="flex items-center gap-1.5 text-sm text-gray-600">
+                              <Thermometer className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                              {option.airTemp}
+                            </span>
+                            <span className="flex items-center gap-1.5 text-sm text-gray-600">
+                              <Waves className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                              {option.waterTemp}
+                            </span>
+                          </div>
+
+                          {/* Species — comma-separated plain text */}
+                          <span className="text-xs text-gray-400 leading-relaxed">
+                            {option.species.join(", ")}
+                          </span>
+                        </button>
+                      )
+                    })}
                   </div>
                 </div>
               )}
