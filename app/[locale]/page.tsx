@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Users, Ban, CameraOff, UserCheck, BookOpenCheck, Camera } from "lucide-react"
+import GoogleReviews from "@/components/sections/GoogleReviews"
 import { getDictionary, type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
@@ -23,6 +24,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const cons = d.consequences
   const faq = d.faq
   const cta = d.cta
+  const gr = d.googleReviews
 
   const adventureLinks = [
     "/experiencias/tour-espiritu-santo",
@@ -210,6 +212,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      {gr && (
+        <GoogleReviews
+          title={gr.title}
+          subtitle={gr.subtitle}
+          overallRating={gr.overallRating}
+          totalReviews={gr.totalReviews}
+          reviews={gr.reviews}
+          ctaAll={gr.ctaAll}
+          ctaLeave={gr.ctaLeave}
+          googleMapsUrl={gr.googleMapsUrl}
+        />
+      )}
 
       {/* 3) PROBLEMA -> SOLUCION */}
       <section id="problemas-soluciones" className="relative overflow-hidden bg-gradient-to-br from-white via-teal-50/20 to-white">
