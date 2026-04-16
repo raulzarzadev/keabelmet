@@ -1,5 +1,23 @@
 {
   "es": {
+    "contactCards": {
+      "tourTitle": "Quiero saber mas sobre un tour",
+      "tourSubtitle": "Selecciona la actividad que te interesa",
+      "quizTitle": "Ayudame a escoger",
+      "quizSubtitle": "Responde unas preguntas y te recomendamos la mejor experiencia",
+      "tours": [
+        { "name": "Isla Espiritu Santo", "href": "/experiencias/tour-espiritu-santo" },
+        { "name": "Avistamiento de Ballenas", "href": "/experiencias/tour-ballena-gris" },
+        { "name": "Tiburon Ballena", "href": "/experiencias/tiburon-ballena" },
+        { "name": "Buceo en Cabo Pulmo", "href": "/experiencias/buceo-cabo-pulmo" },
+        { "name": "Buceo en La Paz", "href": "/experiencias/buceo-la-paz" },
+        { "name": "Safari Bahia Magdalena", "href": "/experiencias/safari-bahia-magdalena" },
+        { "name": "Safari La Ventana", "href": "/experiencias/safari-la-ventana" },
+        { "name": "Renta un Velero", "href": "/experiencias/renta-velero" },
+        { "name": "Renta un Yate", "href": "/experiencias/renta-yate" },
+        { "name": "Surf Camp", "href": "/surf-camp" }
+      ]
+    },
     "title": "Contacto",
     "subtitle": "Estamos aquí para ayudarte a planear tu aventura",
     "formTitle": "Envíanos un Mensaje",
@@ -26,6 +44,24 @@
     "ctaButton": "Reservar Ahora"
   },
   "en": {
+    "contactCards": {
+      "tourTitle": "I want to know more about a tour",
+      "tourSubtitle": "Select the activity you're interested in",
+      "quizTitle": "Help me choose",
+      "quizSubtitle": "Answer a few questions and we'll recommend the best experience",
+      "tours": [
+        { "name": "Espiritu Santo Island", "href": "/experiencias/tour-espiritu-santo" },
+        { "name": "Whale Watching", "href": "/experiencias/tour-ballena-gris" },
+        { "name": "Whale Shark", "href": "/experiencias/tiburon-ballena" },
+        { "name": "Diving in Cabo Pulmo", "href": "/experiencias/buceo-cabo-pulmo" },
+        { "name": "Diving in La Paz", "href": "/experiencias/buceo-la-paz" },
+        { "name": "Safari Bahia Magdalena", "href": "/experiencias/safari-bahia-magdalena" },
+        { "name": "Safari La Ventana", "href": "/experiencias/safari-la-ventana" },
+        { "name": "Rent a Sailboat", "href": "/experiencias/renta-velero" },
+        { "name": "Rent a Yacht", "href": "/experiencias/renta-yate" },
+        { "name": "Surf Camp", "href": "/surf-camp" }
+      ]
+    },
     "title": "Contact",
     "subtitle": "We are here to help you plan your adventure",
     "formTitle": "Send Us a Message",
@@ -52,6 +88,24 @@
     "ctaButton": "Book Now"
   },
   "fr": {
+    "contactCards": {
+      "tourTitle": "Je veux en savoir plus sur un tour",
+      "tourSubtitle": "Selectionnez l'activite qui vous interesse",
+      "quizTitle": "Aidez-moi a choisir",
+      "quizSubtitle": "Repondez a quelques questions et nous vous recommanderons la meilleure experience",
+      "tours": [
+        { "name": "Ile Espiritu Santo", "href": "/experiencias/tour-espiritu-santo" },
+        { "name": "Observation des baleines", "href": "/experiencias/tour-ballena-gris" },
+        { "name": "Requin baleine", "href": "/experiencias/tiburon-ballena" },
+        { "name": "Plongee a Cabo Pulmo", "href": "/experiencias/buceo-cabo-pulmo" },
+        { "name": "Plongee a La Paz", "href": "/experiencias/buceo-la-paz" },
+        { "name": "Safari Bahia Magdalena", "href": "/experiencias/safari-bahia-magdalena" },
+        { "name": "Safari La Ventana", "href": "/experiencias/safari-la-ventana" },
+        { "name": "Location de voilier", "href": "/experiencias/renta-velero" },
+        { "name": "Location de yacht", "href": "/experiencias/renta-yate" },
+        { "name": "Surf Camp", "href": "/surf-camp" }
+      ]
+    },
     "title": "Contact",
     "subtitle": "Nous sommes là pour vous aider à planifier votre aventure",
     "formTitle": "Envoyez-nous un message",
@@ -78,6 +132,24 @@
     "ctaButton": "Réserver maintenant"
   },
   "zh": {
+    "contactCards": {
+      "tourTitle": "我想了解更多关于某个行程",
+      "tourSubtitle": "选择您感兴趣的活动",
+      "quizTitle": "帮我选择",
+      "quizSubtitle": "回答几个问题，我们将为您推荐最佳体验",
+      "tours": [
+        { "name": "Espiritu Santo 岛", "href": "/experiencias/tour-espiritu-santo" },
+        { "name": "观鲸", "href": "/experiencias/tour-ballena-gris" },
+        { "name": "鲸鲨", "href": "/experiencias/tiburon-ballena" },
+        { "name": "Cabo Pulmo 潜水", "href": "/experiencias/buceo-cabo-pulmo" },
+        { "name": "La Paz 潜水", "href": "/experiencias/buceo-la-paz" },
+        { "name": "Safari Bahia Magdalena", "href": "/experiencias/safari-bahia-magdalena" },
+        { "name": "Safari La Ventana", "href": "/experiencias/safari-la-ventana" },
+        { "name": "帆船租赁", "href": "/experiencias/renta-velero" },
+        { "name": "游艇租赁", "href": "/experiencias/renta-yate" },
+        { "name": "Surf Camp", "href": "/surf-camp" }
+      ]
+    },
     "title": "联系我们",
     "subtitle": "我们在这里帮助您规划您的冒险之旅",
     "formTitle": "给我们留言",

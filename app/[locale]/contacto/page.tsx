@@ -1,6 +1,12 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
+import { isValidLocale, defaultLocale, getPageDictionary, type Locale } from "@/lib/i18n"
+
+function l(path: string, locale: Locale): string {
+  if (locale === defaultLocale) return path
+  return `/${locale}${path === "/" ? "" : path}`
+}
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -31,6 +37,43 @@ export default async function Contacto({ params }: { params: Promise<{ locale: s
       </section>
 
       <section className="container mx-auto px-4 py-16">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
+          {/* Card 1 - Tour selector */}
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <h2 className="text-2xl font-bold mb-2">{t.contactCards.tourTitle}</h2>
+            <p className="text-gray-600 mb-6">{t.contactCards.tourSubtitle}</p>
+            <div className="grid grid-cols-2 gap-3">
+              {t.contactCards.tours.map((tour: { name: string; href: string }) => (
+                <a
+                  key={tour.href}
+                  href={`https://wa.me/524422056214?text=Hola, quiero saber mas sobre ${tour.name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 text-sm font-medium text-teal-700 bg-teal-50 rounded-lg hover:bg-teal-100 transition-colors text-center"
+                >
+                  {tour.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Card 2 - Quiz */}
+          <div className="bg-teal-700 rounded-xl p-8 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl font-bold mb-2 text-white">{t.contactCards.quizTitle}</h2>
+              <p className="text-teal-100 mb-8">{t.contactCards.quizSubtitle}</p>
+            </div>
+            <Link
+              href={l("/quiz", locale)}
+              className="inline-block w-full py-4 text-center text-lg font-semibold text-teal-700 bg-white rounded-lg hover:bg-teal-50 transition-colors"
+            >
+              {t.contactCards.quizTitle}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 pb-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <h2 className="text-2xl font-bold mb-6">{t.formTitle}</h2>
