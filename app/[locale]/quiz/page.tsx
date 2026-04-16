@@ -331,56 +331,54 @@ export default function QuizPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {((t.questions as any).season.options as any[]).map((option: any) => {
                       const isSelected = answers.season === option.id
-                      const accentMap: Record<string, string> = {
-                        spring: "border-t-emerald-400",
-                        summer: "border-t-amber-400",
-                        fall:   "border-t-orange-500",
-                        winter: "border-t-sky-400",
+                      const styles: Record<string, { gradient: string; iconBg: string; tempAirBg: string; tempAirText: string; tempWaterBg: string; tempWaterText: string; border: string }> = {
+                        invierno: { gradient: "from-sky-50 to-white", iconBg: "bg-sky-100", tempAirBg: "bg-sky-50", tempAirText: "text-sky-700", tempWaterBg: "bg-blue-50", tempWaterText: "text-blue-700", border: "border-l-sky-400" },
+                        primavera: { gradient: "from-emerald-50 to-white", iconBg: "bg-emerald-100", tempAirBg: "bg-emerald-50", tempAirText: "text-emerald-700", tempWaterBg: "bg-teal-50", tempWaterText: "text-teal-700", border: "border-l-emerald-400" },
+                        verano: { gradient: "from-amber-50 to-white", iconBg: "bg-amber-100", tempAirBg: "bg-amber-50", tempAirText: "text-amber-700", tempWaterBg: "bg-orange-50", tempWaterText: "text-orange-700", border: "border-l-amber-400" },
+                        otono: { gradient: "from-orange-50 to-white", iconBg: "bg-orange-100", tempAirBg: "bg-orange-50", tempAirText: "text-orange-700", tempWaterBg: "bg-red-50", tempWaterText: "text-red-700", border: "border-l-orange-400" },
                       }
-                      const accentColor = accentMap[option.id] ?? "border-t-gray-300"
+                      const s = styles[option.id] || styles.invierno
                       return (
                         <button
                           key={option.id}
                           onClick={() => handleSeasonAnswer(option.id)}
-                          className={`group relative flex flex-col items-start text-left bg-white rounded-2xl border border-gray-100 border-t-4 ${accentColor} p-6 cursor-pointer transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
+                          className={`group relative flex flex-col items-start text-left bg-gradient-to-br ${s.gradient} rounded-2xl border border-gray-100 border-l-4 ${s.border} p-6 cursor-pointer transition-all duration-200 focus:outline-none ${
                             isSelected
-                              ? "shadow-md ring-2 ring-teal-600 ring-offset-2"
-                              : "shadow-sm hover:shadow-md hover:border-gray-200"
+                              ? "shadow-lg ring-2 ring-teal-600 ring-offset-2 scale-[1.02]"
+                              : "shadow-sm hover:shadow-md hover:scale-[1.01]"
                           }`}
                         >
-                          {/* Selected indicator */}
                           {isSelected && (
-                            <span className="absolute top-4 right-4 flex items-center justify-center w-5 h-5 rounded-full bg-teal-600">
-                              <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                            <span className="absolute top-4 right-4 flex items-center justify-center w-6 h-6 rounded-full bg-teal-600">
+                              <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
                             </span>
                           )}
 
-                          {/* Season name */}
-                          <span className="text-xl font-semibold text-gray-900 leading-tight mb-1">
+                          <span className="text-xl font-bold text-gray-900 leading-tight">
                             {option.name}
                           </span>
-
-                          {/* Months */}
-                          <span className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-5">
+                          <span className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-4">
                             {option.months}
                           </span>
 
-                          {/* Temperature row */}
-                          <div className="flex gap-4 mb-4">
-                            <span className="flex items-center gap-1.5 text-sm text-gray-600">
-                              <Thermometer className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                          <div className="flex gap-2 mb-4">
+                            <span className={`flex items-center gap-1.5 text-xs font-semibold ${s.tempAirText} ${s.tempAirBg} px-2.5 py-1 rounded-lg`}>
+                              <Thermometer className="w-3.5 h-3.5 shrink-0" />
                               {option.airTemp}
                             </span>
-                            <span className="flex items-center gap-1.5 text-sm text-gray-600">
-                              <Waves className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                            <span className={`flex items-center gap-1.5 text-xs font-semibold ${s.tempWaterText} ${s.tempWaterBg} px-2.5 py-1 rounded-lg`}>
+                              <Waves className="w-3.5 h-3.5 shrink-0" />
                               {option.waterTemp}
                             </span>
                           </div>
 
-                          {/* Species — comma-separated plain text */}
-                          <span className="text-xs text-gray-400 leading-relaxed">
-                            {option.species.join(", ")}
-                          </span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {option.species.map((sp: string) => (
+                              <span key={sp} className={`text-[11px] font-medium ${s.tempAirText} ${s.iconBg} px-2 py-0.5 rounded-full`}>
+                                {sp}
+                              </span>
+                            ))}
+                          </div>
                         </button>
                       )
                     })}
