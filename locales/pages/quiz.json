@@ -14,7 +14,43 @@
       "activities": { "title": "Que te gustaria hacer?", "subtitle": "Selecciona todas las que apliquen", "options": { "snorkel": "Snorkel", "buceo": "Buceo", "surf": "Surf", "embarcacion": "Rentar embarcacion", "pesca": "Pescar", "hikes": "Hikes", "avistamiento": "Avistamiento desde barco" } },
       "group": { "title": "Con quien vas?", "options": ["Solo", "Pareja", "Familia", "Amigos"] },
       "size": { "title": "Cuantas personas son?", "options": ["1", "2", "3-4", "5-6", "7+"] },
-      "month": { "title": "Cuando planeas venir?", "options": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] },
+      "season": {
+        "title": "Cuando planeas venir?",
+        "options": [
+          {
+            "id": "invierno",
+            "name": "Invierno",
+            "months": "Dic - Feb",
+            "airTemp": "24-26°C",
+            "waterTemp": "19-21°C",
+            "species": ["Ballena gris", "Ballena jorobada", "Tiburon ballena", "Lobos marinos", "Mantarrayas"]
+          },
+          {
+            "id": "primavera",
+            "name": "Primavera",
+            "months": "Mar - May",
+            "airTemp": "28-33°C",
+            "waterTemp": "21-24°C",
+            "species": ["Tiburon ballena", "Ballena azul", "Orcas", "Tiburon martillo", "Mobulas"]
+          },
+          {
+            "id": "verano",
+            "name": "Verano",
+            "months": "Jun - Sep",
+            "airTemp": "34-36°C",
+            "waterTemp": "27-30°C",
+            "species": ["Mobulas", "Tiburon martillo", "Delfines", "Crias de lobos marinos", "Tortugas"]
+          },
+          {
+            "id": "otono",
+            "name": "Otono",
+            "months": "Oct - Nov",
+            "airTemp": "28-32°C",
+            "waterTemp": "26-28°C",
+            "species": ["Sardine run", "Marlines", "Tiburon ballena", "Ballena jorobada"]
+          }
+        ]
+      },
       "groupCert": { "title": "Todos en tu grupo tienen certificado de buceo?", "options": ["Si, todos", "Algunos si", "Nadie"] },
       "vibe": { "title": "Que tipo de experiencia buscas?", "subtitle": "Selecciona todas las que apliquen", "options": { "relajada": "Relajada", "aventurera": "Aventurera", "deportiva": "Deportiva", "educativa": "Educativa / Cultural" } }
     },
@@ -25,7 +61,7 @@
       "viewTour": "Ver detalles",
       "whatsapp": "Reservar por WhatsApp",
       "retake": "Volver a hacer el quiz",
-      "month": "Mes de visita",
+      "season": "Temporada",
       "groupCert": "Certificado del grupo",
       "vibe": "Tipo de experiencia"
     }
@@ -45,7 +81,43 @@
       "activities": { "title": "What would you like to do?", "subtitle": "Select all that apply", "options": { "snorkel": "Snorkeling", "buceo": "Scuba Diving", "surf": "Surfing", "embarcacion": "Rent a boat", "pesca": "Fishing", "hikes": "Hiking", "avistamiento": "Whale watching from boat" } },
       "group": { "title": "Who are you traveling with?", "options": ["Solo", "Couple", "Family", "Friends"] },
       "size": { "title": "How many people?", "options": ["1", "2", "3-4", "5-6", "7+"] },
-      "month": { "title": "When do you plan to visit?", "options": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] },
+      "season": {
+        "title": "When do you plan to visit?",
+        "options": [
+          {
+            "id": "invierno",
+            "name": "Winter",
+            "months": "Dec - Feb",
+            "airTemp": "24-26°C",
+            "waterTemp": "19-21°C",
+            "species": ["Gray whale", "Humpback whale", "Whale shark", "Sea lions", "Manta rays"]
+          },
+          {
+            "id": "primavera",
+            "name": "Spring",
+            "months": "Mar - May",
+            "airTemp": "28-33°C",
+            "waterTemp": "21-24°C",
+            "species": ["Whale shark", "Blue whale", "Orcas", "Hammerhead shark", "Mobula rays"]
+          },
+          {
+            "id": "verano",
+            "name": "Summer",
+            "months": "Jun - Sep",
+            "airTemp": "34-36°C",
+            "waterTemp": "27-30°C",
+            "species": ["Mobula rays", "Hammerhead shark", "Dolphins", "Baby sea lions", "Sea turtles"]
+          },
+          {
+            "id": "otono",
+            "name": "Fall",
+            "months": "Oct - Nov",
+            "airTemp": "28-32°C",
+            "waterTemp": "26-28°C",
+            "species": ["Sardine run", "Marlins", "Whale shark", "Humpback whale"]
+          }
+        ]
+      },
       "groupCert": { "title": "Does everyone in your group have a diving certificate?", "options": ["Yes, everyone", "Some do", "Nobody"] },
       "vibe": { "title": "What type of experience are you looking for?", "subtitle": "Select all that apply", "options": { "relajada": "Relaxed", "aventurera": "Adventurous", "deportiva": "Sporty", "educativa": "Educational / Cultural" } }
     },
@@ -56,7 +128,7 @@
       "viewTour": "View details",
       "whatsapp": "Book via WhatsApp",
       "retake": "Retake the quiz",
-      "month": "Visit month",
+      "season": "Season",
       "groupCert": "Group certificate",
       "vibe": "Experience type"
     }
@@ -76,7 +148,43 @@
       "activities": { "title": "Que souhaitez-vous faire ?", "subtitle": "Selectionnez toutes les options applicables", "options": { "snorkel": "Snorkeling", "buceo": "Plongee sous-marine", "surf": "Surf", "embarcacion": "Louer un bateau", "pesca": "Peche", "hikes": "Randonnee", "avistamiento": "Observation depuis le bateau" } },
       "group": { "title": "Avec qui voyagez-vous ?", "options": ["Seul", "En couple", "En famille", "Entre amis"] },
       "size": { "title": "Combien de personnes ?", "options": ["1", "2", "3-4", "5-6", "7+"] },
-      "month": { "title": "Quand prevoyez-vous de venir ?", "options": ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"] },
+      "season": {
+        "title": "Quand prevoyez-vous de venir ?",
+        "options": [
+          {
+            "id": "invierno",
+            "name": "Hiver",
+            "months": "Dec - Fev",
+            "airTemp": "24-26°C",
+            "waterTemp": "19-21°C",
+            "species": ["Baleine grise", "Baleine a bosse", "Requin baleine", "Lions de mer", "Raies manta"]
+          },
+          {
+            "id": "primavera",
+            "name": "Printemps",
+            "months": "Mar - Mai",
+            "airTemp": "28-33°C",
+            "waterTemp": "21-24°C",
+            "species": ["Requin baleine", "Baleine bleue", "Orques", "Requin marteau", "Mobulas"]
+          },
+          {
+            "id": "verano",
+            "name": "Ete",
+            "months": "Jun - Sep",
+            "airTemp": "34-36°C",
+            "waterTemp": "27-30°C",
+            "species": ["Mobulas", "Requin marteau", "Dauphins", "Bebes lions de mer", "Tortues marines"]
+          },
+          {
+            "id": "otono",
+            "name": "Automne",
+            "months": "Oct - Nov",
+            "airTemp": "28-32°C",
+            "waterTemp": "26-28°C",
+            "species": ["Course des sardines", "Marlins", "Requin baleine", "Baleine a bosse"]
+          }
+        ]
+      },
       "groupCert": { "title": "Tout le monde dans votre groupe a un certificat de plongee ?", "options": ["Oui, tous", "Quelques-uns", "Personne"] },
       "vibe": { "title": "Quel type d'experience recherchez-vous ?", "subtitle": "Selectionnez toutes les options applicables", "options": { "relajada": "Detente", "aventurera": "Aventure", "deportiva": "Sport", "educativa": "Educatif / Culturel" } }
     },
@@ -87,7 +195,7 @@
       "viewTour": "Voir les details",
       "whatsapp": "Reserver via WhatsApp",
       "retake": "Refaire le quiz",
-      "month": "Mois de visite",
+      "season": "Saison",
       "groupCert": "Certificat du groupe",
       "vibe": "Type d'experience"
     }
@@ -107,7 +215,43 @@
       "activities": { "title": "您想做什么？", "subtitle": "选择所有适用的选项", "options": { "snorkel": "浮潜", "buceo": "水肺潜水", "surf": "冲浪", "embarcacion": "租船", "pesca": "钓鱼", "hikes": "徒步", "avistamiento": "船上观鲸" } },
       "group": { "title": "您和谁一起旅行？", "options": ["独自", "情侣", "家庭", "朋友"] },
       "size": { "title": "一共几个人？", "options": ["1", "2", "3-4", "5-6", "7+"] },
-      "month": { "title": "您计划什么时候来？", "options": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"] },
+      "season": {
+        "title": "您计划什么时候来？",
+        "options": [
+          {
+            "id": "invierno",
+            "name": "冬季",
+            "months": "12月 - 2月",
+            "airTemp": "24-26°C",
+            "waterTemp": "19-21°C",
+            "species": ["灰鲸", "座头鲸", "鲸鲨", "海狮", "蝠鲼"]
+          },
+          {
+            "id": "primavera",
+            "name": "春季",
+            "months": "3月 - 5月",
+            "airTemp": "28-33°C",
+            "waterTemp": "21-24°C",
+            "species": ["鲸鲨", "蓝鲸", "虎鲸", "锤头鲨", "蝠鲼"]
+          },
+          {
+            "id": "verano",
+            "name": "夏季",
+            "months": "6月 - 9月",
+            "airTemp": "34-36°C",
+            "waterTemp": "27-30°C",
+            "species": ["蝠鲼", "锤头鲨", "海豚", "海狮幼崽", "海龟"]
+          },
+          {
+            "id": "otono",
+            "name": "秋季",
+            "months": "10月 - 11月",
+            "airTemp": "28-32°C",
+            "waterTemp": "26-28°C",
+            "species": ["沙丁鱼迁徙", "马林鱼", "鲸鲨", "座头鲸"]
+          }
+        ]
+      },
       "groupCert": { "title": "您的团队中每个人都有潜水证书吗？", "options": ["是的，所有人", "部分人有", "没有人"] },
       "vibe": { "title": "您在寻找什么类型的体验？", "subtitle": "选择所有适用的选项", "options": { "relajada": "休闲放松", "aventurera": "冒险", "deportiva": "运动", "educativa": "教育 / 文化" } }
     },
@@ -118,7 +262,7 @@
       "viewTour": "查看详情",
       "whatsapp": "通过 WhatsApp 预订",
       "retake": "重新测验",
-      "month": "访问月份",
+      "season": "季节",
       "groupCert": "团体证书",
       "vibe": "体验类型"
     }

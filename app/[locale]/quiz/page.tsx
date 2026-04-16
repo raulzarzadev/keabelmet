@@ -13,7 +13,7 @@ import type { QuizAnswers, TourRecommendation } from "@/lib/quiz-recommendations
 import { getRecommendations, buildWhatsAppUrl } from "@/lib/quiz-recommendations"
 import quizData from "@/locales/pages/quiz.json"
 
-type StepKey = "month" | "group" | "size" | "swim" | "snorkel" | "dived" | "cert" | "groupCert" | "vibe" | "activities"
+type StepKey = "season" | "group" | "size" | "swim" | "snorkel" | "dived" | "cert" | "groupCert" | "vibe" | "activities"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -30,7 +30,7 @@ const initialAnswers: QuizAnswers = {
   vibe: [],
   groupType: null,
   groupSize: null,
-  month: null,
+  season: null,
 }
 
 const slideVariants = {
@@ -59,7 +59,7 @@ export default function QuizPage() {
   const [showResults, setShowResults] = useState(false)
 
   const activeSteps = useMemo(() => {
-    const steps: StepKey[] = ["month", "group", "size", "swim"]
+    const steps: StepKey[] = ["season", "group", "size", "swim"]
     if (answers.canSwim) {
       steps.push("snorkel")
       steps.push("dived")
@@ -125,9 +125,9 @@ export default function QuizPage() {
     [goNext]
   )
 
-  const handleMonthAnswer = useCallback(
-    (monthIndex: number) => {
-      setAnswers((prev) => ({ ...prev, month: monthIndex }))
+  const handleSeasonAnswer = useCallback(
+    (seasonId: string) => {
+      setAnswers((prev) => ({ ...prev, season: seasonId }))
       goNext()
     },
     [goNext]
@@ -322,24 +322,34 @@ export default function QuizPage() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="w-full"
             >
-              {/* Month question */}
-              {currentStepKey === "month" && (
+              {/* Season question */}
+              {currentStepKey === "season" && (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                    {(t.questions as any).month.title}
+                    {(t.questions as any).season.title}
                   </h2>
-                  <div className="grid grid-cols-3 gap-3">
-                    {((t.questions as any).month.options as string[]).map((month: string, index: number) => (
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {((t.questions as any).season.options as any[]).map((option: any) => (
                       <button
-                        key={month}
-                        onClick={() => handleMonthAnswer(index)}
-                        className={`bg-white border-2 rounded-xl py-4 text-base font-semibold transition-colors ${
-                          answers.month === index
-                            ? "border-teal-700 bg-teal-50 text-teal-700"
-                            : "border-gray-200 text-gray-900 hover:border-teal-700 hover:bg-teal-50"
+                        key={option.id}
+                        onClick={() => handleSeasonAnswer(option.id)}
+                        className={`flex flex-col items-start p-4 rounded-xl border-2 transition-colors text-left ${
+                          answers.season === option.id
+                            ? "border-teal-700 bg-teal-50"
+                            : "border-gray-200 hover:border-teal-500"
                         }`}
                       >
-                        {month}
+                        <div className="text-lg font-bold">{option.name}</div>
+                        <div className="text-sm text-gray-500 mb-2">{option.months}</div>
+                        <div className="flex gap-3 mb-3 text-xs">
+                          <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">🌡 {option.airTemp}</span>
+                          <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">🌊 {option.waterTemp}</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {option.species.map((s: string) => (
+                            <span key={s} className="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full">{s}</span>
+                          ))}
+                        </div>
                       </button>
                     ))}
                   </div>
