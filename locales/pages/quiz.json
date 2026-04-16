@@ -1,0 +1,102 @@
+{
+  "es": {
+    "meta": { "title": "Quiz - Encuentra tu aventura ideal", "description": "Responde unas preguntas y te recomendamos la mejor experiencia marina en La Paz." },
+    "title": "Encuentra tu aventura ideal",
+    "subtitle": "Responde unas preguntas y te recomendaremos la mejor experiencia para ti",
+    "progress": "Paso {current} de {total}",
+    "back": "Atras",
+    "continue": "Continuar",
+    "questions": {
+      "swim": { "title": "Sabes nadar?", "yes": "Si", "no": "No" },
+      "snorkel": { "title": "Has hecho snorkel?", "options": ["Nunca", "Pocas veces", "Varias veces", "Muchas veces"] },
+      "dived": { "title": "Has buceado?", "yes": "Si", "no": "No" },
+      "cert": { "title": "Tienes certificado de buceo?", "options": ["No", "Open Water", "Advanced", "Rescue", "Divemaster+"] },
+      "activities": { "title": "Que te gustaria hacer?", "subtitle": "Selecciona todas las que apliquen", "options": { "snorkel": "Snorkel", "buceo": "Buceo", "surf": "Surf", "embarcacion": "Rentar embarcacion", "pesca": "Pescar", "hikes": "Hikes", "avistamiento": "Avistamiento desde barco" } },
+      "group": { "title": "Con quien vas?", "options": ["Solo", "Pareja", "Familia", "Amigos"] },
+      "size": { "title": "Cuantas personas son?", "options": ["1", "2", "3-4", "5-6", "7+"] }
+    },
+    "results": {
+      "title": "Estas son nuestras recomendaciones para ti",
+      "subtitle": "Basado en tus respuestas, creemos que estas experiencias son perfectas para ti",
+      "duration": "Duracion",
+      "viewTour": "Ver detalles",
+      "whatsapp": "Reservar por WhatsApp",
+      "retake": "Volver a hacer el quiz"
+    }
+  },
+  "en": {
+    "meta": { "title": "Quiz - Find your ideal adventure", "description": "Answer a few questions and we'll recommend the best marine experience in La Paz." },
+    "title": "Find your ideal adventure",
+    "subtitle": "Answer a few questions and we'll recommend the best experience for you",
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "continue": "Continue",
+    "questions": {
+      "swim": { "title": "Can you swim?", "yes": "Yes", "no": "No" },
+      "snorkel": { "title": "Have you snorkeled?", "options": ["Never", "A few times", "Several times", "Many times"] },
+      "dived": { "title": "Have you scuba dived?", "yes": "Yes", "no": "No" },
+      "cert": { "title": "Do you have a diving certificate?", "options": ["No", "Open Water", "Advanced", "Rescue", "Divemaster+"] },
+      "activities": { "title": "What would you like to do?", "subtitle": "Select all that apply", "options": { "snorkel": "Snorkeling", "buceo": "Scuba Diving", "surf": "Surfing", "embarcacion": "Rent a boat", "pesca": "Fishing", "hikes": "Hiking", "avistamiento": "Whale watching from boat" } },
+      "group": { "title": "Who are you traveling with?", "options": ["Solo", "Couple", "Family", "Friends"] },
+      "size": { "title": "How many people?", "options": ["1", "2", "3-4", "5-6", "7+"] }
+    },
+    "results": {
+      "title": "Here are our recommendations for you",
+      "subtitle": "Based on your answers, we think these experiences are perfect for you",
+      "duration": "Duration",
+      "viewTour": "View details",
+      "whatsapp": "Book via WhatsApp",
+      "retake": "Retake the quiz"
+    }
+  },
+  "fr": {
+    "meta": { "title": "Quiz - Trouvez votre aventure ideale", "description": "Repondez a quelques questions et nous vous recommanderons la meilleure experience marine a La Paz." },
+    "title": "Trouvez votre aventure ideale",
+    "subtitle": "Repondez a quelques questions et nous vous recommanderons la meilleure experience",
+    "progress": "Etape {current} sur {total}",
+    "back": "Retour",
+    "continue": "Continuer",
+    "questions": {
+      "swim": { "title": "Savez-vous nager ?", "yes": "Oui", "no": "Non" },
+      "snorkel": { "title": "Avez-vous fait du snorkeling ?", "options": ["Jamais", "Quelques fois", "Plusieurs fois", "Tres souvent"] },
+      "dived": { "title": "Avez-vous fait de la plongee ?", "yes": "Oui", "no": "Non" },
+      "cert": { "title": "Avez-vous un certificat de plongee ?", "options": ["Non", "Open Water", "Advanced", "Rescue", "Divemaster+"] },
+      "activities": { "title": "Que souhaitez-vous faire ?", "subtitle": "Selectionnez toutes les options applicables", "options": { "snorkel": "Snorkeling", "buceo": "Plongee sous-marine", "surf": "Surf", "embarcacion": "Louer un bateau", "pesca": "Peche", "hikes": "Randonnee", "avistamiento": "Observation depuis le bateau" } },
+      "group": { "title": "Avec qui voyagez-vous ?", "options": ["Seul", "En couple", "En famille", "Entre amis"] },
+      "size": { "title": "Combien de personnes ?", "options": ["1", "2", "3-4", "5-6", "7+"] }
+    },
+    "results": {
+      "title": "Voici nos recommandations pour vous",
+      "subtitle": "En fonction de vos reponses, nous pensons que ces experiences sont parfaites pour vous",
+      "duration": "Duree",
+      "viewTour": "Voir les details",
+      "whatsapp": "Reserver via WhatsApp",
+      "retake": "Refaire le quiz"
+    }
+  },
+  "zh": {
+    "meta": { "title": "测验 - 找到您理想的冒险", "description": "回答几个问题，我们将为您推荐 La Paz 最佳的海洋体验。" },
+    "title": "找到您理想的冒险",
+    "subtitle": "回答几个问题，我们将为您推荐最佳体验",
+    "progress": "第 {current} 步，共 {total} 步",
+    "back": "返回",
+    "continue": "继续",
+    "questions": {
+      "swim": { "title": "您会游泳吗？", "yes": "会", "no": "不会" },
+      "snorkel": { "title": "您浮潜过吗？", "options": ["从未", "几次", "多次", "很多次"] },
+      "dived": { "title": "您潜过水吗？", "yes": "是", "no": "否" },
+      "cert": { "title": "您有潜水证书吗？", "options": ["没有", "Open Water", "Advanced", "Rescue", "Divemaster+"] },
+      "activities": { "title": "您想做什么？", "subtitle": "选择所有适用的选项", "options": { "snorkel": "浮潜", "buceo": "水肺潜水", "surf": "冲浪", "embarcacion": "租船", "pesca": "钓鱼", "hikes": "徒步", "avistamiento": "船上观鲸" } },
+      "group": { "title": "您和谁一起旅行？", "options": ["独自", "情侣", "家庭", "朋友"] },
+      "size": { "title": "一共几个人？", "options": ["1", "2", "3-4", "5-6", "7+"] }
+    },
+    "results": {
+      "title": "以下是我们为您推荐的体验",
+      "subtitle": "根据您的回答，我们认为这些体验非常适合您",
+      "duration": "时长",
+      "viewTour": "查看详情",
+      "whatsapp": "通过 WhatsApp 预订",
+      "retake": "重新测验"
+    }
+  }
+}
