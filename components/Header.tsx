@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import LanguageSelector from "./LanguageSelector"
+import CurrencySelector from "@/components/CurrencySelector"
 
 const navLabels: Record<Locale, { items: { label: string; path: string }[]; book: string }> = {
   es: {
@@ -94,6 +95,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
 
           {/* Right side: Language + CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <CurrencySelector />
             <LanguageSelector locale={locale} />
             <Link
               href={localizeHref("/contacto", locale)}
@@ -105,6 +107,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-2">
+            <CurrencySelector />
             <LanguageSelector locale={locale} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}

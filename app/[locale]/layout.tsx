@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Header from "@/components/Header"
+import { CurrencyProvider } from "@/contexts/CurrencyContext"
 import { locales, type Locale, isValidLocale } from "@/lib/i18n"
 import { notFound } from "next/navigation"
 
@@ -130,8 +131,10 @@ export default async function LocaleLayout({
   return (
     <html lang={lang}>
       <body className={`${geist.variable} font-sans antialiased`}>
-        <Header locale={locale} />
-        {children}
+        <CurrencyProvider>
+          <Header locale={locale} />
+          {children}
+        </CurrencyProvider>
         <Analytics />
         <script
           type="application/ld+json"
