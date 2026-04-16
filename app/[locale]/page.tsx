@@ -228,6 +228,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ctaAll={gr.ctaAll}
           ctaLeave={gr.ctaLeave}
           googleMapsUrl={gr.googleMapsUrl}
+          googleReviewUrl={gr.googleReviewUrl}
         />
       )}
 

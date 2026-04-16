@@ -16,10 +16,11 @@ interface GoogleReviewsProps {
   ctaAll: string
   ctaLeave: string
   googleMapsUrl: string
+  googleReviewUrl: string
 }
 
 export default function GoogleReviews({
-  title, subtitle, overallRating, totalReviews, reviews, ctaAll, ctaLeave, googleMapsUrl,
+  title, subtitle, overallRating, totalReviews, reviews, ctaAll, ctaLeave, googleMapsUrl, googleReviewUrl,
 }: GoogleReviewsProps) {
   return (
     <section className="py-20 bg-gray-50">
@@ -65,7 +66,7 @@ export default function GoogleReviews({
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white border border-gray-300 px-6 py-3 font-medium text-gray-700 hover:bg-gray-50 transition-colors">
             {ctaAll}
           </a>
-          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-700 px-6 py-3 font-medium text-white hover:bg-teal-800 transition-colors">
+          <a href={googleReviewUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-700 px-6 py-3 font-medium text-white hover:bg-teal-800 transition-colors">
             {ctaLeave}
           </a>
         </div>
