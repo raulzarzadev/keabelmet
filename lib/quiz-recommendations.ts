@@ -3,9 +3,12 @@ export interface QuizAnswers {
   snorkelLevel: string | null
   hasDived: boolean | null
   diveCert: string | null
+  groupCert: string | null
   activities: string[]
+  vibe: string[]
   groupType: string | null
   groupSize: string | null
+  month: number | null
 }
 
 export interface TourRecommendation {
@@ -16,6 +19,8 @@ export interface TourRecommendation {
   duration: string
   description: string
   href: string
+  season: number[]
+  vibe: string[]
 }
 
 const allTours: TourRecommendation[] = [
@@ -27,6 +32,8 @@ const allTours: TourRecommendation[] = [
     duration: "6 horas",
     description: "Nada con lobos marinos en aguas cristalinas, snorkel y picnic en playas virgenes.",
     href: "/experiencias/tour-espiritu-santo",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["relajada", "aventurera", "educativa"],
   },
   {
     id: "ballena-gris",
@@ -36,6 +43,8 @@ const allTours: TourRecommendation[] = [
     duration: "4 horas",
     description: "Observa ballenas grises en su entorno natural en Baja California Sur.",
     href: "/experiencias/tour-ballena-gris",
+    season: [0, 1, 2, 3],
+    vibe: ["relajada", "educativa"],
   },
   {
     id: "tiburon-ballena",
@@ -45,6 +54,8 @@ const allTours: TourRecommendation[] = [
     duration: "2 horas",
     description: "Nada con el pez mas grande del mundo en las aguas de La Paz.",
     href: "/experiencias/tiburon-ballena",
+    season: [9, 10, 11, 0, 1, 2, 3],
+    vibe: ["aventurera", "educativa"],
   },
   {
     id: "buceo-cabo-pulmo",
@@ -54,6 +65,8 @@ const allTours: TourRecommendation[] = [
     duration: "Dia completo",
     description: "Descubre uno de los mejores sitios de buceo en Mexico.",
     href: "/experiencias/buceo-cabo-pulmo",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["aventurera", "deportiva"],
   },
   {
     id: "buceo-la-paz",
@@ -63,6 +76,8 @@ const allTours: TourRecommendation[] = [
     duration: "Medio dia",
     description: "Buceo con lobos marinos en el Archipielago Espiritu Santo.",
     href: "/experiencias/buceo-la-paz",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["aventurera", "deportiva"],
   },
   {
     id: "safari-bahia-magdalena",
@@ -72,6 +87,8 @@ const allTours: TourRecommendation[] = [
     duration: "Dia completo",
     description: "Corrida de sardinas, marlines y lobos marinos en mar abierto.",
     href: "/experiencias/safari-bahia-magdalena",
+    season: [10, 11],
+    vibe: ["aventurera", "deportiva"],
   },
   {
     id: "safari-la-ventana",
@@ -81,6 +98,8 @@ const allTours: TourRecommendation[] = [
     duration: "Medio dia",
     description: "Encuentro con mobulas, delfines y ballenas en el Golfo de California.",
     href: "/experiencias/safari-la-ventana",
+    season: [3, 4, 5],
+    vibe: ["aventurera", "educativa"],
   },
   {
     id: "renta-velero",
@@ -90,6 +109,8 @@ const allTours: TourRecommendation[] = [
     duration: "Flexible",
     description: "Navega el Golfo de California en un velero privado.",
     href: "/experiencias/renta-velero",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["relajada"],
   },
   {
     id: "renta-yate",
@@ -99,6 +120,8 @@ const allTours: TourRecommendation[] = [
     duration: "Flexible",
     description: "Experiencia premium en yate por el Golfo de California.",
     href: "/experiencias/renta-yate",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["relajada"],
   },
   {
     id: "surf-camp",
@@ -108,6 +131,8 @@ const allTours: TourRecommendation[] = [
     duration: "6 dias",
     description: "Campamento de surf con fisioterapeuta y video-analisis diario.",
     href: "/surf-camp",
+    season: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    vibe: ["deportiva", "aventurera"],
   },
 ]
 
@@ -199,6 +224,28 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
     }
   }
 
+  // Filter by selected month
+  if (answers.month !== null) {
+    const seasonFiltered = results.filter((t) => t.season.includes(answers.month!))
+    if (seasonFiltered.length > 0) results = seasonFiltered
+  }
+
+  // Filter by vibe preference
+  if (answers.vibe.length > 0) {
+    const vibeFiltered = results.filter((t) =>
+      answers.vibe.some((v) => t.vibe.includes(v))
+    )
+    if (vibeFiltered.length > 0) results = vibeFiltered
+  }
+
+  // Group cert affects dive recommendations
+  if (answers.groupCert) {
+    const nobodyDives = answers.groupCert === "Nadie" || answers.groupCert === "Nobody" || answers.groupCert === "Personne" || answers.groupCert === "没有人"
+    if (nobodyDives) {
+      results = results.filter((t) => !["buceo-cabo-pulmo", "buceo-la-paz"].includes(t.id))
+    }
+  }
+
   // Deduplicate and limit to 3
   const seen = new Set<string>()
   const unique = results.filter((t) => {
@@ -212,10 +259,10 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
 
 export function buildWhatsAppUrl(answers: QuizAnswers, recommendations: TourRecommendation[], locale: string): string {
   const labels: Record<string, Record<string, string>> = {
-    es: { swim: "Nadar", snorkel: "Snorkel", dive: "Buceo", cert: "Certificado", activities: "Actividades", group: "Grupo", size: "Personas", recommended: "Tours recomendados", greeting: "Hola! Hice el quiz de Keabelmet y estos son mis datos:", closing: "Me gustaria mas informacion!" },
-    en: { swim: "Swim", snorkel: "Snorkel", dive: "Diving", cert: "Certificate", activities: "Activities", group: "Group", size: "People", recommended: "Recommended tours", greeting: "Hi! I took the Keabelmet quiz and here are my details:", closing: "I would like more information!" },
-    fr: { swim: "Nager", snorkel: "Snorkeling", dive: "Plongee", cert: "Certificat", activities: "Activites", group: "Groupe", size: "Personnes", recommended: "Tours recommandes", greeting: "Bonjour ! J'ai fait le quiz Keabelmet et voici mes infos :", closing: "Je souhaiterais plus d'informations !" },
-    zh: { swim: "游泳", snorkel: "浮潜", dive: "潜水", cert: "证书", activities: "活动", group: "团体", size: "人数", recommended: "推荐行程", greeting: "你好！我做了 Keabelmet 测验，以下是我的信息：", closing: "我想了解更多信息！" },
+    es: { swim: "Nadar", snorkel: "Snorkel", dive: "Buceo", cert: "Certificado", activities: "Actividades", group: "Grupo", size: "Personas", recommended: "Tours recomendados", greeting: "Hola! Hice el quiz de Keabelmet y estos son mis datos:", closing: "Me gustaria mas informacion!", month: "Mes", groupCert: "Certificado grupo", vibe: "Tipo experiencia" },
+    en: { swim: "Swim", snorkel: "Snorkel", dive: "Diving", cert: "Certificate", activities: "Activities", group: "Group", size: "People", recommended: "Recommended tours", greeting: "Hi! I took the Keabelmet quiz and here are my details:", closing: "I would like more information!", month: "Month", groupCert: "Group cert", vibe: "Experience type" },
+    fr: { swim: "Nager", snorkel: "Snorkeling", dive: "Plongee", cert: "Certificat", activities: "Activites", group: "Groupe", size: "Personnes", recommended: "Tours recommandes", greeting: "Bonjour ! J'ai fait le quiz Keabelmet et voici mes infos :", closing: "Je souhaiterais plus d'informations !", month: "Mois", groupCert: "Certificat groupe", vibe: "Type experience" },
+    zh: { swim: "游泳", snorkel: "浮潜", dive: "潜水", cert: "证书", activities: "活动", group: "团体", size: "人数", recommended: "推荐行程", greeting: "你好！我做了 Keabelmet 测验，以下是我的信息：", closing: "我想了解更多信息！", month: "月份", groupCert: "团体证书", vibe: "体验类型" },
   }
 
   const l = labels[locale] || labels.es
@@ -225,6 +272,12 @@ export function buildWhatsAppUrl(answers: QuizAnswers, recommendations: TourReco
   if (answers.snorkelLevel) lines.push(`- ${l.snorkel}: ${answers.snorkelLevel}`)
   if (answers.hasDived !== null) lines.push(`- ${l.dive}: ${answers.hasDived ? "Si" : "No"}`)
   if (answers.diveCert) lines.push(`- ${l.cert}: ${answers.diveCert}`)
+  if (answers.groupCert) lines.push(`- ${l.groupCert}: ${answers.groupCert}`)
+  if (answers.vibe.length > 0) lines.push(`- ${l.vibe}: ${answers.vibe.join(", ")}`)
+  if (answers.month !== null) {
+    const monthNames = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+    lines.push(`- ${l.month}: ${monthNames[answers.month]}`)
+  }
   if (answers.activities.length > 0) lines.push(`- ${l.activities}: ${answers.activities.join(", ")}`)
   if (answers.groupType) lines.push(`- ${l.group}: ${answers.groupType}`)
   if (answers.groupSize) lines.push(`- ${l.size}: ${answers.groupSize}`)

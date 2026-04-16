@@ -13,7 +13,7 @@ import type { QuizAnswers, TourRecommendation } from "@/lib/quiz-recommendations
 import { getRecommendations, buildWhatsAppUrl } from "@/lib/quiz-recommendations"
 import quizData from "@/locales/pages/quiz.json"
 
-type StepKey = "swim" | "snorkel" | "dived" | "cert" | "activities" | "group" | "size"
+type StepKey = "month" | "group" | "size" | "swim" | "snorkel" | "dived" | "cert" | "groupCert" | "vibe" | "activities"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -25,9 +25,12 @@ const initialAnswers: QuizAnswers = {
   snorkelLevel: null,
   hasDived: null,
   diveCert: null,
+  groupCert: null,
   activities: [],
+  vibe: [],
   groupType: null,
   groupSize: null,
+  month: null,
 }
 
 const slideVariants = {
@@ -56,17 +59,21 @@ export default function QuizPage() {
   const [showResults, setShowResults] = useState(false)
 
   const activeSteps = useMemo(() => {
-    const steps: StepKey[] = ["swim"]
+    const steps: StepKey[] = ["month", "group", "size", "swim"]
     if (answers.canSwim) {
       steps.push("snorkel")
       steps.push("dived")
       if (answers.hasDived) {
         steps.push("cert")
+        const isSolo = answers.groupType === "Solo" || answers.groupType === "Seul" || answers.groupType === "独自"
+        if (!isSolo) {
+          steps.push("groupCert")
+        }
       }
     }
-    steps.push("activities", "group", "size")
+    steps.push("vibe", "activities")
     return steps
-  }, [answers.canSwim, answers.hasDived])
+  }, [answers.canSwim, answers.hasDived, answers.groupType])
 
   const totalSteps = activeSteps.length
   const currentStepKey = activeSteps[step]
@@ -111,12 +118,30 @@ export default function QuizPage() {
   )
 
   const handleOptionAnswer = useCallback(
-    (key: "snorkelLevel" | "diveCert" | "groupType" | "groupSize", value: string) => {
+    (key: "snorkelLevel" | "diveCert" | "groupCert" | "groupType" | "groupSize", value: string) => {
       setAnswers((prev) => ({ ...prev, [key]: value }))
       goNext()
     },
     [goNext]
   )
+
+  const handleMonthAnswer = useCallback(
+    (monthIndex: number) => {
+      setAnswers((prev) => ({ ...prev, month: monthIndex }))
+      goNext()
+    },
+    [goNext]
+  )
+
+  const handleVibeToggle = useCallback((vibeKey: string) => {
+    setAnswers((prev) => {
+      const current = prev.vibe
+      const updated = current.includes(vibeKey)
+        ? current.filter((v) => v !== vibeKey)
+        : [...current, vibeKey]
+      return { ...prev, vibe: updated }
+    })
+  }, [])
 
   const handleActivityToggle = useCallback((activity: string) => {
     setAnswers((prev) => {
@@ -297,6 +322,30 @@ export default function QuizPage() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="w-full"
             >
+              {/* Month question */}
+              {currentStepKey === "month" && (
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                    {(t.questions as any).month.title}
+                  </h2>
+                  <div className="grid grid-cols-3 gap-3">
+                    {((t.questions as any).month.options as string[]).map((month: string, index: number) => (
+                      <button
+                        key={month}
+                        onClick={() => handleMonthAnswer(index)}
+                        className={`bg-white border-2 rounded-xl py-4 text-base font-semibold transition-colors ${
+                          answers.month === index
+                            ? "border-teal-700 bg-teal-50 text-teal-700"
+                            : "border-gray-200 text-gray-900 hover:border-teal-700 hover:bg-teal-50"
+                        }`}
+                      >
+                        {month}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Swim question */}
               {currentStepKey === "swim" && (
                 <div className="text-center">
@@ -380,6 +429,64 @@ export default function QuizPage() {
                       </button>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Group cert question */}
+              {currentStepKey === "groupCert" && (
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                    {(t.questions as any).groupCert.title}
+                  </h2>
+                  <div className="grid grid-cols-1 gap-3">
+                    {((t.questions as any).groupCert.options as string[]).map((option: string) => (
+                      <button
+                        key={option}
+                        onClick={() => handleOptionAnswer("groupCert", option)}
+                        className="bg-white border-2 border-gray-200 hover:border-teal-700 hover:bg-teal-50 rounded-xl py-4 text-lg font-semibold text-gray-900 transition-colors"
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Vibe question (multi-select) */}
+              {currentStepKey === "vibe" && (
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    {(t.questions as any).vibe.title}
+                  </h2>
+                  <p className="text-gray-500 mb-8">
+                    {(t.questions as any).vibe.subtitle}
+                  </p>
+                  <div className="grid grid-cols-1 gap-3">
+                    {Object.entries((t.questions as any).vibe.options as Record<string, string>).map(([key, label]) => {
+                      const isSelected = answers.vibe.includes(key)
+                      return (
+                        <button
+                          key={key}
+                          onClick={() => handleVibeToggle(key)}
+                          className={`flex items-center justify-between bg-white border-2 rounded-xl py-4 px-5 text-lg font-semibold transition-colors ${
+                            isSelected
+                              ? "border-teal-700 bg-teal-50 text-teal-700"
+                              : "border-gray-200 text-gray-900 hover:border-teal-700 hover:bg-teal-50"
+                          }`}
+                        >
+                          <span>{label}</span>
+                          {isSelected && <Check className="w-5 h-5 text-teal-700" />}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <button
+                    onClick={goNext}
+                    disabled={answers.vibe.length === 0}
+                    className="mt-6 w-full bg-teal-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    {t.continue}
+                  </button>
                 </div>
               )}
 
