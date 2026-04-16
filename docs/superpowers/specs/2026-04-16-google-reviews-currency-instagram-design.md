@@ -174,7 +174,7 @@ export async function refreshInstagramToken(): Promise<string>
 ### Caching strategy
 - Data fetched server-side at build time via ISR
 - `revalidate: 3600` (refresh every hour)
-- If API fails, fallback to the 9 existing static gallery images
+- If API fails or env vars not configured, the Instagram sections are **completely hidden** (not rendered at all). No fallback to static images - the section simply doesn't appear until Instagram is properly configured.
 
 ### Token management
 - Long-lived token stored as env var: `INSTAGRAM_ACCESS_TOKEN`
@@ -193,7 +193,7 @@ INSTAGRAM_USER_ID=<numeric-user-id>
 - Responsive grid: 1 col (mobile), 2 col (tablet), 3 col (desktop)
 - Each item: image/video thumbnail, caption on hover, "Video" badge if applicable
 - Click opens existing lightbox component (`gallery-lightbox.tsx`)
-- Fallback to static images if API unavailable
+- If no Instagram token configured or API fails: entire gallery page shows the existing static images as before
 - "Siguenos en Instagram" button at bottom linking to profile
 
 ### Homepage gallery preview
