@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Users, MapPin, Clock, CheckCircle2, Anchor } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 export const metadata: Metadata = {
   title: "Buceo en Cabo Pulmo",
@@ -145,15 +146,13 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600">{t.pricing.collective.price_own_gear}</span>
-                  <span className="text-gray-600">{t.pricing.collective.currency}</span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={2800} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.collective.price_own_gear_note}</p>
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600">{t.pricing.collective.price_full_gear}</span>
-                  <span className="text-gray-600">{t.pricing.collective.currency}</span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={3000} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.collective.price_full_gear_note}</p>
               </div>
@@ -186,15 +185,13 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600">{t.pricing.private.price_base}</span>
-                  <span className="text-gray-600">{t.pricing.private.currency}</span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={12000} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.private.price_base_note}</p>
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-teal-600">{t.pricing.private.price_extra}</span>
-                  <span className="text-gray-600">{t.pricing.private.currency}</span>
+                  <span className="text-3xl font-bold text-teal-600">+<Price amount={3400} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.private.price_extra_note}</p>
               </div>
@@ -224,8 +221,7 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600">{t.pricing.discovery.price}</span>
-                  <span className="text-gray-600">{t.pricing.discovery.currency}</span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={3600} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.discovery.price_note}</p>
               </div>
@@ -255,15 +251,13 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600">{t.pricing.discovery_private.price_base}</span>
-                  <span className="text-gray-600">{t.pricing.discovery_private.currency}</span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={12000} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.discovery_private.price_base_note}</p>
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-teal-600">{t.pricing.discovery_private.price_extra}</span>
-                  <span className="text-gray-600">{t.pricing.discovery_private.currency}</span>
+                  <span className="text-3xl font-bold text-teal-600">+<Price amount={3800} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.discovery_private.price_extra_note}</p>
               </div>

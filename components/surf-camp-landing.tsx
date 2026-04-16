@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Waves, Camera, Coffee, Users, Check, Star, Award, Target } from "lucide-react"
+import { Price } from "@/contexts/CurrencyContext"
 
 export function SurfCampLanding() {
   return (
@@ -328,7 +329,7 @@ export function SurfCampLanding() {
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Surf Camp 6 Días</h3>
                 <div className="text-4xl font-bold text-blue-600 mb-6">
-                  $7,500 <span className="text-lg text-gray-600 font-normal">MXN / persona</span>
+                  <Price amount={7500} />
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   <li className="flex items-center gap-3">

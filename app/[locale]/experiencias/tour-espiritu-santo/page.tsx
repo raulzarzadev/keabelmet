@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Clock, Check, Star, Users } from "lucide-react"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 export const metadata: Metadata = {
   title: "Tour Isla Espiritu Santo",
@@ -296,7 +297,7 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.standard.name}</h3>
                   <p className="text-gray-600 mb-4">{t.pricing.standard.type}</p>
                   <div className="text-4xl font-bold text-teal-600 mb-2">
-                    {t.pricing.standard.price} <span className="text-lg font-normal text-gray-600">{t.pricing.standard.currency}</span>
+                    <Price amount={1800} />
                   </div>
                   <p className="text-sm text-gray-600">{t.pricing.standard.per}</p>
                 </div>

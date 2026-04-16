@@ -12,6 +12,7 @@ import {
   Users,
   AlertCircle,
 } from "lucide-react"
+import { Price } from "@/contexts/CurrencyContext"
 
 interface BallenaGrisLandingProps {
   translations: Record<string, any>
@@ -292,7 +293,7 @@ export function BallenaGrisLanding({ translations: t }: BallenaGrisLandingProps)
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{card.name}</h3>
                 <div className="text-4xl font-bold text-slate-600 mb-6">
-                  {card.price} <span className="text-lg text-gray-600 font-normal">{card.currency}</span>
+                  <Price amount={2800} />
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   {cardFeatures.map((feature: string, i: number) => (

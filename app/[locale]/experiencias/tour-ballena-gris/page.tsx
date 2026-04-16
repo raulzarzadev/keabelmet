@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Clock, MapPin, Check, Star, Anchor } from "lucide-react"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 export const metadata: Metadata = {
   title: "Tour Ballena Gris en Bahia Magdalena",
@@ -449,7 +450,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.shared_2h.name}</h3>
                   <p className="text-gray-600 mb-4">{t.pricing.shared_2h.duration}</p>
                   <div className="text-4xl font-bold text-teal-600 mb-2">
-                    {t.pricing.shared_2h.price} <span className="text-lg font-normal text-gray-600">{t.pricing.shared_2h.currency}</span>
+                    <Price amount={2400} />
                   </div>
                   <p className="text-sm text-gray-600">{t.pricing.shared_2h.per}</p>
                 </div>
@@ -477,7 +478,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.shared_3h.name}</h3>
                   <p className="text-teal-50 mb-4">{t.pricing.shared_3h.duration}</p>
                   <div className="text-4xl font-bold text-white mb-2">
-                    {t.pricing.shared_3h.price} <span className="text-lg font-normal text-teal-100">{t.pricing.shared_3h.currency}</span>
+                    <Price amount={3000} />
                   </div>
                   <p className="text-sm text-teal-100">{t.pricing.shared_3h.per}</p>
                 </div>
@@ -503,7 +504,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.private.name}</h3>
                   <p className="text-gray-600 mb-4">{t.pricing.private.duration}</p>
                   <div className="text-4xl font-bold text-orange-600 mb-2">
-                    {t.pricing.private.price} <span className="text-lg font-normal text-gray-600">{t.pricing.private.currency}</span>
+                    <Price amount={14000} />
                   </div>
                   <p className="text-sm text-gray-600">{t.pricing.private.per}</p>
                 </div>

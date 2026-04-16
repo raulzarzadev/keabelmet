@@ -12,6 +12,7 @@ import {
   Fish,
   Eye,
 } from "lucide-react"
+import { Price } from "@/contexts/CurrencyContext"
 
 export function SafariBahiaMagdalena({ translations }: { translations: Record<string, any> }) {
   const t = translations
@@ -267,7 +268,7 @@ export function SafariBahiaMagdalena({ translations }: { translations: Record<st
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.pricing.card.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  {t.pricing.card.price} <span className="text-lg text-gray-600 font-normal">{t.pricing.card.currency}</span>
+                  <Price amount={3500} />
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   {t.pricing.card.features.map((feature: string, i: number) => (

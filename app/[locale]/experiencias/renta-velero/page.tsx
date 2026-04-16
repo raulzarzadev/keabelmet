@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Users, MapPin, Clock, Anchor } from "lucide-react"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 export const metadata: Metadata = {
   title: "Renta de Velero",
@@ -137,8 +138,7 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
               </div>
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">$10,000</span>
-                  <span className="text-gray-600">MXN</span>
+                  <span className="text-4xl font-bold text-gray-900"><Price amount={10000} /></span>
                 </div>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -199,8 +199,7 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
               </div>
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">$8,000</span>
-                  <span className="text-gray-600">MXN</span>
+                  <span className="text-4xl font-bold text-gray-900"><Price amount={8000} /></span>
                 </div>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -255,8 +254,7 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
               </div>
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">$9,900</span>
-                  <span className="text-gray-600">MXN</span>
+                  <span className="text-4xl font-bold text-gray-900"><Price amount={9900} /></span>
                 </div>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -296,8 +294,7 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
               </div>
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">$4,000</span>
-                  <span className="text-gray-600">MXN</span>
+                  <span className="text-4xl font-bold text-gray-900"><Price amount={4000} /></span>
                 </div>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -346,8 +343,7 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
               </div>
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">$4,000</span>
-                  <span className="text-gray-600">MXN</span>
+                  <span className="text-4xl font-bold text-gray-900"><Price amount={4000} /></span>
                 </div>
                 <div className="grid gap-6 lg:grid-cols-2">
                   <ul className="space-y-3 text-gray-700">

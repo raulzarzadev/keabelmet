@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Check } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 
 export const metadata: Metadata = {
   title: "Tarifas y Precios",
@@ -14,7 +15,7 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
   const t = await getPageDictionary("rates", locale) as Record<string, any>
 
   const pkgKeys = ["safariBahiaMagdalena", "safariLaVentana", "surfCamp"]
-  const prices = [165, 180, 195]
+  const prices = [2900, 3150, 3400]
   const featured = [false, true, false]
 
   return (
@@ -44,8 +45,7 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
                 <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
                 <p className="text-gray-600 mb-6">{pkg.duration}</p>
                 <div className="mb-8">
-                  <span className="text-5xl font-bold text-teal-600">${prices[i]}</span>
-                  <span className="text-gray-600"> {t.currency}</span>
+                  <span className="text-5xl font-bold text-teal-600"><Price amount={prices[i]} /></span>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {pkg.includes?.map((item: string) => (
