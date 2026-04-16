@@ -68,27 +68,6 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "Lo que dicen nuestros aventureros",
-    "subtitle": "Experiencias reales de quienes han vivido nuestras expediciones.",
-    "items": [
-      {
-        "name": "Maria Gonzalez",
-        "location": "Ciudad de Mexico",
-        "text": "El avistamiento de ballenas fue una experiencia magica. Los guias son muy profesionales y cuidan cada detalle."
-      },
-      {
-        "name": "Carlos Ramirez",
-        "location": "Buenos Aires",
-        "text": "El sandboard fue increible! Nunca pense que deslizarme por las dunas seria tan divertido. Volvere pronto!"
-      },
-      {
-        "name": "Laura Martinez",
-        "location": "Santiago",
-        "text": "Las playas secretas son verdaderamente paradisiacas. Un tour muy bien organizado y con un servicio excelente."
-      }
-    ]
-  },
   "comparison": {
     "badge": "Comparativa Directa",
     "title": "Lo que suele arruinar un safari...",
@@ -195,22 +174,22 @@
     "totalReviews": "50+",
     "reviews": [
       {
-        "name": "Ana Lopez",
+        "name": "Rosa Burciaga",
         "rating": 5,
-        "date": "Hace 1 mes",
-        "text": "Experiencia increible con Keabelmet. Los guias son muy profesionales y el trato es excelente. Nadamos con lobos marinos y fue magico. 100% recomendado."
+        "date": "Reciente",
+        "text": "He ido mas de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el mar de cortes, cualquier expedicion se convierte en una experiencia inolvidable."
       },
       {
-        "name": "Roberto Diaz",
+        "name": "Bernardo Barbara",
         "rating": 5,
-        "date": "Hace 2 semanas",
-        "text": "El safari en Bahia Magdalena fue lo mejor de nuestro viaje. Vimos marlines, lobos marinos y el equipo nos hizo sentir seguros en todo momento."
+        "date": "Reciente",
+        "text": "Excelente experiencia con Mau y Gama!! Fuimos en busqueda de Orcas y aunque no las encontramos disfrutamos muchisimo de los delfines y tuvimos la suerte de encontrarnos 4 ballenas azules hermosas! Volveremos a salir con ellos muchas veces mas."
       },
       {
-        "name": "Patricia Hernandez",
+        "name": "Ester Millan",
         "rating": 5,
-        "date": "Hace 3 semanas",
-        "text": "Las fotos y videos que nos entregaron son espectaculares. Se nota que aman lo que hacen. Definitivamente volveremos el proximo ano."
+        "date": "Reciente",
+        "text": "Conocimos por casualidad a Mau y cambiamos las excursiones que teniamos contratadas para ir con el. La energia y simpatia que desprende, junto con los conocimientos que tiene y sumando al equipo que le acompana es todo para saber que sera una experiencia de 10!"
       }
     ],
     "ctaAll": "Ver todas en Google",

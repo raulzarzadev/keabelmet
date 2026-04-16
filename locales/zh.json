@@ -68,27 +68,6 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "探险者们怎么说",
-    "subtitle": "亲历我们探险之旅的真实体验。",
-    "items": [
-      {
-        "name": "Maria Gonzalez",
-        "location": "墨西哥城",
-        "text": "观鲸是一次神奇的体验。导游非常专业，注重每一个细节。"
-      },
-      {
-        "name": "Carlos Ramirez",
-        "location": "Buenos Aires",
-        "text": "滑沙太棒了！没想到从沙丘上滑下来会这么有趣。我很快会再来！"
-      },
-      {
-        "name": "Laura Martinez",
-        "location": "Santiago",
-        "text": "秘密海滩真的是天堂般美丽。行程组织得非常好，服务一流。"
-      }
-    ]
-  },
   "comparison": {
     "badge": "直接对比",
     "title": "那些通常会毁掉一次海洋探险的事……",
@@ -194,9 +173,9 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Ana Lopez", "rating": 5, "date": "1 个月前", "text": "与 Keabelmet 的体验令人难以置信。导游非常专业，服务一流。我们与海狮一起游泳，太神奇了。100% 推荐。" },
-      { "name": "Roberto Diaz", "rating": 5, "date": "2 周前", "text": "Bahia Magdalena 的探险是我们旅行的亮点。我们看到了马林鱼、海狮，团队让我们全程感到安全。" },
-      { "name": "Patricia Hernandez", "rating": 5, "date": "3 周前", "text": "他们交付的照片和视频非常壮观。可以看出他们热爱自己的工作。我们明年一定会再来。" }
+      { "name": "Rosa Burciaga", "rating": 5, "date": "最近", "text": "我去过10多次，他们从不让我失望，从以灰鲸为背景的露营到与虎鲸共游。Keabelmet是科尔特斯海最好的旅游公司，每次探险都成为难忘的体验。" },
+      { "name": "Bernardo Barbara", "rating": 5, "date": "最近", "text": "与Mau和Gama一起度过了绝妙的体验！我们去寻找虎鲸，虽然没找到，但我们非常享受与海豚的时光，还幸运地遇到了4头美丽的蓝鲸！我们会和他们再出海很多次。" },
+      { "name": "Ester Millan", "rating": 5, "date": "最近", "text": "我们偶然认识了Mau，并取消了已预订的其他行程改为跟他一起。他散发的活力和热情，加上他的知识以及陪伴他的团队，足以让你知道这将是一次满分体验！" }
     ],
     "ctaAll": "在 Google 上查看全部",
     "ctaLeave": "留下评价",

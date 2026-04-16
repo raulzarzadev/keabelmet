@@ -20,7 +20,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   const hero = d.hero
   const adv = d.adventures
-  const test = d.testimonials
   const comp = d.comparison
   const exp = d.expeditions
   const why = d.whyUs
@@ -189,28 +188,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     </div>
                   </div>
                 </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2) TESTIMONIOS */}
-      <section id="testimonios" className="bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          <h2 className="text-2xl font-bold">{test.title}</h2>
-          <p className="mt-1 text-sm text-neutral-600">{test.subtitle}</p>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {test.items.map((t: any, i: number) => (
-              <article key={i} className="overflow-hidden rounded-xl border bg-white shadow-sm">
-                <div className="relative h-36 w-full">
-                  <Image src={`/test-${i + 1}.jpg`} alt={t.name} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-neutral-700">&ldquo;{t.text}&rdquo;</p>
-                  <div className="mt-3 text-xs font-semibold text-neutral-900">{t.name}</div>
-                </div>
               </article>
             ))}
           </div>

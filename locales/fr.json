@@ -68,27 +68,6 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "Ce que disent nos aventuriers",
-    "subtitle": "Experiences reelles de ceux qui ont vecu nos expeditions.",
-    "items": [
-      {
-        "name": "Maria Gonzalez",
-        "location": "Mexico",
-        "text": "L'observation des baleines a ete une experience magique. Les guides sont tres professionnels et soignent chaque detail."
-      },
-      {
-        "name": "Carlos Ramirez",
-        "location": "Buenos Aires",
-        "text": "Le sandboard etait incroyable ! Je n'aurais jamais pense que glisser sur les dunes serait aussi amusant. Je reviendrai bientot !"
-      },
-      {
-        "name": "Laura Martinez",
-        "location": "Santiago",
-        "text": "Les plages secretes sont veritablement paradisiaques. Un tour tres bien organise avec un service excellent."
-      }
-    ]
-  },
   "comparison": {
     "badge": "Comparatif Direct",
     "title": "Ce qui gache souvent un safari...",
@@ -194,9 +173,9 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Ana Lopez", "rating": 5, "date": "Il y a 1 mois", "text": "Experience incroyable avec Keabelmet. Les guides sont tres professionnels et le service est excellent. Nous avons nage avec des lions de mer et c'etait magique. 100% recommande." },
-      { "name": "Roberto Diaz", "rating": 5, "date": "Il y a 2 semaines", "text": "Le safari a Bahia Magdalena a ete le point fort de notre voyage. Nous avons vu des marlins, des lions de mer et l'equipe nous a fait sentir en securite tout le temps." },
-      { "name": "Patricia Hernandez", "rating": 5, "date": "Il y a 3 semaines", "text": "Les photos et videos qu'ils nous ont livres sont spectaculaires. On voit qu'ils aiment ce qu'ils font. Nous reviendrons certainement l'annee prochaine." }
+      { "name": "Rosa Burciaga", "rating": 5, "date": "Recent", "text": "J'y suis allee plus de 10 fois et ils ne me decoivent jamais, du camping avec des baleines grises en arriere-plan a la nage avec des orques. Keabelmet est la meilleure entreprise de tours dans la mer de Cortez, chaque expedition devient une experience inoubliable." },
+      { "name": "Bernardo Barbara", "rating": 5, "date": "Recent", "text": "Excellente experience avec Mau et Gama !! Nous sommes partis a la recherche d'orques et meme si nous ne les avons pas trouvees, nous avons enormement profite des dauphins et avons eu la chance de rencontrer 4 magnifiques baleines bleues ! Nous ressortirons avec eux encore de nombreuses fois." },
+      { "name": "Ester Millan", "rating": 5, "date": "Recent", "text": "Nous avons rencontre Mau par hasard et avons change les excursions que nous avions reservees pour partir avec lui. L'energie et la sympathie qu'il degage, combinees a ses connaissances et a l'equipe qui l'accompagne, c'est tout ce qu'il faut pour savoir que ce sera une experience de 10 !" }
     ],
     "ctaAll": "Voir tous sur Google",
     "ctaLeave": "Laisser un avis",

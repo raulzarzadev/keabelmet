@@ -68,27 +68,6 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "What our adventurers say",
-    "subtitle": "Real experiences from those who have lived our expeditions.",
-    "items": [
-      {
-        "name": "Maria Gonzalez",
-        "location": "Mexico City",
-        "text": "The whale watching was a magical experience. The guides are very professional and take care of every detail."
-      },
-      {
-        "name": "Carlos Ramirez",
-        "location": "Buenos Aires",
-        "text": "The sandboarding was incredible! I never thought sliding down the dunes would be so much fun. I'll be back soon!"
-      },
-      {
-        "name": "Laura Martinez",
-        "location": "Santiago",
-        "text": "The secret beaches are truly paradise. A very well-organized tour with excellent service."
-      }
-    ]
-  },
   "comparison": {
     "badge": "Direct Comparison",
     "title": "What usually ruins a safari...",
@@ -194,9 +173,9 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Ana Lopez", "rating": 5, "date": "1 month ago", "text": "Incredible experience with Keabelmet. The guides are very professional and the service is excellent. We swam with sea lions and it was magical. 100% recommended." },
-      { "name": "Roberto Diaz", "rating": 5, "date": "2 weeks ago", "text": "The safari in Bahia Magdalena was the highlight of our trip. We saw marlins, sea lions, and the team made us feel safe the entire time." },
-      { "name": "Patricia Hernandez", "rating": 5, "date": "3 weeks ago", "text": "The photos and videos they delivered are spectacular. You can tell they love what they do. We will definitely come back next year." }
+      { "name": "Rosa Burciaga", "rating": 5, "date": "Recent", "text": "I've gone more than 10 times and they never disappoint, from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez, any expedition becomes an unforgettable experience." },
+      { "name": "Bernardo Barbara", "rating": 5, "date": "Recent", "text": "Excellent experience with Mau and Gama!! We went searching for orcas and even though we didn't find them, we enjoyed the dolphins immensely and were lucky to encounter 4 beautiful blue whales! We'll go out with them many more times." },
+      { "name": "Ester Millan", "rating": 5, "date": "Recent", "text": "We met Mau by chance and changed the excursions we had booked to go with him. The energy and warmth he radiates, combined with his knowledge and the team that accompanies him, is everything you need to know it will be a 10/10 experience!" }
     ],
     "ctaAll": "See all on Google",
     "ctaLeave": "Leave a review",
