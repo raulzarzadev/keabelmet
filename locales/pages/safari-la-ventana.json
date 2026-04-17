@@ -1,24 +1,24 @@
 {
   "es": {
     "hero": {
-      "title": "Safari La Ventana: Encuentro Intimo con Gigantes del Oceano",
-      "subtitle": "Una experiencia unica en La Ventana e Isla Cerralvo, Baja California Sur. Descubre la magia del Golfo de California como nunca antes.",
+      "title": "Seafari La Ventana: Encuentra lo extraordinario",
+      "subtitle": "Explora uno de los escenarios marinos mas sorprendentes del Golfo de California. Cada salida es distinta. Cada encuentro es real.",
       "cta": "Reserva tu aventura",
       "ctaSecondary": "Ver detalles",
-      "imageAlt": "Orca nadando en el oceano azul"
+      "imageAlt": "Seafari en La Ventana, Baja California Sur"
     },
     "about": {
-      "title": "Que es el Safari La Ventana?",
-      "description": "Zarpamos desde las costas tranquilas de La Ventana rumbo al azul profundo. A bordo de la lancha, guiados por biologos marinos y capitanes locales, navegamos en busca de lo inesperado: mobulas que vuelan, delfines que nos escoltan, ballenas que emergen como leyendas vivas. No hay guion. No hay show. Porque cada encuentro con la fauna es autentico, espontaneo e irrepetible. Porque esto no es un tour turistico... es una aventura real. Solo es la naturaleza... salvaje y sin filtros.",
+      "title": "Que es el Seafari?",
+      "description": "Es una experiencia que inicia en La Ventana (40 min de La Paz) donde nos dirigimos rumbo al azul profundo. A bordo de la lancha, guiados por biologos marinos y capitanes locales, navegamos en busca de lo inesperado: mobulas que vuelan, delfines que nos escoltan, ballenas que emergen como leyendas vivas. No hay guion. No hay show.",
       "commitment": {
         "title": "Nuestro Compromiso",
         "description": "Respetamos profundamente la vida marina. Nuestros safaris estan disenados para observar sin perturbar, aprender sin interferir, y maravillarse sin danar el ecosistema que nos acoge."
       },
       "guidedExperience": {
-        "title": "Experiencia Guiada",
-        "description": "Cada expedicion es liderada por biologos marinos con anos de experiencia en el Golfo de California, quienes comparten su conocimiento y pasion por este ecosistema unico."
+        "title": "Como es la experiencia?",
+        "description": "A diferencia de un tour convencional, donde todo esta previamente establecido, el Seafari en La Ventana esta disenado para vivir una experiencia dinamica y autentica, enfocada en maximizar los encuentros con la vida silvestre. Cada salida es unica."
       },
-      "imageAlt": "Guia entusiasta con equipo de snorkel disfrutando de una experiencia marina en Safari La Ventana"
+      "imageAlt": "Guia entusiasta con equipo de snorkel disfrutando de una experiencia marina en Seafari La Ventana"
     },
     "experience": {
       "title": "Como es la experiencia?",
@@ -68,94 +68,82 @@
       }
     },
     "wildlife": {
-      "title": "Especies que puedes encontrar",
-      "subtitle": "El Golfo de California es uno de los mares mas biodiversos del planeta. Estas son algunas de las especies que podrias avistar durante tu safari.",
-      "species": {
-        "mobulas": {
-          "name": "Mobulas",
-          "season": "Abr - Jul",
-          "description": "Conocidas como \"diablos de mar\", estas mantarrayas realizan impresionantes saltos fuera del agua, creando un espectaculo unico. Suelen formar grandes agregaciones durante su temporada de apareamiento."
+      "title": "Fauna por temporada",
+      "subtitle": "El Golfo de California es uno de los mares mas biodiversos del planeta.",
+      "seasons": {
+        "invierno": {
+          "name": "Invierno",
+          "species": ["Ballena jorobada", "Ballena azul", "Ballena de aleta", "Mobulas (Agregacion menor)", "Delfines"]
         },
-        "dolphins": {
-          "name": "Delfines",
-          "season": "Todo el ano",
-          "description": "Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectaculo natural con sus saltos y acrobacias."
+        "primavera": {
+          "name": "Primavera",
+          "species": ["Mobulas (Gran Migracion)", "Delfines", "Lobos marinos", "Orcas", "Ballena azul"]
         },
-        "humpbackWhale": {
-          "name": "Ballena Jorobada",
-          "season": "Dic - Abr",
-          "description": "Conocidas por sus impresionantes saltos y cantos complejos. Las ballenas jorobadas migran anualmente a las calidas aguas del Golfo de California."
+        "verano": {
+          "name": "Verano",
+          "species": ["Mobulas (Gran Migracion)", "Delfines", "Lobos marinos", "Ballenas de Bryde", "Cachalotes"]
         },
-        "seaLions": {
-          "name": "Lobos Marinos",
-          "season": "Todo el ano",
-          "description": "Curiosos y carismaticos, los lobos marinos suelen descansar en las rocas y, si tienes suerte, podrias nadar cerca de ellos."
-        },
-        "spermWhales": {
-          "name": "Cachalotes",
-          "season": "Jun - Nov",
-          "description": "Los cachalotes son los depredadores con dientes mas grandes del planeta. Impresionantes buceadores que pueden sumergirse a profundidades extremas."
-        },
-        "orcas": {
-          "name": "Orcas",
-          "season": "Todo el ano",
-          "description": "Conocidas como \"ballenas asesinas\", las orcas son en realidad delfines grandes. Inteligentes y sociales, cazan en grupos coordinados."
+        "otono": {
+          "name": "Otono",
+          "species": ["Delfines", "Lobos marinos", "Manta gigante", "Aves marinas", "Cachalotes"]
         }
       },
+      "yearRound": "Fauna frecuente durante todo el ano: Delfin nariz de botella, Delfin comun, Lobos marinos, Aves marinas",
+      "occasional": "Fauna con apariciones ocasionales: Orcas, Cachalotes, Ballenas Piloto, Falsas Orcas, Zifios, Tiburon Ballena",
       "realismNote": {
-        "title": "Nota de Realismo",
+        "title": "Nota de realismo",
         "description": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos unicos."
       }
     },
     "includes": {
-      "title": "Incluye la expedicion",
-      "subtitle": "Todo lo que necesitas para disfrutar de una experiencia segura, comoda y enriquecedora.",
+      "title": "Tu experiencia incluye",
+      "subtitle": "Todo lo que necesitas para disfrutar del Seafari.",
       "items": {
         "boat": {
-          "title": "Transporte en panga",
-          "description": "Embarcacion segura y comoda, perfecta para navegar en el Golfo de California."
+          "title": "Safari marino de 6 hrs",
+          "description": "Navegacion en busca de vida marina con biologos marinos y capitanes locales."
         },
         "guide": {
-          "title": "Guia biologo marino",
-          "description": "Expertos que compartiran su conocimiento sobre el ecosistema y la vida marina."
+          "title": "Neopreno y equipo de snorkel",
+          "description": "Equipo completo para que disfrutes del agua sin preocupaciones."
         },
         "snorkel": {
-          "title": "Equipo completo de snorkel",
-          "description": "Mascara, tubo y aletas de calidad para explorar bajo el agua."
+          "title": "Picnic en isla desierta",
+          "description": "Comida fresca servida en un escenario natural inigualable."
         },
         "photo": {
-          "title": "Fotografias y videos",
-          "description": "Capturas profesionales de tu experiencia para que te lleves un recuerdo inolvidable."
+          "title": "Snacks y bebidas",
+          "description": "Hidratacion y energia durante toda la expedicion."
         },
         "food": {
-          "title": "Ceviche fresco y refrigerio",
-          "description": "Delicioso ceviche preparado con pescado local, frutas frescas y agua purificada."
+          "title": "Equipo para playa",
+          "description": "Todo lo necesario para disfrutar de las paradas en playa."
         },
         "binoculars": {
-          "title": "Binoculares y guia de fauna",
-          "description": "Herramientas para mejorar tu experiencia de avistamiento y aprendizaje."
+          "title": "Fotos y videos",
+          "description": "Capturas profesionales de tu experiencia para que te lleves un recuerdo inolvidable."
         }
       }
     },
     "pricing": {
       "title": "Precios",
-      "subtitle": "Opciones flexibles para individuos, parejas, familias o grupos que desean vivir esta experiencia unica.",
+      "subtitle": "Safaris exclusivos en Baja California Sur.",
       "group": {
-        "name": "Safari Grupal",
-        "price": "$2,800",
+        "name": "Solo o en pareja",
+        "price": "$3,000",
         "currency": "MXN / persona",
         "features": [
-          "Grupos de hasta 8 personas",
+          "Minimo 4 personas para realizar el Seafari",
+          "Si eres una persona podemos integrarte a un grupo",
           "Experiencia compartida",
-          "Ideal para viajeros individuales o parejas",
           "Todos los servicios incluidos"
         ],
         "cta": "Reservar Ahora"
       },
       "private": {
-        "name": "Safari Privado",
-        "price": "$14,000",
-        "currency": "MXN / grupo",
+        "name": "Grupo o familia",
+        "price": "$16,000",
+        "currency": "MXN / hasta 8 pax",
         "features": [
           "Embarcacion exclusiva para tu grupo",
           "Hasta 8 personas",
@@ -192,9 +180,31 @@
       ]
     },
     "cta": {
-      "title": "Listo para vivir el mar de verdad?",
-      "subtitle": "Reserva tu safari ahora y preparate para una experiencia que cambiara tu forma de ver el oceano.",
+      "title": "Listo para la aventura?",
+      "subtitle": "Reserva tu Seafari ahora y preparate para una experiencia que cambiara tu forma de ver el oceano.",
       "button": "Reserva Ahora"
+    },
+    "recommendations": {
+      "title": "Recomendaciones para tu Seafari",
+      "subtitle": "Para que disfrutes tu Seafari al maximo y no te preocupes por que llevar.",
+      "categories": {
+        "wear": {
+          "title": "Que llevar?",
+          "items": ["Traje de bano", "Toalla", "Sandalias", "Ropa ligera y comoda", "Cambio de ropa seca", "Sudadera o rompe vientos (durante el invierno)"]
+        },
+        "protection": {
+          "title": "Proteccion personal",
+          "items": ["Gorra o sombrero", "Lentes de sol", "Bloqueador solar biodegradable"]
+        },
+        "belongings": {
+          "title": "Para tus pertenencias",
+          "items": ["Funda impermeable para celular", "Bolsa seca para objetos personales", "Camara acuatica, si cuentas con una"]
+        },
+        "extra": {
+          "title": "Extra recomendado",
+          "items": ["Medicamento para mareo, en caso de que lo necesites", "Mucha actitud aventurera"]
+        }
+      }
     }
   },
   "en": {
