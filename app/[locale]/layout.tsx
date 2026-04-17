@@ -61,13 +61,18 @@ export async function generateMetadata({
       apple: "/apple-icon.png",
     },
     openGraph: {
+      title: "Keabelmet Expeditions",
+      description: "Expediciones marinas en La Paz, Baja California Sur. Nada con lobos marinos, avista ballenas y explora el Mar de Cortes.",
+      url: "https://www.keabelmet.com",
+      siteName: "Keabelmet Expeditions",
       locale: localeToOgLocale[locale],
       type: "website",
-      siteName: "Keabelmet Expeditions",
       images: [{ url: "/cachalotecta.jpeg", width: 1200, height: 630, alt: "Keabelmet Expeditions" }],
     },
     twitter: {
       card: "summary_large_image",
+      title: "Keabelmet Expeditions",
+      description: "Expediciones marinas en La Paz, Baja California Sur.",
       images: ["/cachalotecta.jpeg"],
     },
     alternates: {
