@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Header from "@/components/Header"
+import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { CurrencyProvider } from "@/contexts/CurrencyContext"
 import { locales, type Locale, isValidLocale } from "@/lib/i18n"
 import { notFound } from "next/navigation"
@@ -135,6 +136,7 @@ export default async function LocaleLayout({
           <Header locale={locale} />
           {children}
         </CurrencyProvider>
+        <WhatsAppFloat />
         <Analytics />
         <script
           type="application/ld+json"
