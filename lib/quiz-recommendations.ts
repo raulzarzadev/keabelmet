@@ -92,13 +92,13 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "safari-la-ventana",
-    title: "Safari La Ventana",
+    title: "Seafari La Ventana",
     image: "/images/orca-la-ventana-hero.jpeg",
-    price: 2800,
-    duration: "Medio dia",
-    description: "Encuentro con mobulas, delfines y ballenas en el Golfo de California.",
+    price: 3000,
+    duration: "6 horas",
+    description: "Seafari exclusivo en busca de mobulas, delfines, ballenas y orcas en el Golfo de California.",
     href: "/experiencias/safari-la-ventana",
-    season: ["primavera"],
+    season: ["invierno", "primavera", "verano", "otono"],
     vibe: ["aventurera", "educativa"],
   },
   {

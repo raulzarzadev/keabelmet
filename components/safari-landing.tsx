@@ -259,7 +259,7 @@ export function SafariLanding({ translations: t }: SafariLandingProps) {
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{pricing.group?.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  <Price amount={2800} />
+                  <Price amount={3000} />
                 </div>
                 <ul className="space-y-3 mb-8">
                   {(pricing.group?.features || []).map((feature: string, i: number) => (
@@ -278,7 +278,7 @@ export function SafariLanding({ translations: t }: SafariLandingProps) {
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{pricing.private?.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  <Price amount={14000} />
+                  <Price amount={16000} />
                 </div>
                 <ul className="space-y-3 mb-8">
                   {(pricing.private?.features || []).map((feature: string, i: number) => (
