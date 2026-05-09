@@ -35,7 +35,9 @@ export default async function SobreNosotros({ params }: { params: Promise<{ loca
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">{t.historyTitle}</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">{t.historyP1}</p>
-          <p className="text-gray-700 mb-8 leading-relaxed">{t.historyP2}</p>
+          <p className="text-gray-700 mb-6 leading-relaxed">{t.historyP2}</p>
+          {t.historyP3 && <p className="text-gray-700 mb-6 leading-relaxed">{t.historyP3}</p>}
+          {t.historyP4 && <p className="text-gray-700 mb-8 leading-relaxed">{t.historyP4}</p>}
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {t.values?.map((v: any, i: number) => (

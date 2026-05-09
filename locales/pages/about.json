@@ -3,8 +3,10 @@
     "title": "Sobre Nosotros",
     "subtitle": "Expertos en expediciones marinas en Baja California Sur",
     "historyTitle": "Nuestra Historia",
-    "historyP1": "Keabelmet nacio de la pasion por la vida marina y el deseo de compartir las maravillas de Baja California Sur con el mundo. Con mas de 15 anos de experiencia, nos especializamos en crear encuentros memorables con la fauna marina de la region.",
-    "historyP2": "Desde nadar con lobos marinos hasta observar ballenas en su habitat natural, cada expedicion esta disenada para ser segura, educativa y respetuosa con el medio ambiente.",
+    "historyP1": "Keabelmet Expeditions ofrece safaris marinos y experiencias de buceo en La Ventana, La Paz, Bahia Magdalena y mas en el Golfo de California.",
+    "historyP2": "Operamos en grupos pequenos guiados por biologos y naturalistas para buscar encuentros autenticos con la vida salvaje como ballenas, orcas, mobulas, delfines, lobos marinos y mas, siempre con respeto por el oceano.",
+    "historyP3": "Cada experiencia se adapta a tu situacion: si viajas solo, en pareja, con amigos, en familia o con ninos, disenamos la salida ideal para ti. Ofrecemos snorkel, buceo, exploracion en mar abierto e interpretacion del comportamiento animal, incluyendo fotografia y video de la experiencia.",
+    "historyP4": "Mas que un tour, es una expedicion intima, segura y educativa para vivir el oceano de Baja California Sur.",
     "values": [
       { "title": "Pasion por la Naturaleza", "text": "Amamos lo que hacemos y cuidamos el ecosistema marino" },
       { "title": "Seguridad Primero", "text": "Equipos certificados y guias experimentados" },
@@ -16,8 +18,10 @@
     "title": "About Us",
     "subtitle": "Marine expedition experts in Baja California Sur",
     "historyTitle": "Our Story",
-    "historyP1": "Keabelmet was born from a passion for marine life and the desire to share the wonders of Baja California Sur with the world. With over 15 years of experience, we specialize in creating memorable encounters with the region's marine wildlife.",
-    "historyP2": "From swimming with sea lions to observing whales in their natural habitat, every expedition is designed to be safe, educational, and respectful of the environment.",
+    "historyP1": "Keabelmet Expeditions offers marine safaris and diving experiences in La Ventana, La Paz, Magdalena Bay and more across the Gulf of California.",
+    "historyP2": "We operate in small groups guided by biologists and naturalists to seek authentic wildlife encounters with whales, orcas, mobulas, dolphins, sea lions and more, always respecting the ocean.",
+    "historyP3": "Each experience adapts to your situation: whether you travel solo, as a couple, with friends, family or kids, we design the ideal outing for you. We offer snorkeling, diving, open-sea exploration and animal-behavior interpretation, including photography and video of your experience.",
+    "historyP4": "More than a tour, it is an intimate, safe and educational expedition to live the ocean of Baja California Sur.",
     "values": [
       { "title": "Passion for Nature", "text": "We love what we do and protect the marine ecosystem" },
       { "title": "Safety First", "text": "Certified equipment and experienced guides" },
@@ -29,8 +33,10 @@
     "title": "A Propos",
     "subtitle": "Experts en expeditions marines en Baja California Sur",
     "historyTitle": "Notre Histoire",
-    "historyP1": "Keabelmet est ne d'une passion pour la vie marine et du desir de partager les merveilles de Baja California Sur avec le monde. Avec plus de 15 ans d'experience, nous nous specialisons dans la creation de rencontres memorables avec la faune marine de la region.",
-    "historyP2": "De la nage avec les lions de mer a l'observation des baleines dans leur habitat naturel, chaque expedition est concue pour etre sure, educative et respectueuse de l'environnement.",
+    "historyP1": "Keabelmet Expeditions propose des safaris marins et des experiences de plongee a La Ventana, La Paz, Bahia Magdalena et plus dans le Golfe de Californie.",
+    "historyP2": "Nous operons en petits groupes guides par des biologistes et naturalistes pour chercher des rencontres authentiques avec la vie sauvage : baleines, orques, mobulas, dauphins, otaries et plus, toujours dans le respect de l'ocean.",
+    "historyP3": "Chaque experience s'adapte a votre situation : seul, en couple, entre amis, en famille ou avec des enfants, nous concevons la sortie ideale pour vous. Nous offrons snorkeling, plongee, exploration en mer ouverte et interpretation du comportement animal, photo et video inclus.",
+    "historyP4": "Plus qu'un tour, c'est une expedition intime, sure et educative pour vivre l'ocean de Basse-Californie du Sud.",
     "values": [
       { "title": "Passion pour la Nature", "text": "Nous aimons ce que nous faisons et protegeons l'ecosysteme marin" },
       { "title": "Securite d'Abord", "text": "Equipement certifie et guides experimentes" },
@@ -39,16 +45,18 @@
     ]
   },
   "zh": {
-    "title": "\u5173\u4e8e\u6211\u4eec",
-    "subtitle": "\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u6d77\u6d0b\u63a2\u9669\u4e13\u5bb6",
-    "historyTitle": "\u6211\u4eec\u7684\u6545\u4e8b",
-    "historyP1": "Keabelmet\u8bde\u751f\u4e8e\u5bf9\u6d77\u6d0b\u751f\u547d\u7684\u70ed\u7231\u548c\u4e0e\u4e16\u754c\u5206\u4eab\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u5947\u89c2\u7684\u613f\u671b\u3002\u62e5\u6709\u8d8515\u5e74\u7684\u7ecf\u9a8c\uff0c\u6211\u4eec\u4e13\u6ce8\u4e8e\u521b\u9020\u4e0e\u8be5\u5730\u533a\u6d77\u6d0b\u91ce\u751f\u52a8\u7269\u7684\u96be\u5fd8\u76f8\u9047\u3002",
-    "historyP2": "\u4ece\u4e0e\u6d77\u72ee\u5171\u6cf3\u5230\u5728\u81ea\u7136\u6816\u606f\u5730\u89c2\u5bdf\u9cb8\u9c7c\uff0c\u6bcf\u6b21\u63a2\u9669\u90fd\u65e8\u5728\u5b89\u5168\u3001\u6559\u80b2\u548c\u5c0a\u91cd\u73af\u5883\u3002",
+    "title": "关于我们",
+    "subtitle": "下加利福尼亚州半岛海洋探险专家",
+    "historyTitle": "我们的故事",
+    "historyP1": "Keabelmet 探险在拉文塔纳、拉巴斯、马格达莱纳湾及加利福尼亚湾其他地区提供海洋野生动物之旅与潜水体验。",
+    "historyP2": "我们以小团体方式运营，由生物学家和博物学家带领，寻找与鲸鱼、虎鲸、海蝠鲼、海豚、海狮等野生动物的真实相遇，始终尊重海洋。",
+    "historyP3": "每次体验都会根据您的情况量身定制：无论您是独自旅行、情侣、朋友、家人或带孩子，我们都会为您设计理想的行程。我们提供浮潜、潜水、开阔海域探索和动物行为解读，包含摄影和录像。",
+    "historyP4": "不仅仅是一次旅行，而是一次亲密、安全且具有教育意义的探险，体验下加利福尼亚州半岛的海洋。",
     "values": [
-      { "title": "\u70ed\u7231\u81ea\u7136", "text": "\u6211\u4eec\u70ed\u7231\u6240\u505a\u7684\u4e8b\u4e1a\uff0c\u4fdd\u62a4\u6d77\u6d0b\u751f\u6001\u7cfb\u7edf" },
-      { "title": "\u5b89\u5168\u7b2c\u4e00", "text": "\u8ba4\u8bc1\u8bbe\u5907\u548c\u7ecf\u9a8c\u4e30\u5bcc\u7684\u5411\u5bfc" },
-      { "title": "\u5f53\u5730\u4e13\u4e1a\u77e5\u8bc6", "text": "\u6211\u4eec\u719f\u6089\u5357\u4e0b\u52a0\u5229\u798f\u5c3c\u4e9a\u534a\u5c9b\u7684\u6bcf\u4e2a\u89d2\u843d" },
-      { "title": "\u5c0f\u56e2\u4f53", "text": "\u5c0f\u578b\u63a2\u9669\u56e2\u5e26\u6765\u66f4\u597d\u7684\u4f53\u9a8c" }
+      { "title": "热爱自然", "text": "我们热爱所做的事业，保护海洋生态系统" },
+      { "title": "安全第一", "text": "认证设备和经验丰富的向导" },
+      { "title": "当地专业知识", "text": "我们熟悉下加利福尼亚州半岛的每个角落" },
+      { "title": "小团体", "text": "小型探险团带来更好的体验" }
     ]
   }
 }
