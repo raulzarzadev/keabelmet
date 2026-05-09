@@ -1,3 +1,5 @@
+import { buildWhatsAppLink } from "@/config/whatsapp"
+
 export interface QuizAnswers {
   canSwim: boolean | null
   snorkelLevel: string | null
@@ -282,6 +284,5 @@ export function buildWhatsAppUrl(answers: QuizAnswers, recommendations: TourReco
   lines.push("")
   lines.push(l.closing)
 
-  const message = encodeURIComponent(lines.join("\n"))
-  return `https://wa.me/524422056214?text=${message}`
+  return buildWhatsAppLink(lines.join("\n"))
 }

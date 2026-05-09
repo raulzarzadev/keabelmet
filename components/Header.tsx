@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import type { Locale } from "@/lib/i18n"
@@ -86,9 +87,14 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={localizeHref("/", locale)} className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Keabelmet"
+              width={40}
+              height={40}
+              priority
+              className="w-10 h-10 rounded-full object-contain"
+            />
             <span className="text-xl font-semibold text-gray-900">Keabelmet</span>
           </Link>
 

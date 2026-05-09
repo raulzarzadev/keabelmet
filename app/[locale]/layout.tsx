@@ -52,14 +52,6 @@ export async function generateMetadata({
     },
     description:
       "Vive aventuras marinas en Baja California Sur. Safaris marinos, buceo en Cabo Pulmo, snorkel con lobos marinos, avistamiento de ballenas y mas.",
-    icons: {
-      icon: [
-        { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-        { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-        { url: "/icon.svg", type: "image/svg+xml" },
-      ],
-      apple: "/apple-icon.png",
-    },
     openGraph: {
       title: "Keabelmet Expeditions",
       description: "Expediciones marinas en La Paz, Baja California Sur. Nada con lobos marinos, avista ballenas y explora el Mar de Cortes.",

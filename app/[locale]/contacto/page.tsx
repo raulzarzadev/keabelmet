@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary, type Locale } from "@/lib/i18n"
+import { buildWhatsAppLink } from "@/config/whatsapp"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -46,7 +47,7 @@ export default async function Contacto({ params }: { params: Promise<{ locale: s
               {t.contactCards.tours.map((tour: { name: string; href: string }) => (
                 <a
                   key={tour.href}
-                  href={`https://wa.me/524422056214?text=Hola, quiero saber mas sobre ${tour.name}`}
+                  href={buildWhatsAppLink(`Hola, quiero saber mas sobre ${tour.name}`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 text-sm font-medium text-teal-700 bg-teal-50 rounded-lg hover:bg-teal-100 transition-colors text-center"
