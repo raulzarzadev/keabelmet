@@ -4,7 +4,8 @@ import Image from "next/image"
 import { Calendar, Users, MapPin, Camera, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-import { buildPageMeta } from "@/lib/seo"
+import { buildPageMeta, getPageSeo } from "@/lib/seo"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -18,6 +19,14 @@ export default async function BuceoLaPazPage({ params }: { params: Promise<{ loc
   const t = await getPageDictionary("buceo-la-paz", locale) as Record<string, any>
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
+    <>
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { label: getPageSeo("experiences", locale).title, href: l("/experiencias") },
+          { label: getPageSeo("buceoLaPaz", locale).title },
+        ]}
+      />
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative">
@@ -135,5 +144,6 @@ export default async function BuceoLaPazPage({ params }: { params: Promise<{ loc
         </div>
       </section>
     </main>
+    </>
   )
 }

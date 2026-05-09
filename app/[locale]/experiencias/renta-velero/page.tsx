@@ -4,7 +4,8 @@ import { Calendar, Users, MapPin, Clock, Anchor } from "lucide-react"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-import { buildPageMeta } from "@/lib/seo"
+import { buildPageMeta, getPageSeo } from "@/lib/seo"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -17,6 +18,14 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   return (
+    <>
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { label: getPageSeo("experiences", locale).title, href: l("/experiencias") },
+          { label: getPageSeo("rentaVelero", locale).title },
+        ]}
+      />
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative">
@@ -594,5 +603,6 @@ export default async function RentaVeleroPage({ params }: { params: Promise<{ lo
         </div>
       </section>
     </main>
+    </>
   )
 }

@@ -7,6 +7,7 @@ import { Price } from "@/contexts/CurrencyContext"
 
 import { buildPageMeta, buildUrl, getPageSeo } from "@/lib/seo"
 import { JsonLd, breadcrumbSchema, touristTripSchema } from "@/lib/jsonLd"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -38,6 +39,13 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <JsonLd data={schemas} />
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { label: getPageSeo("experiences", locale).title, href: l("/experiencias") },
+          { label: seo.title },
+        ]}
+      />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">

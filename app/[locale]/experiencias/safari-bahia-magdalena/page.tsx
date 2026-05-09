@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { SafariBahiaMagdalena } from "@/components/safari-bahia-magdalena"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-import { buildPageMeta } from "@/lib/seo"
+import { buildPageMeta, getPageSeo } from "@/lib/seo"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -14,6 +15,18 @@ export default async function SafariBahiaMagdalenaPage({ params }: { params: Pro
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const t = await getPageDictionary("safari-bahia-magdalena", locale) as Record<string, any>
+  const lh = (path: string) => locale === defaultLocale ? path : `/${locale}${path}`
 
-  return <SafariBahiaMagdalena translations={t} />
+  return (
+    <>
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { label: getPageSeo("experiences", locale).title, href: lh("/experiencias") },
+          { label: getPageSeo("safariBahiaMagdalena", locale).title },
+        ]}
+      />
+      <SafariBahiaMagdalena translations={t} />
+    </>
+  )
 }
