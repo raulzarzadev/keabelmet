@@ -2,10 +2,12 @@ import type { Metadata } from "next"
 import { SafariLanding } from "@/components/safari-landing"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
-export const metadata: Metadata = {
-  title: "Safari La Ventana",
-  description:
-    "Expedicion marina en La Ventana, BCS. Observa la migracion de mobulas y ballenas con guias expertos. Aventura de medio dia de abril a junio en el Mar de Cortes.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("safariLaVentana", "/experiencias/safari-la-ventana", locale)
 }
 
 export default async function SafariLaVentanaPage({ params }: { params: Promise<{ locale: string }> }) {

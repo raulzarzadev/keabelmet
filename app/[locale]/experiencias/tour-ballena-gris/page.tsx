@@ -5,10 +5,13 @@ import { Clock, MapPin, Check, Star, Anchor } from "lucide-react"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Tour Ballena Gris en Bahia Magdalena",
-  description:
-    "Vive la experiencia de avistar ballenas grises en Bahia Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproduccion.",
+import { buildPageMeta, buildUrl, getPageSeo, SITE_URL } from "@/lib/seo"
+import { JsonLd, breadcrumbSchema, touristTripSchema, seasonalEventSchema } from "@/lib/jsonLd"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("tourBallenaGris", "/experiencias/tour-ballena-gris", locale)
 }
 
 export default async function TourBallenaGrisPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -16,8 +19,36 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const t = await getPageDictionary("tour-ballena-gris", locale) as Record<string, any>
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
+  const seo = getPageSeo("tourBallenaGris", locale)
+  const url = buildUrl("/experiencias/tour-ballena-gris", locale)
+  const year = new Date().getFullYear()
+  const schemas = [
+    breadcrumbSchema([
+      { name: getPageSeo("experiences", locale).title, url: buildUrl("/experiencias", locale) },
+      { name: seo.title, url },
+    ]),
+    touristTripSchema({
+      name: seo.title,
+      description: seo.description,
+      image: `${SITE_URL}/gray-whale-breaching-sea-of-cortez.jpg`,
+      url,
+      priceMxn: 2400,
+      touristType: ["Wildlife", "Whale Watching", "Family"],
+      validFrom: `${year}-01-01`,
+      validThrough: `${year}-03-31`,
+    }, locale),
+    seasonalEventSchema({
+      name: `Temporada de Ballena Gris ${year}`,
+      description: "Avistamiento de ballenas grises en su santuario natural en Bahia Magdalena.",
+      startDate: `${year}-01-01`,
+      endDate: `${year}-03-31`,
+      location: "Bahia Magdalena, Baja California Sur, Mexico",
+      url,
+    }),
+  ]
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <JsonLd data={schemas} />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">

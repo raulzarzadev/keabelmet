@@ -4,10 +4,12 @@ import { Calendar, Users, MapPin, Clock, Anchor } from "lucide-react"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Renta de Velero",
-  description:
-    "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("rentaVelero", "/experiencias/renta-velero", locale)
 }
 
 export default async function RentaVeleroPage({ params }: { params: Promise<{ locale: string }> }) {

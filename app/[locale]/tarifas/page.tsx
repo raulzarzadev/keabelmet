@@ -3,10 +3,12 @@ import { Check } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Tarifas y Precios",
-  description:
-    "Consulta las tarifas de nuestras expediciones marinas en Baja California Sur. Paquetes con todo incluido.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("rates", "/tarifas", locale)
 }
 
 export default async function Tarifas({ params }: { params: Promise<{ locale: string }> }) {

@@ -14,6 +14,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Redirect /es and /es/* to unprefixed (default locale)
+  if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
+    const stripped = pathname.slice(`/${defaultLocale}`.length) || "/"
+    return NextResponse.redirect(new URL(stripped + request.nextUrl.search, request.url), 308)
+  }
+
   // Check if pathname has a locale prefix
   const pathnameLocale = locales.find(
     (locale) =>

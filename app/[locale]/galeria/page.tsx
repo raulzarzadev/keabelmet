@@ -4,10 +4,12 @@ import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 import { getInstagramPosts } from "@/lib/instagram"
 import InstagramGallery from "@/components/sections/InstagramGallery"
 
-export const metadata: Metadata = {
-  title: "Galeria de Aventuras",
-  description:
-    "Explora nuestra galeria de fotos de expediciones marinas en Baja California Sur. Ballenas, lobos marinos, surf y paisajes del Mar de Cortes.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("gallery", "/galeria", locale)
 }
 
 export default async function Galeria({ params }: { params: Promise<{ locale: string }> }) {

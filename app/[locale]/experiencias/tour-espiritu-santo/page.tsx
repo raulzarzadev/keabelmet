@@ -5,10 +5,13 @@ import { MapPin, Clock, Check, Star, Users } from "lucide-react"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Tour Isla Espiritu Santo",
-  description:
-    "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS.",
+import { buildPageMeta, buildUrl, getPageSeo } from "@/lib/seo"
+import { JsonLd, breadcrumbSchema, touristTripSchema } from "@/lib/jsonLd"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("tourEspirituSanto", "/experiencias/tour-espiritu-santo", locale)
 }
 
 export default async function TourEspirituSantoPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -16,8 +19,25 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   const t = await getPageDictionary("tour-espiritu-santo", locale) as Record<string, any>
+  const seo = getPageSeo("tourEspirituSanto", locale)
+  const url = buildUrl("/experiencias/tour-espiritu-santo", locale)
+  const schemas = [
+    breadcrumbSchema([
+      { name: getPageSeo("experiences", locale).title, url: buildUrl("/experiencias", locale) },
+      { name: seo.title, url },
+    ]),
+    touristTripSchema({
+      name: seo.title,
+      description: seo.description,
+      image: `${buildUrl("/", locale).replace(/\/$/, "")}/espiritu-santo-island-paradise-beach.jpg`,
+      url,
+      priceMxn: 3000,
+      touristType: ["Snorkeling", "Wildlife", "Beach", "Family"],
+    }, locale),
+  ]
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <JsonLd data={schemas} />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">

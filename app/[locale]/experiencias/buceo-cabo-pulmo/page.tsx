@@ -5,10 +5,12 @@ import { Calendar, Users, MapPin, Clock, CheckCircle2, Anchor } from "lucide-rea
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Buceo en Cabo Pulmo",
-  description:
-    "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("buceoCaboPulmo", "/experiencias/buceo-cabo-pulmo", locale)
 }
 
 const marineLifeImages = [

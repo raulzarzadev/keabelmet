@@ -1,24 +1,23 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-export const metadata: Metadata = {
-  title: "Blog de Aventuras",
-  description:
-    "Historias, consejos y guias sobre vida marina en Baja California Sur. Temporadas de ballenas, tips de surf, buceo y mas.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("blog", "/blog", locale)
 }
 
 export default async function Blog({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
-  const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   const t = await getPageDictionary("blog", locale) as Record<string, any>
 
   const postKeys = ["grayWhales", "seaLions", "surfing"]
   const postImages = ["/gray-whale-in-ocean.jpg", "/swimming-with-sea-lions.jpg", "/beach-surfing-la-paz.jpg"]
-  const postSlugs = ["temporada-ballenas-grises", "consejos-nadar-lobos-marinos", "mejores-playas-surfear"]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -41,8 +40,8 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
                     <Image src={postImages[i]} alt={post.title || ""} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                   </div>
                   <div className="p-6 md:w-2/3">
-                    <h2 className="text-2xl font-bold mb-3 hover:text-teal-600 transition-colors">
-                      <Link href={l(`/blog/${postSlugs[i]}`)}>{post.title}</Link>
+                    <h2 className="text-2xl font-bold mb-3 text-gray-900">
+                      {post.title}
                     </h2>
                     <p className="text-gray-600 mb-4">{post.excerpt}</p>
                     <div className="flex items-center gap-4 text-sm text-gray-500">

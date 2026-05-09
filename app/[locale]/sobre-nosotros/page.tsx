@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import { Compass, Heart, Shield, Users } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
+import { buildPageMeta } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Sobre Nosotros",
-  description:
-    "Conoce al equipo de Keabelmet Expeditions. Mas de 15 anos de experiencia en expediciones marinas en Baja California Sur.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("about", "/sobre-nosotros", locale)
 }
 
 export default async function SobreNosotros({ params }: { params: Promise<{ locale: string }> }) {

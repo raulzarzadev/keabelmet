@@ -4,10 +4,12 @@ import Image from "next/image"
 import { Calendar, Users, MapPin, UtensilsCrossed, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
-export const metadata: Metadata = {
-  title: "Renta de Yate",
-  description:
-    "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("rentaYate", "/experiencias/renta-yate", locale)
 }
 
 export default async function RentaYatePage({ params }: { params: Promise<{ locale: string }> }) {

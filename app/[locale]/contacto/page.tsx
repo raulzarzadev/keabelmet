@@ -9,10 +9,12 @@ function l(path: string, locale: Locale): string {
   return `/${locale}${path === "/" ? "" : path}`
 }
 
-export const metadata: Metadata = {
-  title: "Contacto",
-  description:
-    "Contacta a Keabelmet Expeditions. Escribenos a keabelmet@gmail.com o llama al +52 442 205 6214. Reserva tu aventura marina.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("contact", "/contacto", locale)
 }
 
 export default async function Contacto({ params }: { params: Promise<{ locale: string }> }) {

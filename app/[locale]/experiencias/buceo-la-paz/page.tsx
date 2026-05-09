@@ -4,10 +4,12 @@ import Image from "next/image"
 import { Calendar, Users, MapPin, Camera, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-export const metadata: Metadata = {
-  title: "Buceo en La Paz",
-  description:
-    "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("buceoLaPaz", "/experiencias/buceo-la-paz", locale)
 }
 
 export default async function BuceoLaPazPage({ params }: { params: Promise<{ locale: string }> }) {

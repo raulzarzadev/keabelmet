@@ -96,7 +96,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             alt="Keabelmet Expeditions - Safari Marino en Baja California Sur"
             fill
             priority
-            sizes="100vw"
+            fetchPriority="high"
+            sizes="(min-width: 1280px) 1280px, 100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/35" />

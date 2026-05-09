@@ -4,10 +4,12 @@ import Image from "next/image"
 import { Calendar, Users, Star } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-export const metadata: Metadata = {
-  title: "Experiencias y Tours",
-  description:
-    "Descubre nuestras experiencias marinas en Baja California Sur: safaris, surf camp, buceo y mas.",
+import { buildPageMeta } from "@/lib/seo"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("experiences", "/experiencias", locale)
 }
 
 export default async function Experiencias({ params }: { params: Promise<{ locale: string }> }) {

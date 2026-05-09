@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             en: `${baseUrl}/en${route.path === "/" ? "" : route.path}`,
             fr: `${baseUrl}/fr${route.path === "/" ? "" : route.path}`,
             "zh-CN": `${baseUrl}/zh${route.path === "/" ? "" : route.path}`,
+            "x-default": `${baseUrl}${route.path === "/" ? "/" : route.path}`,
           },
         },
       })

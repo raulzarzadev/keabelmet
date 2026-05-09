@@ -5,10 +5,13 @@ import { MapPin, Clock, Check, Star, Users } from "lucide-react"
 import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 
-export const metadata: Metadata = {
-  title: "Nado con Tiburon Ballena en La Paz",
-  description:
-    "Nada con el pez mas grande del mundo en La Paz, Baja California Sur. Experiencia responsable guiada por expertos en aguas protegidas del Golfo de California.",
+import { buildPageMeta, buildUrl, getPageSeo, SITE_URL } from "@/lib/seo"
+import { JsonLd, breadcrumbSchema, touristTripSchema, seasonalEventSchema } from "@/lib/jsonLd"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  if (!isValidLocale(locale)) return {}
+  return buildPageMeta("tiburonBallena", "/experiencias/tiburon-ballena", locale)
 }
 
 export default async function TiburonBallenaPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -16,8 +19,36 @@ export default async function TiburonBallenaPage({ params }: { params: Promise<{
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const l = (path: string) => locale === "es" ? path : `/${locale}${path}`
   const t = await getPageDictionary("tiburon-ballena", locale) as Record<string, any>
+  const seo = getPageSeo("tiburonBallena", locale)
+  const url = buildUrl("/experiencias/tiburon-ballena", locale)
+  const year = new Date().getFullYear()
+  const schemas = [
+    breadcrumbSchema([
+      { name: getPageSeo("experiences", locale).title, url: buildUrl("/experiencias", locale) },
+      { name: seo.title, url },
+    ]),
+    touristTripSchema({
+      name: seo.title,
+      description: seo.description,
+      image: `${SITE_URL}/whale-shark-swimming.jpg`,
+      url,
+      priceMxn: 1800,
+      touristType: ["Snorkeling", "Wildlife", "Family"],
+      validFrom: `${year}-10-01`,
+      validThrough: `${year + 1}-04-30`,
+    }, locale),
+    seasonalEventSchema({
+      name: `Temporada de Tiburon Ballena ${year}-${year + 1}`,
+      description: "Nado responsable con tiburones ballena en La Paz, Baja California Sur.",
+      startDate: `${year}-10-01`,
+      endDate: `${year + 1}-04-30`,
+      location: "La Paz, Baja California Sur, Mexico",
+      url,
+    }),
+  ]
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <JsonLd data={schemas} />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
