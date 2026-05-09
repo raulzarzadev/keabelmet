@@ -4,7 +4,8 @@ import Image from "next/image"
 import { Calendar, Users, Star } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 
-import { buildPageMeta } from "@/lib/seo"
+import { buildPageMeta, getPageSeo } from "@/lib/seo"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -27,6 +28,7 @@ export default async function Experiencias({ params }: { params: Promise<{ local
 
   return (
     <div className="min-h-screen">
+      <Breadcrumbs locale={locale} items={[{ label: getPageSeo("experiences", locale).title }]} />
       <section className="relative h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-teal-600" />
         <div className="relative z-10 text-center text-white px-4">
@@ -39,9 +41,14 @@ export default async function Experiencias({ params }: { params: Promise<{ local
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expKeys.map((key, i) => {
             const exp = t.expeditions?.[key] || {}
+            const href = l(expHrefs[i])
             return (
-              <div key={key} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="relative h-64 overflow-hidden group">
+              <Link
+                key={key}
+                href={href}
+                className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+              >
+                <div className="relative h-64 overflow-hidden">
                   <Image
                     src={expImages[i]}
                     alt={exp.title || ""}
@@ -56,7 +63,7 @@ export default async function Experiencias({ params }: { params: Promise<{ local
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{exp.title}</h3>
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-teal-700 transition-colors">{exp.title}</h3>
                   <div className="flex items-center gap-4 text-gray-600 mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
@@ -78,15 +85,12 @@ export default async function Experiencias({ params }: { params: Promise<{ local
                       <span className="text-gray-600 text-sm">{t.perPerson}</span>
                       <p className="text-3xl font-bold text-teal-600">${expPrices[i]}</p>
                     </div>
-                    <Link
-                      href={l(expHrefs[i])}
-                      className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium"
-                    >
+                    <span className="px-6 py-3 bg-teal-600 text-white rounded-lg group-hover:bg-teal-700 transition-colors font-medium">
                       {t.book}
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>
