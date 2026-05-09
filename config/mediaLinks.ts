@@ -1,6 +1,6 @@
 import { Instagram, Mail, Phone, MapPin, Send } from "lucide-react"
 import { TbBrandTiktok } from "react-icons/tb"
-import { WHATSAPP_DISPLAY, buildWhatsAppLink } from "./whatsapp"
+import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, buildWhatsAppLink } from "./whatsapp"
 
 export { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, WHATSAPP_DEFAULT_MESSAGE, buildWhatsAppLink } from "./whatsapp"
 
@@ -41,8 +41,8 @@ export const contactLinks = [
   },
   {
     name: "Teléfono",
-    value: "+52 442 205 6214",
-    url: "tel:+524422056214",
+    value: WHATSAPP_DISPLAY,
+    url: `tel:+${WHATSAPP_NUMBER}`,
     icon: Phone,
   },
   {

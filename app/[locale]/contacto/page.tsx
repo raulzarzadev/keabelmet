@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary, type Locale } from "@/lib/i18n"
-import { buildWhatsAppLink } from "@/config/whatsapp"
+import { buildWhatsAppLink, WHATSAPP_DISPLAY } from "@/config/whatsapp"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -24,7 +24,7 @@ export default async function Contacto({ params }: { params: Promise<{ locale: s
 
   const contactItems = [
     { icon: <Mail className="text-teal-600" size={20} />, label: t.contactEmail, value: t.contactEmailValue },
-    { icon: <Phone className="text-teal-600" size={20} />, label: t.contactPhone, value: t.contactPhoneValue },
+    { icon: <Phone className="text-teal-600" size={20} />, label: t.contactPhone, value: WHATSAPP_DISPLAY },
     { icon: <MapPin className="text-teal-600" size={20} />, label: t.contactLocation, value: t.contactLocationValue },
     { icon: <Clock className="text-teal-600" size={20} />, label: t.contactSchedule, value: t.contactScheduleValue },
   ]
