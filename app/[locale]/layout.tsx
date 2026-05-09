@@ -4,6 +4,7 @@ import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { CurrencyProvider } from "@/contexts/CurrencyContext"
 import { locales, type Locale, isValidLocale } from "@/lib/i18n"
@@ -144,6 +145,7 @@ export default async function LocaleLayout({
         <CurrencyProvider>
           <Header locale={locale} />
           {children}
+          <Footer locale={locale} />
         </CurrencyProvider>
         <WhatsAppFloat />
         <Analytics />
