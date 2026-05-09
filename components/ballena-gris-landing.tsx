@@ -13,12 +13,14 @@ import {
   AlertCircle,
 } from "lucide-react"
 import { Price } from "@/contexts/CurrencyContext"
+import type { Experience } from "@/constants/experiences"
 
 interface BallenaGrisLandingProps {
   translations: Record<string, any>
+  experience: Experience
 }
 
-export function BallenaGrisLanding({ translations: t }: BallenaGrisLandingProps) {
+export function BallenaGrisLanding({ translations: t, experience }: BallenaGrisLandingProps) {
   const hero = t.hero || {}
   const story = t.story || {}
   const features = story.features || {}
@@ -57,7 +59,7 @@ export function BallenaGrisLanding({ translations: t }: BallenaGrisLandingProps)
         <section className="relative">
           <div className="absolute inset-0">
             <Image
-              src="/images/hero/ballena-gris-hero.jpeg"
+              src={experience.image}
               alt={hero.imageAlt}
               width={1920}
               height={1080}
@@ -293,7 +295,7 @@ export function BallenaGrisLanding({ translations: t }: BallenaGrisLandingProps)
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{card.name}</h3>
                 <div className="text-4xl font-bold text-slate-600 mb-6">
-                  <Price amount={2800} />
+                  {experience.fromMxn != null ? <Price amount={experience.fromMxn} /> : null}
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   {cardFeatures.map((feature: string, i: number) => (

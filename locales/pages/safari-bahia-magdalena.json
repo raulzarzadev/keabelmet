@@ -1,70 +1,70 @@
 {
   "es": {
     "hero": {
-      "title": "Safari Bahia Magdalena: El safari mas salvaje",
-      "subtitle": "Un espectaculo unico de vida marina, donde miles de sardinas atraen a los depredadores mas impresionantes del oceano.",
+      "title": "Safari Bahía Magdalena: El safari más salvaje",
+      "subtitle": "Un espectáculo único de vida marina, donde miles de sardinas atraen a los depredadores más impresionantes del océano.",
       "cta": "Reserva tu aventura",
       "ctaSecondary": "Ver detalles",
-      "imageAlt": "Marlin rayado nadando elegantemente en las aguas azules de Bahia Magdalena durante la corrida de sardinas"
+      "imageAlt": "Marlin rayado nadando elegantemente en las aguas azules de Bahía Magdalena durante la corrida de sardinas"
     },
     "about": {
       "title": "Que es la Corrida de Sardinas?",
-      "description1": "Cada ano, durante los meses de Noviembre y Diciembre sucede uno de los fenomenos mas salvajes de la naturaleza. Un evento tan breve como poderoso, donde las aguas de Bahia Magdalena se convierten en el epicentro de la vida salvaje marina: miles de sardinas migran en enormes bancos, atrayendo a depredadores tope como marlines, peces dorados, lobos marinos e incluso ballenas.",
-      "description2": "Este evento natural no solo es visualmente impresionante. Es una leccion viva sobre el equilibrio del oceano y el poder de la naturaleza en su estado mas crudo. Y ahora puedes presenciarlo desde adentro.",
+      "description1": "Cada año, durante los meses de Noviembre y Diciembre sucede uno de los fenomenos más salvajes de la naturaleza. Un evento tan breve como poderoso, donde las aguas de Bahía Magdalena se convierten en el epicentro de la vida salvaje marina: miles de sardinas migran en enormes bancos, atrayendo a depredadores tope como marlines, peces dorados, lobos marinos e incluso ballenas.",
+      "description2": "Este evento natural no solo es visualmente impresionante. Es una lección viva sobre el equilibrio del océano y el poder de la naturaleza en su estado más crudo. Y ahora puedes presenciarlo desde adentro.",
       "features": {
         "migration": {
-          "title": "Migracion Masiva",
-          "description": "Miles de sardinas forman bancos gigantescos que se mueven como una sola entidad a traves de las aguas."
+          "title": "Migración Masiva",
+          "description": "Miles de sardinas forman bancos gigantescos que se mueven como una sola entidad a través de las aguas."
         },
         "frenzy": {
           "title": "Frenesi Alimentario",
-          "description": "Los depredadores aprovechan esta abundancia en un espectaculo de caza coordinada y feroz."
+          "description": "Los depredadores aprovechan esta abundancia en un espectáculo de caza coordinada y feroz."
         },
         "unique": {
           "title": "Experiencia Unica",
-          "description": "Un fenomeno que solo ocurre dos meses al ano y que pocos tienen la oportunidad de presenciar."
+          "description": "Un fenomeno que solo ocurre dos meses al año y que pocos tienen la oportunidad de presenciar."
         }
       }
     },
     "experience": {
       "title": "La experiencia Keabelmet",
-      "description1": "No es un tour. Es un must para los amantes del oceano. Zarparas hacia el gran azul desde uno de los puntos mas virgenes de la peninsula, en un safari guiado por biologos marinos con anos de experiencia, y seras parte de uno de los espectaculos mas intensos del Pacifico mexicano.",
-      "description2": "Te sumergiras (si las condiciones lo permiten) en el corazon de la accion, flotando sobre un ecosistema en movimiento, donde cada segundo puede cambiar todo.",
-      "imageAlt": "Marlin rayado cazando sardinas en accion durante el safari",
+      "description1": "No es un tour. Es un must para los amantes del océano. Zarparas hacia el gran azul desde uno de los puntos más virgenes de la peninsula, en un safari guiado por biologos marinos con años de experiencia, y seras parte de uno de los espectáculos más intensos del Pacífico mexicano.",
+      "description2": "Te sumergiras (si las condiciones lo permiten) en el corazón de la acción, flotando sobre un ecosistema en movimiento, donde cada segundo puede cambiar todo.",
+      "imageAlt": "Marlin rayado cazando sardinas en acción durante el safari",
       "itinerary": {
         "title": "Itinerario del Safari",
         "step1": {
           "time": "5:00 AM | Salida desde La Paz",
-          "description": "Partimos rumbo a Puerto Chale, el punto de acceso a Bahia Magdalena."
+          "description": "Partimos rumbo a Puerto Chale, el punto de acceso a Bahía Magdalena."
         },
         "step2": {
           "time": "7:30 AM - 2:30 PM | Safari en mar abierto",
-          "description": "Navegacion en busca de los bancos de sardinas y sus depredadores.",
+          "description": "Navegación en busca de los bancos de sardinas y sus depredadores.",
           "activities": [
             "Avistamiento de vida marina",
-            "Snorkel en el corazon de la accion (condiciones permitiendo)",
+            "Snorkel en el corazón de la acción (condiciones permitiendo)",
             "Fotografia submarina",
             "Refrigerio a bordo"
           ]
         },
         "step3": {
           "time": "6:00 PM aprox. | Regreso a La Paz",
-          "description": "Regreso con la satisfaccion de haber vivido uno de los espectaculos mas salvajes del oceano."
+          "description": "Regreso con la satisfacción de haber vivido uno de los espectáculos más salvajes del océano."
         }
       }
     },
     "wildlife": {
       "title": "Especies que puedes encontrar",
-      "subtitle": "Durante la corrida de sardinas, Bahia Magdalena se convierte en un teatro natural donde convergen algunas de las especies mas impresionantes del Pacifico.",
+      "subtitle": "Durante la corrida de sardinas, Bahía Magdalena se convierte en un teatro natural donde convergen algunas de las especies más impresionantes del Pacífico.",
       "season": "Nov - Dic",
       "species": {
         "sardines": {
           "name": "Sardinas",
-          "description": "Las protagonistas del espectaculo. Forman bancos masivos que pueden extenderse por kilometros, creando una \"bola de sardinas\" que atrae a todos los depredadores."
+          "description": "Las protagonistas del espectáculo. Forman bancos masivos que pueden extenderse por kilometros, creando una \"bola de sardinas\" que atrae a todos los depredadores."
         },
         "stripedMarlin": {
           "name": "Marlin Rayado",
-          "description": "Veloces y letales, los marlines rayados son los cazadores mas espectaculares. Su velocidad y agilidad los convierte en los reyes de la corrida."
+          "description": "Veloces y letales, los marlines rayados son los cazadores más espectaculares. Su velocidad y agilidad los convierte en los reyes de la corrida."
         },
         "seaLions": {
           "name": "Lobos Marinos",
@@ -72,61 +72,61 @@
         },
         "dorado": {
           "name": "Pez Dorado",
-          "description": "Conocidos por su coloracion dorada brillante, estos peces son cazadores oportunistas que aprovechan el frenesi alimentario."
+          "description": "Conocidos por su coloración dorada brillante, estos peces son cazadores oportunistas que aprovechan el frenesi alimentario."
         },
         "humpbackWhales": {
           "name": "Ballenas Jorobadas",
-          "description": "Las gigantes del oceano aprovechan la abundancia de sardinas para alimentarse antes de continuar su migracion."
+          "description": "Las gigantes del océano aprovechan la abundancia de sardinas para alimentarse antes de continuar su migración."
         },
         "brydeWhales": {
           "name": "Ballenas de Bryde",
-          "description": "Residentes del Pacifico mexicano, estas ballenas son expertas en aprovechar las agregaciones de sardinas para alimentarse."
+          "description": "Residentes del Pacífico mexicano, estas ballenas son expertas en aprovechar las agregaciones de sardinas para alimentarse."
         }
       },
       "limitedSeason": {
         "title": "Temporada Limitada",
-        "description": "La corrida de sardinas solo ocurre durante noviembre y diciembre. Es un fenomeno natural impredecible que depende de las condiciones oceanicas, lo que hace cada avistamiento aun mas especial."
+        "description": "La corrida de sardinas solo ocurre durante noviembre y diciembre. Es un fenomeno natural impredecible que depende de las condiciones oceanicas, lo que hace cada avistamiento aún más especial."
       }
     },
     "includes": {
-      "title": "Incluye la expedicion",
-      "subtitle": "Todo lo que necesitas para vivir el safari mas salvaje del Pacifico mexicano.",
+      "title": "Incluye la expedición",
+      "subtitle": "Todo lo que necesitas para vivir el safari más salvaje del Pacífico mexicano.",
       "items": {
         "transport": {
           "title": "Transporte terrestre y maritimo",
-          "description": "Traslado desde La Paz a Puerto Chale y embarcacion especializada para safari marino."
+          "description": "Traslado desde La Paz a Puerto Chale y embarcación especializada para safari marino."
         },
         "guide": {
-          "title": "Guia biologo marino especializado",
-          "description": "Experto en el comportamiento de la corrida de sardinas y la vida marina del Pacifico."
+          "title": "Guia biólogo marino especializado",
+          "description": "Experto en el comportamiento de la corrida de sardinas y la vida marina del Pacífico."
         },
         "snorkel": {
           "title": "Equipo completo de snorkel",
-          "description": "Mascara, tubo y aletas profesionales para sumergirte en la accion."
+          "description": "Mascara, tubo y aletas profesionales para sumergirte en la acción."
         },
         "photo": {
           "title": "Fotografia y video submarino",
-          "description": "Capturas profesionales del espectaculo para que tengas un recuerdo epico."
+          "description": "Capturas profesionales del espectáculo para que tengas un recuerdo epico."
         },
         "refreshment": {
-          "title": "Refrigerio e hidratacion",
-          "description": "Snacks energeticos y agua purificada para mantenerte con energia durante el safari."
+          "title": "Refrigerio e hidratación",
+          "description": "Snacks energeticos y agua purificada para mantenerte con energía durante el safari."
         },
         "observation": {
-          "title": "Equipo de observacion",
-          "description": "Binoculares de alta calidad para no perderte ningun detalle del espectaculo."
+          "title": "Equipo de observación",
+          "description": "Binoculares de alta calidad para no perderte ningún detalle del espectáculo."
         }
       }
     },
     "pricing": {
       "title": "Precios y Reservas",
-      "subtitle": "Una experiencia unica y exclusiva con cupo limitado para garantizar la mejor experiencia posible.",
+      "subtitle": "Una experiencia única y exclusiva con cupo limitado para garantizar la mejor experiencia posible.",
       "card": {
-        "name": "Safari Bahia Magdalena",
+        "name": "Safari Bahía Magdalena",
         "price": "$3,500",
         "currency": "MXN / persona",
         "features": [
-          "Cupo maximo: 6 personas",
+          "Cupo máximo: 6 personas",
           "Experiencia exclusiva y personalizada",
           "Temporada limitada (Nov - Dic)",
           "Todos los servicios incluidos"
@@ -135,33 +135,33 @@
       },
       "availability": {
         "title": "Disponibilidad Limitada",
-        "description": "Solo operamos durante la temporada de corrida de sardinas (noviembre y diciembre). Las fechas exactas dependen de las condiciones naturales y se confirman con anticipacion."
+        "description": "Solo operamos durante la temporada de corrida de sardinas (noviembre y diciembre). Las fechas exactas dependen de las condiciones naturales y se confirman con anticipación."
       }
     },
     "testimonials": {
       "title": "Lo que dicen nuestros aventureros",
-      "subtitle": "Experiencias reales de quienes han vivido el safari mas salvaje del Pacifico.",
+      "subtitle": "Experiencias reales de quienes han vivido el safari más salvaje del Pacífico.",
       "reviews": [
         {
           "name": "Alejandro Ruiz",
           "location": "Monterrey",
-          "text": "Increible experiencia. Ver a los marlines cazando sardinas fue como estar en un documental de National Geographic. La adrenalina y la emocion son indescriptibles."
+          "text": "Increible experiencia. Ver a los marlines cazando sardinas fue como estar en un documental de National Geographic. La adrenalina y la emoción son indescriptibles."
         },
         {
           "name": "Sofia Mendoza",
-          "location": "Ciudad de Mexico",
-          "text": "Una experiencia que te cambia la perspectiva del oceano. Estar en medio de la corrida de sardinas es algo que no se puede explicar con palabras. Absolutamente recomendado!"
+          "location": "Ciudad de México",
+          "text": "Una experiencia que te cambia la perspectiva del océano. Estar en medio de la corrida de sardinas es algo que no se puede explicar con palabras. Absolutamente recomendado!"
         },
         {
           "name": "Diego Herrera",
           "location": "Guadalajara",
-          "text": "El safari mas intenso que he vivido. Los guias son expertos y te hacen sentir seguro mientras vives esta experiencia unica. Las fotos y videos quedaron espectaculares."
+          "text": "El safari más intenso que he vivido. Los guías son expertos y te hacen sentir seguro mientras vives esta experiencia única. Las fotos y videos quedaron espectaculares."
         }
       ]
     },
     "cta": {
-      "title": "Listo para vivir el safari mas salvaje del Pacifico?",
-      "subtitle": "Solo dos meses al ano. Solo 6 personas por safari. Una experiencia que recordaras para toda la vida.",
+      "title": "Listo para vivir el safari más salvaje del Pacífico?",
+      "subtitle": "Solo dos meses al año. Solo 6 personas por safari. Una experiencia que recordaras para toda la vida.",
       "button": "Reserva Ahora"
     }
   },

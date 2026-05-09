@@ -28,45 +28,7 @@
     "titleHighlight": "探险之旅",
     "subtitle": "精心挑选的体验项目，展现La Paz（拉巴斯）最壮丽的海洋奇观与沙漠之美",
     "from": "起价",
-    "learnMore": "了解更多",
-    "items": [
-      {
-        "title": "Espiritu Santo（圣灵岛）",
-        "badge": "联合国教科文组织生物圈保护区",
-        "description": "原始海滩、碧蓝海水和难忘的浮潜体验。",
-        "price": 2100
-      },
-      {
-        "title": "初次邂逅鲸鱼",
-        "badge": "Baja California Sur",
-        "description": "在自然环境中观赏鲸鱼的独特体验。",
-        "price": 3150
-      },
-      {
-        "title": "Cabo Pulmo（卡波普尔莫）潜水",
-        "badge": "Cabo Pulmo 国家公园",
-        "description": "探索墨西哥最佳潜水胜地之一，初学者和专家都适合。",
-        "price": 3325
-      },
-      {
-        "title": "La Paz（拉巴斯）潜水",
-        "badge": "Espiritu Santo 群岛",
-        "description": "在自然栖息地中与活泼的海狮一起畅游。",
-        "price": 3500
-      },
-      {
-        "title": "帆船租赁",
-        "badge": "加利福尼亚湾",
-        "description": "适合数小时的航行或在船上过夜",
-        "price": 10500
-      },
-      {
-        "title": "游艇租赁",
-        "badge": "加利福尼亚湾",
-        "description": "以您值得的方式畅享加利福尼亚湾",
-        "price": 29750
-      }
-    ]
+    "learnMore": "了解更多"
   },
   "comparison": {
     "badge": "直接对比",
@@ -110,7 +72,8 @@
     "fullDay": "全天",
     "halfDay": "半天",
     "days6": "6天",
-    "people": "人数"
+    "people": "人数",
+    "viewAll": "查看全部"
   },
   "whyUs": {
     "title": "为什么选择",
@@ -173,9 +136,24 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Rosa Burciaga", "rating": 5, "date": "最近", "text": "我去过10多次，他们从不让我失望，从以灰鲸为背景的露营到与虎鲸共游。Keabelmet是科尔特斯海最好的旅游公司，每次探险都成为难忘的体验。" },
-      { "name": "Bernardo Barbara", "rating": 5, "date": "最近", "text": "与Mau和Gama一起度过了绝妙的体验！我们去寻找虎鲸，虽然没找到，但我们非常享受与海豚的时光，还幸运地遇到了4头美丽的蓝鲸！我们会和他们再出海很多次。" },
-      { "name": "Ester Millan", "rating": 5, "date": "最近", "text": "我们偶然认识了Mau，并取消了已预订的其他行程改为跟他一起。他散发的活力和热情，加上他的知识以及陪伴他的团队，足以让你知道这将是一次满分体验！" }
+      {
+        "name": "Rosa Burciaga",
+        "rating": 5,
+        "date": "最近",
+        "text": "我去过10多次，他们从不让我失望，从以灰鲸为背景的露营到与虎鲸共游。Keabelmet是科尔特斯海最好的旅游公司，每次探险都成为难忘的体验。"
+      },
+      {
+        "name": "Bernardo Barbara",
+        "rating": 5,
+        "date": "最近",
+        "text": "与Mau和Gama一起度过了绝妙的体验！我们去寻找虎鲸，虽然没找到，但我们非常享受与海豚的时光，还幸运地遇到了4头美丽的蓝鲸！我们会和他们再出海很多次。"
+      },
+      {
+        "name": "Ester Millan",
+        "rating": 5,
+        "date": "最近",
+        "text": "我们偶然认识了Mau，并取消了已预订的其他行程改为跟他一起。他散发的活力和热情，加上他的知识以及陪伴他的团队，足以让你知道这将是一次满分体验！"
+      }
     ],
     "ctaAll": "在 Google 上查看全部",
     "ctaLeave": "留下评价",

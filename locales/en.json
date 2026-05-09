@@ -28,45 +28,7 @@
     "titleHighlight": "Adventures",
     "subtitle": "Curated experiences showcasing the best of La Paz's marine wonders and desert beauty.",
     "from": "From",
-    "learnMore": "Learn more",
-    "items": [
-      {
-        "title": "Espiritu Santo Island",
-        "badge": "UNESCO Biosphere Reserve",
-        "description": "Pristine beaches, turquoise waters and unforgettable snorkeling.",
-        "price": 2100
-      },
-      {
-        "title": "See whales for the first time",
-        "badge": "Baja California Sur",
-        "description": "A unique experience to observe whales in their natural environment.",
-        "price": 3150
-      },
-      {
-        "title": "Diving in Cabo Pulmo",
-        "badge": "Cabo Pulmo National Park",
-        "description": "Discover one of the best diving sites in Mexico, ideal for beginners and experts alike.",
-        "price": 3325
-      },
-      {
-        "title": "Diving in La Paz",
-        "badge": "Espiritu Santo Archipelago",
-        "description": "Swim with playful sea lions in their natural habitat.",
-        "price": 3500
-      },
-      {
-        "title": "Rent a sailboat",
-        "badge": "Gulf of California",
-        "description": "Ideal for a few hours of sailing or an overnight stay on board",
-        "price": 10500
-      },
-      {
-        "title": "Rent a Yacht",
-        "badge": "Gulf of California",
-        "description": "Experience the Gulf of California the way you deserve",
-        "price": 29750
-      }
-    ]
+    "learnMore": "Learn more"
   },
   "comparison": {
     "badge": "Direct Comparison",
@@ -110,7 +72,8 @@
     "fullDay": "Full day",
     "halfDay": "Half day",
     "days6": "6 days",
-    "people": "People"
+    "people": "People",
+    "viewAll": "View all"
   },
   "whyUs": {
     "title": "Why",
@@ -173,9 +136,24 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Rosa Burciaga", "rating": 5, "date": "Recent", "text": "I've gone more than 10 times and they never disappoint, from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez, any expedition becomes an unforgettable experience." },
-      { "name": "Bernardo Barbara", "rating": 5, "date": "Recent", "text": "Excellent experience with Mau and Gama!! We went searching for orcas and even though we didn't find them, we enjoyed the dolphins immensely and were lucky to encounter 4 beautiful blue whales! We'll go out with them many more times." },
-      { "name": "Ester Millan", "rating": 5, "date": "Recent", "text": "We met Mau by chance and changed the excursions we had booked to go with him. The energy and warmth he radiates, combined with his knowledge and the team that accompanies him, is everything you need to know it will be a 10/10 experience!" }
+      {
+        "name": "Rosa Burciaga",
+        "rating": 5,
+        "date": "Recent",
+        "text": "I've gone more than 10 times and they never disappoint, from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez, any expedition becomes an unforgettable experience."
+      },
+      {
+        "name": "Bernardo Barbara",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Excellent experience with Mau and Gama!! We went searching for orcas and even though we didn't find them, we enjoyed the dolphins immensely and were lucky to encounter 4 beautiful blue whales! We'll go out with them many more times."
+      },
+      {
+        "name": "Ester Millan",
+        "rating": 5,
+        "date": "Recent",
+        "text": "We met Mau by chance and changed the excursions we had booked to go with him. The energy and warmth he radiates, combined with his knowledge and the team that accompanies him, is everything you need to know it will be a 10/10 experience!"
+      }
     ],
     "ctaAll": "See all on Google",
     "ctaLeave": "Leave a review",

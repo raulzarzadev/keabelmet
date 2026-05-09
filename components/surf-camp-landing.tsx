@@ -2,8 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Waves, Camera, Coffee, Users, Check, Star, Award, Target } from "lucide-react"
 import { Price } from "@/contexts/CurrencyContext"
+import type { Experience } from "@/constants/experiences"
 
-export function SurfCampLanding() {
+export function SurfCampLanding({ experience }: { experience: Experience }) {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <main className="flex-1">
@@ -11,7 +12,7 @@ export function SurfCampLanding() {
         <section className="relative">
           <div className="absolute inset-0">
             <Image
-              src="/images/surf-camp-hero.jpeg"
+              src={experience.image}
               alt="Surfista cabalgando una ola perfecta en las cristalinas aguas de La Paz, Baja California Sur"
               width={1920}
               height={1080}
@@ -329,7 +330,7 @@ export function SurfCampLanding() {
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Surf Camp 6 Días</h3>
                 <div className="text-4xl font-bold text-blue-600 mb-6">
-                  <Price amount={7500} />
+                  {experience.fromMxn != null ? <Price amount={experience.fromMxn} /> : null}
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   <li className="flex items-center gap-3">

@@ -4,6 +4,7 @@ import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
 import { buildPageMeta, getPageSeo } from "@/lib/seo"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { getExperience } from "@/constants/experiences"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -16,6 +17,7 @@ export default async function SafariLaVentanaPage({ params }: { params: Promise<
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const t = await getPageDictionary("safari-la-ventana", locale)
   const lh = (path: string) => locale === defaultLocale ? path : `/${locale}${path}`
+  const experience = getExperience("safari-la-ventana")!
 
   return (
     <>
@@ -26,7 +28,7 @@ export default async function SafariLaVentanaPage({ params }: { params: Promise<
           { label: getPageSeo("safariLaVentana", locale).title },
         ]}
       />
-      <SafariLanding translations={t} />
+      <SafariLanding translations={t} experience={experience} />
     </>
   )
 }

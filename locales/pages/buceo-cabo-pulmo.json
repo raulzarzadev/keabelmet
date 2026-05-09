@@ -2,31 +2,31 @@
   "es": {
     "meta": {
       "title": "Buceo en Cabo Pulmo",
-      "description": "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan."
+      "description": "Bucea en el Parque Nacional Cabo Pulmo, hogar del único arrecife de coral del Mar de Cortés. Tiburones, tortugas, cardúmenes y lobos marinos te esperan."
     },
     "hero": {
       "badge": "Parque Nacional Cabo Pulmo",
       "title": "Buceo en Cabo Pulmo",
-      "description": "Descubre un santuario submarino unico con el unico arrecife de coral en el Mar de Cortes",
+      "description": "Descubre un santuario submarino único con el único arrecife de coral en el Mar de Cortés",
       "cta_primary": "Ver Tarifas",
-      "cta_secondary": "Mas Informacion",
+      "cta_secondary": "Más Información",
       "image_alt": "Buceo en Cabo Pulmo"
     },
     "details": {
-      "duration_title": "Duracion",
-      "duration_text": "Dia completo",
+      "duration_title": "Duración",
+      "duration_text": "Día completo",
       "group_title": "Grupo",
       "group_text": "Max. 6 buzos",
       "season_title": "Temporada",
-      "season_text": "Todo el ano",
+      "season_text": "Todo el año",
       "dives_title": "Inmersiones",
       "dives_text": "2 por tour"
     },
     "about": {
       "title": "Sobre el Tour",
-      "description_1": "Descubre un santuario submarino unico en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral en el Mar de Cortes, un ecosistema vibrante que ha prosperado por mas de 25,000 anos. Cabo Pulmo es una de las reservas marinas mas exitosas del mundo, donde la vida marina ha aumentado exponencialmente gracias a la proteccion de sus aguas.",
-      "description_2": "Bucear aqui es una experiencia inigualable: enormes cardumenes de peces, tortugas marinas, tiburones toro, mantarrayas, y hasta juguetones lobos marinos te acompanaran en esta aventura. No por nada, el legendario Jacques Cousteau llamo al Mar de Cortes \"El Acuario del Mundo\".",
-      "description_3": "Sumergete en aguas cristalinas y explora este paraiso submarino protegido, considerado uno de los mejores destinos de buceo a nivel mundial."
+      "description_1": "Descubre un santuario submarino único en el Parque Nacional Cabo Pulmo, hogar del único arrecife de coral en el Mar de Cortés, un ecosistema vibrante que ha prosperado por más de 25,000 años. Cabo Pulmo es una de las reservas marinas más exitosas del mundo, donde la vida marina ha aumentado exponencialmente gracias a la protección de sus aguas.",
+      "description_2": "Bucear aquí es una experiencia inigualable: enormes cardúmenes de peces, tortugas marinas, tiburones toro, mantarrayas, y hasta juguetones lobos marinos te acompañarán en esta aventura. No por nada, el legendario Jacques Cousteau llamó al Mar de Cortés \"El Acuario del Mundo\".",
+      "description_3": "Sumergete en aguas cristalinas y explora este paraíso submarino protegido, considerado uno de los mejores destinos de buceo a nivel mundial."
     },
     "pricing": {
       "title": "Opciones y Tarifas",
@@ -43,7 +43,7 @@
           "Grupos de hasta 6 personas",
           "2 inmersiones compartidas",
           "Agua y galletas a bordo",
-          "Minimo 2 participantes si necesitas equipo"
+          "Mínimo 2 participantes si necesitas equipo"
         ],
         "cta": "Reservar Ahora"
       },
@@ -72,7 +72,7 @@
         "currency": "MXN",
         "features": [
           "Grupos de 1 a 6 personas",
-          "Instruccion teorica completa",
+          "Instrucción teorica completa",
           "Practica en aguas poco profundas",
           "2 inmersiones supervisadas por instructor certificado",
           "Agua y galletas a bordo"
@@ -89,7 +89,7 @@
         "currency": "MXN",
         "features": [
           "Instructor dedicado solo para tu grupo",
-          "Instruccion personalizada",
+          "Instrucción personalizada",
           "2 inmersiones en el arrecife",
           "Bebidas energeticas y agua natural"
         ],
@@ -113,57 +113,57 @@
     },
     "requirements": {
       "title": "Requisitos Importantes",
-      "certified": "Buceo Certificado: Se requiere certificacion Open Water o superior",
-      "discovery": "Discovery Scuba: No se requiere experiencia previa, incluye instruccion completa",
-      "health": "Salud: Los participantes deben estar en buen estado fisico y completar un cuestionario medico"
+      "certified": "Buceo Certificado: Se requiere certificación Open Water o superior",
+      "discovery": "Discovery Scuba: No se requiere experiencia previa, incluye instrucción completa",
+      "health": "Salud: Los participantes deben estar en buen estado fisico y completar un cuestionario médico"
     },
     "marine_life": {
       "title": "Vida Marina que Puedes Encontrar",
-      "subtitle": "Cabo Pulmo alberga una biodiversidad marina excepcional en el unico arrecife de coral del Golfo de California",
+      "subtitle": "Cabo Pulmo alberga una biodiversidad marina excepcional en el único arrecife de coral del Golfo de California",
       "species": [
         {
           "name": "Cardumenes Masivos",
           "description": "Impresionantes bancos de miles de peces incluyendo jureles, barracudas y peces soldado que forman verdaderas nubes submarinas.",
-          "season": "Todo el ano"
+          "season": "Todo el año"
         },
         {
           "name": "Tiburones Toro",
-          "description": "Encuentros con tiburones toro, una de las especies mas impresionantes del arrecife. Inofensivos y majestuosos.",
+          "description": "Encuentros con tiburones toro, una de las especies más impresionantes del arrecife. Inofensivos y majestuosos.",
           "season": "Oct - May"
         },
         {
           "name": "Mantarrayas",
-          "description": "Elegantes mantarrayas y rayas aguila planean sobre el arrecife en un espectaculo de gracia submarina.",
-          "season": "Todo el ano"
+          "description": "Elegantes mantarrayas y rayas aguila planean sobre el arrecife en un espectáculo de gracia submarina.",
+          "season": "Todo el año"
         },
         {
           "name": "Tortugas Marinas",
-          "description": "Tortugas verdes y carey se alimentan en el arrecife. Cabo Pulmo es un importante sitio de alimentacion para estas especies en peligro.",
-          "season": "Todo el ano"
+          "description": "Tortugas verdes y carey se alimentan en el arrecife. Cabo Pulmo es un importante sitio de alimentación para estas especies en peligro.",
+          "season": "Todo el año"
         },
         {
           "name": "Lobos Marinos",
-          "description": "Juguetones lobos marinos californianos que a menudo nadan con los buzos, creando encuentros magicos.",
-          "season": "Todo el ano"
+          "description": "Juguetones lobos marinos californianos que a menudo nadan con los buzos, creando encuentros mágicos.",
+          "season": "Todo el año"
         },
         {
           "name": "Arrecife de Coral",
-          "description": "Coral duro y blando de mas de 25,000 anos de antiguedad, con colores vibrantes y estructura compleja llena de vida.",
-          "season": "Todo el ano"
+          "description": "Coral duro y blando de más de 25,000 años de antigüedad, con colores vibrantes y estructura compleja llena de vida.",
+          "season": "Todo el año"
         }
       ],
-      "disclaimer": "Nota: La vida silvestre marina es impredecible. Aunque Cabo Pulmo tiene una abundancia excepcional, los avistamientos especificos no pueden garantizarse y varian segun las condiciones del dia."
+      "disclaimer": "Nota: La vida silvestre marina es impredecible. Aunque Cabo Pulmo tiene una abundancia excepcional, los avistamientos específicos no pueden garantizarse y varian según las condiciones del día."
     },
     "recommendations": {
       "title": "Recomendaciones",
       "items": [
         {
           "title": "Llega preparado:",
-          "text": "Trae tu certificacion de buceo, traje de bano, toalla, protector solar biodegradable y cambio de ropa."
+          "text": "Trae tu certificación de buceo, traje de baño, toalla, protector solar biodegradable y cambio de ropa."
         },
         {
-          "title": "Hidratacion:",
-          "text": "Mantente bien hidratado antes y despues del buceo. Evita el alcohol el dia anterior."
+          "title": "Hidratación:",
+          "text": "Mantente bien hidratado antes y después del buceo. Evita el alcohol el día anterior."
         },
         {
           "title": "Respeta el arrecife:",
@@ -171,11 +171,11 @@
         },
         {
           "title": "Fotografia:",
-          "text": "Si traes camara submarina, asegurate de que este bien asegurada y que sepas usarla sin afectar tu flotabilidad."
+          "text": "Si traes cámara submarina, asegurate de que este bien asegurada y que sepas usarla sin afectar tu flotabilidad."
         },
         {
           "title": "Condiciones:",
-          "text": "El tour puede cancelarse por condiciones climaticas adversas. Tu seguridad es lo primero."
+          "text": "El tour puede cancelarse por condiciones climáticas adversas. Tu seguridad es lo primero."
         }
       ]
     },
@@ -183,7 +183,7 @@
       "title": "Sumergete en el Acuario del Mundo",
       "description": "Cabo Pulmo te espera con una biodiversidad marina sin igual. Reserva tu aventura submarina hoy.",
       "cta_primary": "Reservar Ahora",
-      "cta_secondary": "Ver Mas Experiencias"
+      "cta_secondary": "Ver Más Experiencias"
     }
   },
   "en": {

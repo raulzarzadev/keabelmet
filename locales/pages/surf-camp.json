@@ -1,16 +1,16 @@
 {
   "es": {
     "hero": {
-      "title": "Surf Camp La Paz: 6 Dias de Pura Adrenalina",
-      "subtitle": "Aprende a surfear en las mejores olas de Baja California Sur con instructores certificados, equipo profesional y la magia del Mar de Cortes.",
+      "title": "Surf Camp La Paz: 6 Días de Pura Adrenalina",
+      "subtitle": "Aprende a surfear en las mejores olas de Baja California Sur con instructores certificados, equipo profesional y la magia del Mar de Cortés.",
       "cta": "Reserva tu semana",
       "ctaSecondary": "Ver programa",
       "imageAlt": "Surfista cabalgando una ola perfecta en las cristalinas aguas de La Paz, Baja California Sur"
     },
     "about": {
       "title": "Por que La Paz es perfecta para aprender surf?",
-      "description1": "La Paz ofrece condiciones ideales para principiantes y surfistas intermedios: olas consistentes pero amigables, aguas calidas todo el ano, vientos offshore por las mananas y una comunidad local apasionada por el surf.",
-      "description2": "Nuestro surf camp de 6 dias esta disenado para llevarte desde cero hasta surfear tus primeras olas con confianza, o perfeccionar tu tecnica si ya tienes experiencia.",
+      "description1": "La Paz ofrece condiciones ideales para principiantes y surfistas intermedios: olas consistentes pero amigables, aguas cálidas todo el año, vientos offshore por las mañanas y una comunidad local apasionada por el surf.",
+      "description2": "Nuestro surf camp de 6 días está diseñado para llevarte desde cero hasta surfear tus primeras olas con confianza, o perfeccionar tu técnica si ya tienes experiencia.",
       "features": {
         "waves": {
           "title": "Olas Perfectas",
@@ -18,31 +18,31 @@
         },
         "instructors": {
           "title": "Instructores Certificados",
-          "description": "Equipo de instructores locales con certificacion ISA y anos de experiencia ensenando surf."
+          "description": "Equipo de instructores locales con certificación ISA y años de experiencia ensenando surf."
         },
         "progress": {
           "title": "Progreso Garantizado",
-          "description": "Metodologia probada que garantiza tu progreso desde el primer dia hasta ponerte de pie en la tabla."
+          "description": "Metodologia probada que garantiza tu progreso desde el primer día hasta ponerte de pie en la tabla."
         }
       }
     },
     "program": {
-      "title": "Programa de 6 dias",
-      "subtitle": "Un programa estructurado que combina teoria, practica y diversion para maximizar tu aprendizaje.",
+      "title": "Programa de 6 días",
+      "subtitle": "Un programa estructurado que combina teoria, práctica y diversión para maximizar tu aprendizaje.",
       "days": {
         "day1": {
-          "title": "Dia 1: Fundamentos y Seguridad",
-          "description": "Introduccion al surf, seguridad en el agua, lectura de olas y primeras practicas en la arena.",
+          "title": "Día 1: Fundamentos y Seguridad",
+          "description": "Introducción al surf, seguridad en el agua, lectura de olas y primeras prácticas en la arena.",
           "activities": [
             "Teoria basica del surf y oceanografia",
             "Tecnicas de remada y posicionamiento",
             "Practica de pop-up en la playa",
-            "Primera sesion en espuma blanca"
+            "Primera sesión en espuma blanca"
           ]
         },
         "day2_3": {
-          "title": "Dia 2-3: Primeras Olas",
-          "description": "Transicion a olas verdes, trabajo en el timing y perfeccionamiento del pop-up.",
+          "title": "Día 2-3: Primeras Olas",
+          "description": "Transición a olas verdes, trabajo en el timing y perfeccionamiento del pop-up.",
           "activities": [
             "Lectura avanzada de olas",
             "Tecnicas de take-off",
@@ -51,8 +51,8 @@
           ]
         },
         "day4_5": {
-          "title": "Dia 4-5: Tecnica y Estilo",
-          "description": "Refinamiento de la tecnica, primeros giros y desarrollo del estilo personal.",
+          "title": "Día 4-5: Tecnica y Estilo",
+          "description": "Refinamiento de la técnica, primeros giros y desarrollo del estilo personal.",
           "activities": [
             "Tecnicas de giro basico",
             "Posicionamiento en el lineup",
@@ -61,20 +61,20 @@
           ]
         },
         "day6": {
-          "title": "Dia 6: Graduacion y Celebracion",
-          "description": "Sesion libre supervisada, evaluacion del progreso y celebracion del logro.",
+          "title": "Día 6: Graduación y Celebración",
+          "description": "Sesión libre supervisada, evaluación del progreso y celebración del logro.",
           "activities": [
-            "Sesion libre con supervision",
-            "Evaluacion y feedback personalizado",
+            "Sesión libre con supervisión",
+            "Evaluación y feedback personalizado",
             "Entrega de certificado",
-            "Celebracion con ceviche en la playa"
+            "Celebración con ceviche en la playa"
           ]
         }
       }
     },
     "includes": {
       "title": "Que incluye el surf camp?",
-      "subtitle": "Todo lo necesario para que te enfoques unicamente en aprender y disfrutar del surf.",
+      "subtitle": "Todo lo necesario para que te enfoques únicamente en aprender y disfrutar del surf.",
       "items": {
         "board": {
           "title": "Tabla y wetsuit",
@@ -82,29 +82,29 @@
         },
         "instructor": {
           "title": "Instructor certificado",
-          "description": "Instructor personal con certificacion ISA para grupos maximo de 4 personas."
+          "description": "Instructor personal con certificación ISA para grupos máximo de 4 personas."
         },
         "transport": {
           "title": "Transporte a spots",
-          "description": "Traslado diario a los mejores spots segun condiciones y nivel del grupo."
+          "description": "Traslado diario a los mejores spots según condiciones y nivel del grupo."
         },
         "media": {
           "title": "Fotos y videos",
-          "description": "Documentacion completa de tu progreso con fotos y videos para analisis tecnico."
+          "description": "Documentación completa de tu progreso con fotos y videos para analisis técnico."
         },
         "snacks": {
-          "title": "Snacks e hidratacion",
+          "title": "Snacks e hidratación",
           "description": "Frutas frescas, snacks energeticos y agua durante todas las sesiones."
         },
         "certificate": {
-          "title": "Certificado de participacion",
+          "title": "Certificado de participación",
           "description": "Certificado oficial que acredita tu nivel alcanzado al finalizar el camp."
         }
       }
     },
     "levels": {
       "title": "Niveles disponibles",
-      "subtitle": "Adaptamos el programa a tu nivel actual para garantizar el maximo progreso y diversion.",
+      "subtitle": "Adaptamos el programa a tu nivel actual para garantizar el máximo progreso y diversión.",
       "beginner": {
         "title": "Principiante",
         "description": "Nunca has surfeado o tienes muy poca experiencia. Empezamos desde cero con total seguridad.",
@@ -117,7 +117,7 @@
       },
       "intermediate": {
         "title": "Intermedio",
-        "description": "Ya te pones de pie ocasionalmente y quieres mejorar tu tecnica y consistencia.",
+        "description": "Ya te pones de pie ocasionalmente y quieres mejorar tu técnica y consistencia.",
         "skills": [
           "Perfeccionamiento del take-off",
           "Primeros giros",
@@ -127,7 +127,7 @@
       },
       "advanced": {
         "title": "Avanzado",
-        "description": "Surfeas con confianza y quieres perfeccionar maniobras especificas y desarrollar tu estilo.",
+        "description": "Surfeas con confianza y quieres perfeccionar maniobras específicas y desarrollar tu estilo.",
         "skills": [
           "Maniobras avanzadas",
           "Desarrollo de estilo personal",
@@ -138,24 +138,24 @@
     },
     "pricing": {
       "title": "Precios",
-      "subtitle": "Inversion completa para 6 dias de surf intensivo con todo incluido.",
+      "subtitle": "Inversión completa para 6 días de surf intensivo con todo incluido.",
       "card": {
-        "name": "Surf Camp 6 Dias",
+        "name": "Surf Camp 6 Días",
         "price": "$7,500",
         "currency": "MXN / persona",
         "features": [
-          "6 dias de clases (2 sesiones diarias)",
+          "6 días de clases (2 sesiones diarias)",
           "Instructor certificado ISA",
           "Equipo completo incluido",
           "Transporte a spots",
           "Fotos y videos profesionales",
-          "Certificado de participacion"
+          "Certificado de participación"
         ],
         "cta": "Reservar Ahora"
       },
       "dates": {
         "title": "Fechas disponibles",
-        "description": "Camps disponibles todo el ano. Las mejores condiciones son de octubre a abril. Grupos maximo 4 personas para garantizar atencion personalizada."
+        "description": "Camps disponibles todo el año. Las mejores condiciones son de octubre a abril. Grupos máximo 4 personas para garantizar atención personalizada."
       }
     },
     "testimonials": {
@@ -163,28 +163,28 @@
       "subtitle": "Experiencias reales de quienes han vivido el Surf Camp La Paz.",
       "reviews": [
         {
-          "name": "Ana Martinez",
-          "location": "Ciudad de Mexico",
-          "text": "Llegue sin saber nada de surf y en 6 dias ya estaba surfeando olas verdes. Los instructores son increibles y el ambiente super relajado. Ya quiero volver!"
+          "name": "Ana Martínez",
+          "location": "Ciudad de México",
+          "text": "Llegue sin saber nada de surf y en 6 días ya estaba surfeando olas verdes. Los instructores son increibles y el ambiente super relajado. Ya quiero volver!"
         },
         {
           "name": "Carlos Ruiz",
           "location": "Guadalajara",
-          "text": "Tenia algo de experiencia pero aqui realmente aprendi la tecnica correcta. Los videos de analisis fueron clave para mejorar mi postura. Excelente inversion."
+          "text": "Tenia algo de experiencia pero aquí realmente aprendi la técnica correcta. Los videos de analisis fueron clave para mejorar mi postura. Excelente inversión."
         },
         {
           "name": "Lucia Fernandez",
           "location": "Monterrey",
-          "text": "La atencion personalizada hace toda la diferencia. Grupos pequenos, instructores dedicados y las olas de La Paz son perfectas para aprender. Experiencia inolvidable!"
+          "text": "La atención personalizada hace toda la diferencia. Grupos pequeños, instructores dedicados y las olas de La Paz son perfectas para aprender. Experiencia inolvidable!"
         }
       ]
     },
     "cta": {
       "title": "Listo para conquistar las olas de La Paz?",
-      "subtitle": "6 dias que cambiaran tu relacion con el oceano para siempre. Aprende surf con los mejores instructores en el paraiso de Baja California Sur.",
+      "subtitle": "6 días que cambiaran tu relación con el océano para siempre. Aprende surf con los mejores instructores en el paraíso de Baja California Sur.",
       "button": "Reserva tu semana",
       "buttonSecondary": "Consultar fechas",
-      "footnote": "Grupos maximo 4 personas - Disponible todo el ano - Certificado incluido"
+      "footnote": "Grupos máximo 4 personas - Disponible todo el año - Certificado incluido"
     }
   },
   "en": {

@@ -6,6 +6,7 @@ import { getDictionary, type Locale, defaultLocale, isValidLocale } from "@/lib/
 import { Price } from "@/contexts/CurrencyContext"
 import { getInstagramPosts } from "@/lib/instagram"
 import InstagramGallery from "@/components/sections/InstagramGallery"
+import { experiences, getFeaturedAdventures, localizeExperience } from "@/constants/experiences"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -29,62 +30,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const gr = d.googleReviews
   const ig = d.instagram
 
-  const adventureLinks = [
-    "/experiencias/tour-espiritu-santo",
-    "/experiencias/tour-ballena-gris",
-    "/experiencias/buceo-cabo-pulmo",
-    "/experiencias/buceo-la-paz",
-    "/experiencias/renta-velero",
-    "/experiencias/renta-yate",
-  ]
-
-  const adventureImages = [
-    { src: "/lobo-marino-espiritu-santo.jpg", alt: adv.items[0].title },
-    { src: "/ballena-gris-spyhop-new.jpg", alt: adv.items[1].title },
-    { src: "/buceo-cabo-pulmo-cardumen.jpg", alt: adv.items[2].title },
-    { src: "/buceo-la-paz-buzo.jpg", alt: adv.items[3].title },
-    { src: "/sailboat-sailing-sunset-sea-of-cortez-romantic.jpg", alt: adv.items[4].title },
-    { src: "/luxury-yacht-ocean-balandra-beach-turquoise-lagoon.jpg", alt: adv.items[5].title },
-  ]
-
-  const expeditionsData = [
-    {
-      title: "Safari Bahia Magdalena",
-      description: exp.fullDay + " | Nov-Dic",
-      img: "/images/marlin-bahia-magdalena-hero.jpeg",
-      href: "/experiencias/safari-bahia-magdalena",
-      rating: 5.0,
-      reviews: 187,
-      duration: exp.fullDay,
-      capacity: "2-6 " + exp.people,
-      features: ["Snorkeling", "Vida marina", "Transporte", "Lunch", "Equipo", "Videos/fotos"],
-      price: 3500,
-    },
-    {
-      title: "Seafari La Ventana",
-      description: "6 hrs | Todo el ano",
-      img: "/images/orca-la-ventana-hero.jpeg",
-      href: "/experiencias/safari-la-ventana",
-      rating: 5.0,
-      reviews: 243,
-      duration: "6 hrs",
-      capacity: "4-8 " + exp.people,
-      features: ["Neopreno", "Snorkel", "Picnic", "Fotos/video", "Guia biologo"],
-      price: 3000,
-    },
-    {
-      title: "Surf Camp La Paz",
-      description: exp.days6,
-      img: "/images/surf-camp-hero.jpeg",
-      href: "/surf-camp",
-      rating: 4.9,
-      reviews: 156,
-      duration: exp.days6,
-      capacity: "6-8 " + exp.people,
-      features: ["Surf", "Fisio", "Video", "Hospedaje", "Comidas"],
-      price: 3400,
-    },
-  ]
+  const featuredAdventures = getFeaturedAdventures()
 
   return (
     <main className="flex-1">
@@ -155,42 +101,45 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {adv.items.map((item: any, i: number) => (
-              <article key={i} className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
-                <Link href={l(adventureLinks[i], locale)} className="block focus:outline-none">
-                  <div className="relative h-72 w-full overflow-hidden">
-                    <Image
-                      src={adventureImages[i].src}
-                      alt={adventureImages[i].alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
-                      <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm font-medium text-gray-900">{item.badge}</span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900">{item.title}</h3>
-                    <p className="mt-3 text-gray-600">{item.description}</p>
-                    <div className="mt-6 flex items-center justify-between">
-                      <div className="text-teal-700 text-2xl font-bold">
-                        <Price amount={item.price} />
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-900">
-                        <span className="text-sm font-medium">{adv.learnMore}</span>
-                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            {featuredAdventures.map((advExp) => {
+              const i18n = localizeExperience(advExp, locale)
+              return (
+                <article key={advExp.slug} className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
+                  <Link href={l(advExp.href, locale)} className="block focus:outline-none">
+                    <div className="relative h-72 w-full overflow-hidden">
+                      <Image
+                        src={advExp.image}
+                        alt={i18n.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
+                        <svg className="h-4 w-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                         </svg>
+                        <span className="text-sm font-medium text-gray-900">{i18n.badge}</span>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </article>
-            ))}
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-gray-900">{i18n.title}</h3>
+                      <p className="mt-3 text-gray-600">{i18n.description}</p>
+                      <div className="mt-6 flex items-center justify-between">
+                        <div className="text-teal-700 text-2xl font-bold">
+                          {advExp.fromMxn != null ? <Price amount={advExp.fromMxn} /> : null}
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-900">
+                          <span className="text-sm font-medium">{adv.learnMore}</span>
+                          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -281,51 +230,72 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <h2 className="text-3xl font-bold">{exp.title}</h2>
           <p className="mt-2 max-w-2xl text-neutral-600">{exp.subtitle}</p>
 
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
-            {expeditionsData.map((expedition, i) => (
-              <article key={i} className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
-                <Link href={l(expedition.href, locale)} className="block focus:outline-none">
-                  <div className="relative h-64 w-full overflow-hidden">
-                    <Image
-                      src={expedition.img}
-                      alt={expedition.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
-                      <svg className="h-4 w-4 fill-teal-600" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <span className="text-sm font-semibold text-gray-900">{expedition.rating}</span>
-                      <span className="text-sm text-gray-600">({expedition.reviews})</span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900">{expedition.title}</h3>
-                    <div className="mt-3 flex items-center gap-4 text-sm text-gray-600">
-                      <span>{expedition.duration}</span>
-                      <span>{expedition.capacity}</span>
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {expedition.features.map((f, idx) => (
-                        <span key={idx} className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700">{f}</span>
-                      ))}
-                    </div>
-                    <div className="my-4 border-t border-gray-200" />
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-xs text-gray-500">{exp.perPerson}</div>
-                        <div className="text-2xl font-bold text-teal-700"><Price amount={expedition.price} /></div>
+          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {experiences.map((expItem) => {
+              const i18n = localizeExperience(expItem, locale)
+              return (
+                <article key={expItem.slug} className="group overflow-hidden rounded-2xl border bg-white shadow-md transition-all hover:shadow-xl">
+                  <Link href={l(expItem.href, locale)} className="block focus:outline-none">
+                    <div className="relative h-64 w-full overflow-hidden">
+                      <Image
+                        src={expItem.image}
+                        alt={i18n.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 shadow-lg backdrop-blur">
+                        <svg className="h-4 w-4 fill-teal-600" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <span className="text-sm font-semibold text-gray-900">{expItem.rating.toFixed(1)}</span>
+                        <span className="text-sm text-gray-600">({expItem.reviews})</span>
                       </div>
-                      <button className="rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-800">
-                        {exp.book}
-                      </button>
                     </div>
-                  </div>
-                </Link>
-              </article>
-            ))}
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900">{i18n.title}</h3>
+                      <div className="mt-3 flex items-center gap-4 text-sm text-gray-600">
+                        <span>{i18n.durationLabel}</span>
+                        <span>{i18n.capacityLabel}</span>
+                      </div>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {i18n.highlights.map((f, idx) => (
+                          <span key={idx} className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700">{f}</span>
+                        ))}
+                      </div>
+                      <div className="my-4 border-t border-gray-200" />
+                      <div className="flex items-center justify-between">
+                        <div>
+                          {expItem.fromMxn != null ? (
+                            <>
+                              <div className="text-xs text-gray-500">{exp.perPerson}</div>
+                              <div className="text-2xl font-bold text-teal-700"><Price amount={expItem.fromMxn} /></div>
+                            </>
+                          ) : (
+                            <div className="text-xs text-gray-500">{exp.book}</div>
+                          )}
+                        </div>
+                        <button className="rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-800">
+                          {exp.book}
+                        </button>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              )
+            })}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              href={l("/experiencias", locale)}
+              className="inline-flex items-center gap-2 rounded-xl border border-teal-700 bg-white px-6 py-3 text-base font-semibold text-teal-700 transition hover:bg-teal-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+            >
+              {exp.viewAll ?? "Ver todas"}
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

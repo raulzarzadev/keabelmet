@@ -1,87 +1,87 @@
 {
   "es": {
     "meta": {
-      "title": "Tour Ballena Gris en Bahia Magdalena",
-      "description": "Vive la experiencia de avistar ballenas grises en Bahia Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproduccion."
+      "title": "Tour Ballena Gris en Bahía Magdalena",
+      "description": "Vive la experiencia de avistar ballenas grises en Bahía Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproducción."
     },
     "hero": {
       "badge": "Enero - Marzo",
       "title": "Ballena Gris: Un Encuentro Ancestral en Puerto Chale",
-      "description": "Una travesia que toca el alma en Bahia Magdalena, Baja California Sur. Cada invierno, miles de ballenas grises viajan desde el Artico hasta esta laguna tranquila para dar a luz y aparearse. Tu estas a punto de entrar a ese santuario.",
+      "description": "Una travesía que toca el alma en Bahía Magdalena, Baja California Sur. Cada invierno, miles de ballenas grises viajan desde el Ártico hasta esta laguna tranquila para dar a luz y aparearse. Tu estás a punto de entrar a ese santuario.",
       "cta_primary": "Reserva tu aventura",
       "cta_secondary": "Ver detalles",
-      "image_alt": "Ballena gris saltando al atardecer en el Mar de Cortes"
+      "image_alt": "Ballena gris saltando al atardecer en el Mar de Cortés"
     },
     "about": {
       "title": "Esto no es un tour. Es un privilegio.",
-      "description_1": "Cada invierno, algo sagrado sucede en el Pacifico mexicano. Miles de ballenas grises viajan miles de kilometros desde el Artico hasta una laguna tranquila en medio del desierto... para dar a luz, para aparearse, para estar.",
-      "description_2": "Un regalo de la naturaleza que solo existe unos meses al ano. Y lo vas a vivir desde el corazon de la Baja.",
-      "image_alt": "Ballena gris madre con su cria en Bahia Magdalena",
+      "description_1": "Cada invierno, algo sagrado sucede en el Pacífico mexicano. Miles de ballenas grises viajan miles de kilometros desde el Ártico hasta una laguna tranquila en medio del desierto... para dar a luz, para aparearse, para estar.",
+      "description_2": "Un regalo de la naturaleza que solo existe unos meses al año. Y lo vas a vivir desde el corazón de la Baja.",
+      "image_alt": "Ballena gris madre con su cria en Bahía Magdalena",
       "meeting_title": "Punto de Encuentro",
       "meeting_text": "La Paz - Te recogemos en tu hotel / Airbnb a las 5:00 AM",
-      "duration_title": "Duracion Total",
+      "duration_title": "Duración Total",
       "duration_text": "9 horas aproximadamente: 2.5 hrs de camino + 2-3 hrs en lancha + 2.5 hrs de regreso",
       "season_title": "Temporada Oficial",
-      "season_text": "Enero - Marzo unicamente. Fuera de estos meses no existe esta experiencia."
+      "season_text": "Enero - Marzo únicamente. Fuera de estos meses no existe esta experiencia."
     },
     "itinerary": {
       "title": "Como es la experiencia?",
-      "subtitle": "El camino hacia la magia: la aventura comienza temprano y te lleva por el desierto de la Baja hasta uno de los lugares mas especiales de Mexico.",
+      "subtitle": "El camino hacia la magia: la aventura comienza temprano y te lleva por el desierto de la Baja hasta uno de los lugares más especiales de México.",
       "step1_title": "Salida al Amanecer",
       "step1_text": "La aventura comienza temprano: te pasamos a ver y partimos rumbo al norte. La luz del amanecer va pintando el desierto de la Baja, los cardones gigantes aparecen como guardianes del camino.",
-      "step2_title": "Camino al Pacifico",
-      "step2_text": "2.5 horas de travesia por paisajes unicos. Antes de darte cuenta, ya estas entrando en Puerto Chale, donde tu lancha ya te espera. El aire huele a mar, a manglar y a historia.",
+      "step2_title": "Camino al Pacífico",
+      "step2_text": "2.5 horas de travesía por paisajes únicos. Antes de darte cuenta, ya estás entrando en Puerto Chale, donde tu lancha ya te espera. El aire huele a mar, a manglar y a historia.",
       "step3_title": "Encuentro con las Ballenas",
-      "step3_text": "Durante 2 o 3 horas navegamos dentro de la laguna, hogar temporal de estos gigantes. Aqui se aparean, aqui nacen sus crias, aqui descansan despues de la migracion mas larga del reino animal.",
-      "step3_extra": "Es comun verlas pasar junto al bote, sacar la cabeza para mirarte, jugar con sus bebes. Y si tienes suerte... alguna se acercara. Son ellas las que deciden. Siempre.",
-      "step4_title": "Vida Marina del Pacifico",
-      "step4_text": "En el camino tambien puedes ver delfines, lobos marinos, fragatas, pelicanos, aguilas pescadoras y otras aves que llenan el aire del Pacifico. Te compartimos un snack local delicioso.",
+      "step3_text": "Durante 2 o 3 horas navegamos dentro de la laguna, hogar temporal de estos gigantes. Aquí se aparean, aquí nacen sus crias, aquí descansan después de la migración más larga del reino animal.",
+      "step3_extra": "Es común verlas pasar junto al bote, sacar la cabeza para mirarte, jugar con sus bebes. Y si tienes suerte... alguna se acercara. Son ellas las que deciden. Siempre.",
+      "step4_title": "Vida Marina del Pacífico",
+      "step4_text": "En el camino también puedes ver delfines, lobos marinos, fragatas, pelicanos, aguilas pescadoras y otras aves que llenan el aire del Pacífico. Te compartimos un snack local delicioso.",
       "step5_title": "Regreso a La Paz",
-      "step5_text": "Regresamos con la piel salada, el corazon suave y una historia que te va a acompanar siempre. Llegada estimada entre 5:00 PM - 6:00 PM."
+      "step5_text": "Regresamos con la piel salada, el corazón suave y una historia que te va a acompanar siempre. Llegada estimada entre 5:00 PM - 6:00 PM."
     },
     "species": {
       "title": "Especies que puedes encontrar",
-      "subtitle": "Bahia Magdalena es un ecosistema rico donde convergen multiples especies marinas durante la temporada de ballenas.",
+      "subtitle": "Bahía Magdalena es un ecosistema rico donde convergen múltiples especies marinas durante la temporada de ballenas.",
       "gray_whale": {
         "name": "Ballena Gris",
         "season": "Dic - Abr",
-        "description": "Las ballenas grises viajan mas de 20,000 km desde Alaska hasta estas lagunas calidas para dar a luz y criar a sus ballenatos. Son conocidas por su curiosidad y acercamiento amigable a las embarcaciones."
+        "description": "Las ballenas grises viajan más de 20,000 km desde Alaska hasta estas lagunas cálidas para dar a luz y criar a sus ballenatos. Son conocidas por su curiosidad y acercamiento amigable a las embarcaciones."
       },
       "sea_lions": {
         "name": "Lobos Marinos",
-        "season": "Todo el ano",
-        "description": "Curiosos y carismaticos, los lobos marinos habitan las costas rocosas de la region. Frecuentemente se les observa descansando en grupos y nadando cerca de las embarcaciones."
+        "season": "Todo el año",
+        "description": "Curiosos y carismáticos, los lobos marinos habitan las costas rocosas de la región. Frecuentemente se les observa descansando en grupos y nadando cerca de las embarcaciones."
       },
       "dolphins": {
         "name": "Delfines",
-        "season": "Todo el ano",
-        "description": "Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectaculo natural con sus saltos y acrobacias. Varias especies habitan estas aguas."
+        "season": "Todo el año",
+        "description": "Juguetones y sociales, los delfines suelen acercarse a las embarcaciones y ofrecer un espectáculo natural con sus saltos y acrobacias. Varias especies habitan estas aguas."
       },
       "ospreys": {
         "name": "Aguilas Pescadoras",
         "season": "Oct - Abr",
-        "description": "Estas majestuosas aves rapaces son expertas pescadoras. Se les puede observar volando sobre las aguas y realizando espectaculares clavados para capturar peces."
+        "description": "Estás majestuosas aves rapaces son expertas pescadoras. Se les puede observar volando sobre las aguas y realizando espectaculares clavados para capturar peces."
       },
       "pelicans": {
         "name": "Pelicanos",
-        "season": "Todo el ano",
+        "season": "Todo el año",
         "description": "Los pelicanos cafes son habitantes comunes de las costas. Con sus bolsas gulares distintivas, pescan en formaciones coordinadas y descansan en los manglares."
       },
       "frigatebirds": {
         "name": "Fragatas",
-        "season": "Todo el ano",
-        "description": "Con sus alas largas y cola ahorquillada, las fragatas son maestras del vuelo. Los machos inflan su saco gular rojo durante la temporada de apareamiento, creando un espectaculo visual unico."
+        "season": "Todo el año",
+        "description": "Con sus alas largas y cola ahorquillada, las fragatas son maestras del vuelo. Los machos inflan su saco gular rojo durante la temporada de apareamiento, creando un espectáculo visual único."
       },
       "disclaimer_title": "Nota de Realismo",
-      "disclaimer_text": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos de todas las especies, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos unicos con la naturaleza."
+      "disclaimer_text": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos de todas las especies, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos únicos con la naturaleza."
     },
     "includes": {
       "title": "Que incluye tu experiencia?",
-      "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
+      "subtitle": "Todo lo necesario para que vivas una aventura segura, cómoda y memorable.",
       "transport_title": "Transporte Redondo",
       "transport_text": "Desde La Paz hasta Puerto Chale y regreso",
       "captain_title": "Lancha con Capitan Local",
-      "captain_text": "Experto en fauna y navegacion segura",
+      "captain_text": "Experto en fauna y navegación segura",
       "guide_title": "Guia Biologo Marino",
       "guide_text": "Con material educativo sobre ballenas",
       "photos_title": "Fotos y Videos Profesionales",
@@ -102,7 +102,7 @@
         "per": "por persona",
         "features": [
           "Transporte redondo desde La Paz",
-          "Guia biologo marino",
+          "Guia biólogo marino",
           "Fotos y videos profesionales",
           "Snacks y bebidas"
         ],
@@ -117,10 +117,10 @@
         "per": "por persona",
         "features": [
           "Transporte redondo desde La Paz",
-          "Guia biologo marino",
+          "Guia biólogo marino",
           "Fotos y videos profesionales",
           "Snacks y bebidas",
-          "+ 1 hora mas de avistamiento"
+          "+ 1 hora más de avistamiento"
         ],
         "cta": "Reservar"
       },
@@ -135,7 +135,7 @@
           "Todo lo anterior +",
           "Snorkel con lobos marinos",
           "Equipo completo de snorkel",
-          "Atencion personalizada",
+          "Atención personalizada",
           "Flexibilidad total de horarios"
         ],
         "cta": "Reservar Privado"
@@ -144,23 +144,41 @@
     "recommendations": {
       "title": "Recomendaciones",
       "items": [
-        { "title": "Saber nadar", "text": "Solo aplica para la experiencia privada con snorkel" },
-        { "title": "Traje de bano o wetsuit", "text": "Y cambio de ropa seca para despues" },
-        { "title": "Ropa de abrigo", "text": "Rompevientos o sudadera (enero-febrero son frios)" },
-        { "title": "Protector solar biodegradable", "text": "Para cuidar el ecosistema marino" },
-        { "title": "Lentes de sol y gorra", "text": "Proteccion contra el sol del Pacifico" },
-        { "title": "Actitud respetuosa", "text": "Y corazon abierto para la experiencia" }
+        {
+          "title": "Saber nadar",
+          "text": "Solo aplica para la experiencia privada con snorkel"
+        },
+        {
+          "title": "Traje de baño o wetsuit",
+          "text": "Y cambio de ropa seca para después"
+        },
+        {
+          "title": "Ropa de abrigo",
+          "text": "Rompevientos o sudadera (enero-febrero son frios)"
+        },
+        {
+          "title": "Protector solar biodegradable",
+          "text": "Para cuidar el ecosistema marino"
+        },
+        {
+          "title": "Lentes de sol y gorra",
+          "text": "Protección contra el sol del Pacífico"
+        },
+        {
+          "title": "Actitud respetuosa",
+          "text": "Y corazón abierto para la experiencia"
+        }
       ],
       "important_title": "Nota importante",
-      "important_text": "Las ballenas grises son animales totalmente salvajes y libres. No esta permitido nadar con ballenas barbadas ni cachalotes en Mexico. Nuestra experiencia es 100% de observacion, etica y responsable. Por eso cada encuentro es real, natural y profundamente humano."
+      "important_text": "Las ballenas grises son animales totalmente salvajes y libres. No está permitido nadar con ballenas barbadas ni cachalotes en México. Nuestra experiencia es 100% de observación, ética y responsable. Por eso cada encuentro es real, natural y profundamente humano."
     },
     "testimonials": {
       "title": "Lo que dicen nuestros viajeros",
       "items": [
         {
           "text": "Una experiencia que no tiene palabras. Ver a las ballenas grises tan cerca, con sus bebes, fue algo que nunca voy a olvidar. El equipo de Keabelmet es super profesional y respetuoso con los animales.",
-          "author": "Maria Rodriguez",
-          "location": "Ciudad de Mexico"
+          "author": "Maria Rodríguez",
+          "location": "Ciudad de México"
         },
         {
           "text": "El tour privado valio cada peso. Pudimos tomarnos nuestro tiempo, hacer snorkel con lobos marinos y ver ballenas en un ambiente super tranquilo. Lo recomiendo 100%.",
@@ -168,7 +186,7 @@
           "location": "Guadalajara"
         },
         {
-          "text": "Fue mi primera vez viendo ballenas y supero todas mis expectativas. El biologo nos explico todo sobre su migracion y comportamiento. Una aventura increible desde La Paz.",
+          "text": "Fue mi primera vez viendo ballenas y supero todas mis expectativas. El biólogo nos explico todo sobre su migración y comportamiento. Una aventura increible desde La Paz.",
           "author": "Ana Torres",
           "location": "Monterrey"
         }
@@ -176,9 +194,9 @@
     },
     "cta": {
       "title": "Listo para vivir este encuentro ancestral?",
-      "description": "Las ballenas grises solo estan aqui de enero a marzo. No dejes pasar esta oportunidad unica.",
+      "description": "Las ballenas grises solo están aquí de enero a marzo. No dejes pasar esta oportunidad única.",
       "cta_primary": "Reserva tu lugar ahora",
-      "cta_secondary": "Ver mas expediciones"
+      "cta_secondary": "Ver más expediciones"
     },
     "footer": {
       "copyright": "2026 Keabelmet. Todos los derechos reservados."
@@ -329,12 +347,30 @@
     "recommendations": {
       "title": "Recommendations",
       "items": [
-        { "title": "Know how to swim", "text": "Only applies to the private experience with snorkeling" },
-        { "title": "Swimsuit or wetsuit", "text": "And a change of dry clothes for after" },
-        { "title": "Warm clothing", "text": "Windbreaker or sweater (January-February are cold)" },
-        { "title": "Biodegradable sunscreen", "text": "To protect the marine ecosystem" },
-        { "title": "Sunglasses and cap", "text": "Protection from the Pacific sun" },
-        { "title": "Respectful attitude", "text": "And an open heart for the experience" }
+        {
+          "title": "Know how to swim",
+          "text": "Only applies to the private experience with snorkeling"
+        },
+        {
+          "title": "Swimsuit or wetsuit",
+          "text": "And a change of dry clothes for after"
+        },
+        {
+          "title": "Warm clothing",
+          "text": "Windbreaker or sweater (January-February are cold)"
+        },
+        {
+          "title": "Biodegradable sunscreen",
+          "text": "To protect the marine ecosystem"
+        },
+        {
+          "title": "Sunglasses and cap",
+          "text": "Protection from the Pacific sun"
+        },
+        {
+          "title": "Respectful attitude",
+          "text": "And an open heart for the experience"
+        }
       ],
       "important_title": "Important note",
       "important_text": "Gray whales are completely wild and free animals. Swimming with baleen whales or sperm whales is not permitted in Mexico. Our experience is 100% observation-based, ethical and responsible. That is why every encounter is real, natural and profoundly human."
@@ -514,12 +550,30 @@
     "recommendations": {
       "title": "Recommandations",
       "items": [
-        { "title": "Savoir nager", "text": "S'applique uniquement a l'experience privee avec snorkeling" },
-        { "title": "Maillot de bain ou combinaison", "text": "Et un change de vetements secs pour apres" },
-        { "title": "Vetements chauds", "text": "Coupe-vent ou sweat (janvier-fevrier sont frais)" },
-        { "title": "Creme solaire biodegradable", "text": "Pour proteger l'ecosysteme marin" },
-        { "title": "Lunettes de soleil et casquette", "text": "Protection contre le soleil du Pacifique" },
-        { "title": "Attitude respectueuse", "text": "Et un coeur ouvert pour l'experience" }
+        {
+          "title": "Savoir nager",
+          "text": "S'applique uniquement a l'experience privee avec snorkeling"
+        },
+        {
+          "title": "Maillot de bain ou combinaison",
+          "text": "Et un change de vetements secs pour apres"
+        },
+        {
+          "title": "Vetements chauds",
+          "text": "Coupe-vent ou sweat (janvier-fevrier sont frais)"
+        },
+        {
+          "title": "Creme solaire biodegradable",
+          "text": "Pour proteger l'ecosysteme marin"
+        },
+        {
+          "title": "Lunettes de soleil et casquette",
+          "text": "Protection contre le soleil du Pacifique"
+        },
+        {
+          "title": "Attitude respectueuse",
+          "text": "Et un coeur ouvert pour l'experience"
+        }
       ],
       "important_title": "Note importante",
       "important_text": "Les baleines grises sont des animaux totalement sauvages et libres. La nage avec les baleines a fanons ou les cachalots n'est pas autorisee au Mexique. Notre experience est 100% d'observation, ethique et responsable. C'est pourquoi chaque rencontre est reelle, naturelle et profondement humaine."
@@ -699,12 +753,30 @@
     "recommendations": {
       "title": "建议",
       "items": [
-        { "title": "会游泳", "text": "仅适用于带浮潜的私人体验" },
-        { "title": "泳衣或潜水服", "text": "以及事后更换的干燥衣物" },
-        { "title": "保暖衣物", "text": "防风衣或卫衣（一月至二月较冷）" },
-        { "title": "可生物降解的防晒霜", "text": "保护海洋生态系统" },
-        { "title": "太阳镜和帽子", "text": "防止太平洋阳光照射" },
-        { "title": "尊重的态度", "text": "和一颗敞开的心去体验" }
+        {
+          "title": "会游泳",
+          "text": "仅适用于带浮潜的私人体验"
+        },
+        {
+          "title": "泳衣或潜水服",
+          "text": "以及事后更换的干燥衣物"
+        },
+        {
+          "title": "保暖衣物",
+          "text": "防风衣或卫衣（一月至二月较冷）"
+        },
+        {
+          "title": "可生物降解的防晒霜",
+          "text": "保护海洋生态系统"
+        },
+        {
+          "title": "太阳镜和帽子",
+          "text": "防止太平洋阳光照射"
+        },
+        {
+          "title": "尊重的态度",
+          "text": "和一颗敞开的心去体验"
+        }
       ],
       "important_title": "重要说明",
       "important_text": "灰鲸是完全野生和自由的动物。在墨西哥不允许与须鲸或抹香鲸一起游泳。我们的体验是 100% 基于观察的，道德且负责任的。因此每一次邂逅都是真实的、自然的、深刻的。"

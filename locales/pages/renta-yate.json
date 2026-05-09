@@ -2,33 +2,33 @@
   "es": {
     "meta": {
       "title": "Renta de Yate",
-      "description": "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes."
+      "description": "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La máxima experiencia en el Mar de Cortés."
     },
     "hero": {
       "badge": "Experiencia Premium",
       "title": "Renta de Yate de Lujo",
-      "description": "La maxima experiencia en el Mar de Cortes con yates de lujo, servicio premium y comodidades de primera clase",
+      "description": "La máxima experiencia en el Mar de Cortés con yates de lujo, servicio premium y comodidades de primera clase",
       "cta": "Reservar Ahora",
       "image_alt": "Renta de Yate"
     },
     "details": {
-      "duration_title": "Duracion",
-      "duration_text": "Flexible (dia o multiples dias)",
+      "duration_title": "Duración",
+      "duration_text": "Flexible (día o múltiples días)",
       "capacity_title": "Capacidad",
       "capacity_text": "Hasta 12 personas",
       "availability_title": "Disponibilidad",
-      "availability_text": "Todo el ano",
+      "availability_text": "Todo el año",
       "chef_title": "Chef",
       "chef_text": "Chef a bordo incluido"
     },
     "about": {
       "title": "Sobre la Experiencia",
-      "description": "Disfruta de la maxima experiencia de lujo en el Mar de Cortes a bordo de nuestros yates premium. Perfecto para celebraciones especiales, eventos corporativos, o simplemente para disfrutar del mar con el mas alto nivel de confort. Nuestros yates cuentan con camarotes lujosos, amplias areas de entretenimiento, jacuzzi, y todas las comodidades que esperas de una experiencia de cinco estrellas."
+      "description": "Disfruta de la máxima experiencia de lujo en el Mar de Cortés a bordo de nuestros yates premium. Perfecto para celebraciones especiales, eventos corporativos, o simplemente para disfrutar del mar con el más alto nivel de confort. Nuestros yates cuentan con camarotes lujosos, amplias áreas de entretenimiento, jacuzzi, y todas las comodidades que esperas de una experiencia de cinco estrellas."
     },
     "includes": {
       "title": "Que Incluye",
       "items": [
-        "Capitan y tripulacion profesional",
+        "Capitan y tripulación profesional",
         "Chef a bordo",
         "Menu gourmet personalizado",
         "Bebidas premium ilimitadas",
@@ -38,13 +38,13 @@
         "Servicio de mayordomo"
       ],
       "premium_note_title": "Experiencia Premium:",
-      "premium_note_text": "Itinerario completamente personalizable. Contactanos para disenar tu experiencia perfecta."
+      "premium_note_text": "Itinerario completamente personalizable. Contactanos para diseñar tu experiencia perfecta."
     },
     "cta": {
-      "title": "Lujo sin limites",
+      "title": "Lujo sin límites",
       "description": "Experiencia exclusiva. Consulta disponibilidad",
       "cta_primary": "Consultar Ahora",
-      "cta_secondary": "Ver Mas Experiencias"
+      "cta_secondary": "Ver Más Experiencias"
     }
   },
   "en": {

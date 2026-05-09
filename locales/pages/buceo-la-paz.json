@@ -2,7 +2,7 @@
   "es": {
     "meta": {
       "title": "Buceo en La Paz",
-      "description": "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo."
+      "description": "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortés con guías certificados y equipo completo."
     },
     "hero": {
       "badge": "Colonia de Lobos Marinos",
@@ -12,18 +12,18 @@
       "image_alt": "Buceo en La Paz"
     },
     "details": {
-      "duration_title": "Duracion",
-      "duration_text": "Dia completo (7-8 horas)",
+      "duration_title": "Duración",
+      "duration_text": "Día completo (7-8 horas)",
       "group_title": "Grupo",
-      "group_text": "Maximo 8 buceadores",
+      "group_text": "Máximo 8 buceadores",
       "season_title": "Temporada",
-      "season_text": "Todo el ano",
+      "season_text": "Todo el año",
       "includes_title": "Incluye",
       "includes_text": "Fotos y equipo"
     },
     "about": {
       "title": "Sobre el Tour",
-      "description": "La Paz ofrece algunas de las mejores experiencias de buceo en el Mar de Cortes. El sitio mas popular es Los Islotes, hogar de una colonia de mas de 400 lobos marinos que son extremadamente curiosos y juguetones con los buceadores. Estos \"perritos del mar\" te rodearan, haran piruetas y crearan recuerdos inolvidables. Tambien visitaremos otros sitios con impresionantes formaciones rocosas, cuevas submarinas y vida marina diversa."
+      "description": "La Paz ofrece algunas de las mejores experiencias de buceo en el Mar de Cortés. El sitio más popular es Los Islotes, hogar de una colonia de más de 400 lobos marinos que son extremadamente curiosos y juguetones con los buceadores. Estos \"perritos del mar\" te rodearan, haran piruetas y crearan recuerdos inolvidables. También visitaremos otros sitios con impresionantes formaciones rocosas, cuevas submarinas y vida marina diversa."
     },
     "includes": {
       "title": "Que Incluye",
@@ -35,13 +35,13 @@
         "Lunch y bebidas",
         "Fotos y videos submarinos"
       ],
-      "note": "Nota: Tambien disponible para snorkelers. No se requiere certificacion de buceo para snorkeling con lobos marinos."
+      "note": "Nota: También disponible para snorkelers. No se requiere certificación de buceo para snorkeling con lobos marinos."
     },
     "cta": {
       "title": "Nada con lobos marinos",
       "description": "Una experiencia que nunca olvidaras. Reserva hoy",
       "cta_primary": "Reservar Ahora",
-      "cta_secondary": "Ver Mas Tours"
+      "cta_secondary": "Ver Más Tours"
     }
   },
   "en": {

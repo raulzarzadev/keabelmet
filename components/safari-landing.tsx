@@ -2,17 +2,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { Clock, MapPin, Anchor, Camera, Coffee, TelescopeIcon as Binoculars, Check } from "lucide-react"
 import { Price } from "@/contexts/CurrencyContext"
+import type { Experience } from "@/constants/experiences"
 
 interface SafariLandingProps {
   translations: Record<string, any>
+  experience: Experience
 }
 
-export function SafariLanding({ translations: t }: SafariLandingProps) {
+export function SafariLanding({ translations: t, experience }: SafariLandingProps) {
   const hero = t.hero || {}
   const about = t.about || {}
-  const experience = t.experience || {}
-  const cards = experience.cards || {}
-  const itinerary = experience.itinerary || {}
+  const experienceContent = t.experience || {}
+  const cards = experienceContent.cards || {}
+  const itinerary = experienceContent.itinerary || {}
   const wildlife = t.wildlife || {}
   const species = wildlife.species || {}
   const includes = t.includes || {}
@@ -52,7 +54,7 @@ export function SafariLanding({ translations: t }: SafariLandingProps) {
         <section className="relative">
           <div className="absolute inset-0">
             <Image
-              src="/images/orca-safari.jpg"
+              src={experience.image}
               alt={hero.imageAlt || ""}
               width={1920}
               height={1080}
@@ -124,9 +126,9 @@ export function SafariLanding({ translations: t }: SafariLandingProps) {
         {/* Experience Section */}
         <section id="experience" className="py-16 md:py-24 bg-teal-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{experience.title}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{experienceContent.title}</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-16">
-              {experience.subtitle}
+              {experienceContent.subtitle}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -259,7 +261,7 @@ export function SafariLanding({ translations: t }: SafariLandingProps) {
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{pricing.group?.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  <Price amount={3000} />
+                  {experience.fromMxn != null ? <Price amount={experience.fromMxn} /> : null}
                 </div>
                 <ul className="space-y-3 mb-8">
                   {(pricing.group?.features || []).map((feature: string, i: number) => (

@@ -2,31 +2,31 @@
   "es": {
     "meta": {
       "title": "Renta de Velero",
-      "description": "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles."
+      "description": "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortés con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles."
     },
     "hero": {
-      "badge": "Bahia de La Paz",
+      "badge": "Bahía de La Paz",
       "title": "Renta de Velero Privado",
-      "description": "Navega por el Mar de Cortes en un velero completamente equipado. Perfecto para aventuras romanticas, celebraciones especiales o simplemente disfrutar del mar.",
+      "description": "Navega por el Mar de Cortés en un velero completamente equipado. Perfecto para aventuras romanticas, celebraciones especiales o simplemente disfrutar del mar.",
       "cta_primary": "Ver Opciones",
       "cta_secondary": "Que Incluye",
       "image_alt": "Renta de Velero en La Paz"
     },
     "details": {
-      "duration_title": "Duracion",
+      "duration_title": "Duración",
       "duration_text": "3 a 8 horas",
       "capacity_title": "Capacidad",
       "capacity_text": "2-6 personas",
-      "vessel_title": "Embarcacion",
+      "vessel_title": "Embarcación",
       "vessel_text": "Velero 32-40 pies",
       "season_title": "Temporada",
-      "season_text": "Todo el ano"
+      "season_text": "Todo el año"
     },
     "about": {
       "title": "Sobre la Experiencia",
-      "description_1": "Experimenta la libertad del mar a bordo de un velero privado completamente equipado con bano, cocina, camarote, chimenea y todas las comodidades para tu aventura.",
-      "description_2": "Navega hacia destinos iconicos como Playa Balandra, Isla Espiritu Santo o simplemente disfruta de un atardecer romantico en el Mar de Cortes. Cada experiencia incluye capitan profesional, equipo de snorkel, kayaks, paddle boards y todas las amenidades necesarias para un dia perfecto en el mar.",
-      "description_3": "Ya sea que busques una experiencia romantica con brunch gourmet, un dia completo de aventura acuatica, o simplemente relajarte mientras navegas, tenemos el paquete perfecto para ti."
+      "description_1": "Experimenta la libertad del mar a bordo de un velero privado completamente equipado con baño, cocina, camarote, chimenea y todas las comodidades para tu aventura.",
+      "description_2": "Navega hacia destinos icónicos como Playa Balandra, Isla Espiritu Santo o simplemente disfruta de un atardecer romantico en el Mar de Cortés. Cada experiencia incluye capitan profesional, equipo de snorkel, kayaks, paddle boards y todas las amenidades necesarias para un día perfecto en el mar.",
+      "description_3": "Ya sea que busques una experiencia romantica con brunch gourmet, un día completo de aventura acuatica, o simplemente relajarte mientras navegas, tenemos el paquete perfecto para ti."
     },
     "pricing": {
       "title": "Opciones de Tours",
@@ -49,11 +49,11 @@
           "Bocina bluetooth"
         ],
         "destinations": "Destinos: Playa Balandra, El Merito, El Zorrillo o Isla Espiritu Santo",
-        "extra_person": "*Persona extra: $1,000 MXN (maximo 1 persona extra)"
+        "extra_person": "*Persona extra: $1,000 MXN (máximo 1 persona extra)"
       },
       "sailboat_32": {
         "name": "Velero 32 Pies",
-        "subtitle": "Dia completo de navegacion",
+        "subtitle": "Día completo de navegación",
         "price": "$8,000",
         "currency": "MXN",
         "features": [
@@ -68,7 +68,7 @@
           "Capitan y marinero"
         ],
         "destinations": "Destino: Playa Balandra",
-        "extra_person": "*Persona extra: $1,000 MXN (maximo 1 persona extra)"
+        "extra_person": "*Persona extra: $1,000 MXN (máximo 1 persona extra)"
       },
       "san_rafaelito": {
         "name": "San Rafaelito a Balandra",
@@ -100,7 +100,7 @@
           "Capitan y marinero"
         ],
         "ideal_for": "Perfecto para: Aniversarios, propuestas, celebraciones especiales",
-        "extra_person": "*Persona extra: $750 MXN (maximo 4 personas extra)"
+        "extra_person": "*Persona extra: $750 MXN (máximo 4 personas extra)"
       },
       "brunch": {
         "name": "Brunch Romantico en Velero",
@@ -108,7 +108,7 @@
         "price": "$4,000",
         "currency": "MXN",
         "features": [
-          "3 horas de navegacion",
+          "3 horas de navegación",
           "Servicio para 2 personas",
           "Tabla de quesos y carnes frias gourmet",
           "Mimosas (vino blanco espumoso con jugo de naranja)",
@@ -117,7 +117,7 @@
           "Capitan profesional"
         ],
         "ideal_for": "Ideal para: Aniversarios, cumpleanos, ocasiones especiales",
-        "extra_person": "*Persona extra: $750 MXN (maximo 4 personas extra)"
+        "extra_person": "*Persona extra: $750 MXN (máximo 4 personas extra)"
       }
     },
     "includes": {
@@ -142,13 +142,13 @@
           "Paddle boards (SUP)",
           "Tapete flotante",
           "Dinghy (bote auxiliar)",
-          "Sillas y area con sombra"
+          "Sillas y área con sombra"
         ]
       },
       "food": {
         "title": "Alimentos y Bebidas",
         "items": [
-          "Cerveza (18-24 pack segun paquete)",
+          "Cerveza (18-24 pack según paquete)",
           "Aguas embotelladas",
           "Refrescos",
           "Ceviche fresco",
@@ -157,13 +157,13 @@
         ]
       },
       "crew": {
-        "title": "Tripulacion y Seguridad",
+        "title": "Tripulación y Seguridad",
         "items": [
           "Capitan certificado",
           "Marinero profesional",
           "Equipo de seguridad completo",
           "Chalecos salvavidas",
-          "Seguro de embarcacion",
+          "Seguro de embarcación",
           "Pulseras de acceso ANP (cuando aplique)"
         ]
       }
@@ -173,32 +173,32 @@
       "what_to_bring": {
         "title": "Que llevar",
         "items": [
-          "Traje de bano y toalla",
+          "Traje de baño y toalla",
           "Protector solar biodegradable",
           "Sombrero o gorra",
           "Lentes de sol con correa",
           "Camara (preferiblemente acuatica)",
-          "Ropa comoda de cambio"
+          "Ropa cómoda de cambio"
         ]
       },
       "schedules": {
         "title": "Horarios recomendados",
-        "text": "Para tours de dia completo, recomendamos salida entre 9:00-10:00 AM. Para atardeceres, salida 2-3 horas antes del sunset."
+        "text": "Para tours de día completo, recomendamos salida entre 9:00-10:00 AM. Para atardeceres, salida 2-3 horas antes del sunset."
       },
       "weather": {
-        "title": "Condiciones climaticas",
-        "text": "Los tours estan sujetos a condiciones climaticas. En caso de mal tiempo, se reprogramara sin costo adicional."
+        "title": "Condiciones climáticas",
+        "text": "Los tours están sujetos a condiciones climáticas. En caso de mal tiempo, se reprogramará sin costo adicional."
       },
       "customization": {
-        "title": "Personalizacion",
-        "text": "Quieres personalizar tu experiencia? Podemos organizar catering especial, decoracion para ocasiones especiales, sesion fotografica profesional y mas. Contactanos para detalles."
+        "title": "Personalización",
+        "text": "Quieres personalizar tu experiencia? Podemos organizar catering especial, decoración para ocasiones especiales, sesión fotografica profesional y más. Contactanos para detalles."
       }
     },
     "cta": {
       "title": "Listo para Zarpar?",
-      "description": "Reserva tu velero privado y vive una experiencia inolvidable en el Mar de Cortes",
+      "description": "Reserva tu velero privado y vive una experiencia inolvidable en el Mar de Cortés",
       "cta_primary": "Contactar para Reservar",
-      "cta_secondary": "Ver Mas Experiencias",
+      "cta_secondary": "Ver Más Experiencias",
       "note": "Preguntas? Escribenos por WhatsApp o email. Respondemos en menos de 24 horas."
     }
   },

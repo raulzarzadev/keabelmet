@@ -2,46 +2,46 @@
   "es": {
     "meta": {
       "title": "Tour Isla Espiritu Santo",
-      "description": "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS."
+      "description": "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortés desde La Paz, BCS."
     },
     "hero": {
-      "badge": "Todo el ano",
+      "badge": "Todo el año",
       "title": "Isla Espiritu Santo: El Acuario del Mundo",
-      "description": "Nada con lobos marinos juguetones, explora playas de arena blanca y aguas cristalinas, y descubre por que este paraiso es Patrimonio Mundial de la UNESCO.",
+      "description": "Nada con lobos marinos juguetones, explora playas de arena blanca y aguas cristalinas, y descubre por que este paraíso es Patrimonio Mundial de la UNESCO.",
       "cta_primary": "Reserva tu aventura",
       "cta_secondary": "Ver detalles",
       "image_alt": "Isla Espiritu Santo - Paraiso natural"
     },
     "about": {
       "title": "Una joya del Golfo de California",
-      "description_1": "La Isla Espiritu Santo es hogar de una de las colonias de lobos marinos mas grandes del Golfo de California. Aqui viviras un encuentro responsable y guiado con estos animales en aguas cristalinas, dentro de un entorno natural unico.",
-      "description_2": "Nuestros guias especializados te acompanaran durante la experiencia, compartiendo conocimientos sobre historia natural, conservacion marina y buenas practicas para interactuar con la fauna de forma respetuosa.",
+      "description_1": "La Isla Espiritu Santo es hogar de una de las colonias de lobos marinos más grandes del Golfo de California. Aquí viviras un encuentro responsable y guiado con estos animales en aguas cristalinas, dentro de un entorno natural único.",
+      "description_2": "Nuestros guías especializados te acompañarán durante la experiencia, compartiendo conocimientos sobre historia natural, conservación marina y buenas prácticas para interactuar con la fauna de forma respetuosa.",
       "image_alt": "Picnic en playa de Isla Espiritu Santo",
       "departure_title": "Punto de Salida",
       "departure_text": "Muelle fiscal de La Paz",
-      "duration_title": "Duracion Total",
+      "duration_title": "Duración Total",
       "duration_text": "6 horas aproximadamente",
       "group_title": "Incluye",
-      "group_text": "Navegacion, visita a la lobera, snorkel y picnic"
+      "group_text": "Navegación, visita a la lobera, snorkel y picnic"
     },
     "itinerary": {
-      "title": "Itinerario del dia",
-      "subtitle": "Una aventura completa por el paraiso del Mar de Cortes.",
+      "title": "Itinerario del día",
+      "subtitle": "Una aventura completa por el paraíso del Mar de Cortés.",
       "step1_title": "Salida desde La Paz",
-      "step1_text": "Nos encontramos en el Muelle fiscal de La Paz, zarpamos con el sol de la manana y navegamos hacia el norte por las aguas del Golfo de California, rodeados de paisajes espectaculares.",
+      "step1_text": "Nos encontramos en el Muelle fiscal de La Paz, zarpamos con el sol de la mañana y navegamos hacia el norte por las aguas del Golfo de California, rodeados de paisajes espectaculares.",
       "step2_title": "Nado con Lobos Marinos",
-      "step2_text": "Llegamos a Los Islotes, hogar de una de las colonias mas grandes de lobos marinos en el Golfo de California. Te proporcionamos el equipo necesario y te acompanamos durante la actividad para vivir un encuentro respetuoso y emocionante con estos animales curiosos y juguetones, en un entorno natural unico.",
-      "step2_note": "Nota: Del 1 de junio al 31 de agosto (temporada de cria) no se permite nadar; la experiencia se realiza mediante observacion desde la embarcacion.",
+      "step2_text": "Llegamos a Los Islotes, hogar de una de las colonias más grandes de lobos marinos en el Golfo de California. Te proporcionamos el equipo necesario y te acompanamos durante la actividad para vivir un encuentro respetuoso y emocionante con estos animales curiosos y juguetones, en un entorno natural único.",
+      "step2_note": "Nota: Del 1 de junio al 31 de agosto (temporada de cria) no se permite nadar; la experiencia se realiza mediante observación desde la embarcación.",
       "step3_title": "Parada en una playa del archipielago",
-      "step3_text": "Navegamos hacia una de las playas del archipielago. Arena clara, agua turquesa y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte y disfrutar de este paraiso.",
+      "step3_text": "Navegamos hacia una de las playas del archipielago. Arena clara, agua turquesa y formaciones rocosas impresionantes. Tiempo para nadar, hacer snorkel o simplemente relajarte y disfrutar de este paraíso.",
       "step4_title": "Picnic en la playa",
       "step4_text": "Disfrutamos de un almuerzo tipo picnic con ceviche fresco, tostadas, fruta de temporada y bebidas. Sabores locales servidos en un escenario natural inigualable.",
       "step5_title": "Regreso a La Paz",
-      "step5_text": "Emprendemos el regreso navegando en el atardecer, la camara llena de recuerdos y la experiencia aun fresca. Te compartimos las fotos y videos del dia."
+      "step5_text": "Emprendemos el regreso navegando en el atardecer, la cámara llena de recuerdos y la experiencia aún fresca. Te compartimos las fotos y videos del día."
     },
     "includes": {
       "title": "Que incluye tu experiencia?",
-      "subtitle": "Todo lo necesario para que vivas una aventura segura, comoda y memorable.",
+      "subtitle": "Todo lo necesario para que vivas una aventura segura, cómoda y memorable.",
       "boat_title": "Transporte en lancha",
       "boat_text": "Salida y regreso desde el Muelle fiscal de La Paz.",
       "guide_title": "Guia certificado",
@@ -51,7 +51,7 @@
       "picnic_title": "Picnic en la playa",
       "picnic_text": "Ceviche fresco, tostadas, fruta de temporada y bebidas para disfrutar en plena naturaleza.",
       "photos_title": "Fotos y videos",
-      "photos_text": "Recuerdos autenticos de tu aventura, capturados en el momento.",
+      "photos_text": "Recuerdos auténticos de tu aventura, capturados en el momento.",
       "park_title": "Permiso del parque",
       "park_text": "Acceso autorizado al Parque Nacional, incluido."
     },
@@ -66,7 +66,7 @@
         "per": "por persona",
         "features": [
           "Transporte en panga compartida",
-          "Acompanamiento de guia certificado",
+          "Acompanamiento de guía certificado",
           "Equipo de snorkel incluido",
           "Picnic en la playa incluido",
           "Fotos y videos de tu aventura"
@@ -81,7 +81,7 @@
         "currency": "MXN",
         "per": "Hasta 6 personas, costo extra por adulto o menor",
         "features": [
-          "Todo lo incluido en el tour estandar +",
+          "Todo lo incluido en el tour estándar +",
           "Velero privado",
           "Capitan y marinero",
           "Kayak",
@@ -96,12 +96,12 @@
         "type": "Flota de yates disponibles",
         "price": "Desde $30,000",
         "currency": "MXN",
-        "per": "Precio segun la embarcacion",
+        "per": "Precio según la embarcación",
         "features": [
           "Todo lo incluido en las opciones anteriores +",
           "Yates de lujo (40-70 pies)",
           "Servicio de catering a bordo",
-          "Tripulacion",
+          "Tripulación",
           "Experiencia VIP personalizada"
         ],
         "cta": "Consulta con un asesor"
@@ -111,9 +111,9 @@
       "title": "Lo que dicen nuestros viajeros",
       "items": [
         {
-          "text": "Nadar con los lobos marinos fue la experiencia mas magica de mi vida. Son tan juguetones y curiosos. El equipo de Keabelmet es super profesional y respetuoso con los animales. 100% recomendado!",
+          "text": "Nadar con los lobos marinos fue la experiencia más mágica de mi vida. Son tan juguetones y curiosos. El equipo de Keabelmet es super profesional y respetuoso con los animales. 100% recomendado!",
           "author": "Maria Gonzalez",
-          "location": "Ciudad de Mexico"
+          "location": "Ciudad de México"
         },
         {
           "text": "El picnic en la playa fue increible, el ceviche estaba delicioso. Las playas son paradisiacas y las fotos que nos tomaron quedaron espectaculares. Una aventura inolvidable.",
@@ -121,8 +121,8 @@
           "location": "Los Angeles, CA"
         },
         {
-          "text": "El biologo marino nos explico todo sobre la isla y la vida marina. Me senti seguro en todo momento. Las aguas son cristalinas y la fauna es impresionante. Volvere sin duda!",
-          "author": "Alejandro Rodriguez",
+          "text": "El biólogo marino nos explico todo sobre la isla y la vida marina. Me senti seguro en todo momento. Las aguas son cristalinas y la fauna es impresionante. Volvere sin duda!",
+          "author": "Alejandro Rodríguez",
           "location": "Guadalajara"
         }
       ]
@@ -131,7 +131,7 @@
       "title": "Listo para explorar el acuario del mundo?",
       "description": "La Isla Espiritu Santo te espera con aguas cristalinas, playas virgenes y encuentros inolvidables con la vida marina.",
       "cta_primary": "Reserva tu aventura ahora",
-      "cta_secondary": "Ver mas expediciones"
+      "cta_secondary": "Ver más expediciones"
     },
     "footer": {
       "copyright": "2026 Keabelmet. Todos los derechos reservados."

@@ -17,56 +17,18 @@
     "cta2": "Ver testimonios",
     "cta3": "Reserva tu experiencia",
     "stat1_value": "15+",
-    "stat1_label": "Experiencias unicas",
+    "stat1_label": "Experiencias únicas",
     "stat2_value": "10K+",
     "stat2_label": "Aventureros satisfechos",
     "stat3_value": "9.8",
-    "stat3_label": "Calificacion promedio"
+    "stat3_label": "Calificación promedio"
   },
   "adventures": {
     "title": "Aventuras",
     "titleHighlight": "destacadas",
     "subtitle": "Experiencias seleccionadas que muestran lo mejor de las maravillas marinas y la belleza del desierto de La Paz.",
     "from": "Desde",
-    "learnMore": "Saber mas",
-    "items": [
-      {
-        "title": "Isla Espiritu Santo",
-        "badge": "Reserva de la biosfera UNESCO",
-        "description": "Playas virgenes, aguas turquesas y snorkel inolvidable.",
-        "price": 2100
-      },
-      {
-        "title": "Ve ballenas por primera vez",
-        "badge": "Baja California Sur",
-        "description": "Una experiencia unica para observar ballenas en su entorno natural.",
-        "price": 3150
-      },
-      {
-        "title": "Buceo en Cabo Pulmo",
-        "badge": "Parque Nacional Cabo Pulmo",
-        "description": "Descubre uno de los mejores sitios para bucear en Mexico, ideal tanto para principiantes como para expertos.",
-        "price": 3325
-      },
-      {
-        "title": "Buceo en La Paz",
-        "badge": "Archipielago Espiritu Santo",
-        "description": "Nada con juguetones lobos marinos en su habitat natural.",
-        "price": 3500
-      },
-      {
-        "title": "Renta un velero",
-        "badge": "Golfo de California",
-        "description": "Ideal para unas horas de navegacion o para pasar la noche a bordo",
-        "price": 10500
-      },
-      {
-        "title": "Renta un Yate",
-        "badge": "Golfo de California",
-        "description": "Vive el Golfo de California como te lo mereces",
-        "price": 29750
-      }
-    ]
+    "learnMore": "Saber más"
   },
   "comparison": {
     "badge": "Comparativa Directa",
@@ -79,7 +41,7 @@
         "text": "Te ha pasado que reservas un tour y hay 20 personas? La experiencia se vuelve caotica y poco personal."
       },
       {
-        "title": "Poca etica y cero ciencia",
+        "title": "Poca ética y cero ciencia",
         "text": "Guias que no respetan a los animales ni explican nada... y eso cambia todo."
       },
       {
@@ -90,32 +52,33 @@
     "solutions": [
       {
         "title": "Grupos reducidos",
-        "text": "Con nosotros, grupos reducidos por panga. Mas espacio, calma y seguridad."
+        "text": "Con nosotros, grupos reducidos por panga. Más espacio, calma y seguridad."
       },
       {
         "title": "Guia Keabelmet",
-        "text": "Te compartimos historias, comportamientos de los animales y buenas practicas para cuidar la fauna."
+        "text": "Te compartimos historias, comportamientos de los animales y buenas prácticas para cuidar la fauna."
       },
       {
         "title": "Fotos y videos incluidos",
-        "text": "Lo que vivas, te lo llevas. Incluimos fotos y videos con opciones premium de edicion e impresion."
+        "text": "Lo que vivas, te lo llevas. Incluimos fotos y videos con opciones premium de edición e impresión."
       }
     ]
   },
   "expeditions": {
     "title": "Nuestras expediciones",
-    "subtitle": "Disenadas para encuentros responsables con fauna marina y paisajes unicos.",
+    "subtitle": "Disenadas para encuentros responsables con fauna marina y paisajes únicos.",
     "perPerson": "Por persona",
     "book": "Reservar",
-    "fullDay": "Dia completo",
-    "halfDay": "Medio dia",
-    "days6": "6 dias",
-    "people": "Personas"
+    "fullDay": "Día completo",
+    "halfDay": "Medio día",
+    "days6": "6 días",
+    "people": "Personas",
+    "viewAll": "Ver todas"
   },
   "whyUs": {
     "title": "Por que",
     "titleHighlight": "Keabelmet",
-    "subtitle": "Somos apasionados por compartir la magia de La Paz con aventuras autenticas, sustentables e inolvidables",
+    "subtitle": "Somos apasionados por compartir la magia de La Paz con aventuras auténticas, sustentables e inolvidables",
     "features": [
       {
         "title": "Experiencia Local",
@@ -127,20 +90,20 @@
       },
       {
         "title": "Grupos Pequenos",
-        "text": "Experiencias en grupos reducidos para una atencion personalizada y conexiones autenticas."
+        "text": "Experiencias en grupos reducidos para una atención personalizada y conexiones auténticas."
       }
     ],
     "bio_title": "Liderado por Biologos Marinos",
     "bio_text": "Nuestro equipo cuenta con biologos marinos y especialistas con amplia experiencia en expediciones y campamentos en zonas remotas.",
-    "edu_title": "Educacion y Conservacion",
-    "edu_text": "Creemos en la educacion, la conservacion y el turismo responsable como base de todo lo que hacemos. Cada expedicion es una oportunidad para aprender y proteger."
+    "edu_title": "Educación y Conservación",
+    "edu_text": "Creemos en la educación, la conservación y el turismo responsable como base de todo lo que hacemos. Cada expedición es una oportunidad para aprender y proteger."
   },
   "consequences": {
     "title": "Si eliges mal, podrias perderte...",
     "items": [
       "Encuentros afectados por mala logistica o grupos masivos.",
-      "Impacto negativo en la fauna por malas practicas.",
-      "Seguridad deficiente en el agua y poca orientacion durante la experiencia.",
+      "Impacto negativo en la fauna por malas prácticas.",
+      "Seguridad deficiente en el agua y poca orientación durante la experiencia.",
       "Sin fotos ni video, y recuerdos que no vuelven."
     ]
   },
@@ -149,21 +112,21 @@
     "items": [
       {
         "q": "Necesito experiencia previa para participar?",
-        "a": "No siempre. El nivel requerido depende de la experiencia que elijas. En cada tour indicamos claramente los requisitos y te acompanamos para que te sientas seguro y disfrutes al maximo la experiencia."
+        "a": "No siempre. El nivel requerido depende de la experiencia que elijas. En cada tour indicamos claramente los requisitos y te acompanamos para que te sientas seguro y disfrutes al máximo la experiencia."
       },
       {
         "q": "Que incluye cada experiencia?",
-        "a": "Cada experiencia puede variar segun la actividad, pero generalmente incluye: guia especializado, embarcacion o transporte, equipo tecnico requerido, medidas y equipo de seguridad, agua y snacks, material fotografico y de video, y material educativo cuando aplica."
+        "a": "Cada experiencia puede variar según la actividad, pero generalmente incluye: guía especializado, embarcación o transporte, equipo técnico requerido, medidas y equipo de seguridad, agua y snacks, material fotografico y de video, y material educativo cuando aplica."
       },
       {
-        "q": "Las fechas estan garantizadas?",
-        "a": "Son experiencias de temporada y dependen de las condiciones naturales, por lo que no podemos garantizar un avistamiento especifico. Lo que si garantizamos es buena logistica y el mejor esfuerzo del equipo. Si el clima no es favorable, buscamos reprogramar la experiencia u ofrecer alternativas para que vivas la mejor experiencia."
+        "q": "Las fechas están garantizadas?",
+        "a": "Son experiencias de temporada y dependen de las condiciones naturales, por lo que no podemos garantizar un avistamiento específico. Lo que si garantizamos es buena logistica y el mejor esfuerzo del equipo. Si el clima no es favorable, buscamos reprogramar la experiencia u ofrecer alternativas para que vivas la mejor experiencia."
       }
     ]
   },
   "cta": {
-    "title": "Tu aventura en La Baja comienza aqui",
-    "subtitle": "Cupo limitado. Experiencias autenticas, responsables y documentadas en foto y video.",
+    "title": "Tu aventura en La Baja comienza aquí",
+    "subtitle": "Cupo limitado. Experiencias auténticas, responsables y documentadas en foto y video.",
     "btn1": "Reservar Safari La Ventana",
     "btn2": "Ve ballenas por primera vez"
   },
@@ -177,23 +140,23 @@
         "name": "Rosa Burciaga",
         "rating": 5,
         "date": "Reciente",
-        "text": "He ido mas de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el mar de cortes, cualquier expedicion se convierte en una experiencia inolvidable."
+        "text": "He ido más de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el mar de cortes, cualquier expedición se convierte en una experiencia inolvidable."
       },
       {
         "name": "Bernardo Barbara",
         "rating": 5,
         "date": "Reciente",
-        "text": "Excelente experiencia con Mau y Gama!! Fuimos en busqueda de Orcas y aunque no las encontramos disfrutamos muchisimo de los delfines y tuvimos la suerte de encontrarnos 4 ballenas azules hermosas! Volveremos a salir con ellos muchas veces mas."
+        "text": "Excelente experiencia con Mau y Gama!! Fuimos en búsqueda de Orcas y aunque no las encontramos disfrutamos muchísimo de los delfines y tuvimos la suerte de encontrarnos 4 ballenas azules hermosas! Volveremos a salir con ellos muchas veces más."
       },
       {
         "name": "Ester Millan",
         "rating": 5,
         "date": "Reciente",
-        "text": "Conocimos por casualidad a Mau y cambiamos las excursiones que teniamos contratadas para ir con el. La energia y simpatia que desprende, junto con los conocimientos que tiene y sumando al equipo que le acompana es todo para saber que sera una experiencia de 10!"
+        "text": "Conocimos por casualidad a Mau y cambiamos las excursiones que teniamos contratadas para ir con el. La energía y simpatia que desprende, junto con los conocimientos que tiene y sumando al equipo que le acompana es todo para saber que sera una experiencia de 10!"
       }
     ],
     "ctaAll": "Ver todas en Google",
-    "ctaLeave": "Deja tu resena",
+    "ctaLeave": "Deja tu reseña",
     "googleMapsUrl": "https://maps.app.goo.gl/Xc2CumrW2FhMR43P7",
     "googleReviewUrl": "https://g.page/r/CcW6EwOD2EliEAE/review"
   },

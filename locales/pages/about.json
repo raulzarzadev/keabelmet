@@ -3,15 +3,27 @@
     "title": "Sobre Nosotros",
     "subtitle": "Expertos en expediciones marinas en Baja California Sur",
     "historyTitle": "Nuestra Historia",
-    "historyP1": "Keabelmet Expeditions ofrece safaris marinos y experiencias de buceo en La Ventana, La Paz, Bahia Magdalena y mas en el Golfo de California.",
-    "historyP2": "Operamos en grupos pequenos guiados por biologos y naturalistas para buscar encuentros autenticos con la vida salvaje como ballenas, orcas, mobulas, delfines, lobos marinos y mas, siempre con respeto por el oceano.",
-    "historyP3": "Cada experiencia se adapta a tu situacion: si viajas solo, en pareja, con amigos, en familia o con ninos, disenamos la salida ideal para ti. Ofrecemos snorkel, buceo, exploracion en mar abierto e interpretacion del comportamiento animal, incluyendo fotografia y video de la experiencia.",
-    "historyP4": "Mas que un tour, es una expedicion intima, segura y educativa para vivir el oceano de Baja California Sur.",
+    "historyP1": "Keabelmet Expeditions ofrece safaris marinos y experiencias de buceo en La Ventana, La Paz, Bahía Magdalena y más en el Golfo de California.",
+    "historyP2": "Operamos en grupos pequeños guiados por biologos y naturalistas para buscar encuentros auténticos con la vida salvaje como ballenas, orcas, mobulas, delfines, lobos marinos y más, siempre con respeto por el océano.",
+    "historyP3": "Cada experiencia se adapta a tu situación: si viajas solo, en pareja, con amigos, en familia o con niños, diseñamos la salida ideal para ti. Ofrecemos snorkel, buceo, exploración en mar abierto e interpretación del comportamiento animal, incluyendo fotografía y video de la experiencia.",
+    "historyP4": "Más que un tour, es una expedición íntima, segura y educativa para vivir el océano de Baja California Sur.",
     "values": [
-      { "title": "Pasion por la Naturaleza", "text": "Amamos lo que hacemos y cuidamos el ecosistema marino" },
-      { "title": "Seguridad Primero", "text": "Equipos certificados y guias experimentados" },
-      { "title": "Experiencia Local", "text": "Conocemos cada rincon de Baja California Sur" },
-      { "title": "Grupos Pequenos", "text": "Expediciones intimas para mejores experiencias" }
+      {
+        "title": "Pasión por la Naturaleza",
+        "text": "Amamos lo que hacemos y cuidamos el ecosistema marino"
+      },
+      {
+        "title": "Seguridad Primero",
+        "text": "Equipos certificados y guías experimentados"
+      },
+      {
+        "title": "Experiencia Local",
+        "text": "Conocemos cada rincon de Baja California Sur"
+      },
+      {
+        "title": "Grupos Pequenos",
+        "text": "Expediciones íntimas para mejores experiencias"
+      }
     ]
   },
   "en": {
@@ -23,10 +35,22 @@
     "historyP3": "Each experience adapts to your situation: whether you travel solo, as a couple, with friends, family or kids, we design the ideal outing for you. We offer snorkeling, diving, open-sea exploration and animal-behavior interpretation, including photography and video of your experience.",
     "historyP4": "More than a tour, it is an intimate, safe and educational expedition to live the ocean of Baja California Sur.",
     "values": [
-      { "title": "Passion for Nature", "text": "We love what we do and protect the marine ecosystem" },
-      { "title": "Safety First", "text": "Certified equipment and experienced guides" },
-      { "title": "Local Expertise", "text": "We know every corner of Baja California Sur" },
-      { "title": "Small Groups", "text": "Intimate expeditions for better experiences" }
+      {
+        "title": "Passion for Nature",
+        "text": "We love what we do and protect the marine ecosystem"
+      },
+      {
+        "title": "Safety First",
+        "text": "Certified equipment and experienced guides"
+      },
+      {
+        "title": "Local Expertise",
+        "text": "We know every corner of Baja California Sur"
+      },
+      {
+        "title": "Small Groups",
+        "text": "Intimate expeditions for better experiences"
+      }
     ]
   },
   "fr": {
@@ -38,10 +62,22 @@
     "historyP3": "Chaque experience s'adapte a votre situation : seul, en couple, entre amis, en famille ou avec des enfants, nous concevons la sortie ideale pour vous. Nous offrons snorkeling, plongee, exploration en mer ouverte et interpretation du comportement animal, photo et video inclus.",
     "historyP4": "Plus qu'un tour, c'est une expedition intime, sure et educative pour vivre l'ocean de Basse-Californie du Sud.",
     "values": [
-      { "title": "Passion pour la Nature", "text": "Nous aimons ce que nous faisons et protegeons l'ecosysteme marin" },
-      { "title": "Securite d'Abord", "text": "Equipement certifie et guides experimentes" },
-      { "title": "Expertise Locale", "text": "Nous connaissons chaque recoin de Baja California Sur" },
-      { "title": "Petits Groupes", "text": "Expeditions intimistes pour de meilleures experiences" }
+      {
+        "title": "Passion pour la Nature",
+        "text": "Nous aimons ce que nous faisons et protegeons l'ecosysteme marin"
+      },
+      {
+        "title": "Securite d'Abord",
+        "text": "Equipement certifie et guides experimentes"
+      },
+      {
+        "title": "Expertise Locale",
+        "text": "Nous connaissons chaque recoin de Baja California Sur"
+      },
+      {
+        "title": "Petits Groupes",
+        "text": "Expeditions intimistes pour de meilleures experiences"
+      }
     ]
   },
   "zh": {
@@ -53,10 +89,22 @@
     "historyP3": "每次体验都会根据您的情况量身定制：无论您是独自旅行、情侣、朋友、家人或带孩子，我们都会为您设计理想的行程。我们提供浮潜、潜水、开阔海域探索和动物行为解读，包含摄影和录像。",
     "historyP4": "不仅仅是一次旅行，而是一次亲密、安全且具有教育意义的探险，体验下加利福尼亚州半岛的海洋。",
     "values": [
-      { "title": "热爱自然", "text": "我们热爱所做的事业，保护海洋生态系统" },
-      { "title": "安全第一", "text": "认证设备和经验丰富的向导" },
-      { "title": "当地专业知识", "text": "我们熟悉下加利福尼亚州半岛的每个角落" },
-      { "title": "小团体", "text": "小型探险团带来更好的体验" }
+      {
+        "title": "热爱自然",
+        "text": "我们热爱所做的事业，保护海洋生态系统"
+      },
+      {
+        "title": "安全第一",
+        "text": "认证设备和经验丰富的向导"
+      },
+      {
+        "title": "当地专业知识",
+        "text": "我们熟悉下加利福尼亚州半岛的每个角落"
+      },
+      {
+        "title": "小团体",
+        "text": "小型探险团带来更好的体验"
+      }
     ]
   }
 }

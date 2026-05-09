@@ -2,7 +2,7 @@
   "es": {
     "hero": {
       "title": "Seafari La Ventana: Encuentra lo extraordinario",
-      "subtitle": "Explora uno de los escenarios marinos mas sorprendentes del Golfo de California. Cada salida es distinta. Cada encuentro es real.",
+      "subtitle": "Explora uno de los escenarios marinos más sorprendentes del Golfo de California. Cada salida es distinta. Cada encuentro es real.",
       "cta": "Reserva tu aventura",
       "ctaSecondary": "Ver detalles",
       "imageAlt": "Seafari en La Ventana, Baja California Sur"
@@ -12,17 +12,17 @@
       "description": "Es una experiencia que inicia en La Ventana (40 min de La Paz) donde nos dirigimos rumbo al azul profundo. A bordo de la lancha, guiados por biologos marinos y capitanes locales, navegamos en busca de lo inesperado: mobulas que vuelan, delfines que nos escoltan, ballenas que emergen como leyendas vivas. No hay guion. No hay show.",
       "commitment": {
         "title": "Nuestro Compromiso",
-        "description": "Respetamos profundamente la vida marina. Nuestros safaris estan disenados para observar sin perturbar, aprender sin interferir, y maravillarse sin danar el ecosistema que nos acoge."
+        "description": "Respetamos profundamente la vida marina. Nuestros safaris están diseñados para observar sin perturbar, aprender sin interferir, y maravillarse sin dañar el ecosistema que nos acoge."
       },
       "guidedExperience": {
         "title": "Como es la experiencia?",
-        "description": "A diferencia de un tour convencional, donde todo esta previamente establecido, el Seafari en La Ventana esta disenado para vivir una experiencia dinamica y autentica, enfocada en maximizar los encuentros con la vida silvestre. Cada salida es unica."
+        "description": "A diferencia de un tour convencional, donde todo está previamente establecido, el Seafari en La Ventana está diseñado para vivir una experiencia dinámica y auténtica, enfocada en maximizar los encuentros con la vida silvestre. Cada salida es única."
       },
       "imageAlt": "Guia entusiasta con equipo de snorkel disfrutando de una experiencia marina en Seafari La Ventana"
     },
     "experience": {
       "title": "Como es la experiencia?",
-      "subtitle": "Un dia completo de aventura marina, disenado para maximizar las posibilidades de encuentros con vida salvaje mientras disfrutas del impresionante paisaje del Mar de Cortes.",
+      "subtitle": "Un día completo de aventura marina, diseñado para maximizar las posibilidades de encuentros con vida salvaje mientras disfrutas del impresionante paisaje del Mar de Cortés.",
       "cards": {
         "meetingPoint": {
           "title": "Punto de Encuentro",
@@ -30,15 +30,15 @@
         },
         "schedule": {
           "title": "Horario",
-          "description": "Salida: 8:00 AM\nDuracion: 6 horas de aventura marina."
+          "description": "Salida: 8:00 AM\nDuración: 6 horas de aventura marina."
         },
         "activities": {
           "title": "Actividades",
-          "description": "Navegacion, snorkel (si las condiciones lo permiten), exploracion en Isla Cerralvo."
+          "description": "Navegación, snorkel (si las condiciones lo permiten), exploración en Isla Cerralvo."
         },
         "refreshment": {
           "title": "Refrigerio",
-          "description": "Disfrutaras de ceviche fresco, frutas de temporada y agua durante la expedicion."
+          "description": "Disfrutaras de ceviche fresco, frutas de temporada y agua durante la expedición."
         }
       },
       "itinerary": {
@@ -46,14 +46,14 @@
         "steps": [
           {
             "title": "Bienvenida y Briefing (8:00 AM)",
-            "description": "Conoce a tu guia biologo marino y recibe una introduccion sobre la vida marina que podrias encontrar."
+            "description": "Conoce a tu guía biólogo marino y recibe una introducción sobre la vida marina que podrias encontrar."
           },
           {
-            "title": "Navegacion y Busqueda (8:30 AM - 11:30 AM)",
+            "title": "Navegación y Busqueda (8:30 AM - 11:30 AM)",
             "description": "Navegamos en busca de vida marina, siguiendo patrones de comportamiento y senales naturales."
           },
           {
-            "title": "Exploracion en Isla Cerralvo (11:30 AM - 1:00 PM)",
+            "title": "Exploración en Isla Cerralvo (11:30 AM - 1:00 PM)",
             "description": "Dependiendo de las condiciones, podremos hacer snorkel o explorar las aguas cristalinas alrededor de la isla."
           },
           {
@@ -62,37 +62,61 @@
           },
           {
             "title": "Regreso Escenico (1:30 PM - 2:00 PM)",
-            "description": "Navegamos de regreso a La Ventana, con posibilidad de mas avistamientos en el camino."
+            "description": "Navegamos de regreso a La Ventana, con posibilidad de más avistamientos en el camino."
           }
         ]
       }
     },
     "wildlife": {
       "title": "Fauna por temporada",
-      "subtitle": "El Golfo de California es uno de los mares mas biodiversos del planeta.",
+      "subtitle": "El Golfo de California es uno de los mares más biodiversos del planeta.",
       "seasons": {
         "invierno": {
           "name": "Invierno",
-          "species": ["Ballena jorobada", "Ballena azul", "Ballena de aleta", "Mobulas (Agregacion menor)", "Delfines"]
+          "species": [
+            "Ballena jorobada",
+            "Ballena azul",
+            "Ballena de aleta",
+            "Mobulas (Agregación menor)",
+            "Delfines"
+          ]
         },
         "primavera": {
           "name": "Primavera",
-          "species": ["Mobulas (Gran Migracion)", "Delfines", "Lobos marinos", "Orcas", "Ballena azul"]
+          "species": [
+            "Mobulas (Gran Migración)",
+            "Delfines",
+            "Lobos marinos",
+            "Orcas",
+            "Ballena azul"
+          ]
         },
         "verano": {
           "name": "Verano",
-          "species": ["Mobulas (Gran Migracion)", "Delfines", "Lobos marinos", "Ballenas de Bryde", "Cachalotes"]
+          "species": [
+            "Mobulas (Gran Migración)",
+            "Delfines",
+            "Lobos marinos",
+            "Ballenas de Bryde",
+            "Cachalotes"
+          ]
         },
         "otono": {
           "name": "Otono",
-          "species": ["Delfines", "Lobos marinos", "Manta gigante", "Aves marinas", "Cachalotes"]
+          "species": [
+            "Delfines",
+            "Lobos marinos",
+            "Manta gigante",
+            "Aves marinas",
+            "Cachalotes"
+          ]
         }
       },
-      "yearRound": "Fauna frecuente durante todo el ano: Delfin nariz de botella, Delfin comun, Lobos marinos, Aves marinas",
-      "occasional": "Fauna con apariciones ocasionales: Orcas, Cachalotes, Ballenas Piloto, Falsas Orcas, Zifios, Tiburon Ballena",
+      "yearRound": "Fauna frecuente durante todo el año: Delfin nariz de botella, Delfin común, Lobos marinos, Aves marinas",
+      "occasional": "Fauna con apariciones ocasionales: Orcas, Cachalotes, Ballenas Piloto, Falsas Orcas, Zifios, Tiburón Ballena",
       "realismNote": {
         "title": "Nota de realismo",
-        "description": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos unicos."
+        "description": "Trabajamos con animales salvajes en libertad. Por lo que no garantizamos avistamientos, pero si garantizamos compromiso, experiencia y un enfoque respetuoso que maximiza tus posibilidades de vivir momentos únicos."
       }
     },
     "includes": {
@@ -101,7 +125,7 @@
       "items": {
         "boat": {
           "title": "Safari marino de 6 hrs",
-          "description": "Navegacion en busca de vida marina con biologos marinos y capitanes locales."
+          "description": "Navegación en busca de vida marina con biologos marinos y capitanes locales."
         },
         "guide": {
           "title": "Neopreno y equipo de snorkel",
@@ -113,7 +137,7 @@
         },
         "photo": {
           "title": "Snacks y bebidas",
-          "description": "Hidratacion y energia durante toda la expedicion."
+          "description": "Hidratación y energía durante toda la expedición."
         },
         "food": {
           "title": "Equipo para playa",
@@ -133,7 +157,7 @@
         "price": "$3,000",
         "currency": "MXN / persona",
         "features": [
-          "Minimo 4 personas para realizar el Seafari",
+          "Mínimo 4 personas para realizar el Seafari",
           "Si eres una persona podemos integrarte a un grupo",
           "Experiencia compartida",
           "Todos los servicios incluidos"
@@ -145,17 +169,17 @@
         "price": "$16,000",
         "currency": "MXN / hasta 8 pax",
         "features": [
-          "Embarcacion exclusiva para tu grupo",
+          "Embarcación exclusiva para tu grupo",
           "Hasta 8 personas",
           "Itinerario personalizable",
-          "Atencion exclusiva del guia"
+          "Atención exclusiva del guía"
         ],
         "cta": "Reservar Privado"
       },
       "kids": {
-        "title": "Viajas con ninos?",
-        "line1": "Ninos menores de 5 anos: Gratis",
-        "line2": "Ninos de 6 a 12 anos: 50% de descuento"
+        "title": "Viajas con niños?",
+        "line1": "Ninos menores de 5 años: Gratis",
+        "line2": "Ninos de 6 a 12 años: 50% de descuento"
       }
     },
     "testimonials": {
@@ -163,46 +187,64 @@
       "subtitle": "Experiencias reales de quienes han vivido la magia de Safari La Ventana.",
       "reviews": [
         {
-          "name": "Maria Rodriguez",
-          "location": "Ciudad de Mexico",
-          "text": "Una experiencia magica. Ver a las ballenas jorobadas tan cerca fue indescriptible. Los guias son muy profesionales y respetuosos con los animales. Volvere el proximo ano!"
+          "name": "Maria Rodríguez",
+          "location": "Ciudad de México",
+          "text": "Una experiencia mágica. Ver a las ballenas jorobadas tan cerca fue indescriptible. Los guías son muy profesionales y respetuosos con los animales. Volvere el proximo año!"
         },
         {
-          "name": "Juan Martinez",
+          "name": "Juan Martínez",
           "location": "Guadalajara",
-          "text": "Increible safari. Vimos delfines, mobulas saltando y hasta una ballena azul a lo lejos. El ceviche estaba delicioso y los guias muy conocedores. Una experiencia autentica."
+          "text": "Increible safari. Vimos delfines, mobulas saltando y hasta una ballena azul a lo lejos. El ceviche estaba delicioso y los guías muy conocedores. Una experiencia auténtica."
         },
         {
-          "name": "Laura Sanchez",
+          "name": "Laura Sánchez",
           "location": "Monterrey",
-          "text": "Fuimos con nuestros hijos de 8 y 10 anos y quedaron maravillados. Los guias son excelentes explicando a los ninos sobre la vida marina. Una aventura educativa y emocionante para toda la familia."
+          "text": "Fuimos con nuestros hijos de 8 y 10 años y quedaron maravillados. Los guías son excelentes explicando a los niños sobre la vida marina. Una aventura educativa y emocionante para toda la familia."
         }
       ]
     },
     "cta": {
       "title": "Listo para la aventura?",
-      "subtitle": "Reserva tu Seafari ahora y preparate para una experiencia que cambiara tu forma de ver el oceano.",
+      "subtitle": "Reserva tu Seafari ahora y preparate para una experiencia que cambiara tu forma de ver el océano.",
       "button": "Reserva Ahora"
     },
     "recommendations": {
       "title": "Recomendaciones para tu Seafari",
-      "subtitle": "Para que disfrutes tu Seafari al maximo y no te preocupes por que llevar.",
+      "subtitle": "Para que disfrutes tu Seafari al máximo y no te preocupes por que llevar.",
       "categories": {
         "wear": {
           "title": "Que llevar?",
-          "items": ["Traje de bano", "Toalla", "Sandalias", "Ropa ligera y comoda", "Cambio de ropa seca", "Sudadera o rompe vientos (durante el invierno)"]
+          "items": [
+            "Traje de baño",
+            "Toalla",
+            "Sandalias",
+            "Ropa ligera y cómoda",
+            "Cambio de ropa seca",
+            "Sudadera o rompe vientos (durante el invierno)"
+          ]
         },
         "protection": {
-          "title": "Proteccion personal",
-          "items": ["Gorra o sombrero", "Lentes de sol", "Bloqueador solar biodegradable"]
+          "title": "Protección personal",
+          "items": [
+            "Gorra o sombrero",
+            "Lentes de sol",
+            "Bloqueador solar biodegradable"
+          ]
         },
         "belongings": {
           "title": "Para tus pertenencias",
-          "items": ["Funda impermeable para celular", "Bolsa seca para objetos personales", "Camara acuatica, si cuentas con una"]
+          "items": [
+            "Funda impermeable para celular",
+            "Bolsa seca para objetos personales",
+            "Camara acuatica, si cuentas con una"
+          ]
         },
         "extra": {
           "title": "Extra recomendado",
-          "items": ["Medicamento para mareo, en caso de que lo necesites", "Mucha actitud aventurera"]
+          "items": [
+            "Medicamento para mareo, en caso de que lo necesites",
+            "Mucha actitud aventurera"
+          ]
         }
       }
     }

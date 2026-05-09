@@ -1,52 +1,52 @@
 {
   "es": {
     "hero": {
-      "title": "Ballena Gris: Encuentro en Bahia Magdalena",
+      "title": "Ballena Gris: Encuentro en Bahía Magdalena",
       "subtitle": "Cada invierno, un milagro ocurre frente a nuestras costas. Ven a ser parte de el.",
       "cta": "Explora esta experiencia",
       "ctaSecondary": "Ver detalles",
-      "imageAlt": "Ballena gris emergiendo tranquilamente en las aguas de Bahia Magdalena con las montanas de Baja California Sur al fondo"
+      "imageAlt": "Ballena gris emergiendo tranquilamente en las aguas de Bahía Magdalena con las montañas de Baja California Sur al fondo"
     },
     "story": {
-      "title": "Una migracion milenaria",
-      "intro": "Cada invierno, cientos de ballenas grises cruzan el Pacifico desde el Artico hasta las costas de Baja California Sur. Puerto Chale, una comunidad remota y autentica, se convierte por unas semanas en el mejor escenario para conocerlas de cerca.",
-      "description": "En esta experiencia, navegaras en panga durante tres horas dentro de la laguna costera donde las ballenas paren, amamantan y descansan. No hay show, no hay guion: solo tu, el mar... y la posibilidad de ver a un gigante acercarse con calma.",
-      "highlight": "No es un tour cualquiera. Es una expedicion para los que valoran lo real, lo intimo y lo salvaje.",
+      "title": "Una migración milenaria",
+      "intro": "Cada invierno, cientos de ballenas grises cruzan el Pacífico desde el Ártico hasta las costas de Baja California Sur. Puerto Chale, una comunidad remota y auténtica, se convierte por unas semanas en el mejor escenario para conocerlas de cerca.",
+      "description": "En esta experiencia, navegarás en panga durante tres horas dentro de la laguna costera donde las ballenas paren, amamantan y descansan. No hay show, no hay guion: solo tu, el mar... y la posibilidad de ver a un gigante acercarse con calma.",
+      "highlight": "No es un tour cualquiera. Es una expedición para los que valoran lo real, lo íntimo y lo salvaje.",
       "features": {
         "puertoChale": {
           "title": "Puerto Chale",
-          "description": "Comunidad autentica en el corazon de Bahia Magdalena"
+          "description": "Comunidad auténtica en el corazón de Bahía Magdalena"
         },
         "lagoon": {
           "title": "Laguna Protegida",
           "description": "Aguas tranquilas donde las ballenas descansan y se reproducen"
         },
         "intimate": {
-          "title": "Experiencia Intima",
-          "description": "Grupos pequenos para una conexion autentica con la naturaleza"
+          "title": "Experiencia Íntima",
+          "description": "Grupos pequeños para una conexión auténtica con la naturaleza"
         }
       }
     },
     "itinerary": {
-      "title": "Itinerario del dia",
-      "subtitle": "Un dia completo disenado para maximizar tu conexion con las ballenas grises en su santuario natural.",
+      "title": "Itinerario del día",
+      "subtitle": "Un día completo diseñado para maximizar tu conexión con las ballenas grises en su santuario natural.",
       "steps": {
         "departure": {
           "time": "5:30 AM | Salida desde La Paz",
-          "description": "Partimos en transporte compartido hacia Puerto Chale. El viaje es parte de la aventura, cruzando paisajes unicos de Baja California Sur."
+          "description": "Partimos en transporte compartido hacia Puerto Chale. El viaje es parte de la aventura, cruzando paisajes únicos de Baja California Sur."
         },
         "arrival": {
           "time": "8:00 AM | Llegada y embarque",
-          "description": "Llegamos a Puerto Chale y embarcamos en panga con capitan local. Briefing de seguridad y preparacion para el encuentro."
+          "description": "Llegamos a Puerto Chale y embarcamos en panga con capitan local. Briefing de seguridad y preparación para el encuentro."
         },
         "navigation": {
-          "time": "8:30 AM - 11:30 AM | Navegacion",
-          "description": "Tres horas navegando en la laguna costera observando ballenas grises. Cada encuentro es unico e impredecible.",
-          "activitiesLabel": "Durante la navegacion:",
+          "time": "8:30 AM - 11:30 AM | Navegación",
+          "description": "Tres horas navegando en la laguna costera observando ballenas grises. Cada encuentro es único e impredecible.",
+          "activitiesLabel": "Durante la navegación:",
           "activities": [
-            "Observacion respetuosa de ballenas madres con crias",
-            "Aprendizaje sobre comportamiento y migracion",
-            "Fotografia y contemplacion silenciosa"
+            "Observación respetuosa de ballenas madres con crias",
+            "Aprendizaje sobre comportamiento y migración",
+            "Fotografia y contemplación silenciosa"
           ]
         },
         "snack": {
@@ -61,56 +61,56 @@
     },
     "includes": {
       "title": "Que incluye?",
-      "subtitle": "Todo lo necesario para vivir esta experiencia de manera comoda, segura y memorable.",
+      "subtitle": "Todo lo necesario para vivir esta experiencia de manera cómoda, segura y memorable.",
       "items": {
         "transport": {
           "title": "Transporte redondo compartido",
-          "description": "Desde La Paz hasta Puerto Chale en vehiculo comodo y seguro."
+          "description": "Desde La Paz hasta Puerto Chale en vehiculo cómodo y seguro."
         },
         "boat": {
           "title": "Tour en panga con capitan local",
-          "description": "Embarcacion tradicional manejada por pescadores locales con anos de experiencia."
+          "description": "Embarcación tradicional manejada por pescadores locales con años de experiencia."
         },
         "guide": {
-          "title": "Guia biologo marino",
-          "description": "Acompanamiento especializado para enriquecer tu comprension de las ballenas grises."
+          "title": "Guia biólogo marino",
+          "description": "Acompanamiento especializado para enriquecer tu comprensión de las ballenas grises."
         },
         "photo": {
           "title": "Fotos y videos incluidos",
           "description": "Capturas profesionales de tu experiencia para que tengas un recuerdo duradero."
         },
         "snack": {
-          "title": "Snack local e hidratacion",
-          "description": "Fruta fresca, snack regional y agua purificada durante todo el dia."
+          "title": "Snack local e hidratación",
+          "description": "Fruta fresca, snack regional y agua purificada durante todo el día."
         },
         "observation": {
-          "title": "Equipo de observacion",
-          "description": "Binoculares de calidad para no perderte ningun detalle del encuentro."
+          "title": "Equipo de observación",
+          "description": "Binoculares de calidad para no perderte ningún detalle del encuentro."
         }
       }
     },
     "wildlife": {
       "title": "Especies que puedes encontrar",
-      "subtitle": "Bahia Magdalena es un santuario natural donde convergen diferentes especies marinas durante la temporada de ballenas grises.",
+      "subtitle": "Bahía Magdalena es un santuario natural donde convergen diferentes especies marinas durante la temporada de ballenas grises.",
       "species": {
         "grayWhale": {
           "name": "Ballena Gris",
           "season": "Ene - Mar",
-          "description": "Las protagonistas de la experiencia. Madres con crias que descansan en las aguas protegidas de la laguna durante su migracion desde el Artico."
+          "description": "Las protagonistas de la experiencia. Madres con crias que descansan en las aguas protegidas de la laguna durante su migración desde el Ártico."
         },
         "dolphins": {
           "name": "Delfines",
-          "season": "Todo el ano",
+          "season": "Todo el año",
           "description": "Residentes permanentes de la bahia, suelen acompanar las pangas con su curiosidad natural y acrobacias espontaneas."
         },
         "seaLions": {
           "name": "Lobos Marinos",
-          "season": "Todo el ano",
+          "season": "Todo el año",
           "description": "Colonias que descansan en las rocas y manglares. Su curiosidad los lleva a acercarse a observar a los visitantes."
         },
         "seabirds": {
           "name": "Aves Marinas",
-          "season": "Todo el ano",
+          "season": "Todo el año",
           "description": "Fragatas, pelicanos y cormoranes que aprovechan la abundancia de peces en la laguna para alimentarse."
         }
       }
@@ -122,23 +122,23 @@
         {
           "name": "Lucia",
           "location": "CDMX",
-          "text": "Siempre sone con ver ballenas. Pero esto fue mas que eso. Llore de emocion. Gracias por respetar la naturaleza asi."
+          "text": "Siempre sone con ver ballenas. Pero esto fue más que eso. Llore de emoción. Gracias por respetar la naturaleza así."
         },
         {
           "name": "Pablo",
           "location": "Alemania",
-          "text": "No fue un tour, fue una experiencia real. La cercania con las ballenas, el silencio, todo fue magico."
+          "text": "No fue un tour, fue una experiencia real. La cercania con las ballenas, el silencio, todo fue mágico."
         },
         {
           "name": "Karla",
-          "location": "Espana",
-          "text": "El equipo fue increible. Nos explicaron todo con tanta pasion que ahora veo el oceano con otros ojos."
+          "location": "España",
+          "text": "El equipo fue increible. Nos explicaron todo con tanta pasión que ahora veo el océano con otros ojos."
         }
       ]
     },
     "pricing": {
       "title": "Precios",
-      "subtitle": "Una experiencia autentica con cupo limitado para garantizar un encuentro intimo con las ballenas grises.",
+      "subtitle": "Una experiencia auténtica con cupo limitado para garantizar un encuentro íntimo con las ballenas grises.",
       "card": {
         "name": "Encuentro con Ballena Gris",
         "price": "$2,800",
@@ -147,22 +147,22 @@
           "Cupo limitado: 8 personas por salida",
           "Experiencia compartida (no privada)",
           "Transporte redondo desde La Paz",
-          "Guia biologo marino especializado",
+          "Guia biólogo marino especializado",
           "Fotos profesionales incluidas"
         ],
         "cta": "Reserva tu lugar"
       },
       "limitedSeason": {
         "title": "Temporada Limitada",
-        "description": "Solo operamos durante la temporada de ballenas grises (enero-marzo). Las fechas exactas pueden variar segun las condiciones naturales."
+        "description": "Solo operamos durante la temporada de ballenas grises (enero-marzo). Las fechas exactas pueden variar según las condiciones naturales."
       }
     },
     "details": {
-      "title": "Informacion importante",
-      "subtitle": "Todo lo que necesitas saber para vivir esta experiencia autentica",
+      "title": "Información importante",
+      "subtitle": "Todo lo que necesitas saber para vivir esta experiencia auténtica",
       "realisticNote": {
         "title": "Nota realista",
-        "description": "Trabajamos con vida salvaje en libertad. Aunque las probabilidades de avistamiento son altisimas en temporada, no podemos garantizarlas. Lo que si garantizamos: un equipo comprometido y un respeto profundo por el oceano."
+        "description": "Trabajamos con vida salvaje en libertad. Aunque las probabilidades de avistamiento son altisimas en temporada, no podemos garantizarlas. Lo que si garantizamos: un equipo comprometido y un respeto profundo por el océano."
       },
       "sharedExperience": {
         "title": "Experiencia compartida",
@@ -170,7 +170,7 @@
       },
       "forWhom": {
         "title": "Para quien es esta experiencia",
-        "description": "Ideal para quienes buscan conexion genuina con la naturaleza, no entretenimiento artificial. Si valoras la autenticidad, el aprendizaje y los encuentros reales con la vida marina, esta experiencia transformara tu forma de ver el oceano."
+        "description": "Ideal para quienes buscan conexión genuina con la naturaleza, no entretenimiento artificial. Si valoras la autenticidad, el aprendizaje y los encuentros reales con la vida marina, esta experiencia transformará tu forma de ver el océano."
       },
       "seasonBadge": "Temporada: Enero - Marzo - Cupos limitados"
     },
@@ -178,8 +178,8 @@
       "title": "Este invierno, no vayas a otro tour. Ve a un milagro.",
       "subtitle": "Viaja con nosotros a Puerto Chale y deja que la naturaleza te sorprenda. Algunos encuentros cambian la forma en que vemos el mundo para siempre.",
       "button": "Reserva tu lugar",
-      "buttonSecondary": "Habla con un guia",
-      "footnote": "Cupos limitados - Temporada enero-marzo - Experiencia autentica"
+      "buttonSecondary": "Habla con un guía",
+      "footnote": "Cupos limitados - Temporada enero-marzo - Experiencia auténtica"
     }
   },
   "en": {

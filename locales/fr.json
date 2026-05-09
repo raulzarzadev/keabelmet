@@ -28,45 +28,7 @@
     "titleHighlight": "en vedette",
     "subtitle": "Des experiences selectionnees qui mettent en valeur le meilleur des merveilles marines et de la beaute desertique de La Paz",
     "from": "A partir de",
-    "learnMore": "En savoir plus",
-    "items": [
-      {
-        "title": "Ile Espiritu Santo",
-        "badge": "Reserve de Biosphere UNESCO",
-        "description": "Plages vierges, eaux turquoise et snorkeling inoubliable.",
-        "price": 2100
-      },
-      {
-        "title": "Observez les baleines pour la premiere fois",
-        "badge": "Baja California Sur",
-        "description": "Une experience unique pour observer les baleines dans leur environnement naturel.",
-        "price": 3150
-      },
-      {
-        "title": "Plongee a Cabo Pulmo",
-        "badge": "Parc National Cabo Pulmo",
-        "description": "Decouvrez l'un des meilleurs sites de plongee au Mexique, ideal pour les debutants comme pour les experts.",
-        "price": 3325
-      },
-      {
-        "title": "Plongee a La Paz",
-        "badge": "Archipel Espiritu Santo",
-        "description": "Nagez avec de joueurs lions de mer dans leur habitat naturel.",
-        "price": 3500
-      },
-      {
-        "title": "Location de voilier",
-        "badge": "Golfe de Californie",
-        "description": "Ideal pour quelques heures de navigation ou pour passer la nuit a bord",
-        "price": 10500
-      },
-      {
-        "title": "Location de yacht",
-        "badge": "Golfe de Californie",
-        "description": "Vivez le Golfe de Californie comme vous le meritez",
-        "price": 29750
-      }
-    ]
+    "learnMore": "En savoir plus"
   },
   "comparison": {
     "badge": "Comparatif Direct",
@@ -110,7 +72,8 @@
     "fullDay": "Journee complete",
     "halfDay": "Demi-journee",
     "days6": "6 jours",
-    "people": "Personnes"
+    "people": "Personnes",
+    "viewAll": "Voir tout"
   },
   "whyUs": {
     "title": "Pourquoi",
@@ -173,9 +136,24 @@
     "overallRating": "4.9",
     "totalReviews": "50+",
     "reviews": [
-      { "name": "Rosa Burciaga", "rating": 5, "date": "Recent", "text": "J'y suis allee plus de 10 fois et ils ne me decoivent jamais, du camping avec des baleines grises en arriere-plan a la nage avec des orques. Keabelmet est la meilleure entreprise de tours dans la mer de Cortez, chaque expedition devient une experience inoubliable." },
-      { "name": "Bernardo Barbara", "rating": 5, "date": "Recent", "text": "Excellente experience avec Mau et Gama !! Nous sommes partis a la recherche d'orques et meme si nous ne les avons pas trouvees, nous avons enormement profite des dauphins et avons eu la chance de rencontrer 4 magnifiques baleines bleues ! Nous ressortirons avec eux encore de nombreuses fois." },
-      { "name": "Ester Millan", "rating": 5, "date": "Recent", "text": "Nous avons rencontre Mau par hasard et avons change les excursions que nous avions reservees pour partir avec lui. L'energie et la sympathie qu'il degage, combinees a ses connaissances et a l'equipe qui l'accompagne, c'est tout ce qu'il faut pour savoir que ce sera une experience de 10 !" }
+      {
+        "name": "Rosa Burciaga",
+        "rating": 5,
+        "date": "Recent",
+        "text": "J'y suis allee plus de 10 fois et ils ne me decoivent jamais, du camping avec des baleines grises en arriere-plan a la nage avec des orques. Keabelmet est la meilleure entreprise de tours dans la mer de Cortez, chaque expedition devient une experience inoubliable."
+      },
+      {
+        "name": "Bernardo Barbara",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Excellente experience avec Mau et Gama !! Nous sommes partis a la recherche d'orques et meme si nous ne les avons pas trouvees, nous avons enormement profite des dauphins et avons eu la chance de rencontrer 4 magnifiques baleines bleues ! Nous ressortirons avec eux encore de nombreuses fois."
+      },
+      {
+        "name": "Ester Millan",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Nous avons rencontre Mau par hasard et avons change les excursions que nous avions reservees pour partir avec lui. L'energie et la sympathie qu'il degage, combinees a ses connaissances et a l'equipe qui l'accompagne, c'est tout ce qu'il faut pour savoir que ce sera une experience de 10 !"
+      }
     ],
     "ctaAll": "Voir tous sur Google",
     "ctaLeave": "Laisser un avis",

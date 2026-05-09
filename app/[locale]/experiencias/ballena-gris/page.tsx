@@ -4,6 +4,7 @@ import { getPageDictionary, isValidLocale, defaultLocale } from "@/lib/i18n"
 
 import { buildPageMeta, getPageSeo } from "@/lib/seo"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { getExperience } from "@/constants/experiences"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -16,6 +17,7 @@ export default async function BallenaGrisPage({ params }: { params: Promise<{ lo
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const t = await getPageDictionary("ballena-gris", locale)
   const lh = (path: string) => locale === defaultLocale ? path : `/${locale}${path}`
+  const experience = getExperience("ballena-gris")!
 
   return (
     <>
@@ -26,7 +28,7 @@ export default async function BallenaGrisPage({ params }: { params: Promise<{ lo
           { label: getPageSeo("ballenaGris", locale).title },
         ]}
       />
-      <BallenaGrisLanding translations={t} />
+      <BallenaGrisLanding translations={t} experience={experience} />
     </>
   )
 }

@@ -13,8 +13,15 @@ import {
   Eye,
 } from "lucide-react"
 import { Price } from "@/contexts/CurrencyContext"
+import type { Experience } from "@/constants/experiences"
 
-export function SafariBahiaMagdalena({ translations }: { translations: Record<string, any> }) {
+export function SafariBahiaMagdalena({
+  translations,
+  experience,
+}: {
+  translations: Record<string, any>
+  experience: Experience
+}) {
   const t = translations
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -23,7 +30,7 @@ export function SafariBahiaMagdalena({ translations }: { translations: Record<st
         <section className="relative">
           <div className="absolute inset-0">
             <Image
-              src="/images/marlin-bahia-magdalena-hero.jpeg"
+              src={experience.image}
               alt={t.hero.imageAlt}
               width={1920}
               height={1080}
@@ -268,7 +275,7 @@ export function SafariBahiaMagdalena({ translations }: { translations: Record<st
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.pricing.card.name}</h3>
                 <div className="text-4xl font-bold text-teal-600 mb-6">
-                  <Price amount={3500} />
+                  {experience.fromMxn != null ? <Price amount={experience.fromMxn} /> : null}
                 </div>
                 <ul className="space-y-3 mb-8 text-left max-w-md mx-auto">
                   {t.pricing.card.features.map((feature: string, i: number) => (

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next"
+import { experiences } from "@/constants/experiences"
 
 const baseUrl = "https://www.keabelmet.com"
 
-const routes = [
+const staticRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
   { path: "/sobre-nosotros", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/experiencias", priority: 0.8, changeFrequency: "weekly" as const },
@@ -10,17 +11,16 @@ const routes = [
   { path: "/galeria", priority: 0.6, changeFrequency: "monthly" as const },
   { path: "/blog", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/contacto", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/surf-camp", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/experiencias/tour-espiritu-santo", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/tour-ballena-gris", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/buceo-cabo-pulmo", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/buceo-la-paz", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/renta-velero", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/experiencias/renta-yate", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/experiencias/safari-bahia-magdalena", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/safari-la-ventana", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/experiencias/ballena-gris", priority: 0.8, changeFrequency: "monthly" as const },
 ]
+
+// Experience detail routes derived from the canonical constants.
+const experienceRoutes = experiences.map((e) => ({
+  path: e.href,
+  priority: e.featuredOrder != null ? 0.9 : 0.8,
+  changeFrequency: "monthly" as const,
+}))
+
+const routes = [...staticRoutes, ...experienceRoutes]
 
 const localePrefixes = ["", "/en", "/fr", "/zh"]
 
