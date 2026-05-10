@@ -3,6 +3,65 @@ import { locales, defaultLocale, type Locale } from "@/lib/i18n"
 
 export const SITE_URL = "https://www.keabelmet.com"
 
+/**
+ * Brand-name variants and common misspellings of "Keabelmet".
+ * Indexed as <meta keywords> so the site surfaces for typo searches.
+ * Also useful for AI search engines disambiguating brand mentions.
+ */
+export const BRAND_NAME_VARIANTS = [
+  "Keabelmet",
+  "Keabelmet Expeditions",
+  "keabelmet",
+  "keablemet",
+  "keabelment",
+  "keabelmt",
+  "keabelmed",
+  "keablemed",
+  "keabelnet",
+  "keavelmet",
+  "kebelmet",
+  "kabelmet",
+  "cabelmet",
+  "kavelmet",
+  "cavelmet",
+  "keiabelmet",
+  "queabelmet",
+  "queibelmet",
+  "kea belmet",
+  "key abelmet",
+  "kea-belmet",
+  "keabel met",
+  "keabel-met",
+  "keablment",
+  "keabllemet",
+  "keablemet expeditions",
+  "keabelmet tours",
+  "keabelmet la paz",
+  "keabelmet baja",
+  "keabelmet baja california",
+] as const
+
+export const BASE_KEYWORDS = [
+  ...BRAND_NAME_VARIANTS,
+  "ecoturismo La Paz",
+  "safari marino Baja California Sur",
+  "tours La Paz BCS",
+  "avistamiento ballena gris",
+  "ballena gris Bahía Magdalena",
+  "tiburón ballena La Paz",
+  "buceo Cabo Pulmo",
+  "buceo La Paz",
+  "Isla Espíritu Santo tour",
+  "renta velero La Paz",
+  "renta yate La Paz",
+  "surf camp La Paz",
+  "Mar de Cortés tours",
+  "Sea of Cortez tours",
+  "marine safari Baja California",
+  "whale watching Mexico",
+  "whale shark La Paz",
+] as const
+
 export function buildUrl(path: string, locale: Locale): string {
   const clean = path === "/" ? "" : path
   if (locale === defaultLocale) return `${SITE_URL}${clean || "/"}`
@@ -323,6 +382,7 @@ export function pageMeta({ path, locale, title, description, image, noIndex }: P
   return {
     title,
     description,
+    keywords: [...BASE_KEYWORDS],
     alternates: {
       canonical: url,
       languages: buildLanguageAlternates(path),

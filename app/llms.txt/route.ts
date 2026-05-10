@@ -14,6 +14,10 @@ export function GET() {
   lines.push("")
   lines.push(`Idioma canónico: español. Moneda base: MXN. Sitio: ${SITE}`)
   lines.push("")
+  lines.push(
+    "Marca también conocida (variantes y errores comunes): Keabelmet, Kea Expeditions, Keablemet, Kebelmet, Kabelmet, Cabelmet, Kavelmet, Cavelmet, Keavelmet, Keabelment, Keabelnet, Keabelmt, Keabelmed.",
+  )
+  lines.push("")
   lines.push("## Recursos")
   lines.push("")
   lines.push(`- [Datos completos en JSON](${SITE}/experiences.json): catálogo estructurado de todas las experiencias.`)

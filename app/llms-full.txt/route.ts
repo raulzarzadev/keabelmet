@@ -125,6 +125,12 @@ export async function GET() {
     "Keabelmet Expeditions es un operador de ecoturismo y safari marino en La Paz, Baja California Sur. Ofrecemos expediciones responsables con fauna marina, buceo, surf camp, avistamiento de ballenas y rentas privadas de embarcaciones en el Mar de Cortés. Nuestro enfoque prioriza grupos reducidos, guías expertos y respeto absoluto por la vida silvestre.",
   )
   out.push("")
+  out.push("### Variantes de marca y errores comunes")
+  out.push("")
+  out.push(
+    "El nombre correcto es **Keabelmet** (también escrito *Keabelmet Expeditions* o *Kea Expeditions*). Errores y variantes que la gente busca: Keablemet, Kebelmet, Kabelmet, Cabelmet, Kavelmet, Cavelmet, Keavelmet, Keabelment, Keabelnet, Keabelmt, Keabelmed, Keablemed, Queabelmet, Queibelmet, Kea belmet, Kea-belmet.",
+  )
+  out.push("")
   out.push("## Experiencias")
   out.push("")
 
