@@ -46,8 +46,6 @@
           "snorkel": "Snorkel",
           "buceo": "Buceo",
           "surf": "Surf",
-          "embarcacion": "Rentar embarcación",
-          "pesca": "Pescar",
           "hikes": "Hikes",
           "avistamiento": "Avistamiento desde barco"
         }
@@ -209,8 +207,6 @@
           "snorkel": "Snorkeling",
           "buceo": "Scuba Diving",
           "surf": "Surfing",
-          "embarcacion": "Rent a boat",
-          "pesca": "Fishing",
           "hikes": "Hiking",
           "avistamiento": "Whale watching from boat"
         }
@@ -372,8 +368,6 @@
           "snorkel": "Snorkeling",
           "buceo": "Plongee sous-marine",
           "surf": "Surf",
-          "embarcacion": "Louer un bateau",
-          "pesca": "Peche",
           "hikes": "Randonnee",
           "avistamiento": "Observation depuis le bateau"
         }
@@ -535,8 +529,6 @@
           "snorkel": "浮潜",
           "buceo": "水肺潜水",
           "surf": "冲浪",
-          "embarcacion": "租船",
-          "pesca": "钓鱼",
           "hikes": "徒步",
           "avistamiento": "船上观鲸"
         }

@@ -164,7 +164,7 @@ export default function QuizPage() {
   const activityOptions = useMemo(() => {
     const allOptions = t.questions.activities.options as Record<string, string>
     if (!answers.canSwim) {
-      const nonSwimKeys = ["embarcacion", "pesca", "avistamiento", "hikes"]
+      const nonSwimKeys = ["avistamiento", "hikes"]
       return Object.fromEntries(
         Object.entries(allOptions).filter(([key]) => nonSwimKeys.includes(key))
       )

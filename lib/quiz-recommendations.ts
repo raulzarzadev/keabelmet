@@ -104,28 +104,6 @@ const allTours: TourRecommendation[] = [
     vibe: ["aventurera", "educativa"],
   },
   {
-    id: "renta-velero",
-    title: "Renta un Velero",
-    image: "/sailboat-sailing-sunset-sea-of-cortez-romantic.jpg",
-    price: 10500,
-    duration: "Flexible",
-    description: "Navega el Golfo de California en un velero privado.",
-    href: "/experiencias/renta-velero",
-    season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["relajada"],
-  },
-  {
-    id: "renta-yate",
-    title: "Renta un Yate",
-    image: "/luxury-yacht-ocean-balandra-beach-turquoise-lagoon.jpg",
-    price: 29750,
-    duration: "Flexible",
-    description: "Experiencia premium en yate por el Golfo de California.",
-    href: "/experiencias/renta-yate",
-    season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["relajada"],
-  },
-  {
     id: "surf-camp",
     title: "Surf Camp La Paz",
     image: "/images/surf-camp-hero.jpeg",
@@ -144,9 +122,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
 
   if (!canSwim) {
     // Can't swim: boat-based activities only
-    results = allTours.filter((t) =>
-      ["renta-velero", "renta-yate", "ballena-gris"].includes(t.id)
-    )
+    results = allTours.filter((t) => ["ballena-gris"].includes(t.id))
   } else {
     // Can swim
     const hasDiveAccess = hasDived || (diveCert && diveCert !== "No")
@@ -170,13 +146,6 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
       if (surfTour) results.push(surfTour)
     }
 
-    // Add boat rentals if interested
-    if (activities.includes("embarcacion")) {
-      const boatTours = allTours.filter((t) =>
-        ["renta-velero", "renta-yate"].includes(t.id)
-      )
-      results.push(...boatTours)
-    }
   }
 
   // Group modifiers: prioritize certain tours
@@ -190,7 +159,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
   }
 
   if (groupType === "Pareja" || groupType === "Couple" || groupType === "En couple" || groupType === "情侣") {
-    const coupleIds = ["safari-la-ventana", "renta-velero", "espiritu-santo"]
+    const coupleIds = ["safari-la-ventana", "espiritu-santo"]
     results.sort((a, b) => {
       const aCouple = coupleIds.includes(a.id) ? 0 : 1
       const bCouple = coupleIds.includes(b.id) ? 0 : 1
@@ -200,7 +169,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
 
   const isLargeGroup = groupSize === "5-6" || groupSize === "7+"
   if (isLargeGroup) {
-    const largeIds = ["renta-velero", "renta-yate", "espiritu-santo"]
+    const largeIds = ["espiritu-santo"]
     results.sort((a, b) => {
       const aLarge = largeIds.includes(a.id) ? 0 : 1
       const bLarge = largeIds.includes(b.id) ? 0 : 1
@@ -214,9 +183,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
       snorkel: ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena"],
       buceo: ["buceo-cabo-pulmo", "buceo-la-paz"],
       surf: ["surf-camp"],
-      embarcacion: ["renta-velero", "renta-yate"],
       avistamiento: ["ballena-gris", "safari-la-ventana", "safari-bahia-magdalena"],
-      pesca: ["renta-velero", "renta-yate"],
       hikes: ["espiritu-santo"],
     }
     const relevantIds = new Set(activities.flatMap((a) => activityTourMap[a] || []))

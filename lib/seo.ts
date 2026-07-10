@@ -284,34 +284,6 @@ export const pageSeoMap = {
       zh: "在拉巴斯洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
     },
   },
-  rentaVelero: {
-    title: {
-      es: "Renta de Velero",
-      en: "Sailboat Rental",
-      fr: "Location de Voilier",
-      zh: "帆船租赁",
-    },
-    description: {
-      es: "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles.",
-      en: "Rent a private sailboat in La Paz, BCS. Sail the Sea of Cortez with captain, snorkeling, kayaks and gourmet food. Romantic and adventure tours available.",
-      fr: "Louez un voilier prive a La Paz, BCS. Naviguez dans la mer de Cortez avec capitaine, snorkeling, kayaks et cuisine gourmande. Tours romantiques et d'aventure disponibles.",
-      zh: "在 BCS 拉巴斯租用私人帆船。与船长一起航行科尔特斯海，浮潜、皮划艇和美食。提供浪漫和冒险之旅。",
-    },
-  },
-  rentaYate: {
-    title: {
-      es: "Renta de Yate",
-      en: "Yacht Rental",
-      fr: "Location de Yacht",
-      zh: "游艇租赁",
-    },
-    description: {
-      es: "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes.",
-      en: "Rent a luxury yacht in La Paz, BCS. Onboard chef, premium drinks, water sports and VIP service. The ultimate Sea of Cortez experience.",
-      fr: "Louez un yacht de luxe a La Paz, BCS. Chef a bord, boissons premium, sports nautiques et service VIP. L'experience ultime dans la mer de Cortez.",
-      zh: "在 BCS 拉巴斯租用豪华游艇。船上厨师、高级饮品、水上运动和 VIP 服务。终极科尔特斯海体验。",
-    },
-  },
   safariBahiaMagdalena: {
     title: {
       es: "Safari Bahia Magdalena",
