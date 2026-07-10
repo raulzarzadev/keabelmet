@@ -23,7 +23,6 @@ body {
   overflow-x: hidden;
 }
 .kbm img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.kbm a { color: inherit; text-decoration: none; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 .kbm h1, .kbm h2, .kbm h3, .kbm h4 {
   font-family: var(--font-poppins), 'Poppins', sans-serif;
@@ -46,6 +45,9 @@ body {
 .btn-ghost:hover { background: var(--sand); color: var(--ink); }
 .btn-teal { background: var(--teal); color: var(--ink); border-color: var(--teal); }
 .btn-teal:hover { background: var(--sand); border-color: var(--sand); }
+/* Turquesa fijo: al hover solo rebota/sobresale, sin cambiar de color */
+.btn-pop, .btn-pop:hover { background: var(--teal); border-color: var(--teal); color: var(--ink); }
+.btn-pop:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 28px rgba(40, 194, 160, 0.35); }
 
 /* NAV */
 .kbm-header {

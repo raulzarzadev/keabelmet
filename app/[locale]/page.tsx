@@ -227,14 +227,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="/whale-breaching-ocean.jpg" alt="Ballena saltando en el Mar de Cortés" />
+          <img src="/cachalotecta.jpeg" alt="Cachalote nadando en el Mar de Cortés" />
         </div>
         <div className="hero-content">
           <span className="kicker">Siendo agua y tierra</span>
           <h1>Donde el desierto<br />conoce al <em>mar salvaje</em></h1>
           <p className="hero-sub">Expediciones marinas guiadas por biólogos en Baja California Sur. Nada con lobos marinos, encuentra ballenas frente a frente y explora el Mar de Cortés como pocos lo han visto.</p>
           <div className="hero-ctas">
-            <a href="#expediciones" className="btn btn-solid">Explora las expediciones</a>
+            <a href="#expediciones" className="btn btn-pop">Explora las expediciones</a>
             <a href="#historia" className="btn btn-ghost">Nuestra historia</a>
           </div>
         </div>
@@ -404,7 +404,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <h2>Tu próximo encuentro salvaje empieza aquí</h2>
           <p>Escríbenos por WhatsApp y armamos tu expedición — grupos pequeños, guía biólogo marino, foto y video incluidos.</p>
           <div className="hero-ctas">
-            <a href={wa("Hola! quiero reservar una expedición con Keabelmet")} className="btn btn-solid" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+            <a href={wa("Hola! quiero reservar una expedición con Keabelmet")} className="btn btn-pop" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
             <a href="#expediciones" className="btn btn-ghost">Ver expediciones</a>
           </div>
         </div>
