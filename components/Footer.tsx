@@ -15,8 +15,7 @@ interface FooterDict {
   motto: string
   about: string
   quiz: string
-  gallery: string
-  surfCamp: string
+  gallery: string
   espirituSanto: string
   ballenaGris: string
   tiburonBallena: string
@@ -38,8 +37,7 @@ const dict: Record<Locale, FooterDict> = {
     motto: "Siendo agua y tierra.",
     about: "Nuestra historia",
     quiz: "¿Qué tour elegir?",
-    gallery: "Galería",
-    surfCamp: "Surf Camp",
+    gallery: "Galería",
     espirituSanto: "Isla Espíritu Santo",
     ballenaGris: "Ballena Gris Puerto Chale",
     tiburonBallena: "Tiburón Ballena",
@@ -59,8 +57,7 @@ const dict: Record<Locale, FooterDict> = {
     motto: "Being water and land.",
     about: "Our story",
     quiz: "Which tour to choose?",
-    gallery: "Gallery",
-    surfCamp: "Surf Camp",
+    gallery: "Gallery",
     espirituSanto: "Espiritu Santo Island",
     ballenaGris: "Gray Whale Puerto Chale",
     tiburonBallena: "Whale Shark",
@@ -80,8 +77,7 @@ const dict: Record<Locale, FooterDict> = {
     motto: "Etre eau et terre.",
     about: "Notre histoire",
     quiz: "Quel tour choisir ?",
-    gallery: "Galerie",
-    surfCamp: "Surf Camp",
+    gallery: "Galerie",
     espirituSanto: "Ile Espiritu Santo",
     ballenaGris: "Baleine Grise Puerto Chale",
     tiburonBallena: "Requin-Baleine",
@@ -101,8 +97,7 @@ const dict: Record<Locale, FooterDict> = {
     motto: "成为水与陆地。",
     about: "我们的故事",
     quiz: "选择哪个行程？",
-    gallery: "图库",
-    surfCamp: "冲浪营",
+    gallery: "图库",
     espirituSanto: "圣灵岛",
     ballenaGris: "Puerto Chale 灰鲸",
     tiburonBallena: "鲸鲨",
@@ -132,8 +127,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
     { label: t.espirituSanto, path: "/experiencias/tour-espiritu-santo" },
     { label: t.caboPulmo, path: "/experiencias/buceo-cabo-pulmo" },
     { label: t.laPaz, path: "/experiencias/buceo-la-paz" },
-    { label: t.scubaDiscovery, path: "/experiencias/scuba-discovery" },
-    { label: t.surfCamp, path: "/surf-camp" },
+    { label: t.scubaDiscovery, path: "/experiencias/scuba-discovery" },
   ]
 
   const company = [

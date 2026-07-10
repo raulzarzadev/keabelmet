@@ -9,7 +9,7 @@ export function GET() {
   lines.push("# Keabelmet Expeditions")
   lines.push("")
   lines.push(
-    "> Ecoturismo y safari marino en La Paz, Baja California Sur. Expediciones, buceo, surf camp, avistamiento de fauna marina y rentas privadas en el Mar de Cortés.",
+    "> Ecoturismo y safari marino en La Paz, Baja California Sur. Expediciones, buceo y avistamiento de fauna marina en el Mar de Cortés.",
   )
   lines.push("")
   lines.push(`Idioma canónico: español. Moneda base: MXN. Sitio: ${SITE}`)

@@ -52,9 +52,6 @@ export const BASE_KEYWORDS = [
   "buceo Cabo Pulmo",
   "buceo La Paz",
   "Isla Espíritu Santo tour",
-  "renta velero La Paz",
-  "renta yate La Paz",
-  "surf camp La Paz",
   "Mar de Cortés tours",
   "Sea of Cortez tours",
   "marine safari Baja California",
@@ -152,10 +149,10 @@ export const pageSeoMap = {
       zh: "体验与行程",
     },
     description: {
-      es: "Descubre nuestras experiencias marinas en Baja California Sur: safaris, surf camp, buceo y mas.",
-      en: "Discover our marine experiences in Baja California Sur: safaris, surf camp, diving and more.",
-      fr: "Decouvrez nos experiences marines en Basse-Californie du Sud : safaris, surf camp, plongee et plus.",
-      zh: "探索我们在下加利福尼亚州的海洋体验：野生动物之旅、冲浪营、潜水等。",
+      es: "Descubre nuestras experiencias marinas en Baja California Sur: safaris, avistamiento de ballenas, buceo y mas.",
+      en: "Discover our marine experiences in Baja California Sur: safaris, whale watching, diving and more.",
+      fr: "Decouvrez nos experiences marines en Basse-Californie du Sud : safaris, observation des baleines, plongee et plus.",
+      zh: "探索我们在下加利福尼亚州的海洋体验：野生动物之旅、观鲸、潜水等。",
     },
   },
   gallery: {
@@ -184,20 +181,6 @@ export const pageSeoMap = {
       en: "Check rates for our marine expeditions in Baja California Sur. All-inclusive packages.",
       fr: "Consultez les tarifs de nos expeditions marines en Basse-Californie du Sud. Forfaits tout compris.",
       zh: "查看我们在下加利福尼亚州的海洋探险价格。全包套餐。",
-    },
-  },
-  surfCamp: {
-    title: {
-      es: "Surf Camp La Paz",
-      en: "Surf Camp La Paz",
-      fr: "Surf Camp La Paz",
-      zh: "拉巴斯冲浪营",
-    },
-    description: {
-      es: "Surf camp de 6 dias en La Paz, Baja California Sur. Clases diarias, analisis de video, transporte y snacks incluidos. Aprende a surfear con instructores expertos.",
-      en: "6-day surf camp in La Paz, Baja California Sur. Daily lessons, video analysis, transport and snacks included. Learn to surf with expert instructors.",
-      fr: "Surf camp de 6 jours a La Paz, Basse-Californie du Sud. Cours quotidiens, analyse video, transport et snacks inclus. Apprenez a surfer avec des instructeurs experts.",
-      zh: "拉巴斯 6 天冲浪营。每日课程、视频分析、交通和小吃包含。跟专家教练学冲浪。",
     },
   },
   quiz: {

@@ -45,7 +45,6 @@
         "options": {
           "snorkel": "Snorkel",
           "buceo": "Buceo",
-          "surf": "Surf",
           "hikes": "Hikes",
           "avistamiento": "Avistamiento desde barco"
         }
@@ -206,7 +205,6 @@
         "options": {
           "snorkel": "Snorkeling",
           "buceo": "Scuba Diving",
-          "surf": "Surfing",
           "hikes": "Hiking",
           "avistamiento": "Whale watching from boat"
         }
@@ -367,7 +365,6 @@
         "options": {
           "snorkel": "Snorkeling",
           "buceo": "Plongee sous-marine",
-          "surf": "Surf",
           "hikes": "Randonnee",
           "avistamiento": "Observation depuis le bateau"
         }
@@ -528,7 +525,6 @@
         "options": {
           "snorkel": "浮潜",
           "buceo": "水肺潜水",
-          "surf": "冲浪",
           "hikes": "徒步",
           "avistamiento": "船上观鲸"
         }

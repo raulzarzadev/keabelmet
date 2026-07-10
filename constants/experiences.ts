@@ -10,13 +10,7 @@ import { defaultLocale, type Locale } from "@/lib/i18n";
  */
 export const TRANSLATIONS_ENABLED = false;
 
-export type ExperienceCategory =
-	| "safari"
-	| "whale"
-	| "diving"
-	| "surf"
-	| "island"
-	| "rental";
+export type ExperienceCategory = "safari" | "whale" | "diving" | "island";
 
 export type ExperienceDifficulty = "easy" | "moderate" | "advanced";
 
@@ -164,70 +158,6 @@ export const experiences: Experience[] = [
 				capacityLabel: "2-8人",
 				highlights: ["蝠鲼", "4–6月", "专业导游", "照片和视频"],
 				badge: "科尔特斯海",
-			},
-		},
-	},
-	{
-		slug: "surf-camp",
-		href: "/surf-camp",
-		category: "surf",
-		image: "/images/surf-camp-hero.jpeg",
-		rating: 5.0,
-		reviews: 156,
-		fromMxn: 7500,
-		days: 6,
-		difficulty: "moderate",
-		capacity: { min: 6, max: 8 },
-		i18n: {
-			es: {
-				title: "Surf Camp La Paz",
-				description:
-					"Fisioterapeuta, video-análisis diario, hospedaje y comidas.",
-				durationLabel: "6 días",
-				capacityLabel: "6-8 personas",
-				highlights: [
-					"Clases diarias",
-					"Foto/Video",
-					"Transporte",
-					"Snacks incluidos",
-				],
-				badge: "La Paz, BCS",
-			},
-			en: {
-				title: "Surf Camp La Paz",
-				description:
-					"Physiotherapist, daily video analysis, lodging and meals.",
-				durationLabel: "6 days",
-				capacityLabel: "6-8 people",
-				highlights: [
-					"Daily classes",
-					"Photo/Video",
-					"Transport",
-					"Snacks included",
-				],
-				badge: "La Paz, BCS",
-			},
-			fr: {
-				title: "Surf Camp La Paz",
-				description:
-					"Kinésithérapeute, analyse vidéo quotidienne, hébergement et repas.",
-				durationLabel: "6 jours",
-				capacityLabel: "6-8 personnes",
-				highlights: [
-					"Cours quotidiens",
-					"Photo/Vidéo",
-					"Transport",
-					"Snacks inclus",
-				],
-				badge: "La Paz, BCS",
-			},
-			zh: {
-				title: "Surf Camp La Paz",
-				description: "理疗师、每日视频分析、住宿和餐饮。",
-				durationLabel: "6天",
-				capacityLabel: "6-8人",
-				highlights: ["每日课程", "照片/视频", "交通", "含小食"],
-				badge: "La Paz, BCS",
 			},
 		},
 	},

@@ -114,17 +114,6 @@ const allTours: TourRecommendation[] = [
     season: ["invierno", "primavera", "verano", "otono"],
     vibe: ["aventurera", "educativa"],
   },
-  {
-    id: "surf-camp",
-    title: "Surf Camp La Paz",
-    image: "/images/surf-camp-hero.jpeg",
-    price: 7500,
-    duration: "6 dias",
-    description: "Campamento de surf con fisioterapeuta y video-analisis diario.",
-    href: "/surf-camp",
-    season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["deportiva", "aventurera"],
-  },
 ]
 
 export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
@@ -152,12 +141,6 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
     } else if (activities.includes("buceo")) {
       const discovery = allTours.find((t) => t.id === "scuba-discovery")
       if (discovery) results = [discovery, ...results]
-    }
-
-    // Add surf camp if interested
-    if (activities.includes("surf")) {
-      const surfTour = allTours.find((t) => t.id === "surf-camp")
-      if (surfTour) results.push(surfTour)
     }
 
   }
@@ -196,7 +179,6 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
     const activityTourMap: Record<string, string[]> = {
       snorkel: ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena"],
       buceo: ["buceo-cabo-pulmo", "buceo-la-paz", "scuba-discovery"],
-      surf: ["surf-camp"],
       avistamiento: ["ballena-gris", "safari-la-ventana", "safari-bahia-magdalena"],
       hikes: ["espiritu-santo"],
     }
