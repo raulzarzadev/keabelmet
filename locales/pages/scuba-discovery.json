@@ -1,0 +1,92 @@
+{
+  "es": {
+    "meta": {
+      "title": "Scuba Discovery desde Playa",
+      "description": "Tu primera respiración bajo el agua en La Paz, BCS. Sin experiencia previa, máximo 6 m de profundidad, con instructor certificado y equipo incluido."
+    },
+    "hero": {
+      "badge": "Nuevo · Para principiantes",
+      "title": "Scuba Discovery desde Playa",
+      "description": "Tu primera respiración bajo el agua, entrando caminando desde la playa. Sin experiencia previa y acompañado en todo momento por un instructor certificado.",
+      "cta": "Reservar Ahora",
+      "image_alt": "Scuba Discovery desde playa en La Paz"
+    },
+    "details": {
+      "duration_title": "Duración",
+      "duration_text": "Medio día",
+      "group_title": "Grupo",
+      "group_text": "1-6 personas por instructor",
+      "season_title": "Temporada",
+      "season_text": "Todo el año",
+      "includes_title": "Incluye",
+      "includes_text": "Equipo completo y fotos"
+    },
+    "about": {
+      "title": "Sobre la Experiencia",
+      "description": "El Scuba Discovery es la forma más accesible de probar el buceo: entras al agua caminando desde la playa, practicas los ejercicios básicos en aguas poco profundas y exploras el fondo marino a un máximo de 6 metros de profundidad. No necesitas certificación ni experiencia previa — solo ganas de descubrir el Mar de Cortés desde abajo. Un instructor certificado te acompaña en todo momento."
+    },
+    "includes": {
+      "title": "Qué Incluye",
+      "items": [
+        "Instructor certificado",
+        "Equipo de buceo completo",
+        "Briefing y práctica en aguas poco profundas",
+        "Inmersión guiada (máx. 6 m)",
+        "Fotos de tu experiencia",
+        "Agua y snacks"
+      ],
+      "note": "Nota: No se requiere certificación ni experiencia previa. Apto para principiantes desde los 10 años. Si te enamoras del buceo, esta experiencia es el primer paso hacia tu certificación."
+    },
+    "cta": {
+      "title": "Respira bajo el agua por primera vez",
+      "description": "Sin certificación, sin experiencia, sin pretextos. Reserva hoy",
+      "cta_primary": "Reservar Ahora",
+      "cta_secondary": "Ver Más Tours"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Scuba Discovery from the Beach",
+      "description": "Your first breath underwater in La Paz, BCS. No prior experience, max depth 6 m, with a certified instructor and gear included."
+    },
+    "hero": {
+      "badge": "New · Beginner friendly",
+      "title": "Scuba Discovery from the Beach",
+      "description": "Your first breath underwater, walking in straight from the beach. No prior experience needed, with a certified instructor by your side the whole time.",
+      "cta": "Book Now",
+      "image_alt": "Scuba Discovery from the beach in La Paz"
+    },
+    "details": {
+      "duration_title": "Duration",
+      "duration_text": "Half day",
+      "group_title": "Group",
+      "group_text": "1-6 people per instructor",
+      "season_title": "Season",
+      "season_text": "Year-round",
+      "includes_title": "Includes",
+      "includes_text": "Full gear and photos"
+    },
+    "about": {
+      "title": "About the Experience",
+      "description": "Scuba Discovery is the most accessible way to try diving: you walk into the water from the beach, practice the basic skills in shallow water and explore the seabed at a maximum depth of 6 meters. No certification or prior experience needed — just the desire to discover the Sea of Cortez from below. A certified instructor accompanies you at all times."
+    },
+    "includes": {
+      "title": "What's Included",
+      "items": [
+        "Certified instructor",
+        "Full scuba gear",
+        "Briefing and shallow-water practice",
+        "Guided dive (max 6 m)",
+        "Photos of your experience",
+        "Water and snacks"
+      ],
+      "note": "Note: No certification or prior experience required. Suitable for beginners from age 10. If you fall in love with diving, this experience is the first step toward your certification."
+    },
+    "cta": {
+      "title": "Breathe underwater for the first time",
+      "description": "No certification, no experience, no excuses. Book today",
+      "cta_primary": "Book Now",
+      "cta_secondary": "See More Tours"
+    }
+  }
+}

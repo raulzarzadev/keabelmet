@@ -33,7 +33,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
       description: seo.description,
       image: `${SITE_URL}/gray-whale-breaching-sea-of-cortez.jpg`,
       url,
-      priceMxn: 2400,
+      priceMxn: 2800,
       touristType: ["Wildlife", "Whale Watching", "Family"],
       validFrom: `${year}-01-01`,
       validThrough: `${year}-03-31`,
@@ -489,7 +489,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.pricing.shared_2h.name}</h3>
                   <p className="text-gray-600 mb-4">{t.pricing.shared_2h.duration}</p>
                   <div className="text-4xl font-bold text-teal-600 mb-2">
-                    <Price amount={2400} />
+                    <Price amount={2800} />
                   </div>
                   <p className="text-sm text-gray-600">{t.pricing.shared_2h.per}</p>
                 </div>

@@ -272,16 +272,30 @@ export const pageSeoMap = {
   },
   buceoLaPaz: {
     title: {
-      es: "Buceo en La Paz",
-      en: "La Paz Diving",
-      fr: "Plongee a La Paz",
-      zh: "拉巴斯潜水",
+      es: "Scuba Diving Isla Espiritu Santo",
+      en: "Espiritu Santo Island Scuba Diving",
+      fr: "Plongee a l'ile Espiritu Santo",
+      zh: "圣灵岛水肺潜水",
     },
     description: {
-      es: "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
-      en: "Dive with sea lions at Los Islotes, La Paz. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment.",
-      fr: "Plongez avec les otaries a Los Islotes, La Paz. Explorez les grottes sous-marines et formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet.",
-      zh: "在拉巴斯洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
+      es: "Bucea con lobos marinos en Los Islotes, Archipielago Espiritu Santo. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
+      en: "Dive with sea lions at Los Islotes, Espiritu Santo Archipelago. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment.",
+      fr: "Plongez avec les otaries a Los Islotes, archipel Espiritu Santo. Explorez les grottes sous-marines et formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet.",
+      zh: "在圣灵岛群岛洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
+    },
+  },
+  scubaDiscovery: {
+    title: {
+      es: "Scuba Discovery desde Playa",
+      en: "Scuba Discovery from the Beach",
+      fr: "Scuba Discovery depuis la plage",
+      zh: "海滩体验潜水",
+    },
+    description: {
+      es: "Tu primera respiracion bajo el agua en La Paz, BCS. Sin experiencia previa, maximo 6 m de profundidad, con instructor certificado y equipo incluido.",
+      en: "Your first breath underwater in La Paz, BCS. No prior experience, max depth 6 m, with a certified instructor and gear included.",
+      fr: "Votre premiere respiration sous l'eau a La Paz, BCS. Sans experience prealable, profondeur max 6 m, avec instructeur certifie et equipement inclus.",
+      zh: "在 BCS 拉巴斯的水下初体验。无需经验，最大深度6米，认证教练陪同，含装备。",
     },
   },
   safariBahiaMagdalena: {
@@ -310,20 +324,6 @@ export const pageSeoMap = {
       en: "Marine expedition in La Ventana, BCS. Watch mobula ray and whale migration with expert guides. Half-day adventure April-June in the Sea of Cortez.",
       fr: "Expedition marine a La Ventana, BCS. Observez la migration des raies mobula et baleines avec des guides experts. Aventure d'une demi-journee d'avril a juin dans la mer de Cortez.",
       zh: "BCS 拉文塔纳海洋探险。与专家导游一起观赏海蝠鲼和鲸鱼迁徙。4 月至 6 月科尔特斯海半日冒险。",
-    },
-  },
-  ballenaGris: {
-    title: {
-      es: "Expedicion Ballena Gris",
-      en: "Gray Whale Expedition",
-      fr: "Expedition Baleine Grise",
-      zh: "灰鲸探险",
-    },
-    description: {
-      es: "Expedicion para avistar ballenas grises en Baja California Sur. Encuentros cercanos en su santuario natural con guias certificados y embarcaciones seguras.",
-      en: "Gray whale watching expedition in Baja California Sur. Close encounters in their natural sanctuary with certified guides and safe boats.",
-      fr: "Expedition d'observation des baleines grises en Basse-Californie du Sud. Rencontres rapprochees dans leur sanctuaire naturel avec des guides certifies et des bateaux surs.",
-      zh: "下加利福尼亚州灰鲸观赏探险。与认证导游和安全船只在其自然保护区进行近距离接触。",
     },
   },
 } as const satisfies Record<string, PageSeo>

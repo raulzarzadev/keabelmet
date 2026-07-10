@@ -76,6 +76,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </Link>
           </div>
 
+          {hero.scroll && (
+            <p className="mt-10 text-sm text-white/70">{hero.scroll}</p>
+          )}
+
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
             <div className="text-center">
               <div className="text-4xl font-bold text-white sm:text-5xl">{hero.stat1_value}</div>

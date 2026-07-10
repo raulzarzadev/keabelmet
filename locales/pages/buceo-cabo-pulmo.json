@@ -34,9 +34,9 @@
       "collective": {
         "name": "Buceo Colectivo",
         "subtitle": "Para buzos certificados",
-        "price_own_gear": "$2,800",
+        "price_own_gear": "$3,200",
         "price_own_gear_note": "Con tu propio equipo (BCD y regulador)",
-        "price_full_gear": "$3,000",
+        "price_full_gear": "$3,400",
         "price_full_gear_note": "Incluye equipo completo",
         "currency": "MXN",
         "features": [
@@ -67,7 +67,7 @@
       "discovery": {
         "name": "Discovery Scuba Diver",
         "subtitle": "Para principiantes sin experiencia",
-        "price": "$3,600",
+        "price": "$3,800",
         "price_note": "Por persona",
         "currency": "MXN",
         "features": [
@@ -221,9 +221,9 @@
       "collective": {
         "name": "Group Diving",
         "subtitle": "For certified divers",
-        "price_own_gear": "$2,800",
+        "price_own_gear": "$3,200",
         "price_own_gear_note": "With your own gear (BCD and regulator)",
-        "price_full_gear": "$3,000",
+        "price_full_gear": "$3,400",
         "price_full_gear_note": "Includes full equipment",
         "currency": "MXN",
         "features": [
@@ -254,7 +254,7 @@
       "discovery": {
         "name": "Discovery Scuba Diver",
         "subtitle": "For beginners with no experience",
-        "price": "$3,600",
+        "price": "$3,800",
         "price_note": "Per person",
         "currency": "MXN",
         "features": [
@@ -408,9 +408,9 @@
       "collective": {
         "name": "Plongee Collective",
         "subtitle": "Pour plongeurs certifies",
-        "price_own_gear": "$2,800",
+        "price_own_gear": "$3,200",
         "price_own_gear_note": "Avec votre propre equipement (gilet et detendeur)",
-        "price_full_gear": "$3,000",
+        "price_full_gear": "$3,400",
         "price_full_gear_note": "Equipement complet inclus",
         "currency": "MXN",
         "features": [
@@ -441,7 +441,7 @@
       "discovery": {
         "name": "Discovery Scuba Diver",
         "subtitle": "Pour debutants sans experience",
-        "price": "$3,600",
+        "price": "$3,800",
         "price_note": "Par personne",
         "currency": "MXN",
         "features": [
@@ -595,9 +595,9 @@
       "collective": {
         "name": "团体潜水",
         "subtitle": "适合持证潜水员",
-        "price_own_gear": "$2,800",
+        "price_own_gear": "$3,200",
         "price_own_gear_note": "自带装备（BCD 和调节器）",
-        "price_full_gear": "$3,000",
+        "price_full_gear": "$3,400",
         "price_full_gear_note": "包含全套装备",
         "currency": "MXN",
         "features": [
@@ -628,7 +628,7 @@
       "discovery": {
         "name": "Discovery Scuba Diver",
         "subtitle": "适合无经验的初学者",
-        "price": "$3,600",
+        "price": "$3,800",
         "price_note": "每人",
         "currency": "MXN",
         "features": [

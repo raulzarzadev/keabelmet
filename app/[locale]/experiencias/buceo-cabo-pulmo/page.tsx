@@ -157,13 +157,13 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600"><Price amount={2800} /></span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={3200} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.collective.price_own_gear_note}</p>
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600"><Price amount={3000} /></span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={3400} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.collective.price_full_gear_note}</p>
               </div>
@@ -232,7 +232,7 @@ export default async function BuceoCaboPulmoPage({ params }: { params: Promise<{
               </div>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-teal-600"><Price amount={3600} /></span>
+                  <span className="text-4xl font-bold text-teal-600"><Price amount={3800} /></span>
                 </div>
                 <p className="mt-1 text-sm text-gray-600">{t.pricing.discovery.price_note}</p>
               </div>

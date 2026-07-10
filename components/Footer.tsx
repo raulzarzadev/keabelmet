@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import { defaultLocale, type Locale } from "@/lib/i18n"
 import { socialLinks } from "@/config/mediaLinks"
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER, buildWhatsAppLink } from "@/config/whatsapp"
@@ -12,19 +12,17 @@ interface FooterDict {
   contactTitle: string
   followTitle: string
   rights: string
-  scheduleValue: string
+  motto: string
   about: string
-  contact: string
-  blog: string
-  rates: string
+  quiz: string
   gallery: string
   surfCamp: string
-  experiences: string
   espirituSanto: string
   ballenaGris: string
   tiburonBallena: string
   caboPulmo: string
   laPaz: string
+  scubaDiscovery: string
   safariBahia: string
   safariVentana: string
 }
@@ -32,93 +30,85 @@ interface FooterDict {
 const dict: Record<Locale, FooterDict> = {
   es: {
     tagline: "Safaris marinos y buceo en el Golfo de California. Encuentros autenticos con la vida salvaje, guiados por biologos.",
-    exploreTitle: "Explora",
-    companyTitle: "Compania",
+    exploreTitle: "Expediciones",
+    companyTitle: "Keabelmet",
     contactTitle: "Contacto",
     followTitle: "Siguenos",
     rights: "Todos los derechos reservados.",
-    scheduleValue: "Lun - Dom: 7:00 AM - 7:00 PM",
-    about: "Sobre Nosotros",
-    contact: "Contacto",
-    blog: "Blog",
-    rates: "Tarifas",
-    gallery: "Galeria",
+    motto: "Siendo agua y tierra.",
+    about: "Nuestra historia",
+    quiz: "¿Qué tour elegir?",
+    gallery: "Galería",
     surfCamp: "Surf Camp",
-    experiences: "Experiencias",
-    espirituSanto: "Tour Isla Espiritu Santo",
-    ballenaGris: "Tour Ballena Gris",
-    tiburonBallena: "Tiburon Ballena",
-    caboPulmo: "Buceo Cabo Pulmo",
-    laPaz: "Buceo La Paz",
-    safariBahia: "Safari Bahia Magdalena",
+    espirituSanto: "Isla Espíritu Santo",
+    ballenaGris: "Ballena Gris Puerto Chale",
+    tiburonBallena: "Tiburón Ballena",
+    caboPulmo: "Scuba Diving Cabo Pulmo",
+    laPaz: "Scuba Diving Espíritu Santo",
+    scubaDiscovery: "Scuba Discovery desde Playa",
+    safariBahia: "Safari Bahía Magdalena",
     safariVentana: "Safari La Ventana",
   },
   en: {
     tagline: "Marine safaris and diving in the Gulf of California. Authentic wildlife encounters, guided by biologists.",
-    exploreTitle: "Explore",
-    companyTitle: "Company",
+    exploreTitle: "Expeditions",
+    companyTitle: "Keabelmet",
     contactTitle: "Contact",
     followTitle: "Follow Us",
     rights: "All rights reserved.",
-    scheduleValue: "Mon - Sun: 7:00 AM - 7:00 PM",
-    about: "About Us",
-    contact: "Contact",
-    blog: "Blog",
-    rates: "Rates",
+    motto: "Being water and land.",
+    about: "Our story",
+    quiz: "Which tour to choose?",
     gallery: "Gallery",
     surfCamp: "Surf Camp",
-    experiences: "Experiences",
-    espirituSanto: "Espiritu Santo Island Tour",
-    ballenaGris: "Gray Whale Tour",
-    tiburonBallena: "Whale Shark Swim",
-    caboPulmo: "Cabo Pulmo Diving",
-    laPaz: "La Paz Diving",
+    espirituSanto: "Espiritu Santo Island",
+    ballenaGris: "Gray Whale Puerto Chale",
+    tiburonBallena: "Whale Shark",
+    caboPulmo: "Scuba Diving Cabo Pulmo",
+    laPaz: "Scuba Diving Espiritu Santo",
+    scubaDiscovery: "Scuba Discovery from the Beach",
     safariBahia: "Magdalena Bay Safari",
     safariVentana: "La Ventana Safari",
   },
   fr: {
     tagline: "Safaris marins et plongee dans le Golfe de Californie. Rencontres authentiques avec la vie sauvage, guidees par des biologistes.",
-    exploreTitle: "Explorer",
-    companyTitle: "Entreprise",
+    exploreTitle: "Expeditions",
+    companyTitle: "Keabelmet",
     contactTitle: "Contact",
     followTitle: "Suivez-nous",
     rights: "Tous droits reserves.",
-    scheduleValue: "Lun - Dim : 7h00 - 19h00",
-    about: "A Propos",
-    contact: "Contact",
-    blog: "Blog",
-    rates: "Tarifs",
+    motto: "Etre eau et terre.",
+    about: "Notre histoire",
+    quiz: "Quel tour choisir ?",
     gallery: "Galerie",
     surfCamp: "Surf Camp",
-    experiences: "Experiences",
-    espirituSanto: "Tour Ile Espiritu Santo",
-    ballenaGris: "Tour Baleine Grise",
-    tiburonBallena: "Nage avec Requin-Baleine",
+    espirituSanto: "Ile Espiritu Santo",
+    ballenaGris: "Baleine Grise Puerto Chale",
+    tiburonBallena: "Requin-Baleine",
     caboPulmo: "Plongee Cabo Pulmo",
-    laPaz: "Plongee La Paz",
+    laPaz: "Plongee Espiritu Santo",
+    scubaDiscovery: "Scuba Discovery depuis la plage",
     safariBahia: "Safari Bahia Magdalena",
     safariVentana: "Safari La Ventana",
   },
   zh: {
     tagline: "加利福尼亚湾海洋探险与潜水。由生物学家带领，与野生动物的真实相遇。",
-    exploreTitle: "探索",
-    companyTitle: "公司",
+    exploreTitle: "探险项目",
+    companyTitle: "Keabelmet",
     contactTitle: "联系",
     followTitle: "关注我们",
     rights: "保留所有权利。",
-    scheduleValue: "周一至周日：上午 7:00 - 晚上 7:00",
-    about: "关于我们",
-    contact: "联系我们",
-    blog: "博客",
-    rates: "价格",
+    motto: "成为水与陆地。",
+    about: "我们的故事",
+    quiz: "选择哪个行程？",
     gallery: "图库",
     surfCamp: "冲浪营",
-    experiences: "体验项目",
-    espirituSanto: "圣灵岛之旅",
-    ballenaGris: "灰鲸之旅",
-    tiburonBallena: "鲸鲨同游",
-    caboPulmo: "卡波普尔莫潜水",
-    laPaz: "拉巴斯潜水",
+    espirituSanto: "圣灵岛",
+    ballenaGris: "Puerto Chale 灰鲸",
+    tiburonBallena: "鲸鲨",
+    caboPulmo: "卡波普尔莫水肺潜水",
+    laPaz: "圣灵岛水肺潜水",
+    scubaDiscovery: "海滩体验潜水",
     safariBahia: "马格达莱纳湾探险",
     safariVentana: "拉文塔纳探险",
   },
@@ -135,23 +125,21 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
   const year = new Date().getFullYear()
 
   const experiences = [
-    { label: t.espirituSanto, path: "/experiencias/tour-espiritu-santo" },
+    { label: t.safariVentana, path: "/experiencias/safari-la-ventana" },
+    { label: t.safariBahia, path: "/experiencias/safari-bahia-magdalena" },
     { label: t.ballenaGris, path: "/experiencias/tour-ballena-gris" },
     { label: t.tiburonBallena, path: "/experiencias/tiburon-ballena" },
+    { label: t.espirituSanto, path: "/experiencias/tour-espiritu-santo" },
     { label: t.caboPulmo, path: "/experiencias/buceo-cabo-pulmo" },
     { label: t.laPaz, path: "/experiencias/buceo-la-paz" },
-    { label: t.safariBahia, path: "/experiencias/safari-bahia-magdalena" },
-    { label: t.safariVentana, path: "/experiencias/safari-la-ventana" },
+    { label: t.scubaDiscovery, path: "/experiencias/scuba-discovery" },
     { label: t.surfCamp, path: "/surf-camp" },
   ]
 
   const company = [
     { label: t.about, path: "/sobre-nosotros" },
-    { label: t.experiences, path: "/experiencias" },
-    { label: t.rates, path: "/tarifas" },
+    { label: t.quiz, path: "/quiz" },
     { label: t.gallery, path: "/galeria" },
-    { label: t.blog, path: "/blog" },
-    { label: t.contact, path: "/contacto" },
   ]
 
   return (
@@ -216,17 +204,13 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0 text-teal-400" />
                 <a
-                  href="https://maps.google.com/?q=La+Ventana+BCS+Mexico"
+                  href="https://maps.google.com/?q=La+Paz+BCS+Mexico"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  La Ventana, Baja California Sur, Mexico
+                  La Paz, BCS, México
                 </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Clock size={16} className="mt-0.5 flex-shrink-0 text-teal-400" />
-                <span>{t.scheduleValue}</span>
               </li>
             </ul>
 
@@ -265,7 +249,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
         </div>
 
         <div className="mt-12 pt-6 border-t border-gray-800 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
-          <p>© {year} Keabelmet Expeditions. {t.rights}</p>
+          <p>© {year} Keabelmet Expeditions. {t.rights} {t.motto}</p>
           <p>La Paz · La Ventana · Bahia Magdalena · Cabo Pulmo</p>
         </div>
       </div>

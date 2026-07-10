@@ -8,66 +8,67 @@ import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "@/components/CurrencySelector"
+import { buildWhatsAppLink } from "@/config/whatsapp"
 
-const navLabels: Record<Locale, { items: { label: string; path: string }[]; mobileOnly: { label: string; path: string }[]; quiz: { label: string; path: string }; book: string }> = {
+const navLabels: Record<Locale, { items: { label: string; path: string }[]; mobileOnly: { label: string; path: string }[]; book: string }> = {
   es: {
     items: [
-      { label: "Experiencias", path: "/experiencias" },
-      { label: "Tarifas", path: "/tarifas" },
-      { label: "Galeria", path: "/galeria" },
-      { label: "Sobre Nosotros", path: "/sobre-nosotros" },
+      { label: "Expediciones", path: "/experiencias" },
+      { label: "\u00bfQu\u00e9 Tour Elegir?", path: "/quiz" },
+      { label: "Nuestra Historia", path: "/sobre-nosotros" },
+      { label: "Galer\u00eda", path: "/galeria" },
       { label: "Contacto", path: "/contacto" },
     ],
     mobileOnly: [
       { label: "Inicio", path: "/" },
+      { label: "Tarifas", path: "/tarifas" },
       { label: "Blog", path: "/blog" },
     ],
-    quiz: { label: "Escoge tu tour", path: "/quiz" },
     book: "Reservar",
   },
   en: {
     items: [
-      { label: "Experiences", path: "/experiencias" },
-      { label: "Rates", path: "/tarifas" },
+      { label: "Expeditions", path: "/experiencias" },
+      { label: "Which Tour to Choose?", path: "/quiz" },
+      { label: "Our Story", path: "/sobre-nosotros" },
       { label: "Gallery", path: "/galeria" },
-      { label: "About Us", path: "/sobre-nosotros" },
       { label: "Contact", path: "/contacto" },
     ],
     mobileOnly: [
       { label: "Home", path: "/" },
+      { label: "Rates", path: "/tarifas" },
       { label: "Blog", path: "/blog" },
     ],
-    quiz: { label: "Find your tour", path: "/quiz" },
     book: "Book Now",
   },
   fr: {
     items: [
-      { label: "Experiences", path: "/experiencias" },
-      { label: "Tarifs", path: "/tarifas" },
+      { label: "Expeditions", path: "/experiencias" },
+      { label: "Quel tour choisir ?", path: "/quiz" },
+      { label: "Notre Histoire", path: "/sobre-nosotros" },
       { label: "Galerie", path: "/galeria" },
-      { label: "A Propos", path: "/sobre-nosotros" },
       { label: "Contact", path: "/contacto" },
     ],
     mobileOnly: [
       { label: "Accueil", path: "/" },
+      { label: "Tarifs", path: "/tarifas" },
       { label: "Blog", path: "/blog" },
     ],
-    quiz: { label: "Trouvez votre tour", path: "/quiz" },
     book: "Reserver",
   },
   zh: {
     items: [
-      { label: "\u4f53\u9a8c\u9879\u76ee", path: "/experiencias" },
-      { label: "\u4ef7\u683c", path: "/tarifas" },
+      { label: "\u63a2\u9669\u9879\u76ee", path: "/experiencias" },
+      { label: "\u9009\u62e9\u54ea\u4e2a\u884c\u7a0b\uff1f", path: "/quiz" },
+      { label: "\u6211\u4eec\u7684\u6545\u4e8b", path: "/sobre-nosotros" },
       { label: "\u56fe\u5e93", path: "/galeria" },
-      { label: "\u5173\u4e8e\u6211\u4eec", path: "/sobre-nosotros" },
       { label: "\u8054\u7cfb\u6211\u4eec", path: "/contacto" },
     ],
     mobileOnly: [
       { label: "\u9996\u9875", path: "/" },
+      { label: "\u4ef7\u683c", path: "/tarifas" },
       { label: "\u535a\u5ba2", path: "/blog" },
     ],
-    quiz: { label: "\u627e\u5230\u4f60\u7684\u884c\u7a0b", path: "/quiz" },
     book: "\u9884\u7ea6",
   },
 }
@@ -111,16 +112,18 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
             ))}
           </nav>
 
-          {/* Right side: Currency + Language + Quiz CTA */}
+          {/* Right side: Currency + Language + Book CTA */}
           <div className="hidden lg:flex items-center gap-2">
             <CurrencySelector />
             <LanguageSelector locale={locale} />
-            <Link
-              href={localizeHref(nav.quiz.path, locale)}
+            <a
+              href={buildWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition-colors text-sm font-medium whitespace-nowrap"
             >
-              {nav.quiz.label}
-            </Link>
+              {nav.book}
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -149,13 +152,15 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href={localizeHref(nav.quiz.path, locale)}
+              <a
+                href={buildWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="px-6 py-2.5 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition-colors font-medium text-center mt-2"
               >
-                {nav.quiz.label}
-              </Link>
+                {nav.book}
+              </a>
               <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
                 <CurrencySelector />
                 <LanguageSelector locale={locale} />

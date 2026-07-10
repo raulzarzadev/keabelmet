@@ -17,7 +17,7 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
   const t = await getPageDictionary("rates", locale) as Record<string, any>
 
   const pkgKeys = ["safariBahiaMagdalena", "safariLaVentana", "surfCamp"]
-  const prices = [2900, 3150, 3400]
+  const prices = [3500, 3000, 7500]
   const featured = [false, true, false]
 
   return (

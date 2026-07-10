@@ -39,10 +39,10 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "ballena-gris",
-    title: "Avistamiento de Ballenas",
+    title: "Ballena Gris · Puerto Chale",
     image: "/ballena-gris-spyhop-new.jpg",
-    price: 3150,
-    duration: "4 horas",
+    price: 2800,
+    duration: "Día completo",
     description: "Observa ballenas grises en su entorno natural en Baja California Sur.",
     href: "/experiencias/tour-ballena-gris",
     season: ["invierno"],
@@ -61,9 +61,9 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "buceo-cabo-pulmo",
-    title: "Buceo en Cabo Pulmo",
+    title: "Scuba Diving Cabo Pulmo",
     image: "/buceo-cabo-pulmo-cardumen.jpg",
-    price: 2800,
+    price: 3200,
     duration: "Dia completo",
     description: "Descubre uno de los mejores sitios de buceo en Mexico.",
     href: "/experiencias/buceo-cabo-pulmo",
@@ -72,10 +72,10 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "buceo-la-paz",
-    title: "Buceo en La Paz",
+    title: "Scuba Diving Isla Espiritu Santo",
     image: "/buceo-la-paz-buzo.jpg",
-    price: 3500,
-    duration: "Medio dia",
+    price: 3700,
+    duration: "Dia completo",
     description: "Buceo con lobos marinos en el Archipielago Espiritu Santo.",
     href: "/experiencias/buceo-la-paz",
     season: ["invierno", "primavera", "verano", "otono"],
@@ -100,6 +100,17 @@ const allTours: TourRecommendation[] = [
     duration: "6 horas",
     description: "Seafari exclusivo en busca de mobulas, delfines, ballenas y orcas en el Golfo de California.",
     href: "/experiencias/safari-la-ventana",
+    season: ["invierno", "primavera", "verano", "otono"],
+    vibe: ["aventurera", "educativa"],
+  },
+  {
+    id: "scuba-discovery",
+    title: "Scuba Discovery desde Playa",
+    image: "/snorkeling-coral-reef.jpg",
+    price: 1500,
+    duration: "Medio dia",
+    description: "Tu primera respiracion bajo el agua, sin experiencia previa. Max. 6 m.",
+    href: "/experiencias/scuba-discovery",
     season: ["invierno", "primavera", "verano", "otono"],
     vibe: ["aventurera", "educativa"],
   },
@@ -132,12 +143,15 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
       ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena", "ballena-gris"].includes(t.id)
     )
 
-    // Add diving tours if applicable
+    // Add diving tours if applicable; beginners get Scuba Discovery instead
     if (hasDiveAccess) {
       const diveTours = allTours.filter((t) =>
         ["buceo-cabo-pulmo", "buceo-la-paz"].includes(t.id)
       )
       results = [...diveTours, ...results]
+    } else if (activities.includes("buceo")) {
+      const discovery = allTours.find((t) => t.id === "scuba-discovery")
+      if (discovery) results = [discovery, ...results]
     }
 
     // Add surf camp if interested
@@ -181,7 +195,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
   if (activities.length > 0) {
     const activityTourMap: Record<string, string[]> = {
       snorkel: ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena"],
-      buceo: ["buceo-cabo-pulmo", "buceo-la-paz"],
+      buceo: ["buceo-cabo-pulmo", "buceo-la-paz", "scuba-discovery"],
       surf: ["surf-camp"],
       avistamiento: ["ballena-gris", "safari-la-ventana", "safari-bahia-magdalena"],
       hikes: ["espiritu-santo"],
