@@ -57,10 +57,12 @@ export const experiences: Experience[] = [
 		days: 1,
 		difficulty: "moderate",
 		capacity: { min: 2, max: 6 },
+		featuredOrder: 2,
 		i18n: {
 			es: {
-				title: "Safari Bahía Magdalena",
-				description: "Corrida de sardinas, marlines y lobos marinos. Nov–Dic.",
+				title: "El safari más salvaje del Pacífico",
+				description:
+					"Miles de sardinas, marlines cazando a máxima velocidad, ballenas alimentándose. Un fenómeno de solo dos meses al año.",
 				durationLabel: "Día completo",
 				capacityLabel: "2-6 personas",
 				highlights: [
@@ -69,7 +71,7 @@ export const experiences: Experience[] = [
 					"Lobos marinos",
 					"Lunch incluido",
 				],
-				badge: "Bahía Magdalena",
+				badge: "Bahía Magdalena · Nov-Dic",
 			},
 			en: {
 				title: "Safari Bahía Magdalena",
@@ -113,10 +115,12 @@ export const experiences: Experience[] = [
 		days: 1,
 		difficulty: "moderate",
 		capacity: { min: 2, max: 8 },
+		featuredOrder: 1,
 		i18n: {
 			es: {
-				title: "Safari La Ventana",
-				description: "Migración de móbulas. Abril–Junio (según temporada).",
+				title: "Móbulas que vuelan, ballenas que emergen",
+				description:
+					"Un safari sin guion. Navegamos guiados por biólogos marinos en busca de lo inesperado, a 40 minutos de La Paz.",
 				durationLabel: "Medio día",
 				capacityLabel: "2-8 personas",
 				highlights: [
@@ -125,7 +129,7 @@ export const experiences: Experience[] = [
 					"Guía experto",
 					"Fotos y videos",
 				],
-				badge: "Mar de Cortés",
+				badge: "La Ventana · Isla Cerralvo",
 			},
 			en: {
 				title: "Safari La Ventana",
@@ -300,7 +304,6 @@ export const experiences: Experience[] = [
 		days: 1,
 		difficulty: "easy",
 		capacity: { min: 2, max: 8 },
-		featuredOrder: 2,
 		i18n: {
 			es: {
 				title: "Tour Ballena Gris en Puerto Chale",
@@ -419,15 +422,16 @@ export const experiences: Experience[] = [
 		days: 1,
 		difficulty: "easy",
 		capacity: { min: 2, max: 10 },
-		featuredOrder: 1,
+		featuredOrder: 4,
 		i18n: {
 			es: {
-				title: "Isla Espíritu Santo",
-				description: "El acuario del mundo: lobos marinos, playas y kayak.",
+				title: "Nada con lobos marinos curiosos",
+				description:
+					"Playas vírgenes, aguas cristalinas y una de las colonias de lobos marinos más grandes del Golfo de California.",
 				durationLabel: "Día completo",
 				capacityLabel: "2-10 personas",
 				highlights: ["Lobos marinos", "Playas vírgenes", "Snorkel", "Picnic"],
-				badge: "Reserva de la Biosfera UNESCO",
+				badge: "Isla Espíritu Santo · Patrimonio UNESCO",
 			},
 			en: {
 				title: "Espíritu Santo Island",
@@ -474,9 +478,9 @@ export const experiences: Experience[] = [
 		featuredOrder: 3,
 		i18n: {
 			es: {
-				title: "Buceo en Cabo Pulmo",
+				title: "El único arrecife vivo del Golfo",
 				description:
-					"Parque Nacional, arrecife coralino más antiguo del Pacífico.",
+					"25,000 años de coral, tiburones toro, cardúmenes masivos. Una de las reservas marinas más exitosas del mundo.",
 				durationLabel: "Día completo",
 				capacityLabel: "2-6 personas",
 				highlights: [
@@ -485,7 +489,7 @@ export const experiences: Experience[] = [
 					"2 inmersiones",
 					"Equipo opcional",
 				],
-				badge: "Parque Nacional Cabo Pulmo",
+				badge: "Cabo Pulmo · Parque Nacional",
 			},
 			en: {
 				title: "Diving in Cabo Pulmo",

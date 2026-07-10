@@ -11,10 +11,10 @@
   },
   "hero": {
     "badge": "Siendo agua y tierra",
-    "title": "Descubre La Paz, donde el desierto conoce el mar",
-    "subtitle": "Vive aventuras imborrables en las aguas de Baja California Sur. Nada con lobos marinos y mobulas, avista ballenas por primera vez y explora playas virgenes.",
-    "cta1": "Explora expediciones",
-    "cta2": "Ver testimonios",
+    "title": "Donde el desierto conoce al mar salvaje",
+    "subtitle": "Expediciones marinas guiadas por biólogos en Baja California Sur. Nada con lobos marinos, encuentra ballenas frente a frente y explora el Mar de Cortés como pocos lo han visto.",
+    "cta1": "Explora las expediciones",
+    "cta2": "Nuestra historia",
     "cta3": "Reserva tu experiencia",
     "stat1_value": "15+",
     "stat1_label": "Experiencias únicas",
@@ -22,6 +22,10 @@
     "stat2_label": "Aventureros satisfechos",
     "stat3_value": "9.8",
     "stat3_label": "Calificación promedio"
+  },
+  "quote": {
+    "text": "El Mar de Cortés es uno de los mares más biodiversos del planeta. Jacques Cousteau lo llamó \"el acuario del mundo\".",
+    "attribution": "Cada expedición que vives con nosotros es un encuentro real con esa vida salvaje — y una forma de ayudar a protegerla."
   },
   "adventures": {
     "title": "Aventuras",
@@ -35,6 +39,8 @@
     "title": "Lo que suele arruinar un safari...",
     "titleHighlight": "y como lo hacemos distinto",
     "subtitle": "Comparativa directa: lo que pasa con muchos tours vs. como trabajamos en Keabelmet",
+    "typicalLabel": "Lo típico",
+    "keabelmetLabel": "Keabelmet",
     "problems": [
       {
         "title": "Demasiada gente en la panga",
@@ -91,12 +97,28 @@
       {
         "title": "Grupos Pequenos",
         "text": "Experiencias en grupos reducidos para una atención personalizada y conexiones auténticas."
+      },
+      {
+        "title": "Liderado por Biólogos Marinos",
+        "text": "Especialistas con experiencia real en expediciones y campamentos remotos."
+      },
+      {
+        "title": "Educación y Conservación",
+        "text": "Cada expedición es una oportunidad para aprender y proteger el ecosistema."
+      },
+      {
+        "title": "Foto y Video Incluidos",
+        "text": "Capturas profesionales de tu experiencia, listas para revivir el momento."
       }
-    ],
-    "bio_title": "Liderado por Biologos Marinos",
-    "bio_text": "Nuestro equipo cuenta con biologos marinos y especialistas con amplia experiencia en expediciones y campamentos en zonas remotas.",
-    "edu_title": "Educación y Conservación",
-    "edu_text": "Creemos en la educación, la conservación y el turismo responsable como base de todo lo que hacemos. Cada expedición es una oportunidad para aprender y proteger."
+    ]
+  },
+  "story": {
+    "badge": "Nuestra historia",
+    "title": "Fundada por un biólogo marino,",
+    "titleHighlight": "no por una agencia de tours",
+    "p1": "Keabelmet nació en 2024 de la mano de Mauricio López Sosa, biólogo marino egresado de la UABCS, guía, videógrafo y capitán de cada expedición. El nombre viene del guaycura: \"Kea\" (siendo) y \"Cabelmet\" (agua y tierra).",
+    "p2": "Cada expedición está diseñada para ser un encuentro real con la vida silvestre del Mar de Cortés — sin guion, sin masificación, con respeto por los animales y su hábitat.",
+    "founderName": "Mauricio López Sosa"
   },
   "consequences": {
     "title": "Si eliges mal, podrias perderte...",
@@ -125,10 +147,10 @@
     ]
   },
   "cta": {
-    "title": "Tu aventura en La Baja comienza aquí",
-    "subtitle": "Cupo limitado. Experiencias auténticas, responsables y documentadas en foto y video.",
-    "btn1": "Reservar Safari La Ventana",
-    "btn2": "Ve ballenas por primera vez"
+    "title": "Tu próximo encuentro salvaje empieza aquí",
+    "subtitle": "Escríbenos por WhatsApp y armamos tu expedición — grupos pequeños, guía biólogo marino, foto y video incluidos.",
+    "btn1": "Reservar por WhatsApp",
+    "btn2": "Ver expediciones"
   },
   "googleReviews": {
     "title": "Lo que dicen en Google",

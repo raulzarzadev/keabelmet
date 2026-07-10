@@ -7,6 +7,7 @@ import { Price } from "@/contexts/CurrencyContext"
 import { getInstagramPosts } from "@/lib/instagram"
 import InstagramGallery from "@/components/sections/InstagramGallery"
 import { experiences, getFeaturedAdventures, localizeExperience } from "@/constants/experiences"
+import { buildWhatsAppLink } from "@/config/whatsapp"
 
 function l(path: string, locale: Locale): string {
   if (locale === defaultLocale) return path
@@ -20,10 +21,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const instagramPosts = await getInstagramPosts(6)
 
   const hero = d.hero
+  const quote = d.quote
   const adv = d.adventures
   const comp = d.comparison
   const exp = d.expeditions
   const why = d.whyUs
+  const story = d.story
   const cons = d.consequences
   const faq = d.faq
   const cta = d.cta
@@ -66,7 +69,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {hero.cta1}
             </Link>
             <Link
-              href="#testimonios"
+              href="#historia"
               className="inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/10 px-5 py-3 text-white transition hover:bg-white/20"
             >
               {hero.cta2}
@@ -89,6 +92,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
       </section>
+
+      {/* QUOTE */}
+      {quote && (
+        <section className="bg-teal-900 py-14">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <p className="text-xl font-medium italic leading-relaxed text-white sm:text-2xl">{quote.text}</p>
+            <p className="mt-4 text-sm text-teal-200">{quote.attribution}</p>
+          </div>
+        </section>
+      )}
 
       {/* 1.5) FEATURED ADVENTURES */}
       <section id="featured-adventures" className="bg-white py-20">
@@ -179,6 +192,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-base text-gray-600">{comp.subtitle}</p>
           </div>
+
+          {comp.typicalLabel && comp.keabelmetLabel && (
+            <div className="mb-3 hidden lg:grid lg:grid-cols-2 lg:gap-5">
+              <div className="text-center text-xs font-semibold uppercase tracking-wide text-orange-700">{comp.typicalLabel}</div>
+              <div className="text-center text-xs font-semibold uppercase tracking-wide text-teal-700">{comp.keabelmetLabel}</div>
+            </div>
+          )}
 
           <div className="grid gap-4 lg:gap-5">
             {[0, 1, 2].map((idx) => {
@@ -309,7 +329,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">{why.subtitle}</p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {why.features.map((feat: any, i: number) => (
               <div key={i} className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-100">
@@ -318,6 +338,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     {i === 1 && <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
                     {i === 2 && <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />}
                     {i === 3 && <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />}
+                    {i === 4 && <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />}
+                    {i === 5 && <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z M15 13a3 3 0 11-6 0 3 3 0 016 0z" />}
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">{feat.title}</h3>
@@ -325,20 +347,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             ))}
           </div>
-          <div className="mt-12 rounded-2xl bg-white p-8 shadow-sm">
-            <div className="grid gap-6 md:grid-cols-2">
+        </div>
+      </section>
+
+      {/* NUESTRA HISTORIA */}
+      {story && (
+        <section id="historia" className="bg-white">
+          <div className="mx-auto max-w-5xl px-6 py-16">
+            <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
               <div>
-                <h3 className="mb-3 text-lg font-bold text-gray-900">{why.bio_title}</h3>
-                <p className="text-neutral-600">{why.bio_text}</p>
-              </div>
-              <div>
-                <h3 className="mb-3 text-lg font-bold text-gray-900">{why.edu_title}</h3>
-                <p className="text-neutral-600">{why.edu_text}</p>
+                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-xs font-medium text-teal-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
+                  {story.badge}
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  {story.title} <span className="block text-teal-600">{story.titleHighlight}</span>
+                </h2>
+                <p className="mt-5 leading-relaxed text-neutral-700">{story.p1}</p>
+                <p className="mt-4 leading-relaxed text-neutral-700">{story.p2}</p>
+                <p className="mt-5 text-sm font-semibold text-gray-900">— {story.founderName}</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Instagram Gallery Preview */}
       {instagramPosts && ig && (
@@ -399,14 +431,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <h2 className="text-3xl font-bold sm:text-4xl drop-shadow-lg">{cta.title}</h2>
           <p className="mt-4 text-lg drop-shadow-md">{cta.subtitle}</p>
           <div className="mt-8 flex justify-center gap-4">
-            <Link
-              href={l("/experiencias/safari-bahia-magdalena", locale)}
+            <a
+              href={buildWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700 transition drop-shadow-md inline-flex items-center justify-center"
             >
               {cta.btn1}
-            </Link>
+            </a>
             <Link
-              href={l("/experiencias/safari-la-ventana", locale)}
+              href={l("/experiencias", locale)}
               className="rounded-lg border border-white px-6 py-3 font-semibold text-white hover:bg-white/10 transition drop-shadow-md inline-flex items-center justify-center"
             >
               {cta.btn2}
