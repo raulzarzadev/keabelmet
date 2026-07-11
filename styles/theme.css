@@ -220,6 +220,30 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   .quiz-panel { padding: 26px; }
 }
 
+/* SEASON CALENDAR */
+.calsec { padding: 0 32px 120px; max-width: var(--maxw); margin: 0 auto; }
+.cal-scroll { overflow-x: auto; padding-bottom: 6px; }
+.cal-table { min-width: 880px; display: grid; grid-template-columns: 210px repeat(12, 1fr); gap: 6px; align-items: center; }
+.cal-corner { }
+.cal-month {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--sand-dim); text-align: center; padding-bottom: 8px;
+}
+.cal-tour { font-size: 12.5px; font-weight: 600; color: var(--sand); padding-right: 14px; line-height: 1.3; }
+.cal-tour a:hover { color: var(--teal); }
+.cal-tour span { display: block; font-size: 10.5px; font-weight: 500; color: var(--sand-dim); letter-spacing: 0.04em; }
+.cal-cell { height: 36px; border-radius: 10px; border: 1px solid var(--line); background: rgba(244,239,228,0.02); transition: transform .2s ease; }
+.cal-cell.on { background: rgba(40,194,160,0.35); border-color: var(--teal-dim); }
+.cal-cell.peak { background: var(--teal); border-color: var(--teal); box-shadow: 0 0 16px rgba(40,194,160,0.35); }
+.cal-cell.on:hover, .cal-cell.peak:hover { transform: scale(1.08); }
+.cal-legend { display: flex; gap: 26px; margin-top: 26px; font-size: 12.5px; color: var(--sand-dim); align-items: center; flex-wrap: wrap; }
+.cal-legend .cal-dot { width: 16px; height: 16px; border-radius: 6px; display: inline-block; margin-right: 9px; vertical-align: -3px; border: 1px solid var(--line); }
+.cal-legend .cal-dot.on { background: rgba(40,194,160,0.35); border-color: var(--teal-dim); }
+.cal-legend .cal-dot.peak { background: var(--teal); border-color: var(--teal); }
+@media (max-width: 480px) {
+  .calsec { padding-left: 18px; padding-right: 18px; }
+}
+
 /* COMPARISON */
 .compare { background: var(--ink-2); padding: 120px 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .compare-grid { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
+import SeasonCalendar from "@/components/SeasonCalendar"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
 const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
@@ -307,6 +308,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ))}
         </div>
       </section>
+
+      {/* SEASON CALENDAR */}
+      <SeasonCalendar locale={locale} />
 
       {/* COMPARISON */}
       <section className="compare">

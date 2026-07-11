@@ -169,11 +169,11 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			],
 		},
 		pricing: {
-			kicker: "Opciones de tour",
-			title: "Elige la experiencia que mejor se adapte a tu estilo de viaje",
+			kicker: "Precio",
+			title: "Reserva tu nado con el tiburón ballena",
 			cards: [
 				{
-					name: "Tour Estándar",
+					name: "Tour compartido",
 					amount: "$1,800",
 					amountNote: "MXN / persona",
 					items: [
@@ -181,25 +181,12 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 						"Acompañamiento de guía certificado",
 						"Equipo de snorkel incluido",
 						"Fotos y video de tu aventura",
+						"Permiso de acceso a la zona regulada",
 					],
-					waText: "Quiero reservar Tiburón Ballena estándar",
-				},
-				{
-					name: "Velero privado",
-					amount: "Desde $16,000",
-					amountNote: "MXN / hasta 6",
-					items: [
-						"Velero privado de 40 pies",
-						"Capitán y marinero",
-						"Costo extra por adulto o menor",
-						"Itinerario personalizable",
-					],
-					waText: "Quiero reservar Tiburón Ballena privado",
-					featured: true,
-					featuredTag: "Privado",
+					waText: "Quiero reservar Tiburón Ballena",
 				},
 			],
-			note: "¿Buscas algo más exclusivo? También tenemos flota de yates de lujo (40-70 pies) desde $30,000 MXN, con catering y tripulación — consulta con un asesor.",
+			note: "Temporada oficial: octubre a abril. Actividad accesible para todas las edades — los menores participan bajo supervisión de un adulto.",
 		},
 		finalCta: {
 			image: "/manta-ray-swimming.png",
