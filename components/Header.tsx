@@ -14,7 +14,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
     items: [
       { label: "Expediciones", path: "/#expediciones" },
       { label: "¿Qué Tour Elegir?", path: "/#quiz", teal: true },
-      { label: "Nuestra Historia", path: "/#historia" },
+      { label: "Calendario", path: "/#calendario", teal: true },
       { label: "Galería", path: "/#instagram" },
       { label: "Contacto", path: "/#contacto" },
     ],
@@ -24,7 +24,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
     items: [
       { label: "Expeditions", path: "/#expediciones" },
       { label: "Which Tour?", path: "/#quiz", teal: true },
-      { label: "Our Story", path: "/#historia" },
+      { label: "Calendar", path: "/#calendario", teal: true },
       { label: "Gallery", path: "/#instagram" },
       { label: "Contact", path: "/#contacto" },
     ],
@@ -34,7 +34,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
     items: [
       { label: "Expéditions", path: "/#expediciones" },
       { label: "Quel tour ?", path: "/#quiz", teal: true },
-      { label: "Notre Histoire", path: "/#historia" },
+      { label: "Calendrier", path: "/#calendario", teal: true },
       { label: "Galerie", path: "/#instagram" },
       { label: "Contact", path: "/#contacto" },
     ],
@@ -44,7 +44,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
     items: [
       { label: "探险项目", path: "/#expediciones" },
       { label: "选择行程？", path: "/#quiz", teal: true },
-      { label: "我们的故事", path: "/#historia" },
+      { label: "季节日历", path: "/#calendario", teal: true },
       { label: "图库", path: "/#instagram" },
       { label: "联系我们", path: "/#contacto" },
     ],
