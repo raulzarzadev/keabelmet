@@ -306,6 +306,14 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .founder-text h2 { font-size: clamp(28px,3.6vw,44px); margin-bottom: 24px; }
 .founder-text p { color: var(--sand-dim); font-size: 16px; margin-bottom: 16px; max-width: 520px; }
 .founder-text .sign { margin-top: 26px; font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 20px; color: var(--teal); }
+.founder-text .sign span { display: block; font-size: 12.5px; font-weight: 600; color: var(--sand-dim); letter-spacing: 0.04em; margin-top: 4px; }
+.read-more {
+  background: none; border: none; padding: 0; margin-top: 6px; cursor: pointer;
+  font-family: var(--font-poppins), 'Poppins', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal);
+  border-bottom: 1.5px solid var(--teal); padding-bottom: 2px; display: inline-block;
+}
+.read-more:hover { color: var(--sand); border-color: var(--sand); }
 
 /* INSTAGRAM */
 .insta-head { max-width: var(--maxw); margin: 0 auto; padding: 100px 32px 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }

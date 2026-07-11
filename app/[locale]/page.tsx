@@ -2,6 +2,7 @@ import Link from "next/link"
 import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
+import FounderStory from "@/components/FounderStory"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
 const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
@@ -370,18 +371,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* FOUNDER */}
-      <section className="founder" id="historia">
-        <div className="founder-media">
-          <img src="/images/orca-safari.jpg" alt="Mauricio López Sosa, fundador de Keabelmet" />
-        </div>
-        <div className="founder-text">
-          <span className="kicker">Nuestra historia</span>
-          <h2>Fundada por un biólogo marino, no por una agencia de tours</h2>
-          <p>Keabelmet nació en 2024 de la mano de Mauricio López Sosa, biólogo marino egresado de la UABCS, guía, videógrafo y capitán de cada expedición. El nombre viene del guaycura: "Kea" (siendo) y "Cabelmet" (agua y tierra).</p>
-          <p>Cada expedición está diseñada para ser un encuentro real con la vida silvestre del Mar de Cortés — sin guion, sin masificación, con respeto por los animales y su hábitat.</p>
-          <div className="sign">Mauricio López Sosa</div>
-        </div>
-      </section>
+      <FounderStory />
 
       {/* INSTAGRAM */}
       <section className="insta" id="instagram">
