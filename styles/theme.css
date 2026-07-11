@@ -229,9 +229,15 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--sand-dim); text-align: center; padding-bottom: 8px;
 }
-.cal-tour { font-size: 12.5px; font-weight: 600; color: var(--sand); padding-right: 14px; line-height: 1.3; }
+.cal-tour { font-size: 12.5px; font-weight: 600; color: var(--sand); padding-right: 14px; line-height: 1.3; display: flex; align-items: center; gap: 10px; }
 .cal-tour a:hover { color: var(--teal); }
-.cal-tour span { display: block; font-size: 10.5px; font-weight: 500; color: var(--sand-dim); letter-spacing: 0.04em; }
+.cal-tour .cal-note { display: block; font-size: 10.5px; font-weight: 500; color: var(--sand-dim); letter-spacing: 0.04em; }
+.cal-icon {
+  flex: none; width: 34px; height: 34px; border-radius: 10px;
+  background: rgba(40,194,160,0.08); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; color: var(--teal);
+}
+.cal-icon svg { width: 19px; height: 19px; }
 .cal-cell { height: 36px; border-radius: 10px; border: 1px solid var(--line); background: rgba(244,239,228,0.02); transition: transform .2s ease; }
 .cal-cell.on { background: rgba(40,194,160,0.35); border-color: var(--teal-dim); }
 .cal-cell.peak { background: var(--teal); border-color: var(--teal); box-shadow: 0 0 16px rgba(40,194,160,0.35); }

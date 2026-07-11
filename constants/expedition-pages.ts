@@ -120,13 +120,13 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 		hero: {
 			image: "/snorkeling-coral-reef.jpg",
 			alt: "Nado con tiburón ballena en La Paz",
-			kicker: "La Paz · Oct - Abr",
+			kicker: "La Paz · Nov - Mar",
 			title: "Nada con el pez más grande del mundo",
 			text: "El nado con tiburón ballena es una de las experiencias marinas más emblemáticas de La Paz, Baja California Sur. Aguas tranquilas, encuentros responsables y regulados.",
 		},
 		quickFacts: [
 			{ value: "2 horas", label: "Muelle fiscal La Paz" },
-			{ value: "Oct - Abr", label: "Temporada oficial" },
+			{ value: "Nov - Mar", label: "Temporada oficial" },
 			{ value: "Regulado", label: "Zona y permisos oficiales" },
 			{ value: "Todas las edades", label: "Actividad accesible" },
 		],
@@ -186,7 +186,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 					waText: "Quiero reservar Tiburón Ballena",
 				},
 			],
-			note: "Temporada oficial: octubre a abril. Actividad accesible para todas las edades — los menores participan bajo supervisión de un adulto.",
+			note: "Temporada oficial: noviembre a marzo, con temporada alta de diciembre a febrero. Actividad accesible para todas las edades — los menores participan bajo supervisión de un adulto.",
 		},
 		finalCta: {
 			image: "/manta-ray-swimming.png",
@@ -649,7 +649,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			title: "Ellos también quieren jugar",
 			paragraphs: [
 				"Los Islotes, en el extremo norte del archipiélago Espíritu Santo, alberga una colonia de más de 400 lobos marinos extremadamente curiosos y juguetones con los buceadores. Te rodean, hacen piruetas y crean recuerdos que no se olvidan.",
-				"Además de la lobera, visitamos otros sitios del archipiélago con formaciones rocosas impresionantes, cuevas submarinas y una diversidad de vida marina que le valió el título del acuario del mundo.",
+				"Además de la lobera, visitamos otros sitios del archipiélago con formaciones rocosas impresionantes, cuevas submarinas, barcos hundidos llenos de vida y una diversidad marina que le valió el título del acuario del mundo.",
 			],
 			commitTitle: "Encuentro responsable",
 			commitText: "Buceamos con prácticas de bajo impacto y respeto por la colonia: ellos deciden acercarse — y casi siempre lo hacen.",
@@ -668,7 +668,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				{ time: "Mañana", title: "Salida desde La Paz", text: "Nos encontramos en el Muelle fiscal y navegamos hacia el archipiélago Espíritu Santo." },
 				{ time: "Los Islotes", title: "Inmersión con lobos marinos", text: "Buceo guiado en la lobera más famosa del Golfo de California." },
 				{ time: "Superficie", title: "Intervalo y lunch", text: "Descanso, lunch y bebidas a bordo frente a los paisajes de la reserva." },
-				{ time: "Inmersión 2", title: "Cuevas y formaciones", text: "Segunda inmersión en sitios con formaciones rocosas y vida marina diversa." },
+				{ time: "Inmersión 2", title: "Barcos hundidos y cuevas", text: "Segunda inmersión en sitios con barcos hundidos, formaciones rocosas y vida marina diversa." },
 				{ time: "Tarde", title: "Regreso a La Paz", text: "Volvemos al muelle con las fotos y videos de tu día." },
 			],
 		},
@@ -678,7 +678,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			items: [
 				{ image: "/sea-lions-swimming-underwater.jpg", alt: "Lobos marinos bajo el agua", label: "Lobos Marinos · Todo el año" },
 				{ image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg", alt: "Buceo con lobos marinos", label: "Los Islotes" },
-				{ image: "/buceo-la-paz-buzo.jpg", alt: "Buzo en La Paz", label: "Cuevas y Formaciones" },
+				{ image: "/buceo-la-paz-buzo.jpg", alt: "Buzo en La Paz", label: "Barcos Hundidos y Cuevas" },
 			],
 		},
 		includes: {

@@ -238,13 +238,13 @@ export const experiences: Experience[] = [
 		i18n: {
 			es: {
 				title: "Tiburón Ballena",
-				description: "Nada con el pez más grande del mundo. Oct–Abr.",
+				description: "Nada con el pez más grande del mundo. Nov–Mar.",
 				durationLabel: "Medio día",
 				capacityLabel: "2-8 personas",
 				highlights: [
 					"Tiburón ballena",
 					"Snorkel",
-					"Oct–Abr",
+					"Nov–Mar",
 					"Equipo incluido",
 				],
 				badge: "La Paz",
@@ -407,14 +407,14 @@ export const experiences: Experience[] = [
 			es: {
 				title: "Scuba Diving Isla Espíritu Santo",
 				description:
-					"Buceo con lobos marinos en el archipiélago. 7-8 horas.",
+					"Buceo con lobos marinos y barcos hundidos en el archipiélago. 7-8 horas.",
 				durationLabel: "Día completo (7-8 h)",
 				capacityLabel: "2-6 personas",
 				highlights: [
 					"Lobos marinos",
+					"Barcos hundidos",
 					"Discovery $4,200",
 					"2 inmersiones",
-					"Todo el año",
 				],
 				badge: "Archipiélago Espíritu Santo",
 			},
