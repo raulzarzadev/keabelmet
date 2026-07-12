@@ -126,7 +126,7 @@ export const experiences: Experience[] = [
 				badge: "La Ventana · Isla Cerralvo",
 			},
 			en: {
-				title: "Safari La Ventana",
+				title: "Ocean Safari La Ventana",
 				description: "Mobula ray migration. April–June (seasonal).",
 				durationLabel: "Half day",
 				capacityLabel: "2-8 people",
@@ -139,7 +139,7 @@ export const experiences: Experience[] = [
 				badge: "Sea of Cortez",
 			},
 			fr: {
-				title: "Safari La Ventana",
+				title: "Ocean Safari La Ventana",
 				description: "Migration des mobulas. Avril–Juin (selon saison).",
 				durationLabel: "Demi-journée",
 				capacityLabel: "2-8 personnes",
@@ -152,7 +152,7 @@ export const experiences: Experience[] = [
 				badge: "Mer de Cortés",
 			},
 			zh: {
-				title: "Safari La Ventana",
+				title: "Ocean Safari La Ventana",
 				description: "蝠鲼迁徙。4–6月（视季节而定）。",
 				durationLabel: "半天",
 				capacityLabel: "2-8人",

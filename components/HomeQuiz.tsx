@@ -179,9 +179,9 @@ const es: QuizDict = {
   discovery: "Discovery",
   tours: {
     "la-ventana": {
-      name: "Safari La Ventana",
+      name: "Ocean Safari La Ventana",
       reason: "Media jornada en lancha con móbulas saltando y avistamientos sorpresa de ballenas y delfines — ideal si no buceas y quieres adrenalina en poco tiempo.",
-      waText: "Hola! quiero reservar Safari La Ventana",
+      waText: "Hola! quiero reservar Ocean Safari La Ventana",
     },
     "bahia-magdalena": {
       name: "Safari Bahía Magdalena",
@@ -199,7 +199,7 @@ const es: QuizDict = {
       waText: "Hola! quiero reservar Tiburón Ballena",
     },
     "espiritu-santo-dia": {
-      name: "Isla Espíritu Santo",
+      name: "Tour Snorkel Isla Espíritu Santo",
       reason: "Snorkel todo el año con una de las colonias de lobos marinos más grandes del Golfo, playas vírgenes y picnic incluido.",
       seasonNotes: "De jun a ago los lobeznos recién nacidos restringen el nado — se observa sin entrar al agua por su seguridad.",
       waText: "Hola! quiero reservar Isla Espíritu Santo",
@@ -265,9 +265,9 @@ const en: QuizDict = {
   discovery: "Discovery",
   tours: {
     "la-ventana": {
-      name: "La Ventana Safari",
+      name: "Ocean Safari La Ventana",
       reason: "Half a day on the boat with jumping mobulas and surprise sightings of whales and dolphins — ideal if you don't dive and want adrenaline in little time.",
-      waText: "Hi! I want to book the La Ventana Safari",
+      waText: "Hi! I want to book the Ocean Safari La Ventana",
     },
     "bahia-magdalena": {
       name: "Magdalena Bay Safari",
@@ -285,7 +285,7 @@ const en: QuizDict = {
       waText: "Hi! I want to book the Whale Shark tour",
     },
     "espiritu-santo-dia": {
-      name: "Espiritu Santo Island",
+      name: "Snorkel Tour Espiritu Santo Island",
       reason: "Year-round snorkeling with one of the largest sea lion colonies in the Gulf, pristine beaches and picnic included.",
       seasonNotes: "From Jun to Aug newborn pups restrict swimming — observation is done from the boat for their safety.",
       waText: "Hi! I want to book Espiritu Santo Island",

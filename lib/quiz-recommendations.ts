@@ -28,7 +28,7 @@ export interface TourRecommendation {
 const allTours: TourRecommendation[] = [
   {
     id: "espiritu-santo",
-    title: "Isla Espiritu Santo",
+    title: "Tour Snorkel Isla Espiritu Santo",
     image: "/lobo-marino-espiritu-santo.jpg",
     price: 1800,
     duration: "6 horas",
@@ -94,7 +94,7 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "safari-la-ventana",
-    title: "Seafari La Ventana",
+    title: "Ocean Safari La Ventana",
     image: "/images/orca-la-ventana-hero.jpeg",
     price: 3000,
     duration: "6 horas",

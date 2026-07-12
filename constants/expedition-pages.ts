@@ -4,13 +4,13 @@ import { expeditionPagesEn } from "./expedition-pages.en"
 
 /**
  * Contenido (es) de las páginas de detalle de expedición, siguiendo la
- * plantilla del diseño aprobado (ballen-1). Safari La Ventana y Tiburón
+ * plantilla del diseño aprobado (ballen-1). Ocean Safari La Ventana y Tiburón
  * Ballena vienen textuales de la referencia; el resto adapta el contenido
  * real existente a la misma estructura.
  */
 export const expeditionPages: Record<string, ExpeditionPageData> = {
 	"safari-la-ventana": {
-		breadcrumb: "Safari La Ventana",
+		breadcrumb: "Ocean Safari La Ventana",
 		hero: {
 			image: "/images/orca-safari.jpg",
 			alt: "Seafari en La Ventana, Baja California Sur",
@@ -36,7 +36,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 		},
 		split: {
 			image: "/images/safari/nuestrocompromiso2.jpeg",
-			alt: "Guía con equipo de snorkel en Seafari La Ventana",
+			alt: "Guía con equipo de snorkel en Ocean Safari La Ventana",
 			kicker: "Cómo es la experiencia",
 			title: "Un día completo diseñado para el encuentro",
 			text: "Navegación en busca de vida marina, snorkel cuando las condiciones lo permiten y exploración en Isla Cerralvo — todo guiado por biólogos marinos que leen el comportamiento animal y las señales del mar en tiempo real. Cerramos el día con ceviche fresco y fruta de temporada frente al mar.",
@@ -89,7 +89,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 						"Picnic en Isla Cerralvo",
 						"Guía biólogo marino y foto/video incluidos",
 					],
-					waText: "Quiero reservar el Safari La Ventana compartido",
+					waText: "Quiero reservar el Ocean Safari La Ventana compartido",
 				},
 				{
 					name: "Lancha privada",
@@ -101,7 +101,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 						"Mismo itinerario y equipo incluido",
 						"Guía biólogo marino y foto/video incluidos",
 					],
-					waText: "Quiero reservar el Safari La Ventana privado",
+					waText: "Quiero reservar el Ocean Safari La Ventana privado",
 					featured: true,
 					featuredTag: "Privado",
 				},
@@ -113,7 +113,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			alt: "Móbulas saltando en La Ventana",
 			title: "Móbulas que vuelan, ballenas que emergen",
 			text: "Vive un safari sin guion a 40 minutos de La Paz. Cupos limitados por salida.",
-			waText: "Quiero reservar el Safari La Ventana",
+			waText: "Quiero reservar el Ocean Safari La Ventana",
 		},
 	},
 
@@ -418,7 +418,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 	},
 
 	"tour-espiritu-santo": {
-		breadcrumb: "Isla Espíritu Santo",
+		breadcrumb: "Tour Snorkel Isla Espíritu Santo",
 		hero: {
 			image: "/espiritu-santo-island-paradise-beach.jpg",
 			alt: "Playa paradisíaca en Isla Espíritu Santo",

@@ -199,8 +199,8 @@ export const pageSeoMap = {
   },
   tourEspirituSanto: {
     title: {
-      es: "Tour Isla Espiritu Santo",
-      en: "Espiritu Santo Island Tour",
+      es: "Tour Snorkel Isla Espiritu Santo",
+      en: "Snorkel Tour Espiritu Santo Island",
       fr: "Tour Ile Espiritu Santo",
       zh: "圣灵岛之旅",
     },
@@ -297,9 +297,9 @@ export const pageSeoMap = {
   },
   safariLaVentana: {
     title: {
-      es: "Safari La Ventana",
-      en: "La Ventana Safari",
-      fr: "Safari La Ventana",
+      es: "Ocean Safari La Ventana",
+      en: "Ocean Safari La Ventana",
+      fr: "Ocean Safari La Ventana",
       zh: "拉文塔纳野生动物之旅",
     },
     description: {

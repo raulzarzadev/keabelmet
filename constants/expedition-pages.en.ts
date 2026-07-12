@@ -3,7 +3,7 @@ import type { ExpeditionPageData } from "@/components/ExpeditionDetail"
 /** English content for the expedition detail pages. */
 export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 	"safari-la-ventana": {
-		breadcrumb: "La Ventana Safari",
+		breadcrumb: "Ocean Safari La Ventana",
 		hero: {
 			image: "/images/orca-safari.jpg",
 			alt: "Seafari in La Ventana, Baja California Sur",
@@ -82,7 +82,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 						"Picnic on Cerralvo Island",
 						"Marine biologist guide, photo/video included",
 					],
-					waText: "I want to book the shared La Ventana Safari",
+					waText: "I want to book the shared Ocean Safari La Ventana",
 				},
 				{
 					name: "Private boat",
@@ -94,7 +94,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 						"Same itinerary and gear included",
 						"Marine biologist guide, photo/video included",
 					],
-					waText: "I want to book the private La Ventana Safari",
+					waText: "I want to book the private Ocean Safari La Ventana",
 					featured: true,
 					featuredTag: "Private",
 				},
@@ -106,7 +106,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 			alt: "Mobulas jumping in La Ventana",
 			title: "Mobulas that fly, whales that surface",
 			text: "Live a safari with no script, 40 minutes from La Paz. Limited spots per departure.",
-			waText: "I want to book the La Ventana Safari",
+			waText: "I want to book the Ocean Safari La Ventana",
 		},
 	},
 
@@ -411,7 +411,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 	},
 
 	"tour-espiritu-santo": {
-		breadcrumb: "Espiritu Santo Island",
+		breadcrumb: "Snorkel Tour Espiritu Santo Island",
 		hero: {
 			image: "/espiritu-santo-island-paradise-beach.jpg",
 			alt: "Paradise beach on Espiritu Santo Island",
