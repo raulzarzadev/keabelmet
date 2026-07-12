@@ -7,7 +7,7 @@
       "quizSubtitle": "Responde unas preguntas y te recomendamos la mejor experiencia",
       "tours": [
         {
-          "name": "Isla Espiritu Santo",
+          "name": "Tour Snorkel Isla Espíritu Santo",
           "href": "/experiencias/tour-espiritu-santo"
         },
         {
@@ -35,7 +35,7 @@
           "href": "/experiencias/safari-bahia-magdalena"
         },
         {
-          "name": "Safari La Ventana",
+          "name": "Ocean Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
         }
       ]
@@ -73,7 +73,7 @@
       "quizSubtitle": "Answer a few questions and we'll recommend the best experience",
       "tours": [
         {
-          "name": "Espiritu Santo Island",
+          "name": "Snorkel Tour Espiritu Santo Island",
           "href": "/experiencias/tour-espiritu-santo"
         },
         {
@@ -97,7 +97,7 @@
           "href": "/experiencias/safari-bahia-magdalena"
         },
         {
-          "name": "Safari La Ventana",
+          "name": "Ocean Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
         }
       ]
@@ -159,7 +159,7 @@
           "href": "/experiencias/safari-bahia-magdalena"
         },
         {
-          "name": "Safari La Ventana",
+          "name": "Ocean Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
         }
       ]
@@ -221,7 +221,7 @@
           "href": "/experiencias/safari-bahia-magdalena"
         },
         {
-          "name": "Safari La Ventana",
+          "name": "Ocean Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
         }
       ]
