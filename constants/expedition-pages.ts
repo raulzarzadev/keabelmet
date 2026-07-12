@@ -1,4 +1,6 @@
 import type { ExpeditionPageData } from "@/components/ExpeditionDetail"
+import type { Locale } from "@/lib/i18n"
+import { expeditionPagesEn } from "./expedition-pages.en"
 
 /**
  * Contenido (es) de las páginas de detalle de expedición, siguiendo la
@@ -78,8 +80,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Compartido",
-					amount: "$3,000",
-					amountNote: "MXN / persona",
+					amountMxn: 3000,
+					amountNote: "/ persona",
 					items: [
 						"Mínimo 4 personas",
 						"Lancha compartida, hasta 8-10 pax",
@@ -91,8 +93,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Lancha privada",
-					amount: "$16,000",
-					amountNote: "MXN / hasta 8 pax",
+					amountMxn: 16000,
+					amountNote: "/ hasta 8 pax",
 					items: [
 						"Lancha exclusiva para tu grupo",
 						"Horario flexible dentro del día",
@@ -174,8 +176,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Tour compartido",
-					amount: "$1,800",
-					amountNote: "MXN / persona",
+					amountMxn: 1800,
+					amountNote: "/ persona",
 					items: [
 						"Transporte en panga compartida",
 						"Acompañamiento de guía certificado",
@@ -268,8 +270,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Compartido",
-					amount: "$3,500",
-					amountNote: "MXN / persona",
+					amountMxn: 3500,
+					amountNote: "/ persona",
 					items: [
 						"Lancha compartida, 2-6 personas",
 						"Transporte desde La Paz",
@@ -281,7 +283,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Lancha privada",
-					amount: "A cotizar",
+					amountText: "A cotizar",
 					amountNote: "para tu grupo",
 					items: [
 						"Lancha exclusiva para tu grupo",
@@ -377,8 +379,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Compartido · 2 horas en lancha",
-					amount: "$2,800",
-					amountNote: "MXN / persona",
+					amountMxn: 2800,
+					amountNote: "/ persona",
 					items: [
 						"Transporte redondo desde La Paz",
 						"2 horas de navegación con ballenas",
@@ -390,8 +392,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Compartido · 3 horas en lancha",
-					amount: "$3,000",
-					amountNote: "MXN / persona",
+					amountMxn: 3000,
+					amountNote: "/ persona",
 					items: [
 						"Transporte redondo desde La Paz",
 						"3 horas de navegación con ballenas",
@@ -486,8 +488,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Compartido",
-					amount: "$1,800",
-					amountNote: "MXN / persona",
+					amountMxn: 1800,
+					amountNote: "/ persona",
 					items: [
 						"Lancha compartida, 2-10 personas",
 						"Nado con lobos marinos en Los Islotes",
@@ -499,7 +501,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Lancha privada",
-					amount: "A cotizar",
+					amountText: "A cotizar",
 					amountNote: "para tu grupo",
 					items: [
 						"Lancha exclusiva para tu grupo",
@@ -592,8 +594,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Buzos certificados",
-					amount: "$3,200",
-					amountNote: "MXN / persona con tu equipo",
+					amountMxn: 3200,
+					amountNote: "/ persona con tu equipo",
 					items: [
 						"2 inmersiones compartidas",
 						"$3,400 MXN con equipo completo incluido",
@@ -605,8 +607,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Discovery Scuba Diver",
-					amount: "$3,800",
-					amountNote: "MXN / persona",
+					amountMxn: 3800,
+					amountNote: "/ persona",
 					items: [
 						"Para principiantes sin experiencia",
 						"Instrucción teórica completa",
@@ -698,8 +700,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Buzos certificados",
-					amount: "$3,700",
-					amountNote: "MXN / persona",
+					amountMxn: 3700,
+					amountNote: "/ persona",
 					items: [
 						"2-3 inmersiones en el archipiélago",
 						"Dive master certificado",
@@ -710,8 +712,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Discovery Scuba Diver",
-					amount: "$4,200",
-					amountNote: "MXN / persona",
+					amountMxn: 4200,
+					amountNote: "/ persona",
 					items: [
 						"Para principiantes sin experiencia",
 						"Instrucción teórica completa",
@@ -792,8 +794,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Por persona",
-					amount: "$1,500",
-					amountNote: "MXN / persona",
+					amountMxn: 1500,
+					amountNote: "/ persona",
 					items: [
 						"Sin experiencia previa necesaria",
 						"Instructor certificado todo el tiempo",
@@ -805,7 +807,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 				},
 				{
 					name: "Grupo privado",
-					amount: "A cotizar",
+					amountText: "A cotizar",
 					amountNote: "hasta 6 personas",
 					items: [
 						"Instructor exclusivo para tu grupo",
@@ -828,4 +830,10 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			waText: "Quiero reservar Scuba Discovery desde Playa",
 		},
 	},
+}
+
+/** ES nativo; EN traducido; FR y ZH usan EN mientras se traducen. */
+export function getExpeditionPage(slug: string, locale: Locale): ExpeditionPageData {
+	if (locale === "es") return expeditionPages[slug]
+	return expeditionPagesEn[slug] ?? expeditionPages[slug]
 }

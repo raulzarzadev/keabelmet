@@ -3,7 +3,7 @@ import { isValidLocale, defaultLocale } from "@/lib/i18n"
 
 import { buildPageMeta } from "@/lib/seo"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
-import { expeditionPages } from "@/constants/expedition-pages"
+import { getExpeditionPage } from "@/constants/expedition-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -14,5 +14,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ScubaDiscoveryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
-  return <ExpeditionDetail data={expeditionPages["scuba-discovery"]} locale={locale} />
+  return <ExpeditionDetail data={getExpeditionPage("scuba-discovery", locale)} locale={locale} />
 }

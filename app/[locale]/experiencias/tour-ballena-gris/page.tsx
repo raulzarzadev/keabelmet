@@ -4,7 +4,7 @@ import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { buildPageMeta, buildUrl, getPageSeo, SITE_URL } from "@/lib/seo"
 import { JsonLd, breadcrumbSchema, touristTripSchema, seasonalEventSchema } from "@/lib/jsonLd"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
-import { expeditionPages } from "@/constants/expedition-pages"
+import { getExpeditionPage } from "@/constants/expedition-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -45,7 +45,7 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
   return (
     <>
       <JsonLd data={schemas} />
-      <ExpeditionDetail data={expeditionPages["tour-ballena-gris"]} locale={locale} />
+      <ExpeditionDetail data={getExpeditionPage("tour-ballena-gris", locale)} locale={locale} />
     </>
   )
 }

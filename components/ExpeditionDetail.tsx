@@ -1,6 +1,7 @@
 import Link from "next/link"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
+import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
 export function wa(text: string): string {
@@ -31,7 +32,12 @@ export interface IncludeItem {
 
 export interface PriceCard {
   name: string
-  amount: string
+  /** Monto en MXN; se convierte con el selector de divisa. */
+  amountMxn?: number
+  /** Texto fijo cuando no hay monto (p. ej. "A cotizar"). */
+  amountText?: string
+  /** Prefijo del monto (p. ej. "Desde "). */
+  amountPrefix?: string
   amountNote: string
   items: string[]
   waText: string
@@ -93,13 +99,63 @@ export interface ExpeditionPageData {
   }
 }
 
+interface UiDict {
+  home: string
+  expeditions: string
+  bookAdventure: string
+  viewItinerary: string
+  book: string
+  bookNow: string
+  viewOthers: string
+}
+
+const ui: Record<Locale, UiDict> = {
+  es: {
+    home: "Inicio",
+    expeditions: "Expediciones",
+    bookAdventure: "Reserva tu aventura",
+    viewItinerary: "Ver itinerario",
+    book: "Reservar",
+    bookNow: "Reserva ahora",
+    viewOthers: "Ver otras expediciones",
+  },
+  en: {
+    home: "Home",
+    expeditions: "Expeditions",
+    bookAdventure: "Book your adventure",
+    viewItinerary: "View itinerary",
+    book: "Book",
+    bookNow: "Book now",
+    viewOthers: "View other expeditions",
+  },
+  fr: {
+    home: "Accueil",
+    expeditions: "Expéditions",
+    bookAdventure: "Réservez votre aventure",
+    viewItinerary: "Voir l'itinéraire",
+    book: "Réserver",
+    bookNow: "Réservez maintenant",
+    viewOthers: "Voir d'autres expéditions",
+  },
+  zh: {
+    home: "首页",
+    expeditions: "探险项目",
+    bookAdventure: "预订您的冒险",
+    viewItinerary: "查看行程",
+    book: "预订",
+    bookNow: "立即预订",
+    viewOthers: "查看其他探险",
+  },
+}
+
 export default function ExpeditionDetail({ data, locale = defaultLocale }: { data: ExpeditionPageData; locale?: Locale }) {
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
+  const t = ui[locale] || ui.es
 
   return (
     <main>
       <div className="crumbs">
-        <Link href={lh("/")}>Inicio</Link> / <Link href={lh("/#expediciones")}>Expediciones</Link> / {data.breadcrumb}
+        <Link href={lh("/")}>{t.home}</Link> / <Link href={lh("/#expediciones")}>{t.expeditions}</Link> / {data.breadcrumb}
       </div>
 
       {/* HERO */}
@@ -110,8 +166,8 @@ export default function ExpeditionDetail({ data, locale = defaultLocale }: { dat
           <h1>{data.hero.title}</h1>
           <p>{data.hero.text}</p>
           <div className="hero-ctas">
-            <a href="#precios" className="btn btn-solid">Reserva tu aventura</a>
-            <a href="#itinerario" className="btn btn-ghost">Ver itinerario</a>
+            <a href="#precios" className="btn btn-solid">{t.bookAdventure}</a>
+            <a href="#itinerario" className="btn btn-ghost">{t.viewItinerary}</a>
           </div>
         </div>
       </section>
@@ -212,7 +268,12 @@ export default function ExpeditionDetail({ data, locale = defaultLocale }: { dat
             <div key={card.name} className={`price-card${card.featured ? " feat" : ""}`}>
               {card.featured && <span className="price-tag">{card.featuredTag ?? "Privado"}</span>}
               <h3>{card.name}</h3>
-              <div className="amount">{card.amount} <span>{card.amountNote}</span></div>
+              <div className="amount">
+                {card.amountPrefix}
+                {typeof card.amountMxn === "number" ? <Price amount={card.amountMxn} /> : card.amountText}
+                {" "}
+                <span>{card.amountNote}</span>
+              </div>
               <ul>
                 {card.items.map((li) => (
                   <li key={li}>{li}</li>
@@ -224,7 +285,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale }: { dat
                 rel="noopener noreferrer"
                 className={`btn ${card.featured ? "btn-teal" : "btn-solid"}`}
               >
-                Reservar
+                {t.book}
               </a>
             </div>
           ))}
@@ -239,8 +300,8 @@ export default function ExpeditionDetail({ data, locale = defaultLocale }: { dat
           <h2>{data.finalCta.title}</h2>
           <p>{data.finalCta.text}</p>
           <div className="ctas">
-            <a href={wa(data.finalCta.waText)} className="btn btn-solid" target="_blank" rel="noopener noreferrer">Reserva ahora</a>
-            <Link href={lh("/#expediciones")} className="btn btn-ghost">Ver otras expediciones</Link>
+            <a href={wa(data.finalCta.waText)} className="btn btn-solid" target="_blank" rel="noopener noreferrer">{t.bookNow}</a>
+            <Link href={lh("/#expediciones")} className="btn btn-ghost">{t.viewOthers}</Link>
           </div>
         </div>
       </section>
