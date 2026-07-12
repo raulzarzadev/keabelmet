@@ -11,7 +11,7 @@
           "href": "/experiencias/tour-espiritu-santo"
         },
         {
-          "name": "Avistamiento de Ballenas",
+          "name": "Ballena Gris Puerto Chale",
           "href": "/experiencias/tour-ballena-gris"
         },
         {
@@ -19,12 +19,16 @@
           "href": "/experiencias/tiburón-ballena"
         },
         {
-          "name": "Buceo en Cabo Pulmo",
+          "name": "Scuba Diving Cabo Pulmo",
           "href": "/experiencias/buceo-cabo-pulmo"
         },
         {
-          "name": "Buceo en La Paz",
+          "name": "Scuba Diving Isla Espíritu Santo",
           "href": "/experiencias/buceo-la-paz"
+        },
+        {
+          "name": "Scuba Discovery desde Playa",
+          "href": "/experiencias/scuba-discovery"
         },
         {
           "name": "Safari Bahía Magdalena",
@@ -33,18 +37,6 @@
         {
           "name": "Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
-        },
-        {
-          "name": "Renta un Velero",
-          "href": "/experiencias/renta-velero"
-        },
-        {
-          "name": "Renta un Yate",
-          "href": "/experiencias/renta-yate"
-        },
-        {
-          "name": "Surf Camp",
-          "href": "/surf-camp"
         }
       ]
     },
@@ -107,18 +99,6 @@
         {
           "name": "Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
-        },
-        {
-          "name": "Rent a Sailboat",
-          "href": "/experiencias/renta-velero"
-        },
-        {
-          "name": "Rent a Yacht",
-          "href": "/experiencias/renta-yate"
-        },
-        {
-          "name": "Surf Camp",
-          "href": "/surf-camp"
         }
       ]
     },
@@ -181,18 +161,6 @@
         {
           "name": "Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
-        },
-        {
-          "name": "Location de voilier",
-          "href": "/experiencias/renta-velero"
-        },
-        {
-          "name": "Location de yacht",
-          "href": "/experiencias/renta-yate"
-        },
-        {
-          "name": "Surf Camp",
-          "href": "/surf-camp"
         }
       ]
     },
@@ -255,18 +223,6 @@
         {
           "name": "Safari La Ventana",
           "href": "/experiencias/safari-la-ventana"
-        },
-        {
-          "name": "帆船租赁",
-          "href": "/experiencias/renta-velero"
-        },
-        {
-          "name": "游艇租赁",
-          "href": "/experiencias/renta-yate"
-        },
-        {
-          "name": "Surf Camp",
-          "href": "/surf-camp"
         }
       ]
     },

@@ -16,9 +16,9 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const t = await getPageDictionary("rates", locale) as Record<string, any>
 
-  const pkgKeys = ["safariBahiaMagdalena", "safariLaVentana", "surfCamp"]
-  const prices = [2900, 3150, 3400]
-  const featured = [false, true, false]
+  const pkgKeys = ["safariBahiaMagdalena", "safariLaVentana"]
+  const prices = [3500, 3000]
+  const featured = [false, true]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -31,7 +31,7 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
       </section>
 
       <section className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {pkgKeys.map((key, i) => {
             const pkg = t.packages?.[key] || {}
             return (

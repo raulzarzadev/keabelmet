@@ -39,10 +39,10 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "ballena-gris",
-    title: "Avistamiento de Ballenas",
+    title: "Ballena Gris · Puerto Chale",
     image: "/ballena-gris-spyhop-new.jpg",
-    price: 3150,
-    duration: "4 horas",
+    price: 2800,
+    duration: "Día completo",
     description: "Observa ballenas grises en su entorno natural en Baja California Sur.",
     href: "/experiencias/tour-ballena-gris",
     season: ["invierno"],
@@ -61,9 +61,9 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "buceo-cabo-pulmo",
-    title: "Buceo en Cabo Pulmo",
+    title: "Scuba Diving Cabo Pulmo",
     image: "/buceo-cabo-pulmo-cardumen.jpg",
-    price: 2800,
+    price: 3200,
     duration: "Dia completo",
     description: "Descubre uno de los mejores sitios de buceo en Mexico.",
     href: "/experiencias/buceo-cabo-pulmo",
@@ -72,10 +72,10 @@ const allTours: TourRecommendation[] = [
   },
   {
     id: "buceo-la-paz",
-    title: "Buceo en La Paz",
+    title: "Scuba Diving Isla Espiritu Santo",
     image: "/buceo-la-paz-buzo.jpg",
-    price: 3500,
-    duration: "Medio dia",
+    price: 3700,
+    duration: "Dia completo",
     description: "Buceo con lobos marinos en el Archipielago Espiritu Santo.",
     href: "/experiencias/buceo-la-paz",
     season: ["invierno", "primavera", "verano", "otono"],
@@ -104,37 +104,15 @@ const allTours: TourRecommendation[] = [
     vibe: ["aventurera", "educativa"],
   },
   {
-    id: "renta-velero",
-    title: "Renta un Velero",
-    image: "/sailboat-sailing-sunset-sea-of-cortez-romantic.jpg",
-    price: 10500,
-    duration: "Flexible",
-    description: "Navega el Golfo de California en un velero privado.",
-    href: "/experiencias/renta-velero",
+    id: "scuba-discovery",
+    title: "Scuba Discovery desde Playa",
+    image: "/snorkeling-coral-reef.jpg",
+    price: 1500,
+    duration: "Medio dia",
+    description: "Tu primera respiracion bajo el agua, sin experiencia previa. Max. 6 m.",
+    href: "/experiencias/scuba-discovery",
     season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["relajada"],
-  },
-  {
-    id: "renta-yate",
-    title: "Renta un Yate",
-    image: "/luxury-yacht-ocean-balandra-beach-turquoise-lagoon.jpg",
-    price: 29750,
-    duration: "Flexible",
-    description: "Experiencia premium en yate por el Golfo de California.",
-    href: "/experiencias/renta-yate",
-    season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["relajada"],
-  },
-  {
-    id: "surf-camp",
-    title: "Surf Camp La Paz",
-    image: "/images/surf-camp-hero.jpeg",
-    price: 7500,
-    duration: "6 dias",
-    description: "Campamento de surf con fisioterapeuta y video-analisis diario.",
-    href: "/surf-camp",
-    season: ["invierno", "primavera", "verano", "otono"],
-    vibe: ["deportiva", "aventurera"],
+    vibe: ["aventurera", "educativa"],
   },
 ]
 
@@ -144,9 +122,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
 
   if (!canSwim) {
     // Can't swim: boat-based activities only
-    results = allTours.filter((t) =>
-      ["renta-velero", "renta-yate", "ballena-gris"].includes(t.id)
-    )
+    results = allTours.filter((t) => ["ballena-gris"].includes(t.id))
   } else {
     // Can swim
     const hasDiveAccess = hasDived || (diveCert && diveCert !== "No")
@@ -156,27 +132,17 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
       ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena", "ballena-gris"].includes(t.id)
     )
 
-    // Add diving tours if applicable
+    // Add diving tours if applicable; beginners get Scuba Discovery instead
     if (hasDiveAccess) {
       const diveTours = allTours.filter((t) =>
         ["buceo-cabo-pulmo", "buceo-la-paz"].includes(t.id)
       )
       results = [...diveTours, ...results]
+    } else if (activities.includes("buceo")) {
+      const discovery = allTours.find((t) => t.id === "scuba-discovery")
+      if (discovery) results = [discovery, ...results]
     }
 
-    // Add surf camp if interested
-    if (activities.includes("surf")) {
-      const surfTour = allTours.find((t) => t.id === "surf-camp")
-      if (surfTour) results.push(surfTour)
-    }
-
-    // Add boat rentals if interested
-    if (activities.includes("embarcacion")) {
-      const boatTours = allTours.filter((t) =>
-        ["renta-velero", "renta-yate"].includes(t.id)
-      )
-      results.push(...boatTours)
-    }
   }
 
   // Group modifiers: prioritize certain tours
@@ -190,7 +156,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
   }
 
   if (groupType === "Pareja" || groupType === "Couple" || groupType === "En couple" || groupType === "情侣") {
-    const coupleIds = ["safari-la-ventana", "renta-velero", "espiritu-santo"]
+    const coupleIds = ["safari-la-ventana", "espiritu-santo"]
     results.sort((a, b) => {
       const aCouple = coupleIds.includes(a.id) ? 0 : 1
       const bCouple = coupleIds.includes(b.id) ? 0 : 1
@@ -200,7 +166,7 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
 
   const isLargeGroup = groupSize === "5-6" || groupSize === "7+"
   if (isLargeGroup) {
-    const largeIds = ["renta-velero", "renta-yate", "espiritu-santo"]
+    const largeIds = ["espiritu-santo"]
     results.sort((a, b) => {
       const aLarge = largeIds.includes(a.id) ? 0 : 1
       const bLarge = largeIds.includes(b.id) ? 0 : 1
@@ -212,11 +178,8 @@ export function getRecommendations(answers: QuizAnswers): TourRecommendation[] {
   if (activities.length > 0) {
     const activityTourMap: Record<string, string[]> = {
       snorkel: ["espiritu-santo", "safari-la-ventana", "tiburon-ballena", "safari-bahia-magdalena"],
-      buceo: ["buceo-cabo-pulmo", "buceo-la-paz"],
-      surf: ["surf-camp"],
-      embarcacion: ["renta-velero", "renta-yate"],
+      buceo: ["buceo-cabo-pulmo", "buceo-la-paz", "scuba-discovery"],
       avistamiento: ["ballena-gris", "safari-la-ventana", "safari-bahia-magdalena"],
-      pesca: ["renta-velero", "renta-yate"],
       hikes: ["espiritu-santo"],
     }
     const relevantIds = new Set(activities.flatMap((a) => activityTourMap[a] || []))

@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Poppins } from "next/font/google"
+import "@/styles/theme.css"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "@/components/Header"
@@ -11,7 +12,11 @@ import { locales, type Locale, isValidLocale } from "@/lib/i18n"
 import { pageMeta, SITE_URL } from "@/lib/seo"
 import { notFound } from "next/navigation"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+})
 
 const localeToLang: Record<Locale, string> = {
   es: "es",
@@ -166,7 +171,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${geist.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} kbm antialiased`}>
         <CurrencyProvider>
           <Header locale={locale} />
           {children}

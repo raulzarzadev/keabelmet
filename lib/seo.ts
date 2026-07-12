@@ -52,9 +52,6 @@ export const BASE_KEYWORDS = [
   "buceo Cabo Pulmo",
   "buceo La Paz",
   "Isla Espíritu Santo tour",
-  "renta velero La Paz",
-  "renta yate La Paz",
-  "surf camp La Paz",
   "Mar de Cortés tours",
   "Sea of Cortez tours",
   "marine safari Baja California",
@@ -152,10 +149,10 @@ export const pageSeoMap = {
       zh: "体验与行程",
     },
     description: {
-      es: "Descubre nuestras experiencias marinas en Baja California Sur: safaris, surf camp, buceo y mas.",
-      en: "Discover our marine experiences in Baja California Sur: safaris, surf camp, diving and more.",
-      fr: "Decouvrez nos experiences marines en Basse-Californie du Sud : safaris, surf camp, plongee et plus.",
-      zh: "探索我们在下加利福尼亚州的海洋体验：野生动物之旅、冲浪营、潜水等。",
+      es: "Descubre nuestras experiencias marinas en Baja California Sur: safaris, avistamiento de ballenas, buceo y mas.",
+      en: "Discover our marine experiences in Baja California Sur: safaris, whale watching, diving and more.",
+      fr: "Decouvrez nos experiences marines en Basse-Californie du Sud : safaris, observation des baleines, plongee et plus.",
+      zh: "探索我们在下加利福尼亚州的海洋体验：野生动物之旅、观鲸、潜水等。",
     },
   },
   gallery: {
@@ -184,20 +181,6 @@ export const pageSeoMap = {
       en: "Check rates for our marine expeditions in Baja California Sur. All-inclusive packages.",
       fr: "Consultez les tarifs de nos expeditions marines en Basse-Californie du Sud. Forfaits tout compris.",
       zh: "查看我们在下加利福尼亚州的海洋探险价格。全包套餐。",
-    },
-  },
-  surfCamp: {
-    title: {
-      es: "Surf Camp La Paz",
-      en: "Surf Camp La Paz",
-      fr: "Surf Camp La Paz",
-      zh: "拉巴斯冲浪营",
-    },
-    description: {
-      es: "Surf camp de 6 dias en La Paz, Baja California Sur. Clases diarias, analisis de video, transporte y snacks incluidos. Aprende a surfear con instructores expertos.",
-      en: "6-day surf camp in La Paz, Baja California Sur. Daily lessons, video analysis, transport and snacks included. Learn to surf with expert instructors.",
-      fr: "Surf camp de 6 jours a La Paz, Basse-Californie du Sud. Cours quotidiens, analyse video, transport et snacks inclus. Apprenez a surfer avec des instructeurs experts.",
-      zh: "拉巴斯 6 天冲浪营。每日课程、视频分析、交通和小吃包含。跟专家教练学冲浪。",
     },
   },
   quiz: {
@@ -272,44 +255,30 @@ export const pageSeoMap = {
   },
   buceoLaPaz: {
     title: {
-      es: "Buceo en La Paz",
-      en: "La Paz Diving",
-      fr: "Plongee a La Paz",
-      zh: "拉巴斯潜水",
+      es: "Scuba Diving Isla Espiritu Santo",
+      en: "Espiritu Santo Island Scuba Diving",
+      fr: "Plongee a l'ile Espiritu Santo",
+      zh: "圣灵岛水肺潜水",
     },
     description: {
-      es: "Bucea con lobos marinos en Los Islotes, La Paz. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
-      en: "Dive with sea lions at Los Islotes, La Paz. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment.",
-      fr: "Plongez avec les otaries a Los Islotes, La Paz. Explorez les grottes sous-marines et formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet.",
-      zh: "在拉巴斯洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
+      es: "Bucea con lobos marinos en Los Islotes, Archipielago Espiritu Santo. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
+      en: "Dive with sea lions at Los Islotes, Espiritu Santo Archipelago. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment.",
+      fr: "Plongez avec les otaries a Los Islotes, archipel Espiritu Santo. Explorez les grottes sous-marines et formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet.",
+      zh: "在圣灵岛群岛洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
     },
   },
-  rentaVelero: {
+  scubaDiscovery: {
     title: {
-      es: "Renta de Velero",
-      en: "Sailboat Rental",
-      fr: "Location de Voilier",
-      zh: "帆船租赁",
+      es: "Scuba Discovery desde Playa",
+      en: "Scuba Discovery from the Beach",
+      fr: "Scuba Discovery depuis la plage",
+      zh: "海滩体验潜水",
     },
     description: {
-      es: "Renta un velero privado en La Paz, BCS. Navega el Mar de Cortes con capitan, snorkel, kayaks y comida gourmet. Tours romanticos y de aventura disponibles.",
-      en: "Rent a private sailboat in La Paz, BCS. Sail the Sea of Cortez with captain, snorkeling, kayaks and gourmet food. Romantic and adventure tours available.",
-      fr: "Louez un voilier prive a La Paz, BCS. Naviguez dans la mer de Cortez avec capitaine, snorkeling, kayaks et cuisine gourmande. Tours romantiques et d'aventure disponibles.",
-      zh: "在 BCS 拉巴斯租用私人帆船。与船长一起航行科尔特斯海，浮潜、皮划艇和美食。提供浪漫和冒险之旅。",
-    },
-  },
-  rentaYate: {
-    title: {
-      es: "Renta de Yate",
-      en: "Yacht Rental",
-      fr: "Location de Yacht",
-      zh: "游艇租赁",
-    },
-    description: {
-      es: "Renta un yate de lujo en La Paz, BCS. Chef a bordo, bebidas premium, deportes acuaticos y servicio VIP. La maxima experiencia en el Mar de Cortes.",
-      en: "Rent a luxury yacht in La Paz, BCS. Onboard chef, premium drinks, water sports and VIP service. The ultimate Sea of Cortez experience.",
-      fr: "Louez un yacht de luxe a La Paz, BCS. Chef a bord, boissons premium, sports nautiques et service VIP. L'experience ultime dans la mer de Cortez.",
-      zh: "在 BCS 拉巴斯租用豪华游艇。船上厨师、高级饮品、水上运动和 VIP 服务。终极科尔特斯海体验。",
+      es: "Tu primera respiracion bajo el agua en La Paz, BCS. Sin experiencia previa, maximo 6 m de profundidad, con instructor certificado y equipo incluido.",
+      en: "Your first breath underwater in La Paz, BCS. No prior experience, max depth 6 m, with a certified instructor and gear included.",
+      fr: "Votre premiere respiration sous l'eau a La Paz, BCS. Sans experience prealable, profondeur max 6 m, avec instructeur certifie et equipement inclus.",
+      zh: "在 BCS 拉巴斯的水下初体验。无需经验，最大深度6米，认证教练陪同，含装备。",
     },
   },
   safariBahiaMagdalena: {
@@ -338,20 +307,6 @@ export const pageSeoMap = {
       en: "Marine expedition in La Ventana, BCS. Watch mobula ray and whale migration with expert guides. Half-day adventure April-June in the Sea of Cortez.",
       fr: "Expedition marine a La Ventana, BCS. Observez la migration des raies mobula et baleines avec des guides experts. Aventure d'une demi-journee d'avril a juin dans la mer de Cortez.",
       zh: "BCS 拉文塔纳海洋探险。与专家导游一起观赏海蝠鲼和鲸鱼迁徙。4 月至 6 月科尔特斯海半日冒险。",
-    },
-  },
-  ballenaGris: {
-    title: {
-      es: "Expedicion Ballena Gris",
-      en: "Gray Whale Expedition",
-      fr: "Expedition Baleine Grise",
-      zh: "灰鲸探险",
-    },
-    description: {
-      es: "Expedicion para avistar ballenas grises en Baja California Sur. Encuentros cercanos en su santuario natural con guias certificados y embarcaciones seguras.",
-      en: "Gray whale watching expedition in Baja California Sur. Close encounters in their natural sanctuary with certified guides and safe boats.",
-      fr: "Expedition d'observation des baleines grises en Basse-Californie du Sud. Rencontres rapprochees dans leur sanctuaire naturel avec des guides certifies et des bateaux surs.",
-      zh: "下加利福尼亚州灰鲸观赏探险。与认证导游和安全船只在其自然保护区进行近距离接触。",
     },
   },
 } as const satisfies Record<string, PageSeo>

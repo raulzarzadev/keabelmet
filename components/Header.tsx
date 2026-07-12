@@ -1,74 +1,54 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
+import Logo from "@/components/Logo"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "@/components/CurrencySelector"
+import { buildWhatsAppLink } from "@/config/whatsapp"
 
-const navLabels: Record<Locale, { items: { label: string; path: string }[]; mobileOnly: { label: string; path: string }[]; quiz: { label: string; path: string }; book: string }> = {
+const navLabels: Record<Locale, { items: { label: string; path: string; teal?: boolean }[]; book: string }> = {
   es: {
     items: [
-      { label: "Experiencias", path: "/experiencias" },
-      { label: "Tarifas", path: "/tarifas" },
-      { label: "Galeria", path: "/galeria" },
-      { label: "Sobre Nosotros", path: "/sobre-nosotros" },
-      { label: "Contacto", path: "/contacto" },
+      { label: "Expediciones", path: "/#expediciones" },
+      { label: "¿Qué Tour Elegir?", path: "/#quiz", teal: true },
+      { label: "Calendario", path: "/#calendario", teal: true },
+      { label: "Galería", path: "/#instagram" },
+      { label: "Contacto", path: "/#contacto" },
     ],
-    mobileOnly: [
-      { label: "Inicio", path: "/" },
-      { label: "Blog", path: "/blog" },
-    ],
-    quiz: { label: "Escoge tu tour", path: "/quiz" },
     book: "Reservar",
   },
   en: {
     items: [
-      { label: "Experiences", path: "/experiencias" },
-      { label: "Rates", path: "/tarifas" },
-      { label: "Gallery", path: "/galeria" },
-      { label: "About Us", path: "/sobre-nosotros" },
-      { label: "Contact", path: "/contacto" },
+      { label: "Expeditions", path: "/#expediciones" },
+      { label: "Which Tour?", path: "/#quiz", teal: true },
+      { label: "Calendar", path: "/#calendario", teal: true },
+      { label: "Gallery", path: "/#instagram" },
+      { label: "Contact", path: "/#contacto" },
     ],
-    mobileOnly: [
-      { label: "Home", path: "/" },
-      { label: "Blog", path: "/blog" },
-    ],
-    quiz: { label: "Find your tour", path: "/quiz" },
     book: "Book Now",
   },
   fr: {
     items: [
-      { label: "Experiences", path: "/experiencias" },
-      { label: "Tarifs", path: "/tarifas" },
-      { label: "Galerie", path: "/galeria" },
-      { label: "A Propos", path: "/sobre-nosotros" },
-      { label: "Contact", path: "/contacto" },
+      { label: "Expéditions", path: "/#expediciones" },
+      { label: "Quel tour ?", path: "/#quiz", teal: true },
+      { label: "Calendrier", path: "/#calendario", teal: true },
+      { label: "Galerie", path: "/#instagram" },
+      { label: "Contact", path: "/#contacto" },
     ],
-    mobileOnly: [
-      { label: "Accueil", path: "/" },
-      { label: "Blog", path: "/blog" },
-    ],
-    quiz: { label: "Trouvez votre tour", path: "/quiz" },
-    book: "Reserver",
+    book: "Réserver",
   },
   zh: {
     items: [
-      { label: "\u4f53\u9a8c\u9879\u76ee", path: "/experiencias" },
-      { label: "\u4ef7\u683c", path: "/tarifas" },
-      { label: "\u56fe\u5e93", path: "/galeria" },
-      { label: "\u5173\u4e8e\u6211\u4eec", path: "/sobre-nosotros" },
-      { label: "\u8054\u7cfb\u6211\u4eec", path: "/contacto" },
+      { label: "探险项目", path: "/#expediciones" },
+      { label: "选择行程？", path: "/#quiz", teal: true },
+      { label: "季节日历", path: "/#calendario", teal: true },
+      { label: "图库", path: "/#instagram" },
+      { label: "联系我们", path: "/#contacto" },
     ],
-    mobileOnly: [
-      { label: "\u9996\u9875", path: "/" },
-      { label: "\u535a\u5ba2", path: "/blog" },
-    ],
-    quiz: { label: "\u627e\u5230\u4f60\u7684\u884c\u7a0b", path: "/quiz" },
-    book: "\u9884\u7ea6",
+    book: "预约",
   },
 }
 
@@ -79,90 +59,58 @@ function localizeHref(path: string, locale: Locale): string {
 
 export default function Header({ locale = "es" }: { locale?: Locale }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [solid, setSolid] = useState(false)
   const nav = navLabels[locale] || navLabels.es
 
+  useEffect(() => {
+    const onScroll = () => setSolid(window.scrollY > 40)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href={localizeHref("/", locale)} className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="Keabelmet"
-              width={40}
-              height={40}
-              priority
-              className="w-10 h-10 rounded-full object-contain"
-            />
-            <span className="text-xl font-semibold text-gray-900">Keabelmet</span>
-          </Link>
+    <header className={`kbm-header${solid ? " solid" : ""}`}>
+      <div className="wrap">
+        <Logo href={localizeHref("/", locale)} />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {nav.items.map((item) => (
-              <Link
-                key={item.path}
-                href={localizeHref(item.path, locale)}
-                className="text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+        <nav className={`links${isMenuOpen ? " open" : ""}`}>
+          {nav.items.map((item) => (
+            <Link
+              key={item.path}
+              href={localizeHref(item.path, locale)}
+              style={item.teal ? { color: "var(--teal)" } : undefined}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-          {/* Right side: Currency + Language + Quiz CTA */}
-          <div className="hidden lg:flex items-center gap-2">
+        <div className="nav-cta">
+          <div className="switcher-group">
             <CurrencySelector />
             <LanguageSelector locale={locale} />
-            <Link
-              href={localizeHref(nav.quiz.path, locale)}
-              className="px-4 py-2 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              {nav.quiz.label}
-            </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-700"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <a
+            href={buildWhatsAppLink("Hola! quiero reservar una expedición con Keabelmet")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-teal"
+            style={{ padding: "12px 22px" }}
+          >
+            {nav.book}
+          </a>
+          <button
+            className={`burger${isMenuOpen ? " open" : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menú"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col gap-4">
-              {[...nav.mobileOnly, ...nav.items].map((item) => (
-                <Link
-                  key={item.path}
-                  href={localizeHref(item.path, locale)}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium py-2"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Link
-                href={localizeHref(nav.quiz.path, locale)}
-                onClick={() => setIsMenuOpen(false)}
-                className="px-6 py-2.5 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition-colors font-medium text-center mt-2"
-              >
-                {nav.quiz.label}
-              </Link>
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                <CurrencySelector />
-                <LanguageSelector locale={locale} />
-              </div>
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   )

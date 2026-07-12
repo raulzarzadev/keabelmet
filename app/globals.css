@@ -11,10 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Fuente principal */
-body {
-  font-family: var(--font-geist), sans-serif;
-}
+/* Fuente principal: Poppins, definida en styles/theme.css */
 
 /* Fondo cachalote (ejemplo para sección hero/cta) */
 .bg-cachalote {

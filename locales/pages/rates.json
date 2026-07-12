@@ -29,18 +29,6 @@
           "Sesión de fotos profesional",
           "Seguro de accidentes"
         ]
-      },
-      "surfCamp": {
-        "title": "Surf Camp (6 días)",
-        "duration": "Por día",
-        "includes": [
-          "Clases diarias de surf",
-          "Análisis de video",
-          "Equipo completo",
-          "Transporte diario",
-          "Snacks y bebidas",
-          "Feedback personalizado"
-        ]
       }
     }
   },
@@ -73,18 +61,6 @@
           "Drinks and snacks",
           "Professional photo session",
           "Accident insurance"
-        ]
-      },
-      "surfCamp": {
-        "title": "Surf Camp (6 days)",
-        "duration": "Per day",
-        "includes": [
-          "Daily surf lessons",
-          "Video analysis",
-          "Full equipment",
-          "Daily transportation",
-          "Snacks and drinks",
-          "Personalized feedback"
         ]
       }
     }
@@ -119,18 +95,6 @@
           "Séance photo professionnelle",
           "Assurance accidents"
         ]
-      },
-      "surfCamp": {
-        "title": "Surf Camp (6 jours)",
-        "duration": "Par jour",
-        "includes": [
-          "Cours de surf quotidiens",
-          "Analyse vidéo",
-          "Équipement complet",
-          "Transport quotidien",
-          "En-cas et boissons",
-          "Retour personnalisé"
-        ]
       }
     }
   },
@@ -163,18 +127,6 @@
           "饮品和小食",
           "专业摄影服务",
           "意外保险"
-        ]
-      },
-      "surfCamp": {
-        "title": "Surf Camp（6天）",
-        "duration": "每天",
-        "includes": [
-          "每日冲浪课程",
-          "视频分析",
-          "全套装备",
-          "每日交通",
-          "小食和饮品",
-          "个性化反馈"
         ]
       }
     }

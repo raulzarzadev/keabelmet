@@ -8,11 +8,11 @@ import { expeditionPages } from "@/constants/expedition-pages"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   if (!isValidLocale(locale)) return {}
-  return buildPageMeta("safariBahiaMagdalena", "/experiencias/safari-bahia-magdalena", locale)
+  return buildPageMeta("scubaDiscovery", "/experiencias/scuba-discovery", locale)
 }
 
-export default async function SafariBahiaMagdalenaPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ScubaDiscoveryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
-  return <ExpeditionDetail data={expeditionPages["safari-bahia-magdalena"]} locale={locale} />
+  return <ExpeditionDetail data={expeditionPages["scuba-discovery"]} locale={locale} />
 }

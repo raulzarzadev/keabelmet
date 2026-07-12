@@ -22,9 +22,7 @@ function fmtCategory(c: string): string {
     safari: "Safari marino",
     whale: "Avistamiento de ballenas",
     diving: "Buceo / Snorkel",
-    surf: "Surf",
     island: "Isla / Tour",
-    rental: "Renta privada",
   } as Record<string, string>)[c] ?? c
 }
 
@@ -122,7 +120,7 @@ export async function GET() {
   out.push("## Sobre Keabelmet")
   out.push("")
   out.push(
-    "Keabelmet Expeditions es un operador de ecoturismo y safari marino en La Paz, Baja California Sur. Ofrecemos expediciones responsables con fauna marina, buceo, surf camp, avistamiento de ballenas y rentas privadas de embarcaciones en el Mar de Cortés. Nuestro enfoque prioriza grupos reducidos, guías expertos y respeto absoluto por la vida silvestre.",
+    "Keabelmet Expeditions es un operador de ecoturismo y safari marino en La Paz, Baja California Sur. Ofrecemos expediciones responsables con fauna marina, buceo y avistamiento de ballenas en el Mar de Cortés. Nuestro enfoque prioriza grupos reducidos, guías expertos y respeto absoluto por la vida silvestre.",
   )
   out.push("")
   out.push("### Variantes de marca y errores comunes")
