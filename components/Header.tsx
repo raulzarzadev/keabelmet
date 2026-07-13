@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
@@ -59,11 +60,15 @@ function localizeHref(path: string, locale: Locale): string {
 
 export default function Header({ locale = "es" }: { locale?: Locale }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [solid, setSolid] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const nav = navLabels[locale] || navLabels.es
+  const pathname = usePathname()
+  // Solo el home lleva header transparente sobre el hero; el resto siempre sólido.
+  const isHome = pathname === "/" || /^\/(en|fr|zh)\/?$/.test(pathname)
+  const solid = scrolled || !isHome
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 40)
+    const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
