@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Calendar, Clock } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
-
 import { buildPageMeta } from "@/lib/seo"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -20,47 +19,35 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
   const postImages = ["/gray-whale-in-ocean.jpg", "/swimming-with-sea-lions.jpg", "/beach-surfing-la-paz.jpg"]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="relative h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600" />
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-bold mb-4">{t.title}</h1>
-          <p className="text-xl max-w-2xl mx-auto">{t.subtitle}</p>
-        </div>
+    <main>
+      <section className="pagehero">
+        <span className="kicker">Keabelmet</span>
+        <h1>{t.title}</h1>
+        <p>{t.subtitle}</p>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="page-wrap">
+        <div className="blog-list">
           {postKeys.map((key, i) => {
             const post = t.posts?.[key] || {}
             return (
-              <article key={key} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="md:flex">
-                  <div className="md:w-1/3 relative h-48 md:h-auto">
-                    <Image src={postImages[i]} alt={post.title || ""} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                  </div>
-                  <div className="p-6 md:w-2/3">
-                    <h2 className="text-2xl font-bold mb-3 text-gray-900">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
+              <article key={key} className="blog-card">
+                <div className="blog-media">
+                  <Image src={postImages[i]} alt={post.title || ""} fill sizes="(max-width: 640px) 100vw, 34vw" style={{ objectFit: "cover" }} />
+                </div>
+                <div className="blog-body">
+                  <h2>{post.title}</h2>
+                  <p>{post.excerpt}</p>
+                  <div className="blog-meta">
+                    {post.date && <span><Calendar size={14} />{post.date}</span>}
+                    {post.readTime && <span><Clock size={14} />{post.readTime}</span>}
                   </div>
                 </div>
               </article>
             )
           })}
         </div>
-      </section>
-    </div>
+      </div>
+    </main>
   )
 }
