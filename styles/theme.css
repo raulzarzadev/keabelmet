@@ -13,7 +13,7 @@
   --line: rgba(244, 239, 228, 0.14);
   --maxw: 1280px;
 }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background: var(--ink);
   color: var(--sand);
@@ -224,6 +224,10 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .calsec { padding: 0 32px 120px; max-width: var(--maxw); margin: 0 auto; }
 .cal-scroll { overflow-x: auto; padding-bottom: 6px; }
 .cal-table { min-width: 880px; display: grid; grid-template-columns: 210px repeat(12, 1fr); gap: 6px; align-items: center; }
+/* columna de nombres fija al hacer scroll horizontal */
+.cal-corner, .cal-tour { position: sticky; left: 0; z-index: 2; background: var(--ink); }
+.cal-tour { padding-top: 4px; padding-bottom: 4px; }
+.cal-hint { display: none; font-size: 11.5px; color: var(--sand-dim); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; }
 .cal-corner { }
 .cal-month {
   font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -246,6 +250,14 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .cal-legend .cal-dot { width: 16px; height: 16px; border-radius: 6px; display: inline-block; margin-right: 9px; vertical-align: -3px; border: 1px solid var(--line); }
 .cal-legend .cal-dot.on { background: rgba(40,194,160,0.35); border-color: var(--teal-dim); }
 .cal-legend .cal-dot.peak { background: var(--teal); border-color: var(--teal); }
+@media (max-width: 920px) {
+  .cal-hint { display: block; }
+  .cal-table { grid-template-columns: 176px repeat(12, 44px); min-width: 0; gap: 5px; }
+  .cal-tour { font-size: 11.5px; gap: 8px; }
+  .cal-icon { width: 28px; height: 28px; border-radius: 8px; }
+  .cal-icon svg { width: 16px; height: 16px; }
+  .cal-cell { height: 32px; }
+}
 @media (max-width: 480px) {
   .calsec { padding-left: 18px; padding-right: 18px; }
 }
@@ -317,7 +329,10 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 
 /* INSTAGRAM */
 .insta-head { max-width: var(--maxw); margin: 0 auto; padding: 100px 32px 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
-.insta-head h2 { font-size: clamp(28px,3.6vw,44px); }
+.insta-head h2 { font-size: clamp(28px,3.6vw,44px); overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .insta-head h2 { font-size: 20px; }
+}
 .insta-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 8px; padding: 0 32px; max-width: var(--maxw); margin: 0 auto; }
 .insta-grid a { position: relative; aspect-ratio: 1; overflow: hidden; display: block; border-radius: 18px; }
 .insta-grid img { transition: transform .4s ease; }
@@ -473,12 +488,22 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   .switcher-group { gap: 6px; }
   .nav-cta { gap: 8px; }
   .nav-cta > a.btn { padding: 10px 16px !important; font-size: 12px; }
+  .kbm-header .logo { font-size: 17px; gap: 7px; }
+  .kbm-header .logo-mark { width: 28px; height: 28px; }
+  .kbm-header .wrap { padding: 0 14px; }
+}
+@media (max-width: 560px) {
+  /* En pantallas chicas el botón Reservar del header no cabe;
+     la reserva queda en el CTA del hero y el botón flotante de WhatsApp. */
+  .nav-cta > a.btn { display: none; }
+  .switcher-btn { padding: 6px 8px; }
 }
 @media (max-width: 480px) {
   .wrap, .hero-content, .region-inner, .section-head, .tours, .founder, .final-cta-inner, .insta-head, .insta-grid, .footer-grid, .footer-bottom { padding-left: 18px; padding-right: 18px; }
   .section-head { padding-top: 80px; padding-bottom: 36px; }
   .hero-content h1 { font-size: clamp(28px,8vw,44px); }
   .hero-sub { font-size: 15px; }
+  .scrolldown { display: none; }
   .btn { padding: 13px 22px; font-size: 12.5px; }
   .quiz-box { padding: 20px; }
   .quiz-panel { padding: 20px; }
@@ -507,6 +532,8 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   .pricing { padding-left: 18px; padding-right: 18px; }
   .testi { padding-left: 18px; padding-right: 18px; }
   .price-card { padding: 28px 22px; }
+  .price-card .amount { font-size: 34px; }
+  .price-card .amount span { display: block; margin-top: 2px; }
   .final-cta-inner { padding-left: 18px; padding-right: 18px; }
   .final-cta .ctas { flex-direction: column; }
   .final-cta .ctas .btn { width: 100%; justify-content: center; }
