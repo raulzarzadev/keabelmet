@@ -29,21 +29,21 @@ export default function Breadcrumbs({ items, locale = defaultLocale, className =
   const all: Crumb[] = [{ label: homeLabel[locale], href: localizeHref("/", locale) }, ...items]
 
   return (
-    <nav aria-label="Breadcrumb" className={`bg-gray-50 border-b border-gray-200 ${className}`}>
-      <div className="container mx-auto px-4 py-3">
-        <ol className="flex items-center flex-wrap gap-1 text-sm text-gray-600">
+    <nav aria-label="Breadcrumb" className={className} style={{ background: "var(--ink)", borderBottom: "1px solid var(--line)", paddingTop: 72 }}>
+      <div className="wrap" style={{ paddingTop: 14, paddingBottom: 14 }}>
+        <ol className="flex items-center flex-wrap gap-1 text-sm" style={{ color: "var(--sand-dim)", listStyle: "none", margin: 0, padding: 0 }}>
           {all.map((c, i) => {
             const isLast = i === all.length - 1
             return (
               <li key={i} className="flex items-center gap-1">
-                {i > 0 && <ChevronRight size={14} className="text-gray-400" aria-hidden />}
+                {i > 0 && <ChevronRight size={14} style={{ color: "var(--sand-dim)", opacity: 0.6 }} aria-hidden />}
                 {isLast || !c.href ? (
-                  <span className="font-medium text-gray-900" aria-current={isLast ? "page" : undefined}>
+                  <span className="font-medium" style={{ color: "var(--sand)" }} aria-current={isLast ? "page" : undefined}>
                     {i === 0 ? <Home size={14} className="inline mr-1 -mt-0.5" aria-hidden /> : null}
                     {c.label}
                   </span>
                 ) : (
-                  <Link href={c.href} className="hover:text-teal-700 transition-colors flex items-center">
+                  <Link href={c.href} className="flex items-center transition-colors kbm-crumb-link">
                     {i === 0 ? <Home size={14} className="inline mr-1 -mt-0.5" aria-hidden /> : null}
                     {c.label}
                   </Link>

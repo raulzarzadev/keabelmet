@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { Check } from "lucide-react"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
-
 import { buildPageMeta } from "@/lib/seo"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -21,50 +20,42 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
   const featured = [false, true]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="relative h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600" />
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-bold mb-4">{t.title}</h1>
-          <p className="text-xl max-w-2xl mx-auto">{t.subtitle}</p>
-        </div>
+    <main>
+      <section className="pagehero">
+        <span className="kicker">Keabelmet</span>
+        <h1>{t.title}</h1>
+        <p>{t.subtitle}</p>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="page-wrap narrow">
+        <div className="dgrid-2">
           {pkgKeys.map((key, i) => {
             const pkg = t.packages?.[key] || {}
             return (
-              <div
-                key={key}
-                className={`bg-white rounded-2xl p-8 shadow-lg ${featured[i] ? "ring-2 ring-teal-600 relative" : ""}`}
-              >
-                {featured[i] && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                    {t.mostPopular}
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                <p className="text-gray-600 mb-6">{pkg.duration}</p>
-                <div className="mb-8">
-                  <span className="text-5xl font-bold text-teal-600"><Price amount={prices[i]} /></span>
-                </div>
-                <ul className="space-y-4 mb-8">
+              <div key={key} className={`rate-card${featured[i] ? " feat" : ""}`}>
+                {featured[i] && <span className="rate-badge">{t.mostPopular}</span>}
+                <h3>{pkg.title}</h3>
+                <p className="rate-dur">{pkg.duration}</p>
+                <div className="rate-amount"><Price amount={prices[i]} /></div>
+                <ul>
                   {pkg.includes?.map((item: string) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
+                    <li key={item}><Check size={18} /><span>{item}</span></li>
                   ))}
                 </ul>
-                <button className="w-full py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium">
+                <a
+                  href="https://wa.me/526122347897"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn ${featured[i] ? "btn-teal" : "btn-solid"}`}
+                  style={{ justifyContent: "center", marginTop: "auto" }}
+                >
                   {t.bookNow}
-                </button>
+                </a>
               </div>
             )
           })}
         </div>
-      </section>
-    </div>
+      </div>
+    </main>
   )
 }
