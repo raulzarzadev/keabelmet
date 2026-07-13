@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
 		featuredOrder: 2,
 		i18n: {
 			es: {
-				title: "El safari más salvaje del Pacífico",
+				title: "Safari Bahía Magdalena",
 				description:
 					"Miles de sardinas, marlines cazando a máxima velocidad, ballenas alimentándose. Un fenómeno de solo dos meses al año.",
 				durationLabel: "Día completo",
@@ -112,7 +112,7 @@ export const experiences: Experience[] = [
 		featuredOrder: 1,
 		i18n: {
 			es: {
-				title: "Móbulas que vuelan, ballenas que emergen",
+				title: "Ocean Safari La Ventana",
 				description:
 					"Un safari sin guion. Navegamos guiados por biólogos marinos en busca de lo inesperado, a 40 minutos de La Paz.",
 				durationLabel: "Medio día",
@@ -294,7 +294,7 @@ export const experiences: Experience[] = [
 		featuredOrder: 4,
 		i18n: {
 			es: {
-				title: "Nada con lobos marinos curiosos",
+				title: "Tour Snorkel Isla Espíritu Santo",
 				description:
 					"Playas vírgenes, aguas cristalinas y una de las colonias de lobos marinos más grandes del Golfo de California.",
 				durationLabel: "Día completo",
@@ -347,7 +347,7 @@ export const experiences: Experience[] = [
 		featuredOrder: 3,
 		i18n: {
 			es: {
-				title: "El único arrecife vivo del Golfo",
+				title: "Scuba Diving Cabo Pulmo",
 				description:
 					"25,000 años de coral, tiburones toro, cardúmenes masivos. Una de las reservas marinas más exitosas del mundo.",
 				durationLabel: "Día completo",
