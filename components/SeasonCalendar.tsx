@@ -11,6 +11,7 @@ interface CalendarDict {
   season: string
   peak: string
   off: string
+  hint: string
   peakSuffix: string
   seasonSuffix: string
   rows: Record<string, { name: string; note: string }>
@@ -24,6 +25,7 @@ const es: CalendarDict = {
   season: "Temporada",
   peak: "Temporada alta",
   off: "Fuera de temporada",
+  hint: "Desliza para ver los meses →",
   peakSuffix: " (temporada alta)",
   seasonSuffix: " (temporada)",
   rows: {
@@ -46,6 +48,7 @@ const en: CalendarDict = {
   season: "In season",
   peak: "Peak season",
   off: "Off season",
+  hint: "Swipe to see the months →",
   peakSuffix: " (peak season)",
   seasonSuffix: " (in season)",
   rows: {
@@ -161,6 +164,7 @@ export default function SeasonCalendar({ locale = defaultLocale }: { locale?: Lo
         <p>{t.sub}</p>
       </div>
 
+      <div className="cal-hint">{t.hint}</div>
       <div className="cal-scroll">
         <div className="cal-table">
           <div className="cal-corner" />
