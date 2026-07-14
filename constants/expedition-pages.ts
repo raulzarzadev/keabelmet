@@ -1,6 +1,8 @@
 import type { ExpeditionPageData } from "@/components/ExpeditionDetail"
 import type { Locale } from "@/lib/i18n"
 import { expeditionPagesEn } from "./expedition-pages.en"
+import { expeditionPagesFr } from "./expedition-pages.fr"
+import { expeditionPagesZh } from "./expedition-pages.zh"
 
 /**
  * Contenido (es) de las páginas de detalle de expedición, siguiendo la
@@ -832,8 +834,13 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 	},
 }
 
-/** ES nativo; EN traducido; FR y ZH usan EN mientras se traducen. */
+/** ES, EN, FR y ZH nativos; cae a EN y luego a ES si faltara alguna clave. */
 export function getExpeditionPage(slug: string, locale: Locale): ExpeditionPageData {
-	if (locale === "es") return expeditionPages[slug]
-	return expeditionPagesEn[slug] ?? expeditionPages[slug]
+	const byLocale: Record<Locale, Record<string, ExpeditionPageData>> = {
+		es: expeditionPages,
+		en: expeditionPagesEn,
+		fr: expeditionPagesFr,
+		zh: expeditionPagesZh,
+	}
+	return byLocale[locale]?.[slug] ?? expeditionPagesEn[slug] ?? expeditionPages[slug]
 }

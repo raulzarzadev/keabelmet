@@ -63,8 +63,54 @@ const en: CalendarDict = {
   },
 }
 
-/** ES y EN completos; FR y ZH usan EN mientras se traducen. */
-const dicts: Record<Locale, CalendarDict> = { es, en, fr: en, zh: en }
+const fr: CalendarDict = {
+  kicker: "Calendrier des saisons",
+  title: "Le meilleur moment pour chaque expédition",
+  sub: "La mer suit son propre rythme. Choisissez votre mois de voyage et découvrez quelles rencontres vous attendent.",
+  months: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
+  season: "En saison",
+  peak: "Haute saison",
+  off: "Hors saison",
+  hint: "Faites défiler pour voir les mois →",
+  peakSuffix: " (haute saison)",
+  seasonSuffix: " (en saison)",
+  rows: {
+    "la-ventana": { name: "Ocean Safari La Ventana", note: "Mobules" },
+    "bahia-magdalena": { name: "Safari Bahía Magdalena", note: "Sardine run" },
+    "ballena-gris": { name: "Baleine Grise · Puerto Chale", note: "Mères et baleineaux" },
+    "tiburon-ballena": { name: "Requin-Baleine", note: "Snorkeling" },
+    "espiritu-santo": { name: "Tour Snorkel Île Espíritu Santo", note: "Otaries" },
+    "cabo-pulmo": { name: "Plongée Cabo Pulmo", note: "Récif vivant" },
+    "espiritu-santo-buceo": { name: "Plongée Île Espíritu Santo", note: "Otaries · Épaves" },
+    "scuba-discovery": { name: "Baptême de Plongée depuis la Plage", note: "Débutants" },
+  },
+}
+
+const zh: CalendarDict = {
+  kicker: "季节日历",
+  title: "每次探险的最佳时机",
+  sub: "大海有自己的节奏。选择你的出行月份，发现有哪些相遇在等着你。",
+  months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+  season: "适季",
+  peak: "旺季",
+  off: "淡季",
+  hint: "滑动查看各月份 →",
+  peakSuffix: "（旺季）",
+  seasonSuffix: "（适季）",
+  rows: {
+    "la-ventana": { name: "拉文塔纳海洋探险", note: "蝠鲼" },
+    "bahia-magdalena": { name: "马格达莱纳湾探险", note: "沙丁鱼洄游" },
+    "ballena-gris": { name: "灰鲸 · 查莱港", note: "母鲸与幼鲸" },
+    "tiburon-ballena": { name: "鲸鲨", note: "浮潜" },
+    "espiritu-santo": { name: "圣灵岛浮潜之旅", note: "海狮" },
+    "cabo-pulmo": { name: "卡波普尔莫潜水", note: "活珊瑚礁" },
+    "espiritu-santo-buceo": { name: "圣灵岛潜水", note: "海狮 · 沉船" },
+    "scuba-discovery": { name: "海滩体验潜水", note: "初学者" },
+  },
+}
+
+/** ES, EN, FR y ZH nativos. */
+const dicts: Record<Locale, CalendarDict> = { es, en, fr, zh }
 
 const ALL_YEAR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
