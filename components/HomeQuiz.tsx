@@ -308,8 +308,180 @@ const en: QuizDict = {
   },
 }
 
-/** ES y EN completos; FR y ZH usan EN mientras se traducen. */
-const dicts: Record<Locale, QuizDict> = { es, en, fr: en, zh: en }
+const fr: QuizDict = {
+  badge: "Vous ne savez pas quoi choisir ?",
+  kicker: "Trouvez votre expédition",
+  title: "À La Paz et vous ne savez pas quel tour choisir ?",
+  sub: "Répondez à 4 questions rapides — dont votre mois de voyage — et nous vous dirons quelle expédition vous convient le mieux selon la vraie saison de chacune.",
+  note: "Ça prend 30 secondes. Aucun engagement.",
+  q1: "1. Savez-vous plonger ?",
+  q1opts: [
+    { value: "beginner_diver", label: "Je n'ai jamais plongé et je ne sais pas à quoi m'attendre" },
+    { value: "surface", label: "Je ne plonge pas, je préfère rester en surface / snorkeling" },
+    { value: "certified_diver", label: "Oui, je suis plongeur certifié" },
+    { value: "wildlife_watch", label: "L'eau ne m'intéresse pas — je veux observer la faune depuis le bateau" },
+    { value: "", label: "Pas sûr(e), surprenez-moi", subtle: true },
+  ],
+  q2: "2. Qu'est-ce qui vous enthousiasme le plus ?",
+  q2opts: [
+    { value: "whales", label: "Les baleines grises (mères et baleineaux, de très près)" },
+    { value: "sea_lions", label: "Les otaries qui jouent juste à côté de vous" },
+    { value: "reef_sharks", label: "Le récif corallien, les requins et les bancs de poissons" },
+    { value: "adrenaline", label: "L'adrénaline pure : les marlins qui chassent les sardines" },
+    { value: "mobulas_dolphins", label: "Les mobules qui volent et les dauphins qui escortent le bateau" },
+    { value: "whale_shark", label: "Nager à côté du plus grand poisson du monde" },
+    { value: "", label: "Pas sûr(e), surprenez-moi", subtle: true },
+  ],
+  q3: "3. De combien de temps disposez-vous ?",
+  q3opts: [
+    { value: "half_day", label: "Une demi-journée (matin ou après-midi)" },
+    { value: "full_day", label: "Une journée complète" },
+    { value: "", label: "Peu importe, je m'adapte", subtle: true },
+  ],
+  q4: "4. En quel mois voyagez-vous ?",
+  months: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
+  back: "← Retour",
+  eyebrow: "Votre expédition idéale",
+  view: "Voir l'expédition",
+  book: "Réserver sur WhatsApp",
+  alts: "Vous pourriez aussi aimer",
+  reset: "↺ Recommencer",
+  perPerson: "par personne",
+  certified: "Certifié",
+  discovery: "Baptême",
+  tours: {
+    "la-ventana": {
+      name: "Ocean Safari La Ventana",
+      reason: "Une demi-journée en bateau avec des mobules qui sautent et des observations surprises de baleines et de dauphins — idéal si vous ne plongez pas et voulez de l'adrénaline en peu de temps.",
+      waText: "Bonjour ! Je veux réserver Ocean Safari La Ventana",
+    },
+    "bahia-magdalena": {
+      name: "Safari Bahía Magdalena",
+      reason: "Une journée complète en mer ouverte pour observer le Sardine Run : des milliers de sardines, des marlins qui chassent et des baleines qui se nourrissent. Cela n'arrive que deux mois par an.",
+      waText: "Bonjour ! Je veux réserver le Safari Bahía Magdalena",
+    },
+    "ballena-gris": {
+      name: "Baleine Grise · Puerto Chale",
+      reason: "Des rencontres rapprochées avec des mères et des baleineaux gris dans leurs eaux de reproduction — parmi les observations les plus émouvantes de Basse-Californie du Sud.",
+      waText: "Bonjour ! Je veux réserver Baleine Grise Puerto Chale",
+    },
+    "tiburon-ballena": {
+      name: "Requin-Baleine",
+      reason: "Une demi-journée de snorkeling pour nager à côté du plus grand poisson du monde — parfait si vous manquez de temps et voulez quelque chose d'inoubliable.",
+      waText: "Bonjour ! Je veux réserver le tour Requin-Baleine",
+    },
+    "espiritu-santo-dia": {
+      name: "Tour Snorkel Île Espíritu Santo",
+      reason: "Du snorkeling toute l'année avec l'une des plus grandes colonies d'otaries du Golfe, des plages vierges et un pique-nique inclus.",
+      seasonNotes: "De juin à août, les nouveau-nés limitent la baignade — l'observation se fait depuis le bateau pour leur sécurité.",
+      waText: "Bonjour ! Je veux réserver Île Espíritu Santo",
+    },
+    "cabo-pulmo": {
+      name: "Plongée Cabo Pulmo",
+      reason: "Le seul récif corallien vivant du golfe de Californie — 25 000 ans de corail, des requins bouledogues et d'immenses bancs de poissons, toute l'année.",
+      waText: "Bonjour ! Je veux réserver la plongée à Cabo Pulmo",
+    },
+    "espiritu-santo-buceo": {
+      name: "Plongée Île Espíritu Santo",
+      reason: "Plonger aux côtés d'otaries curieuses et d'épaves dans un site du patrimoine mondial de l'UNESCO — la combinaison de plongée et de faune la plus ludique de La Paz.",
+      waText: "Bonjour ! Je veux réserver la plongée à l'Île Espíritu Santo",
+    },
+    "scuba-discovery": {
+      name: "Baptême de Plongée depuis la Plage",
+      reason: "Votre première fois sous l'eau, sans certification, à 6 mètres de profondeur maximum, avec un instructeur à vos côtés en permanence.",
+      waText: "Bonjour ! Je veux réserver le Baptême de Plongée depuis la Plage",
+    },
+  },
+}
+
+const zh: QuizDict = {
+  badge: "不知道该选哪个？",
+  kicker: "找到你的探险",
+  title: "在拉巴斯，不知道该参加哪个行程？",
+  sub: "回答4个快速问题——包括你的出行月份——我们会根据每个行程的真实季节，告诉你最适合你的探险。",
+  note: "只需30秒。毫无约束。",
+  q1: "1. 你会潜水吗？",
+  q1opts: [
+    { value: "beginner_diver", label: "我从未潜过水，也不知道会怎样" },
+    { value: "surface", label: "我不潜水，更喜欢待在水面 / 浮潜" },
+    { value: "certified_diver", label: "会，我有潜水证书" },
+    { value: "wildlife_watch", label: "我对下水没兴趣，想在船上观赏动物" },
+    { value: "", label: "不确定，给我个惊喜", subtle: true },
+  ],
+  q2: "2. 你最想看到什么？",
+  q2opts: [
+    { value: "whales", label: "灰鲸（母鲸与幼鲸，近距离）" },
+    { value: "sea_lions", label: "在你身边嬉戏的海狮" },
+    { value: "reef_sharks", label: "珊瑚礁、鲨鱼和鱼群" },
+    { value: "adrenaline", label: "纯粹的刺激：马林鱼捕猎沙丁鱼" },
+    { value: "mobulas_dolphins", label: "飞翔的蝠鲼和护送船只的海豚" },
+    { value: "whale_shark", label: "与世界上最大的鱼同游" },
+    { value: "", label: "不确定，给我个惊喜", subtle: true },
+  ],
+  q3: "3. 你有多少时间？",
+  q3opts: [
+    { value: "half_day", label: "半天（上午或下午）" },
+    { value: "full_day", label: "一整天" },
+    { value: "", label: "都行，我很灵活", subtle: true },
+  ],
+  q4: "4. 你在哪个月出行？",
+  months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+  back: "← 返回",
+  eyebrow: "你的理想探险",
+  view: "查看行程",
+  book: "通过 WhatsApp 预订",
+  alts: "你可能也会喜欢",
+  reset: "↺ 重新开始",
+  perPerson: "每人",
+  certified: "持证",
+  discovery: "体验潜水",
+  tours: {
+    "la-ventana": {
+      name: "拉文塔纳海洋探险",
+      reason: "半天的乘船之旅，蝠鲼跃起、鲸鱼与海豚不期而遇——如果你不潜水又想在短时间里体验刺激，这是理想之选。",
+      waText: "你好！我想预订拉文塔纳海洋探险",
+    },
+    "bahia-magdalena": {
+      name: "马格达莱纳湾探险",
+      reason: "在开阔海域度过一整天，观赏沙丁鱼洄游：成千上万的沙丁鱼、捕猎的马林鱼和觅食的鲸鱼。一年仅两个月。",
+      waText: "你好！我想预订马格达莱纳湾探险",
+    },
+    "ballena-gris": {
+      name: "灰鲸 · 查莱港",
+      reason: "在灰鲸的育幼海域近距离接触母鲸与幼鲸——下加利福尼亚州最动人的观赏体验之一。",
+      waText: "你好！我想预订灰鲸查莱港",
+    },
+    "tiburon-ballena": {
+      name: "鲸鲨",
+      reason: "半天浮潜，与世界上最大的鱼同游——如果你时间有限又想要难忘的体验，非常合适。",
+      waText: "你好！我想预订鲸鲨行程",
+    },
+    "espiritu-santo-dia": {
+      name: "圣灵岛浮潜之旅",
+      reason: "全年浮潜，畅游海湾最大的海狮群之一，含原始海滩与野餐。",
+      seasonNotes: "6月至8月，新生幼崽期间限制下水——为了它们的安全，将在船上观赏。",
+      waText: "你好！我想预订圣灵岛",
+    },
+    "cabo-pulmo": {
+      name: "卡波普尔莫潜水",
+      reason: "加利福尼亚湾唯一的活珊瑚礁——25,000年的珊瑚、公牛鲨和庞大的鱼群，全年开放。",
+      waText: "你好！我想预订卡波普尔莫潜水",
+    },
+    "espiritu-santo-buceo": {
+      name: "圣灵岛潜水",
+      reason: "在联合国教科文组织世界遗产地，与好奇的海狮和沉船一同潜水——拉巴斯最有趣的潜水与野生动物组合。",
+      waText: "你好！我想预订圣灵岛潜水",
+    },
+    "scuba-discovery": {
+      name: "海滩体验潜水",
+      reason: "你的首次水下体验，无需证书，最深6米，全程有教练陪伴。",
+      waText: "你好！我想预订海滩体验潜水",
+    },
+  },
+}
+
+/** ES, EN, FR y ZH nativos. */
+const dicts: Record<Locale, QuizDict> = { es, en, fr, zh }
 
 function waLink(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
