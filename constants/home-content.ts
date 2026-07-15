@@ -165,7 +165,7 @@ const es: HomeContent = {
 		{
 			tag: "Día completo",
 			coral: false,
-			image: "/images/hero/ballena-gris-hero.jpeg",
+			image: "/ballena-gris-spyhop-drone.jpg",
 			alt: "Ballena Gris Puerto Chale",
 			title: "Ballena Gris · Puerto Chale",
 			meta: ["Hasta 8 personas", "Madres y crías", "Ene-Mar"],
@@ -176,7 +176,7 @@ const es: HomeContent = {
 		{
 			tag: "Medio día",
 			coral: false,
-			image: "/snorkeling-coral-reef.jpg",
+			image: "/tiburon-ballena-drone.jpg",
 			alt: "Tiburón Ballena",
 			title: "Tiburón Ballena",
 			meta: ["2-8 personas", "Snorkel", "Nov-Mar"],
@@ -407,7 +407,7 @@ const en: HomeContent = {
 		{
 			tag: "Full day",
 			coral: false,
-			image: "/images/hero/ballena-gris-hero.jpeg",
+			image: "/ballena-gris-spyhop-drone.jpg",
 			alt: "Gray Whale Puerto Chale",
 			title: "Gray Whale · Puerto Chale",
 			meta: ["Up to 8 people", "Mothers and calves", "Jan-Mar"],
@@ -418,7 +418,7 @@ const en: HomeContent = {
 		{
 			tag: "Half day",
 			coral: false,
-			image: "/snorkeling-coral-reef.jpg",
+			image: "/tiburon-ballena-drone.jpg",
 			alt: "Whale Shark",
 			title: "Whale Shark",
 			meta: ["2-8 people", "Snorkeling", "Nov-Mar"],
@@ -626,8 +626,8 @@ const fr: HomeContent = {
 	tourCards: [
 		{ tag: "Demi-journée", coral: false, image: "/images/orca-safari.jpg", alt: "Ocean Safari La Ventana", title: "Ocean Safari La Ventana", meta: ["2-8 personnes", "6 heures", "Mobules Avr-Juin"], priceMxn: 3000, per: "par personne", href: "/experiencias/safari-la-ventana" },
 		{ tag: "Journée complète", coral: false, image: "/images/marlin-bahia-magdalena-hero.jpeg", alt: "Safari Bahía Magdalena", title: "Safari Bahía Magdalena", meta: ["2-6 personnes", "Sardine run", "Nov-Déc"], priceMxn: 3500, per: "par personne", href: "/experiencias/safari-bahia-magdalena" },
-		{ tag: "Journée complète", coral: false, image: "/images/hero/ballena-gris-hero.jpeg", alt: "Baleine Grise Puerto Chale", title: "Baleine Grise · Puerto Chale", meta: ["Jusqu'à 8 personnes", "Mères et baleineaux", "Jan-Mar"], priceMxn: 2800, per: "par personne", href: "/experiencias/tour-ballena-gris" },
-		{ tag: "Demi-journée", coral: false, image: "/snorkeling-coral-reef.jpg", alt: "Requin-Baleine", title: "Requin-Baleine", meta: ["2-8 personnes", "Snorkeling", "Nov-Mar"], priceMxn: 1800, per: "par personne", href: "/experiencias/tiburon-ballena" },
+		{ tag: "Journée complète", coral: false, image: "/ballena-gris-spyhop-drone.jpg", alt: "Baleine Grise Puerto Chale", title: "Baleine Grise · Puerto Chale", meta: ["Jusqu'à 8 personnes", "Mères et baleineaux", "Jan-Mar"], priceMxn: 2800, per: "par personne", href: "/experiencias/tour-ballena-gris" },
+		{ tag: "Demi-journée", coral: false, image: "/tiburon-ballena-drone.jpg", alt: "Requin-Baleine", title: "Requin-Baleine", meta: ["2-8 personnes", "Snorkeling", "Nov-Mar"], priceMxn: 1800, per: "par personne", href: "/experiencias/tiburon-ballena" },
 		{ tag: "Journée complète", coral: false, image: "/espiritu-santo-island-paradise-beach.jpg", alt: "Île Espíritu Santo", title: "Tour Snorkel Île Espíritu Santo", meta: ["2-10 personnes", "Otaries", "Toute l'année"], priceMxn: 1800, per: "par personne", href: "/experiencias/tour-espiritu-santo" },
 		{ tag: "Journée complète", coral: false, image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg", alt: "Plongée Cabo Pulmo", title: "Plongée Cabo Pulmo", meta: ["Parc National", "Baptême 3 800 $", "Toute l'année"], priceMxn: 3200, per: "certifié", href: "/experiencias/buceo-cabo-pulmo" },
 		{ tag: "Journée complète", coral: false, image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg", alt: "Plongée Île Espíritu Santo", title: "Plongée Île Espíritu Santo", meta: ["Otaries", "Épaves", "Baptême 4 200 $"], priceMxn: 3700, per: "certifié", href: "/experiencias/buceo-la-paz" },
@@ -776,8 +776,8 @@ const zh: HomeContent = {
 	tourCards: [
 		{ tag: "半天", coral: false, image: "/images/orca-safari.jpg", alt: "拉文塔纳海洋探险", title: "拉文塔纳海洋探险", meta: ["2-8人", "6小时", "蝠鲼 4-6月"], priceMxn: 3000, per: "每人", href: "/experiencias/safari-la-ventana" },
 		{ tag: "全天", coral: false, image: "/images/marlin-bahia-magdalena-hero.jpeg", alt: "马格达莱纳湾探险", title: "马格达莱纳湾探险", meta: ["2-6人", "沙丁鱼洄游", "11-12月"], priceMxn: 3500, per: "每人", href: "/experiencias/safari-bahia-magdalena" },
-		{ tag: "全天", coral: false, image: "/images/hero/ballena-gris-hero.jpeg", alt: "灰鲸查莱港", title: "灰鲸 · 查莱港", meta: ["最多8人", "母鲸与幼鲸", "1-3月"], priceMxn: 2800, per: "每人", href: "/experiencias/tour-ballena-gris" },
-		{ tag: "半天", coral: false, image: "/snorkeling-coral-reef.jpg", alt: "鲸鲨", title: "鲸鲨", meta: ["2-8人", "浮潜", "11-3月"], priceMxn: 1800, per: "每人", href: "/experiencias/tiburon-ballena" },
+		{ tag: "全天", coral: false, image: "/ballena-gris-spyhop-drone.jpg", alt: "灰鲸查莱港", title: "灰鲸 · 查莱港", meta: ["最多8人", "母鲸与幼鲸", "1-3月"], priceMxn: 2800, per: "每人", href: "/experiencias/tour-ballena-gris" },
+		{ tag: "半天", coral: false, image: "/tiburon-ballena-drone.jpg", alt: "鲸鲨", title: "鲸鲨", meta: ["2-8人", "浮潜", "11-3月"], priceMxn: 1800, per: "每人", href: "/experiencias/tiburon-ballena" },
 		{ tag: "全天", coral: false, image: "/espiritu-santo-island-paradise-beach.jpg", alt: "圣灵岛", title: "圣灵岛浮潜之旅", meta: ["2-10人", "海狮", "全年"], priceMxn: 1800, per: "每人", href: "/experiencias/tour-espiritu-santo" },
 		{ tag: "全天", coral: false, image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg", alt: "卡波普尔莫潜水", title: "卡波普尔莫潜水", meta: ["国家公园", "体验潜水 $3,800", "全年"], priceMxn: 3200, per: "持证", href: "/experiencias/buceo-cabo-pulmo" },
 		{ tag: "全天", coral: false, image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg", alt: "圣灵岛潜水", title: "圣灵岛潜水", meta: ["海狮", "沉船", "体验潜水 $4,200"], priceMxn: 3700, per: "持证", href: "/experiencias/buceo-la-paz" },
