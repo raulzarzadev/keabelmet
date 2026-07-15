@@ -113,7 +113,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 	"tiburon-ballena": {
 		breadcrumb: "Whale Shark",
 		hero: {
-			image: "/snorkeling-coral-reef.jpg",
+			image: "/tiburon-ballena-drone.jpg",
 			alt: "Swimming with whale sharks in La Paz",
 			kicker: "La Paz · Nov - Mar",
 			title: "Swim with the biggest fish in the world",
@@ -303,7 +303,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 	"tour-ballena-gris": {
 		breadcrumb: "Gray Whale Puerto Chale",
 		hero: {
-			image: "/images/hero/ballena-gris-hero.jpeg",
+			image: "/ballena-gris-spyhop-drone.jpg",
 			alt: "Gray whale in Puerto Chale, Magdalena Bay",
 			kicker: "Puerto Chale · Jan - Mar",
 			title: "An ancestral encounter",

@@ -113,7 +113,7 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 	"tiburon-ballena": {
 		breadcrumb: "Requin-Baleine",
 		hero: {
-			image: "/snorkeling-coral-reef.jpg",
+			image: "/tiburon-ballena-drone.jpg",
 			alt: "Nager avec des requins-baleines à La Paz",
 			kicker: "La Paz · Nov - Mar",
 			title: "Nagez avec le plus grand poisson du monde",
@@ -303,7 +303,7 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 	"tour-ballena-gris": {
 		breadcrumb: "Baleine Grise Puerto Chale",
 		hero: {
-			image: "/images/hero/ballena-gris-hero.jpeg",
+			image: "/ballena-gris-spyhop-drone.jpg",
 			alt: "Baleine grise à Puerto Chale, Bahía Magdalena",
 			kicker: "Puerto Chale · Jan - Mar",
 			title: "Une rencontre ancestrale",

@@ -113,7 +113,7 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 	"tiburon-ballena": {
 		breadcrumb: "鲸鲨",
 		hero: {
-			image: "/snorkeling-coral-reef.jpg",
+			image: "/tiburon-ballena-drone.jpg",
 			alt: "在拉巴斯与鲸鲨同游",
 			kicker: "拉巴斯 · 11-3月",
 			title: "与世界上最大的鱼同游",
@@ -303,7 +303,7 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 	"tour-ballena-gris": {
 		breadcrumb: "灰鲸查莱港",
 		hero: {
-			image: "/images/hero/ballena-gris-hero.jpeg",
+			image: "/ballena-gris-spyhop-drone.jpg",
 			alt: "马格达莱纳湾查莱港的灰鲸",
 			kicker: "查莱港 · 1-3月",
 			title: "一场远古的相遇",
