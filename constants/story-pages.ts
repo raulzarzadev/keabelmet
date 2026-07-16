@@ -43,6 +43,11 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "mediaBanner",
+				media: { src: "/images/especies/mobulaschafa.jpeg", alt: "Móbula saltando fuera del agua en el Golfo de California, La Ventana" },
+				quote: "El mar decide qué nos enseña. Nosotros ponemos la paciencia para descubrirlo.",
+			},
+			{
 				type: "callout",
 				ink2: true,
 				heading: "Antes de reservar, hay algo importante que debes saber",
@@ -74,6 +79,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Subimos a la embarcación y comenzamos a navegar hacia el canal de Cerralvo. En los primeros minutos empezarás a comprender que buscar fauna no consiste solamente en esperar a que algo aparezca.",
 							"Prestamos atención a las aves alimentándose, los cambios en la superficie, los soplos en la distancia, las sombras bajo el agua y cualquier movimiento que pueda indicar actividad. Y sí: muchas veces todo comienza con alguien señalando el horizonte y gritando “¡algo saltó por allá!”.",
 						],
+						media: { suggest: "Toma aérea con drone: la lancha saliendo de La Ventana rumbo a Isla Cerralvo con el mar en calma del amanecer." },
 					},
 					{
 						title: "Comienza la búsqueda",
@@ -88,6 +94,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"No todos los avistamientos se convierten en snorkel, y eso es intencional. Antes de entrar evaluamos la especie, el comportamiento del animal, la corriente y el oleaje, la experiencia del grupo, la presencia de otras embarcaciones y la posibilidad de una aproximación segura y respetuosa.",
 							"No necesitas ser apneísta ni atleta, pero sí sentirte cómodo flotando y seguir indicaciones en el mar. A veces el mejor encuentro sucede dentro del agua; otras, ocurre sentado en la lancha, viendo una ballena respirar a pocos metros. No forzamos una interacción solo para conseguir una fotografía.",
 						],
+						media: { suggest: "Huésped entrando al agua con snorkel para nadar junto a una móbula o un grupo de delfines, tomada desde la superficie." },
 					},
 					{
 						title: "Una pausa con sabor a Baja",
@@ -95,6 +102,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Después de varias horas de navegación buscamos un lugar adecuado para descansar. Cuando las condiciones lo permiten, nos acercamos a una playa virgen o zona tranquila para compartir ceviche, fruta de temporada, snacks y bebidas.",
 							"No es una parada en un club de playa: no hay vendedores ni camastros alineados. Solamente el grupo, las montañas, la isla y una comida que sabe mucho mejor después de pasar la mañana buscando animales.",
 						],
+						media: { suggest: "El picnic estilo Baja: ceviche, fruta y bebidas servidos frente al mar en una playa virgen, con la isla de fondo." },
 					},
 					{
 						time: "≈ 2:00 p. m.",
@@ -107,17 +115,24 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "details",
+				type: "encounters",
 				ink2: true,
 				kicker: "¿Cómo son realmente los encuentros?",
-				title: "Una de las cosas más bonitas de este safari es aprender a observar",
+				title: "Aprender a observar es parte de la aventura",
 				items: [
-					{ title: "Delfines", text: "Pueden acercarse a la embarcación, navegar junto a la proa o mantenerse a distancia. Algunos grupos pasan rápido; otros parecen tener toda la mañana libre y permanecen varios minutos a nuestro alrededor." },
-					{ title: "Móbulas", text: "Podemos encontrarlas nadando bajo la superficie, reunidas en grupos o saltando fuera del agua. Las grandes agregaciones son estacionales y su presencia puede variar incluso dentro de la mejor temporada." },
-					{ title: "Ballenas", text: "En muchos casos el primer indicio es un soplo en el horizonte. Nos aproximamos con calma, respetamos su espacio y observamos su dirección, ritmo de respiración y comportamiento." },
-					{ title: "Lobos marinos", text: "Pueden aparecer durante la navegación o cerca de zonas costeras. Aunque suelen ser curiosos, cada encuentro depende del lugar, la temporada y las condiciones del día." },
-					{ title: "Encuentros excepcionales", text: "Orcas, cachalotes, ballenas piloto, falsas orcas, zifios, mantas gigantes y tiburones ballena pueden atravesar estas aguas. Son ocasionales e impredecibles; nunca una promesa, pero saber que recorren el canal de Cerralvo es parte de lo que hace tan especial explorarlo." },
+					{ title: "Delfines", text: "Pueden acercarse a la embarcación, navegar junto a la proa o mantenerse a distancia. Algunos grupos pasan rápido; otros parecen tener toda la mañana libre y permanecen varios minutos a nuestro alrededor.", media: { src: "/images/especies/delfinsaltando.jpeg", alt: "Delfines saltando junto a la lancha en el Golfo de California" } },
+					{ title: "Móbulas", text: "Podemos encontrarlas nadando bajo la superficie, reunidas en grupos o saltando fuera del agua. Las grandes agregaciones son estacionales y su presencia puede variar incluso dentro de la mejor temporada.", media: { src: "/images/especies/mobulaschafa.jpeg", alt: "Agregación de móbulas saltando en La Ventana" } },
+					{ title: "Ballenas", text: "En muchos casos el primer indicio es un soplo en el horizonte. Nos aproximamos con calma, respetamos su espacio y observamos su dirección, ritmo de respiración y comportamiento.", media: { src: "/images/especies/ballenasaltando2.jpeg", alt: "Ballena saltando en el Mar de Cortés" } },
+					{ title: "Lobos marinos", text: "Pueden aparecer durante la navegación o cerca de zonas costeras. Aunque suelen ser curiosos, cada encuentro depende del lugar, la temporada y las condiciones del día.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino nadando en el Golfo de California" } },
+					{ title: "Encuentros excepcionales", text: "Orcas, cachalotes, ballenas piloto, falsas orcas, zifios, mantas gigantes y tiburones ballena pueden atravesar estas aguas. Son ocasionales e impredecibles; nunca una promesa, pero saber que recorren el canal de Cerralvo es parte de lo que hace tan especial explorarlo.", media: { src: "/images/especies/orcalaventana.jpeg", alt: "Orca en las aguas de La Ventana, Baja California Sur" } },
+					{ title: "Cachalotes", text: "Los gigantes de las profundidades a veces cruzan el canal de Cerralvo. Verlos respirar en superficie antes de una inmersión larga es uno de esos momentos que nadie olvida.", media: { suggest: "Cachalote respirando en la superficie con el logsuit del guía en primer plano." } },
 				],
+			},
+			{
+				type: "video",
+				kicker: "Un minuto en el mar",
+				title: "Míralo antes de vivirlo",
+				media: { suggest: "Reel cinematográfico de 30-60 s: drone saliendo de La Ventana, móbulas saltando, entrada al agua con delfines, una ballena respirando y el atardecer del regreso." },
 			},
 			{
 				type: "seasons",
@@ -129,6 +144,17 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ name: "Verano", text: "Continúa la temporada de móbulas y aumenta la posibilidad de actividad pelágica. Pueden aparecer delfines, lobos marinos, ballenas de Bryde y, ocasionalmente, cachalotes, orcas y ballenas piloto." },
 					{ name: "Otoño", text: "Una temporada menos conocida, pero con posibilidades interesantes de encontrar delfines, lobos marinos, aves, mantas gigantes y cachalotes." },
 					{ name: "Invierno", text: "La llegada de distintas especies de ballenas transforma la región: jorobadas, azules y de aleta, además de delfines y agregaciones menores de móbulas." },
+				],
+			},
+			{
+				type: "mediaSplit",
+				reverse: true,
+				media: { src: "/images/safari/nuestrocompromiso2.jpeg", alt: "Guía biólogo marino de Keabelmet con equipo de snorkel en La Ventana" },
+				kicker: "Quién te acompaña",
+				title: "No solo señalamos animales. Los interpretamos.",
+				paragraphs: [
+					"Cada salida la guía un biólogo marino que lee el comportamiento de la fauna y las señales del mar en tiempo real. No es un simple paseo en lancha: es una lectura del ecosistema hecha por alguien que lo entiende y lo respeta.",
+					"Vas a preguntar, aprender y observar con otros ojos. Y cuando entiendes lo que ves, el encuentro se vuelve todavía más tuyo.",
 				],
 			},
 			{
@@ -194,6 +220,23 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ label: "Alimentos", value: "Ceviche, fruta, snacks y bebidas. Avísanos con anticipación de alergias, dietas o si no consumes pescado o camarón." },
 					{ label: "Fotos y video", value: "Incluidos; se entregan normalmente entre 1 y 3 días después del safari." },
 					{ label: "Menores de edad", value: "En salidas compartidas la edad mínima es 14 años. Los menores de 14 pueden participar en un safari privado, con ritmo adaptado." },
+				],
+			},
+			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Momentos del safari",
+				title: "Un día que se ve así",
+				cols: 4,
+				items: [
+					{ src: "/images/orca-safari.jpg", alt: "Navegando en busca de fauna en La Ventana" },
+					{ src: "/images/especies/delfinsaltando.jpeg", alt: "Delfines saltando en el Golfo de California" },
+					{ suggest: "Grupo de viajeros haciendo snorkel juntos en agua turquesa." },
+					{ src: "/images/especies/ballenasaltando2.jpeg", alt: "Ballena saltando en el Mar de Cortés" },
+					{ suggest: "Detalle del picnic: ceviche y fruta servidos a bordo." },
+					{ src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino curioso bajo el agua" },
+					{ suggest: "Atardecer sobre el canal de Cerralvo desde la lancha de regreso." },
+					{ src: "/images/especies/mobulaschafa.jpeg", alt: "Móbulas saltando cerca de la embarcación" },
 				],
 			},
 			{
@@ -278,6 +321,11 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ q: "¿Cuándo recibiré mis fotos y videos?", a: ["Normalmente entre 1 y 3 días después del safari, mediante el canal acordado con el equipo."] },
 					{ q: "¿Puedo llevar mi cámara?", a: ["Sí, bajo tu responsabilidad. Recomendamos protegerla del agua y sujetarla bien. El espacio es limitado, así que avísanos si llevarás equipo grande; una GoPro, Insta360 o cámara compacta no representan problema."] },
 				],
+			},
+			{
+				type: "mediaBanner",
+				media: { suggest: "Atardecer en el regreso a La Ventana: siluetas de los viajeros en la lancha contra el cielo naranja." },
+				quote: "No siempre puedes elegir el momento que te marcará. Pero casi siempre sales queriendo volver.",
 			},
 			{
 				type: "prose",

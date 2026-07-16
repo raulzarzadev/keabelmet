@@ -9,6 +9,45 @@ function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 }
 
+/** Imagen o video real; si no hay `src`, muestra un placeholder intencional
+ *  con ícono y la descripción del shot ideal (guía para el fotógrafo). */
+export interface Media {
+  src?: string
+  video?: string
+  alt?: string
+  /** Texto del placeholder: describe la foto/video que irá aquí. */
+  suggest?: string
+  /** Etiqueta pequeña sobre la imagen real. */
+  caption?: string
+}
+
+function MediaSlot({ media, className = "" }: { media: Media; className?: string }) {
+  const isVideo = !!media.video
+  const hasReal = !!(media.src || media.video)
+  return (
+    <div className={`media${!hasReal ? " has-ph" : ""} ${className}`.trim()}>
+      {media.video ? (
+        <video src={media.video} autoPlay muted loop playsInline poster={media.src} />
+      ) : media.src ? (
+        <img src={media.src} alt={media.alt ?? ""} />
+      ) : (
+        <div className="media-ph">
+          <span className="ph-ic">
+            {isVideo ? (
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L19 6h0a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><circle cx="12" cy="12.5" r="3.5" /></svg>
+            )}
+          </span>
+          <span className="ph-kind">{isVideo ? "Video sugerido" : "Foto sugerida"}</span>
+          {media.suggest && <span className="ph-cap">{media.suggest}</span>}
+        </div>
+      )}
+      {hasReal && media.caption && <div className="media-cap">{media.caption}</div>}
+    </div>
+  )
+}
+
 export interface StoryHero {
   image: string
   alt: string
@@ -26,9 +65,14 @@ export type Block =
   | { type: "quickfacts"; items: { value: string; label: string }[] }
   | { type: "prose"; id?: string; kicker?: string; heading?: string; paragraphs: (string | { lead: string })[]; ink2?: boolean }
   | { type: "callout"; heading: string; paragraphs: string[]; ink2?: boolean }
-  | { type: "timeline"; id?: string; kicker?: string; title?: string; note?: string; ink2?: boolean; items: { time?: string; title: string; paragraphs: string[] }[] }
+  | { type: "timeline"; id?: string; kicker?: string; title?: string; note?: string; ink2?: boolean; items: { time?: string; title: string; paragraphs: string[]; media?: Media }[] }
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
   | { type: "fauna"; kicker?: string; title?: string; note?: string; ink2?: boolean; tiers: { label: string; warn?: boolean; species: string[] }[] }
+  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string }
+  | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
+  | { type: "video"; ink2?: boolean; kicker?: string; title?: string; media: Media }
+  | { type: "gallery"; ink2?: boolean; kicker?: string; title?: string; cols?: 3 | 4; items: Media[] }
+  | { type: "encounters"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; text: string; media: Media }[] }
   | { type: "checklist"; kicker?: string; title?: string; ink2?: boolean; good: { title: string; items: string[] }; bad: { title: string; items: string[] } }
   | { type: "details"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; text: string }[] }
   | { type: "groups"; kicker?: string; title?: string; ink2?: boolean; groups: { name: string; items: string[] }[] }
@@ -145,6 +189,7 @@ export default function StoryPage({ data, locale = defaultLocale }: { data: Stor
                         {it.time && <span className="tl-time">{it.time}</span>}
                         <h4>{it.title}</h4>
                         {it.paragraphs.map((p, k) => <p key={k}>{p}</p>)}
+                        {it.media && <MediaSlot media={it.media} className="step-media" />}
                       </div>
                     </div>
                   ))}
@@ -358,6 +403,84 @@ export default function StoryPage({ data, locale = defaultLocale }: { data: Stor
                     <a href={wa(b.primaryWa)} className="btn btn-pop" target="_blank" rel="noopener noreferrer">{b.primaryLabel}</a>
                     {b.secondaryLabel && <a href={b.secondaryHref ?? "#expediciones"} className="btn btn-ghost">{b.secondaryLabel}</a>}
                   </div>
+                </div>
+              </section>
+            )
+
+          case "mediaBanner":
+            return (
+              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}`}>
+                <MediaSlot media={b.media} />
+                {(b.quote || b.sub) && (
+                  <div className="mb-inner">
+                    {b.quote && <p className="mb-quote">{b.quote}</p>}
+                    {b.sub && <p className="mb-sub">{b.sub}</p>}
+                  </div>
+                )}
+              </section>
+            )
+
+          case "mediaSplit":
+            return (
+              <section key={i} className={b.ink2 ? "sp-ink2" : undefined}>
+                <div className={`media-split${b.reverse ? " rev" : ""}`}>
+                  <div className="ms-media"><MediaSlot media={b.media} /></div>
+                  <div className="ms-text">
+                    {b.kicker && <span className="kicker">{b.kicker}</span>}
+                    <h2>{b.title}</h2>
+                    {b.paragraphs.map((p, j) => <p key={j}>{p}</p>)}
+                  </div>
+                </div>
+              </section>
+            )
+
+          case "video":
+            return (
+              <section key={i} className={b.ink2 ? "sp-ink2" : undefined}>
+                <div className="video-sec">
+                  {(b.kicker || b.title) && (
+                    <div className="sp-head" style={{ textAlign: "center" }}>
+                      {b.kicker && <span className="kicker">{b.kicker}</span>}
+                      {b.title && <h2>{b.title}</h2>}
+                    </div>
+                  )}
+                  <div className="video-frame"><MediaSlot media={{ ...b.media, video: b.media.video ?? undefined }} /></div>
+                </div>
+              </section>
+            )
+
+          case "gallery":
+            return (
+              <section key={i} className={sec(b.ink2)}>
+                {(b.kicker || b.title) && (
+                  <div className="sp-head">
+                    {b.kicker && <span className="kicker">{b.kicker}</span>}
+                    {b.title && <h2>{b.title}</h2>}
+                  </div>
+                )}
+                <div className={`media-gallery g${b.cols ?? 4}`}>
+                  {b.items.map((m, j) => <MediaSlot key={j} media={m} />)}
+                </div>
+              </section>
+            )
+
+          case "encounters":
+            return (
+              <section key={i} className={sec(b.ink2)}>
+                <div className="sp-head">
+                  {b.kicker && <span className="kicker">{b.kicker}</span>}
+                  {b.title && <h2>{b.title}</h2>}
+                </div>
+                <div className="sp-encounters">
+                  {b.items.map((it) => (
+                    <div key={it.title} className="sp-enc">
+                      <div className="enc-media"><MediaSlot media={it.media} /></div>
+                      <div className="enc-body">
+                        <h4>{it.title}</h4>
+                        <p>{it.text}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </section>
             )
