@@ -351,4 +351,260 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 		],
 	},
+	"buceo-cabo-pulmo": {
+		breadcrumb: "Buceo en Cabo Pulmo",
+		hero: {
+			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
+			alt: "Arrecife de coral vivo en el Parque Nacional Cabo Pulmo",
+			kicker: "Cabo Pulmo · Parque Nacional",
+			title: "Hay lugares donde el mar está vivo",
+			text: "Cabo Pulmo es uno de ellos. Hace unas décadas este arrecife estuvo cerca de desaparecer; hoy es uno de los mayores ejemplos de recuperación marina del planeta. Aquí no vienes a buscar un pez en particular: vienes a sumergirte dentro de un ecosistema donde miles de peces se mueven como uno solo.",
+			meta: "Cabo Pulmo · 5 horas aprox. · Discovery, certificados y snorkel",
+			primaryLabel: "Reservar mi inmersión",
+			primaryWa: "Hola! quiero reservar el buceo en Cabo Pulmo",
+			secondaryLabel: "Descubrir cómo será el día",
+			secondaryHref: "#itinerario",
+		},
+		blocks: [
+			{
+				type: "quickfacts",
+				items: [
+					{ value: "~5 horas", label: "Duración" },
+					{ value: "8 a.m. · 12 p.m.", label: "Horarios" },
+					{ value: "2 inmersiones", label: "En el Parque Nacional" },
+					{ value: "12 años", label: "Edad mínima" },
+				],
+			},
+			{
+				type: "prose",
+				kicker: "El arrecife que volvió a la vida",
+				heading: "Un pueblo dejó de pescar para empezar a proteger. Y la naturaleza respondió.",
+				paragraphs: [
+					"Durante muchos años, Cabo Pulmo fue un pequeño pueblo pesquero. Como ocurrió en tantas partes del mundo, el arrecife comenzó a perder vida poco a poco. Hasta que sucedió algo extraordinario: los propios habitantes decidieron dejar de vivir de extraer peces para comenzar a protegerlos.",
+					{ lead: "Fue una apuesta enorme. Y la naturaleza respondió." },
+					"Décadas después, Cabo Pulmo es considerado uno de los mayores casos de recuperación marina del planeta. La biomasa del arrecife aumentó de forma espectacular y hoy miles de peces, tortugas, rayas, meros y grandes cardúmenes vuelven a llenar estas aguas.",
+					"Cuando buceas aquí no solo visitas un Parque Nacional: estás entrando en una historia de conservación que sigue escribiéndose todos los días.",
+				],
+			},
+			{
+				type: "mediaBanner",
+				media: { src: "/buceo-cabo-pulmo-cardumen.jpg", alt: "Cardumen masivo moviéndose como uno solo en Cabo Pulmo" },
+				quote: "Aquí el protagonista no es un animal. Es la cantidad de vida.",
+			},
+			{
+				type: "callout",
+				ink2: true,
+				heading: "Lo primero que impresiona no es una especie. Es sentirte rodeado de vida.",
+				paragraphs: [
+					"Hay inmersiones donde un tiburón toro se roba toda la atención. En Cabo Pulmo ocurre algo diferente.",
+					"Cardúmenes gigantes que oscurecen el agua durante unos segundos. Meros enormes observando desde el arrecife. Tortugas que pasan lentamente sin preocuparse por nuestra presencia. Rayas descansando sobre la arena. Miles de peces moviéndose al mismo tiempo, como si compartieran un solo pensamiento.",
+					"Y, algunos días, visitantes inesperados que llegan desde mar abierto para recordarnos que el océano siempre guarda una sorpresa más.",
+				],
+			},
+			{
+				type: "timeline",
+				id: "itinerario",
+				kicker: "Cómo será tu día",
+				title: "Del centro de buceo al arrecife",
+				note: "El orden y los sitios pueden cambiar según las condiciones del mar y la asignación diaria del Parque Nacional.",
+				items: [
+					{
+						time: "Punto de encuentro · Cabo Pulmo",
+						title: "Nos encontramos en Cabo Pulmo",
+						paragraphs: [
+							"La experiencia comienza en el centro de buceo. Te recomendamos llegar unos minutos antes para registrarte con calma, revisar el equipo y usar el baño antes de salir.",
+							"Aquí conocerás al divemaster que te acompañará durante toda la actividad. Según la modalidad, revisaremos el equipo, hablaremos del plan del día y resolveremos cualquier duda antes de ir a la embarcación.",
+						],
+					},
+					{
+						title: "El briefing",
+						paragraphs: [
+							"Antes de entrar al agua dedicamos el tiempo necesario a explicar la inmersión: el sitio asignado, las condiciones del mar, la profundidad máxima, las señales de comunicación y todo lo necesario para que disfrutes con tranquilidad.",
+							"Si es tu primer buceo, aquí aprenderás a respirar bajo el agua y a sentirte cómodo. Si ya eres buzo certificado pero llevas tiempo sin entrar al mar, el divemaster adaptará el ritmo a la experiencia del grupo.",
+						],
+					},
+					{
+						title: "Rumbo al arrecife",
+						paragraphs: [
+							"Subimos a la lancha y navegamos hacia el sitio asignado. Aquí ocurre algo que pocos conocen: los puntos de buceo no se eligen libremente.",
+							"Cada mañana el Parque Nacional realiza un sorteo entre los centros de buceo para distribuir los sitios disponibles. No podemos prometer un arrecife específico —y, curiosamente, esa es una de las razones por las que Cabo Pulmo sigue tan sano. La naturaleza siempre va primero.",
+						],
+						media: { suggest: "Buzos a bordo de la panga navegando hacia el sitio de buceo, con la costa desértica de Cabo Pulmo al fondo." },
+					},
+					{
+						title: "El momento del salto",
+						paragraphs: [
+							"Hay un instante que todo buzo recuerda. Te colocas la máscara. Respiras profundo. Miras hacia atrás. Y das la voltereta.",
+							"De pronto desaparece el ruido del mundo. Solo quedan las burbujas, la respiración y un arrecife que parece tener vida propia. Durante la inmersión seguimos el ritmo del arrecife: nunca perseguimos animales, nunca aceleramos la experiencia.",
+						],
+						media: { src: "/buceo-cabo-pulmo-buzo.jpg", alt: "Buzo descendiendo sobre el arrecife de Cabo Pulmo" },
+					},
+					{
+						title: "Segunda inmersión",
+						paragraphs: [
+							"Después de un descanso en superficie realizamos un segundo tanque. Muchas veces cambia por completo el paisaje: otro sitio, otra profundidad, otra fauna.",
+							"Dos inmersiones en Cabo Pulmo rara vez se sienten iguales. Y eso es precisamente lo que hace que quieras volver.",
+						],
+					},
+				],
+			},
+			{
+				type: "callout",
+				heading: "¿Por qué no prometemos un sitio específico? Porque no sería honesto.",
+				paragraphs: [
+					"Cada mañana el Parque Nacional asigna los puntos de buceo mediante un sistema de rotación y sorteo entre todos los operadores autorizados. Este manejo reduce la presión sobre el arrecife y ayuda a conservar uno de los ecosistemas marinos más importantes del Golfo de California.",
+					"En otras palabras: que no podamos elegir cualquier sitio es precisamente una de las razones por las que Cabo Pulmo sigue siendo tan espectacular.",
+				],
+			},
+			{
+				type: "mediaBanner",
+				media: { src: "/coral-reef-underwater-cabo-pulmo-colorful-tropical.jpg", alt: "Arrecife de coral colorido en Cabo Pulmo" },
+				quote: "Cada descenso es distinto. Cada respiración bajo el agua también.",
+			},
+			{
+				type: "fauna",
+				ink2: true,
+				kicker: "Fauna",
+				title: "El arrecife cambia todos los días",
+				note: "No podemos garantizar ninguna especie. Sí podemos garantizar que cada inmersión ocurre dentro de uno de los arrecifes más saludables del planeta.",
+				tiers: [
+					{ label: "Durante gran parte del año", species: ["Jureles", "Pargos", "Meros gigantes", "Tortugas marinas", "Rayas", "Peces arrecifales"] },
+					{ label: "Algunos días llegan visitantes", warn: true, species: ["Tiburón toro", "Móbulas", "Delfines", "Ballena jorobada", "Tiburón ballena", "Tiburón tigre"] },
+				],
+			},
+			{
+				type: "video",
+				kicker: "Un minuto bajo el agua",
+				title: "Míralo antes de vivirlo",
+				media: { suggest: "Reel cinematográfico de 30-60 s: giro de entrada al agua, cardumen envolviendo al buzo, mero gigante, tortuga cruzando el arrecife y burbujas subiendo a la superficie." },
+			},
+			{
+				type: "details",
+				kicker: "¿Qué opción es para ti?",
+				title: "Tres formas de vivir el arrecife",
+				items: [
+					{ title: "Discovery", text: "¿Nunca has buceado? Descubre qué se siente respirar bajo el agua. No necesitas experiencia previa: realizarás dos inmersiones siempre acompañado por un instructor certificado." },
+					{ title: "Buceo certificado", text: "Si cuentas con certificación Open Water o superior, harás dos inmersiones adaptadas a la experiencia del grupo. No importa si llevas tiempo sin bucear: el divemaster ajustará el ritmo." },
+					{ title: "Snorkel", text: "Si prefieres quedarte en superficie, también puedes explorar Cabo Pulmo haciendo snorkel. Normalmente los grupos de snorkel salen en una embarcación distinta para aprovechar mejor el tiempo de todos; si prefieren ir juntos, avísanos antes." },
+				],
+			},
+			{
+				type: "details",
+				ink2: true,
+				kicker: "Todo lo que incluye",
+				title: "Lo que ya está resuelto",
+				items: [
+					{ title: "Dos inmersiones", text: "En modalidad Discovery o para certificados, en los sitios asignados para el día." },
+					{ title: "Equipo completo de buceo", text: "Todo el equipo necesario para la inmersión." },
+					{ title: "Instructor o divemaster certificado", text: "Te acompaña y adapta el ritmo a la experiencia del grupo." },
+					{ title: "Lancha y capitán local", text: "Con conocimiento del parque y de sus condiciones." },
+					{ title: "Briefing de seguridad", text: "Explicación completa antes de entrar al agua y selección del sitio según las condiciones." },
+					{ title: "Snacks y agua", text: "Hidratación y algo ligero a bordo durante la salida." },
+				],
+			},
+			{
+				type: "info",
+				kicker: "Antes de reservar",
+				title: "Información importante",
+				items: [
+					{ label: "Edad mínima", value: "12 años." },
+					{ label: "Certificación mínima", value: "Open Water para la modalidad de buceo certificado." },
+					{ label: "Fotografía y video", value: "Esta actividad no incluye servicio de fotografía ni video." },
+					{ label: "Transporte", value: "No contamos con transporte desde La Paz hacia Cabo Pulmo." },
+					{ label: "Baños", value: "El centro de buceo cuenta con baños antes de salir. La embarcación no dispone de sanitario, así que recomendamos usar las instalaciones antes de abordar." },
+				],
+			},
+			{
+				type: "pricing",
+				id: "precios",
+				kicker: "Precios",
+				title: "Elige tu experiencia en Cabo Pulmo",
+				cards: [
+					{
+						name: "Discovery",
+						amountMxn: 3800,
+						amountNote: "/ persona",
+						desc: "Tu primer respiro bajo el agua, con dos inmersiones acompañado en todo momento por un instructor certificado.",
+						items: [
+							"Dos inmersiones guiadas",
+							"Sin experiencia previa necesaria",
+							"Equipo completo de buceo",
+							"Instructor certificado durante toda la actividad",
+							"Snacks y agua a bordo",
+						],
+						waText: "Hola! quiero reservar un Discovery de buceo en Cabo Pulmo",
+						ctaLabel: "Reservar mi Discovery",
+					},
+					{
+						name: "Buceo certificado",
+						amountMxn: 3200,
+						amountNote: "/ persona",
+						desc: "Dos inmersiones para buzos Open Water o superior, adaptadas a la experiencia del grupo.",
+						items: [
+							"Dos inmersiones en el arrecife",
+							"Requiere certificación Open Water o superior",
+							"Equipo completo de buceo",
+							"Divemaster certificado",
+							"Snacks y agua a bordo",
+						],
+						waText: "Hola! quiero reservar buceo certificado en Cabo Pulmo",
+						ctaLabel: "Reservar buceo certificado",
+						featured: true,
+						featuredTag: "Certificados",
+					},
+					{
+						name: "Snorkel",
+						amountMxn: 1500,
+						amountNote: "/ persona",
+						desc: "Explora el arrecife desde la superficie acompañado por un guía.",
+						items: [
+							"Recorrido de snorkel guiado",
+							"Ideal para quienes prefieren no bucear",
+							"Equipo de snorkel",
+							"Guía durante la actividad",
+						],
+						waText: "Hola! quiero reservar snorkel en Cabo Pulmo",
+						ctaLabel: "Reservar snorkel",
+					},
+				],
+			},
+			{
+				type: "policies",
+				ink2: true,
+				kicker: "Políticas",
+				title: "Claras y justas",
+				items: [
+					{
+						title: "Política por clima",
+						paragraphs: [
+							"Si el clima no permite realizar la actividad de forma segura, podrás elegir entre reprogramar tu salida o recibir el reembolso completo. La seguridad siempre va antes que el itinerario.",
+						],
+					},
+					{
+						title: "Política de cancelación",
+						paragraphs: [
+							"Si cancelas con más de 24 horas de anticipación podrás solicitar el reembolso o dejar tu pago como saldo a favor para una futura experiencia con Keabelmet.",
+						],
+					},
+				],
+			},
+			{
+				type: "mediaBanner",
+				media: { src: "/images/buceo-cabo-pulmo.jpeg", alt: "Buzo explorando el arrecife del Parque Nacional Cabo Pulmo" },
+				quote: "No siempre puedes elegir cuál será el momento que te marcará. Pero casi siempre sales queriendo volver.",
+				align: "bottom",
+			},
+			{
+				type: "finalCta",
+				image: "/buceo-cabo-pulmo-cardumen.jpg",
+				alt: "Cardumen masivo en el arrecife de Cabo Pulmo",
+				title: "Puede que recuerdes un tiburón toro. O un banco de miles de peces moviéndose como uno solo.",
+				text: "Eso es Cabo Pulmo. Cuéntanos cuándo visitas Baja California Sur y te ayudamos a elegir el mejor día para bucear uno de los arrecifes más vivos del planeta.",
+				primaryLabel: "Consultar disponibilidad",
+				primaryWa: "Hola! quiero consultar disponibilidad para bucear en Cabo Pulmo",
+				secondaryLabel: "Ver todas las expediciones",
+				secondaryHref: "/#expediciones",
+			},
+		],
+	},
 }
