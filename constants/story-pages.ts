@@ -44,7 +44,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/especies/mobulaschafa.jpeg", alt: "Móbula saltando fuera del agua en el Golfo de California, La Ventana" },
+				media: { src: "/images/especies/mobulas-bajo-agua.jpg", alt: "Agregación de móbulas nadando bajo la superficie en el Golfo de California, La Ventana" },
 				quote: "El mar decide qué nos enseña. Nosotros ponemos la paciencia para descubrirlo.",
 			},
 			{
@@ -120,12 +120,12 @@ export const storyPages: Record<string, StoryPageData> = {
 				kicker: "¿Cómo son realmente los encuentros?",
 				title: "Aprender a observar es parte de la aventura",
 				items: [
-					{ title: "Delfines", text: "Pueden acercarse a la embarcación, navegar junto a la proa o mantenerse a distancia. Algunos grupos pasan rápido; otros parecen tener toda la mañana libre y permanecen varios minutos a nuestro alrededor.", media: { src: "/images/especies/delfinsaltando.jpeg", alt: "Delfines saltando junto a la lancha en el Golfo de California" } },
-					{ title: "Móbulas", text: "Podemos encontrarlas nadando bajo la superficie, reunidas en grupos o saltando fuera del agua. Las grandes agregaciones son estacionales y su presencia puede variar incluso dentro de la mejor temporada.", media: { src: "/images/especies/mobulaschafa.jpeg", alt: "Agregación de móbulas saltando en La Ventana" } },
+					{ title: "Delfines", text: "Pueden acercarse a la embarcación, navegar junto a la proa o mantenerse a distancia. Algunos grupos pasan rápido; otros parecen tener toda la mañana libre y permanecen varios minutos a nuestro alrededor.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Delfín saltando junto a la lancha en el Golfo de California" } },
+					{ title: "Móbulas", text: "Podemos encontrarlas nadando bajo la superficie, reunidas en grupos o saltando fuera del agua. Las grandes agregaciones son estacionales y su presencia puede variar incluso dentro de la mejor temporada.", media: { src: "/images/especies/mobula-salto.jpg", alt: "Móbula saltando fuera del agua en La Ventana" } },
 					{ title: "Ballenas", text: "En muchos casos el primer indicio es un soplo en el horizonte. Nos aproximamos con calma, respetamos su espacio y observamos su dirección, ritmo de respiración y comportamiento.", media: { src: "/images/especies/ballenasaltando2.jpeg", alt: "Ballena saltando en el Mar de Cortés" } },
 					{ title: "Lobos marinos", text: "Pueden aparecer durante la navegación o cerca de zonas costeras. Aunque suelen ser curiosos, cada encuentro depende del lugar, la temporada y las condiciones del día.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino nadando en el Golfo de California" } },
 					{ title: "Encuentros excepcionales", text: "Orcas, cachalotes, ballenas piloto, falsas orcas, zifios, mantas gigantes y tiburones ballena pueden atravesar estas aguas. Son ocasionales e impredecibles; nunca una promesa, pero saber que recorren el canal de Cerralvo es parte de lo que hace tan especial explorarlo.", media: { src: "/images/especies/orcalaventana.jpeg", alt: "Orca en las aguas de La Ventana, Baja California Sur" } },
-					{ title: "Cachalotes", text: "Los gigantes de las profundidades a veces cruzan el canal de Cerralvo. Verlos respirar en superficie antes de una inmersión larga es uno de esos momentos que nadie olvida.", media: { suggest: "Cachalote respirando en la superficie con el logsuit del guía en primer plano." } },
+					{ title: "Cachalotes", text: "Los gigantes de las profundidades a veces cruzan el canal de Cerralvo. Verlos respirar en superficie antes de una inmersión larga es uno de esos momentos que nadie olvida.", media: { src: "/images/especies/cachalote-buceo.jpg", alt: "Cachalote nadando bajo el agua en el Golfo de California" } },
 				],
 			},
 			{
@@ -324,7 +324,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/whale-breaching-ocean.jpg", alt: "Ballena saltando al atardecer en el Golfo de California" },
+				media: { src: "/images/especies/ballena-atardecer.jpg", alt: "Ballena saltando al atardecer en el Golfo de California" },
 				quote: "No siempre puedes elegir el momento que te marcará. Pero casi siempre sales queriendo volver.",
 			},
 			{
