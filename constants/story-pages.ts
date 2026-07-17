@@ -326,6 +326,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				type: "mediaBanner",
 				media: { src: "/images/especies/ballena-atardecer.jpg", alt: "Ballena saltando al atardecer en el Golfo de California" },
 				quote: "No siempre puedes elegir el momento que te marcará. Pero casi siempre sales queriendo volver.",
+				align: "bottom",
 			},
 			{
 				type: "prose",
