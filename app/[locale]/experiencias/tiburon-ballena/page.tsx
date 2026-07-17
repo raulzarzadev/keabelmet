@@ -4,7 +4,9 @@ import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { buildPageMeta, buildUrl, getPageSeo, SITE_URL } from "@/lib/seo"
 import { JsonLd, breadcrumbSchema, touristTripSchema, seasonalEventSchema } from "@/lib/jsonLd"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
+import StoryPage from "@/components/StoryPage"
 import { getExpeditionPage } from "@/constants/expedition-pages"
+import { storyPages } from "@/constants/story-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -42,10 +44,15 @@ export default async function TiburonBallenaPage({ params }: { params: Promise<{
       url,
     }),
   ]
+  const story = locale === "es" ? storyPages["tiburon-ballena"] : undefined
   return (
     <>
       <JsonLd data={schemas} />
-      <ExpeditionDetail data={getExpeditionPage("tiburon-ballena", locale)} locale={locale} />
+      {story ? (
+        <StoryPage data={story} locale={locale} />
+      ) : (
+        <ExpeditionDetail data={getExpeditionPage("tiburon-ballena", locale)} locale={locale} />
+      )}
     </>
   )
 }
