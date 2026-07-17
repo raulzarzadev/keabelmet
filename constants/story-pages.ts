@@ -324,7 +324,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Atardecer en el regreso a La Ventana: siluetas de los viajeros en la lancha contra el cielo naranja." },
+				media: { src: "/whale-breaching-ocean.jpg", alt: "Ballena saltando al atardecer en el Golfo de California" },
 				quote: "No siempre puedes elegir el momento que te marcará. Pero casi siempre sales queriendo volver.",
 			},
 			{
