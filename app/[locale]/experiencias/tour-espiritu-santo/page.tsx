@@ -4,7 +4,9 @@ import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { buildPageMeta, buildUrl, getPageSeo } from "@/lib/seo"
 import { JsonLd, breadcrumbSchema, touristTripSchema } from "@/lib/jsonLd"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
+import StoryPage from "@/components/StoryPage"
 import { getExpeditionPage } from "@/constants/expedition-pages"
+import { storyPages } from "@/constants/story-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -31,10 +33,15 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
       touristType: ["Snorkeling", "Wildlife", "Beach", "Family"],
     }, locale),
   ]
+  const story = locale === "es" ? storyPages["tour-espiritu-santo"] : undefined
   return (
     <>
       <JsonLd data={schemas} />
-      <ExpeditionDetail data={getExpeditionPage("tour-espiritu-santo", locale)} locale={locale} />
+      {story ? (
+        <StoryPage data={story} locale={locale} />
+      ) : (
+        <ExpeditionDetail data={getExpeditionPage("tour-espiritu-santo", locale)} locale={locale} />
+      )}
     </>
   )
 }
