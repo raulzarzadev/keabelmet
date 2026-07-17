@@ -68,7 +68,7 @@ export type Block =
   | { type: "timeline"; id?: string; kicker?: string; title?: string; note?: string; ink2?: boolean; items: { time?: string; title: string; paragraphs: string[]; media?: Media }[] }
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
   | { type: "fauna"; kicker?: string; title?: string; note?: string; ink2?: boolean; tiers: { label: string; warn?: boolean; species: string[] }[] }
-  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string }
+  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom" }
   | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
   | { type: "video"; ink2?: boolean; kicker?: string; title?: string; media: Media }
   | { type: "gallery"; ink2?: boolean; kicker?: string; title?: string; cols?: 3 | 4; items: Media[] }
@@ -409,7 +409,7 @@ export default function StoryPage({ data, locale = defaultLocale }: { data: Stor
 
           case "mediaBanner":
             return (
-              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}`}>
+              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}${b.align === "bottom" ? " mb-bottom" : ""}`}>
                 <MediaSlot media={b.media} />
                 {(b.quote || b.sub) && (
                   <div className="mb-inner">
