@@ -79,7 +79,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Subimos a la embarcación y comenzamos a navegar hacia el canal de Cerralvo. En los primeros minutos empezarás a comprender que buscar fauna no consiste solamente en esperar a que algo aparezca.",
 							"Prestamos atención a las aves alimentándose, los cambios en la superficie, los soplos en la distancia, las sombras bajo el agua y cualquier movimiento que pueda indicar actividad. Y sí: muchas veces todo comienza con alguien señalando el horizonte y gritando “¡algo saltó por allá!”.",
 						],
-						media: { suggest: "Toma aérea con drone: la lancha saliendo de La Ventana rumbo a Isla Cerralvo con el mar en calma del amanecer." },
+						media: { src: "/images/safari/lancha-avistando-ballena.jpg", alt: "Viajero en la lancha observando una ballena que asoma frente a la costa de La Ventana" },
 					},
 					{
 						title: "Comienza la búsqueda",
@@ -94,7 +94,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"No todos los avistamientos se convierten en snorkel, y eso es intencional. Antes de entrar evaluamos la especie, el comportamiento del animal, la corriente y el oleaje, la experiencia del grupo, la presencia de otras embarcaciones y la posibilidad de una aproximación segura y respetuosa.",
 							"No necesitas ser apneísta ni atleta, pero sí sentirte cómodo flotando y seguir indicaciones en el mar. A veces el mejor encuentro sucede dentro del agua; otras, ocurre sentado en la lancha, viendo una ballena respirar a pocos metros. No forzamos una interacción solo para conseguir una fotografía.",
 						],
-						media: { suggest: "Huésped entrando al agua con snorkel para nadar junto a una móbula o un grupo de delfines, tomada desde la superficie." },
+						media: { src: "/images/safari/snorkel-lobos-marinos.jpg", alt: "Grupo de viajeros haciendo snorkel junto a lobos marinos en Isla Cerralvo, La Ventana" },
 					},
 					{
 						title: "Una pausa con sabor a Baja",
@@ -149,7 +149,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			{
 				type: "mediaSplit",
 				reverse: true,
-				media: { src: "/images/safari/nuestrocompromiso2.jpeg", alt: "Guía biólogo marino de Keabelmet con equipo de snorkel en La Ventana" },
+				media: { src: "/images/safari/guia-biologo-camara.jpg", alt: "Guía biólogo marino de Keabelmet fotografiando la fauna durante el safari en La Ventana" },
 				kicker: "Quién te acompaña",
 				title: "No solo señalamos animales. Los interpretamos.",
 				paragraphs: [
@@ -231,11 +231,11 @@ export const storyPages: Record<string, StoryPageData> = {
 				items: [
 					{ src: "/images/orca-safari.jpg", alt: "Navegando en busca de fauna en La Ventana" },
 					{ src: "/images/especies/delfinsaltando.jpeg", alt: "Delfines saltando en el Golfo de California" },
-					{ suggest: "Grupo de viajeros haciendo snorkel juntos en agua turquesa." },
+					{ src: "/images/safari/grupo-flotando-isla.jpg", alt: "Grupo de viajeros flotando juntos en el mar con Isla Cerralvo al fondo" },
 					{ src: "/images/especies/ballenasaltando2.jpeg", alt: "Ballena saltando en el Mar de Cortés" },
-					{ suggest: "Detalle del picnic: ceviche y fruta servidos a bordo." },
+					{ src: "/images/safari/snorkel-pulgares.jpg", alt: "Viajera con snorkel celebrando en el agua durante el safari" },
 					{ src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino curioso bajo el agua" },
-					{ suggest: "Atardecer sobre el canal de Cerralvo desde la lancha de regreso." },
+					{ src: "/images/safari/manta-gigante-buceo.jpg", alt: "Manta gigante nadando bajo el agua en el canal de Cerralvo" },
 					{ src: "/images/especies/mobulaschafa.jpeg", alt: "Móbulas saltando cerca de la embarcación" },
 				],
 			},
