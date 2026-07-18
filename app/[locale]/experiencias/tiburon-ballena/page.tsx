@@ -6,7 +6,7 @@ import { JsonLd, breadcrumbSchema, touristTripSchema, seasonalEventSchema } from
 import ExpeditionDetail from "@/components/ExpeditionDetail"
 import StoryPage from "@/components/StoryPage"
 import { getExpeditionPage } from "@/constants/expedition-pages"
-import { storyPages } from "@/constants/story-pages"
+import { getStoryPage } from "@/constants/story-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -44,7 +44,7 @@ export default async function TiburonBallenaPage({ params }: { params: Promise<{
       url,
     }),
   ]
-  const story = locale === "es" ? storyPages["tiburon-ballena"] : undefined
+  const story = getStoryPage("tiburon-ballena", locale)
   return (
     <>
       <JsonLd data={schemas} />

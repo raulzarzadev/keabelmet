@@ -6,7 +6,7 @@ import { JsonLd, breadcrumbSchema, touristTripSchema } from "@/lib/jsonLd"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
 import StoryPage from "@/components/StoryPage"
 import { getExpeditionPage } from "@/constants/expedition-pages"
-import { storyPages } from "@/constants/story-pages"
+import { getStoryPage } from "@/constants/story-pages"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -33,7 +33,7 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
       touristType: ["Snorkeling", "Wildlife", "Beach", "Family"],
     }, locale),
   ]
-  const story = locale === "es" ? storyPages["tour-espiritu-santo"] : undefined
+  const story = getStoryPage("tour-espiritu-santo", locale)
   return (
     <>
       <JsonLd data={schemas} />

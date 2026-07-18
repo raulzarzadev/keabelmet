@@ -1,4 +1,8 @@
 import type { StoryPageData } from "@/components/StoryPage"
+import type { Locale } from "@/lib/i18n"
+import { storyPagesEn } from "./story-pages.en"
+import { storyPagesFr } from "./story-pages.fr"
+import { storyPagesZh } from "./story-pages.zh"
 
 /**
  * Contenido narrativo (es) de las páginas de expedición, versión larga de
@@ -1892,4 +1896,18 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 		],
 	},
+}
+
+/**
+ * Devuelve el contenido de storytelling para un slug y locale. Si ese idioma
+ * aún no está traducido, devuelve undefined y la página cae a ExpeditionDetail.
+ */
+export function getStoryPage(slug: string, locale: Locale): StoryPageData | undefined {
+	const byLocale: Record<Locale, Record<string, StoryPageData>> = {
+		es: storyPages,
+		en: storyPagesEn,
+		fr: storyPagesFr,
+		zh: storyPagesZh,
+	}
+	return byLocale[locale]?.[slug]
 }
