@@ -17,6 +17,6 @@ export default async function ScubaDiscoveryPage({ params }: { params: Promise<{
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const story = getStoryPage("scuba-discovery", locale)
-  if (story) return <StoryPage data={story} locale={locale} />
-  return <ExpeditionDetail data={getExpeditionPage("scuba-discovery", locale)} locale={locale} />
+  if (story) return <StoryPage data={story} locale={locale} slug="scuba-discovery" />
+  return <ExpeditionDetail data={getExpeditionPage("scuba-discovery", locale)} locale={locale} slug="scuba-discovery" />
 }

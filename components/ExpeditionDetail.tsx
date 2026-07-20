@@ -3,10 +3,14 @@ import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
+import PayButton from "@/components/PayButton"
 
 export function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 }
+
+const payLabel: Record<string, string> = { es: "Pagar ahora", en: "Pay now", fr: "Payer maintenant", zh: "立即支付" }
+const waAskLabel: Record<string, string> = { es: "¿Dudas? Escríbenos", en: "Questions? Message us", fr: "Des questions ? Écrivez-nous", zh: "有疑问?联系我们" }
 
 export interface QuickFact {
   value: string
@@ -148,7 +152,7 @@ const ui: Record<Locale, UiDict> = {
   },
 }
 
-export default function ExpeditionDetail({ data, locale = defaultLocale }: { data: ExpeditionPageData; locale?: Locale }) {
+export default function ExpeditionDetail({ data, locale = defaultLocale, slug }: { data: ExpeditionPageData; locale?: Locale; slug: string }) {
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
   const t = ui[locale] || ui.es
 
@@ -279,14 +283,25 @@ export default function ExpeditionDetail({ data, locale = defaultLocale }: { dat
                   <li key={li}>{li}</li>
                 ))}
               </ul>
-              <a
-                href={wa(card.waText)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn ${card.featured ? "btn-teal" : "btn-solid"}`}
-              >
-                {t.book}
-              </a>
+              <div className="price-ctas">
+                {typeof card.amountMxn === "number" ? (
+                  <>
+                    <PayButton slug={slug} expeditionName={data.hero.title} cardName={card.name} amountMxn={card.amountMxn} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={card.featured} />
+                    <a href={wa(card.waText)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                      {waAskLabel[locale] ?? waAskLabel.es}
+                    </a>
+                  </>
+                ) : (
+                  <a
+                    href={wa(card.waText)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`btn ${card.featured ? "btn-teal" : "btn-solid"}`}
+                  >
+                    {t.book}
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

@@ -4,10 +4,14 @@ import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
+import PayButton from "@/components/PayButton"
 
 function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 }
+
+const payLabel: Record<string, string> = { es: "Pagar ahora", en: "Pay now", fr: "Payer maintenant", zh: "立即支付" }
+const waAskLabel: Record<string, string> = { es: "¿Dudas? Escríbenos", en: "Questions? Message us", fr: "Des questions ? Écrivez-nous", zh: "有疑问?联系我们" }
 
 /** Imagen o video real; si no hay `src`, muestra un placeholder intencional
  *  con ícono y la descripción del shot ideal (guía para el fotógrafo). */
@@ -109,7 +113,7 @@ export interface StoryPageData {
   blocks: Block[]
 }
 
-export default function StoryPage({ data, locale = defaultLocale }: { data: StoryPageData; locale?: Locale }) {
+export default function StoryPage({ data, locale = defaultLocale, slug }: { data: StoryPageData; locale?: Locale; slug: string }) {
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
   const h = data.hero
 
@@ -331,9 +335,20 @@ export default function StoryPage({ data, locale = defaultLocale }: { data: Stor
                       {c.items && (
                         <ul>{c.items.map((it) => <li key={it}>{it}</li>)}</ul>
                       )}
-                      <a href={wa(c.waText)} target="_blank" rel="noopener noreferrer" className={`btn ${c.featured ? "btn-teal" : "btn-solid"}`} style={{ justifyContent: "center", marginTop: c.items ? undefined : "auto" }}>
-                        {c.ctaLabel}
-                      </a>
+                      <div className="price-ctas" style={{ marginTop: c.items ? undefined : "auto" }}>
+                        {typeof c.amountMxn === "number" ? (
+                          <>
+                            <PayButton slug={slug} expeditionName={h.title} cardName={c.name} amountMxn={c.amountMxn} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={c.featured} />
+                            <a href={wa(c.waText)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                              {waAskLabel[locale] ?? waAskLabel.es}
+                            </a>
+                          </>
+                        ) : (
+                          <a href={wa(c.waText)} target="_blank" rel="noopener noreferrer" className={`btn ${c.featured ? "btn-teal" : "btn-solid"}`}>
+                            {c.ctaLabel}
+                          </a>
+                        )}
+                      </div>
                       {c.sub && <p className="sp-price-sub">{c.sub}</p>}
                     </div>
                   ))}

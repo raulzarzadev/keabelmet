@@ -17,6 +17,6 @@ export default async function BuceoLaPazPage({ params }: { params: Promise<{ loc
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const story = getStoryPage("buceo-la-paz", locale)
-  if (story) return <StoryPage data={story} locale={locale} />
-  return <ExpeditionDetail data={getExpeditionPage("buceo-la-paz", locale)} locale={locale} />
+  if (story) return <StoryPage data={story} locale={locale} slug="buceo-la-paz" />
+  return <ExpeditionDetail data={getExpeditionPage("buceo-la-paz", locale)} locale={locale} slug="buceo-la-paz" />
 }

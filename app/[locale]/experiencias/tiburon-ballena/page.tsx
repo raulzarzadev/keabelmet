@@ -49,9 +49,9 @@ export default async function TiburonBallenaPage({ params }: { params: Promise<{
     <>
       <JsonLd data={schemas} />
       {story ? (
-        <StoryPage data={story} locale={locale} />
+        <StoryPage data={story} locale={locale} slug="tiburon-ballena" />
       ) : (
-        <ExpeditionDetail data={getExpeditionPage("tiburon-ballena", locale)} locale={locale} />
+        <ExpeditionDetail data={getExpeditionPage("tiburon-ballena", locale)} locale={locale} slug="tiburon-ballena" />
       )}
     </>
   )
