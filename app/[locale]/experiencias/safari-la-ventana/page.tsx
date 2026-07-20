@@ -17,6 +17,6 @@ export default async function SafariLaVentanaPage({ params }: { params: Promise<
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const story = getStoryPage("safari-la-ventana", locale)
-  if (story) return <StoryPage data={story} locale={locale} />
-  return <ExpeditionDetail data={getExpeditionPage("safari-la-ventana", locale)} locale={locale} />
+  if (story) return <StoryPage data={story} locale={locale} slug="safari-la-ventana" />
+  return <ExpeditionDetail data={getExpeditionPage("safari-la-ventana", locale)} locale={locale} slug="safari-la-ventana" />
 }

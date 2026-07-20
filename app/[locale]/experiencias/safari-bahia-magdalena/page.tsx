@@ -17,6 +17,6 @@ export default async function SafariBahiaMagdalenaPage({ params }: { params: Pro
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
   const story = getStoryPage("safari-bahia-magdalena", locale)
-  if (story) return <StoryPage data={story} locale={locale} />
-  return <ExpeditionDetail data={getExpeditionPage("safari-bahia-magdalena", locale)} locale={locale} />
+  if (story) return <StoryPage data={story} locale={locale} slug="safari-bahia-magdalena" />
+  return <ExpeditionDetail data={getExpeditionPage("safari-bahia-magdalena", locale)} locale={locale} slug="safari-bahia-magdalena" />
 }

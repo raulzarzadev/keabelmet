@@ -49,9 +49,9 @@ export default async function TourBallenaGrisPage({ params }: { params: Promise<
     <>
       <JsonLd data={schemas} />
       {story ? (
-        <StoryPage data={story} locale={locale} />
+        <StoryPage data={story} locale={locale} slug="tour-ballena-gris" />
       ) : (
-        <ExpeditionDetail data={getExpeditionPage("tour-ballena-gris", locale)} locale={locale} />
+        <ExpeditionDetail data={getExpeditionPage("tour-ballena-gris", locale)} locale={locale} slug="tour-ballena-gris" />
       )}
     </>
   )

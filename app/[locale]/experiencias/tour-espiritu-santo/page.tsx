@@ -38,9 +38,9 @@ export default async function TourEspirituSantoPage({ params }: { params: Promis
     <>
       <JsonLd data={schemas} />
       {story ? (
-        <StoryPage data={story} locale={locale} />
+        <StoryPage data={story} locale={locale} slug="tour-espiritu-santo" />
       ) : (
-        <ExpeditionDetail data={getExpeditionPage("tour-espiritu-santo", locale)} locale={locale} />
+        <ExpeditionDetail data={getExpeditionPage("tour-espiritu-santo", locale)} locale={locale} slug="tour-espiritu-santo" />
       )}
     </>
   )
