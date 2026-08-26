@@ -26,14 +26,24 @@ export async function POST(req: NextRequest) {
 	const expedition = typeof expeditionName === "string" ? expeditionName : slug
 	const description = name ? `${expedition} — ${name}` : expedition
 
-	const stripe = getStripe()
-	const paymentIntent = await stripe.paymentIntents.create({
-		amount: Math.round(amountMxn * 100),
-		currency: "mxn",
-		description: `Keabelmet · ${description}`.slice(0, 500),
-		automatic_payment_methods: { enabled: true },
-		metadata: { slug, cardName: name },
-	})
+	try {
+		const stripe = getStripe()
+		const paymentIntent = await stripe.paymentIntents.create({
+			amount: Math.round(amountMxn * 100),
+			currency: "mxn",
+			description: `Keabelmet · ${description}`.slice(0, 500),
+			automatic_payment_methods: { enabled: true },
+			metadata: { slug, cardName: name },
+		})
 
-	return NextResponse.json({ clientSecret: paymentIntent.client_secret })
+		return NextResponse.json({ clientSecret: paymentIntent.client_secret })
+	} catch (err) {
+		// Nunca exponemos la clave; sí el tipo/mensaje de Stripe para diagnóstico.
+		const message = err instanceof Error ? err.message : "Error desconocido"
+		console.error("[create-payment-intent] Stripe error:", message)
+		return NextResponse.json(
+			{ error: "No pudimos iniciar el pago.", detail: message },
+			{ status: 502 },
+		)
+	}
 }
