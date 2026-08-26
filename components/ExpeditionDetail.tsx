@@ -286,7 +286,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
               <div className="price-ctas">
                 {typeof card.amountMxn === "number" ? (
                   <>
-                    <PayButton slug={slug} expeditionName={data.hero.title} cardName={card.name} amountMxn={card.amountMxn} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={card.featured} />
+                    <PayButton slug={slug} expeditionName={data.hero.title} cardName={card.name} amountMxn={card.amountMxn} amountNote={card.amountNote} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={card.featured} />
                     <a href={wa(card.waText)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                       {waAskLabel[locale] ?? waAskLabel.es}
                     </a>
