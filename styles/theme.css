@@ -762,6 +762,55 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   .checkout-modal { padding: 30px 20px 24px; border-radius: 20px; }
 }
 
+/* --- reservation flow --- */
+.checkout-breakdown { margin-top: 8px; font-size: 13px; color: var(--sand-dim); }
+.res-form { gap: 16px; }
+.res-field { display: flex; flex-direction: column; gap: 7px; }
+.res-field > span { font-size: 13px; color: var(--sand-dim); font-weight: 500; }
+.res-field input { width: 100%; box-sizing: border-box; padding: 13px 14px; border-radius: 12px; border: 1.5px solid rgba(244,239,228,0.16); background: rgba(244,239,228,0.04); color: var(--sand); font-family: inherit; font-size: 15px; transition: border-color .18s ease, box-shadow .18s ease; }
+.res-field input::placeholder { color: var(--sand-dim); opacity: .7; }
+.res-field input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+.res-field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+.res-hint { font-size: 12px; color: var(--sand-dim); font-style: italic; }
+.res-stepper { display: flex; align-items: stretch; gap: 10px; }
+.res-stepper button { width: 46px; flex: none; border-radius: 12px; border: 1.5px solid rgba(244,239,228,0.16); background: rgba(244,239,228,0.04); color: var(--teal); font-size: 22px; font-weight: 700; cursor: pointer; transition: all .18s ease; }
+.res-stepper button:hover { border-color: var(--teal); background: rgba(40,194,160,0.12); }
+.res-stepper input { text-align: center; -moz-appearance: textfield; appearance: textfield; font-weight: 700; }
+.res-stepper input::-webkit-outer-spin-button, .res-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.res-total { display: flex; align-items: baseline; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--line); margin-top: 2px; }
+.res-total span { font-size: 14px; color: var(--sand-dim); }
+.res-total strong { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 22px; color: var(--teal); }
+.res-cancel { font-size: 12.5px; color: var(--sand-dim); margin: -4px 0 0; }
+.checkout-back { align-self: flex-start; background: none; border: none; color: var(--sand-dim); font-size: 13px; cursor: pointer; padding: 0; margin-bottom: 2px; }
+.checkout-back:hover { color: var(--teal); }
+
+/* --- voucher --- */
+.voucher { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.voucher-ic { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 14px; }
+.voucher-ic.ok { background: rgba(40,194,160,0.14); color: var(--teal); }
+.voucher-ic.wait { background: rgba(240,196,110,0.14); color: #f0c46e; }
+.voucher-title { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 22px; color: var(--sand); margin: 0 0 8px; }
+.voucher-lead { font-size: 14px; color: var(--sand-dim); margin: 0 0 20px; max-width: 340px; line-height: 1.55; }
+.voucher-folio { width: 100%; box-sizing: border-box; background: rgba(40,194,160,0.1); border: 1px dashed var(--teal-dim); border-radius: 14px; padding: 12px; margin-bottom: 18px; }
+.voucher-folio span { display: block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sand-dim); margin-bottom: 3px; }
+.voucher-folio strong { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 20px; color: var(--teal); letter-spacing: 0.04em; }
+.voucher-rows { width: 100%; margin: 0 0 16px; display: flex; flex-direction: column; gap: 0; text-align: left; }
+.voucher-rows > div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.voucher-rows dt { font-size: 13px; color: var(--sand-dim); flex: none; }
+.voucher-rows dd { margin: 0; font-size: 14px; color: var(--sand); text-align: right; }
+.voucher-rows dd em { color: var(--sand-dim); font-style: normal; font-size: 12px; }
+.voucher-total dt, .voucher-total dd { font-weight: 700; }
+.voucher-total dd { color: var(--teal) !important; font-size: 16px !important; }
+.voucher-note { font-size: 12px; color: var(--sand-dim); margin: 0 0 18px; font-style: italic; }
+.voucher-wa { width: 100%; justify-content: center; }
+.voucher-change { margin-top: 16px; font-size: 13px; color: var(--sand-dim); }
+.voucher-change span { display: block; margin-bottom: 4px; }
+.voucher-change a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.voucher-actions { display: flex; gap: 10px; margin-top: 18px; }
+.voucher-actions .btn { flex: 1; justify-content: center; }
+.reserva-page { min-height: 100vh; background: var(--ink); display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.reserva-card { width: 100%; max-width: 440px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 24px; padding: 40px 32px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+
 /* detail-page testimonial variant on ink bg */
 .testi.on-ink { background: var(--ink); border-top: none; padding: 120px 32px; max-width: none; }
 .testi .section-head { padding: 0 0 50px; max-width: var(--maxw); margin: 0 auto; }
