@@ -62,6 +62,10 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "mediaBanner",
+				media: { suggest: "Toma aérea con drone al amanecer: la lancha saliendo de La Ventana hacia Isla Cerralvo, mar en calma y la estela dorada del sol sobre el agua." },
+			},
+			{
 				type: "timeline",
 				id: "itinerario",
 				kicker: "Cómo será tu día",
