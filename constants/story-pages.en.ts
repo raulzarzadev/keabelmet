@@ -1749,14 +1749,18 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "The protagonist is never the same",
 				title: "Every day in Bahía Magdalena is different",
-				note: "We don't promise any particular species, because we believe nature is far more thrilling when it stays completely free.",
-				tiers: [
-					{ label: "During a single trip you might find", species: ["Sardine bait balls", "Striped marlin", "Sea lions", "Dolphins", "Bryde's whales", "Pelicans, gulls and seabirds"] },
-					{ label: "And sometimes", warn: true, species: ["Other unexpected pelagic species"] },
+				intro: "We don't promise any particular species, because we believe nature is far more thrilling when it stays completely free. Here's what the ocean tends to bring on stage.",
+				items: [
+					{ title: "Sardine bait balls", text: "Thousands of sardines gather and spin as a single organism to defend themselves. They're the heart of the spectacle: where there's bait, everything else appears.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Sardine bait ball spinning in Bahía Magdalena" } },
+					{ title: "Striped marlin", text: "The fastest stars of the show. They tear through the bait ball at full speed, light up their colors and coordinate attacks that last just seconds.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Striped marlin hunting in a sardine bait ball" } },
+					{ title: "Bryde's whales", text: "Sometimes the giant of the scene. They surface among the schools to feed at the top of the water, just meters from the boat.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Bryde's whale feeding among sardines" } },
+					{ title: "Sea lions", text: "They use the chaos to hunt. Agile and curious, they dart in and out of the bait ball with a mastery that's mesmerizing.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Sea lion hunting during the Sardine Run" } },
+					{ title: "Dolphins", text: "When a pod decides to join the hunt, the coordination multiplies. They push the sardines toward the surface and orchestrate the whole show.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Dolphins cooperating during the hunt" } },
+					{ title: "Seabirds", text: "Pelicans, gulls and frigatebirds are the first clue. When they dive, we know the action is happening right below.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Seabirds marking the activity in Bahía Magdalena" } },
 				],
 			},
 			{
