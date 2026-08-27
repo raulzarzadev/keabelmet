@@ -1,13 +1,32 @@
 import Link from "next/link"
-import { Fragment } from "react"
+import { Fragment, type ReactNode } from "react"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
+import { faunaSeasons, faunaNames, monthsShort, faunaLegend, type FaunaIcon } from "@/lib/fauna-calendar"
 
 function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
+}
+
+const faunaIcons: Record<FaunaIcon, ReactNode> = {
+  manta: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6c-3.5 0-7.5 2.5-10 7 3-.5 6 0 8 2l2 5 2-5c2-2 5-2.5 8-2-2.5-4.5-6.5-7-10-7z" /></svg>
+  ),
+  whale: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12c0-3 2.5-6 6.5-6 5 0 6.5 4 11 3.5-1 3-3.5 5-7 5-1 2-3 3.5-5.5 3.5.5-1.5.5-3 0-4.5C5 12.5 3.5 12 3 12z" /><circle cx="8.5" cy="10.5" r="0.5" fill="currentColor" /></svg>
+  ),
+  fin: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17c4 0 6-1 8-4s4-6 10-6c-1 6-5 12-13 12-2 0-4-.5-5-2z" /></svg>
+  ),
+  shark: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 13c3-4.5 7-7 11-7 4 0 6.5 2.5 7 6-1 3-4 5-8 5-4 0-7-1.5-10-4z" /><path d="M11 6.5L13 3l1.5 3.2" /><circle cx="9" cy="11" r="0.4" fill="currentColor" /></svg>
+  ),
+  seal: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 18c1-5 4-9 8-9 3 0 5 2 5 5 2 0 3 1.5 3 4" /><path d="M12 9c0-1.5 1-3 3-3" /><circle cx="15" cy="8" r="0.5" fill="currentColor" /></svg>
+  ),
 }
 
 const payLabel: Record<string, string> = { es: "Pagar ahora", en: "Pay now", fr: "Payer maintenant", zh: "立即支付" }
@@ -71,6 +90,7 @@ export type Block =
   | { type: "callout"; heading: string; paragraphs: string[]; ink2?: boolean }
   | { type: "timeline"; id?: string; kicker?: string; title?: string; note?: string; ink2?: boolean; items: { time?: string; title: string; paragraphs: string[]; media?: Media }[] }
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
+  | { type: "faunaCalendar"; kicker?: string; title?: string; intro?: string; ink2?: boolean }
   | { type: "fauna"; kicker?: string; title?: string; note?: string; ink2?: boolean; tiers: { label: string; warn?: boolean; species: string[] }[] }
   | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom" }
   | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
@@ -219,6 +239,56 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                 </div>
               </section>
             )
+
+          case "faunaCalendar": {
+            const species = faunaSeasons[slug] ?? []
+            const names = faunaNames[locale] ?? faunaNames.es
+            const months = monthsShort[locale] ?? monthsShort.es
+            const lg = faunaLegend[locale] ?? faunaLegend.es
+            return (
+              <section key={i} className={sec(b.ink2)}>
+                <div className="sp-head">
+                  {b.kicker && <span className="kicker">{b.kicker}</span>}
+                  {b.title && <h2>{b.title}</h2>}
+                  {b.intro && <p>{b.intro}</p>}
+                </div>
+                <div className="cal-hint">{lg.hint}</div>
+                <div className="cal-scroll">
+                  <div className="cal-table fauna-cal">
+                    <div className="cal-corner" />
+                    {months.map((m) => (
+                      <div key={m} className="cal-month">{m}</div>
+                    ))}
+                    {species.map((sp) => (
+                      <Fragment key={sp.id}>
+                        <div className="cal-tour">
+                          <span className="cal-icon">{faunaIcons[sp.icon]}</span>
+                          <div><span className="fauna-name">{names[sp.id] ?? sp.id}</span></div>
+                        </div>
+                        {months.map((_, mi) => {
+                          const month = mi + 1
+                          const peak = sp.peak.includes(month)
+                          const on = sp.months.includes(month)
+                          return (
+                            <div
+                              key={`${sp.id}-${month}`}
+                              className={`cal-cell${peak ? " peak" : on ? " on" : ""}`}
+                              title={`${names[sp.id]} · ${months[mi]}${peak ? lg.peakSuffix : on ? lg.seasonSuffix : ""}`}
+                            />
+                          )
+                        })}
+                      </Fragment>
+                    ))}
+                  </div>
+                </div>
+                <div className="cal-legend">
+                  <span><i className="cal-dot on" /> {lg.season}</span>
+                  <span><i className="cal-dot peak" /> {lg.peak}</span>
+                  <span><i className="cal-dot" /> {lg.off}</span>
+                </div>
+              </section>
+            )
+          }
 
           case "fauna":
             return (

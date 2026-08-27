@@ -135,16 +135,10 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				media: { suggest: "Vidéo cinématographique de 30-60s : drone quittant La Ventana, raies mobula bondissantes, entrée dans l'eau avec des dauphins, une baleine qui respire et le coucher de soleil du retour." },
 			},
 			{
-				type: "seasons",
+				type: "faunaCalendar",
 				kicker: "Faune et saisons",
-				title: "Choisissez votre meilleur moment",
-				intro: "La vie marine change au fil de l'année. Ces repères vous aident à choisir une saison, mais aucune rencontre ne peut être garantie. Pendant une grande partie de l'année, des dauphins, des otaries et des oiseaux marins peuvent apparaître et nous aider à localiser l'activité.",
-				items: [
-					{ name: "Printemps", text: "L'une des saisons les plus spéciales pour rechercher de grandes agrégations de raies mobula. Des dauphins, otaries, baleines bleues et, exceptionnellement, des orques ou d'autres grands prédateurs peuvent aussi apparaître." },
-					{ name: "Été", text: "La saison des mobula continue et les chances d'activité pélagique augmentent. Des dauphins, otaries, rorquals de Bryde et, occasionnellement, des cachalots, orques et globicéphales peuvent apparaître." },
-					{ name: "Automne", text: "Une saison moins connue, mais avec des possibilités intéressantes de trouver des dauphins, otaries, oiseaux, mantas géantes et cachalots." },
-					{ name: "Hiver", text: "L'arrivée de différentes espèces de baleines transforme la région : baleines à bosse, bleues et communes, ainsi que des dauphins et de petites agrégations de raies mobula." },
-				],
+				title: "Que voir, et quand ?",
+				intro: "La vie marine change au fil de l'année. Ce calendrier vous aide à choisir votre meilleur moment — mais rappelez-vous : nous travaillons avec une faune en liberté et aucune rencontre n'est garantie. Dauphins et otaries peuvent apparaître une grande partie de l'année.",
 			},
 			{
 				type: "mediaSplit",

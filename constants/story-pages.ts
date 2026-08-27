@@ -139,16 +139,10 @@ export const storyPages: Record<string, StoryPageData> = {
 				media: { suggest: "Reel cinematográfico de 30-60 s: drone saliendo de La Ventana, móbulas saltando, entrada al agua con delfines, una ballena respirando y el atardecer del regreso." },
 			},
 			{
-				type: "seasons",
+				type: "faunaCalendar",
 				kicker: "Fauna y temporadas",
-				title: "Elige tu mejor momento",
-				intro: "La vida marina cambia a lo largo del año. Estas referencias te ayudan a elegir temporada, pero ningún encuentro puede garantizarse. Durante gran parte del año pueden aparecer delfines, lobos marinos y aves marinas que nos ayudan a localizar actividad.",
-				items: [
-					{ name: "Primavera", text: "Una de las temporadas más especiales para buscar grandes agregaciones de móbulas. También pueden aparecer delfines, lobos marinos, ballena azul y, de manera extraordinaria, orcas u otros grandes depredadores." },
-					{ name: "Verano", text: "Continúa la temporada de móbulas y aumenta la posibilidad de actividad pelágica. Pueden aparecer delfines, lobos marinos, ballenas de Bryde y, ocasionalmente, cachalotes, orcas y ballenas piloto." },
-					{ name: "Otoño", text: "Una temporada menos conocida, pero con posibilidades interesantes de encontrar delfines, lobos marinos, aves, mantas gigantes y cachalotes." },
-					{ name: "Invierno", text: "La llegada de distintas especies de ballenas transforma la región: jorobadas, azules y de aleta, además de delfines y agregaciones menores de móbulas." },
-				],
+				title: "¿Qué puedes ver y cuándo?",
+				intro: "La vida marina cambia a lo largo del año. Este calendario te ayuda a elegir tu mejor momento — pero recuerda: trabajamos con fauna en libertad y ningún encuentro está garantizado. Delfines y lobos marinos pueden aparecer gran parte del año.",
 			},
 			{
 				type: "mediaSplit",

@@ -135,16 +135,10 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				media: { suggest: "Cinematic 30-60s reel: drone leaving La Ventana, mobulas leaping, entering the water with dolphins, a whale breathing and the sunset on the way back." },
 			},
 			{
-				type: "seasons",
+				type: "faunaCalendar",
 				kicker: "Wildlife and seasons",
-				title: "Choose your best time",
-				intro: "Marine life changes throughout the year. These references help you choose a season, but no encounter can be guaranteed. For much of the year you may find dolphins, sea lions and seabirds that help us locate activity.",
-				items: [
-					{ name: "Spring", text: "One of the most special seasons to look for large aggregations of mobula rays. Dolphins, sea lions, blue whale and — extraordinarily — orcas or other large predators may also appear." },
-					{ name: "Summer", text: "The mobula season continues and the chance of pelagic activity increases. Dolphins, sea lions, Bryde's whales and, occasionally, sperm whales, orcas and pilot whales may appear." },
-					{ name: "Autumn", text: "A lesser-known season, but with interesting chances of finding dolphins, sea lions, birds, giant mantas and sperm whales." },
-					{ name: "Winter", text: "The arrival of different whale species transforms the region: humpbacks, blues and fins, plus dolphins and smaller mobula aggregations." },
-				],
+				title: "What can you see, and when?",
+				intro: "Marine life changes throughout the year. This calendar helps you choose your best time — but remember: we work with wildlife in freedom and no encounter is guaranteed. Dolphins and sea lions may appear for much of the year.",
 			},
 			{
 				type: "mediaSplit",
