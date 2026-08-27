@@ -58,6 +58,10 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "mediaBanner",
+				media: { suggest: "Vue aérienne au drone à l'aube : le bateau quittant La Ventana vers l'île Cerralvo, mer calme et sillage doré du soleil sur l'eau." },
+			},
+			{
 				type: "timeline",
 				id: "itinerario",
 				kicker: "Le déroulement de votre journée",

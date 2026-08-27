@@ -58,6 +58,10 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "mediaBanner",
+				media: { suggest: "Aerial drone shot at dawn: the boat leaving La Ventana toward Cerralvo Island, calm sea and a golden sun trail across the water." },
+			},
+			{
 				type: "timeline",
 				id: "itinerario",
 				kicker: "What your day looks like",

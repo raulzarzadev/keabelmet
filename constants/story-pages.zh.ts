@@ -57,6 +57,10 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "mediaBanner",
+				media: { suggest: "黎明时分的无人机航拍:小船从拉文塔纳驶向塞拉尔沃岛,海面平静,金色阳光洒在水面上。" },
+			},
+			{
 				type: "timeline",
 				id: "itinerario",
 				kicker: "你的一天将如何度过",
