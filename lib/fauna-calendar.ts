@@ -17,15 +17,15 @@ export interface FaunaSpecies {
 
 export const faunaSeasons: Record<string, FaunaSpecies[]> = {
 	"safari-la-ventana": [
-		{ id: "mobula", icon: "manta", months: [3, 4, 5, 6, 7, 8], peak: [4, 5, 6] },
+		{ id: "mobula", icon: "manta", months: [1, 3, 4, 5, 6, 7, 8, 12], peak: [4, 5, 6] },
 		{ id: "orca", icon: "fin", months: ALL, peak: [3, 4, 5, 6] },
-		{ id: "blueWhale", icon: "whale", months: [11, 12, 1, 2, 3, 4, 5, 6], peak: [2, 3, 4] },
+		{ id: "blueWhale", icon: "whale", months: [11, 12, 1, 2, 3, 4], peak: [2, 3, 4] },
 		{ id: "humpback", icon: "whale", months: [12, 1, 2, 3], peak: [1, 2] },
 		{ id: "whaleShark", icon: "shark", months: [10, 11, 12, 1, 2, 3, 4], peak: [11, 12, 1, 2, 3] },
-		{ id: "dolphin", icon: "fin", months: ALL, peak: [] },
-		{ id: "sealion", icon: "seal", months: ALL, peak: [] },
-		{ id: "spermWhale", icon: "whale", months: [12, 1, 2, 3, 4, 5, 6], peak: [] },
-		{ id: "giantManta", icon: "manta", months: [9, 10, 11], peak: [] },
+		{ id: "dolphin", icon: "fin", months: ALL, peak: ALL },
+		{ id: "sealion", icon: "seal", months: ALL, peak: ALL },
+		{ id: "spermWhale", icon: "whale", months: [5, 6, 7, 8, 9, 10, 11], peak: [] },
+		{ id: "giantManta", icon: "manta", months: [8, 9, 10], peak: [] },
 		{ id: "brydeWhale", icon: "whale", months: [6, 7, 8, 9], peak: [] },
 	],
 }
