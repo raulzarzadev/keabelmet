@@ -1749,14 +1749,18 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "Le protagoniste n'est jamais le même",
 				title: "Chaque jour à Bahía Magdalena est différent",
-				note: "Nous ne promettons aucune espèce en particulier, car nous pensons que la nature est bien plus passionnante quand elle reste complètement libre.",
-				tiers: [
-					{ label: "Lors d'une même sortie vous pourriez trouver", species: ["Bancs de sardines", "Marlins rayés", "Otaries", "Dauphins", "Baleines de Bryde", "Pélicans, mouettes et oiseaux marins"] },
-					{ label: "Et parfois", warn: true, species: ["D'autres espèces pélagiques inattendues"] },
+				intro: "Nous ne promettons aucune espèce en particulier, car nous pensons que la nature est bien plus passionnante quand elle reste complètement libre. Voici ce que l'océan met souvent en scène.",
+				items: [
+					{ title: "Bancs de sardines", text: "Des milliers de sardines se rassemblent et tournoient comme un seul organisme pour se défendre. Elles sont le cœur du spectacle : là où il y a des proies, tout le reste apparaît.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Banc de sardines tournoyant à Bahía Magdalena" } },
+					{ title: "Marlins rayés", text: "Les stars les plus rapides. Ils traversent le banc de sardines à toute vitesse, allument leurs couleurs et coordonnent des attaques qui ne durent que quelques secondes.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Marlin rayé chassant dans un banc de sardines" } },
+					{ title: "Baleines de Bryde", text: "Parfois, le géant de la scène. Elles émergent parmi les bancs pour se nourrir en surface, à quelques mètres du bateau.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Baleine de Bryde se nourrissant parmi les sardines" } },
+					{ title: "Otaries", text: "Elles profitent du chaos pour chasser. Agiles et curieuses, elles entrent et sortent du banc de proies avec une adresse hypnotisante.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Otarie chassant pendant le Sardine Run" } },
+					{ title: "Dauphins", text: "Quand un groupe décide de se joindre à la chasse, la coordination se multiplie. Ils poussent les sardines vers la surface et orchestrent tout le spectacle.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Dauphins coopérant pendant la chasse" } },
+					{ title: "Oiseaux marins", text: "Pélicans, mouettes et frégates sont le premier indice. Quand ils plongent, nous savons que l'action se déroule juste en dessous.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Oiseaux marins signalant l'activité à Bahía Magdalena" } },
 				],
 			},
 			{

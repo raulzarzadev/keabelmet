@@ -1748,14 +1748,18 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "主角从不相同",
 				title: "马格达莱纳湾的每一天都不同",
-				note: "我们不承诺任何特定物种,因为我们相信,当大自然保持完全自由时,它才最令人兴奋。",
-				tiers: [
-					{ label: "在同一次出行中你可能遇到", species: ["沙丁鱼群", "条纹马林鱼", "海狮", "海豚", "布氏鲸", "鹈鹕、海鸥和海鸟"] },
-					{ label: "有时还会有", warn: true, species: ["其他意想不到的远洋物种"] },
+				intro: "我们不承诺任何特定物种,因为我们相信,当大自然保持完全自由时,它才最令人兴奋。以下是海洋通常会为你上演的角色。",
+				items: [
+					{ title: "沙丁鱼群", text: "成千上万条沙丁鱼聚集起来,像一个整体一样旋转以自卫。它们是这场奇观的核心:哪里有猎物,其他一切就会出现。", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "马格达莱纳湾旋转的沙丁鱼群" } },
+					{ title: "条纹马林鱼", text: "最迅捷的主角。它们全速穿过沙丁鱼群,点亮身上的色彩,协同发起仅持续几秒的攻击。", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "条纹马林鱼在沙丁鱼群中捕猎" } },
+					{ title: "布氏鲸", text: "有时是场上的巨兽。它们从鱼群中浮出水面,在离船仅几米处进食。", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "布氏鲸在沙丁鱼群中觅食" } },
+					{ title: "海狮", text: "它们利用混乱来捕猎。敏捷而好奇,以令人着迷的技巧在鱼群中穿梭进出。", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "海狮在沙丁鱼奇观中捕猎" } },
+					{ title: "海豚", text: "当一群海豚决定加入捕猎,协同便成倍增加。它们把沙丁鱼逼向水面,统筹整场奇观。", media: { src: "/images/especies/delfin-salto.jpg", alt: "海豚在捕猎中协作" } },
+					{ title: "海鸟", text: "鹈鹕、海鸥和军舰鸟是第一个线索。当它们俯冲时,我们就知道行动正发生在下方。", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "海鸟标示着马格达莱纳湾的活动" } },
 				],
 			},
 			{

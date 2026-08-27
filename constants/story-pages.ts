@@ -1753,14 +1753,18 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "El protagonista nunca es el mismo",
 				title: "Cada día en Bahía Magdalena es diferente",
-				note: "No prometemos ninguna especie en particular, porque creemos que la naturaleza es mucho más emocionante cuando sigue siendo completamente libre.",
-				tiers: [
-					{ label: "Durante una misma salida podrías encontrar", species: ["Bolas de sardinas", "Marlines rayados", "Lobos marinos", "Delfines", "Ballenas de Bryde", "Pelícanos, gaviotas y aves marinas"] },
-					{ label: "Y a veces", warn: true, species: ["Otras especies pelágicas inesperadas"] },
+				intro: "No prometemos ninguna especie en particular, porque creemos que la naturaleza es mucho más emocionante cuando sigue siendo completamente libre. Esto es lo que el océano suele poner en escena.",
+				items: [
+					{ title: "Bolas de sardinas", text: "Miles de sardinas se agrupan y giran como un solo organismo para defenderse. Son el corazón del espectáculo: donde hay carnada, aparece todo lo demás.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Bola de sardinas girando en Bahía Magdalena" } },
+					{ title: "Marlines rayados", text: "Los protagonistas más veloces. Atraviesan la bola de sardinas a gran velocidad, encienden sus colores y coordinan ataques que duran apenas segundos.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Marlín rayado cazando en una bola de sardinas" } },
+					{ title: "Ballenas de Bryde", text: "A veces, el gigante de la escena. Emergen entre los cardúmenes para alimentarse en la superficie, a pocos metros de la embarcación.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Ballena de Bryde alimentándose entre sardinas" } },
+					{ title: "Lobos marinos", text: "Aprovechan el caos para cazar. Ágiles y curiosos, entran y salen de la bola de carnada con una destreza que hipnotiza.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino cazando en el Sardine Run" } },
+					{ title: "Delfines", text: "Cuando un grupo decide unirse a la cacería, la coordinación se multiplica. Empujan a las sardinas hacia la superficie y ordenan el espectáculo.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Delfines cooperando durante la cacería" } },
+					{ title: "Aves marinas", text: "Pelícanos, gaviotas y fragatas son la primera pista. Cuando se lanzan en picada, sabemos que la acción está ocurriendo justo debajo.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Aves marinas señalando la actividad en Bahía Magdalena" } },
 				],
 			},
 			{

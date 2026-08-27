@@ -96,7 +96,7 @@ export type Block =
   | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
   | { type: "video"; ink2?: boolean; kicker?: string; title?: string; media: Media }
   | { type: "gallery"; ink2?: boolean; kicker?: string; title?: string; cols?: 3 | 4; items: Media[] }
-  | { type: "encounters"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; text: string; media: Media }[] }
+  | { type: "encounters"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { title: string; text: string; media: Media }[] }
   | { type: "checklist"; kicker?: string; title?: string; ink2?: boolean; good: { title: string; items: string[] }; bad: { title: string; items: string[] } }
   | { type: "details"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; text: string }[] }
   | { type: "groups"; kicker?: string; title?: string; ink2?: boolean; groups: { name: string; items: string[] }[] }
@@ -555,6 +555,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                 <div className="sp-head">
                   {b.kicker && <span className="kicker">{b.kicker}</span>}
                   {b.title && <h2>{b.title}</h2>}
+                  {b.intro && <p>{b.intro}</p>}
                 </div>
                 <div className="sp-encounters">
                   {b.items.map((it) => (
