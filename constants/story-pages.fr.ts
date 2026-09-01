@@ -886,6 +886,19 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Sous l'eau",
+				title: "Un aperçu des plongées",
+				cols: 4,
+				items: [
+					{ src: "/images/buceo/espiritu-buzo-pared.jpg", alt: "Plongeur explorant une paroi rocheuse à l'île Espíritu Santo" },
+					{ src: "/images/buceo/espiritu-buzo-silueta.jpg", alt: "Silhouette d'un plongeur au-dessus du récif parmi les bulles" },
+					{ src: "/images/buceo/espiritu-buzo-cardumen.jpg", alt: "Plongeur parmi les bancs de poissons au-dessus du récif d'Espíritu Santo" },
+					{ src: "/images/buceo/espiritu-buzo-pargos.jpg", alt: "Plongeur au-dessus du récif avec des vivaneaux jaunes" },
+				],
+			},
+			{
 				type: "callout",
 				ink2: true,
 				heading: "Quand une otarie décide de s'approcher, c'est parce qu'elle le veut.",
@@ -1560,6 +1573,18 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				tiers: [
 					{ label: "Très fréquent de trouver", species: ["Poissons de récif", "Étoiles de mer", "Poulpes", "Poissons-globes", "Bancs de poissons"] },
 					{ label: "Occasionnellement", warn: true, species: ["Tortues marines"] },
+				],
+			},
+			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Sous l'eau",
+				title: "À quoi ressemble votre première aventure",
+				cols: 3,
+				items: [
+					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Plongeur débutant faisant le signe OK pendant la plongée" },
+					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Plongeur près d'un grand banc de poissons dans les eaux de La Paz" },
+					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Plongeur descendant vers un banc de poissons" },
 				],
 			},
 			{

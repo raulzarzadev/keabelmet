@@ -886,6 +886,19 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Underwater",
+				title: "A glimpse of the dives",
+				cols: 4,
+				items: [
+					{ src: "/images/buceo/espiritu-buzo-pared.jpg", alt: "Diver exploring a rocky wall at Espíritu Santo Island" },
+					{ src: "/images/buceo/espiritu-buzo-silueta.jpg", alt: "Silhouette of a diver over the reef among bubbles" },
+					{ src: "/images/buceo/espiritu-buzo-cardumen.jpg", alt: "Diver among schools of fish over the Espíritu Santo reef" },
+					{ src: "/images/buceo/espiritu-buzo-pargos.jpg", alt: "Diver over the reef with yellow snappers" },
+				],
+			},
+			{
 				type: "callout",
 				ink2: true,
 				heading: "When a sea lion decides to approach, it does so because it wants to.",
@@ -1560,6 +1573,18 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				tiers: [
 					{ label: "Very common to find", species: ["Reef fish", "Starfish", "Octopuses", "Pufferfish", "Schools of fish"] },
 					{ label: "Occasionally", warn: true, species: ["Sea turtles"] },
+				],
+			},
+			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Underwater",
+				title: "This is what your first adventure looks like",
+				cols: 3,
+				items: [
+					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Beginner diver giving the OK sign during the dive" },
+					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Diver next to a large school of fish in the waters of La Paz" },
+					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Diver descending toward a school of fish" },
 				],
 			},
 			{
