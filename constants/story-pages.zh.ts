@@ -885,6 +885,19 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "gallery",
+				ink2: true,
+				kicker: "水下",
+				title: "潜水一瞥",
+				cols: 4,
+				items: [
+					{ src: "/images/buceo/espiritu-buzo-pared.jpg", alt: "潜水员在圣埃斯皮里图圣托岛探索岩壁" },
+					{ src: "/images/buceo/espiritu-buzo-silueta.jpg", alt: "潜水员在礁石上方气泡间的剪影" },
+					{ src: "/images/buceo/espiritu-buzo-cardumen.jpg", alt: "潜水员在圣埃斯皮里图圣托礁石上方的鱼群中" },
+					{ src: "/images/buceo/espiritu-buzo-pargos.jpg", alt: "潜水员在礁石上方,身旁有黄色笛鲷" },
+				],
+			},
+			{
 				type: "callout",
 				ink2: true,
 				heading: "当一只海狮决定靠近时,是因为它想这么做。",
@@ -1559,6 +1572,18 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				tiers: [
 					{ label: "非常常见的发现", species: ["礁鱼", "海星", "章鱼", "河豚", "鱼群"] },
 					{ label: "偶尔可见", warn: true, species: ["海龟"] },
+				],
+			},
+			{
+				type: "gallery",
+				ink2: true,
+				kicker: "水下",
+				title: "你的第一次探险是这样的",
+				cols: 3,
+				items: [
+					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "初学潜水员在潜水中比出 OK 手势" },
+					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "潜水员在拉巴斯水域中靠近一大群鱼" },
+					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "潜水员向鱼群下潜" },
 				],
 			},
 			{

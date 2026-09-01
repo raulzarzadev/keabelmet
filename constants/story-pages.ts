@@ -890,6 +890,19 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Bajo el agua",
+				title: "Un vistazo a las inmersiones",
+				cols: 4,
+				items: [
+					{ src: "/images/buceo/espiritu-buzo-pared.jpg", alt: "Buzo explorando una pared rocosa en Isla Espíritu Santo" },
+					{ src: "/images/buceo/espiritu-buzo-silueta.jpg", alt: "Silueta de un buzo sobre el arrecife entre burbujas" },
+					{ src: "/images/buceo/espiritu-buzo-cardumen.jpg", alt: "Buzo entre cardúmenes sobre el arrecife de Espíritu Santo" },
+					{ src: "/images/buceo/espiritu-buzo-pargos.jpg", alt: "Buzo sobre el arrecife con pargos amarillos" },
+				],
+			},
+			{
 				type: "callout",
 				ink2: true,
 				heading: "Cuando un lobo marino decide acercarse, lo hace porque quiere.",
@@ -1564,6 +1577,18 @@ export const storyPages: Record<string, StoryPageData> = {
 				tiers: [
 					{ label: "Muy común encontrar", species: ["Peces arrecifales", "Estrellas de mar", "Pulpos", "Peces globo", "Cardúmenes"] },
 					{ label: "Ocasionalmente", warn: true, species: ["Tortugas marinas"] },
+				],
+			},
+			{
+				type: "gallery",
+				ink2: true,
+				kicker: "Bajo el agua",
+				title: "Así se ve tu primera aventura",
+				cols: 3,
+				items: [
+					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Buzo principiante haciendo la seña de OK durante la inmersión" },
+					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Buzo junto a un gran cardumen en aguas de La Paz" },
+					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Buzo descendiendo hacia un banco de peces" },
 				],
 			},
 			{
