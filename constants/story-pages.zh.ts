@@ -252,7 +252,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"浮潜装备和潜水服",
 							"野餐、水果、零食和饮品",
 							"照片和视频",
-							"最少4人参加 · 最低年龄14岁",
+							"最低年龄14岁",
 						],
 						waText: "你好!我想预订拉文塔纳海洋探险拼团",
 						ctaLabel: "寻找拼团出行",

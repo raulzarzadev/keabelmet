@@ -253,7 +253,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"Équipement de snorkeling et combinaison",
 							"Pique-nique, fruits, snacks et boissons",
 							"Photos et vidéos",
-							"Minimum 4 participants · Âge minimum 14 ans",
+							"Âge minimum 14 ans",
 						],
 						waText: "Bonjour! Je voudrais réserver l'Ocean Safari La Ventana partagé",
 						ctaLabel: "Trouver une sortie partagée",

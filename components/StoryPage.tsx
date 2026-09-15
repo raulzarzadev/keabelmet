@@ -408,7 +408,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                       <div className="price-ctas" style={{ marginTop: c.items ? undefined : "auto" }}>
                         {typeof c.amountMxn === "number" ? (
                           <>
-                            <PayButton slug={slug} expeditionName={h.title} cardName={c.name} amountMxn={c.amountMxn} amountNote={c.amountNote} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={c.featured} items={c.items} />
+                            <PayButton slug={slug} expeditionName={h.title} cardName={c.name} amountMxn={c.amountMxn} amountNote={c.amountNote} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={c.featured} items={c.items} image={h.image} />
                             <a href={wa(c.waText)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                               {waAskLabel[locale] ?? waAskLabel.es}
                             </a>

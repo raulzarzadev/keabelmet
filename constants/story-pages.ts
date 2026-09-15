@@ -257,7 +257,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Equipo de snorkel y neopreno",
 							"Picnic, fruta, snacks y bebidas",
 							"Fotografías y videos",
-							"Mínimo 4 participantes · Edad mínima 14 años",
+							"Edad mínima 14 años",
 						],
 						waText: "Hola! quiero reservar el Ocean Safari La Ventana compartido",
 						ctaLabel: "Buscar una salida compartida",

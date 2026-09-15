@@ -739,8 +739,11 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .checkout-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(4, 10, 15, 0.72); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
 .checkout-modal { position: relative; width: 100%; max-width: 440px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 24px; padding: 36px 30px 30px; margin: auto; box-shadow: 0 30px 80px rgba(0,0,0,0.5); animation: checkoutIn .22s ease; }
 @keyframes checkoutIn { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
-.checkout-close { position: absolute; top: 16px; right: 16px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--sand-dim); font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s ease; }
-.checkout-close:hover { color: var(--sand); border-color: var(--sand-dim); }
+.checkout-close { position: absolute; z-index: 3; top: 16px; right: 16px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(244,239,228,0.25); background: rgba(4,10,15,0.55); color: var(--sand); font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s ease; backdrop-filter: blur(4px); }
+.checkout-close:hover { color: var(--sand); border-color: var(--sand); background: rgba(4,10,15,0.75); }
+.checkout-modal.has-hero { overflow: hidden; }
+.checkout-hero { display: block; width: auto; height: 172px; object-fit: cover; object-position: center; margin: -36px -30px 22px; }
+@media (max-width: 640px) { .checkout-hero { height: 144px; margin: -30px -20px 18px; } }
 .checkout-summary { text-align: center; margin-bottom: 24px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
 .checkout-summary .kicker { display: block; margin-bottom: 6px; }
 .checkout-summary h3 { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 700; font-size: 18px; color: var(--sand); margin-bottom: 10px; }
