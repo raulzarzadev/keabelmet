@@ -261,21 +261,9 @@ const es: HomeContent = {
 		kicker: "Lo que dicen nuestros aventureros",
 		title: "Experiencias reales, contadas por quienes las vivieron",
 		items: [
-			{
-				text: '"Siempre soñé con ver ballenas. Pero esto fue más que eso. Lloré de emoción. Gracias por respetar la naturaleza así."',
-				name: "Lucía",
-				loc: "Ciudad de México",
-			},
-			{
-				text: '"Nadar con los lobos marinos fue la experiencia más mágica de mi vida. Son tan juguetones y curiosos. El equipo de Keabelmet es súper profesional y respetuoso con los animales."',
-				name: "María González",
-				loc: "Ciudad de México",
-			},
-			{
-				text: '"Increíble experiencia. Ver a los marlines cazando sardinas fue como estar en un documental de National Geographic. La adrenalina y la emoción son indescriptibles."',
-				name: "Alejandro Ruiz",
-				loc: "Monterrey",
-			},
+			{ text: "“Conocimos por casualidad a Mau y cambiamos las excursiones que ya teníamos contratadas para ir con él. Su energía y simpatía, junto con sus conocimientos y el equipo que lo acompaña, hacen que sea una experiencia de 10.”", name: "Ester Millan", loc: "Reseña de Google" },
+			{ text: "“Excelente experiencia con Mau y Gama. Fuimos en búsqueda de orcas y, aunque no las encontramos, disfrutamos muchísimo de los delfines y tuvimos la suerte de encontrarnos con 4 ballenas azules hermosas. Volveremos a salir con ellos muchas veces más.”", name: "Bernardo Barbara", loc: "Reseña de Google" },
+			{ text: "“He ido más de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el Mar de Cortés; cualquier expedición se convierte en una experiencia inolvidable.”", name: "Rosa Burciaga", loc: "Reseña de Google" },
 		],
 	},
 	founder: {
@@ -503,21 +491,9 @@ const en: HomeContent = {
 		kicker: "What our adventurers say",
 		title: "Real experiences, told by the people who lived them",
 		items: [
-			{
-				text: '"I always dreamed of seeing whales. But this was more than that. I cried with emotion. Thank you for respecting nature this way."',
-				name: "Lucía",
-				loc: "Mexico City",
-			},
-			{
-				text: '"Swimming with the sea lions was the most magical experience of my life. They are so playful and curious. The Keabelmet team is super professional and respectful with the animals."',
-				name: "María González",
-				loc: "Mexico City",
-			},
-			{
-				text: '"Incredible experience. Watching the marlin hunt sardines felt like being inside a National Geographic documentary. The adrenaline and emotion are indescribable."',
-				name: "Alejandro Ruiz",
-				loc: "Monterrey",
-			},
+			{ text: "“We met Mau by chance and changed the excursions we had already booked just to go out with him. His energy and warmth, together with his knowledge and the team around him, make it a 10 out of 10 experience.”", name: "Ester Millan", loc: "Google review" },
+			{ text: "“Amazing experience with Mau and Gama. We went looking for orcas and, even though we didn't find them, we loved the dolphins and were lucky enough to come across 4 beautiful blue whales. We'll be going out with them many more times.”", name: "Bernardo Barbara", loc: "Google review" },
+			{ text: "“I've gone more than 10 times and they never disappoint — from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez; every expedition becomes an unforgettable experience.”", name: "Rosa Burciaga", loc: "Google review" },
 		],
 	},
 	founder: {
@@ -665,9 +641,9 @@ const fr: HomeContent = {
 		kicker: "Ce que disent nos aventuriers",
 		title: "Des expériences réelles, racontées par ceux qui les ont vécues",
 		items: [
-			{ text: "« J'ai toujours rêvé de voir des baleines. Mais ça a été bien plus que ça. J'ai pleuré d'émotion. Merci de respecter la nature ainsi. »", name: "Lucía", loc: "Mexico" },
-			{ text: "« Nager avec les otaries a été l'expérience la plus magique de ma vie. Elles sont si joueuses et curieuses. L'équipe de Keabelmet est très professionnelle et respectueuse des animaux. »", name: "María González", loc: "Mexico" },
-			{ text: "« Expérience incroyable. Voir les marlins chasser les sardines, c'était comme être dans un documentaire de National Geographic. L'adrénaline et l'émotion sont indescriptibles. »", name: "Alejandro Ruiz", loc: "Monterrey" },
+			{ text: "« Nous avons rencontré Mau par hasard et avons changé les excursions que nous avions déjà réservées juste pour partir avec lui. Son énergie et sa gentillesse, ainsi que ses connaissances et l'équipe qui l'entoure, en font une expérience 10 sur 10. »", name: "Ester Millan", loc: "Avis Google" },
+			{ text: "« Excellente expérience avec Mau et Gama. Nous sommes partis à la recherche des orques et, même si nous ne les avons pas trouvées, nous avons adoré les dauphins et avons eu la chance de croiser 4 magnifiques baleines bleues. Nous repartirons avec eux bien des fois encore. »", name: "Bernardo Barbara", loc: "Avis Google" },
+			{ text: "« J'y suis allée plus de 10 fois et ils ne déçoivent jamais — du camping avec des baleines grises en toile de fond à la nage avec des orques. Keabelmet est la meilleure agence de la mer de Cortés ; chaque expédition devient une expérience inoubliable. »", name: "Rosa Burciaga", loc: "Avis Google" },
 		],
 	},
 	founder: {
@@ -815,9 +791,9 @@ const zh: HomeContent = {
 		kicker: "探险者怎么说",
 		title: "真实的体验，由亲历者讲述",
 		items: [
-			{ text: "「我一直梦想看到鲸鱼。但这远不止于此。我感动落泪。谢谢你们如此尊重大自然。」", name: "Lucía", loc: "墨西哥城" },
-			{ text: "「与海狮同游是我人生中最神奇的体验。它们如此顽皮又好奇。Keabelmet 团队非常专业，也很尊重动物。」", name: "María González", loc: "墨西哥城" },
-			{ text: "「难以置信的体验。看着马林鱼捕猎沙丁鱼，就像置身于国家地理的纪录片。那种肾上腺素和激动无法言喻。」", name: "Alejandro Ruiz", loc: "蒙特雷" },
+			{ text: "「我们偶然认识了 Mau，甚至更改了已经预订的行程，只为跟他一起出海。他的热情与亲和力，加上专业知识和身边的团队，让整趟体验堪称满分。」", name: "Ester Millan", loc: "Google 评价" },
+			{ text: "「和 Mau 与 Gama 的体验太棒了。我们出海寻找虎鲸，虽然没有遇到，但尽情享受了与海豚的相处，还幸运地邂逅了 4 头美丽的蓝鲸。我们还会一次又一次地跟他们出海。」", name: "Bernardo Barbara", loc: "Google 评价" },
+			{ text: "「我已经去过 10 多次，他们从未让我失望——从以灰鲸为背景的露营，到与虎鲸同游。Keabelmet 是科尔特斯海最好的旅游公司；每一次探险都成为难忘的体验。」", name: "Rosa Burciaga", loc: "Google 评价" },
 		],
 	},
 	founder: {
