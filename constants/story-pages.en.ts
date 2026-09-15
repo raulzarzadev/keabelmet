@@ -1346,7 +1346,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				kicker: "The day's protagonists",
 				title: "Five scenes in a single tour",
 				items: [
-					{ title: "Balandra Beach", text: "You'll see one of Mexico's most famous beaches from a very different perspective: the sea.", media: { src: "/espiritu-santo-island-beach.jpg", alt: "Balandra Beach from the sea" } },
+					{ title: "Balandra Beach", text: "You'll see one of Mexico's most famous beaches from a very different perspective: the sea.", media: { src: "/playa-balandra-aerea.jpg", alt: "Balandra Beach from the sea" } },
 					{ title: "Espíritu Santo Island", text: "A landscape where the desert, the volcanic mountains and the Sea of Cortez meet.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Espíritu Santo Island" } },
 					{ title: "Partida Island", text: "Channels, hidden beaches and incredibly clear waters.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Partida Island" } },
 					{ title: "Reefs", text: "We'll snorkel at sites selected by our captain based on the day's conditions.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Reef for snorkeling" } },

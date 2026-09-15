@@ -1350,7 +1350,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				kicker: "Los protagonistas del día",
 				title: "Cinco escenarios en un mismo recorrido",
 				items: [
-					{ title: "Playa Balandra", text: "Conocerás una de las playas más famosas de México desde una perspectiva muy diferente: el mar.", media: { src: "/espiritu-santo-island-beach.jpg", alt: "Playa Balandra desde el mar" } },
+					{ title: "Playa Balandra", text: "Conocerás una de las playas más famosas de México desde una perspectiva muy diferente: el mar.", media: { src: "/playa-balandra-aerea.jpg", alt: "Playa Balandra desde el mar" } },
 					{ title: "Isla Espíritu Santo", text: "Un paisaje donde el desierto, las montañas volcánicas y el Mar de Cortés se encuentran.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Isla Espíritu Santo" } },
 					{ title: "Isla Partida", text: "Canales, playas escondidas y aguas increíblemente transparentes.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Isla Partida" } },
 					{ title: "Arrecifes", text: "Haremos snorkel en sitios seleccionados por nuestro capitán según las condiciones del día.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Arrecife para snorkel" } },
