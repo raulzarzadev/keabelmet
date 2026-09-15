@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-type Item = { text: string; name: string; loc: string; photo?: string }
+type Item = { text: string; name: string; loc: string; photo?: string; photoPos?: string }
 
 const REVIEWS_URL = "https://www.google.com/maps?cid=7082429946220755653"
 const allLabel: Record<string, string> = {
@@ -51,7 +51,7 @@ export default function TestiCarousel({ items, locale = "es" }: { items: Item[];
               <div className="testi-photo">
                 {item.photo ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={item.photo} alt={`Foto de la experiencia de ${item.name}`} loading="lazy" />
+                  <img src={item.photo} alt={`Foto de la experiencia de ${item.name}`} loading="lazy" style={item.photoPos ? { objectPosition: item.photoPos } : undefined} />
                 ) : (
                   <span className="testi-quote" aria-hidden="true">&#8220;</span>
                 )}
