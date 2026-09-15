@@ -1346,7 +1346,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				kicker: "Les protagonistes de la journée",
 				title: "Cinq décors en un seul circuit",
 				items: [
-					{ title: "Plage Balandra", text: "Vous découvrirez l'une des plages les plus célèbres du Mexique sous une perspective très différente : la mer.", media: { src: "/espiritu-santo-island-beach.jpg", alt: "Plage Balandra depuis la mer" } },
+					{ title: "Plage Balandra", text: "Vous découvrirez l'une des plages les plus célèbres du Mexique sous une perspective très différente : la mer.", media: { src: "/playa-balandra-aerea.jpg", alt: "Plage Balandra depuis la mer" } },
 					{ title: "Île Espíritu Santo", text: "Un paysage où le désert, les montagnes volcaniques et la mer de Cortez se rencontrent.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Île Espíritu Santo" } },
 					{ title: "Île Partida", text: "Canaux, plages cachées et eaux incroyablement transparentes.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Île Partida" } },
 					{ title: "Récifs", text: "Nous ferons du snorkeling dans des sites sélectionnés par notre capitaine selon les conditions du jour.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Récif pour le snorkeling" } },
