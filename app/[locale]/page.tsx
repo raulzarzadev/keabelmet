@@ -173,7 +173,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <span className="kicker">{t.testi.kicker}</span>
           <h2>{t.testi.title}</h2>
         </div>
-        <TestiCarousel items={t.testi.items} />
+        <TestiCarousel items={t.testi.items} locale={locale} />
       </section>
 
       {/* FOUNDER */}
