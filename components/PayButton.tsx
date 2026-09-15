@@ -37,7 +37,7 @@ interface UI {
 	detailsTitle: string; date: string; people: string; name: string; email: string; phone: string
 	season: string; continue: string; perPerson: string; perBoat: string; total: string
 	cancelNote: string; back: string; editDetails: string; secure: string; pay: string; processing: string
-	preparing: string; close: string; viewVoucher: string
+	preparing: string; close: string; viewVoucher: string; includes: string
 	errDate: string; errPast: string; errSeason: string; errName: string; errEmail: string; errPhone: string; errGeneric: string
 	namePh: string; phonePh: string
 }
@@ -47,7 +47,7 @@ const copy: Record<string, UI> = {
 		detailsTitle: "Detalles de tu reserva", date: "Fecha deseada", people: "Personas", name: "Nombre completo", email: "Correo electrónico", phone: "Teléfono / WhatsApp",
 		season: "Temporada", continue: "Continuar al pago", perPerson: "por persona", perBoat: "por embarcación", total: "Total",
 		cancelNote: "Cancelación con reembolso hasta 24 h antes de la salida.", back: "Editar datos", editDetails: "← Editar datos", secure: "Pago seguro procesado por Stripe", pay: "Pagar", processing: "Procesando…",
-		preparing: "Preparando tu pago…", close: "Cerrar", viewVoucher: "Ver mi voucher",
+		preparing: "Preparando tu pago…", close: "Cerrar", viewVoucher: "Ver mi voucher", includes: "Qué incluye",
 		errDate: "Elige una fecha.", errPast: "Elige una fecha futura.", errSeason: "Esa fecha está fuera de temporada.", errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.",
 		namePh: "Tu nombre", phonePh: "+52 …",
 	},
@@ -55,7 +55,7 @@ const copy: Record<string, UI> = {
 		detailsTitle: "Your reservation details", date: "Preferred date", people: "People", name: "Full name", email: "Email", phone: "Phone / WhatsApp",
 		season: "Season", continue: "Continue to payment", perPerson: "per person", perBoat: "per boat", total: "Total",
 		cancelNote: "Refundable cancellation up to 24 h before departure.", back: "Edit details", editDetails: "← Edit details", secure: "Secure payment processed by Stripe", pay: "Pay", processing: "Processing…",
-		preparing: "Preparing your payment…", close: "Close", viewVoucher: "View my voucher",
+		preparing: "Preparing your payment…", close: "Close", viewVoucher: "View my voucher", includes: "What's included",
 		errDate: "Choose a date.", errPast: "Choose a future date.", errSeason: "That date is out of season.", errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp.",
 		namePh: "Your name", phonePh: "+1 …",
 	},
@@ -63,7 +63,7 @@ const copy: Record<string, UI> = {
 		detailsTitle: "Détails de votre réservation", date: "Date souhaitée", people: "Personnes", name: "Nom complet", email: "E-mail", phone: "Téléphone / WhatsApp",
 		season: "Saison", continue: "Continuer vers le paiement", perPerson: "par personne", perBoat: "par bateau", total: "Total",
 		cancelNote: "Annulation remboursable jusqu'à 24 h avant le départ.", back: "Modifier", editDetails: "← Modifier", secure: "Paiement sécurisé traité par Stripe", pay: "Payer", processing: "Traitement…",
-		preparing: "Préparation de votre paiement…", close: "Fermer", viewVoucher: "Voir mon voucher",
+		preparing: "Préparation de votre paiement…", close: "Fermer", viewVoucher: "Voir mon voucher", includes: "Ce qui est inclus",
 		errDate: "Choisissez une date.", errPast: "Choisissez une date future.", errSeason: "Cette date est hors saison.", errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp.",
 		namePh: "Votre nom", phonePh: "+33 …",
 	},
@@ -71,7 +71,7 @@ const copy: Record<string, UI> = {
 		detailsTitle: "您的预订详情", date: "希望的日期", people: "人数", name: "全名", email: "电子邮箱", phone: "电话 / WhatsApp",
 		season: "季节", continue: "继续付款", perPerson: "每人", perBoat: "每船", total: "总计",
 		cancelNote: "出发前 24 小时内可取消并退款。", back: "编辑信息", editDetails: "← 编辑信息", secure: "由 Stripe 处理的安全支付", pay: "支付", processing: "处理中…",
-		preparing: "正在准备付款…", close: "关闭", viewVoucher: "查看我的凭证",
+		preparing: "正在准备付款…", close: "关闭", viewVoucher: "查看我的凭证", includes: "包含内容",
 		errDate: "请选择日期。", errPast: "请选择未来的日期。", errSeason: "该日期不在季节内。", errName: "请输入您的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。",
 		namePh: "您的姓名", phonePh: "+86 …",
 	},
@@ -86,9 +86,10 @@ interface PayButtonProps {
 	label: string
 	locale?: string
 	featured?: boolean
+	items?: string[]
 }
 
-export default function PayButton({ slug, expeditionName, cardName, amountMxn, amountNote, label, locale = "es", featured }: PayButtonProps) {
+export default function PayButton({ slug, expeditionName, cardName, amountMxn, amountNote, label, locale = "es", featured, items }: PayButtonProps) {
 	const [open, setOpen] = useState(false)
 	return (
 		<>
@@ -103,6 +104,7 @@ export default function PayButton({ slug, expeditionName, cardName, amountMxn, a
 					unitAmountMxn={amountMxn}
 					perPerson={isPerPerson(amountNote)}
 					locale={locale}
+					items={items}
 					onClose={() => setOpen(false)}
 				/>
 			)}
@@ -116,8 +118,8 @@ interface Reservation {
 	folio: string; paymentIntentId: string
 }
 
-function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerson, locale, onClose }: {
-	slug: string; expeditionName: string; cardName: string; unitAmountMxn: number; perPerson: boolean; locale: string; onClose: () => void
+function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerson, locale, items, onClose }: {
+	slug: string; expeditionName: string; cardName: string; unitAmountMxn: number; perPerson: boolean; locale: string; items?: string[]; onClose: () => void
 }) {
 	const t = copy[locale] ?? copy.es
 	const season = getSeason(slug)
@@ -215,6 +217,15 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 					{!perPerson && <div className="checkout-breakdown">{t.perBoat}</div>}
 				</div>
 
+				{step === "details" && items && items.length > 0 && (
+					<div className="checkout-includes">
+						<span className="checkout-includes-h">{t.includes}</span>
+						<ul>
+							{items.map((it) => <li key={it}>{it}</li>)}
+						</ul>
+					</div>
+				)}
+
 				{step === "details" && (
 					<form onSubmit={submitDetails} className="checkout-form res-form">
 						<label className="res-field">
@@ -272,7 +283,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 				{step === "result" && reservation && (
 					<>
-						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus }} />
+						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus, includes: items }} />
 						<div className="voucher-actions">
 							<a className="btn btn-solid" href={`/${locale}/reserva/${reservation.paymentIntentId}`}>{t.viewVoucher}</a>
 							<button type="button" className="btn btn-ghost" onClick={onClose}>{t.close}</button>

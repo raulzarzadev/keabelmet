@@ -808,6 +808,34 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .voucher-change a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 .voucher-actions { display: flex; gap: 10px; margin-top: 18px; }
 .voucher-actions .btn { flex: 1; justify-content: center; }
+
+/* --- qué incluye (modal de pago) --- */
+.checkout-includes { margin: -8px 0 22px; padding: 14px 16px; background: rgba(40,194,160,0.06); border: 1px solid var(--line); border-radius: 14px; }
+.checkout-includes-h { display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); font-weight: 700; margin-bottom: 8px; }
+.checkout-includes ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.checkout-includes li { position: relative; padding-left: 22px; font-size: 13.5px; color: var(--sand); line-height: 1.4; }
+.checkout-includes li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--teal); font-weight: 700; }
+
+/* --- secciones ricas del voucher --- */
+.voucher-sec { width: 100%; text-align: left; margin: 4px 0 20px; }
+.voucher-sec h4 { font-family: var(--font-poppins), 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.voucher-inc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.voucher-inc li { position: relative; padding-left: 24px; font-size: 14px; color: var(--sand); line-height: 1.45; }
+.voucher-inc li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--teal); font-weight: 700; }
+.voucher-inc-detailed { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.voucher-inc-detailed li { position: relative; padding-left: 24px; }
+.voucher-inc-detailed li::before { content: "✓"; position: absolute; left: 0; top: 1px; color: var(--teal); font-weight: 700; }
+.voucher-inc-detailed strong { display: block; font-size: 14px; color: var(--sand); font-weight: 600; margin-bottom: 2px; }
+.voucher-inc-detailed span { display: block; font-size: 13px; color: var(--sand-dim); line-height: 1.5; }
+.voucher-bring { display: flex; flex-direction: column; gap: 14px; }
+.voucher-bring-g .voucher-bring-n { display: block; font-size: 12.5px; font-weight: 600; color: var(--teal); margin-bottom: 6px; }
+.voucher-bring-g ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.voucher-bring-g li { font-size: 12.5px; color: var(--sand); background: rgba(244,239,228,0.05); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; }
+.voucher-info { margin: 0; display: flex; flex-direction: column; gap: 0; }
+.voucher-info > div { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.voucher-info > div:last-child { border-bottom: none; }
+.voucher-info dt { font-size: 12.5px; font-weight: 600; color: var(--sand); margin: 0 0 3px; }
+.voucher-info dd { margin: 0; font-size: 13px; color: var(--sand-dim); line-height: 1.5; }
 .reserva-page { min-height: 100vh; background: var(--ink); display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
 .reserva-card { width: 100%; max-width: 440px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 24px; padding: 40px 32px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
 

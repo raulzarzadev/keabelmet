@@ -2,6 +2,7 @@ import Link from "next/link"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { getStripe } from "@/lib/stripe"
 import { folioFromPaymentIntent } from "@/lib/reservation"
+import { getActivityDetails } from "@/lib/activity-details"
 import Voucher, { type VoucherData } from "@/components/Voucher"
 
 export const metadata = {
@@ -27,6 +28,8 @@ export default async function ReservaPage({ params }: { params: Promise<{ locale
 		const pi = await stripe.paymentIntents.retrieve(id)
 		const m = pi.metadata ?? {}
 		if ((pi.status === "succeeded" || pi.status === "processing") && m.slug) {
+			const vLocale = isValidLocale(m.locale) ? m.locale : locale
+			const details = getActivityDetails(m.slug, vLocale, m.cardName || undefined)
 			voucher = {
 				folio: folioFromPaymentIntent(pi.id),
 				expeditionName: m.expeditionName || m.slug,
@@ -34,8 +37,12 @@ export default async function ReservaPage({ params }: { params: Promise<{ locale
 				dateISO: m.dateISO || "",
 				people: Number(m.people) || 1,
 				totalMxn: Number(m.totalMxn) || Math.round((pi.amount || 0) / 100),
-				locale: m.locale || locale,
+				locale: vLocale,
 				status: pi.status === "processing" ? "processing" : "succeeded",
+				includes: details.includes,
+				detailed: details.detailed,
+				bring: details.bring,
+				info: details.info,
 			}
 		}
 	} catch {

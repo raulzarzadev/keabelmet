@@ -9,6 +9,10 @@ export interface VoucherData {
 	totalMxn: number
 	locale: string
 	status?: "succeeded" | "processing"
+	includes?: string[]
+	detailed?: { title: string; text: string }[]
+	bring?: { name: string; items: string[] }[]
+	info?: { label: string; value: string }[]
 }
 
 const copy: Record<string, {
@@ -26,6 +30,9 @@ const copy: Record<string, {
 	changeQ: string
 	waChange: string
 	requested: string
+	includesTitle: string
+	bringTitle: string
+	infoTitle: string
 }> = {
 	es: {
 		confirmed: "¡Reserva confirmada!",
@@ -42,6 +49,9 @@ const copy: Record<string, {
 		changeQ: "¿Te equivocaste o necesitas cambiar la fecha?",
 		waChange: "Cambiar o cancelar mi reserva",
 		requested: "Solicitada",
+		includesTitle: "Qué incluye tu experiencia",
+		bringTitle: "Qué llevar",
+		infoTitle: "Recomendaciones e información práctica",
 	},
 	en: {
 		confirmed: "Reservation confirmed!",
@@ -58,6 +68,9 @@ const copy: Record<string, {
 		changeQ: "Made a mistake or need to change the date?",
 		waChange: "Change or cancel my reservation",
 		requested: "Requested",
+		includesTitle: "What your experience includes",
+		bringTitle: "What to bring",
+		infoTitle: "Recommendations & practical info",
 	},
 	fr: {
 		confirmed: "Réservation confirmée !",
@@ -74,6 +87,9 @@ const copy: Record<string, {
 		changeQ: "Une erreur ou besoin de changer la date ?",
 		waChange: "Modifier ou annuler ma réservation",
 		requested: "Demandée",
+		includesTitle: "Ce que votre expérience inclut",
+		bringTitle: "Quoi apporter",
+		infoTitle: "Recommandations et infos pratiques",
 	},
 	zh: {
 		confirmed: "预订已确认!",
@@ -90,6 +106,9 @@ const copy: Record<string, {
 		changeQ: "填错了或需要更改日期?",
 		waChange: "更改或取消我的预订",
 		requested: "已申请",
+		includesTitle: "您的体验包含",
+		bringTitle: "携带物品",
+		infoTitle: "建议与实用信息",
 	},
 }
 
@@ -118,6 +137,48 @@ export default function Voucher({ data }: { data: VoucherData }) {
 			</dl>
 
 			<p className="voucher-note">{t.emailNote}</p>
+
+			{(data.detailed?.length || data.includes?.length) && (
+				<section className="voucher-sec">
+					<h4>{t.includesTitle}</h4>
+					{data.detailed?.length ? (
+						<ul className="voucher-inc-detailed">
+							{data.detailed.map((it) => (
+								<li key={it.title}><strong>{it.title}</strong><span>{it.text}</span></li>
+							))}
+						</ul>
+					) : (
+						<ul className="voucher-inc">
+							{data.includes!.map((it) => <li key={it}>{it}</li>)}
+						</ul>
+					)}
+				</section>
+			)}
+
+			{data.bring?.length ? (
+				<section className="voucher-sec">
+					<h4>{t.bringTitle}</h4>
+					<div className="voucher-bring">
+						{data.bring.map((g) => (
+							<div key={g.name} className="voucher-bring-g">
+								<span className="voucher-bring-n">{g.name}</span>
+								<ul>{g.items.map((it) => <li key={it}>{it}</li>)}</ul>
+							</div>
+						))}
+					</div>
+				</section>
+			) : null}
+
+			{data.info?.length ? (
+				<section className="voucher-sec">
+					<h4>{t.infoTitle}</h4>
+					<dl className="voucher-info">
+						{data.info.map((it) => (
+							<div key={it.label}><dt>{it.label}</dt><dd>{it.value}</dd></div>
+						))}
+					</dl>
+				</section>
+			) : null}
 
 			<a href={waConfirm} target="_blank" rel="noopener noreferrer" className="btn btn-teal voucher-wa">
 				{t.waConfirm}
