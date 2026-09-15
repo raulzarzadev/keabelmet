@@ -155,7 +155,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
           <p>{h.text}</p>
           {h.meta && <p style={{ color: "var(--teal)", fontSize: 14, fontWeight: 600, letterSpacing: "0.02em", margin: "-8px 0 26px" }}>{h.meta}</p>}
           <div className="hero-ctas">
-            <a href={wa(h.primaryWa)} target="_blank" rel="noopener noreferrer" className="btn btn-pop">{h.primaryLabel}</a>
+            <a href="#precios" className="btn btn-pop">{h.primaryLabel}</a>
             {h.secondaryLabel && <a href={h.secondaryHref ?? "#itinerario"} className="btn btn-ghost">{h.secondaryLabel}</a>}
           </div>
         </div>
@@ -485,7 +485,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                   <h2>{b.title}</h2>
                   <p>{b.text}</p>
                   <div className="ctas">
-                    <a href={wa(b.primaryWa)} className="btn btn-pop" target="_blank" rel="noopener noreferrer">{b.primaryLabel}</a>
+                    <a href="#precios" className="btn btn-pop">{b.primaryLabel}</a>
                     {b.secondaryLabel && <a href={b.secondaryHref ?? "#expediciones"} className="btn btn-ghost">{b.secondaryLabel}</a>}
                   </div>
                 </div>
