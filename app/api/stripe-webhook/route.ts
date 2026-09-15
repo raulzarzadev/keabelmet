@@ -27,7 +27,19 @@ export async function POST(req: NextRequest) {
 	}
 
 	if (event.type === "payment_intent.succeeded") {
-		const pi = event.data.object as Stripe.PaymentIntent
+		let pi = event.data.object as Stripe.PaymentIntent
+
+		// Con el estilo de payload "Resumen" (thin), el objeto del evento puede
+		// llegar sin metadata completa. Releemos el PaymentIntent desde Stripe
+		// para garantizar que el correo tenga todos los datos de la reserva.
+		if (!pi.metadata?.slug) {
+			try {
+				pi = await stripe.paymentIntents.retrieve(pi.id)
+			} catch (err) {
+				console.error("[stripe-webhook] no se pudo releer el PaymentIntent:", err)
+			}
+		}
+
 		const m = pi.metadata ?? {}
 
 		// Evita correos duplicados si Stripe reintenta el evento.
