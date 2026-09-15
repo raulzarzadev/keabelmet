@@ -7,6 +7,24 @@ const FROM = process.env.RESEND_FROM || "Keabelmet <reservas@keabelmet.com>"
 type EmailData = Pick<ReservationDetails, "expeditionName" | "cardName" | "dateISO" | "people" | "totalMxn" | "customerName" | "customerEmail" | "locale"> & {
 	folio: string
 	paymentIntentId: string
+	slug?: string
+}
+
+/** Foto principal por expedición (misma que el hero de cada página). */
+const HERO_BY_SLUG: Record<string, string> = {
+	"safari-la-ventana": "/images/orca-safari.jpg",
+	"buceo-cabo-pulmo": "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
+	"tiburon-ballena": "/tiburon-ballena-drone.jpg",
+	"buceo-la-paz": "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+	"tour-ballena-gris": "/ballena-gris-spyhop-drone.jpg",
+	"tour-espiritu-santo": "/espiritu-santo-island-paradise-beach.jpg",
+	"scuba-discovery": "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
+	"safari-bahia-magdalena": "/images/marlin-bahia-magdalena-hero.jpeg",
+}
+
+function heroUrl(slug?: string): string {
+	const path = (slug && HERO_BY_SLUG[slug]) || "/fondomar1.jpg"
+	return `${SITE_URL}${path}`
 }
 
 const t: Record<string, {
@@ -67,10 +85,13 @@ function buildHtml(d: EmailData): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:28px 16px">
 <tr><td align="center">
 <table role="presentation" width="480" cellpadding="0" cellspacing="0" style="max-width:480px;width:100%;background:${card};border:1px solid ${line};border-radius:20px;overflow:hidden">
-	<tr><td style="padding:28px 32px 8px;text-align:center">
-		<div style="color:${teal};letter-spacing:0.22em;font-size:12px;font-weight:700">KEABELMET</div>
-		<div style="width:56px;height:56px;line-height:56px;margin:20px auto 8px;border-radius:50%;background:rgba(40,194,160,0.14);color:${teal};font-size:26px">&#10003;</div>
-		<h1 style="margin:6px 0 0;color:${sand};font-size:22px;font-weight:800">${L.confirmed}</h1>
+	<tr><td style="padding:0">
+		<img src="${heroUrl(d.slug)}" width="480" alt="${d.expeditionName}" style="display:block;width:100%;height:180px;object-fit:cover;border:0" />
+	</td></tr>
+	<tr><td style="padding:0 32px;text-align:center">
+		<img src="${SITE_URL}/logo.png" width="72" height="72" alt="Keabelmet" style="display:block;width:72px;height:72px;margin:-36px auto 0;border-radius:50%;border:4px solid ${card};background:${card}" />
+		<div style="color:${teal};letter-spacing:0.22em;font-size:12px;font-weight:700;margin-top:10px">KEABELMET</div>
+		<h1 style="margin:10px 0 0;color:${sand};font-size:22px;font-weight:800">&#10003; ${L.confirmed}</h1>
 	</td></tr>
 	<tr><td style="padding:8px 32px 0;text-align:center">
 		<p style="color:${dim};font-size:14px;line-height:1.55;margin:8px 0 20px">${L.hello} ${d.customerName}, ${L.intro}</p>

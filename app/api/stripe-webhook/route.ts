@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
 		const result = await sendReservationEmail({
 			folio: folioFromPaymentIntent(pi.id),
 			paymentIntentId: pi.id,
+			slug: m.slug,
 			expeditionName: m.expeditionName || m.slug,
 			cardName: m.cardName || "",
 			dateISO: m.dateISO || "",
