@@ -3,6 +3,7 @@ import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
+import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
@@ -172,16 +173,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <span className="kicker">{t.testi.kicker}</span>
           <h2>{t.testi.title}</h2>
         </div>
-        <div className="testi-grid">
-          {t.testi.items.map((item) => (
-            <div key={item.name} className="testi-card">
-              <div className="stars">★★★★★</div>
-              <p>{item.text}</p>
-              <div className="testi-name">{item.name}</div>
-              <div className="testi-loc">{item.loc}</div>
-            </div>
-          ))}
-        </div>
+        <TestiCarousel items={t.testi.items} />
       </section>
 
       {/* FOUNDER */}
