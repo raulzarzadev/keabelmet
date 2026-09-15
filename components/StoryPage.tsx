@@ -30,6 +30,10 @@ const faunaIcons: Record<FaunaIcon, ReactNode> = {
 }
 
 const payLabel: Record<string, string> = { es: "Pagar ahora", en: "Pay now", fr: "Payer maintenant", zh: "立即支付" }
+// Foto destacada para el modal de pago (si no, se usa la del hero).
+const modalImageBySlug: Record<string, string> = {
+  "safari-la-ventana": "/images/especies/orcalaventana.jpeg",
+}
 const waAskLabel: Record<string, string> = { es: "¿Dudas? Escríbenos", en: "Questions? Message us", fr: "Des questions ? Écrivez-nous", zh: "有疑问?联系我们" }
 
 /** Imagen o video real; si no hay `src`, muestra un placeholder intencional
@@ -408,7 +412,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                       <div className="price-ctas" style={{ marginTop: c.items ? undefined : "auto" }}>
                         {typeof c.amountMxn === "number" ? (
                           <>
-                            <PayButton slug={slug} expeditionName={h.title} cardName={c.name} amountMxn={c.amountMxn} amountNote={c.amountNote} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={c.featured} items={c.items} image={h.image} />
+                            <PayButton slug={slug} expeditionName={h.title} cardName={c.name} amountMxn={c.amountMxn} amountNote={c.amountNote} label={payLabel[locale] ?? payLabel.es} locale={locale} featured={c.featured} items={c.items} image={modalImageBySlug[slug] ?? h.image} />
                             <a href={wa(c.waText)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                               {waAskLabel[locale] ?? waAskLabel.es}
                             </a>
