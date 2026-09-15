@@ -95,8 +95,8 @@ function buildHtml(d: EmailData): string {
 	const includes = (d.slug ? getActivityDetails(d.slug, d.locale as Locale, d.cardName).includes : []).slice(0, 8)
 	const incItem = (it: string) =>
 		`<tr><td width="22" style="padding:5px 0;color:${teal};font-size:14px;font-weight:700;vertical-align:top">&#10003;</td><td style="padding:5px 0;color:${sand};font-size:13.5px;line-height:1.45">${it}</td></tr>`
-	const pill = (href: string, label: string) =>
-		`<a href="${href}" style="display:inline-block;margin:4px;padding:9px 18px;border:1px solid ${line};border-radius:999px;color:${sand};text-decoration:none;font-size:12.5px;font-weight:600">${label}</a>`
+	const iconBtn = (href: string, icon: string, alt: string) =>
+		`<a href="${href}" style="display:inline-block;padding:10px;margin:0 5px;border-radius:50%;background:rgba(40,194,160,0.12);border:1px solid ${line};line-height:0"><img src="${SITE_URL}/icons/${icon}" width="20" height="20" alt="${alt}" style="display:block;border:0" /></a>`
 
 	return `<!doctype html><html><body style="margin:0;background:${ink};font-family:'Poppins',Segoe UI,Arial,sans-serif">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:28px 16px">
@@ -105,9 +105,9 @@ function buildHtml(d: EmailData): string {
 	<tr><td style="padding:0">
 		<img src="${heroUrl(d.slug)}" width="480" alt="${d.expeditionName}" style="display:block;width:100%;height:180px;object-fit:cover;border:0" />
 	</td></tr>
-	<tr><td style="padding:0 32px;text-align:center">
-		<img src="${SITE_URL}/logo.png" width="72" height="72" alt="Keabelmet" style="display:block;width:72px;height:72px;margin:-36px auto 0;border-radius:50%;border:4px solid ${card};background:${card}" />
-		<div style="color:${teal};letter-spacing:0.22em;font-size:12px;font-weight:700;margin-top:10px">KEABELMET</div>
+	<tr><td style="padding:24px 32px 0;text-align:center">
+		<img src="${SITE_URL}/logo.png" width="60" height="60" alt="Keabelmet" style="display:block;width:60px;height:60px;margin:0 auto 12px;border-radius:50%;border:2px solid rgba(244,239,228,0.16)" />
+		<div style="color:${teal};letter-spacing:0.22em;font-size:12px;font-weight:700">KEABELMET</div>
 		<h1 style="margin:10px 0 0;color:${sand};font-size:22px;font-weight:800">&#10003; ${L.confirmed}</h1>
 	</td></tr>
 	<tr><td style="padding:8px 32px 0;text-align:center">
@@ -143,7 +143,7 @@ function buildHtml(d: EmailData): string {
 	</td></tr>
 	<tr><td style="padding:16px 32px 4px;text-align:center">
 		<div style="color:${dim};font-size:12px;margin-bottom:6px">${L.follow}</div>
-		${pill(SOCIAL.instagram, "Instagram")}${pill(SOCIAL.tiktok, "TikTok")}${pill(SOCIAL.whatsapp, "WhatsApp")}
+		${iconBtn(SOCIAL.instagram, "instagram.png", "Instagram")}${iconBtn(SOCIAL.tiktok, "tiktok.png", "TikTok")}${iconBtn(SOCIAL.whatsapp, "whatsapp.png", "WhatsApp")}
 	</td></tr>
 	<tr><td style="padding:16px 32px 24px;text-align:center">
 		<p style="color:${dim};font-size:11px;margin:0">${L.footer}</p>
