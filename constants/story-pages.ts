@@ -1458,7 +1458,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "finalCta",
-				image: "/espiritu-santo-island-paradise-beach.jpg",
+				image: "/playa-balandra-aerea.jpg",
 				alt: "Isla Espíritu Santo desde el mar",
 				title: "Hay quien recuerda este tour por el snorkel. Otros por la playa. Y otros porque, por un día, sintieron que el tiempo dejó de importar.",
 				text: "Cuéntanos cuándo visitas La Paz y te ayudamos a reservar tu día completo entre Balandra, Espíritu Santo e Isla Partida.",

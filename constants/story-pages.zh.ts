@@ -1453,7 +1453,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "finalCta",
-				image: "/espiritu-santo-island-paradise-beach.jpg",
+				image: "/playa-balandra-aerea.jpg",
 				alt: "从海上眺望的圣埃斯皮里图圣托岛",
 				title: "有人记得这次旅程是因为浮潜,有人是因为海滩,还有人只是因为,在那一天,时间似乎不再重要。",
 				text: "告诉我们你何时到访拉巴斯,我们会帮你预订在巴兰德拉、圣埃斯皮里图圣托和帕蒂达岛之间度过的完整一天。",

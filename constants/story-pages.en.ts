@@ -1454,7 +1454,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "finalCta",
-				image: "/espiritu-santo-island-paradise-beach.jpg",
+				image: "/playa-balandra-aerea.jpg",
 				alt: "Espíritu Santo Island from the sea",
 				title: "Some remember this tour for the snorkeling. Others for the beach. And others because, for a day, they felt time stopped mattering.",
 				text: "Tell us when you're visiting La Paz and we'll help you book your full day among Balandra, Espíritu Santo and Partida Island.",
