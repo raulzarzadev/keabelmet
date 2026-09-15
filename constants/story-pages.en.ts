@@ -253,7 +253,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"Snorkel gear and wetsuit",
 							"Picnic, fruit, snacks and drinks",
 							"Photos and videos",
-							"Minimum 4 participants · Age 14+",
+							"Age 14+",
 						],
 						waText: "Hi! I'd like to book the shared Ocean Safari La Ventana",
 						ctaLabel: "Find a shared trip",

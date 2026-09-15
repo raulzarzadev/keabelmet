@@ -87,9 +87,10 @@ interface PayButtonProps {
 	locale?: string
 	featured?: boolean
 	items?: string[]
+	image?: string
 }
 
-export default function PayButton({ slug, expeditionName, cardName, amountMxn, amountNote, label, locale = "es", featured, items }: PayButtonProps) {
+export default function PayButton({ slug, expeditionName, cardName, amountMxn, amountNote, label, locale = "es", featured, items, image }: PayButtonProps) {
 	const [open, setOpen] = useState(false)
 	return (
 		<>
@@ -105,6 +106,7 @@ export default function PayButton({ slug, expeditionName, cardName, amountMxn, a
 					perPerson={isPerPerson(amountNote)}
 					locale={locale}
 					items={items}
+					image={image}
 					onClose={() => setOpen(false)}
 				/>
 			)}
@@ -118,8 +120,8 @@ interface Reservation {
 	folio: string; paymentIntentId: string
 }
 
-function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerson, locale, items, onClose }: {
-	slug: string; expeditionName: string; cardName: string; unitAmountMxn: number; perPerson: boolean; locale: string; items?: string[]; onClose: () => void
+function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerson, locale, items, image, onClose }: {
+	slug: string; expeditionName: string; cardName: string; unitAmountMxn: number; perPerson: boolean; locale: string; items?: string[]; image?: string; onClose: () => void
 }) {
 	const t = copy[locale] ?? copy.es
 	const season = getSeason(slug)
@@ -204,7 +206,8 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 	const modal = (
 		<div className="checkout-overlay" onMouseDown={onClose}>
-			<div className="checkout-modal" onMouseDown={(e) => e.stopPropagation()}>
+			<div className={`checkout-modal${image ? " has-hero" : ""}`} onMouseDown={(e) => e.stopPropagation()}>
+				{image && <img src={image} alt={expeditionName} className="checkout-hero" />}
 				<button type="button" className="checkout-close" onClick={onClose} aria-label={t.close}>×</button>
 
 				<div className="checkout-summary">
