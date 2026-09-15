@@ -56,7 +56,7 @@ export interface HomeContent {
 	testi: {
 		kicker: string
 		title: string
-		items: { text: string; name: string; loc: string; photo?: string }[]
+		items: { text: string; name: string; loc: string; photo?: string; photoPos?: string }[]
 	}
 	founder: {
 		kicker: string
@@ -262,11 +262,11 @@ const es: HomeContent = {
 		title: "Experiencias reales, contadas por quienes las vivieron",
 		items: [
 			{ text: "“Conocimos por casualidad a Mau y cambiamos las excursiones que ya teníamos contratadas para ir con él. Su energía y simpatía, junto con sus conocimientos y el equipo que lo acompaña, hacen que sea una experiencia de 10.”", name: "Ester Millan", loc: "Reseña de Google", photo: "/reviews/ester.jpg" },
-			{ text: "“Excelente experiencia con Mau y Gama. Fuimos en búsqueda de orcas y, aunque no las encontramos, disfrutamos muchísimo de los delfines y tuvimos la suerte de encontrarnos con 4 ballenas azules hermosas. Volveremos a salir con ellos muchas veces más.”", name: "Bernardo Barbara", loc: "Reseña de Google", photo: "/reviews/bernardo.jpg" },
+			{ text: "“Excelente experiencia con Mau y Gama. Fuimos en búsqueda de orcas y, aunque no las encontramos, disfrutamos muchísimo de los delfines y tuvimos la suerte de encontrarnos con 4 ballenas azules hermosas. Volveremos a salir con ellos muchas veces más.”", name: "Bernardo Barbara", loc: "Reseña de Google", photo: "/reviews/bernardo.jpg", photoPos: "center 25%" },
 			{ text: "“Un equipo profesional con un trato muy amable y una gran orientación al cliente. Tanto Gama como Mau son personas estupendas y apasionadas que hacen que disfrutes al máximo la experiencia del safari. Muy recomendable.”", name: "Eduardo Gonzalez", loc: "Reseña de Google", photo: "/reviews/eduardo.jpg" },
 			{ text: "“Increíble la atención de Mau, un tipazo que te comparte su pasión y amor por el mar, llevándote a lugares increíbles. Súper recomendable.”", name: "Arturo Hernandez", loc: "Reseña de Google", photo: "/reviews/arturo.jpg" },
 			{ text: "“Mi agencia de confianza. Recomendada para todas las edades. Seguros y responsables.”", name: "Alfonso Melgoza", loc: "Reseña de Google", photo: "/reviews/alfonso.jpg" },
-			{ text: "“He ido más de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el Mar de Cortés; cualquier expedición se convierte en una experiencia inolvidable.”", name: "Rosa Burciaga", loc: "Reseña de Google" },
+			{ text: "“He ido más de 10 veces y nunca me decepcionan, desde acampadas con ballenas grises de fondo hasta nadar con orcas. Keabelmet es la mejor empresa de tours en el Mar de Cortés; cualquier expedición se convierte en una experiencia inolvidable.”", name: "Rosa Burciaga", loc: "Reseña de Google", photo: "/reviews/rosa.jpg", photoPos: "center bottom" },
 		],
 	},
 	founder: {
@@ -495,11 +495,11 @@ const en: HomeContent = {
 		title: "Real experiences, told by the people who lived them",
 		items: [
 			{ text: "“We met Mau by chance and changed the excursions we had already booked just to go out with him. His energy and warmth, together with his knowledge and the team around him, make it a 10 out of 10 experience.”", name: "Ester Millan", loc: "Google review", photo: "/reviews/ester.jpg" },
-			{ text: "“Amazing experience with Mau and Gama. We went looking for orcas and, even though we didn't find them, we loved the dolphins and were lucky enough to come across 4 beautiful blue whales. We'll be going out with them many more times.”", name: "Bernardo Barbara", loc: "Google review", photo: "/reviews/bernardo.jpg" },
+			{ text: "“Amazing experience with Mau and Gama. We went looking for orcas and, even though we didn't find them, we loved the dolphins and were lucky enough to come across 4 beautiful blue whales. We'll be going out with them many more times.”", name: "Bernardo Barbara", loc: "Google review", photo: "/reviews/bernardo.jpg", photoPos: "center 25%" },
 			{ text: "“A professional team with a very friendly, customer-focused approach. Both Gama and Mau are wonderful, passionate people who make you enjoy the safari to the fullest. Highly recommended.”", name: "Eduardo Gonzalez", loc: "Google review", photo: "/reviews/eduardo.jpg" },
 			{ text: "“Mau's attention was incredible — a great guy who shares his passion and love for the sea, taking you to amazing places. Highly recommended.”", name: "Arturo Hernandez", loc: "Google review", photo: "/reviews/arturo.jpg" },
 			{ text: "“My go-to agency. Recommended for all ages. Safe and responsible.”", name: "Alfonso Melgoza", loc: "Google review", photo: "/reviews/alfonso.jpg" },
-			{ text: "“I've gone more than 10 times and they never disappoint — from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez; every expedition becomes an unforgettable experience.”", name: "Rosa Burciaga", loc: "Google review" },
+			{ text: "“I've gone more than 10 times and they never disappoint — from camping with gray whales in the background to swimming with orcas. Keabelmet is the best tour company in the Sea of Cortez; every expedition becomes an unforgettable experience.”", name: "Rosa Burciaga", loc: "Google review", photo: "/reviews/rosa.jpg", photoPos: "center bottom" },
 		],
 	},
 	founder: {
@@ -648,11 +648,11 @@ const fr: HomeContent = {
 		title: "Des expériences réelles, racontées par ceux qui les ont vécues",
 		items: [
 			{ text: "« Nous avons rencontré Mau par hasard et avons changé les excursions que nous avions déjà réservées juste pour partir avec lui. Son énergie et sa gentillesse, ainsi que ses connaissances et l'équipe qui l'entoure, en font une expérience 10 sur 10. »", name: "Ester Millan", loc: "Avis Google", photo: "/reviews/ester.jpg" },
-			{ text: "« Excellente expérience avec Mau et Gama. Nous sommes partis à la recherche des orques et, même si nous ne les avons pas trouvées, nous avons adoré les dauphins et avons eu la chance de croiser 4 magnifiques baleines bleues. Nous repartirons avec eux bien des fois encore. »", name: "Bernardo Barbara", loc: "Avis Google", photo: "/reviews/bernardo.jpg" },
+			{ text: "« Excellente expérience avec Mau et Gama. Nous sommes partis à la recherche des orques et, même si nous ne les avons pas trouvées, nous avons adoré les dauphins et avons eu la chance de croiser 4 magnifiques baleines bleues. Nous repartirons avec eux bien des fois encore. »", name: "Bernardo Barbara", loc: "Avis Google", photo: "/reviews/bernardo.jpg", photoPos: "center 25%" },
 			{ text: "« Une équipe professionnelle, très aimable et à l'écoute du client. Gama et Mau sont des personnes formidables et passionnées qui vous font profiter au maximum du safari. Vivement recommandé. »", name: "Eduardo Gonzalez", loc: "Avis Google", photo: "/reviews/eduardo.jpg" },
 			{ text: "« L'accueil de Mau est incroyable — un type formidable qui partage sa passion et son amour de la mer et vous emmène dans des endroits extraordinaires. Vivement recommandé. »", name: "Arturo Hernandez", loc: "Avis Google", photo: "/reviews/arturo.jpg" },
 			{ text: "« Mon agence de confiance. Recommandée pour tous les âges. Sûrs et responsables. »", name: "Alfonso Melgoza", loc: "Avis Google", photo: "/reviews/alfonso.jpg" },
-			{ text: "« J'y suis allée plus de 10 fois et ils ne déçoivent jamais — du camping avec des baleines grises en toile de fond à la nage avec des orques. Keabelmet est la meilleure agence de la mer de Cortés ; chaque expédition devient une expérience inoubliable. »", name: "Rosa Burciaga", loc: "Avis Google" },
+			{ text: "« J'y suis allée plus de 10 fois et ils ne déçoivent jamais — du camping avec des baleines grises en toile de fond à la nage avec des orques. Keabelmet est la meilleure agence de la mer de Cortés ; chaque expédition devient une expérience inoubliable. »", name: "Rosa Burciaga", loc: "Avis Google", photo: "/reviews/rosa.jpg", photoPos: "center bottom" },
 		],
 	},
 	founder: {
@@ -801,11 +801,11 @@ const zh: HomeContent = {
 		title: "真实的体验，由亲历者讲述",
 		items: [
 			{ text: "「我们偶然认识了 Mau，甚至更改了已经预订的行程，只为跟他一起出海。他的热情与亲和力，加上专业知识和身边的团队，让整趟体验堪称满分。」", name: "Ester Millan", loc: "Google 评价", photo: "/reviews/ester.jpg" },
-			{ text: "「和 Mau 与 Gama 的体验太棒了。我们出海寻找虎鲸，虽然没有遇到，但尽情享受了与海豚的相处，还幸运地邂逅了 4 头美丽的蓝鲸。我们还会一次又一次地跟他们出海。」", name: "Bernardo Barbara", loc: "Google 评价", photo: "/reviews/bernardo.jpg" },
+			{ text: "「和 Mau 与 Gama 的体验太棒了。我们出海寻找虎鲸，虽然没有遇到，但尽情享受了与海豚的相处，还幸运地邂逅了 4 头美丽的蓝鲸。我们还会一次又一次地跟他们出海。」", name: "Bernardo Barbara", loc: "Google 评价", photo: "/reviews/bernardo.jpg", photoPos: "center 25%" },
 			{ text: "「非常专业的团队，态度友好、以客户为中心。Gama 和 Mau 都是了不起又充满热情的人，让你尽情享受这趟海上探险。强烈推荐。」", name: "Eduardo Gonzalez", loc: "Google 评价", photo: "/reviews/eduardo.jpg" },
 			{ text: "「Mau 的服务太棒了——他是个很棒的人，会与你分享他对大海的热爱与激情，带你去令人惊叹的地方。强烈推荐。」", name: "Arturo Hernandez", loc: "Google 评价", photo: "/reviews/arturo.jpg" },
 			{ text: "「我信赖的机构。适合所有年龄。安全又负责。」", name: "Alfonso Melgoza", loc: "Google 评价", photo: "/reviews/alfonso.jpg" },
-			{ text: "「我已经去过 10 多次，他们从未让我失望——从以灰鲸为背景的露营，到与虎鲸同游。Keabelmet 是科尔特斯海最好的旅游公司；每一次探险都成为难忘的体验。」", name: "Rosa Burciaga", loc: "Google 评价" },
+			{ text: "「我已经去过 10 多次，他们从未让我失望——从以灰鲸为背景的露营，到与虎鲸同游。Keabelmet 是科尔特斯海最好的旅游公司；每一次探险都成为难忘的体验。」", name: "Rosa Burciaga", loc: "Google 评价", photo: "/reviews/rosa.jpg", photoPos: "center bottom" },
 		],
 	},
 	founder: {
