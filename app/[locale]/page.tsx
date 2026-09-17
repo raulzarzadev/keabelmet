@@ -4,7 +4,6 @@ import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
 import TestiCarousel from "@/components/TestiCarousel"
-import YoutubeFacade from "@/components/YoutubeFacade"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
@@ -70,16 +69,31 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* MISSION */}
       <section className="mission">
-        <div className="mission-inner">
+        <div className="mission-card">
           <div className="mission-text">
-            <span className="mission-mark" aria-hidden="true">&#8220;</span>
+            <span className="mission-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+              Documental · Jacques Cousteau
+            </span>
             <p>{t.mission.main}<em>{t.mission.em}</em></p>
-            <a className="btn btn-solid mission-yt" href="https://youtu.be/_LGkiNljhak" target="_blank" rel="noopener noreferrer">
-              ▶ Ver en YouTube
-            </a>
+            <div className="mission-btns">
+              <a className="btn btn-pop" href="https://youtu.be/_LGkiNljhak" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ marginRight: 8, verticalAlign: "-2px" }}><path d="M8 5v14l11-7z" /></svg>
+                Ver en YouTube
+              </a>
+              <a className="btn btn-ghost" href="#historia">Nuestra historia</a>
+            </div>
           </div>
           <div className="mission-video">
-            <YoutubeFacade id="_LGkiNljhak" title="Jacques Cousteau · El Mar de Cortés" />
+            <div className="yt-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/_LGkiNljhak?rel=0"
+                title="Jacques Cousteau · El Mar de Cortés"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
