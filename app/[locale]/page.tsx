@@ -4,6 +4,7 @@ import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
 import TestiCarousel from "@/components/TestiCarousel"
+import YoutubeFacade from "@/components/YoutubeFacade"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
@@ -69,11 +70,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* MISSION */}
       <section className="mission">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="mission-bg" src="/buceo-cabo-pulmo-cardumen.jpg" alt="" aria-hidden="true" />
-        <div className="wrap">
-          <span className="mission-mark" aria-hidden="true">&#8220;</span>
-          <p>{t.mission.main}<em>{t.mission.em}</em></p>
+        <div className="mission-inner">
+          <div className="mission-text">
+            <span className="mission-mark" aria-hidden="true">&#8220;</span>
+            <p>{t.mission.main}<em>{t.mission.em}</em></p>
+            <a className="btn btn-solid mission-yt" href="https://youtu.be/_LGkiNljhak" target="_blank" rel="noopener noreferrer">
+              ▶ Ver en YouTube
+            </a>
+          </div>
+          <div className="mission-video">
+            <YoutubeFacade id="_LGkiNljhak" title="Jacques Cousteau · El Mar de Cortés" />
+          </div>
         </div>
       </section>
 
