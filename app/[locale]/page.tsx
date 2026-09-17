@@ -69,7 +69,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* MISSION */}
       <section className="mission">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="mission-bg" src="/buceo-cabo-pulmo-cardumen.jpg" alt="" aria-hidden="true" />
         <div className="wrap">
+          <span className="mission-mark" aria-hidden="true">&#8220;</span>
           <p>{t.mission.main}<em>{t.mission.em}</em></p>
         </div>
       </section>
