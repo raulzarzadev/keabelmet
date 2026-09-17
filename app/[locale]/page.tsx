@@ -67,14 +67,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </div>
 
-      {/* MISSION */}
-      <section className="mission">
-        <div className="wrap">
-          <p>{t.mission.main}<em>{t.mission.em}</em></p>
-          <p className="dim">{t.mission.dim}</p>
-        </div>
-      </section>
-
       {/* REGIONS */}
       {t.regions.map((r) => (
         <div key={r.href} className={`region${r.right ? " region-right" : ""}`}>
