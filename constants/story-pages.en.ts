@@ -1016,7 +1016,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Sea lion watching up close at Espíritu Santo" },
+				media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Sea lion watching up close at Espíritu Santo" },
 				quote: "For a few seconds, you had the feeling that the ocean was curious about you too.",
 				align: "bottom",
 			},
@@ -1263,7 +1263,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"tour-espiritu-santo": {
 		breadcrumb: "Snorkel Tour Espíritu Santo Island",
 		hero: {
-			image: "/lobo-marino-espiritu-santo.jpg",
+			image: "/lobo-marino-espiritu-santo-v2.jpg",
 			alt: "White-sand beach and turquoise water at Espíritu Santo Island",
 			kicker: "Espíritu Santo Island · Balandra Beach",
 			title: "A day on an island where the desert ends and the ocean begins",
@@ -1350,7 +1350,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 					{ title: "Espíritu Santo Island", text: "A landscape where the desert, the volcanic mountains and the Sea of Cortez meet.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Espíritu Santo Island" } },
 					{ title: "Partida Island", text: "Channels, hidden beaches and incredibly clear waters.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Partida Island" } },
 					{ title: "Reefs", text: "We'll snorkel at sites selected by our captain based on the day's conditions.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Reef for snorkeling" } },
-					{ title: "Sea lions", text: "When regulations and the season allow, we visit the sea lion colony to observe them responsibly.", media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Sea lion at Espíritu Santo" } },
+					{ title: "Sea lions", text: "When regulations and the season allow, we visit the sea lion colony to observe them responsibly.", media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Sea lion at Espíritu Santo" } },
 				],
 			},
 			{

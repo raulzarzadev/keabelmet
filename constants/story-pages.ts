@@ -1020,7 +1020,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Lobo marino observando de cerca en Espíritu Santo" },
+				media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Lobo marino observando de cerca en Espíritu Santo" },
 				quote: "Durante unos segundos, tuviste la sensación de que el océano también sentía curiosidad por ti.",
 				align: "bottom",
 			},
@@ -1267,7 +1267,7 @@ export const storyPages: Record<string, StoryPageData> = {
 	"tour-espiritu-santo": {
 		breadcrumb: "Tour Snorkel Isla Espíritu Santo",
 		hero: {
-			image: "/lobo-marino-espiritu-santo.jpg",
+			image: "/lobo-marino-espiritu-santo-v2.jpg",
 			alt: "Playa de arena blanca y agua turquesa en Isla Espíritu Santo",
 			kicker: "Isla Espíritu Santo · Playa Balandra",
 			title: "Un día en una isla donde el desierto termina y comienza el océano",
@@ -1354,7 +1354,7 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ title: "Isla Espíritu Santo", text: "Un paisaje donde el desierto, las montañas volcánicas y el Mar de Cortés se encuentran.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Isla Espíritu Santo" } },
 					{ title: "Isla Partida", text: "Canales, playas escondidas y aguas increíblemente transparentes.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Isla Partida" } },
 					{ title: "Arrecifes", text: "Haremos snorkel en sitios seleccionados por nuestro capitán según las condiciones del día.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Arrecife para snorkel" } },
-					{ title: "Lobos marinos", text: "Cuando las regulaciones y la temporada lo permiten, visitamos la colonia de lobos marinos para observarlos de forma responsable.", media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Lobo marino en Espíritu Santo" } },
+					{ title: "Lobos marinos", text: "Cuando las regulaciones y la temporada lo permiten, visitamos la colonia de lobos marinos para observarlos de forma responsable.", media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Lobo marino en Espíritu Santo" } },
 				],
 			},
 			{
