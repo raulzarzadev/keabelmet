@@ -51,7 +51,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="/cachalotecta.jpeg" alt={t.hero.alt} />
+          <picture>
+            <source media="(max-width: 767px)" srcSet="/tiburon-ballena-mobile.jpg" />
+            <img src="/cachalotecta.jpeg" alt={t.hero.alt} />
+          </picture>
         </div>
         <div className="hero-content">
           <span className="kicker">{t.hero.kicker}</span>

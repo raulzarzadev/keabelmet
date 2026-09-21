@@ -609,7 +609,6 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		breadcrumb: "鲸鲨",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
-			imageMobile: "/tiburon-ballena-mobile.jpg",
 			alt: "鲸鲨在拉巴斯近水面游动",
 			kicker: "拉巴斯 · 鲸鲨",
 			title: "与地球上最大的鱼一起游泳",
