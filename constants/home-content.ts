@@ -100,7 +100,7 @@ const es: HomeContent = {
 	regions: [
 		{
 			kicker: "La Ventana · Isla Cerralvo",
-			title: "Móbulas que vuelan, ballenas que emergen",
+			title: "El safari marino del que todos hablan",
 			text: "Un safari sin guion. Navegamos guiados por biólogos marinos en busca de lo inesperado, a 40 minutos de La Paz.",
 			image: "/images/orca-safari.jpg",
 			alt: "Seafari en La Ventana",
@@ -334,7 +334,7 @@ const en: HomeContent = {
 	regions: [
 		{
 			kicker: "La Ventana · Cerralvo Island",
-			title: "Mobulas that fly, whales that surface",
+			title: "The marine safari everyone is talking about",
 			text: "A safari with no script. Guided by marine biologists, we sail in search of the unexpected, 40 minutes from La Paz.",
 			image: "/images/orca-safari.jpg",
 			alt: "Seafari in La Ventana",
@@ -568,7 +568,7 @@ const fr: HomeContent = {
 	regions: [
 		{
 			kicker: "La Ventana · Île Cerralvo",
-			title: "Des mobules qui volent, des baleines qui émergent",
+			title: "Le safari marin dont tout le monde parle",
 			text: "Un safari sans scénario. Guidés par des biologistes marins, nous naviguons à la recherche de l'inattendu, à 40 minutes de La Paz.",
 			image: "/images/orca-safari.jpg",
 			alt: "Seafari à La Ventana",
@@ -722,7 +722,7 @@ const zh: HomeContent = {
 	regions: [
 		{
 			kicker: "拉文塔纳 · 塞拉尔沃岛",
-			title: "飞翔的蝠鲼，跃出的鲸鱼",
+			title: "人人都在谈论的海洋探险",
 			text: "没有剧本的探险。在海洋生物学家的带领下，我们在离拉巴斯40分钟的海域，寻找意料之外的相遇。",
 			image: "/images/orca-safari.jpg",
 			alt: "拉文塔纳海洋探险",
