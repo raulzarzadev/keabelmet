@@ -10,6 +10,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 		breadcrumb: "Ocean Safari La Ventana",
 		hero: {
 			image: "/images/orca-safari.jpg",
+			imageMobile: "/orca-la-ventana-mobile.jpg",
 			alt: "Ocean Safari in La Ventana and Cerralvo Island",
 			kicker: "La Ventana · Cerralvo Island",
 			title: "Ocean Safari La Ventana",

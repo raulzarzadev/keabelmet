@@ -9,6 +9,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		breadcrumb: "拉文塔纳海洋探险",
 		hero: {
 			image: "/images/orca-safari.jpg",
+			imageMobile: "/orca-la-ventana-mobile.jpg",
 			alt: "拉文塔纳与塞拉尔沃岛的海洋探险",
 			kicker: "拉文塔纳 · 塞拉尔沃岛",
 			title: "拉文塔纳海洋探险",
