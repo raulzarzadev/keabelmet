@@ -42,7 +42,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const regionBadge: Record<string, Record<string, string>> = {
     "/experiencias/safari-la-ventana": { es: "Nuestro favorito", en: "Our favorite", fr: "Notre préféré", zh: "我们的最爱" },
     "/experiencias/safari-bahia-magdalena": { es: "El más aventurero", en: "The most adventurous", fr: "Le plus aventureux", zh: "最刺激" },
-    "/experiencias/buceo-cabo-pulmo": { es: "El mejor spot de buceo", en: "Best dive spot", fr: "Meilleur spot de plongée", zh: "最佳潜水点" },
+    "/experiencias/buceo-cabo-pulmo": { es: "El mejor buceo", en: "Best diving", fr: "La meilleure plongée", zh: "最佳潜水" },
     "/experiencias/tour-espiritu-santo": { es: "El más reconocido", en: "Most iconic", fr: "Le plus emblématique", zh: "最知名" },
   }
 
