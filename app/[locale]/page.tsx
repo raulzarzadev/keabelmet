@@ -25,12 +25,12 @@ const whyIcons = [
 ]
 
 const instaImages = [
-  "/images/orca-safari.jpg",
-  "/images/marlin-bahia-magdalena-hero.jpeg",
-  "/images/hero/ballena-gris-hero.jpeg",
-  "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-  "/espiritu-santo-island-paradise-beach.jpg",
-  "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+  "/instagram/grupo-feliz.jpg",
+  "/instagram/ballena-azul.jpg",
+  "/instagram/pareja-dunas.jpg",
+  "/instagram/orcas.jpg",
+  "/instagram/snorkel-lancha.jpg",
+  "/instagram/ballena-gris-aerea.jpg",
 ]
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
