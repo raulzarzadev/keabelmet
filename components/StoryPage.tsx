@@ -77,6 +77,7 @@ function MediaSlot({ media, className = "" }: { media: Media; className?: string
 
 export interface StoryHero {
   image: string
+  imageMobile?: string
   alt: string
   kicker: string
   title: string
@@ -152,7 +153,15 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
       {/* HERO */}
       <section className="thero">
-        <img src={h.image} alt={h.alt} />
+        {h.imageMobile ? (
+          <picture>
+            <source media="(max-width: 767px)" srcSet={h.imageMobile} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={h.image} alt={h.alt} />
+          </picture>
+        ) : (
+          <img src={h.image} alt={h.alt} />
+        )}
         <div className="thero-inner">
           <span className="kicker">{h.kicker}</span>
           <h1>{h.title}</h1>
