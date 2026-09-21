@@ -1016,7 +1016,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Otarie observant de près à Espíritu Santo" },
+				media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Otarie observant de près à Espíritu Santo" },
 				quote: "Pendant quelques secondes, vous avez eu la sensation que l'océan était curieux de vous aussi.",
 				align: "bottom",
 			},
@@ -1263,7 +1263,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 	"tour-espiritu-santo": {
 		breadcrumb: "Excursion snorkeling île Espíritu Santo",
 		hero: {
-			image: "/lobo-marino-espiritu-santo.jpg",
+			image: "/lobo-marino-espiritu-santo-v2.jpg",
 			alt: "Plage de sable blanc et eau turquoise à l'île Espíritu Santo",
 			kicker: "Île Espíritu Santo · Plage Balandra",
 			title: "Une journée sur une île où le désert finit et l'océan commence",
@@ -1350,7 +1350,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 					{ title: "Île Espíritu Santo", text: "Un paysage où le désert, les montagnes volcaniques et la mer de Cortez se rencontrent.", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "Île Espíritu Santo" } },
 					{ title: "Île Partida", text: "Canaux, plages cachées et eaux incroyablement transparentes.", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "Île Partida" } },
 					{ title: "Récifs", text: "Nous ferons du snorkeling dans des sites sélectionnés par notre capitaine selon les conditions du jour.", media: { src: "/snorkeling-coral-reef.jpg", alt: "Récif pour le snorkeling" } },
-					{ title: "Otaries", text: "Quand la réglementation et la saison le permettent, nous visitons la colonie d'otaries pour les observer de manière responsable.", media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "Otarie à Espíritu Santo" } },
+					{ title: "Otaries", text: "Quand la réglementation et la saison le permettent, nous visitons la colonie d'otaries pour les observer de manière responsable.", media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "Otarie à Espíritu Santo" } },
 				],
 			},
 			{

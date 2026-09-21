@@ -1015,7 +1015,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "海狮在圣埃斯皮里图圣托近距离观察" },
+				media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "海狮在圣埃斯皮里图圣托近距离观察" },
 				quote: "有那么几秒钟,你会感觉大海也对你充满好奇。",
 				align: "bottom",
 			},
@@ -1262,7 +1262,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"tour-espiritu-santo": {
 		breadcrumb: "圣埃斯皮里图圣托岛浮潜之旅",
 		hero: {
-			image: "/lobo-marino-espiritu-santo.jpg",
+			image: "/lobo-marino-espiritu-santo-v2.jpg",
 			alt: "圣埃斯皮里图圣托岛的白沙滩和绿松石色海水",
 			kicker: "圣埃斯皮里图圣托岛 · 巴兰德拉海滩",
 			title: "在沙漠尽头、海洋开端的岛屿上度过一天",
@@ -1349,7 +1349,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 					{ title: "圣埃斯皮里图圣托岛", text: "一个沙漠、火山山脉与科尔特斯海相遇的风景。", media: { src: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg", alt: "圣埃斯皮里图圣托岛" } },
 					{ title: "帕蒂达岛", text: "水道、隐蔽的海滩,以及令人难以置信的清澈海水。", media: { src: "/pristine-beach-turquoise-water-espiritu-santo-isla.jpg", alt: "帕蒂达岛" } },
 					{ title: "珊瑚礁", text: "我们会根据当天条件,在船长选定的地点进行浮潜。", media: { src: "/snorkeling-coral-reef.jpg", alt: "适合浮潜的珊瑚礁" } },
-					{ title: "海狮", text: "当法规和季节允许时,我们会参观海狮群落,以负责任的方式观察它们。", media: { src: "/lobo-marino-espiritu-santo.jpg", alt: "圣埃斯皮里图圣托的海狮" } },
+					{ title: "海狮", text: "当法规和季节允许时,我们会参观海狮群落,以负责任的方式观察它们。", media: { src: "/lobo-marino-espiritu-santo-v2.jpg", alt: "圣埃斯皮里图圣托的海狮" } },
 				],
 			},
 			{
