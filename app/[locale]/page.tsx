@@ -39,6 +39,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const t = homeContent[locale]
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
 
+  const regionBadge: Record<string, Record<string, string>> = {
+    "/experiencias/safari-la-ventana": { es: "Nuestro favorito", en: "Our favorite", fr: "Notre préféré", zh: "我们的最爱" },
+    "/experiencias/safari-bahia-magdalena": { es: "El más aventurero", en: "The most adventurous", fr: "Le plus aventureux", zh: "最刺激" },
+    "/experiencias/buceo-cabo-pulmo": { es: "El mejor spot de buceo", en: "Best dive spot", fr: "Meilleur spot de plongée", zh: "最佳潜水点" },
+    "/experiencias/tour-espiritu-santo": { es: "El más reconocido", en: "Most iconic", fr: "Le plus emblématique", zh: "最知名" },
+  }
+
   return (
     <main>
       {/* HERO */}
@@ -102,6 +109,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {t.regions.map((r) => (
         <div key={r.href} className={`region${r.right ? " region-right" : ""}`}>
           <img src={r.image} alt={r.alt} />
+          {regionBadge[r.href]?.[locale] && (
+            <div className="region-badge-wrap"><span className="region-badge">{regionBadge[r.href][locale]}</span></div>
+          )}
           <div className="region-inner">
             <div className="region-text">
               <span className="kicker">{r.kicker}</span>
