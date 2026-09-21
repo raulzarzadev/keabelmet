@@ -1263,7 +1263,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		breadcrumb: "圣埃斯皮里图圣托岛浮潜之旅",
 		hero: {
 			image: "/lobo-marino-espiritu-hero.jpg",
-			imageMobile: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "圣埃斯皮里图圣托岛的白沙滩和绿松石色海水",
 			kicker: "圣埃斯皮里图圣托岛 · 巴兰德拉海滩",
 			title: "在沙漠尽头、海洋开端的岛屿上度过一天",
