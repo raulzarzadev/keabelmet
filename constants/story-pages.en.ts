@@ -1263,7 +1263,8 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"tour-espiritu-santo": {
 		breadcrumb: "Snorkel Tour Espíritu Santo Island",
 		hero: {
-			image: "/lobo-marino-espiritu-santo-v2.jpg",
+			image: "/lobo-marino-espiritu-hero.jpg",
+			imageMobile: "/lobo-marino-espiritu-santo-v2.jpg",
 			alt: "White-sand beach and turquoise water at Espíritu Santo Island",
 			kicker: "Espíritu Santo Island · Balandra Beach",
 			title: "A day on an island where the desert ends and the ocean begins",
