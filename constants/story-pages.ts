@@ -614,6 +614,7 @@ export const storyPages: Record<string, StoryPageData> = {
 		breadcrumb: "Tiburón Ballena",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			imageMobile: "/tiburon-ballena-mobile.jpg",
 			alt: "Tiburón ballena nadando cerca de la superficie en La Paz",
 			kicker: "La Paz · Tiburón Ballena",
 			title: "Nada junto al pez más grande del planeta",
