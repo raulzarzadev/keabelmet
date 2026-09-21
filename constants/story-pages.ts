@@ -1268,7 +1268,7 @@ export const storyPages: Record<string, StoryPageData> = {
 		breadcrumb: "Tour Snorkel Isla Espíritu Santo",
 		hero: {
 			image: "/lobo-marino-espiritu-hero.jpg",
-			imageMobile: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "Playa de arena blanca y agua turquesa en Isla Espíritu Santo",
 			kicker: "Isla Espíritu Santo · Playa Balandra",
 			title: "Un día en una isla donde el desierto termina y comienza el océano",

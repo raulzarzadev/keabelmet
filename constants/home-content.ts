@@ -5,6 +5,7 @@ export interface RegionContent {
 	title: string
 	text: string
 	image: string
+	imageMobile?: string
 	alt: string
 	href: string
 	right: boolean
@@ -129,6 +130,7 @@ const es: HomeContent = {
 			title: "Nada con lobos marinos curiosos",
 			text: "Playas vírgenes, aguas cristalinas y una de las colonias de lobos marinos más grandes del Golfo de California.",
 			image: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "Isla Espíritu Santo",
 			href: "/experiencias/tour-espiritu-santo",
 			right: true,
@@ -362,6 +364,7 @@ const en: HomeContent = {
 			title: "Swim with curious sea lions",
 			text: "Pristine beaches, crystal-clear waters and one of the largest sea lion colonies in the Gulf of California.",
 			image: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "Espiritu Santo Island",
 			href: "/experiencias/tour-espiritu-santo",
 			right: true,
@@ -595,6 +598,7 @@ const fr: HomeContent = {
 			title: "Nagez avec des otaries curieuses",
 			text: "Des plages vierges, des eaux cristallines et l'une des plus grandes colonies d'otaries du golfe de Californie.",
 			image: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "Île Espíritu Santo",
 			href: "/experiencias/tour-espiritu-santo",
 			right: true,
@@ -748,6 +752,7 @@ const zh: HomeContent = {
 			title: "与好奇的海狮同游",
 			text: "原始的海滩、清澈的海水，以及加利福尼亚湾最大的海狮群之一。",
 			image: "/lobo-marino-espiritu-santo-v2.jpg",
+			imageMobile: "/lobo-marino-espiritu-mobile.jpg",
 			alt: "圣灵岛",
 			href: "/experiencias/tour-espiritu-santo",
 			right: true,

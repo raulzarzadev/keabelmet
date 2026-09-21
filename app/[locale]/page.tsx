@@ -108,7 +108,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* REGIONS */}
       {t.regions.map((r) => (
         <div key={r.href} className={`region${r.right ? " region-right" : ""}`}>
-          <img src={r.image} alt={r.alt} />
+          {r.imageMobile ? (
+            <picture>
+              <source media="(max-width: 767px)" srcSet={r.imageMobile} />
+              <img src={r.image} alt={r.alt} />
+            </picture>
+          ) : (
+            <img src={r.image} alt={r.alt} />
+          )}
           {regionBadge[r.href]?.[locale] && (
             <div className="region-badge-wrap"><span className="region-badge">{regionBadge[r.href][locale]}</span></div>
           )}
