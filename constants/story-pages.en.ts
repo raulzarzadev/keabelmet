@@ -610,7 +610,6 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 		breadcrumb: "Whale Shark",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
-			imageMobile: "/tiburon-ballena-mobile.jpg",
 			alt: "Whale shark swimming near the surface in La Paz",
 			kicker: "La Paz · Whale Shark",
 			title: "Swim beside the largest fish on the planet",

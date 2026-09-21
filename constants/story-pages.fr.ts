@@ -610,7 +610,6 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 		breadcrumb: "Requin-baleine",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
-			imageMobile: "/tiburon-ballena-mobile.jpg",
 			alt: "Requin-baleine nageant près de la surface à La Paz",
 			kicker: "La Paz · Requin-baleine",
 			title: "Nagez aux côtés du plus grand poisson de la planète",
