@@ -13,6 +13,7 @@ import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-
 import { getStripeClient } from "@/lib/stripe-client"
 import { getSeason, seasonLabel, isDateInSeason } from "@/lib/expedition-seasons"
 import { formatMxn } from "@/lib/reservation"
+import { RIDE_ADDON_MXN, rideAddonAvailable } from "@/lib/ride-addon"
 import Voucher from "@/components/Voucher"
 
 function stripeLocale(locale: string): StripeElementLocale {
@@ -40,6 +41,7 @@ interface UI {
 	preparing: string; close: string; viewVoucher: string; includes: string
 	errDate: string; errPast: string; errSeason: string; errName: string; errEmail: string; errPhone: string; errGeneric: string
 	namePh: string; phonePh: string
+	rideQuestion: string; rideNote: string; rideLine: string
 }
 
 const copy: Record<string, UI> = {
@@ -50,6 +52,7 @@ const copy: Record<string, UI> = {
 		preparing: "Preparando tu pago…", close: "Cerrar", viewVoucher: "Ver mi voucher", includes: "Qué incluye",
 		errDate: "Elige una fecha.", errPast: "Elige una fecha futura.", errSeason: "Esa fecha está fuera de temporada.", errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.",
 		namePh: "Tu nombre", phonePh: "+52 …",
+		rideQuestion: "¿Necesitas raite de La Paz a La Ventana?", rideNote: "Transporte redondo · +$1,000 MXN por reserva", rideLine: "Raite La Paz ⇄ La Ventana",
 	},
 	en: {
 		detailsTitle: "Your reservation details", date: "Preferred date", people: "People", name: "Full name", email: "Email", phone: "Phone / WhatsApp",
@@ -58,6 +61,7 @@ const copy: Record<string, UI> = {
 		preparing: "Preparing your payment…", close: "Close", viewVoucher: "View my voucher", includes: "What's included",
 		errDate: "Choose a date.", errPast: "Choose a future date.", errSeason: "That date is out of season.", errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp.",
 		namePh: "Your name", phonePh: "+1 …",
+		rideQuestion: "Need a ride from La Paz to La Ventana?", rideNote: "Round-trip transport · +$1,000 MXN per booking", rideLine: "Ride La Paz ⇄ La Ventana",
 	},
 	fr: {
 		detailsTitle: "Détails de votre réservation", date: "Date souhaitée", people: "Personnes", name: "Nom complet", email: "E-mail", phone: "Téléphone / WhatsApp",
@@ -66,6 +70,7 @@ const copy: Record<string, UI> = {
 		preparing: "Préparation de votre paiement…", close: "Fermer", viewVoucher: "Voir mon voucher", includes: "Ce qui est inclus",
 		errDate: "Choisissez une date.", errPast: "Choisissez une date future.", errSeason: "Cette date est hors saison.", errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp.",
 		namePh: "Votre nom", phonePh: "+33 …",
+		rideQuestion: "Besoin d'un transfert de La Paz à La Ventana ?", rideNote: "Transport aller-retour · +1 000 MXN par réservation", rideLine: "Transfert La Paz ⇄ La Ventana",
 	},
 	zh: {
 		detailsTitle: "您的预订详情", date: "希望的日期", people: "人数", name: "全名", email: "电子邮箱", phone: "电话 / WhatsApp",
@@ -74,6 +79,7 @@ const copy: Record<string, UI> = {
 		preparing: "正在准备付款…", close: "关闭", viewVoucher: "查看我的凭证", includes: "包含内容",
 		errDate: "请选择日期。", errPast: "请选择未来的日期。", errSeason: "该日期不在季节内。", errName: "请输入您的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。",
 		namePh: "您的姓名", phonePh: "+86 …",
+		rideQuestion: "需要从拉巴斯到拉文塔纳的接送吗？", rideNote: "往返接送 · 每次预订 +$1,000 MXN", rideLine: "接送 拉巴斯 ⇄ 拉文塔纳",
 	},
 }
 
@@ -132,6 +138,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [phone, setPhone] = useState("")
+	const [ride, setRide] = useState(false)
 	const [err, setErr] = useState<string | null>(null)
 	const [busy, setBusy] = useState(false)
 
@@ -140,7 +147,9 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 	const [resultStatus, setResultStatus] = useState<"succeeded" | "processing">("succeeded")
 
 	const quantity = perPerson ? people : 1
-	const totalMxn = unitAmountMxn * quantity
+	const rideEligible = rideAddonAvailable(slug)
+	const rideMxn = ride && rideEligible ? RIDE_ADDON_MXN : 0
+	const totalMxn = unitAmountMxn * quantity + rideMxn
 
 	useEffect(() => {
 		function onKey(e: KeyboardEvent) { if (e.key === "Escape") onClose() }
@@ -167,7 +176,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 				body: JSON.stringify({
 					slug, unitAmountMxn, quantity, people, dateISO,
 					customerName: name.trim(), customerEmail: email.trim(), customerPhone: phone.trim(),
-					cardName, expeditionName, locale,
+					cardName, expeditionName, locale, rideAddon: ride && rideEligible,
 				}),
 			})
 			const data = await res.json()
@@ -259,6 +268,21 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 							<input type="tel" required value={phone} placeholder={t.phonePh} onChange={(e) => setPhone(e.target.value)} />
 						</label>
 
+						{rideEligible && (
+							<label className={`res-ride${ride ? " is-on" : ""}`}>
+								<input type="checkbox" checked={ride} onChange={(e) => setRide(e.target.checked)} />
+								<span className="res-ride-body">
+									<span className="res-ride-q">🚐 {t.rideQuestion}</span>
+									<span className="res-ride-note">{t.rideNote}</span>
+								</span>
+								<span className="res-ride-price">+{formatMxn(RIDE_ADDON_MXN)}</span>
+							</label>
+						)}
+
+						{rideMxn > 0 && (
+							<div className="checkout-breakdown res-ride-line">+ {t.rideLine} · {formatMxn(RIDE_ADDON_MXN)} MXN</div>
+						)}
+
 						<div className="res-total">
 							<span>{t.total}</span>
 							<strong>{formatMxn(totalMxn)} MXN</strong>
@@ -286,7 +310,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 				{step === "result" && reservation && (
 					<>
-						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus, includes: items }} />
+						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus, includes: rideMxn > 0 ? [...(items ?? []), t.rideLine] : items }} />
 						<div className="voucher-actions">
 							<a className="btn btn-solid" href={`/${locale}/reserva/${reservation.paymentIntentId}`}>{t.viewVoucher}</a>
 							<button type="button" className="btn btn-ghost" onClick={onClose}>{t.close}</button>

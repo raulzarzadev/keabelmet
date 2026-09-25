@@ -56,6 +56,7 @@ export async function POST(req: NextRequest) {
 			dateISO: m.dateISO || "",
 			people: Number(m.people) || 1,
 			totalMxn: Number(m.totalMxn) || Math.round((pi.amount || 0) / 100),
+			rideAddon: m.rideAddon === "true",
 			customerName: m.customerName || "",
 			customerEmail: m.customerEmail,
 			locale: m.locale || "es",

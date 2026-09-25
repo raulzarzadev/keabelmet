@@ -826,6 +826,15 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .res-total span { font-size: 14px; color: var(--sand-dim); }
 .res-total strong { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 22px; color: var(--teal); }
 .res-cancel { font-size: 12.5px; color: var(--sand-dim); margin: -4px 0 0; }
+.res-ride { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 12px; border: 1.5px solid rgba(244,239,228,0.16); background: rgba(244,239,228,0.04); cursor: pointer; transition: border-color .18s ease, background .18s ease; }
+.res-ride:hover { border-color: rgba(40,194,160,0.5); }
+.res-ride.is-on { border-color: var(--teal); background: rgba(40,194,160,0.12); }
+.res-ride input { width: 20px; height: 20px; flex: none; accent-color: var(--teal); cursor: pointer; }
+.res-ride-body { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.res-ride-q { font-size: 14px; font-weight: 600; color: var(--sand); line-height: 1.3; }
+.res-ride-note { font-size: 12.5px; color: var(--sand-dim); }
+.res-ride-price { font-weight: 800; color: var(--teal); font-size: 15px; white-space: nowrap; }
+.res-ride-line { margin-top: 0; color: var(--teal); font-weight: 600; }
 .checkout-back { align-self: flex-start; background: none; border: none; color: var(--sand-dim); font-size: 13px; cursor: pointer; padding: 0; margin-bottom: 2px; }
 .checkout-back:hover { color: var(--teal); }
 
