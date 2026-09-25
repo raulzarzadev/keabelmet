@@ -3,6 +3,7 @@ import { getStripe } from "@/lib/stripe"
 import { isValidPrice } from "@/lib/pricing-catalog"
 import { isDateInSeason, getSeason } from "@/lib/expedition-seasons"
 import { folioFromPaymentIntent, MAX_PEOPLE } from "@/lib/reservation"
+import { RIDE_ADDON_MXN, rideAddonAvailable } from "@/lib/ride-addon"
 
 function bad(error: string, status = 400) {
 	return NextResponse.json({ error }, { status })
@@ -32,6 +33,7 @@ export async function POST(req: NextRequest) {
 		cardName,
 		expeditionName,
 		locale,
+		rideAddon,
 	} = (body ?? {}) as Record<string, unknown>
 
 	// --- Validaciones ---
@@ -62,7 +64,10 @@ export async function POST(req: NextRequest) {
 	if (!isEmail(emailRaw)) return bad("Correo inválido")
 	if (phone.length < 7) return bad("Teléfono inválido")
 
-	const totalMxn = unitAmountMxn * qty
+	// Add-on de raite (transporte): monto fijo por reserva, solo en expediciones elegibles.
+	const wantsRide = rideAddon === true && rideAddonAvailable(slug)
+	const rideMxn = wantsRide ? RIDE_ADDON_MXN : 0
+	const totalMxn = unitAmountMxn * qty + rideMxn
 	const expedition = typeof expeditionName === "string" ? expeditionName : slug
 	const card = typeof cardName === "string" ? cardName : ""
 	const loc = typeof locale === "string" ? locale : "es"
@@ -82,6 +87,8 @@ export async function POST(req: NextRequest) {
 				unitAmountMxn: String(unitAmountMxn),
 				quantity: String(qty),
 				people: String(headcount),
+				rideAddon: String(wantsRide),
+				rideAddonMxn: String(rideMxn),
 				totalMxn: String(totalMxn),
 				dateISO,
 				customerName: name.slice(0, 120),

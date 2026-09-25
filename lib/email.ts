@@ -16,6 +16,14 @@ type EmailData = Pick<ReservationDetails, "expeditionName" | "cardName" | "dateI
 	folio: string
 	paymentIntentId: string
 	slug?: string
+	rideAddon?: boolean
+}
+
+const rideLineByLocale: Record<string, string> = {
+	es: "Raite redondo La Paz ⇄ La Ventana",
+	en: "Round-trip ride La Paz ⇄ La Ventana",
+	fr: "Transfert aller-retour La Paz ⇄ La Ventana",
+	zh: "往返接送 拉巴斯 ⇄ 拉文塔纳",
 }
 
 /** Foto principal por expedición (misma que el hero de cada página). */
@@ -92,7 +100,8 @@ function buildHtml(d: EmailData): string {
 	const voucherLink = `${SITE_URL}/${d.locale}/reserva/${d.paymentIntentId}`
 	const row = (label: string, value: string, strong = false) =>
 		`<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">${label}</td><td style="padding:11px 0;border-bottom:1px solid ${line};color:${strong ? teal : sand};font-size:${strong ? "16px" : "14px"};font-weight:${strong ? 700 : 400};text-align:right">${value}</td></tr>`
-	const includes = (d.slug ? getActivityDetails(d.slug, d.locale as Locale, d.cardName).includes : []).slice(0, 8)
+	const baseIncludes = (d.slug ? getActivityDetails(d.slug, d.locale as Locale, d.cardName).includes : []).slice(0, 8)
+	const includes = d.rideAddon ? [...baseIncludes, rideLineByLocale[d.locale] ?? rideLineByLocale.es] : baseIncludes
 	const incItem = (it: string) =>
 		`<tr><td width="22" style="padding:5px 0;color:${teal};font-size:14px;font-weight:700;vertical-align:top">&#10003;</td><td style="padding:5px 0;color:${sand};font-size:13.5px;line-height:1.45">${it}</td></tr>`
 	const iconBtn = (href: string, icon: string, alt: string) =>
