@@ -151,6 +151,15 @@ const ui: Record<Locale, UiDict> = {
     bookNow: "立即预订",
     viewOthers: "查看其他探险",
   },
+  ca: {
+    home: "Inici",
+    expeditions: "Expedicions",
+    bookAdventure: "Reserva la teva aventura",
+    viewItinerary: "Veure l'itinerari",
+    book: "Reservar",
+    bookNow: "Reserva ara",
+    viewOthers: "Veure altres expedicions",
+  },
 }
 
 export default function ExpeditionDetail({ data, locale = defaultLocale, slug }: { data: ExpeditionPageData; locale?: Locale; slug: string }) {

@@ -44,6 +44,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     en: { kicker: "Your next adventure", title: "Ready to experience the Sea of Cortez?", text: "Small groups, marine-biologist guides and real encounters with wildlife. Pick your expedition and save your spot.", cta: "View expeditions", wa: "Message us on WhatsApp" },
     fr: { kicker: "Votre prochaine aventure", title: "Prêt à vivre la mer de Cortés ?", text: "Petits groupes, guides biologistes marins et rencontres réelles avec la faune. Choisissez votre expédition et réservez.", cta: "Voir les expéditions", wa: "Écrivez-nous sur WhatsApp" },
     zh: { kicker: "你的下一场冒险", title: "准备好探索科尔特斯海了吗？", text: "小团队、海洋生物学家向导，以及与海洋生物的真实相遇。选择你的探险并预留名额。", cta: "查看探险项目", wa: "通过 WhatsApp 联系我们" },
+    ca: { kicker: "La teva propera aventura", title: "A punt per viure el Mar de Cortés?", text: "Grups petits, guies biòlegs i trobades reals amb la vida marina. Tria la teva expedició i reserva el teu lloc.", cta: "Veure expedicions", wa: "Escriu-nos per WhatsApp" },
   }
   const hc = homeCta[locale] ?? homeCta.es
 
@@ -87,6 +88,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         { name: "下加州一周", days: "3 天", activities: ["与鲸鲨同游", "圣灵岛", "拉文塔纳探险"] },
       ],
       customBadge: "量身定制", customTitle: "定制您的行程", customText: "告诉我们您来几天、对什么感兴趣。我们将以套餐价为您设计理想行程。", customCta: "规划我的旅程", customWa: "你好！我想和你们规划一次多日行程，可以帮我吗？",
+    },
+    ca: {
+      kicker: "Viu diversos dies", title: "Combina i estalvia", sub: "Véns diversos dies a la Baixa? Ajunta activitats i paga menys. Coordinem les teves dates per WhatsApp.",
+      perPerson: "per persona", save: "Estalvies", cta: "Reservar per WhatsApp", best: "El més triat",
+      items: [
+        { name: "Duo La Paz", days: "2 dies", activities: ["Neda amb taurons balena", "Snorkel a l'Illa Espíritu Santo"] },
+        { name: "Setmana Baixa", days: "3 dies", activities: ["Neda amb taurons balena", "Illa Espíritu Santo", "Safari La Ventana"] },
+      ],
+      customBadge: "A mida", customTitle: "Munta la teva setmana", customText: "Explica'ns quants dies véns i què t'emociona. Dissenyem el teu itinerari ideal a preu de paquet.", customCta: "Planejar el meu viatge", customWa: "Hola! Vull organitzar un viatge de diversos dies amb vosaltres. Em podeu ajudar?",
     },
   }
   const pk = packagesT[locale] ?? packagesT.es

@@ -50,6 +50,16 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
     ],
     book: "预约",
   },
+  ca: {
+    items: [
+      { label: "Expedicions", path: "/#expediciones" },
+      { label: "Quin tour triar?", path: "/#quiz", teal: true },
+      { label: "Calendari", path: "/#calendario", teal: true },
+      { label: "Galeria", path: "/#instagram" },
+      { label: "Contacte", path: "/#contacto" },
+    ],
+    book: "Reservar",
+  },
 }
 
 function localizeHref(path: string, locale: Locale): string {

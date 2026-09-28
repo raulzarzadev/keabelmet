@@ -841,6 +841,7 @@ export function getExpeditionPage(slug: string, locale: Locale): ExpeditionPageD
 		en: expeditionPagesEn,
 		fr: expeditionPagesFr,
 		zh: expeditionPagesZh,
+		ca: expeditionPages,
 	}
 	return byLocale[locale]?.[slug] ?? expeditionPagesEn[slug] ?? expeditionPages[slug]
 }

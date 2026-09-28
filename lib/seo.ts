@@ -80,6 +80,7 @@ const localeToOg: Record<Locale, string> = {
   en: "en_US",
   fr: "fr_FR",
   zh: "zh_CN",
+  ca: "ca_ES",
 }
 
 export interface PageMetaInput {
@@ -91,7 +92,7 @@ export interface PageMetaInput {
   noIndex?: boolean
 }
 
-type LocalizedString = Record<Locale, string>
+type LocalizedString = Partial<Record<Locale, string>> & { es: string }
 
 export interface PageSeo {
   title: LocalizedString
@@ -316,8 +317,8 @@ export type PageSeoKey = keyof typeof pageSeoMap
 export function getPageSeo(key: PageSeoKey, locale: Locale): { title: string; description: string } {
   const entry = pageSeoMap[key]
   return {
-    title: entry.title[locale] || entry.title[defaultLocale],
-    description: entry.description[locale] || entry.description[defaultLocale],
+    title: (entry.title as Record<string, string>)[locale] || entry.title.es,
+    description: (entry.description as Record<string, string>)[locale] || entry.description.es,
   }
 }
 
