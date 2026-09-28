@@ -481,7 +481,7 @@ const zh: QuizDict = {
 }
 
 /** ES, EN, FR y ZH nativos. */
-const dicts: Record<Locale, QuizDict> = { es, en, fr, zh }
+const dicts: Partial<Record<Locale, QuizDict>> & { es: QuizDict } = { es, en, fr, zh }
 
 function waLink(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`

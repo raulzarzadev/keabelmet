@@ -8,6 +8,7 @@ const L: Record<string, { from: string; cta: string }> = {
 	en: { from: "From", cta: "Book now" },
 	fr: { from: "À partir de", cta: "Réserver" },
 	zh: { from: "起价", cta: "立即预订" },
+	ca: { from: "Des de", cta: "Reservar ara" },
 }
 
 /**

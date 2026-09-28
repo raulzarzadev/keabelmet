@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre nosaltres",
+    "experiences": "Experiències",
+    "rates": "Tarifes",
+    "gallery": "Galeria",
+    "blog": "Blog",
+    "contact": "Contacte",
+    "book": "Reservar"
+  },
+  "hero": {
+    "badge": "Sent aigua i terra",
+    "title": "On el desert es troba amb el mar salvatge",
+    "subtitle": "Expedicions marines guiades per biòlegs a Baixa Califòrnia Sud. Neda amb lleons marins, troba balenes cara a cara i explora el Mar de Cortés com pocs l'han vist.",
+    "cta1": "Explora les expedicions",
+    "cta2": "La nostra història",
+    "cta3": "Reserva la teva experiència",
+    "scroll": "Llisca per explorar ↓",
+    "stat1_value": "15+",
+    "stat1_label": "Experiències úniques",
+    "stat2_value": "10K+",
+    "stat2_label": "Aventurers satisfets",
+    "stat3_value": "9.8",
+    "stat3_label": "Valoració mitjana"
+  },
+  "quote": {
+    "text": "El Mar de Cortés és un dels mars amb més biodiversitat del planeta. Jacques Cousteau el va anomenar «l'aquari del món».",
+    "attribution": "Cada expedició que vius amb nosaltres és una trobada real amb aquesta vida salvatge — i una manera d'ajudar a protegir-la."
+  },
+  "adventures": {
+    "title": "Aventures",
+    "titleHighlight": "destacades",
+    "subtitle": "Experiències seleccionades que mostren el millor de les meravelles marines i la bellesa del desert de La Paz.",
+    "from": "Des de",
+    "learnMore": "Saber-ne més"
+  },
+  "comparison": {
+    "badge": "Comparativa directa",
+    "title": "El que sol arruïnar un safari...",
+    "titleHighlight": "i com ho fem diferent",
+    "subtitle": "Comparativa directa: el que passa amb molts tours vs. com treballem a Keabelmet",
+    "typicalLabel": "El típic",
+    "keabelmetLabel": "Keabelmet",
+    "problems": [
+      {
+        "title": "Massa gent a la barca",
+        "text": "T'ha passat que reserves un tour i hi ha 20 persones? L'experiència es torna caòtica i poc personal."
+      },
+      {
+        "title": "Poca ètica i zero ciència",
+        "text": "Guies que no respecten els animals ni expliquen res... i això ho canvia tot."
+      },
+      {
+        "title": "Fotos promeses... que mai arriben",
+        "text": "Te les prometen, però mai arriben o no compleixen l'esperat. No és seriós."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Grups reduïts",
+        "text": "Amb nosaltres, grups reduïts per barca. Més espai, calma i seguretat."
+      },
+      {
+        "title": "Guia Keabelmet",
+        "text": "Et compartim històries, comportaments dels animals i bones pràctiques per cuidar la fauna."
+      },
+      {
+        "title": "Fotos i vídeos inclosos",
+        "text": "El que visquis, t'ho endús. Incloem fotos i vídeos amb opcions premium d'edició i impressió."
+      }
+    ]
+  },
+  "expeditions": {
+    "title": "Les nostres expedicions",
+    "subtitle": "Dissenyades per a trobades responsables amb fauna marina i paisatges únics.",
+    "perPerson": "Per persona",
+    "book": "Reservar",
+    "fullDay": "Dia complet",
+    "halfDay": "Mig dia",
+    "days6": "6 dies",
+    "people": "Persones",
+    "viewAll": "Veure-les totes"
+  },
+  "whyUs": {
+    "title": "Per què",
+    "titleHighlight": "Keabelmet",
+    "subtitle": "Ens apassiona compartir la màgia de La Paz amb aventures autèntiques, sostenibles i inoblidables",
+    "features": [
+      {
+        "title": "Experiència local",
+        "text": "Amb base a La Paz, coneixem cada racó i els millors moments per visitar cada lloc."
+      },
+      {
+        "title": "La seguretat primer",
+        "text": "Guies certificats, equip de qualitat i protocols de seguretat per a la teva total tranquil·litat."
+      },
+      {
+        "title": "Grups petits",
+        "text": "Experiències en grups reduïts per a una atenció personalitzada i connexions autèntiques."
+      },
+      {
+        "title": "Liderat per biòlegs marins",
+        "text": "Especialistes amb experiència real en expedicions i campaments remots."
+      },
+      {
+        "title": "Educació i conservació",
+        "text": "Cada expedició és una oportunitat per aprendre i protegir l'ecosistema."
+      },
+      {
+        "title": "Foto i vídeo inclosos",
+        "text": "Captures professionals de la teva experiència, a punt per reviure el moment."
+      }
+    ]
+  },
+  "story": {
+    "badge": "La nostra història",
+    "title": "Fundada per un biòleg marí,",
+    "titleHighlight": "no per una agència de tours",
+    "p1": "Keabelmet va néixer el 2024 de la mà de Mauricio López Sosa, biòleg marí graduat per la UABCS, guia, videògraf i capità de cada expedició. El nom ve del guaycura: «Kea» (sent) i «Cabelmet» (aigua i terra).",
+    "p2": "Cada expedició està dissenyada per ser una trobada real amb la vida salvatge del Mar de Cortés — sense guió, sense massificació, amb respecte pels animals i el seu hàbitat.",
+    "founderName": "Mauricio López Sosa"
+  },
+  "consequences": {
+    "title": "Si tries malament, et podries perdre...",
+    "items": [
+      "Trobades afectades per mala logística o grups massius.",
+      "Impacte negatiu en la fauna per males pràctiques.",
+      "Seguretat deficient a l'aigua i poca orientació durant l'experiència.",
+      "Sense fotos ni vídeo, i records que no tornen."
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "items": [
+      {
+        "q": "Necessito experiència prèvia per participar?",
+        "a": "No sempre. El nivell requerit depèn de l'experiència que triïs. A cada tour indiquem clarament els requisits i t'acompanyem perquè et sentis segur i gaudeixis al màxim de l'experiència."
+      },
+      {
+        "q": "Què inclou cada experiència?",
+        "a": "Cada experiència pot variar segons l'activitat, però generalment inclou: guia especialitzat, embarcació o transport, equip tècnic necessari, mesures i equip de seguretat, aigua i snacks, material fotogràfic i de vídeo, i material educatiu quan escau."
+      },
+      {
+        "q": "Les dates estan garantides?",
+        "a": "Són experiències de temporada i depenen de les condicions naturals, per la qual cosa no podem garantir un albirament específic. El que sí que garantim és una bona logística i el màxim esforç de l'equip. Si el clima no és favorable, busquem reprogramar l'experiència o oferir alternatives perquè visquis la millor experiència."
+      }
+    ]
+  },
+  "cta": {
+    "title": "La teva propera trobada salvatge comença aquí",
+    "subtitle": "Escriu-nos per WhatsApp i preparem la teva expedició — grups petits, guia biòleg marí, foto i vídeo inclosos.",
+    "btn1": "Reservar per WhatsApp",
+    "btn2": "Veure expedicions"
+  },
+  "googleReviews": {
+    "title": "El que diuen a Google",
+    "subtitle": "Ressenyes reals dels nostres aventurers",
+    "overallRating": "4.9",
+    "totalReviews": "50+",
+    "reviews": [
+      {
+        "name": "Rosa Burciaga",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Hi he anat més de 10 vegades i mai em decebien, des d'acampades amb balenes grises de fons fins a nedar amb orques. Keabelmet és la millor empresa de tours al mar de Cortés; qualsevol expedició es converteix en una experiència inoblidable."
+      },
+      {
+        "name": "Bernardo Barbara",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Excel·lent experiència amb el Mau i la Gama!! Vam anar a la recerca d'orques i, tot i que no les vam trobar, vam gaudir moltíssim dels dofins i vam tenir la sort de trobar-nos 4 balenes blaves precioses! Tornarem a sortir amb ells moltes vegades més."
+      },
+      {
+        "name": "Ester Millan",
+        "rating": 5,
+        "date": "Recent",
+        "text": "Vam conèixer per casualitat el Mau i vam canviar les excursions que teníem contractades per anar amb ell. L'energia i simpatia que desprèn, juntament amb els coneixements que té i sumant l'equip que l'acompanya, és tot per saber que serà una experiència de 10!"
+      }
+    ],
+    "ctaAll": "Veure-les totes a Google",
+    "ctaLeave": "Deixa la teva ressenya",
+    "googleMapsUrl": "https://maps.app.goo.gl/Xc2CumrW2FhMR43P7",
+    "googleReviewUrl": "https://g.page/r/CcW6EwOD2EliEAE/review"
+  },
+  "instagram": {
+    "title": "Galeria d'aventures",
+    "subtitle": "Moments reals capturats durant les nostres expedicions",
+    "ctaFull": "Veure la galeria completa",
+    "follow": "Segueix-nos a Instagram"
+  },
+  "language": {
+    "label": "Idioma",
+    "es": "Espanyol",
+    "en": "Anglès",
+    "fr": "Francès",
+    "zh": "Xinès",
+    "ca": "Català"
+  }
+}

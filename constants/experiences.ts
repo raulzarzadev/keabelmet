@@ -36,7 +36,7 @@ export interface Experience {
 	capacity: { min: number; max: number };
 	/** Order in "Aventuras Destacadas" home section. Undefined = not shown there. */
 	featuredOrder?: number;
-	i18n: Record<Locale, ExperienceI18n>;
+	i18n: Partial<Record<Locale, ExperienceI18n>> & { es: ExperienceI18n };
 }
 
 export const experiences: Experience[] = [
@@ -520,7 +520,7 @@ export function localizeExperience(
 	locale: Locale,
 ): ExperienceI18n {
 	if (!TRANSLATIONS_ENABLED) return exp.i18n.es;
-	return exp.i18n[locale] ?? exp.i18n[defaultLocale];
+	return exp.i18n[locale] ?? exp.i18n.es;
 }
 
 /** Experiences for "Aventuras Destacadas" home section, sorted by featuredOrder ASC. */

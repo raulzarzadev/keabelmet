@@ -81,6 +81,15 @@ const copy: Record<string, UI> = {
 		namePh: "您的姓名", phonePh: "+86 …",
 		rideQuestion: "需要从拉巴斯到拉文塔纳的接送吗？", rideNote: "往返接送 · 每次预订 +$1,000 MXN", rideLine: "接送 拉巴斯 ⇄ 拉文塔纳",
 	},
+	ca: {
+		detailsTitle: "Detalls de la teva reserva", date: "Data desitjada", people: "Persones", name: "Nom complet", email: "Correu electrònic", phone: "Telèfon / WhatsApp",
+		season: "Temporada", continue: "Continuar al pagament", perPerson: "per persona", perBoat: "per embarcació", total: "Total",
+		cancelNote: "Cancel·lació amb reemborsament fins a 24 h abans de la sortida.", back: "Editar dades", editDetails: "← Editar dades", secure: "Pagament segur processat per Stripe", pay: "Pagar", processing: "Processant…",
+		preparing: "Preparant el teu pagament…", close: "Tancar", viewVoucher: "Veure el meu voucher", includes: "Què inclou",
+		errDate: "Tria una data.", errPast: "Tria una data futura.", errSeason: "Aquesta data és fora de temporada.", errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp.",
+		namePh: "El teu nom", phonePh: "+34 …",
+		rideQuestion: "Necessites transport de La Paz a La Ventana?", rideNote: "Transport d'anada i tornada · +$1.000 MXN per reserva", rideLine: "Transport La Paz ⇄ La Ventana",
+	},
 }
 
 interface PayButtonProps {

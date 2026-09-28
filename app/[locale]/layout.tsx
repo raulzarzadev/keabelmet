@@ -23,6 +23,7 @@ const localeToLang: Record<Locale, string> = {
   en: "en",
   fr: "fr",
   zh: "zh-CN",
+  ca: "ca",
 }
 
 const homeMeta: Record<Locale, { title: string; description: string; ogTitle: string; ogDescription: string }> = {
@@ -49,6 +50,12 @@ const homeMeta: Record<Locale, { title: string; description: string; ogTitle: st
     description: "在下加利福尼亚州体验海洋冒险。海洋野生动物之旅、卡波普尔莫潜水、与海狮浮潜、观鲸等。",
     ogTitle: "Keabelmet 探险",
     ogDescription: "拉巴斯海洋探险。与海狮共游，观赏鲸鱼，探索科尔特斯海。",
+  },
+  ca: {
+    title: "Keabelmet Expeditions | Ecoturisme i Safari Marí a La Paz, BCS",
+    description: "Viu aventures marines a Baixa Califòrnia Sud. Safaris marins, submarinisme a Cabo Pulmo, snorkel amb lleons marins, albirament de balenes i molt més.",
+    ogTitle: "Keabelmet Expeditions",
+    ogDescription: "Expedicions marines a La Paz, Baixa Califòrnia Sud. Neda amb lleons marins, albira balenes i explora el Mar de Cortés.",
   },
 }
 
@@ -131,6 +138,7 @@ const localeToInLanguage: Record<Locale, string> = {
   en: "en-US",
   fr: "fr-FR",
   zh: "zh-CN",
+  ca: "ca-ES",
 }
 
 export default async function LocaleLayout({

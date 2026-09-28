@@ -102,6 +102,25 @@ const dict: Record<Locale, FooterDict> = {
     safariBahia: "马格达莱纳湾探险",
     safariVentana: "拉文塔纳探险",
   },
+  ca: {
+    tagline: "Safaris marins i submarinisme al Golf de Califòrnia. Trobades autèntiques amb la vida salvatge, guiades per biòlegs.",
+    exploreTitle: "Expedicions",
+    companyTitle: "Keabelmet",
+    contactTitle: "Contacte",
+    rights: "Tots els drets reservats.",
+    motto: "Sent aigua i terra.",
+    about: "La nostra història",
+    quiz: "Quin tour triar?",
+    gallery: "Galeria",
+    espirituSanto: "Tour Snorkel Illa Espíritu Santo",
+    ballenaGris: "Balena Grisa Puerto Chale",
+    tiburonBallena: "Tauró Balena",
+    caboPulmo: "Submarinisme Cabo Pulmo",
+    laPaz: "Submarinisme Espíritu Santo",
+    scubaDiscovery: "Scuba Discovery des de la platja",
+    safariBahia: "Safari Bahía Magdalena",
+    safariVentana: "Ocean Safari La Ventana",
+  },
 }
 
 function localizeHref(path: string, locale: Locale): string {

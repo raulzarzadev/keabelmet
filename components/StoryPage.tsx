@@ -154,6 +154,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
     en: { title: "Ready to live it?", text: "Limited spots and small groups. Save your place today.", cta: "Book now", wa: "Ask on WhatsApp" },
     fr: { title: "Prêt à le vivre ?", text: "Places limitées et petits groupes. Réservez dès aujourd'hui.", cta: "Réserver", wa: "Demander sur WhatsApp" },
     zh: { title: "准备好体验了吗？", text: "名额有限，小团队出行。今天就预留您的位置。", cta: "立即预订", wa: "通过 WhatsApp 询问" },
+    ca: { title: "A punt per viure-ho?", text: "Places limitades i grups petits. Reserva el teu lloc avui.", cta: "Reservar ara", wa: "Preguntar per WhatsApp" },
   }
   const mc = midCta[locale] ?? midCta.es
 

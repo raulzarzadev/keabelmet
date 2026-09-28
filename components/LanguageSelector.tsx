@@ -9,6 +9,7 @@ const localeLabels: Record<Locale, { label: string; name: string; flag: string }
   en: { label: "EN", name: "English", flag: "\u{1F1FA}\u{1F1F8}" },
   fr: { label: "FR", name: "Français", flag: "\u{1F1EB}\u{1F1F7}" },
   zh: { label: "ZH", name: "中文", flag: "\u{1F1E8}\u{1F1F3}" },
+  ca: { label: "CA", name: "Català", flag: "\u{1F3F4}\u{E0065}\u{E0073}\u{E0063}\u{E0074}\u{E007F}" },
 }
 
 export default function LanguageSelector({ locale }: { locale: Locale }) {

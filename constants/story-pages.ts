@@ -1937,6 +1937,7 @@ export function getStoryPage(slug: string, locale: Locale): StoryPageData | unde
 		en: storyPagesEn,
 		fr: storyPagesFr,
 		zh: storyPagesZh,
+		ca: storyPages,
 	}
 	return byLocale[locale]?.[slug]
 }

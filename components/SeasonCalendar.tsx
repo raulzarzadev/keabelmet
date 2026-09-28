@@ -110,7 +110,7 @@ const zh: CalendarDict = {
 }
 
 /** ES, EN, FR y ZH nativos. */
-const dicts: Record<Locale, CalendarDict> = { es, en, fr, zh }
+const dicts: Partial<Record<Locale, CalendarDict>> & { es: CalendarDict } = { es, en, fr, zh }
 
 const ALL_YEAR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 

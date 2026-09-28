@@ -18,6 +18,7 @@ const homeLabel: Record<Locale, string> = {
   en: "Home",
   fr: "Accueil",
   zh: "首页",
+  ca: "Inici",
 }
 
 function localizeHref(path: string, locale: Locale): string {
