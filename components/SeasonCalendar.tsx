@@ -109,8 +109,31 @@ const zh: CalendarDict = {
   },
 }
 
+const ca: CalendarDict = {
+  kicker: "Calendari de temporades",
+  title: "La millor època per a cada expedició",
+  sub: "El mar té els seus propis temps. Tria el teu mes de viatge i descobreix quines trobades t'esperen.",
+  months: ["Gen", "Feb", "Març", "Abr", "Maig", "Juny", "Jul", "Ag", "Set", "Oct", "Nov", "Des"],
+  season: "Temporada",
+  peak: "Temporada alta",
+  off: "Fora de temporada",
+  hint: "Llisca per veure els mesos →",
+  peakSuffix: " (temporada alta)",
+  seasonSuffix: " (temporada)",
+  rows: {
+    "la-ventana": { name: "Ocean Safari La Ventana", note: "Móbules" },
+    "bahia-magdalena": { name: "Safari Bahía Magdalena", note: "Carrera de sardines" },
+    "ballena-gris": { name: "Balena Grisa · Puerto Chale", note: "Mares i cries" },
+    "tiburon-ballena": { name: "Tauró Balena", note: "Snorkel" },
+    "espiritu-santo": { name: "Tour Snorkel Illa Espíritu Santo", note: "Lleons marins" },
+    "cabo-pulmo": { name: "Submarinisme Cabo Pulmo", note: "Escull viu" },
+    "espiritu-santo-buceo": { name: "Submarinisme Espíritu Santo", note: "Lleons marins · Vaixells enfonsats" },
+    "scuba-discovery": { name: "Scuba Discovery des de la platja", note: "Principiants" },
+  },
+}
+
 /** ES, EN, FR y ZH nativos. */
-const dicts: Partial<Record<Locale, CalendarDict>> & { es: CalendarDict } = { es, en, fr, zh }
+const dicts: Partial<Record<Locale, CalendarDict>> & { es: CalendarDict } = { es, en, fr, zh, ca }
 
 const ALL_YEAR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 

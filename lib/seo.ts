@@ -106,12 +106,14 @@ export const pageSeoMap = {
       en: "About Us",
       fr: "A propos",
       zh: "关于我们",
+      ca: "Sobre nosaltres",
     },
     description: {
       es: "Conoce al equipo de Keabelmet Expeditions. Mas de 15 anos de experiencia en expediciones marinas en Baja California Sur.",
       en: "Meet the Keabelmet Expeditions team. Over 15 years of experience in marine expeditions in Baja California Sur.",
       fr: "Decouvrez l'equipe de Keabelmet Expeditions. Plus de 15 ans d'experience dans les expeditions marines en Basse-Californie du Sud.",
       zh: "认识 Keabelmet 探险团队。15 年以上下加利福尼亚州海洋探险经验。",
+      ca: "Coneix l'equip de Keabelmet Expeditions. Més de 15 anys d'experiència en expedicions marines a Baixa Califòrnia Sud.",
     },
   },
   contact: {
@@ -120,12 +122,14 @@ export const pageSeoMap = {
       en: "Contact",
       fr: "Contact",
       zh: "联系我们",
+      ca: "Contacte",
     },
     description: {
       es: "Contacta a Keabelmet Expeditions. Escribenos a keabelmet@gmail.com o por WhatsApp +52 612 234 7897. Reserva tu aventura marina.",
       en: "Contact Keabelmet Expeditions. Email keabelmet@gmail.com or WhatsApp +52 612 234 7897. Book your marine adventure.",
       fr: "Contactez Keabelmet Expeditions. Email keabelmet@gmail.com ou WhatsApp +52 612 234 7897. Reservez votre aventure marine.",
       zh: "联系 Keabelmet 探险。邮件 keabelmet@gmail.com 或 WhatsApp +52 612 234 7897。预订海洋冒险。",
+      ca: "Contacta amb Keabelmet Expeditions. Escriu-nos a keabelmet@gmail.com o per WhatsApp +52 612 234 7897. Reserva la teva aventura marina.",
     },
   },
   blog: {
@@ -134,12 +138,14 @@ export const pageSeoMap = {
       en: "Adventure Blog",
       fr: "Blog d'aventures",
       zh: "探险博客",
+      ca: "Blog d'aventures",
     },
     description: {
       es: "Historias, consejos y guias sobre vida marina en Baja California Sur. Temporadas de ballenas, tips de surf, buceo y mas.",
       en: "Stories, tips and guides about marine life in Baja California Sur. Whale seasons, surf tips, diving and more.",
       fr: "Histoires, conseils et guides sur la vie marine en Basse-Californie du Sud. Saisons des baleines, conseils surf, plongee et plus.",
       zh: "下加利福尼亚州海洋生物的故事、技巧和指南。鲸鱼季节、冲浪技巧、潜水等。",
+      ca: "Històries, consells i guies sobre vida marina a Baixa Califòrnia Sud. Temporades de balenes, consells de surf, submarinisme i molt més.",
     },
   },
   experiences: {
@@ -148,12 +154,14 @@ export const pageSeoMap = {
       en: "Experiences & Tours",
       fr: "Experiences et tours",
       zh: "体验与行程",
+      ca: "Experiències i tours",
     },
     description: {
       es: "Descubre nuestras experiencias marinas en Baja California Sur: safaris, avistamiento de ballenas, buceo y mas.",
       en: "Discover our marine experiences in Baja California Sur: safaris, whale watching, diving and more.",
       fr: "Decouvrez nos experiences marines en Basse-Californie du Sud : safaris, observation des baleines, plongee et plus.",
       zh: "探索我们在下加利福尼亚州的海洋体验：野生动物之旅、观鲸、潜水等。",
+      ca: "Descobreix les nostres experiències marines a Baixa Califòrnia Sud: safaris, albirament de balenes, submarinisme i molt més.",
     },
   },
   gallery: {
@@ -162,12 +170,14 @@ export const pageSeoMap = {
       en: "Adventure Gallery",
       fr: "Galerie d'aventures",
       zh: "探险画廊",
+      ca: "Galeria d'aventures",
     },
     description: {
       es: "Explora nuestra galeria de fotos de expediciones marinas en Baja California Sur. Ballenas, lobos marinos, surf y paisajes del Mar de Cortes.",
       en: "Explore our gallery of marine expedition photos in Baja California Sur. Whales, sea lions, surf and Sea of Cortez landscapes.",
       fr: "Explorez notre galerie de photos d'expeditions marines en Basse-Californie du Sud. Baleines, otaries, surf et paysages de la mer de Cortez.",
       zh: "探索我们在下加利福尼亚州海洋探险照片画廊。鲸鱼、海狮、冲浪和科尔特斯海风光。",
+      ca: "Explora la nostra galeria de fotos d'expedicions marines a Baixa Califòrnia Sud. Balenes, lleons marins, surf i paisatges del Mar de Cortés.",
     },
   },
   rates: {
@@ -176,12 +186,14 @@ export const pageSeoMap = {
       en: "Rates & Prices",
       fr: "Tarifs et prix",
       zh: "价格与套餐",
+      ca: "Tarifes i preus",
     },
     description: {
       es: "Consulta las tarifas de nuestras expediciones marinas en Baja California Sur. Paquetes con todo incluido.",
       en: "Check rates for our marine expeditions in Baja California Sur. All-inclusive packages.",
       fr: "Consultez les tarifs de nos expeditions marines en Basse-Californie du Sud. Forfaits tout compris.",
       zh: "查看我们在下加利福尼亚州的海洋探险价格。全包套餐。",
+      ca: "Consulta les tarifes de les nostres expedicions marines a Baixa Califòrnia Sud. Paquets amb tot inclòs.",
     },
   },
   quiz: {
@@ -190,12 +202,14 @@ export const pageSeoMap = {
       en: "Quiz: Find Your Ideal Tour",
       fr: "Quiz : Trouvez votre tour ideal",
       zh: "测验：找到适合您的行程",
+      ca: "Test: Troba el teu tour ideal",
     },
     description: {
       es: "Responde unas preguntas y recibe la recomendacion personalizada de tu expedicion marina ideal en Baja California Sur.",
       en: "Answer a few questions and get a personalized recommendation for your ideal marine expedition in Baja California Sur.",
       fr: "Repondez a quelques questions et obtenez une recommandation personnalisee pour votre expedition marine ideale en Basse-Californie du Sud.",
       zh: "回答几个问题，获得下加利福尼亚州理想海洋探险的个性化推荐。",
+      ca: "Respon unes preguntes i rep la recomanació personalitzada de la teva expedició marina ideal a Baixa Califòrnia Sud.",
     },
   },
   tourEspirituSanto: {
@@ -204,12 +218,14 @@ export const pageSeoMap = {
       en: "Snorkel Tour Espiritu Santo Island",
       fr: "Tour Ile Espiritu Santo",
       zh: "圣灵岛之旅",
+      ca: "Tour Snorkel Illa Espíritu Santo",
     },
     description: {
       es: "Nada con lobos marinos en la Isla Espiritu Santo, Patrimonio UNESCO. Snorkel, playas virgenes y picnic gourmet en el Mar de Cortes desde La Paz, BCS.",
       en: "Swim with sea lions at Espiritu Santo Island, UNESCO Heritage. Snorkeling, pristine beaches and gourmet picnic in the Sea of Cortez from La Paz, BCS.",
       fr: "Nagez avec les otaries a l'ile Espiritu Santo, patrimoine UNESCO. Snorkeling, plages vierges et pique-nique gourmand dans la mer de Cortez depuis La Paz, BCS.",
       zh: "在联合国教科文组织遗产圣灵岛与海狮共游。浮潜、原始海滩和科尔特斯海美食野餐，从拉巴斯出发。",
+      ca: "Neda amb lleons marins a l'Illa Espíritu Santo, Patrimoni UNESCO. Snorkel, platges verges i pícnic gurmet al Mar de Cortés des de La Paz, BCS.",
     },
   },
   tourBallenaGris: {
@@ -218,12 +234,14 @@ export const pageSeoMap = {
       en: "Gray Whale Tour in Magdalena Bay",
       fr: "Tour Baleine Grise a Bahia Magdalena",
       zh: "马格达莱纳湾灰鲸之旅",
+      ca: "Tour Balena Grisa a Bahía Magdalena",
     },
     description: {
       es: "Vive la experiencia de avistar ballenas grises en Bahia Magdalena, BCS. Tour guiado con encuentros cercanos en su santuario natural de reproduccion.",
       en: "Experience gray whale watching in Magdalena Bay, BCS. Guided tour with close encounters in their natural breeding sanctuary.",
       fr: "Vivez l'observation des baleines grises a Bahia Magdalena, BCS. Tour guide avec des rencontres rapprochees dans leur sanctuaire naturel de reproduction.",
       zh: "在 BCS 马格达莱纳湾观赏灰鲸。在其自然繁殖保护区进行近距离接触的导游之旅。",
+      ca: "Viu l'experiència d'albirar balenes grises a Bahía Magdalena, BCS. Tour guiat amb trobades properes al seu santuari natural de reproducció.",
     },
   },
   tiburonBallena: {
@@ -232,12 +250,14 @@ export const pageSeoMap = {
       en: "Whale Shark Swim in La Paz",
       fr: "Nage avec Requin-Baleine a La Paz",
       zh: "拉巴斯鲸鲨同游",
+      ca: "Nedar amb Tauró Balena a La Paz",
     },
     description: {
       es: "Nada con el pez mas grande del mundo en La Paz, Baja California Sur. Experiencia responsable guiada por expertos en aguas protegidas del Golfo de California.",
       en: "Swim with the world's largest fish in La Paz, Baja California Sur. Responsible expert-guided experience in protected Gulf of California waters.",
       fr: "Nagez avec le plus grand poisson du monde a La Paz, Basse-Californie du Sud. Experience responsable guidee par des experts dans les eaux protegees du golfe de Californie.",
       zh: "在下加利福尼亚州拉巴斯与世界最大的鱼共游。在加利福尼亚湾保护水域内由专家指导的负责任体验。",
+      ca: "Neda amb el peix més gran del món a La Paz, Baixa Califòrnia Sud. Experiència responsable guiada per experts en aigües protegides del Golf de Califòrnia.",
     },
   },
   buceoCaboPulmo: {
@@ -246,12 +266,14 @@ export const pageSeoMap = {
       en: "Cabo Pulmo Diving",
       fr: "Plongee a Cabo Pulmo",
       zh: "卡波普尔莫潜水",
+      ca: "Submarinisme a Cabo Pulmo",
     },
     description: {
       es: "Bucea en el Parque Nacional Cabo Pulmo, hogar del unico arrecife de coral del Mar de Cortes. Tiburones, tortugas, cardumenes y lobos marinos te esperan.",
       en: "Dive in Cabo Pulmo National Park, home to the only coral reef in the Sea of Cortez. Sharks, turtles, schools of fish and sea lions await.",
       fr: "Plongez dans le parc national de Cabo Pulmo, abritant l'unique recif corallien de la mer de Cortez. Requins, tortues, bancs de poissons et otaries vous attendent.",
       zh: "在卡波普尔莫国家公园潜水，科尔特斯海唯一的珊瑚礁所在地。鲨鱼、海龟、鱼群和海狮等待着您。",
+      ca: "Busseja al Parc Nacional Cabo Pulmo, llar de l'únic escull de coral del Mar de Cortés. Taurons, tortugues, bancs de peixos i lleons marins t'esperen.",
     },
   },
   buceoLaPaz: {
@@ -260,12 +282,14 @@ export const pageSeoMap = {
       en: "Espiritu Santo Island Scuba Diving",
       fr: "Plongee a l'ile Espiritu Santo",
       zh: "圣灵岛水肺潜水",
+      ca: "Submarinisme Illa Espíritu Santo",
     },
     description: {
       es: "Bucea con lobos marinos en Los Islotes, Archipielago Espiritu Santo. Explora cuevas submarinas y formaciones rocosas en el Mar de Cortes con guias certificados y equipo completo.",
       en: "Dive with sea lions at Los Islotes, Espiritu Santo Archipelago. Explore underwater caves and rock formations in the Sea of Cortez with certified guides and full equipment.",
       fr: "Plongez avec les otaries a Los Islotes, archipel Espiritu Santo. Explorez les grottes sous-marines et formations rocheuses dans la mer de Cortez avec des guides certifies et un equipement complet.",
       zh: "在圣灵岛群岛洛斯伊斯洛特斯与海狮潜水。与认证导游一起探索科尔特斯海海底洞穴和岩石。",
+      ca: "Busseja amb lleons marins a Los Islotes, arxipèlag Espíritu Santo. Explora coves submarines i formacions rocoses al Mar de Cortés amb guies certificats i equip complet.",
     },
   },
   scubaDiscovery: {
@@ -274,12 +298,14 @@ export const pageSeoMap = {
       en: "Scuba Discovery from the Beach",
       fr: "Scuba Discovery depuis la plage",
       zh: "海滩体验潜水",
+      ca: "Scuba Discovery des de la platja",
     },
     description: {
       es: "Tu primera respiracion bajo el agua en La Paz, BCS. Sin experiencia previa, maximo 6 m de profundidad, con instructor certificado y equipo incluido.",
       en: "Your first breath underwater in La Paz, BCS. No prior experience, max depth 6 m, with a certified instructor and gear included.",
       fr: "Votre premiere respiration sous l'eau a La Paz, BCS. Sans experience prealable, profondeur max 6 m, avec instructeur certifie et equipement inclus.",
       zh: "在 BCS 拉巴斯的水下初体验。无需经验，最大深度6米，认证教练陪同，含装备。",
+      ca: "La teva primera respiració sota l'aigua a La Paz, BCS. Sense experiència prèvia, màxim 6 m de profunditat, amb instructor certificat i equip inclòs.",
     },
   },
   safariBahiaMagdalena: {
@@ -288,12 +314,14 @@ export const pageSeoMap = {
       en: "Magdalena Bay Safari",
       fr: "Safari Bahia Magdalena",
       zh: "马格达莱纳湾野生动物之旅",
+      ca: "Safari Bahía Magdalena",
     },
     description: {
       es: "Safari marino en Bahia Magdalena, BCS. Nada con lobos marinos, avista marlines y disfruta la corrida de sardinas. Una expedicion unica de noviembre a diciembre.",
       en: "Marine safari in Magdalena Bay, BCS. Swim with sea lions, watch marlins and enjoy the sardine run. A unique November-December expedition.",
       fr: "Safari marin a Bahia Magdalena, BCS. Nagez avec les otaries, observez les marlins et profitez de la course aux sardines. Une expedition unique de novembre a decembre.",
       zh: "BCS 马格达莱纳湾海洋探险。与海狮共游，观赏马林鱼，欣赏沙丁鱼洄游。11 月至 12 月独特探险。",
+      ca: "Safari marí a Bahía Magdalena, BCS. Neda amb lleons marins, albira marlins i gaudeix de la carrera de sardines. Una expedició única de novembre a desembre.",
     },
   },
   safariLaVentana: {
@@ -302,12 +330,14 @@ export const pageSeoMap = {
       en: "Ocean Safari La Ventana",
       fr: "Ocean Safari La Ventana",
       zh: "拉文塔纳野生动物之旅",
+      ca: "Ocean Safari La Ventana",
     },
     description: {
       es: "Expedicion marina en La Ventana, BCS. Observa la migracion de mobulas y ballenas con guias expertos. Aventura de medio dia de abril a junio en el Mar de Cortes.",
       en: "Marine expedition in La Ventana, BCS. Watch mobula ray and whale migration with expert guides. Half-day adventure April-June in the Sea of Cortez.",
       fr: "Expedition marine a La Ventana, BCS. Observez la migration des raies mobula et baleines avec des guides experts. Aventure d'une demi-journee d'avril a juin dans la mer de Cortez.",
       zh: "BCS 拉文塔纳海洋探险。与专家导游一起观赏海蝠鲼和鲸鱼迁徙。4 月至 6 月科尔特斯海半日冒险。",
+      ca: "Expedició marina a La Ventana, BCS. Observa la migració de móbules i balenes amb guies experts. Aventura de mig dia d'abril a juny al Mar de Cortés.",
     },
   },
 } as const satisfies Record<string, PageSeo>
