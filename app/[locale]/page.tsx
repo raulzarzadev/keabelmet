@@ -47,6 +47,50 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   }
   const hc = homeCta[locale] ?? homeCta.es
 
+  const comboMeta = [
+    { regularMxn: 4100, off: 0.10 },
+    { regularMxn: 7100, off: 0.15 },
+  ]
+  const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; save: string; cta: string; best: string; items: { name: string; days: string; activities: string[] }[]; customBadge: string; customTitle: string; customText: string; customCta: string; customWa: string }> = {
+    es: {
+      kicker: "Vive varios días", title: "Combina y ahorra", sub: "¿Vienes varios días a la Baja? Junta actividades y paga menos. Coordinamos tus fechas por WhatsApp.",
+      perPerson: "por persona", save: "Ahorras", cta: "Reservar por WhatsApp", best: "El más elegido",
+      items: [
+        { name: "Dúo La Paz", days: "2 días", activities: ["Nado con Tiburón Ballena", "Snorkel en Isla Espíritu Santo"] },
+        { name: "Semana Baja", days: "3 días", activities: ["Nado con Tiburón Ballena", "Isla Espíritu Santo", "Safari La Ventana"] },
+      ],
+      customBadge: "A tu medida", customTitle: "Arma tu semana", customText: "Cuéntanos cuántos días vienes y qué te emociona. Diseñamos tu itinerario ideal y te damos precio de paquete.", customCta: "Planear mi viaje", customWa: "Hola! Quiero armar un viaje de varios días con ustedes. ¿Me ayudan a planearlo?",
+    },
+    en: {
+      kicker: "Stay several days", title: "Combine and save", sub: "Coming to Baja for several days? Bundle activities and pay less. We coordinate your dates over WhatsApp.",
+      perPerson: "per person", save: "You save", cta: "Book on WhatsApp", best: "Most popular",
+      items: [
+        { name: "La Paz Duo", days: "2 days", activities: ["Swim with Whale Sharks", "Snorkel at Espíritu Santo Island"] },
+        { name: "Baja Week", days: "3 days", activities: ["Swim with Whale Sharks", "Espíritu Santo Island", "La Ventana Safari"] },
+      ],
+      customBadge: "Tailor-made", customTitle: "Build your week", customText: "Tell us how many days you're coming and what excites you. We'll design your ideal itinerary at a package price.", customCta: "Plan my trip", customWa: "Hi! I want to plan a multi-day trip with you. Can you help me?",
+    },
+    fr: {
+      kicker: "Restez plusieurs jours", title: "Combinez et économisez", sub: "Vous venez plusieurs jours en Basse-Californie ? Regroupez des activités et payez moins. Nous coordonnons vos dates sur WhatsApp.",
+      perPerson: "par personne", save: "Vous économisez", cta: "Réserver sur WhatsApp", best: "Le plus choisi",
+      items: [
+        { name: "Duo La Paz", days: "2 jours", activities: ["Nager avec les requins-baleines", "Snorkeling à l'île Espíritu Santo"] },
+        { name: "Semaine Baja", days: "3 jours", activities: ["Nager avec les requins-baleines", "Île Espíritu Santo", "Safari La Ventana"] },
+      ],
+      customBadge: "Sur mesure", customTitle: "Composez votre semaine", customText: "Dites-nous combien de jours vous venez et ce qui vous passionne. Nous concevons votre itinéraire idéal à prix de forfait.", customCta: "Planifier mon voyage", customWa: "Bonjour ! Je veux organiser un voyage de plusieurs jours avec vous. Pouvez-vous m'aider ?",
+    },
+    zh: {
+      kicker: "畅玩多日", title: "组合更省", sub: "来下加州玩几天？组合多个活动，享更低价格。我们通过 WhatsApp 协调您的日期。",
+      perPerson: "每人", save: "节省", cta: "通过 WhatsApp 预订", best: "最受欢迎",
+      items: [
+        { name: "拉巴斯双人组合", days: "2 天", activities: ["与鲸鲨同游", "圣灵岛浮潜"] },
+        { name: "下加州一周", days: "3 天", activities: ["与鲸鲨同游", "圣灵岛", "拉文塔纳探险"] },
+      ],
+      customBadge: "量身定制", customTitle: "定制您的行程", customText: "告诉我们您来几天、对什么感兴趣。我们将以套餐价为您设计理想行程。", customCta: "规划我的旅程", customWa: "你好！我想和你们规划一次多日行程，可以帮我吗？",
+    },
+  }
+  const pk = packagesT[locale] ?? packagesT.es
+
   const regionBadge: Record<string, Record<string, string>> = {
     "/experiencias/safari-la-ventana": { es: "Nuestro favorito", en: "Our favorite", fr: "Notre préféré", zh: "我们的最爱" },
     "/experiencias/safari-bahia-magdalena": { es: "El más aventurero", en: "The most adventurous", fr: "Le plus aventureux", zh: "最刺激" },
@@ -173,6 +217,44 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* PAQUETES */}
+      <section className="packages" id="paquetes">
+        <div className="section-head" style={{ padding: 0 }}>
+          <span className="kicker">{pk.kicker}</span>
+          <h2>{pk.title}</h2>
+          <p>{pk.sub}</p>
+        </div>
+        <div className="packages-grid">
+          {pk.items.map((combo, idx) => {
+            const meta = comboMeta[idx]
+            const now = Math.round(meta.regularMxn * (1 - meta.off))
+            const savings = meta.regularMxn - now
+            return (
+              <div key={combo.name} className={`pkg-card${idx === 1 ? " pkg-featured" : ""}`}>
+                {idx === 1 && <span className="pkg-badge">{pk.best}</span>}
+                <h3>{combo.name}</h3>
+                <div className="pkg-days">{combo.days}</div>
+                <ul className="pkg-acts">
+                  {combo.activities.map((a) => <li key={a}>{a}</li>)}
+                </ul>
+                <div className="pkg-price">
+                  <span className="reg"><Price amount={meta.regularMxn} /></span>
+                  <span className="now"><b><Price amount={now} /></b><span className="per">{pk.perPerson}</span></span>
+                  <span className="pkg-save">{pk.save} <Price amount={savings} /></span>
+                </div>
+                <a href={wa(`Hola! Me interesa el paquete "${combo.name}" (${combo.activities.join(" + ")}). ¿Me ayudan con fechas y precio?`)} className="btn btn-teal" target="_blank" rel="noopener noreferrer">{pk.cta}</a>
+              </div>
+            )
+          })}
+          <div className="pkg-card pkg-custom">
+            <span className="pkg-badge">{pk.customBadge}</span>
+            <h3>{pk.customTitle}</h3>
+            <p>{pk.customText}</p>
+            <a href={wa(pk.customWa)} className="btn btn-ghost" style={{ marginTop: "auto" }} target="_blank" rel="noopener noreferrer">{pk.customCta}</a>
+          </div>
         </div>
       </section>
 
