@@ -350,4 +350,204 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 		],
 	},
+	"tiburon-ballena": {
+		breadcrumb: "Tauró Balena",
+		hero: {
+			image: "/tiburon-ballena-drone.jpg",
+			alt: "Tauró balena nedant a prop de la superfície a La Paz",
+			kicker: "La Paz · Tauró Balena",
+			title: "Neda al costat del peix més gran del planeta",
+			text: "No per perseguir-lo. No per tocar-lo. Simplement per acompanyar-lo durant uns minuts. El tauró balena pot superar els deu metres i, tot i així, alimentar-se d'organismes diminuts. Compartir l'aigua amb ell no se sent com una aventura extrema: se sent com un privilegi.",
+			meta: "Passeig marítim de La Paz · 2-3 hores · Temporada oct–abril",
+			primaryLabel: "Reservar la meva trobada",
+			primaryWa: "Hola! vull reservar el nedar amb tauró balena a La Paz",
+			secondaryLabel: "Veure com serà l'experiència",
+			secondaryHref: "#itinerario",
+		},
+		blocks: [
+			{
+				type: "quickfacts",
+				items: [
+					{ value: "2-3 hores", label: "Durada aprox." },
+					{ value: "Oct – abril", label: "Temporada" },
+					{ value: "12 anys", label: "Edat mínima" },
+					{ value: "Passeig marítim de La Paz", label: "Punt de trobada" },
+				],
+			},
+			{
+				type: "prose",
+				kicker: "El gegant més noble de l'oceà",
+				heading: "La seva veritable característica no és la seva mida. És la seva tranquil·litat.",
+				paragraphs: [
+					"Hi ha animals que inspiren respecte per la seva mida. El tauró balena també ho fa. Però n'hi ha prou amb uns segons per descobrir que el que impressiona no és com de gran és, sinó com de tranquil és.",
+					"Neda lentament. Ignora la nostra presència. I continua el seu camí mentre s'alimenta de plàncton a prop de la superfície.",
+					{ lead: "No estem davant d'un depredador. Estem davant d'un dels animals més pacífics que habiten l'oceà." },
+					"Durant uns minuts podrem acompanyar-lo, sempre respectant el seu espai i les regles que fan possible aquesta trobada.",
+				],
+			},
+			{
+				type: "mediaBanner",
+				media: { suggest: "Fotografia zenital gegant del tauró balena ocupant tota l'amplada de la pantalla, amb un nedador petit al costat per donar escala." },
+				quote: "No cal tocar una cosa per recordar-la tota la vida.",
+			},
+			{
+				type: "timeline",
+				id: "itinerario",
+				kicker: "Així serà la teva experiència",
+				title: "Del passeig marítim a la trobada",
+				note: "No seguim una ruta establerta: busquem les millors condicions i els exemplars que s'alimenten a prop de la superfície.",
+				items: [
+					{
+						time: "Punt de trobada · Passeig marítim de La Paz",
+						title: "Ens reunim i fem el briefing",
+						paragraphs: [
+							"Després de reunir-nos amb l'equip fem un breu briefing on expliquem com es desenvoluparà l'activitat, repassem les regles de l'àrea protegida i resolem qualsevol dubte abans de pujar a l'embarcació.",
+						],
+					},
+					{
+						title: "Comença la recerca",
+						paragraphs: [
+							"Un cop a l'aigua comença la recerca. No seguim una ruta fixa: localitzem els exemplars que s'estan alimentant a prop de la superfície. Quan en trobem un, esperem el nostre torn i ens preparem per entrar a l'aigua.",
+						],
+						media: { suggest: "Vista des de l'embarcació del guia assenyalant l'aleta d'un tauró balena a la superfície, amb el grup a punt amb snorkel." },
+					},
+					{
+						title: "Uns minuts al costat del gegant",
+						paragraphs: [
+							"Allà passa el que tothom ve a buscar. Durant uns minuts nedem al costat del tauró balena, sempre respectant la distància permesa i seguint les indicacions del guia. Després tornem a pujar a l'embarcació i comencem de nou la recerca.",
+							"Cada trobada dura poc. Però molt poques persones l'obliden.",
+						],
+						media: { suggest: "Nedador amb snorkel a distància respectuosa al costat del tauró balena, presa des de la superfície amb llum turquesa." },
+					},
+				],
+			},
+			{
+				type: "seasons",
+				ink2: true,
+				kicker: "Tria el teu horari",
+				title: "Tres sortides al dia segons les condicions",
+				intro: "Tenim tres horaris de sortida durant la temporada per aprofitar les millors condicions del dia. Cap horari és millor que un altre: cadascun es desenvolupa diferent seguint el comportament natural dels animals.",
+				items: [
+					{ name: "Sortida matinera · la nostra recomanació", text: "Cita a les 7:00 h, sortida a les 8:00 h. Durada aprox. 3 hores. En ser el primer recorregut, dediquem part de l'experiència a localitzar els taurons abans de les entrades a l'aigua. Si tens flexibilitat, és la que més recomanem." },
+					{ name: "Sortida de mig matí", text: "Cita a les 10:00 h, sortida a les 11:00 h. Durada aprox. 2 hores. Els taurons ja solen estar més ben ubicats gràcies a la primera sortida, així que el temps de recerca és menor i s'aprofita millor l'experiència." },
+					{ name: "Sortida del migdia", text: "Cita a les 12:00 h, sortida a les 13:00 h. Durada aprox. 2 hores. Mateixa dinàmica que el segon torn: els exemplars ja solen estar localitzats, permetent dirigir-nos amb més rapidesa a la zona d'observació." },
+				],
+			},
+			{
+				type: "callout",
+				heading: "Aquí no venim a perseguir animals. Venim a compartir l'aigua amb ells.",
+				paragraphs: [
+					"Quan entrem a l'aigua som nosaltres qui ens hem d'adaptar. Mai bloquegem el seu camí. Mai nedem davant seu. Mai intentem tocar-lo.",
+					"Simplement l'acompanyem durant una part molt petita del seu recorregut. I creiem que aquesta és la millor manera de viure aquesta experiència.",
+				],
+			},
+			{
+				type: "callout",
+				ink2: true,
+				heading: "Per què la trobada dura tan poc? Perquè protegir el tauró balena és més important que allargar l'experiència.",
+				paragraphs: [
+					"L'activitat està regulada per autoritats ambientals que limiten el temps d'observació, el nombre d'embarcacions i la manera com ens podem acostar.",
+					"Lluny de ser un inconvenient, aquestes regles són les que permeten que milers de persones puguin continuar gaudint d'aquesta trobada cada temporada. No només véns a conèixer el tauró balena: també véns a aprendre com conviure-hi de manera responsable.",
+				],
+			},
+			{
+				type: "prose",
+				kicker: "Cada dia és diferent",
+				heading: "Treballem amb animals completament lliures.",
+				paragraphs: [
+					"Hi ha dies en què trobem diversos exemplars. D'altres en què els hem de buscar durant més temps. Alguns neden lentament mentre s'alimenten; d'altres desapareixen sota l'aigua pocs segons després de trobar-los.",
+					{ lead: "Creiem que aquesta incertesa fa que cada trobada tingui encara més valor." },
+				],
+			},
+			{
+				type: "checklist",
+				kicker: "És per a tu?",
+				title: "Perquè reservis amb expectatives clares",
+				good: {
+					title: "Aquesta experiència és ideal si…",
+					items: [
+						"Sempre has somiat nedar al costat del tauró balena.",
+						"No tens experiència prèvia fent snorkel.",
+						"Vols viure una trobada amb fauna silvestre de manera responsable.",
+						"Busques una activitat apta per a gairebé tota la família.",
+					],
+				},
+				bad: {
+					title: "Potser no és per a tu si…",
+					items: [
+						"Esperes controlar el comportament dels animals.",
+						"Busques una experiència on tot estigui garantit.",
+					],
+				},
+			},
+			{
+				type: "details",
+				kicker: "Tot el que inclou",
+				title: "El que ja està resolt",
+				items: [
+					{ title: "Embarcació autoritzada", text: "Amb permís per a l'activitat a l'àrea protegida." },
+					{ title: "Guia certificat", text: "T'acompanya i explica les regles de la trobada en tot moment." },
+					{ title: "Equip complet de snorkel", text: "Visor, snorkel i aletes." },
+					{ title: "Vestit de neoprè", text: "Inclòs segons la temporada i la temperatura de l'aigua." },
+					{ title: "Armilla de flotació", text: "Perquè gaudeixis de la trobada amb total tranquil·litat." },
+					{ title: "Briefing de seguretat", text: "Explicació completa abans d'entrar a l'aigua." },
+				],
+			},
+			{
+				type: "info",
+				ink2: true,
+				kicker: "Abans de reservar",
+				title: "Informació important",
+				items: [
+					{ label: "Durada", value: "Aproximadament 2-3 hores segons l'horari." },
+					{ label: "Temporada", value: "D'octubre a abril." },
+					{ label: "Edat mínima", value: "12 anys." },
+					{ label: "Punt de trobada", value: "Passeig marítim de La Paz." },
+					{ label: "Fotografia i vídeo", value: "Aquesta activitat no inclou servei de fotografia ni vídeo." },
+				],
+			},
+			{
+				type: "pricing",
+				id: "precios",
+				kicker: "Preu",
+				title: "Reserva la teva trobada",
+				cards: [
+					{
+						name: "Nedar amb tauró balena",
+						amountMxn: 2300,
+						amountNote: "/ persona",
+						desc: "Una experiència apta per a gairebé tota la família, sense necessitat d'experiència prèvia en snorkel.",
+						items: [
+							"Embarcació autoritzada i guia certificat",
+							"Equip complet de snorkel i neoprè",
+							"Armilla de flotació",
+							"Briefing de seguretat",
+							"Temporada d'octubre a abril",
+						],
+						waText: "Hola! vull reservar el nedar amb tauró balena a La Paz",
+						ctaLabel: "Reservar la meva trobada",
+						featured: true,
+						featuredTag: "Oct – abril",
+					},
+				],
+			},
+			{
+				type: "mediaBanner",
+				media: { suggest: "Silueta del tauró balena vist des de baix contra la llum de la superfície, sensació de calma i escala." },
+				quote: "Potser arribes pensant en la seva mida. Però probablement te'n vagis recordant la seva tranquil·litat.",
+				align: "bottom",
+			},
+			{
+				type: "finalCta",
+				image: "/tiburon-ballena-drone.jpg",
+				alt: "Tauró balena a les aigües de La Paz",
+				title: "Hi ha trobades que duren uns minuts i, tot i així, es queden amb tu durant molts anys.",
+				text: "Quan comparteixes l'aigua amb el peix més gran del planeta descobreixes que algunes de les criatures més impressionants de l'oceà també poden ser les més pacífiques. Explica'ns quan visites La Paz i t'ajudem a triar el teu horari.",
+				primaryLabel: "Consultar disponibilitat",
+				primaryWa: "Hola! vull consultar disponibilitat per nedar amb el tauró balena",
+				secondaryLabel: "Veure totes les expedicions",
+				secondaryHref: "/#expediciones",
+			},
+		],
+	},
 }
