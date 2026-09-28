@@ -4,6 +4,7 @@ import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
+import StickyBookBar from "@/components/StickyBookBar"
 
 export function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
@@ -155,6 +156,11 @@ const ui: Record<Locale, UiDict> = {
 export default function ExpeditionDetail({ data, locale = defaultLocale, slug }: { data: ExpeditionPageData; locale?: Locale; slug: string }) {
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
   const t = ui[locale] || ui.es
+
+  const fromMxn = data.pricing.cards
+    .map((c) => c.amountMxn)
+    .filter((n): n is number => typeof n === "number" && n > 0)
+    .sort((a, b) => a - b)[0]
 
   return (
     <main>
@@ -320,6 +326,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
           </div>
         </div>
       </section>
+      {fromMxn ? <StickyBookBar fromMxn={fromMxn} locale={locale} /> : null}
     </main>
   )
 }
