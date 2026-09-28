@@ -45,7 +45,7 @@ function heroUrl(slug?: string): string {
 
 const t: Record<string, {
 	subject: string; hello: string; confirmed: string; intro: string; folio: string; tour: string; date: string; people: string; total: string
-	requested: string; note: string; wa: string; voucher: string; cancel: string; footer: string; includesTitle: string; follow: string
+	requested: string; note: string; wa: string; voucher: string; cancel: string; footer: string; includesTitle: string; follow: string; addCalendar: string
 }> = {
 	es: {
 		subject: "Tu reserva en Keabelmet está confirmada",
@@ -56,7 +56,7 @@ const t: Record<string, {
 		wa: "Confirmar por WhatsApp", voucher: "Ver mi voucher",
 		cancel: "¿Te equivocaste o necesitas cambiar la fecha? Escríbenos por WhatsApp y lo resolvemos.",
 		footer: "Keabelmet Expeditions · La Paz, Baja California Sur",
-		includesTitle: "Qué incluye tu experiencia", follow: "Síguenos",
+		includesTitle: "Qué incluye tu experiencia", follow: "Síguenos", addCalendar: "Añadir a Google Calendar",
 	},
 	en: {
 		subject: "Your Keabelmet reservation is confirmed",
@@ -67,7 +67,7 @@ const t: Record<string, {
 		wa: "Confirm on WhatsApp", voucher: "View my voucher",
 		cancel: "Made a mistake or need to change the date? Message us on WhatsApp and we'll sort it out.",
 		footer: "Keabelmet Expeditions · La Paz, Baja California Sur",
-		includesTitle: "What your experience includes", follow: "Follow us",
+		includesTitle: "What your experience includes", follow: "Follow us", addCalendar: "Add to Google Calendar",
 	},
 	fr: {
 		subject: "Votre réservation Keabelmet est confirmée",
@@ -78,7 +78,7 @@ const t: Record<string, {
 		wa: "Confirmer sur WhatsApp", voucher: "Voir mon voucher",
 		cancel: "Une erreur ou besoin de changer la date ? Écrivez-nous sur WhatsApp et nous arrangeons cela.",
 		footer: "Keabelmet Expeditions · La Paz, Basse-Californie du Sud",
-		includesTitle: "Ce que votre expérience inclut", follow: "Suivez-nous",
+		includesTitle: "Ce que votre expérience inclut", follow: "Suivez-nous", addCalendar: "Ajouter à Google Agenda",
 	},
 	zh: {
 		subject: "您的 Keabelmet 预订已确认",
@@ -89,7 +89,7 @@ const t: Record<string, {
 		wa: "通过 WhatsApp 确认", voucher: "查看我的凭证",
 		cancel: "填错了或需要更改日期?请通过 WhatsApp 联系我们,我们会为您处理。",
 		footer: "Keabelmet Expeditions · 拉巴斯,南下加利福尼亚",
-		includesTitle: "您的体验包含", follow: "关注我们",
+		includesTitle: "您的体验包含", follow: "关注我们", addCalendar: "添加到 Google 日历",
 	},
 }
 
@@ -98,6 +98,9 @@ function buildHtml(d: EmailData): string {
 	const ink = "#0d222f", card = "#0f2836", teal = "#28c2a0", sand = "#f4efe4", dim = "#a9c0cc", line = "rgba(244,239,228,0.14)"
 	const waLink = reservationWhatsAppLink({ folio: d.folio, expeditionName: d.expeditionName, cardName: d.cardName, dateISO: d.dateISO, people: d.people, totalMxn: d.totalMxn, locale: d.locale }, "confirm")
 	const voucherLink = `${SITE_URL}/${d.locale}/reserva/${d.paymentIntentId}`
+	const calDetails = encodeURIComponent(`${L.folio}: ${d.folio}\n${L.people}: ${d.people}\n${L.tour}: ${d.cardName}\n${L.voucher}: ${voucherLink}`)
+	const calLoc = encodeURIComponent(LOCATION_BY_SLUG[d.slug ?? ""] ?? "La Paz, Baja California Sur, México")
+	const calLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Keabelmet: ${d.expeditionName}`)}&dates=${icsDate(d.dateISO)}/${icsDate(d.dateISO, 1)}&details=${calDetails}&location=${calLoc}`
 	const row = (label: string, value: string, strong = false) =>
 		`<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">${label}</td><td style="padding:11px 0;border-bottom:1px solid ${line};color:${strong ? teal : sand};font-size:${strong ? "16px" : "14px"};font-weight:${strong ? 700 : 400};text-align:right">${value}</td></tr>`
 	const baseIncludes = (d.slug ? getActivityDetails(d.slug, d.locale as Locale, d.cardName).includes : []).slice(0, 8)
@@ -144,7 +147,10 @@ function buildHtml(d: EmailData): string {
 	<tr><td style="padding:22px 32px 8px" align="center">
 		<a href="${waLink}" style="display:inline-block;background:${teal};color:#04121a;text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:999px">${L.wa}</a>
 	</td></tr>
-	<tr><td style="padding:4px 32px 22px" align="center">
+	<tr><td style="padding:8px 32px 0" align="center">
+		<a href="${calLink}" style="display:inline-block;background:transparent;color:${teal};text-decoration:none;font-weight:700;font-size:15px;padding:12px 26px;border-radius:999px;border:1.5px solid ${teal}">&#128197; ${L.addCalendar}</a>
+	</td></tr>
+	<tr><td style="padding:12px 32px 22px" align="center">
 		<a href="${voucherLink}" style="color:${teal};font-size:13px;text-decoration:underline">${L.voucher}</a>
 	</td></tr>
 	<tr><td style="padding:16px 32px;border-top:1px solid ${line}">
