@@ -1024,3 +1024,25 @@ body.has-book-bar .wa-float { bottom: 94px; }
 
 /* Banda CTA del home con foto de fondo */
 .band-cta-photo .band-cta-inner { background-image: linear-gradient(rgba(9,23,32,0.78), rgba(9,23,32,0.85)), url("/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg"); background-size: cover; background-position: center; border-color: rgba(40,194,160,0.45); }
+
+/* Paquetes / combos multi-dia */
+.packages { padding: 84px 24px; max-width: var(--maxw); margin: 0 auto; }
+.packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 22px; margin-top: 46px; }
+.pkg-card { background: #0f2836; border: 1px solid var(--line); border-radius: 20px; padding: 30px 28px; display: flex; flex-direction: column; }
+.pkg-card.pkg-featured { border-color: rgba(40,194,160,0.55); }
+.pkg-badge { align-self: flex-start; background: var(--teal); color: #04121a; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+.pkg-card.pkg-custom .pkg-badge { background: transparent; color: var(--teal); border: 1px solid rgba(40,194,160,0.5); }
+.pkg-card h3 { font-size: 22px; color: var(--sand); margin: 0 0 6px; }
+.pkg-days { color: var(--teal); font-size: 13px; font-weight: 600; margin-bottom: 16px; }
+.pkg-acts { list-style: none; padding: 0; margin: 0 0 22px; display: flex; flex-direction: column; gap: 9px; }
+.pkg-acts li { color: var(--sand-dim); font-size: 14.5px; display: flex; gap: 9px; align-items: flex-start; line-height: 1.4; }
+.pkg-acts li::before { content: "\2713"; color: var(--teal); font-weight: 700; }
+.pkg-price { margin-top: auto; margin-bottom: 18px; }
+.pkg-price .reg { color: var(--sand-dim); text-decoration: line-through; font-size: 14px; }
+.pkg-price .now { display: block; margin-top: 2px; }
+.pkg-price .now b { font-family: var(--font-poppins), 'Poppins', sans-serif; font-size: 28px; font-weight: 800; color: var(--teal); }
+.pkg-price .per { color: var(--sand-dim); font-size: 12px; margin-left: 6px; }
+.pkg-save { display: inline-block; background: rgba(40,194,160,0.14); color: var(--teal); font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 999px; margin-top: 10px; }
+.pkg-card .btn { width: 100%; justify-content: center; }
+.pkg-card.pkg-custom { background: rgba(40,194,160,0.07); border: 1px dashed rgba(40,194,160,0.42); }
+.pkg-custom p { color: var(--sand-dim); font-size: 15px; line-height: 1.55; margin: 0 0 22px; }
