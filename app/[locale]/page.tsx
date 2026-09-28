@@ -39,6 +39,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const t = homeContent[locale]
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
 
+  const homeCta: Record<string, { kicker: string; title: string; text: string; cta: string; wa: string }> = {
+    es: { kicker: "Tu próxima aventura", title: "¿Listo para vivir el Mar de Cortés?", text: "Grupos pequeños, guías biólogos y encuentros reales con la vida marina. Elige tu expedición y aparta tu lugar.", cta: "Ver expediciones", wa: "Escríbenos por WhatsApp" },
+    en: { kicker: "Your next adventure", title: "Ready to experience the Sea of Cortez?", text: "Small groups, marine-biologist guides and real encounters with wildlife. Pick your expedition and save your spot.", cta: "View expeditions", wa: "Message us on WhatsApp" },
+    fr: { kicker: "Votre prochaine aventure", title: "Prêt à vivre la mer de Cortés ?", text: "Petits groupes, guides biologistes marins et rencontres réelles avec la faune. Choisissez votre expédition et réservez.", cta: "Voir les expéditions", wa: "Écrivez-nous sur WhatsApp" },
+    zh: { kicker: "你的下一场冒险", title: "准备好探索科尔特斯海了吗？", text: "小团队、海洋生物学家向导，以及与海洋生物的真实相遇。选择你的探险并预留名额。", cta: "查看探险项目", wa: "通过 WhatsApp 联系我们" },
+  }
+  const hc = homeCta[locale] ?? homeCta.es
+
   const regionBadge: Record<string, Record<string, string>> = {
     "/experiencias/safari-la-ventana": { es: "Nuestro favorito", en: "Our favorite", fr: "Notre préféré", zh: "我们的最爱" },
     "/experiencias/safari-bahia-magdalena": { es: "El más aventurero", en: "The most adventurous", fr: "Le plus aventureux", zh: "最刺激" },
@@ -217,6 +225,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <h2>{t.testi.title}</h2>
         </div>
         <TestiCarousel items={t.testi.items} locale={locale} />
+      </section>
+
+      {/* CTA BAND */}
+      <section className="band-cta">
+        <div className="band-cta-inner">
+          <span className="kicker">{hc.kicker}</span>
+          <h3>{hc.title}</h3>
+          <p>{hc.text}</p>
+          <div className="band-cta-btns">
+            <a href="#expediciones" className="btn btn-pop">{hc.cta}</a>
+            <a href={wa(t.finalCta.waText)} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">{hc.wa}</a>
+          </div>
+        </div>
       </section>
 
       {/* FOUNDER */}
