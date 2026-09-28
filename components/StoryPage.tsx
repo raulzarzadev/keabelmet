@@ -5,6 +5,7 @@ import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
+import StickyBookBar from "@/components/StickyBookBar"
 import { faunaSeasons, faunaNames, monthsShort, faunaLegend, type FaunaIcon } from "@/lib/fauna-calendar"
 
 function wa(text: string): string {
@@ -144,6 +145,9 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
   const sec = (ink2?: boolean, extra = "", tight = false) =>
     `sp-section${tight ? " tight" : ""}${ink2 ? " sp-ink2" : ""}${extra ? " " + extra : ""}`
+
+  const priceAmounts = data.blocks.flatMap((b) => (b.type === "pricing" ? b.cards.map((c) => c.amountMxn) : []))
+  const fromMxn = priceAmounts.filter((n): n is number => typeof n === "number" && n > 0).sort((a, b) => a - b)[0]
 
   return (
     <main>
@@ -588,6 +592,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
             return <Fragment key={i} />
         }
       })}
+      {fromMxn ? <StickyBookBar fromMxn={fromMxn} locale={locale} /> : null}
     </main>
   )
 }

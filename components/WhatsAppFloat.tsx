@@ -38,7 +38,7 @@ export default function WhatsAppFloat() {
   }
 
   return (
-    <div ref={containerRef} className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div ref={containerRef} className="wa-float fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {open && (
         <div
           role="dialog"
