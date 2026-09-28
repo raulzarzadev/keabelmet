@@ -3,8 +3,8 @@ import { formatDate, formatMxn, reservationWhatsAppLink, type ReservationDetails
 import { getActivityDetails } from "@/lib/activity-details"
 import type { Locale } from "@/lib/i18n"
 
-const SITE_URL = "https://www.keabelmet.com"
-const FROM = process.env.RESEND_FROM || "Keabelmet <reservas@keabelmet.com>"
+export const SITE_URL = "https://www.keabelmet.com"
+export const FROM = process.env.RESEND_FROM || "Keabelmet <reservas@keabelmet.com>"
 
 const SOCIAL = {
 	instagram: "https://www.instagram.com/keabelmet__expeditions/",
@@ -38,7 +38,7 @@ const HERO_BY_SLUG: Record<string, string> = {
 	"safari-bahia-magdalena": "/images/marlin-bahia-magdalena-hero.jpeg",
 }
 
-function heroUrl(slug?: string): string {
+export function heroUrl(slug?: string): string {
 	const path = (slug && HERO_BY_SLUG[slug]) || "/fondomar1.jpg"
 	return `${SITE_URL}${path}`
 }
@@ -193,7 +193,7 @@ export async function sendReservationEmail(d: EmailData): Promise<{ ok: boolean;
 // calendario (.ics) para que se anote en Google Calendar automáticamente.
 // ---------------------------------------------------------------------------
 
-const OWNER_EMAIL = process.env.OWNER_NOTIFY_EMAIL || "contacto@keabelmet.com"
+export const OWNER_EMAIL = process.env.OWNER_NOTIFY_EMAIL || "contacto@keabelmet.com"
 const ORGANIZER_EMAIL = "reservas@keabelmet.com"
 
 const LOCATION_BY_SLUG: Record<string, string> = {
