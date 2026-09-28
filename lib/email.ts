@@ -181,3 +181,154 @@ export async function sendReservationEmail(d: EmailData): Promise<{ ok: boolean;
 		return { ok: false, error: err instanceof Error ? err.message : "send_failed" }
 	}
 }
+
+// ---------------------------------------------------------------------------
+// Aviso interno al dueño: correo con los datos de la venta + invitación de
+// calendario (.ics) para que se anote en Google Calendar automáticamente.
+// ---------------------------------------------------------------------------
+
+const OWNER_EMAIL = process.env.OWNER_NOTIFY_EMAIL || "contacto@keabelmet.com"
+const ORGANIZER_EMAIL = "reservas@keabelmet.com"
+
+const LOCATION_BY_SLUG: Record<string, string> = {
+	"safari-la-ventana": "La Ventana, Baja California Sur, México",
+	"buceo-cabo-pulmo": "Cabo Pulmo, Baja California Sur, México",
+	"tiburon-ballena": "Muelle Fiscal de La Paz, Baja California Sur, México",
+	"buceo-la-paz": "La Paz, Baja California Sur, México",
+	"tour-ballena-gris": "Puerto Chale, Baja California Sur, México",
+	"tour-espiritu-santo": "Muelle Fiscal de La Paz, Baja California Sur, México",
+	"scuba-discovery": "La Paz, Baja California Sur, México",
+	"safari-bahia-magdalena": "Bahía Magdalena, Baja California Sur, México",
+}
+
+export type OwnerNotifyData = EmailData & { customerPhone?: string }
+
+function icsDate(dateISO: string, addDays = 0): string {
+	const [y, m, d] = dateISO.split("-").map(Number)
+	const dt = new Date(Date.UTC(y, m - 1, d + addDays))
+	return `${dt.getUTCFullYear()}${String(dt.getUTCMonth() + 1).padStart(2, "0")}${String(dt.getUTCDate()).padStart(2, "0")}`
+}
+
+function icsEscape(s: string): string {
+	return s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n")
+}
+
+function eventTitle(d: OwnerNotifyData): string {
+	return `Keabelmet: ${d.expeditionName} — ${d.customerName} (${d.people} pers.)`
+}
+
+function eventDetailLines(d: OwnerNotifyData): string[] {
+	return [
+		`Folio: ${d.folio}`,
+		`Cliente: ${d.customerName}`,
+		d.customerPhone ? `Tel/WhatsApp: ${d.customerPhone}` : "",
+		`Correo: ${d.customerEmail}`,
+		`Personas: ${d.people}`,
+		`Total: ${formatMxn(d.totalMxn)} MXN`,
+		d.rideAddon ? "Raite La Paz ⇄ La Ventana: Sí" : "",
+		`Expedición: ${d.cardName}`,
+	].filter(Boolean)
+}
+
+function buildIcs(d: OwnerNotifyData): string {
+	const now = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"
+	const loc = LOCATION_BY_SLUG[d.slug ?? ""] ?? "La Paz, Baja California Sur, México"
+	const desc = eventDetailLines(d).join("\n")
+	return [
+		"BEGIN:VCALENDAR",
+		"VERSION:2.0",
+		"PRODID:-//Keabelmet//Reservas//ES",
+		"METHOD:REQUEST",
+		"CALSCALE:GREGORIAN",
+		"BEGIN:VEVENT",
+		`UID:${d.folio}@keabelmet.com`,
+		`DTSTAMP:${now}`,
+		`DTSTART;VALUE=DATE:${icsDate(d.dateISO)}`,
+		`DTEND;VALUE=DATE:${icsDate(d.dateISO, 1)}`,
+		`SUMMARY:${icsEscape(eventTitle(d))}`,
+		`DESCRIPTION:${icsEscape(desc)}`,
+		`LOCATION:${icsEscape(loc)}`,
+		`ORGANIZER;CN=Keabelmet:mailto:${ORGANIZER_EMAIL}`,
+		`ATTENDEE;CN=Keabelmet;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:${OWNER_EMAIL}`,
+		"STATUS:CONFIRMED",
+		"SEQUENCE:0",
+		"TRANSP:TRANSPARENT",
+		"END:VEVENT",
+		"END:VCALENDAR",
+	].join("\r\n")
+}
+
+function gcalLink(d: OwnerNotifyData): string {
+	const dates = `${icsDate(d.dateISO)}/${icsDate(d.dateISO, 1)}`
+	const text = encodeURIComponent(eventTitle(d))
+	const details = encodeURIComponent(eventDetailLines(d).join("\n"))
+	const location = encodeURIComponent(LOCATION_BY_SLUG[d.slug ?? ""] ?? "La Paz, Baja California Sur, México")
+	return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}`
+}
+
+function buildOwnerHtml(d: OwnerNotifyData): string {
+	const ink = "#0d222f", sand = "#f4efe4", dim = "#cdc6b4", teal = "#28c2a0", line = "rgba(244,239,228,0.14)"
+	const waNum = (d.customerPhone || "").replace(/[^\d]/g, "")
+	const row = (label: string, value: string, strong = false) =>
+		`<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">${label}</td><td style="padding:11px 0;border-bottom:1px solid ${line};color:${strong ? teal : sand};font-size:${strong ? "16px" : "14px"};font-weight:${strong ? 700 : 400};text-align:right">${value}</td></tr>`
+	return `<!doctype html><html><body style="margin:0;background:${ink};font-family:'Poppins',Segoe UI,Arial,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:24px 0">
+<tr><td align="center">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#0f2734;border:1px solid ${line};border-radius:16px;overflow:hidden">
+	<tr><td style="padding:26px 32px 8px">
+		<div style="color:${teal};font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Nueva reserva pagada</div>
+		<h1 style="color:${sand};font-size:22px;margin:8px 0 2px">🎉 ${d.expeditionName}</h1>
+		<div style="color:${dim};font-size:14px">${d.cardName}</div>
+	</td></tr>
+	<tr><td style="padding:12px 32px">
+		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+			${row("Folio", d.folio)}
+			${row("Fecha", formatDate(d.dateISO, "es"))}
+			${row("Personas", String(d.people))}
+			${d.rideAddon ? row("Raite La Paz ⇄ La Ventana", "Sí") : ""}
+			${row("Total", `${formatMxn(d.totalMxn)} MXN`, true)}
+		</table>
+	</td></tr>
+	<tr><td style="padding:6px 32px 4px">
+		<div style="color:${teal};font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:8px">Contacto del cliente</div>
+		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+			${row("Nombre", d.customerName)}
+			${d.customerPhone ? `<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">Tel / WhatsApp</td><td style="padding:11px 0;border-bottom:1px solid ${line};text-align:right"><a href="https://wa.me/${waNum}" style="color:${teal};font-size:14px;text-decoration:none">${d.customerPhone}</a></td></tr>` : ""}
+			<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">Correo</td><td style="padding:11px 0;border-bottom:1px solid ${line};text-align:right"><a href="mailto:${d.customerEmail}" style="color:${teal};font-size:14px;text-decoration:none">${d.customerEmail}</a></td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding:22px 32px 8px" align="center">
+		<a href="${gcalLink(d)}" style="display:inline-block;background:${teal};color:#04121a;font-weight:700;font-size:15px;text-decoration:none;padding:13px 26px;border-radius:12px">📅 Añadir a Google Calendar</a>
+	</td></tr>
+	<tr><td style="padding:2px 32px 26px" align="center">
+		<p style="color:${dim};font-size:12px;margin:0">También adjuntamos el evento (.ics). Con "agregar invitaciones automáticamente" en Google Calendar se anota solo.</p>
+	</td></tr>
+</table>
+</td></tr>
+</table>
+</body></html>`
+}
+
+export async function sendOwnerNotification(d: OwnerNotifyData): Promise<{ ok: boolean; id?: string; error?: string }> {
+	const apiKey = process.env.RESEND_API_KEY
+	if (!apiKey) return { ok: false, error: "RESEND_API_KEY no configurada" }
+	const to = OWNER_EMAIL.split(",").map((s) => s.trim()).filter(Boolean)
+	if (to.length === 0) return { ok: false, error: "OWNER_NOTIFY_EMAIL vacío" }
+	try {
+		const resend = new Resend(apiKey)
+		const ics = buildIcs(d)
+		const { data, error } = await resend.emails.send({
+			from: FROM,
+			to,
+			subject: `🎉 Nueva reserva: ${d.expeditionName} · ${d.people} pers. · ${formatDate(d.dateISO, "es")}`,
+			html: buildOwnerHtml(d),
+			attachments: [
+				{ filename: "reserva.ics", content: Buffer.from(ics, "utf8"), contentType: "text/calendar; method=REQUEST; charset=UTF-8" },
+			],
+		})
+		if (error) return { ok: false, error: error.message }
+		return { ok: true, id: data?.id }
+	} catch (err) {
+		return { ok: false, error: err instanceof Error ? err.message : "send_failed" }
+	}
+}
