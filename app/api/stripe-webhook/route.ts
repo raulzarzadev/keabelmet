@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
 import { getStripe } from "@/lib/stripe"
 import { folioFromPaymentIntent } from "@/lib/reservation"
-import { sendReservationEmail } from "@/lib/email"
+import { sendReservationEmail, sendOwnerNotification } from "@/lib/email"
 
 export const runtime = "nodejs"
 
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 			return NextResponse.json({ received: true })
 		}
 
-		const result = await sendReservationEmail({
+		const reservation = {
 			folio: folioFromPaymentIntent(pi.id),
 			paymentIntentId: pi.id,
 			slug: m.slug,
@@ -60,7 +60,18 @@ export async function POST(req: NextRequest) {
 			customerName: m.customerName || "",
 			customerEmail: m.customerEmail,
 			locale: m.locale || "es",
-		})
+		}
+
+		// Correo de confirmación al cliente + aviso interno al dueño (con invitación
+		// de calendario). Enviamos ambos; ninguno bloquea al otro.
+		const [result, ownerResult] = await Promise.all([
+			sendReservationEmail(reservation),
+			sendOwnerNotification({ ...reservation, customerPhone: m.customerPhone || "" }),
+		])
+
+		if (!ownerResult.ok) {
+			console.error("[stripe-webhook] error enviando aviso al dueño:", ownerResult.error)
+		}
 
 		if (result.ok) {
 			try {
