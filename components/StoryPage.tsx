@@ -149,6 +149,21 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
   const priceAmounts = data.blocks.flatMap((b) => (b.type === "pricing" ? b.cards.map((c) => c.amountMxn) : []))
   const fromMxn = priceAmounts.filter((n): n is number => typeof n === "number" && n > 0).sort((a, b) => a - b)[0]
 
+  const midCta: Record<string, { title: string; text: string; cta: string; wa: string }> = {
+    es: { title: "¿Listo para vivirlo?", text: "Cupo limitado y grupos pequeños. Aparta tu lugar hoy.", cta: "Reservar ahora", wa: "Preguntar por WhatsApp" },
+    en: { title: "Ready to live it?", text: "Limited spots and small groups. Save your place today.", cta: "Book now", wa: "Ask on WhatsApp" },
+    fr: { title: "Prêt à le vivre ?", text: "Places limitées et petits groupes. Réservez dès aujourd'hui.", cta: "Réserver", wa: "Demander sur WhatsApp" },
+    zh: { title: "准备好体验了吗？", text: "名额有限，小团队出行。今天就预留您的位置。", cta: "立即预订", wa: "通过 WhatsApp 询问" },
+  }
+  const mc = midCta[locale] ?? midCta.es
+
+  const renderBlocks: (Block | { type: "midcta" })[] = [...data.blocks]
+  if (data.blocks.length > 3) {
+    const tl = data.blocks.findIndex((b) => b.type === "timeline")
+    const insertAfter = tl >= 0 ? tl : Math.floor(data.blocks.length / 2) - 1
+    renderBlocks.splice(insertAfter + 1, 0, { type: "midcta" })
+  }
+
   return (
     <main>
       <div className="crumbs">
@@ -178,8 +193,21 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
         </div>
       </section>
 
-      {data.blocks.map((b, i) => {
+      {renderBlocks.map((b, i) => {
         switch (b.type) {
+          case "midcta":
+            return (
+              <section key={i} className="band-cta">
+                <div className="band-cta-inner">
+                  <h3>{mc.title}</h3>
+                  <p>{mc.text}</p>
+                  <div className="band-cta-btns">
+                    <a href="#precios" className="btn btn-pop">{mc.cta}</a>
+                    <a href={wa(`Hola! quiero información sobre ${h.title}`)} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">{mc.wa}</a>
+                  </div>
+                </div>
+              </section>
+            )
           case "quickfacts":
             return (
               <div key={i} className="quickfacts">

@@ -1007,3 +1007,17 @@ body.has-book-bar .wa-float { bottom: 94px; }
   .sticky-book-btn { padding: 11px 20px; font-size: 14px; }
   body.has-book-bar .wa-float { bottom: 88px; }
 }
+
+/* Banda CTA reutilizable (home + media pagina de tours) */
+.band-cta { padding: 44px 24px; }
+.band-cta-inner { max-width: 860px; margin: 0 auto; background: rgba(40,194,160,0.09); border: 1px solid rgba(40,194,160,0.32); border-radius: 24px; padding: 48px 36px; text-align: center; }
+.band-cta .kicker { display: block; margin-bottom: 12px; }
+.band-cta h3 { font-size: clamp(24px,3.4vw,36px); color: var(--sand); line-height: 1.16; margin: 0 0 12px; }
+.band-cta p { color: var(--sand-dim); max-width: 540px; margin: 0 auto 28px; font-size: 16px; line-height: 1.55; }
+.band-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 600px) {
+  .band-cta { padding: 32px 18px; }
+  .band-cta-inner { padding: 36px 22px; }
+  .band-cta-btns { width: 100%; }
+  .band-cta-btns .btn { width: 100%; justify-content: center; }
+}
