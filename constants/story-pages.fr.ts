@@ -770,7 +770,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				cards: [
 					{
 						name: "Nage avec les requins-baleines",
-						amountMxn: 1800,
+						amountMxn: 2300,
 						amountNote: "/ personne",
 						desc: "Une expérience adaptée à presque toute la famille, sans expérience préalable de snorkeling nécessaire.",
 						items: [

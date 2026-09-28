@@ -770,7 +770,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				cards: [
 					{
 						name: "Swim with whale sharks",
-						amountMxn: 1800,
+						amountMxn: 2300,
 						amountNote: "/ person",
 						desc: "An experience suitable for almost the whole family, with no prior snorkeling experience needed.",
 						items: [

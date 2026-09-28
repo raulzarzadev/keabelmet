@@ -169,7 +169,7 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "拼团行程",
-					amountMxn: 1800,
+					amountMxn: 2300,
 					amountNote: "/ 每人",
 					items: [
 						"拼乘小艇交通",

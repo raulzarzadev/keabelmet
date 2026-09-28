@@ -769,7 +769,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				cards: [
 					{
 						name: "与鲸鲨共游",
-						amountMxn: 1800,
+						amountMxn: 2300,
 						amountNote: "/ 人",
 						desc: "一项几乎适合全家人的体验,无需先前的浮潜经验。",
 						items: [

@@ -774,7 +774,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				cards: [
 					{
 						name: "Nado con tiburón ballena",
-						amountMxn: 1800,
+						amountMxn: 2300,
 						amountNote: "/ persona",
 						desc: "Una experiencia apta para casi toda la familia, sin necesidad de experiencia previa en snorkel.",
 						items: [
