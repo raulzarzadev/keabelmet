@@ -169,7 +169,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Shared tour",
-					amountMxn: 1800,
+					amountMxn: 2300,
 					amountNote: "/ person",
 					items: [
 						"Shared panga transport",

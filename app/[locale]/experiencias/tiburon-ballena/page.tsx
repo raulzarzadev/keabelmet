@@ -30,7 +30,7 @@ export default async function TiburonBallenaPage({ params }: { params: Promise<{
       description: seo.description,
       image: `${SITE_URL}/whale-shark-swimming.jpg`,
       url,
-      priceMxn: 1800,
+      priceMxn: 2300,
       touristType: ["Snorkeling", "Wildlife", "Family"],
       validFrom: `${year}-11-01`,
       validThrough: `${year + 1}-03-31`,
