@@ -228,7 +228,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* CTA BAND */}
-      <section className="band-cta">
+      <section className="band-cta band-cta-photo">
         <div className="band-cta-inner">
           <span className="kicker">{hc.kicker}</span>
           <h3>{hc.title}</h3>
