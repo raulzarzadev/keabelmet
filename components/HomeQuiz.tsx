@@ -480,8 +480,94 @@ const zh: QuizDict = {
   },
 }
 
-/** ES, EN, FR y ZH nativos. */
-const dicts: Partial<Record<Locale, QuizDict>> & { es: QuizDict } = { es, en, fr, zh }
+const ca: QuizDict = {
+  badge: "No saps què triar?",
+  kicker: "Troba la teva expedició",
+  title: "Ets a La Paz i no saps quin tour fer?",
+  sub: "Respon 4 preguntes ràpides —incloent el teu mes de viatge— i et diem quina expedició et convé més segons la temporada real de cadascuna.",
+  note: "Triga 30 segons. Zero compromís.",
+  q1: "1. Ja saps bussejar?",
+  q1opts: [
+    { value: "beginner_diver", label: "Mai he bussejat i no sé què esperar" },
+    { value: "surface", label: "No bussejo, prefereixo quedar-me a la superfície / snorkel" },
+    { value: "certified_diver", label: "Sí, tinc certificació de busseig" },
+    { value: "wildlife_watch", label: "No m'interessa l'aigua, vull veure fauna des de la barca" },
+    { value: "", label: "No n'estic segur/a, sorprèn-me", subtle: true },
+  ],
+  q2: "2. Què t'emociona més veure?",
+  q2opts: [
+    { value: "whales", label: "Balenes grises (mares i cries, molt de prop)" },
+    { value: "sea_lions", label: "Lleons marins jugant al teu costat" },
+    { value: "reef_sharks", label: "Escull de coral, taurons i bancs de peixos" },
+    { value: "adrenaline", label: "Adrenalina pura: marlins caçant sardines" },
+    { value: "mobulas_dolphins", label: "Móbules volant i dofins escortant la barca" },
+    { value: "whale_shark", label: "Nedar al costat del peix més gran del món" },
+    { value: "", label: "No n'estic segur/a, sorprèn-me", subtle: true },
+  ],
+  q3: "3. Quant temps tens disponible?",
+  q3opts: [
+    { value: "half_day", label: "Mig dia (matí o tarda)" },
+    { value: "full_day", label: "Dia complet" },
+    { value: "", label: "Qualsevol, m'adapto", subtle: true },
+  ],
+  q4: "4. Quin mes viatges?",
+  months: ["Gen", "Feb", "Març", "Abr", "Maig", "Juny", "Jul", "Ag", "Set", "Oct", "Nov", "Des"],
+  back: "← Tornar",
+  eyebrow: "La teva expedició ideal",
+  view: "Veure expedició",
+  book: "Reservar per WhatsApp",
+  alts: "També et podria agradar",
+  reset: "↺ Tornar a començar",
+  perPerson: "per persona",
+  certified: "Certificat",
+  discovery: "Discovery",
+  tours: {
+    "la-ventana": {
+      name: "Ocean Safari La Ventana",
+      reason: "Mitja jornada en barca amb móbules saltant i albiraments sorpresa de balenes i dofins — ideal si no bussejes i vols adrenalina en poc temps.",
+      waText: "Hola! vull reservar Ocean Safari La Ventana",
+    },
+    "bahia-magdalena": {
+      name: "Safari Bahía Magdalena",
+      reason: "Un dia complet en mar obert veient el Sardine Run: milers de sardines, marlins caçant i balenes alimentant-se. Només passa dos mesos l'any.",
+      waText: "Hola! vull reservar Safari Bahía Magdalena",
+    },
+    "ballena-gris": {
+      name: "Balena Grisa · Puerto Chale",
+      reason: "Trobades properes amb mares i cries de balena grisa a les seves aigües de criança — dels albiraments més emotius de Baixa Califòrnia Sud.",
+      waText: "Hola! vull reservar Balena Grisa Puerto Chale",
+    },
+    "tiburon-ballena": {
+      name: "Tauró Balena",
+      reason: "Snorkel de mig dia per nedar al costat del peix més gran del món — perfecte si tens poc temps i vols alguna cosa inoblidable.",
+      waText: "Hola! vull reservar Tauró Balena",
+    },
+    "espiritu-santo-dia": {
+      name: "Tour Snorkel Illa Espíritu Santo",
+      reason: "Snorkel tot l'any amb una de les colònies de lleons marins més grans del Golf, platges verges i pícnic inclòs.",
+      seasonNotes: "De juny a agost els lleons nadons acabats de néixer restringeixen el nedar — s'observa sense entrar a l'aigua per la seva seguretat.",
+      waText: "Hola! vull reservar Illa Espíritu Santo",
+    },
+    "cabo-pulmo": {
+      name: "Submarinisme Cabo Pulmo",
+      reason: "L'únic escull de coral viu del Golf de Califòrnia — 25.000 anys de coral, taurons toro i bancs massius, tot l'any.",
+      waText: "Hola! vull reservar Submarinisme a Cabo Pulmo",
+    },
+    "espiritu-santo-buceo": {
+      name: "Submarinisme Illa Espíritu Santo",
+      reason: "Busseig al costat de lleons marins curiosos i vaixells enfonsats en un Patrimoni UNESCO — la combinació de busseig i fauna més juganera de La Paz.",
+      waText: "Hola! vull reservar Submarinisme a l'Illa Espíritu Santo",
+    },
+    "scuba-discovery": {
+      name: "Scuba Discovery des de la platja",
+      reason: "La teva primera vegada sota l'aigua, sense certificació, màxim 6 metres de profunditat i un instructor tota l'estona amb tu.",
+      waText: "Hola! vull reservar Scuba Discovery des de la platja",
+    },
+  },
+}
+
+/** ES, EN, FR, ZH y CA nativos. */
+const dicts: Partial<Record<Locale, QuizDict>> & { es: QuizDict } = { es, en, fr, zh, ca }
 
 function waLink(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`

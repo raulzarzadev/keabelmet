@@ -10,7 +10,7 @@ import { SITE_URL, FROM, OWNER_EMAIL, heroUrl, type OwnerNotifyData } from "@/li
  */
 
 function dayLabel(n: number, locale: string): string {
-	const words: Record<string, [string, string]> = { es: ["día", "días"], en: ["day", "days"], fr: ["jour", "jours"], zh: ["天", "天"] }
+	const words: Record<string, [string, string]> = { es: ["día", "días"], en: ["day", "days"], fr: ["jour", "jours"], zh: ["天", "天"], ca: ["dia", "dies"] }
 	const [s, p] = words[locale] ?? words.es
 	return `${n} ${n === 1 ? s : p}`
 }
@@ -20,6 +20,7 @@ const remT: Record<string, { subject: (dl: string) => string; heading: (dl: stri
 	en: { subject: (dl) => `🌊 Your Keabelmet adventure is in ${dl}`, heading: (dl) => `Only ${dl} to go!`, hello: "Hi", intro: "Your expedition is almost here. A quick reminder with the essentials.", bringTitle: "What to bring", tour: "Expedition", date: "Date", people: "People", wa: "Coordinate on WhatsApp", voucher: "View my voucher", footer: "Keabelmet Expeditions · La Paz, Baja California Sur" },
 	fr: { subject: (dl) => `🌊 Votre aventure Keabelmet est dans ${dl}`, heading: (dl) => `Plus que ${dl} !`, hello: "Bonjour", intro: "Votre expédition approche. Un petit rappel avec l'essentiel.", bringTitle: "Quoi apporter", tour: "Expédition", date: "Date", people: "Personnes", wa: "Coordonner sur WhatsApp", voucher: "Voir mon voucher", footer: "Keabelmet Expeditions · La Paz, Basse-Californie du Sud" },
 	zh: { subject: (dl) => `🌊 您的 Keabelmet 探险将在 ${dl}后开始`, heading: (dl) => `还有 ${dl}!`, hello: "你好", intro: "您的探险即将开始。这里是重点提醒。", bringTitle: "需要携带", tour: "探险项目", date: "日期", people: "人数", wa: "通过 WhatsApp 协调", voucher: "查看我的凭证", footer: "Keabelmet Expeditions · 拉巴斯,南下加利福尼亚" },
+	ca: { subject: (dl) => `🌊 La teva aventura Keabelmet és d'aquí a ${dl}`, heading: (dl) => `Falten ${dl}!`, hello: "Hola", intro: "Ja gairebé és la teva expedició. Aquí un recordatori amb l'essencial.", bringTitle: "Què portar", tour: "Expedició", date: "Data", people: "Persones", wa: "Coordinar per WhatsApp", voucher: "Veure el meu voucher", footer: "Keabelmet Expeditions · La Paz, Baixa Califòrnia Sud" },
 }
 
 export async function sendClientReminder(d: OwnerNotifyData, daysBefore: number): Promise<{ ok: boolean; id?: string; error?: string }> {

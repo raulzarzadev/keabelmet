@@ -24,6 +24,7 @@ const rideLineByLocale: Record<string, string> = {
 	en: "Round-trip ride La Paz ⇄ La Ventana",
 	fr: "Transfert aller-retour La Paz ⇄ La Ventana",
 	zh: "往返接送 拉巴斯 ⇄ 拉文塔纳",
+	ca: "Transport d'anada i tornada La Paz ⇄ La Ventana",
 }
 
 /** Foto principal por expedición (misma que el hero de cada página). */
@@ -90,6 +91,17 @@ const t: Record<string, {
 		cancel: "填错了或需要更改日期?请通过 WhatsApp 联系我们,我们会为您处理。",
 		footer: "Keabelmet Expeditions · 拉巴斯,南下加利福尼亚",
 		includesTitle: "您的体验包含", follow: "关注我们", addCalendar: "添加到 Google 日历",
+	},
+	ca: {
+		subject: "La teva reserva a Keabelmet està confirmada",
+		hello: "Hola", confirmed: "Reserva confirmada!",
+		intro: "Gràcies per reservar amb nosaltres. Guarda aquest correu: coordinarem la data per WhatsApp segons disponibilitat.",
+		folio: "Foli de reserva", tour: "Expedició", date: "Data sol·licitada", people: "Persones", total: "Total pagat",
+		requested: "sol·licitada", note: "La data és una sol·licitud; la confirmem segons disponibilitat.",
+		wa: "Confirmar per WhatsApp", voucher: "Veure el meu voucher",
+		cancel: "T'has equivocat o necessites canviar la data? Escriu-nos per WhatsApp i ho resolem.",
+		footer: "Keabelmet Expeditions · La Paz, Baixa Califòrnia Sud",
+		includesTitle: "Què inclou la teva experiència", follow: "Segueix-nos", addCalendar: "Afegir a Google Calendar",
 	},
 }
 
