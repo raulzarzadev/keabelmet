@@ -1021,3 +1021,6 @@ body.has-book-bar .wa-float { bottom: 94px; }
   .band-cta-btns { width: 100%; }
   .band-cta-btns .btn { width: 100%; justify-content: center; }
 }
+
+/* Banda CTA del home con foto de fondo */
+.band-cta-photo .band-cta-inner { background-image: linear-gradient(rgba(9,23,32,0.78), rgba(9,23,32,0.85)), url("/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg"); background-size: cover; background-position: center; border-color: rgba(40,194,160,0.45); }
