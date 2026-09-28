@@ -3,6 +3,7 @@ import type { Locale } from "@/lib/i18n"
 import { storyPagesEn } from "./story-pages.en"
 import { storyPagesFr } from "./story-pages.fr"
 import { storyPagesZh } from "./story-pages.zh"
+import { storyPagesCa } from "./story-pages.ca"
 
 /**
  * Contenido narrativo (es) de las páginas de expedición, versión larga de
@@ -1937,7 +1938,7 @@ export function getStoryPage(slug: string, locale: Locale): StoryPageData | unde
 		en: storyPagesEn,
 		fr: storyPagesFr,
 		zh: storyPagesZh,
-		ca: storyPages,
+		ca: { ...storyPages, ...storyPagesCa },
 	}
 	return byLocale[locale]?.[slug]
 }
