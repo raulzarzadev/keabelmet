@@ -1,15 +1,25 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, type ReactNode } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { locales, type Locale, pathnameForLocale } from "@/lib/i18n"
 
-const localeLabels: Record<Locale, { label: string; name: string; flag: string }> = {
+const senyera = (
+  <svg viewBox="0 0 27 18" width="18" height="12" style={{ borderRadius: 2, verticalAlign: "-1px", flex: "none" }} aria-hidden="true">
+    <rect width="27" height="18" fill="#FCDD09" />
+    <rect y="2" width="27" height="2" fill="#DA121A" />
+    <rect y="6" width="27" height="2" fill="#DA121A" />
+    <rect y="10" width="27" height="2" fill="#DA121A" />
+    <rect y="14" width="27" height="2" fill="#DA121A" />
+  </svg>
+)
+
+const localeLabels: Record<Locale, { label: string; name: string; flag: ReactNode }> = {
   es: { label: "ES", name: "Español", flag: "\u{1F1F2}\u{1F1FD}" },
   en: { label: "EN", name: "English", flag: "\u{1F1FA}\u{1F1F8}" },
   fr: { label: "FR", name: "Français", flag: "\u{1F1EB}\u{1F1F7}" },
   zh: { label: "ZH", name: "中文", flag: "\u{1F1E8}\u{1F1F3}" },
-  ca: { label: "CA", name: "Català", flag: "\u{1F3F4}\u{E0065}\u{E0073}\u{E0063}\u{E0074}\u{E007F}" },
+  ca: { label: "CA", name: "Català", flag: senyera },
 }
 
 export default function LanguageSelector({ locale }: { locale: Locale }) {
