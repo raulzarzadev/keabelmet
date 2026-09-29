@@ -673,7 +673,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"接下来就是大家来此的目的所在。在几分钟内,我们与鲸鲨一起游泳,始终保持允许的距离并遵循向导的指示。之后我们回到船上,再次开始搜寻。",
 							"每次相遇都很短暂,但很少有人会忘记它。",
 						],
-						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "鲸鲨与保持安全距离的浮潜者的航拍，拉巴斯" },
+						media: { src: "/tiburon-ballena-snorkel-h.jpg", alt: "鲸鲨与保持安全距离的浮潜者的航拍，拉巴斯" },
 					},
 				],
 			},

@@ -418,7 +418,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Allà passa el que tothom ve a buscar. Durant uns minuts nedem al costat del tauró balena, sempre respectant la distància permesa i seguint les indicacions del guia. Després tornem a pujar a l'embarcació i comencem de nou la recerca.",
 							"Cada trobada dura poc. Però molt poques persones l'obliden.",
 						],
-						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vista aèria del tauró balena amb snorkelistes a distància respectuosa a La Paz" },
+						media: { src: "/tiburon-ballena-snorkel-h.jpg", alt: "Vista aèria del tauró balena amb snorkelistes a distància respectuosa a La Paz" },
 					},
 				],
 			},

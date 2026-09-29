@@ -674,7 +674,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"Then comes what everyone comes for. For a few minutes we swim beside the whale shark, always respecting the permitted distance and following the guide's instructions. Then we climb back aboard and begin the search again.",
 							"Each encounter is brief. But very few people forget it.",
 						],
-						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Aerial view of the whale shark with snorkelers at a respectful distance in La Paz" },
+						media: { src: "/tiburon-ballena-snorkel-h.jpg", alt: "Aerial view of the whale shark with snorkelers at a respectful distance in La Paz" },
 					},
 				],
 			},

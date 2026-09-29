@@ -679,7 +679,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Ahí sucede lo que todos vienen a buscar. Durante unos minutos nadamos junto al tiburón ballena, siempre respetando la distancia permitida y siguiendo las indicaciones del guía. Después volvemos a subir a la embarcación y comenzamos de nuevo la búsqueda.",
 							"Cada encuentro dura poco. Pero muy pocas personas lo olvidan.",
 						],
-						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vista aérea del tiburón ballena con snorkelistas a distancia respetuosa en La Paz" },
+						media: { src: "/tiburon-ballena-snorkel-h.jpg", alt: "Vista aérea del tiburón ballena con snorkelistas a distancia respetuosa en La Paz" },
 					},
 				],
 			},
