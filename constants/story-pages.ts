@@ -671,7 +671,7 @@ export const storyPages: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Una vez en el agua comienza la búsqueda. No seguimos una ruta fija: localizamos a los ejemplares que se encuentran alimentándose cerca de la superficie. Cuando encontramos uno, esperamos nuestro turno y nos preparamos para entrar al agua.",
 						],
-						media: { suggest: "Vista desde la embarcación del guía señalando la aleta de un tiburón ballena en la superficie, con el grupo listo con snorkel." },
+						media: { src: "/tiburon-ballena-busqueda-lancha.jpg", alt: "Vista aérea de un snorkelista en el agua haciendo la señal de OK junto a la panga durante la búsqueda del tiburón ballena" },
 					},
 					{
 						title: "Unos minutos junto al gigante",

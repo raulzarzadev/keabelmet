@@ -666,7 +666,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Une fois sur l'eau, la recherche commence. Nous ne suivons pas d'itinéraire fixe : nous localisons les spécimens qui se nourrissent près de la surface. Quand nous en trouvons un, nous attendons notre tour et nous préparons à entrer dans l'eau.",
 						],
-						media: { suggest: "Vue depuis le bateau du guide indiquant l'aileron d'un requin-baleine à la surface, avec le groupe prêt avec palmes et tuba." },
+						media: { src: "/tiburon-ballena-busqueda-lancha.jpg", alt: "Vue aérienne d'un plongeur en apnée dans l'eau faisant le signe OK près de la panga pendant la recherche du requin-baleine" },
 					},
 					{
 						title: "Quelques minutes aux côtés du géant",

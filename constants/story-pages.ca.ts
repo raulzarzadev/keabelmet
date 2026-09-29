@@ -410,7 +410,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Un cop a l'aigua comença la recerca. No seguim una ruta fixa: localitzem els exemplars que s'estan alimentant a prop de la superfície. Quan en trobem un, esperem el nostre torn i ens preparem per entrar a l'aigua.",
 						],
-						media: { suggest: "Vista des de l'embarcació del guia assenyalant l'aleta d'un tauró balena a la superfície, amb el grup a punt amb snorkel." },
+						media: { src: "/tiburon-ballena-busqueda-lancha.jpg", alt: "Vista aèria d'un snorkelista a l'aigua fent el senyal d'OK al costat de la panga durant la cerca del tauró balena" },
 					},
 					{
 						title: "Uns minuts al costat del gegant",
