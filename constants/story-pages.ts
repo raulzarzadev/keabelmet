@@ -615,6 +615,7 @@ export const storyPages: Record<string, StoryPageData> = {
 		breadcrumb: "Tiburón Ballena",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			heroVideo: "/tiburon-ballena-gopro.mp4",
 			alt: "Tiburón ballena nadando cerca de la superficie en La Paz",
 			kicker: "La Paz · Tiburón Ballena",
 			title: "Nada junto al pez más grande del planeta",
@@ -678,7 +679,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Ahí sucede lo que todos vienen a buscar. Durante unos minutos nadamos junto al tiburón ballena, siempre respetando la distancia permitida y siguiendo las indicaciones del guía. Después volvemos a subir a la embarcación y comenzamos de nuevo la búsqueda.",
 							"Cada encuentro dura poco. Pero muy pocas personas lo olvidan.",
 						],
-						media: { suggest: "Nadador con snorkel a distancia respetuosa junto al tiburón ballena, tomada desde la superficie con luz turquesa." },
+						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vista aérea del tiburón ballena con snorkelistas a distancia respetuosa en La Paz" },
 					},
 				],
 			},
@@ -794,7 +795,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Tiburón ballena filmado bajo el agua en La Paz" },
+				media: { suggest: "Silueta del tiburón ballena visto desde abajo contra la luz de la superficie, sensación de calma y escala." },
 				quote: "Puede que llegues pensando en su tamaño. Pero probablemente te vayas recordando su tranquilidad.",
 				align: "bottom",
 			},

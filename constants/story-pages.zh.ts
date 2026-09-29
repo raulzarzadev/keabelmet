@@ -609,6 +609,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		breadcrumb: "鲸鲨",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			heroVideo: "/tiburon-ballena-gopro.mp4",
 			alt: "鲸鲨在拉巴斯近水面游动",
 			kicker: "拉巴斯 · 鲸鲨",
 			title: "与地球上最大的鱼一起游泳",
@@ -672,7 +673,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"接下来就是大家来此的目的所在。在几分钟内,我们与鲸鲨一起游泳,始终保持允许的距离并遵循向导的指示。之后我们回到船上,再次开始搜寻。",
 							"每次相遇都很短暂,但很少有人会忘记它。",
 						],
-						media: { suggest: "浮潜者在鲸鲨旁保持尊重距离,从水面拍摄,呈现绿松石色光线。" },
+						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "鲸鲨与保持安全距离的浮潜者的航拍，拉巴斯" },
 					},
 				],
 			},
@@ -788,7 +789,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "在拉巴斯水下拍摄的鲸鲨" },
+				media: { suggest: "从下方逆光拍摄鲸鲨在水面附近的剪影，营造平静与规模感。" },
 				quote: "你可能带着对它体型的想象而来,但很可能会带着对它从容的回忆离开。",
 				align: "bottom",
 			},

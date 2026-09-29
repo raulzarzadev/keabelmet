@@ -610,6 +610,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 		breadcrumb: "Whale Shark",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			heroVideo: "/tiburon-ballena-gopro.mp4",
 			alt: "Whale shark swimming near the surface in La Paz",
 			kicker: "La Paz · Whale Shark",
 			title: "Swim beside the largest fish on the planet",
@@ -673,7 +674,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"Then comes what everyone comes for. For a few minutes we swim beside the whale shark, always respecting the permitted distance and following the guide's instructions. Then we climb back aboard and begin the search again.",
 							"Each encounter is brief. But very few people forget it.",
 						],
-						media: { suggest: "Snorkeler at a respectful distance beside the whale shark, shot from the surface with turquoise light." },
+						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Aerial view of the whale shark with snorkelers at a respectful distance in La Paz" },
 					},
 				],
 			},
@@ -789,7 +790,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Whale shark filmed underwater in La Paz" },
+				media: { suggest: "Silhouette of the whale shark seen from below against the surface light, a sense of calm and scale." },
 				quote: "You may arrive thinking about its size. But you'll probably leave remembering its calm.",
 				align: "bottom",
 			},

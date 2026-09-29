@@ -354,6 +354,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 		breadcrumb: "Tauró Balena",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			heroVideo: "/tiburon-ballena-gopro.mp4",
 			alt: "Tauró balena nedant a prop de la superfície a La Paz",
 			kicker: "La Paz · Tauró Balena",
 			title: "Neda al costat del peix més gran del planeta",
@@ -417,7 +418,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Allà passa el que tothom ve a buscar. Durant uns minuts nedem al costat del tauró balena, sempre respectant la distància permesa i seguint les indicacions del guia. Després tornem a pujar a l'embarcació i comencem de nou la recerca.",
 							"Cada trobada dura poc. Però molt poques persones l'obliden.",
 						],
-						media: { suggest: "Nedador amb snorkel a distància respectuosa al costat del tauró balena, presa des de la superfície amb llum turquesa." },
+						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vista aèria del tauró balena amb snorkelistes a distància respectuosa a La Paz" },
 					},
 				],
 			},
@@ -533,7 +534,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Tauró balena filmat sota l'aigua a La Paz" },
+				media: { suggest: "Silueta del tauró balena vist des de baix contra la llum de la superfície, sensació de calma i escala." },
 				quote: "Potser arribes pensant en la seva mida. Però probablement te'n vagis recordant la seva tranquil·litat.",
 				align: "bottom",
 			},
