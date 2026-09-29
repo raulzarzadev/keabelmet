@@ -610,6 +610,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 		breadcrumb: "Requin-baleine",
 		hero: {
 			image: "/tiburon-ballena-drone.jpg",
+			heroVideo: "/tiburon-ballena-gopro.mp4",
 			alt: "Requin-baleine nageant près de la surface à La Paz",
 			kicker: "La Paz · Requin-baleine",
 			title: "Nagez aux côtés du plus grand poisson de la planète",
@@ -673,7 +674,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"C'est là que se produit ce que tout le monde vient chercher. Pendant quelques minutes, nous nageons aux côtés du requin-baleine, toujours en respectant la distance autorisée et en suivant les indications du guide. Puis nous remontons à bord et recommençons la recherche.",
 							"Chaque rencontre est brève. Mais très peu de gens l'oublient.",
 						],
-						media: { suggest: "Nageur avec tuba à distance respectueuse du requin-baleine, prise depuis la surface avec une lumière turquoise." },
+						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vue aérienne du requin-baleine avec des apnéistes à distance respectueuse à La Paz" },
 					},
 				],
 			},
@@ -789,7 +790,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Requin-baleine filmé sous l'eau à La Paz" },
+				media: { suggest: "Silhouette du requin-baleine vue d'en dessous à contre-jour de la surface, sensation de calme et d'échelle." },
 				quote: "Vous arriverez peut-être en pensant à sa taille. Mais vous repartirez probablement en vous souvenant de sa tranquillité.",
 				align: "bottom",
 			},
