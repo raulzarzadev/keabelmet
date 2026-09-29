@@ -648,7 +648,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Fotografía cenital gigante del tiburón ballena ocupando todo el ancho de la pantalla, con un nadador pequeño a un lado para dar escala." },
+				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vista aérea del tiburón ballena con dos nadadores a distancia respetuosa en La Paz" },
 				quote: "No hace falta tocar algo para recordarlo toda la vida.",
 			},
 			{
@@ -794,7 +794,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Silueta del tiburón ballena visto desde abajo contra la luz de la superficie, sensación de calma y escala." },
+				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Tiburón ballena filmado bajo el agua en La Paz" },
 				quote: "Puede que llegues pensando en su tamaño. Pero probablemente te vayas recordando su tranquilidad.",
 				align: "bottom",
 			},

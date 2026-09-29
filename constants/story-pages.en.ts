@@ -643,7 +643,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Giant overhead photo of the whale shark spanning the full width of the screen, with a small swimmer beside it for scale." },
+				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Aerial view of the whale shark with two swimmers at a respectful distance in La Paz" },
 				quote: "You don't have to touch something to remember it for a lifetime.",
 			},
 			{
@@ -789,7 +789,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Silhouette of the whale shark seen from below against the surface light, a sense of calm and scale." },
+				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Whale shark filmed underwater in La Paz" },
 				quote: "You may arrive thinking about its size. But you'll probably leave remembering its calm.",
 				align: "bottom",
 			},
