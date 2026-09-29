@@ -388,7 +388,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vista aèria del tauró balena amb dos nedadors a distància respectuosa a La Paz" },
+				media: { src: "/tiburon-ballena-drone.jpg", alt: "Vista aèria del tauró balena amb dos nedadors a distància respectuosa a La Paz" },
 				quote: "No cal tocar una cosa per recordar-la tota la vida.",
 			},
 			{

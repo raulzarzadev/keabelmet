@@ -643,7 +643,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "鲸鲨与两名保持安全距离的游泳者的航拍，拉巴斯" },
+				media: { src: "/tiburon-ballena-drone.jpg", alt: "鲸鲨与两名保持安全距离的游泳者的航拍，拉巴斯" },
 				quote: "不必触摸某样东西,才能铭记它一生。",
 			},
 			{

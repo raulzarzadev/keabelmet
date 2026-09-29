@@ -649,7 +649,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vista aérea del tiburón ballena con dos nadadores a distancia respetuosa en La Paz" },
+				media: { src: "/tiburon-ballena-drone.jpg", alt: "Vista aérea del tiburón ballena con dos nadadores a distancia respetuosa en La Paz" },
 				quote: "No hace falta tocar algo para recordarlo toda la vida.",
 			},
 			{

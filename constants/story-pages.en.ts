@@ -644,7 +644,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Aerial view of the whale shark with two swimmers at a respectful distance in La Paz" },
+				media: { src: "/tiburon-ballena-drone.jpg", alt: "Aerial view of the whale shark with two swimmers at a respectful distance in La Paz" },
 				quote: "You don't have to touch something to remember it for a lifetime.",
 			},
 			{

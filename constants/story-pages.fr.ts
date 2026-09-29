@@ -644,7 +644,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vue aérienne du requin-baleine avec deux nageurs à distance respectueuse à La Paz" },
+				media: { src: "/tiburon-ballena-drone.jpg", alt: "Vue aérienne du requin-baleine avec deux nageurs à distance respectueuse à La Paz" },
 				quote: "Il n'est pas nécessaire de toucher quelque chose pour s'en souvenir toute sa vie.",
 			},
 			{
