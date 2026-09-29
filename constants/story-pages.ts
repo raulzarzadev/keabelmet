@@ -1777,7 +1777,7 @@ export const storyPages: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Cuando el mar nos da la oportunidad, entramos al agua. Y nos convertimos en espectadores de uno de los espectáculos naturales más impresionantes del Pacífico mexicano.",
 						],
-						media: { src: "/striped-marlin-underwater.jpg", alt: "Marlín rayado bajo el agua durante el Sardine Run" },
+						media: { src: "/sardine-run-lancha-snorkel.jpg", alt: "Grupo de snorquelistas en la lancha observando el mar antes de entrar al agua en el Sardine Run" },
 					},
 				],
 			},

@@ -1772,7 +1772,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Quan el mar ens dona l'oportunitat, entrem a l'aigua. I ens convertim en espectadors d'un dels espectacles naturals més impressionants del Pacífic mexicà.",
 						],
-						media: { src: "/striped-marlin-underwater.jpg", alt: "Marlí ratllat sota l'aigua durant el Sardine Run" },
+						media: { src: "/sardine-run-lancha-snorkel.jpg", alt: "Grup de submarinistes amb tub a la barca observant el mar abans d'entrar a l'aigua durant el Sardine Run" },
 					},
 				],
 			},
