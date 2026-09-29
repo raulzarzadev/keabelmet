@@ -387,7 +387,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Fotografia zenital gegant del tauró balena ocupant tota l'amplada de la pantalla, amb un nedador petit al costat per donar escala." },
+				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vista aèria del tauró balena amb dos nedadors a distància respectuosa a La Paz" },
 				quote: "No cal tocar una cosa per recordar-la tota la vida.",
 			},
 			{
@@ -533,7 +533,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Silueta del tauró balena vist des de baix contra la llum de la superfície, sensació de calma i escala." },
+				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Tauró balena filmat sota l'aigua a La Paz" },
 				quote: "Potser arribes pensant en la seva mida. Però probablement te'n vagis recordant la seva tranquil·litat.",
 				align: "bottom",
 			},

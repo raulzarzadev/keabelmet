@@ -643,7 +643,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Photographie aérienne géante du requin-baleine occupant toute la largeur de l'écran, avec un nageur à côté pour donner l'échelle." },
+				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "Vue aérienne du requin-baleine avec deux nageurs à distance respectueuse à La Paz" },
 				quote: "Il n'est pas nécessaire de toucher quelque chose pour s'en souvenir toute sa vie.",
 			},
 			{
@@ -789,7 +789,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "Silhouette du requin-baleine vue d'en dessous à contre-jour de la surface, sensation de calme et d'échelle." },
+				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "Requin-baleine filmé sous l'eau à La Paz" },
 				quote: "Vous arriverez peut-être en pensant à sa taille. Mais vous repartirez probablement en vous souvenant de sa tranquillité.",
 				align: "bottom",
 			},

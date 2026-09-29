@@ -642,7 +642,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "巨大的俯拍照片,鲸鲨占据整个屏幕宽度,旁边有一名游泳者作为比例参照。" },
+				media: { src: "/tiburon-ballena-aereo-banner.jpg", alt: "鲸鲨与两名保持安全距离的游泳者的航拍，拉巴斯" },
 				quote: "不必触摸某样东西,才能铭记它一生。",
 			},
 			{
@@ -788,7 +788,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { suggest: "从下方逆光拍摄鲸鲨在水面附近的剪影,营造平静与规模感。" },
+				media: { video: "/tiburon-ballena-gopro.mp4", src: "/tiburon-ballena-gopro-poster.jpg", alt: "在拉巴斯水下拍摄的鲸鲨" },
 				quote: "你可能带着对它体型的想象而来,但很可能会带着对它从容的回忆离开。",
 				align: "bottom",
 			},
