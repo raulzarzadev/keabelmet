@@ -666,7 +666,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Once on the water the search begins. We don't follow a fixed route: we locate the animals feeding near the surface. When we find one, we wait our turn and get ready to enter the water.",
 						],
-						media: { suggest: "View from the boat of the guide pointing out a whale shark's fin at the surface, with the group ready with snorkels." },
+						media: { src: "/tiburon-ballena-busqueda-lancha.jpg", alt: "Aerial view of a snorkeler in the water giving the OK signal next to the panga during the whale shark search" },
 					},
 					{
 						title: "A few minutes beside the giant",

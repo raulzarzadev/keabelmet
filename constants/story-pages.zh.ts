@@ -665,7 +665,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 						paragraphs: [
 							"一到水上,搜寻就开始了。我们不遵循固定路线:我们会定位在水面附近觅食的个体。找到后,我们等待轮到自己,并准备下水。",
 						],
-						media: { suggest: "从船上看向导指出水面上鲸鲨鳍的画面,团队已准备好浮潜装备。" },
+						media: { src: "/tiburon-ballena-busqueda-lancha.jpg", alt: "无人机视角：一名浮潜者在水中打出OK手势，旁边是小船，正在搜寻鲸鲨" },
 					},
 					{
 						title: "与巨兽共处的几分钟",
