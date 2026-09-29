@@ -1772,7 +1772,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 						paragraphs: [
 							"When the sea gives us the chance, we get in the water. And we become spectators of one of the most impressive natural spectacles of the Mexican Pacific.",
 						],
-						media: { src: "/striped-marlin-underwater.jpg", alt: "Striped marlin underwater during the Sardine Run" },
+						media: { src: "/sardine-run-lancha-snorkel.jpg", alt: "Group of snorkelers on the boat watching the sea before entering the water during the Sardine Run" },
 					},
 				],
 			},

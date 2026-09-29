@@ -1771,7 +1771,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 						paragraphs: [
 							"当大海给予我们机会时,我们便下水,成为墨西哥太平洋最令人震撼的自然奇观之一的见证者。",
 						],
-						media: { src: "/striped-marlin-underwater.jpg", alt: "条纹马林鱼在沙丁鱼奇观期间的水下画面" },
+						media: { src: "/sardine-run-lancha-snorkel.jpg", alt: "一群浮潜者在船上观察海面，准备下水（沙丁鱼奇观）" },
 					},
 				],
 			},
