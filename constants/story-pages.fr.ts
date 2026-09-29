@@ -674,7 +674,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"C'est là que se produit ce que tout le monde vient chercher. Pendant quelques minutes, nous nageons aux côtés du requin-baleine, toujours en respectant la distance autorisée et en suivant les indications du guide. Puis nous remontons à bord et recommençons la recherche.",
 							"Chaque rencontre est brève. Mais très peu de gens l'oublient.",
 						],
-						media: { src: "/tiburon-ballena-snorkel.jpg", alt: "Vue aérienne du requin-baleine avec des apnéistes à distance respectueuse à La Paz" },
+						media: { src: "/tiburon-ballena-snorkel-h.jpg", alt: "Vue aérienne du requin-baleine avec des apnéistes à distance respectueuse à La Paz" },
 					},
 				],
 			},
