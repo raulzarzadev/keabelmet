@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { experiences } from "@/constants/experiences"
+import { locales, defaultLocale, type Locale } from "@/lib/i18n"
 
 const baseUrl = "https://www.keabelmet.com"
 
@@ -22,31 +23,30 @@ const experienceRoutes = experiences.map((e) => ({
 
 const routes = [...staticRoutes, ...experienceRoutes]
 
-const localePrefixes = ["", "/en", "/fr", "/zh"]
+// Prefix / hreflang helpers derived from the i18n locale list so new
+// languages (e.g. Catalan) are picked up automatically.
+const prefixFor = (loc: Locale) => (loc === defaultLocale ? "" : `/${loc}`)
+const hreflangFor = (loc: Locale) => (loc === "zh" ? "zh-CN" : loc)
+const urlFor = (path: string, loc: Locale) => {
+  const prefix = prefixFor(loc)
+  return path === "/" ? `${baseUrl}${prefix || "/"}` : `${baseUrl}${prefix}${path}`
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   for (const route of routes) {
-    for (const prefix of localePrefixes) {
-      const url = route.path === "/"
-        ? `${baseUrl}${prefix || "/"}`
-        : `${baseUrl}${prefix}${route.path}`
+    const languages: Record<string, string> = {}
+    for (const loc of locales) languages[hreflangFor(loc)] = urlFor(route.path, loc)
+    languages["x-default"] = urlFor(route.path, defaultLocale)
 
+    for (const loc of locales) {
       entries.push({
-        url,
+        url: urlFor(route.path, loc),
         lastModified: new Date(),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: {
-          languages: {
-            es: `${baseUrl}${route.path === "/" ? "/" : route.path}`,
-            en: `${baseUrl}/en${route.path === "/" ? "" : route.path}`,
-            fr: `${baseUrl}/fr${route.path === "/" ? "" : route.path}`,
-            "zh-CN": `${baseUrl}/zh${route.path === "/" ? "" : route.path}`,
-            "x-default": `${baseUrl}${route.path === "/" ? "/" : route.path}`,
-          },
-        },
+        alternates: { languages },
       })
     }
   }

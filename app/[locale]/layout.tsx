@@ -75,12 +75,15 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
+    // pageMeta se esparce primero; el title/description del home se fijan
+    // DESPUES para que no los sobre-escriba el title generico de pageMeta
+    // (antes el <title> quedaba solo "Keabelmet Expeditions", sin keywords).
+    ...pageMeta({ path: "/", locale, title: m.ogTitle, description: m.ogDescription }),
     title: {
       default: m.title,
       template: "%s | Keabelmet Expeditions",
     },
     description: m.description,
-    ...pageMeta({ path: "/", locale, title: m.ogTitle, description: m.ogDescription }),
   }
 }
 
