@@ -18,15 +18,26 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
   const [currency, setCurrencyState] = useState<Currency>(currencyConfig.base)
 
   useEffect(() => {
-    const saved = localStorage.getItem("currency") as Currency | null
-    if (saved && currencyConfig.available.includes(saved)) {
-      setCurrencyState(saved)
+    // Algunos navegadores in-app (Instagram/Facebook) bloquean localStorage y
+    // lanzan excepción al leerlo; sin este try/catch el error en el efecto
+    // desmontaría todo el árbol de React y el header quedaría "congelado".
+    try {
+      const saved = localStorage.getItem("currency") as Currency | null
+      if (saved && currencyConfig.available.includes(saved)) {
+        setCurrencyState(saved)
+      }
+    } catch {
+      // storage no disponible: usamos la moneda base.
     }
   }, [])
 
   function setCurrency(c: Currency) {
     setCurrencyState(c)
-    localStorage.setItem("currency", c)
+    try {
+      localStorage.setItem("currency", c)
+    } catch {
+      // storage no disponible: la preferencia queda solo en memoria.
+    }
   }
 
   return (
