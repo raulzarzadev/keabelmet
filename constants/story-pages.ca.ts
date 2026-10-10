@@ -1534,7 +1534,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Faràs una immersió d'aproximadament 50 minuts, arribant a una profunditat màxima de 6 metres, sempre acompanyat pel teu instructor. És la profunditat perfecta per gaudir de la sensació de respirar sota l'aigua amb total tranquil·litat.",
 							"No cal baixar més profund per enamorar-se de l'oceà.",
 						],
-						media: { src: "/scuba-discovery-shaka.jpg", alt: "Submarinista fent el senyal de shaka de cara a la càmera en la seva primera immersió" },
+						media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grup de submarinistes contents a la platja amb el seu equip després de bussejar a La Paz" },
 					},
 				],
 			},
@@ -1690,7 +1690,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grup de submarinistes contents a la platja amb el seu equip després de bussejar a La Paz" },
+				media: { src: "/scuba-discovery-shaka.jpg", alt: "Submarinista fent el senyal de shaka de cara a la càmera en la seva primera immersió" },
 				quote: "La primera respiració. Aquell instant en què vas deixar de pensar si podies fer-ho… i vas començar a gaudir.",
 				align: "bottom",
 			},
