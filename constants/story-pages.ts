@@ -1476,8 +1476,8 @@ export const storyPages: Record<string, StoryPageData> = {
 	"scuba-discovery": {
 		breadcrumb: "Scuba Discovery desde Playa",
 		hero: {
-			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-			alt: "Primera experiencia de buceo en La Paz",
+			image: "/scuba-discovery-glide.jpg",
+			alt: "Buzo principiante planeando sobre el arrecife en su primer buceo en La Paz",
 			kicker: "La Paz · Scuba Discovery",
 			title: "Imagina respirar bajo el agua por primera vez",
 			text: "Suena extraño. Y durante los primeros segundos también se siente así. Tu cerebro lleva toda la vida diciéndote que solo puedes respirar en la superficie. Hasta que das esa primera inhalación bajo el agua. Y descubres que funciona. A partir de ese momento, todo cambia. No necesitas experiencia. Solo curiosidad.",
@@ -1509,7 +1509,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/snorkeling-crystal-clear-water.jpg", alt: "Aguas cristalinas ideales para un primer buceo en La Paz" },
+				media: { src: "/scuba-discovery-buddies.jpg", alt: "Dos personas buceando juntas haciendo la seña de OK entre burbujas en La Paz" },
 				quote: "Los sonidos desaparecen. La gravedad deja de sentirse igual. Y el océano se convierte en un mundo del que ahora también formas parte.",
 			},
 			{
@@ -1531,7 +1531,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Después practicamos en un entorno controlado y, cuando te sientas cómodo, comenzamos la aventura. Según las condiciones del día, la actividad se realiza en Playa El Saltito o Cueva de León, dos lugares ideales para un primer contacto por sus aguas tranquilas y poca profundidad.",
 							"Siempre estarás acompañado por un instructor certificado. Nunca irás solo.",
 						],
-						media: { suggest: "Instructor practicando señales con un principiante en aguas someras y tranquilas de una playa de La Paz." },
+						media: { video: "/scuba-discovery-senales.mp4", src: "/scuba-discovery-senales-poster.jpg", alt: "Instructor enseñando las señales de buceo a una principiante en aguas someras de La Paz" },
 					},
 					{
 						title: "Tu primera inmersión",
@@ -1539,7 +1539,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Realizarás una inmersión de aproximadamente 50 minutos, alcanzando una profundidad máxima de 6 metros, siempre acompañado por tu instructor. Es la profundidad perfecta para disfrutar la sensación de respirar bajo el agua con total tranquilidad.",
 							"No hace falta bajar más profundo para enamorarse del océano.",
 						],
-						media: { src: "/buceo-la-paz-buzo.jpg", alt: "Primer buceo guiado en La Paz" },
+						media: { src: "/scuba-discovery-shaka.jpg", alt: "Buzo haciendo la seña de shaka frente a la cámara en su primera inmersión" },
 					},
 				],
 			},
@@ -1590,9 +1590,9 @@ export const storyPages: Record<string, StoryPageData> = {
 				title: "Así se ve tu primera aventura",
 				cols: 3,
 				items: [
-					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Buzo principiante haciendo la seña de OK durante la inmersión" },
-					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Buzo junto a un gran cardumen en aguas de La Paz" },
-					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Buzo descendiendo hacia un banco de peces" },
+					{ suggest: "Buzo bajo el agua durante el Scuba Discovery (foto por agregar)" },
+					{ suggest: "Encuentro con fauna marina en el primer buceo (foto por agregar)" },
+					{ suggest: "Descenso guiado hacia el arrecife (foto por agregar)" },
 				],
 			},
 			{
@@ -1695,14 +1695,14 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/sea-lions-swimming-underwater.jpg", alt: "Vida marina bajo la superficie en La Paz" },
+				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grupo de buzos felices en la playa con su equipo tras bucear en La Paz" },
 				quote: "La primera respiración. Ese instante en el que dejaste de pensar si podías hacerlo… y comenzaste a disfrutar.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-				alt: "Buceo introductorio en La Paz",
+				image: "/scuba-discovery-equipo.jpg",
+				alt: "Grupo en trajes de neopreno sonriendo en la playa antes de bucear en La Paz",
 				title: "Descubrir el océano desde dentro no se parece a nada. Y una vez que lo haces, es muy difícil volver a mirarlo igual.",
 				text: "Cuéntanos cuándo visitas La Paz y reserva tu Scuba Discovery: tu primera respiración bajo el agua, sin experiencia previa.",
 				primaryLabel: "Consultar disponibilidad",

@@ -1471,8 +1471,8 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 	"scuba-discovery": {
 		breadcrumb: "Scuba Discovery des de la platja",
 		hero: {
-			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-			alt: "Primera experiència de busseig a La Paz",
+			image: "/scuba-discovery-glide.jpg",
+			alt: "Submarinista principiant lliscant sobre l'escull en la seva primera immersió a La Paz",
 			kicker: "La Paz · Scuba Discovery",
 			title: "Imagina respirar sota l'aigua per primera vegada",
 			text: "Sona estrany. I durant els primers segons també se sent així. El teu cervell porta tota la vida dient-te que només pots respirar a la superfície. Fins que fas aquella primera inhalació sota l'aigua. I descobreixes que funciona. A partir d'aquell moment, tot canvia. No necessites experiència. Només curiositat.",
@@ -1504,7 +1504,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/snorkeling-crystal-clear-water.jpg", alt: "Aigües cristal·lines ideals per a un primer busseig a La Paz" },
+				media: { src: "/scuba-discovery-buddies.jpg", alt: "Dues persones submarinistes fent el senyal d'OK entre bombolles a La Paz" },
 				quote: "Els sons desapareixen. La gravetat deixa de sentir-se igual. I l'oceà es converteix en un món del qual ara també formes part.",
 			},
 			{
@@ -1526,7 +1526,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Després practiquem en un entorn controlat i, quan et sentis còmode, comencem l'aventura. Segons les condicions del dia, l'activitat es fa a Playa El Saltito o Cueva de León, dos llocs ideals per a un primer contacte per les seves aigües tranquil·les i poca profunditat.",
 							"Sempre estaràs acompanyat per un instructor certificat. Mai aniràs sol.",
 						],
-						media: { suggest: "Instructor practicant senyals amb un principiant en aigües someres i tranquil·les d'una platja de La Paz." },
+						media: { video: "/scuba-discovery-senales.mp4", src: "/scuba-discovery-senales-poster.jpg", alt: "Instructor ensenyant els senyals de busseig a una principiant en aigües someres a La Paz" },
 					},
 					{
 						title: "La teva primera immersió",
@@ -1534,7 +1534,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Faràs una immersió d'aproximadament 50 minuts, arribant a una profunditat màxima de 6 metres, sempre acompanyat pel teu instructor. És la profunditat perfecta per gaudir de la sensació de respirar sota l'aigua amb total tranquil·litat.",
 							"No cal baixar més profund per enamorar-se de l'oceà.",
 						],
-						media: { src: "/buceo-la-paz-buzo.jpg", alt: "Primer busseig guiat a La Paz" },
+						media: { src: "/scuba-discovery-shaka.jpg", alt: "Submarinista fent el senyal de shaka de cara a la càmera en la seva primera immersió" },
 					},
 				],
 			},
@@ -1585,9 +1585,9 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				title: "Així es veu la teva primera aventura",
 				cols: 3,
 				items: [
-					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Bussejador principiant fent el senyal d'OK durant la immersió" },
-					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Bussejador al costat d'un gran banc de peixos a les aigües de La Paz" },
-					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Bussejador descendint cap a un banc de peixos" },
+					{ suggest: "Submarinista sota l'aigua durant el Scuba Discovery (foto per afegir)" },
+					{ suggest: "Trobada amb fauna marina en la primera immersió (foto per afegir)" },
+					{ suggest: "Descens guiat cap a l'escull (foto per afegir)" },
 				],
 			},
 			{
@@ -1690,14 +1690,14 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/sea-lions-swimming-underwater.jpg", alt: "Vida marina sota la superfície a La Paz" },
+				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grup de submarinistes contents a la platja amb el seu equip després de bussejar a La Paz" },
 				quote: "La primera respiració. Aquell instant en què vas deixar de pensar si podies fer-ho… i vas començar a gaudir.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-				alt: "Busseig introductori a La Paz",
+				image: "/scuba-discovery-equipo.jpg",
+				alt: "Grup amb vestits de neoprè somrient a la platja abans de bussejar a La Paz",
 				title: "Descobrir l'oceà des de dins no s'assembla a res. I un cop ho fas, és molt difícil tornar a mirar-lo igual.",
 				text: "Explica'ns quan visites La Paz i reserva el teu Scuba Discovery: la teva primera respiració sota l'aigua, sense experiència prèvia.",
 				primaryLabel: "Consultar disponibilitat",

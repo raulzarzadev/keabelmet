@@ -1470,8 +1470,8 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"scuba-discovery": {
 		breadcrumb: "海滩体验潜水",
 		hero: {
-			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-			alt: "在拉巴斯的第一次潜水体验",
+			image: "/scuba-discovery-glide.jpg",
+			alt: "初学潜水者在拉巴斯的首次潜水中在礁石上方滑行",
 			kicker: "拉巴斯 · 体验潜水",
 			title: "想象一下第一次在水下呼吸",
 			text: "这听起来很奇怪,而在最初的几秒钟里,感觉确实如此。你的大脑一直告诉你,只能在水面上呼吸。直到你在水下进行第一次吸气,你才发现原来这是可行的。从那一刻起,一切都改变了。你不需要经验,只需要好奇心。",
@@ -1503,7 +1503,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/snorkeling-crystal-clear-water.jpg", alt: "非常适合在拉巴斯进行第一次潜水的清澈海水" },
+				media: { src: "/scuba-discovery-buddies.jpg", alt: "两名潜水者一起潜水，在气泡中比出OK手势，拉巴斯" },
 				quote: "声音消失了,重力的感觉不再一样,大海变成了一个你也身处其中的世界。",
 			},
 			{
@@ -1525,7 +1525,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"然后我们会在受控环境中练习,当你感到舒适时,冒险便开始了。根据当天的条件,活动将在萨尔迪托海滩或莱昂洞穴进行,这两个地方因水域平静、深度较浅,非常适合初次接触潜水。",
 							"你将始终有一位持证教练陪伴,你永远不会独自前往。",
 						],
-						media: { suggest: "教练在拉巴斯某个海滩浅而平静的水域中,与初学者一起练习信号。" },
+						media: { video: "/scuba-discovery-senales.mp4", src: "/scuba-discovery-senales-poster.jpg", alt: "教练在拉巴斯浅水中向初学者教授潜水手势" },
 					},
 					{
 						title: "你的第一次潜水",
@@ -1533,7 +1533,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"你将进行一次大约50分钟的潜水,最大深度达到6米,全程由教练陪伴。这是一个完美的深度,能让你完全放心地享受在水下呼吸的感觉。",
 							"不需要下潜得更深,也能爱上这片海洋。",
 						],
-						media: { src: "/buceo-la-paz-buzo.jpg", alt: "在拉巴斯进行的第一次带教潜水" },
+						media: { src: "/scuba-discovery-shaka.jpg", alt: "潜水者在首次潜水时面对镜头比出shaka手势" },
 					},
 				],
 			},
@@ -1584,9 +1584,9 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				title: "你的第一次探险是这样的",
 				cols: 3,
 				items: [
-					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "初学潜水员在潜水中比出 OK 手势" },
-					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "潜水员在拉巴斯水域中靠近一大群鱼" },
-					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "潜水员向鱼群下潜" },
+					{ suggest: "Scuba Discovery 期间的水下潜水者（照片待补充）" },
+					{ suggest: "首次潜水中与海洋生物的相遇（照片待补充）" },
+					{ suggest: "向礁石的引导式下潜（照片待补充）" },
 				],
 			},
 			{
@@ -1689,14 +1689,14 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/sea-lions-swimming-underwater.jpg", alt: "拉巴斯水面下的海洋生物" },
+				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "一群开心的潜水者潜水后在拉巴斯海滩上手持装备" },
 				quote: "第一次呼吸,那个你不再怀疑自己是否能做到,而开始真正享受的瞬间。",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-				alt: "在拉巴斯的入门潜水",
+				image: "/scuba-discovery-equipo.jpg",
+				alt: "一群身穿潜水服的人在拉巴斯下水前在海滩上微笑",
 				title: "从内部探索海洋,这种感觉无与伦比。一旦体验过,你就很难再以同样的方式看待它了。",
 				text: "告诉我们你何时到访拉巴斯,预订你的体验潜水:第一次在水下呼吸,无需任何先前经验。",
 				primaryLabel: "查询空位",
