@@ -1539,7 +1539,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Realizarás una inmersión de aproximadamente 50 minutos, alcanzando una profundidad máxima de 6 metros, siempre acompañado por tu instructor. Es la profundidad perfecta para disfrutar la sensación de respirar bajo el agua con total tranquilidad.",
 							"No hace falta bajar más profundo para enamorarse del océano.",
 						],
-						media: { src: "/scuba-discovery-shaka.jpg", alt: "Buzo haciendo la seña de shaka frente a la cámara en su primera inmersión" },
+						media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grupo de buzos felices en la playa con su equipo tras bucear en La Paz" },
 					},
 				],
 			},
@@ -1695,7 +1695,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Grupo de buzos felices en la playa con su equipo tras bucear en La Paz" },
+				media: { src: "/scuba-discovery-shaka.jpg", alt: "Buzo haciendo la seña de shaka frente a la cámara en su primera inmersión" },
 				quote: "La primera respiración. Ese instante en el que dejaste de pensar si podías hacerlo… y comenzaste a disfrutar.",
 				align: "bottom",
 			},

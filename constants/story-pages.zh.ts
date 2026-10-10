@@ -1533,7 +1533,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"你将进行一次大约50分钟的潜水,最大深度达到6米,全程由教练陪伴。这是一个完美的深度,能让你完全放心地享受在水下呼吸的感觉。",
 							"不需要下潜得更深,也能爱上这片海洋。",
 						],
-						media: { src: "/scuba-discovery-shaka.jpg", alt: "潜水者在首次潜水时面对镜头比出shaka手势" },
+						media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "一群开心的潜水者潜水后在拉巴斯海滩上手持装备" },
 					},
 				],
 			},
@@ -1689,7 +1689,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "一群开心的潜水者潜水后在拉巴斯海滩上手持装备" },
+				media: { src: "/scuba-discovery-shaka.jpg", alt: "潜水者在首次潜水时面对镜头比出shaka手势" },
 				quote: "第一次呼吸,那个你不再怀疑自己是否能做到,而开始真正享受的瞬间。",
 				align: "bottom",
 			},

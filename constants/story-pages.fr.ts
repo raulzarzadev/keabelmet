@@ -1534,7 +1534,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"Vous effectuerez une plongée d'environ 50 minutes, atteignant une profondeur maximale de 6 mètres, toujours accompagné de votre instructeur. C'est la profondeur parfaite pour profiter de la sensation de respirer sous l'eau en toute tranquillité.",
 							"Il n'est pas nécessaire de descendre plus profond pour tomber amoureux de l'océan.",
 						],
-						media: { src: "/scuba-discovery-shaka.jpg", alt: "Plongeur faisant le signe shaka face à la caméra lors de sa première plongée" },
+						media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Groupe de plongeurs heureux sur la plage avec leur équipement après la plongée à La Paz" },
 					},
 				],
 			},
@@ -1690,7 +1690,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Groupe de plongeurs heureux sur la plage avec leur équipement après la plongée à La Paz" },
+				media: { src: "/scuba-discovery-shaka.jpg", alt: "Plongeur faisant le signe shaka face à la caméra lors de sa première plongée" },
 				quote: "La première respiration. Cet instant où vous avez cessé de vous demander si vous en étiez capable… et avez commencé à en profiter.",
 				align: "bottom",
 			},

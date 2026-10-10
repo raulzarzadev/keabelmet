@@ -1534,7 +1534,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"You'll do a dive of about 50 minutes, reaching a maximum depth of 6 meters, always accompanied by your instructor. It's the perfect depth to enjoy the feeling of breathing underwater with complete calm.",
 							"You don't need to go deeper to fall in love with the ocean.",
 						],
-						media: { src: "/scuba-discovery-shaka.jpg", alt: "Diver making the shaka sign facing the camera on their first dive" },
+						media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Group of happy divers on the beach with their gear after diving in La Paz" },
 					},
 				],
 			},
@@ -1690,7 +1690,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Group of happy divers on the beach with their gear after diving in La Paz" },
+				media: { src: "/scuba-discovery-shaka.jpg", alt: "Diver making the shaka sign facing the camera on their first dive" },
 				quote: "The first breath. That moment when you stopped wondering if you could do it… and started enjoying it.",
 				align: "bottom",
 			},
