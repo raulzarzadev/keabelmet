@@ -1471,8 +1471,8 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"scuba-discovery": {
 		breadcrumb: "Scuba Discovery from the Beach",
 		hero: {
-			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-			alt: "First diving experience in La Paz",
+			image: "/scuba-discovery-glide.jpg",
+			alt: "Beginner diver gliding over the reef on their first dive in La Paz",
 			kicker: "La Paz · Scuba Discovery",
 			title: "Imagine breathing underwater for the first time",
 			text: "It sounds strange. And for the first few seconds it feels that way too. Your brain has spent your whole life telling you that you can only breathe at the surface. Until you take that first breath underwater. And you discover that it works. From that moment on, everything changes. You don't need experience. Just curiosity.",
@@ -1504,7 +1504,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/snorkeling-crystal-clear-water.jpg", alt: "Crystal-clear waters ideal for a first dive in La Paz" },
+				media: { src: "/scuba-discovery-buddies.jpg", alt: "Two people diving together making the OK sign among bubbles in La Paz" },
 				quote: "The sounds disappear. Gravity stops feeling the same. And the ocean becomes a world you're now part of too.",
 			},
 			{
@@ -1526,7 +1526,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"Then we practice in a controlled setting and, when you feel comfortable, the adventure begins. Depending on the day's conditions, the activity takes place at El Saltito Beach or Cueva de León, two ideal spots for a first contact thanks to their calm, shallow waters.",
 							"You'll always be accompanied by a certified instructor. You'll never go alone.",
 						],
-						media: { suggest: "Instructor practicing signals with a beginner in the shallow, calm waters of a La Paz beach." },
+						media: { video: "/scuba-discovery-senales.mp4", src: "/scuba-discovery-senales-poster.jpg", alt: "Instructor teaching dive hand signals to a beginner in shallow water in La Paz" },
 					},
 					{
 						title: "Your first dive",
@@ -1534,7 +1534,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"You'll do a dive of about 50 minutes, reaching a maximum depth of 6 meters, always accompanied by your instructor. It's the perfect depth to enjoy the feeling of breathing underwater with complete calm.",
 							"You don't need to go deeper to fall in love with the ocean.",
 						],
-						media: { src: "/buceo-la-paz-buzo.jpg", alt: "First guided dive in La Paz" },
+						media: { src: "/scuba-discovery-shaka.jpg", alt: "Diver making the shaka sign facing the camera on their first dive" },
 					},
 				],
 			},
@@ -1585,9 +1585,9 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				title: "This is what your first adventure looks like",
 				cols: 3,
 				items: [
-					{ src: "/images/buceo/discovery-buzo-ok.jpg", alt: "Beginner diver giving the OK sign during the dive" },
-					{ src: "/images/buceo/discovery-buzo-cardumen.jpg", alt: "Diver next to a large school of fish in the waters of La Paz" },
-					{ src: "/images/buceo/discovery-buzo-descenso.jpg", alt: "Diver descending toward a school of fish" },
+					{ suggest: "Diver underwater during the Scuba Discovery (photo to be added)" },
+					{ suggest: "Encounter with marine life on the first dive (photo to be added)" },
+					{ suggest: "Guided descent toward the reef (photo to be added)" },
 				],
 			},
 			{
@@ -1690,14 +1690,14 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/sea-lions-swimming-underwater.jpg", alt: "Marine life below the surface in La Paz" },
+				media: { src: "/scuba-discovery-grupo-playa.jpg", alt: "Group of happy divers on the beach with their gear after diving in La Paz" },
 				quote: "The first breath. That moment when you stopped wondering if you could do it… and started enjoying it.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-				alt: "Introductory diving in La Paz",
+				image: "/scuba-discovery-equipo.jpg",
+				alt: "Group in wetsuits smiling on the beach before diving in La Paz",
 				title: "Discovering the ocean from within is like nothing else. And once you do, it's very hard to look at it the same way again.",
 				text: "Tell us when you're visiting La Paz and book your Scuba Discovery: your first breath underwater, no prior experience needed.",
 				primaryLabel: "Check availability",
