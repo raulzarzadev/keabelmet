@@ -24,6 +24,16 @@ const whyIcons = [
   <svg key="5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" /></svg>,
 ]
 
+// Fondo opcional por tarjeta "why" (indice = posicion). "" = sin foto (fondo normal).
+const whyImages = [
+  "/playa-balandra-aerea.jpg", // 1 - Experiencia local
+  "", // 2 - Seguridad primero
+  "", // 3 - Grupos pequenos
+  "", // 4 - Liderado por biologos marinos
+  "", // 5 - Educacion y conservacion
+  "", // 6 - Foto y video incluidos
+]
+
 const instaImages = [
   "/instagram/grupo-feliz.jpg",
   "/instagram/ballena-azul.jpg",
@@ -301,7 +311,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         <div className="why-grid">
           {t.why.items.map((w, i) => (
-            <div key={w.title} className="why-item" data-num={String(i + 1).padStart(2, "0")}>
+            <div key={w.title} className={`why-item${whyImages[i] ? " has-bg" : ""}`} data-num={String(i + 1).padStart(2, "0")}>
+              {whyImages[i] && (
+                <div
+                  className="why-bg"
+                  aria-hidden="true"
+                  style={{ backgroundImage: `linear-gradient(rgba(8,21,31,0.70), rgba(8,21,31,0.84)), url("${whyImages[i]}")` }}
+                />
+              )}
               <div className="why-icon">{whyIcons[i]}</div>
               <h3>{w.title}</h3>
               <p>{w.text}</p>
