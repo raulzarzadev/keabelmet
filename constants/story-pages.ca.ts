@@ -1016,7 +1016,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 	"buceo-la-paz": {
 		breadcrumb: "Submarinisme Illa Espíritu Santo",
 		hero: {
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "Bussejador nedant al costat de lleons marins a l'Illa Espíritu Santo",
 			kicker: "Illa Espíritu Santo · Submarinisme",
 			title: "Hi ha llocs que fan que vulguis tornar al mar",

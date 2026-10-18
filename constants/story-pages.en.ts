@@ -810,7 +810,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"buceo-la-paz": {
 		breadcrumb: "Diving Espíritu Santo Island",
 		hero: {
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "Diver swimming with sea lions at Espíritu Santo Island",
 			kicker: "Espíritu Santo Island · Diving",
 			title: "Some places make you want to return to the sea",

@@ -809,7 +809,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"buceo-la-paz": {
 		breadcrumb: "圣埃斯皮里图圣托岛潜水",
 		hero: {
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "潜水员在圣埃斯皮里图圣托岛与海狮一起游泳",
 			kicker: "圣埃斯皮里图圣托岛 · 潜水",
 			title: "有些地方会让你想要重返大海",
