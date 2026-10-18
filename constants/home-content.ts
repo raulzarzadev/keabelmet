@@ -212,7 +212,7 @@ const es: HomeContent = {
 		{
 			tag: "Día completo",
 			coral: false,
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "Buceo Isla Espíritu Santo",
 			title: "Scuba Diving Isla Espíritu Santo",
 			meta: ["Lobos marinos", "Barcos hundidos", "Discovery $4,200"],
@@ -447,7 +447,7 @@ const en: HomeContent = {
 		{
 			tag: "Full day",
 			coral: false,
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "Espiritu Santo Island Diving",
 			title: "Scuba Diving Espiritu Santo Island",
 			meta: ["Sea lions", "Shipwrecks", "Discovery $4,200"],
@@ -619,7 +619,7 @@ const fr: HomeContent = {
 		{ tag: "Demi-journée", coral: false, image: "/tiburon-ballena-drone.jpg", alt: "Requin-Baleine", title: "Requin-Baleine", meta: ["2-8 personnes", "Snorkeling", "Nov-Mar"], priceMxn: 2300, per: "par personne", href: "/experiencias/tiburon-ballena" },
 		{ tag: "Journée complète", coral: false, image: "/lobo-marino-espiritu-card.jpg", alt: "Île Espíritu Santo", title: "Tour Snorkel Île Espíritu Santo", meta: ["2-10 personnes", "Otaries", "Toute l'année"], priceMxn: 1800, per: "par personne", href: "/experiencias/tour-espiritu-santo" },
 		{ tag: "Journée complète", coral: false, image: "/cabo-pulmo-cardumen-buzo.jpg", alt: "Plongée Cabo Pulmo", title: "Plongée Cabo Pulmo", meta: ["Parc National", "Baptême 3 800 $", "Toute l'année"], priceMxn: 3200, per: "certifié", href: "/experiencias/buceo-cabo-pulmo" },
-		{ tag: "Journée complète", coral: false, image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg", alt: "Plongée Île Espíritu Santo", title: "Plongée Île Espíritu Santo", meta: ["Otaries", "Épaves", "Baptême 4 200 $"], priceMxn: 3700, per: "certifié", href: "/experiencias/buceo-la-paz" },
+		{ tag: "Journée complète", coral: false, image: "/buceo-espiritu-santo-lobo-buzo.jpg", alt: "Plongée Île Espíritu Santo", title: "Plongée Île Espíritu Santo", meta: ["Otaries", "Épaves", "Baptême 4 200 $"], priceMxn: 3700, per: "certifié", href: "/experiencias/buceo-la-paz" },
 		{ tag: "Nouveau", coral: true, image: "/scuba-discovery-buddies.jpg", alt: "Baptême de plongée depuis la plage", title: "Baptême de Plongée depuis la Plage", meta: ["Sans expérience", "Max 6 m de profondeur", "Pour débutants"], priceMxn: 1500, per: "par personne", href: "/experiencias/scuba-discovery" },
 	],
 	compare: {
@@ -774,7 +774,7 @@ const zh: HomeContent = {
 		{ tag: "半天", coral: false, image: "/tiburon-ballena-drone.jpg", alt: "鲸鲨", title: "鲸鲨", meta: ["2-8人", "浮潜", "11-3月"], priceMxn: 2300, per: "每人", href: "/experiencias/tiburon-ballena" },
 		{ tag: "全天", coral: false, image: "/lobo-marino-espiritu-card.jpg", alt: "圣灵岛", title: "圣灵岛浮潜之旅", meta: ["2-10人", "海狮", "全年"], priceMxn: 1800, per: "每人", href: "/experiencias/tour-espiritu-santo" },
 		{ tag: "全天", coral: false, image: "/cabo-pulmo-cardumen-buzo.jpg", alt: "卡波普尔莫潜水", title: "卡波普尔莫潜水", meta: ["国家公园", "体验潜水 $3,800", "全年"], priceMxn: 3200, per: "持证", href: "/experiencias/buceo-cabo-pulmo" },
-		{ tag: "全天", coral: false, image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg", alt: "圣灵岛潜水", title: "圣灵岛潜水", meta: ["海狮", "沉船", "体验潜水 $4,200"], priceMxn: 3700, per: "持证", href: "/experiencias/buceo-la-paz" },
+		{ tag: "全天", coral: false, image: "/buceo-espiritu-santo-lobo-buzo.jpg", alt: "圣灵岛潜水", title: "圣灵岛潜水", meta: ["海狮", "沉船", "体验潜水 $4,200"], priceMxn: 3700, per: "持证", href: "/experiencias/buceo-la-paz" },
 		{ tag: "全新", coral: true, image: "/scuba-discovery-buddies.jpg", alt: "海滩体验潜水", title: "海滩体验潜水", meta: ["无需经验", "最深6米", "适合初学者"], priceMxn: 1500, per: "每人", href: "/experiencias/scuba-discovery" },
 	],
 	compare: {
@@ -930,7 +930,7 @@ const ca: HomeContent = {
 		{ tag: "Mig dia", coral: false, image: "/tiburon-ballena-drone.jpg", alt: "Tauró Balena", title: "Tauró Balena", meta: ["2-8 persones", "Snorkel", "Nov-Març"], priceMxn: 2300, per: "per persona", href: "/experiencias/tiburon-ballena" },
 		{ tag: "Dia complet", coral: false, image: "/lobo-marino-espiritu-card.jpg", alt: "Illa Espíritu Santo", title: "Tour Snorkel Illa Espíritu Santo", meta: ["2-10 persones", "Lleons marins", "Tot l'any"], priceMxn: 1800, per: "per persona", href: "/experiencias/tour-espiritu-santo" },
 		{ tag: "Dia complet", coral: false, image: "/cabo-pulmo-cardumen-buzo.jpg", alt: "Submarinisme Cabo Pulmo", title: "Submarinisme Cabo Pulmo", meta: ["Parc Nacional", "Discovery $3,800", "Tot l'any"], priceMxn: 3200, per: "certificat", href: "/experiencias/buceo-cabo-pulmo" },
-		{ tag: "Dia complet", coral: false, image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg", alt: "Submarinisme Illa Espíritu Santo", title: "Submarinisme Illa Espíritu Santo", meta: ["Lleons marins", "Vaixells enfonsats", "Discovery $4,200"], priceMxn: 3700, per: "certificat", href: "/experiencias/buceo-la-paz" },
+		{ tag: "Dia complet", coral: false, image: "/buceo-espiritu-santo-lobo-buzo.jpg", alt: "Submarinisme Illa Espíritu Santo", title: "Submarinisme Illa Espíritu Santo", meta: ["Lleons marins", "Vaixells enfonsats", "Discovery $4,200"], priceMxn: 3700, per: "certificat", href: "/experiencias/buceo-la-paz" },
 		{ tag: "Nou", coral: true, image: "/scuba-discovery-buddies.jpg", alt: "Scuba Discovery des de la platja", title: "Scuba Discovery des de la platja", meta: ["Sense experiència prèvia", "Màx. 6m de profunditat", "Per a principiants"], priceMxn: 1500, per: "per persona", href: "/experiencias/scuba-discovery" },
 	],
 	compare: {
