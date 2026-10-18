@@ -353,8 +353,8 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 	"buceo-cabo-pulmo": {
 		breadcrumb: "Plongée à Cabo Pulmo",
 		hero: {
-			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-			alt: "Récif corallien vivant dans le parc national de Cabo Pulmo",
+			image: "/cabo-pulmo-cardumen-buzo.jpg",
+			alt: "Plongeur face à un banc géant de carangues à Cabo Pulmo",
 			kicker: "Cabo Pulmo · Parc National",
 			title: "Il existe des endroits où la mer est vivante",
 			text: "Cabo Pulmo en fait partie. Il y a quelques décennies, ce récif a failli disparaître ; aujourd'hui, c'est l'un des plus grands exemples de restauration marine de la planète. Ici, on ne vient pas chercher un poisson en particulier : on vient plonger dans un écosystème où des milliers de poissons se déplacent comme un seul organisme.",

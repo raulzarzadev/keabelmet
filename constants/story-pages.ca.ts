@@ -554,8 +554,8 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 	"buceo-cabo-pulmo": {
 		breadcrumb: "Submarinisme a Cabo Pulmo",
 		hero: {
-			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-			alt: "Escull de coral viu al Parc Nacional Cabo Pulmo",
+			image: "/cabo-pulmo-cardumen-buzo.jpg",
+			alt: "Submarinista davant d'un banc gegant de sorells a Cabo Pulmo",
 			kicker: "Cabo Pulmo · Parc Nacional",
 			title: "Hi ha llocs on el mar és viu",
 			text: "Cabo Pulmo és un d'ells. Fa unes dècades aquest escull va estar a punt de desaparèixer; avui és un dels majors exemples de recuperació marina del planeta. Aquí no véns a buscar un peix en particular: véns a submergir-te dins d'un ecosistema on milers de peixos es mouen com un de sol.",

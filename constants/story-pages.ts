@@ -358,8 +358,8 @@ export const storyPages: Record<string, StoryPageData> = {
 	"buceo-cabo-pulmo": {
 		breadcrumb: "Buceo en Cabo Pulmo",
 		hero: {
-			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-			alt: "Arrecife de coral vivo en el Parque Nacional Cabo Pulmo",
+			image: "/cabo-pulmo-cardumen-buzo.jpg",
+			alt: "Buzo frente a un cardumen gigante de jureles en Cabo Pulmo",
 			kicker: "Cabo Pulmo · Parque Nacional",
 			title: "Hay lugares donde el mar está vivo",
 			text: "Cabo Pulmo es uno de ellos. Hace unas décadas este arrecife estuvo cerca de desaparecer; hoy es uno de los mayores ejemplos de recuperación marina del planeta. Aquí no vienes a buscar un pez en particular: vienes a sumergirte dentro de un ecosistema donde miles de peces se mueven como uno solo.",
