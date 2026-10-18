@@ -352,8 +352,8 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"buceo-cabo-pulmo": {
 		breadcrumb: "卡波普尔莫潜水",
 		hero: {
-			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-			alt: "卡波普尔莫国家公园中充满生机的珊瑚礁",
+			image: "/cabo-pulmo-cardumen-buzo.jpg",
+			alt: "潜水者面对卡波普尔莫的巨大鲹鱼群",
 			kicker: "卡波普尔莫 · 国家公园",
 			title: "有些地方,大海是活着的",
 			text: "卡波普尔莫就是其中之一。几十年前,这片珊瑚礁险些消失;如今,它已成为地球上海洋恢复最成功的范例之一。在这里,你不是来寻找某一种特定的鱼:你是来潜入一个生态系统,那里成千上万条鱼像一个整体一样移动。",

@@ -353,8 +353,8 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"buceo-cabo-pulmo": {
 		breadcrumb: "Diving in Cabo Pulmo",
 		hero: {
-			image: "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
-			alt: "Living coral reef in Cabo Pulmo National Park",
+			image: "/cabo-pulmo-cardumen-buzo.jpg",
+			alt: "Diver facing a giant school of jacks in Cabo Pulmo",
 			kicker: "Cabo Pulmo · National Park",
 			title: "There are places where the sea is alive",
 			text: "Cabo Pulmo is one of them. A few decades ago this reef was close to disappearing; today it's one of the planet's greatest examples of marine recovery. Here you don't come to look for one particular fish: you come to dive into an ecosystem where thousands of fish move as one.",

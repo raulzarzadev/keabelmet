@@ -30,7 +30,7 @@ const rideLineByLocale: Record<string, string> = {
 /** Foto principal por expedición (misma que el hero de cada página). */
 const HERO_BY_SLUG: Record<string, string> = {
 	"safari-la-ventana": "/images/orca-safari.jpg",
-	"buceo-cabo-pulmo": "/coral-reef-underwater-diving-cabo-pulmo-colorful-f.jpg",
+	"buceo-cabo-pulmo": "/cabo-pulmo-cardumen-buzo.jpg",
 	"tiburon-ballena": "/tiburon-ballena-drone.jpg",
 	"buceo-la-paz": "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
 	"tour-ballena-gris": "/ballena-gris-spyhop-drone.jpg",
