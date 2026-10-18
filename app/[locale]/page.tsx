@@ -355,7 +355,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* FINAL CTA */}
       <section className="final-cta" id="contacto">
-        <img src="/whale-breaching-ocean.jpg" alt={t.finalCta.alt} />
+        <picture>
+          {/* Desktop: cachalote bajo el agua. Mobile: imagen por defecto (pendiente de reemplazar). */}
+          <source media="(min-width: 768px)" srcSet="/images/especies/cachalote-buceo.jpg" />
+          <img src="/whale-breaching-ocean.jpg" alt={t.finalCta.alt} />
+        </picture>
         <div className="final-cta-inner">
           <h2>{t.finalCta.title}</h2>
           <p>{t.finalCta.text}</p>
