@@ -32,7 +32,7 @@ const HERO_BY_SLUG: Record<string, string> = {
 	"safari-la-ventana": "/images/orca-safari.jpg",
 	"buceo-cabo-pulmo": "/cabo-pulmo-cardumen-buzo.jpg",
 	"tiburon-ballena": "/tiburon-ballena-drone.jpg",
-	"buceo-la-paz": "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+	"buceo-la-paz": "/buceo-espiritu-santo-lobo-buzo.jpg",
 	"tour-ballena-gris": "/ballena-gris-spyhop-drone.jpg",
 	"tour-espiritu-santo": "/espiritu-santo-island-paradise-beach.jpg",
 	"scuba-discovery": "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",

@@ -810,7 +810,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 	"buceo-la-paz": {
 		breadcrumb: "Plongée à l'île Espíritu Santo",
 		hero: {
-			image: "/scuba-diving-underwater-sea-lions-swimming-playful.jpg",
+			image: "/buceo-espiritu-santo-lobo-buzo.jpg",
 			alt: "Plongeur nageant avec des otaries à l'île Espíritu Santo",
 			kicker: "Île Espíritu Santo · Plongée",
 			title: "Certains endroits donnent envie de revenir à la mer",
