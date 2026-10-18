@@ -27,11 +27,11 @@ const whyIcons = [
 // Fondo opcional por tarjeta "why" (indice = posicion). "" = sin foto (fondo normal).
 const whyImages = [
   "/playa-balandra-aerea.jpg", // 1 - Experiencia local
-  "", // 2 - Seguridad primero
-  "", // 3 - Grupos pequenos
-  "", // 4 - Liderado por biologos marinos
-  "", // 5 - Educacion y conservacion
-  "", // 6 - Foto y video incluidos
+  "/why-snorkel-grupo.jpg", // 2 - Seguridad primero
+  "/why-grupo-agua.jpg", // 3 - Grupos pequenos
+  "/why-ballena-lancha.jpg", // 4 - Liderado por biologos marinos
+  "/why-delfines.jpg", // 5 - Educacion y conservacion
+  "/why-fotografo.jpg", // 6 - Foto y video incluidos
 ]
 
 const instaImages = [
