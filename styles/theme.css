@@ -591,6 +591,10 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   padding: 34px 30px; overflow: hidden; transition: transform .3s ease, border-color .3s ease, background .3s ease;
 }
 .why-item:hover { transform: translateY(-6px); border-color: var(--teal-dim); background: #0f2733; }
+/* Tarjetas "why" con foto de fondo */
+.why-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; transition: transform .4s ease; }
+.why-item.has-bg:hover .why-bg { transform: scale(1.05); }
+.why-item.has-bg::after { color: rgba(244,239,228,0.14); }
 .why-item::after {
   content: attr(data-num); position: absolute; top: -6px; right: 6px; font-family: var(--font-poppins), 'Poppins', sans-serif;
   font-weight: 800; font-size: 76px; color: rgba(244,239,228,0.05); line-height: 1; pointer-events: none;
