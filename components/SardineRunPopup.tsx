@@ -9,45 +9,45 @@ type Copy = { badge: string; title: string; text: string; wa: string; see: strin
 
 const copy: Record<Locale, Copy> = {
   es: {
-    badge: "Fechas disponibles",
+    badge: "Fechas disponibles solo noviembre y diciembre",
     title: "Sardine Run · Safari de 1 día",
-    text: "El espectáculo marino del año en Bahía Magdalena: marlines rayados cazando, lobos marinos y aves en plena corrida de sardina. ¡Cupo limitado — reserva ya!",
+    text: "Acaba de empezar la temporada. Si buscas aventura en la Baja este noviembre —o ya habías oído del Sardine Run—, este safari de 1 día es para ti: marlines rayados cazando a toda velocidad en Bahía Magdalena.",
     wa: "Reservar por WhatsApp",
     see: "Ver el safari",
     waMsg: "Hola! Vi el Sardine Run en su web y quiero reservar el safari de 1 día. ¿Qué fechas tienen disponibles?",
     close: "Cerrar",
   },
   en: {
-    badge: "Dates available",
+    badge: "Dates available only in November and December",
     title: "Sardine Run · 1-day safari",
-    text: "The marine spectacle of the year in Magdalena Bay: striped marlin hunting, sea lions and birds in the full sardine run. Limited spots — book now!",
+    text: "The season has just started. If you're looking for adventure in Baja this November —or you've already heard of the Sardine Run— this 1-day safari is for you: striped marlin hunting at full speed in Magdalena Bay.",
     wa: "Book on WhatsApp",
     see: "See the safari",
     waMsg: "Hi! I saw the Sardine Run on your website and I'd like to book the 1-day safari. What dates do you have available?",
     close: "Close",
   },
   fr: {
-    badge: "Dates disponibles",
+    badge: "Dates disponibles seulement en novembre et décembre",
     title: "Sardine Run · Safari d'1 jour",
-    text: "Le spectacle marin de l'année à Bahía Magdalena : marlins rayés en chasse, otaries et oiseaux au cœur de la course aux sardines. Places limitées — réservez !",
+    text: "La saison vient de commencer. Si tu cherches l'aventure en Basse-Californie ce novembre —ou si tu as déjà entendu parler du Sardine Run—, ce safari d'1 jour est pour toi : marlins rayés en chasse à toute vitesse à Bahía Magdalena.",
     wa: "Réserver sur WhatsApp",
     see: "Voir le safari",
     waMsg: "Bonjour ! J'ai vu le Sardine Run sur votre site et je souhaite réserver le safari d'1 jour. Quelles dates avez-vous ?",
     close: "Fermer",
   },
   zh: {
-    badge: "有可用日期",
+    badge: "仅11月和12月有可用日期",
     title: "沙丁鱼奔流 · 一日游",
-    text: "马格达莱纳湾年度海洋奇观：条纹马林鱼捕猎、海狮与海鸟共赴沙丁鱼奔流。名额有限——立即预订！",
+    text: "旺季刚刚开始。如果你想在11月的下加州寻找冒险，或早就听说过沙丁鱼奔流——这个一日游就是为你准备的：条纹马林鱼在马格达莱纳湾全速捕猎。",
     wa: "通过 WhatsApp 预订",
     see: "查看行程",
     waMsg: "你好！我在你们网站上看到了沙丁鱼奔流，想预订一日游。请问有哪些可用日期？",
     close: "关闭",
   },
   ca: {
-    badge: "Dates disponibles",
+    badge: "Dates disponibles només al novembre i desembre",
     title: "Sardine Run · Safari d'1 dia",
-    text: "L'espectacle marí de l'any a Badia Magdalena: marlins ratllats caçant, lleons marins i ocells en plena cursa de la sardina. Places limitades — reserva ja!",
+    text: "La temporada tot just ha començat. Si busques aventura a la Baixa aquest novembre —o ja havies sentit a parlar del Sardine Run—, aquest safari d'1 dia és per a tu: marlins ratllats caçant a tota velocitat a Badia Magdalena.",
     wa: "Reserva per WhatsApp",
     see: "Veure el safari",
     waMsg: "Hola! He vist el Sardine Run al vostre web i vull reservar el safari d'1 dia. Quines dates teniu disponibles?",
@@ -93,7 +93,7 @@ export default function SardineRunPopup({ locale = "es" }: { locale?: Locale }) 
         <button className="sr-pop-close" onClick={close} aria-label={c.close}>&times;</button>
         <div
           className="sr-pop-media"
-          style={{ backgroundImage: `linear-gradient(rgba(5,15,22,0.1), rgba(15,40,54,0.85)), url("/striped-marlin-underwater.jpg")` }}
+          style={{ backgroundImage: `linear-gradient(rgba(5,15,22,0.05), rgba(15,40,54,0.8)), url("/images/gallery/marlin-cazando.jpeg")` }}
         >
           <span className="sr-pop-badge"><span className="sr-dot" />{c.badge}</span>
         </div>
