@@ -1052,3 +1052,20 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .pkg-card .btn { width: 100%; justify-content: center; }
 .pkg-card.pkg-custom { background: rgba(40,194,160,0.07); border: 1px dashed rgba(40,194,160,0.42); }
 .pkg-custom p { color: var(--sand-dim); font-size: 15px; line-height: 1.55; margin: 0 0 22px; }
+
+/* ===== POP-UP PROMOCIONAL (Sardine Run) ===== */
+.sr-pop-overlay { position: fixed; inset: 0; z-index: 3000; background: rgba(5,15,22,0.74); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; animation: srFade .25s ease; }
+.sr-pop { position: relative; width: 100%; max-width: 420px; background: var(--ink-2); border: 1px solid rgba(40,194,160,0.4); border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.55); animation: srPopIn .32s cubic-bezier(.2,.8,.2,1); }
+.sr-pop-close { position: absolute; top: 12px; right: 12px; z-index: 3; width: 34px; height: 34px; border-radius: 50%; background: rgba(5,15,22,0.55); border: 1px solid rgba(244,239,228,0.22); color: var(--sand); font-size: 24px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s ease; }
+.sr-pop-close:hover { background: rgba(5,15,22,0.85); }
+.sr-pop-media { height: 190px; background-size: cover; background-position: center; display: flex; align-items: flex-start; padding: 16px; }
+.sr-pop-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--teal); color: var(--ink); font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px; }
+.sr-pop-badge .sr-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); animation: srBlink 1.3s ease-in-out infinite; }
+.sr-pop-body { padding: 22px 24px 26px; }
+.sr-pop-body h3 { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 22px; color: var(--sand); margin: 0 0 10px; line-height: 1.2; }
+.sr-pop-body p { color: var(--sand-dim); font-size: 14.5px; line-height: 1.55; margin: 0 0 20px; }
+.sr-pop-btns { display: flex; flex-direction: column; gap: 10px; }
+.sr-pop-btns .btn { width: 100%; justify-content: center; }
+@keyframes srFade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes srPopIn { from { opacity: 0; transform: translateY(16px) scale(.97) } to { opacity: 1; transform: none } }
+@keyframes srBlink { 0%,100% { opacity: 1 } 50% { opacity: .3 } }
