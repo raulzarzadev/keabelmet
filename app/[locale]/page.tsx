@@ -3,6 +3,7 @@ import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
+import SardineRunPopup from "@/components/SardineRunPopup"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
@@ -386,6 +387,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
       </section>
+
+      <SardineRunPopup locale={locale} />
     </main>
   )
 }
