@@ -2114,9 +2114,9 @@ export const storyPages: Record<string, StoryPageData> = {
 export function getStoryPage(slug: string, locale: Locale): StoryPageData | undefined {
 	const byLocale: Record<Locale, Record<string, StoryPageData>> = {
 		es: storyPages,
-		en: storyPagesEn,
-		fr: storyPagesFr,
-		zh: storyPagesZh,
+		en: { ...storyPages, ...storyPagesEn },
+		fr: { ...storyPages, ...storyPagesFr },
+		zh: { ...storyPages, ...storyPagesZh },
 		ca: { ...storyPages, ...storyPagesCa },
 	}
 	return byLocale[locale]?.[slug]

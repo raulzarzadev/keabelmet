@@ -5,6 +5,86 @@ import type { StoryPageData } from "@/components/StoryPage"
  * 缺失的则回退到精简的 ExpeditionDetail 模板。
  */
 export const storyPagesZh: Record<string, StoryPageData> = {
+	"certificacion-open-water": {
+		breadcrumb: "PADI 开放水域认证",
+		hero: {
+			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
+			alt: "在拉巴斯考取开放水域认证的潜水员",
+			kicker: "拉巴斯 · PADI 认证",
+			title: "在拉巴斯考取开放水域潜水证",
+			text: "不要只做旁观者，成为一名潜水员。通过 PADI 开放水域潜水员认证，你将获得一张终身有效的国际执照，可以在世界各地潜水。在这里，世界的水族馆，你将循序渐进、按自己的节奏，在持证教练的陪同下学习。",
+			meta: "拉巴斯 · PADI 开放水域 · 一人成行",
+			primaryLabel: "预订我的认证",
+			primaryWa: "你好！我想在拉巴斯考取 PADI 开放水域认证。能帮我安排行程吗？",
+			secondaryLabel: "了解流程",
+			secondaryHref: "#itinerario",
+		},
+		blocks: [
+			{ type: "quickfacts", items: [
+				{ value: "$8,000 MXN", label: "每人" },
+				{ value: "4次潜水", label: "2次海滩 + 2次船潜" },
+				{ value: "eLearning", label: "含理论" },
+				{ value: "一人成行", label: "单人或团体" },
+			] },
+			{ type: "prose", kicker: "你探索蓝色星球的执照", heading: "一张证书，水下一整个世界。", paragraphs: [
+				"PADI 开放水域潜水员是世界上最受认可的潜水认证。完成后，你将获得一张终身有效的国际执照，可在地球上任何目的地潜水。",
+				"而考取它最好的地方莫过于南下加州的拉巴斯：温暖的海水、极佳的能见度，以及让每一次练习都成为回忆的海洋生物。",
+				{ lead: "无需任何经验。只要会游泳并渴望探索海洋。" },
+			] },
+			{ type: "callout", ink2: true, heading: "预订前，请先通过 WhatsApp 联系我们。", paragraphs: [
+				"我们为每个人量身定制认证：根据你和团队的时间安排理论与潜水的日期。可从一人起或团体进行。",
+				"请先联系我们安排行程并确认名额；协调好后，再通过付款锁定你的名额。",
+			] },
+			{ type: "timeline", id: "itinerario", kicker: "如何考取认证", title: "从理论到你的 PADI 执照", note: "我们按你的节奏进行。每个阶段的日期通过 WhatsApp 与你协调。", items: [
+				{ title: "1 · 在线理论（eLearning）", paragraphs: ["我们会把官方 PADI eLearning 发给你，让你随时随地、按自己的节奏在下水前学习理论。我们会解答你所有的疑问。"] },
+				{ title: "2 · 两次平静海滩潜水", paragraphs: ["你将在浅而受保护的水域练习核心技能，从第一刻起就感到舒适与安全，全程有教练陪同。"], media: { src: "/scuba-discovery-senales-poster.jpg", alt: "教练在拉巴斯平静海滩教授潜水技能" } },
+				{ title: "3 · 两次船潜", paragraphs: ["你将在开放水域运用所学，从船上下潜到拉巴斯真正的潜点。一切在这里融会贯通，你会感到自己是真正的潜水员。"], media: { src: "/buceo-la-paz-buzo.jpg", alt: "在拉巴斯船潜的潜水员" } },
+				{ title: "4 · 成为 PADI 开放水域潜水员！", paragraphs: ["完成潜水与理论后，你将获得 PADI 开放水域潜水员认证：你畅游世界的终身国际执照。"] },
+			] },
+			{ type: "details", kicker: "全部包含", title: "我们已为你准备好", items: [
+				{ title: "官方 PADI eLearning", text: "完整理论，可在线按自己的节奏学习。" },
+				{ title: "持证 PADI 教练", text: "全程陪伴并根据情况调整节奏。" },
+				{ title: "4次潜水", text: "两次平静海滩，两次船潜。" },
+				{ title: "全套潜水装备", text: "练习与潜水所需的全部装备。" },
+				{ title: "PADI 开放水域认证", text: "通过后获得终身有效的国际执照。" },
+			] },
+			{ type: "checklist", kicker: "适合你吗？", title: "让你带着清晰的预期预订", good: { title: "非常适合，如果…", items: [
+				"你想获得第一张潜水证。",
+				"你会游泳并在水中感到自在。",
+				"你想要一张终身有效的国际执照。",
+				"你想单独或与朋友、家人一起考证。",
+			] }, bad: { title: "可能不适合，如果…", items: [
+				"你只想要一日体验（请选择 Scuba Discovery）。",
+				"你在游泳时感到不自在。",
+			] } },
+			{ type: "info", ink2: true, kicker: "预订前", title: "重要信息", items: [
+				{ label: "价格", value: "每人 $8,000 MXN。" },
+				{ label: "包含", value: "eLearning（理论）、4次潜水和全套装备。" },
+				{ label: "潜水", value: "2次平静海滩 + 2次船潜。" },
+				{ label: "团体", value: "一人成行；欢迎团体。" },
+				{ label: "要求", value: "会游泳且身体健康状况良好。" },
+				{ label: "预订", value: "通过 WhatsApp 联系我们协调日期与行程。视名额而定。" },
+			] },
+			{ type: "faq", kicker: "常见问题", title: "你通常想知道的一切", items: [
+				{ q: "需要经验吗？", a: ["不需要。PADI 开放水域专为初学者设计。你只需会游泳并在水中感到自在。"] },
+				{ q: "需要多长时间？", a: ["理论（eLearning）可在下水前按自己的节奏完成。潜水与你协调；通常根据你和团队的时间在几天内完成。"] },
+				{ q: "认证会过期吗？", a: ["不会。PADI 开放水域潜水员认证是国际性的，终身有效。"] },
+				{ q: "我可以单独考证吗？", a: ["可以。可从一人起或团体进行。联系我们，我们会为你安排行程。"] },
+				{ q: "如何预订？", a: ["请先通过 WhatsApp 联系我们协调日期并确认名额。确定后，再通过付款锁定名额。"] },
+			] },
+			{ type: "pricing", id: "precios", kicker: "价格", title: "锁定你的认证", note: "预订前，请通过 WhatsApp 联系我们，协调你（单人或团体）认证的日期与行程。视名额而定。", cards: [
+				{ name: "PADI 开放水域认证", amountMxn: 8000, amountNote: "/ 每人", desc: "你的终身国际潜水执照，由持证教练带领。", items: [
+					"官方 PADI eLearning（理论）",
+					"持证 PADI 教练",
+					"2次平静海滩潜水",
+					"2次船潜",
+					"全套潜水装备",
+					"PADI 开放水域潜水员认证",
+				], waText: "你好！我想在拉巴斯考取 PADI 开放水域认证。能帮我协调日期与行程吗？", ctaLabel: "预订我的认证", featured: true, featuredTag: "PADI · 开放水域", sub: "一人成行 · 欢迎团体" },
+			] },
+			{ type: "finalCta", image: "/buceo-la-paz-buzo.jpg", alt: "在拉巴斯考取潜水证", title: "海面之下有一整个世界在等你。这是你进入的钥匙。", text: "在拉巴斯考取 PADI 开放水域认证，带走一张可在地球任何角落潜水的执照。联系我们，我们为你量身安排行程。", primaryLabel: "通过 WhatsApp 联系", primaryWa: "你好！我想在拉巴斯考取 PADI 开放水域认证。能帮我安排行程吗？", secondaryLabel: "查看所有探险", secondaryHref: "/#expediciones" },
+		],
+	},
 	"safari-la-ventana": {
 		breadcrumb: "拉文塔纳海洋探险",
 		hero: {

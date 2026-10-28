@@ -6,6 +6,86 @@ import type { StoryPageData } from "@/components/StoryPage"
  * ExpeditionDetail template.
  */
 export const storyPagesEn: Record<string, StoryPageData> = {
+	"certificacion-open-water": {
+		breadcrumb: "PADI Open Water Certification",
+		hero: {
+			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
+			alt: "Diver getting Open Water certified in La Paz",
+			kicker: "La Paz · PADI Certification",
+			title: "Get Open Water certified in La Paz",
+			text: "Stop being a spectator and become a diver. With the PADI Open Water Diver certification you earn a lifetime international license to dive anywhere in the world. Here, in the Aquarium of the World, you learn step by step, at your own pace and with certified instructors.",
+			meta: "La Paz · PADI Open Water · From 1 person",
+			primaryLabel: "Book my certification",
+			primaryWa: "Hi! I want to get PADI Open Water certified in La Paz. Can you help me set up the logistics?",
+			secondaryLabel: "See how it works",
+			secondaryHref: "#itinerario",
+		},
+		blocks: [
+			{ type: "quickfacts", items: [
+				{ value: "$8,000 MXN", label: "Per person" },
+				{ value: "4 dives", label: "2 beach + 2 boat" },
+				{ value: "eLearning", label: "Theory included" },
+				{ value: "From 1 person", label: "Solo or group" },
+			] },
+			{ type: "prose", kicker: "Your license to explore the blue planet", heading: "One certification. A whole world underwater.", paragraphs: [
+				"The PADI Open Water Diver is the most recognized diving certification in the world. When you finish it you receive a lifetime international license that lets you dive at any destination on the planet.",
+				"And there's no better place to earn it than La Paz, Baja California Sur: warm waters, incredible visibility and marine life that turns every practice into a memory.",
+				{ lead: "No prior experience needed. Just knowing how to swim and the desire to discover the ocean." },
+			] },
+			{ type: "callout", ink2: true, heading: "Before booking, message us on WhatsApp.", paragraphs: [
+				"We tailor every certification to you: we coordinate the dates for the theory and the dives based on your availability and your group's. It works from a single person or in a group.",
+				"Message us first to organize your logistics and confirm availability; once coordinated, you secure your spot with payment.",
+			] },
+			{ type: "timeline", id: "itinerario", kicker: "How you get certified", title: "From theory to your PADI license", note: "We go at your pace. The dates of each stage are coordinated with you over WhatsApp.", items: [
+				{ title: "1 · Online theory (eLearning)", paragraphs: ["We send you the official PADI eLearning so you can study the theory wherever you want, at your own pace and before getting in the water. We answer all your questions."] },
+				{ title: "2 · Two dives in calm beaches", paragraphs: ["You practice the essential skills in shallow, protected waters, where you'll feel comfortable and safe from the first moment, always with your instructor."], media: { src: "/scuba-discovery-senales-poster.jpg", alt: "Instructor teaching diving skills in a calm beach in La Paz" } },
+				{ title: "3 · Two dives from the boat", paragraphs: ["You apply everything you learned in open water, descending from the boat at real dive sites in La Paz. This is where it all comes together and you feel like a real diver."], media: { src: "/buceo-la-paz-buzo.jpg", alt: "Diver on a boat dive in La Paz" } },
+				{ title: "4 · PADI Open Water certified!", paragraphs: ["Once you complete your dives and the theory you receive your PADI Open Water Diver certification: your international license to dive the world, for life."] },
+			] },
+			{ type: "details", kicker: "Everything included", title: "What's already taken care of", items: [
+				{ title: "Official PADI eLearning", text: "The full theory to study online, at your own pace." },
+				{ title: "Certified PADI instructor", text: "Guides you and adapts the pace throughout the certification." },
+				{ title: "4 dives", text: "Two in calm beaches and two from the boat." },
+				{ title: "Full diving gear", text: "All the gear needed for your practice and dives." },
+				{ title: "PADI Open Water certification", text: "A lifetime international license once you pass." },
+			] },
+			{ type: "checklist", kicker: "Is it for you?", title: "So you book with clear expectations", good: { title: "Ideal if…", items: [
+				"You want your first diving certification.",
+				"You can swim and feel comfortable in the water.",
+				"You want a lifetime international license.",
+				"You want to certify solo or with your group of friends or family.",
+			] }, bad: { title: "Maybe not for you if…", items: [
+				"You only want a one-day intro experience (go for Scuba Discovery).",
+				"You don't feel comfortable swimming.",
+			] } },
+			{ type: "info", ink2: true, kicker: "Before booking", title: "Important information", items: [
+				{ label: "Price", value: "$8,000 MXN per person." },
+				{ label: "Includes", value: "eLearning (theory), 4 dives and full gear." },
+				{ label: "Dives", value: "2 in calm beaches + 2 from the boat." },
+				{ label: "Group", value: "From 1 person; groups welcome." },
+				{ label: "Requirements", value: "Knowing how to swim and good general health." },
+				{ label: "Booking", value: "Contact us on WhatsApp to coordinate dates and logistics. Subject to availability." },
+			] },
+			{ type: "faq", kicker: "FAQ", title: "Everything you usually want to know", items: [
+				{ q: "Do I need prior experience?", a: ["No. The PADI Open Water is designed for beginners. You just need to know how to swim and feel comfortable in the water."] },
+				{ q: "How long does it take?", a: ["The theory (eLearning) you do at your own pace before the water. The dives are coordinated with you; they're usually done over a couple of days depending on your availability and your group's."] },
+				{ q: "Does the certification expire?", a: ["No. The PADI Open Water Diver certification is international and valid for life."] },
+				{ q: "Can I certify solo?", a: ["Yes. It works from a single person or in a group. Message us and we'll set up your logistics."] },
+				{ q: "How do I book?", a: ["First contact us on WhatsApp to coordinate dates and confirm availability. Once agreed, you secure your spot with payment."] },
+			] },
+			{ type: "pricing", id: "precios", kicker: "Price", title: "Secure your certification", note: "Before booking, contact us on WhatsApp to coordinate the dates and logistics of your certification (solo or group). Subject to availability.", cards: [
+				{ name: "PADI Open Water Certification", amountMxn: 8000, amountNote: "/ person", desc: "Your lifetime international diving license, with a certified instructor.", items: [
+					"Official PADI eLearning (theory)",
+					"Certified PADI instructor",
+					"2 dives in calm beaches",
+					"2 dives from the boat",
+					"Full diving gear",
+					"PADI Open Water Diver certification",
+				], waText: "Hi! I want to get PADI Open Water certified in La Paz. Can you help me coordinate dates and logistics?", ctaLabel: "Book my certification", featured: true, featuredTag: "PADI · Open Water", sub: "From 1 person · groups welcome" },
+			] },
+			{ type: "finalCta", image: "/buceo-la-paz-buzo.jpg", alt: "Get certified as a diver in La Paz", title: "There's a whole world waiting for you below the surface. This is your key to enter.", text: "Get PADI Open Water certified in La Paz and take home a license to dive anywhere on the planet. Message us and we'll tailor your logistics.", primaryLabel: "Message on WhatsApp", primaryWa: "Hi! I want to get PADI Open Water certified in La Paz. Can you help me set up the logistics?", secondaryLabel: "See all expeditions", secondaryHref: "/#expediciones" },
+		],
+	},
 	"safari-la-ventana": {
 		breadcrumb: "Ocean Safari La Ventana",
 		hero: {

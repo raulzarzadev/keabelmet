@@ -6,6 +6,86 @@ import type { StoryPageData } from "@/components/StoryPage"
  * en castellà (fallback definit a story-pages.ts).
  */
 export const storyPagesCa: Record<string, StoryPageData> = {
+	"certificacion-open-water": {
+		breadcrumb: "Certificació PADI Open Water",
+		hero: {
+			image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
+			alt: "Submarinista certificant-se Open Water a La Paz",
+			kicker: "La Paz · Certificació PADI",
+			title: "Certifica't com a submarinista Open Water a La Paz",
+			text: "Deixa de ser espectador i converteix-te en submarinista. Amb la certificació PADI Open Water Diver obtens una llicència internacional vàlida de per vida per bussejar a tot el món. Aquí, a l'Aquari del Món, aprens pas a pas, al teu ritme i amb instructors certificats.",
+			meta: "La Paz · PADI Open Water · Des d'1 persona",
+			primaryLabel: "Reservar la meva certificació",
+			primaryWa: "Hola! Vull certificar-me en Open Water (PADI) a La Paz. Em podeu ajudar a organitzar la logística?",
+			secondaryLabel: "Veure com funciona",
+			secondaryHref: "#itinerario",
+		},
+		blocks: [
+			{ type: "quickfacts", items: [
+				{ value: "8.000 MXN", label: "Per persona" },
+				{ value: "4 immersions", label: "2 a platja + 2 en vaixell" },
+				{ value: "eLearning", label: "Teoria inclosa" },
+				{ value: "Des d'1 persona", label: "Individual o en grup" },
+			] },
+			{ type: "prose", kicker: "La teva llicència per explorar el planeta blau", heading: "Una certificació. Tot un món sota l'aigua.", paragraphs: [
+				"El PADI Open Water Diver és la certificació de busseig més reconeguda del món. En acabar-la reps una llicència internacional vàlida de per vida que et permet bussejar a qualsevol destí del planeta.",
+				"I no hi ha millor lloc per obtenir-la que La Paz, Baixa Califòrnia Sud: aigües càlides, visibilitat increïble i una vida marina que converteix cada pràctica en un record.",
+				{ lead: "No necessites experiència prèvia. Només saber nedar i tenir ganes de descobrir l'oceà." },
+			] },
+			{ type: "callout", ink2: true, heading: "Abans de reservar, escriu-nos per WhatsApp.", paragraphs: [
+				"Cada certificació la fem a mida: coordinem les dates de la teoria i de les immersions segons la teva disponibilitat i la del grup. Es pot des d'una sola persona o en grup.",
+				"Escriu-nos primer per organitzar la teva logística i confirmar disponibilitat; un cop coordinat, assegures el teu lloc amb el pagament.",
+			] },
+			{ type: "timeline", id: "itinerario", kicker: "Com et certifiques", title: "De la teoria a la teva llicència PADI", note: "Avancem al teu ritme. Les dates de cada etapa es coordinen amb tu per WhatsApp.", items: [
+				{ title: "1 · Teoria en línia (eLearning)", paragraphs: ["Et fem arribar l'eLearning oficial de PADI perquè estudiïs la teoria des d'on vulguis, al teu ritme i abans d'entrar a l'aigua. Nosaltres resolem tots els teus dubtes."] },
+				{ title: "2 · Dues immersions en platges tranquil·les", paragraphs: ["Practiques les habilitats essencials en aigües someres i protegides, on et sentiràs còmode i segur des del primer moment, sempre acompanyat pel teu instructor."], media: { src: "/scuba-discovery-senales-poster.jpg", alt: "Instructor ensenyant habilitats de busseig en una platja tranquil·la a La Paz" } },
+				{ title: "3 · Dues immersions des de l'embarcació", paragraphs: ["Apliques tot el que has après en mar obert, descendint des de la barca en punts de busseig reals de La Paz. Aquí és on tot cobra sentit i et sents submarinista de debò."], media: { src: "/buceo-la-paz-buzo.jpg", alt: "Submarinista en una immersió des de l'embarcació a La Paz" } },
+				{ title: "4 · Certificat PADI Open Water!", paragraphs: ["En completar les teves immersions i la teoria reps la teva certificació PADI Open Water Diver: la teva llicència internacional per bussejar pel món, de per vida."] },
+			] },
+			{ type: "details", kicker: "Tot el que inclou", title: "El que ja està resolt", items: [
+				{ title: "eLearning oficial PADI", text: "Tota la teoria per estudiar en línia, al teu ritme." },
+				{ title: "Instructor PADI certificat", text: "T'acompanya i adapta el ritme durant tota la certificació." },
+				{ title: "4 immersions", text: "Dues en platges tranquil·les i dues des de l'embarcació." },
+				{ title: "Equip complet de busseig", text: "Tot l'equip necessari per a les teves pràctiques i immersions." },
+				{ title: "Certificació PADI Open Water", text: "Llicència internacional vàlida de per vida un cop aprovada." },
+			] },
+			{ type: "checklist", kicker: "És per a tu?", title: "Perquè reservis amb expectatives clares", good: { title: "Ideal si…", items: [
+				"Vols obtenir la teva primera certificació de busseig.",
+				"Saps nedar i et sents còmode a l'aigua.",
+				"Busques una llicència internacional vàlida de per vida.",
+				"Vols certificar-te sol o amb el teu grup d'amics o família.",
+			] }, bad: { title: "Potser no és per a tu si…", items: [
+				"Només busques una experiència introductòria d'un dia (millor el Scuba Discovery).",
+				"No et sents còmode nedant.",
+			] } },
+			{ type: "info", ink2: true, kicker: "Abans de reservar", title: "Informació important", items: [
+				{ label: "Preu", value: "8.000 MXN per persona." },
+				{ label: "Inclou", value: "eLearning (teoria), 4 immersions i equip complet." },
+				{ label: "Immersions", value: "2 en platges tranquil·les + 2 des de l'embarcació." },
+				{ label: "Grup", value: "Des d'1 persona; grups benvinguts." },
+				{ label: "Requisits", value: "Saber nedar i bon estat de salut general." },
+				{ label: "Reserva", value: "Contacta'ns per WhatsApp per coordinar dates i logística. Subjecte a disponibilitat." },
+			] },
+			{ type: "faq", kicker: "Preguntes freqüents", title: "Tot el que sols voler saber", items: [
+				{ q: "Necessito experiència prèvia?", a: ["No. El PADI Open Water està dissenyat per a principiants. Només cal saber nedar i sentir-te còmode a l'aigua."] },
+				{ q: "Quant dura?", a: ["La teoria (eLearning) la fas al teu ritme abans de l'aigua. Les immersions les coordinem amb tu; normalment es fan en un parell de dies segons la teva disponibilitat i la del grup."] },
+				{ q: "La certificació caduca?", a: ["No. La certificació PADI Open Water Diver és internacional i vàlida de per vida."] },
+				{ q: "Em puc certificar sol?", a: ["Sí. Es pot des d'una sola persona o en grup. Escriu-nos i organitzem la teva logística."] },
+				{ q: "Com reservo?", a: ["Primer contacta'ns per WhatsApp per coordinar dates i confirmar disponibilitat. Un cop acordat, assegures el teu lloc amb el pagament."] },
+			] },
+			{ type: "pricing", id: "precios", kicker: "Preu", title: "Assegura la teva certificació", note: "Abans de reservar, contacta'ns per WhatsApp per coordinar les dates i la logística de la teva certificació (individual o en grup). Subjecte a disponibilitat.", cards: [
+				{ name: "Certificació PADI Open Water", amountMxn: 8000, amountNote: "/ persona", desc: "La teva llicència internacional de busseig, vàlida de per vida, amb instructor certificat.", items: [
+					"eLearning oficial PADI (teoria)",
+					"Instructor PADI certificat",
+					"2 immersions en platges tranquil·les",
+					"2 immersions des de l'embarcació",
+					"Equip complet de busseig",
+					"Certificació PADI Open Water Diver",
+				], waText: "Hola! Vull certificar-me en Open Water (PADI) a La Paz. Em podeu ajudar a coordinar dates i logística?", ctaLabel: "Reservar la meva certificació", featured: true, featuredTag: "PADI · Open Water", sub: "Des d'1 persona · grups benvinguts" },
+			] },
+			{ type: "finalCta", image: "/buceo-la-paz-buzo.jpg", alt: "Certifica't com a submarinista a La Paz", title: "Hi ha tot un món esperant-te sota la superfície. Aquesta és la teva clau per entrar-hi.", text: "Certifica't PADI Open Water a La Paz i emporta't una llicència per bussejar a qualsevol racó del planeta. Escriu-nos i fem la teva logística a mida.", primaryLabel: "Escriure per WhatsApp", primaryWa: "Hola! Vull certificar-me en Open Water (PADI) a La Paz. Em podeu ajudar a organitzar la logística?", secondaryLabel: "Veure totes les expedicions", secondaryHref: "/#expediciones" },
+		],
+	},
 	"safari-la-ventana": {
 		breadcrumb: "Ocean Safari La Ventana",
 		hero: {
