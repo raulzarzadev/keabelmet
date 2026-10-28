@@ -41,6 +41,25 @@ export interface Experience {
 
 export const experiences: Experience[] = [
 	{
+		slug: "certificacion-open-water",
+		href: "/experiencias/certificacion-open-water",
+		category: "diving",
+		image: "/buceo-la-paz-buzo.jpg",
+		rating: 5.0,
+		reviews: 0,
+		fromMxn: 8000,
+		days: 2,
+		difficulty: "moderate",
+		capacity: { min: 1, max: 6 },
+		i18n: {
+			es: { title: "Certificación PADI Open Water", description: "Conviértete en buzo certificado en La Paz. eLearning + 2 inmersiones en playa y 2 en barco. Licencia internacional de por vida.", durationLabel: "eLearning + 4 inmersiones", capacityLabel: "Desde 1 persona", highlights: ["eLearning PADI incluido", "2 inmersiones en playa", "2 inmersiones en barco", "Licencia internacional"], badge: "Certificación · PADI" },
+			en: { title: "PADI Open Water Certification", description: "Become a certified diver in La Paz. eLearning + 2 beach dives and 2 boat dives. Lifetime international license.", durationLabel: "eLearning + 4 dives", capacityLabel: "From 1 person", highlights: ["PADI eLearning included", "2 beach dives", "2 boat dives", "International license"], badge: "Certification · PADI" },
+			fr: { title: "Certification PADI Open Water", description: "Devenez plongeur certifié à La Paz. eLearning + 2 plongées en plage et 2 en bateau. Licence internationale à vie.", durationLabel: "eLearning + 4 plongées", capacityLabel: "Dès 1 personne", highlights: ["eLearning PADI inclus", "2 plongées en plage", "2 plongées en bateau", "Licence internationale"], badge: "Certification · PADI" },
+			zh: { title: "PADI 开放水域认证", description: "在拉巴斯成为持证潜水员。eLearning + 2次海滩潜水和2次船潜。终身国际执照。", durationLabel: "eLearning + 4次潜水", capacityLabel: "一人成行", highlights: ["含 PADI eLearning", "2次海滩潜水", "2次船潜", "国际执照"], badge: "认证 · PADI" },
+			ca: { title: "Certificació PADI Open Water", description: "Converteix-te en submarinista certificat a La Paz. eLearning + 2 immersions a platja i 2 en vaixell. Llicència internacional de per vida.", durationLabel: "eLearning + 4 immersions", capacityLabel: "Des d'1 persona", highlights: ["eLearning PADI inclòs", "2 immersions a platja", "2 immersions en vaixell", "Llicència internacional"], badge: "Certificació · PADI" },
+		},
+	},
+	{
 		slug: "safari-bahia-magdalena",
 		href: "/experiencias/safari-bahia-magdalena",
 		category: "safari",
