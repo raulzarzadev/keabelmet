@@ -23,6 +23,7 @@ export const SEASONS: Record<string, SeasonInfo> = {
 	"buceo-la-paz": { months: null, maxPeople: 8, label: ALL_YEAR },
 	"tour-espiritu-santo": { months: null, maxPeople: 10, label: ALL_YEAR },
 	"scuba-discovery": { months: null, maxPeople: 6, label: ALL_YEAR },
+	"certificacion-open-water": { months: null, maxPeople: 6, label: ALL_YEAR },
 	"tiburon-ballena": {
 		months: [10, 11, 12, 1, 2, 3, 4],
 		maxPeople: 8,

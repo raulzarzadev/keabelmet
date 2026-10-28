@@ -340,6 +340,22 @@ export const pageSeoMap = {
       ca: "Expedició marina a La Ventana, BCS. Observa la migració de móbules i balenes amb guies experts. Aventura de mig dia d'abril a juny al Mar de Cortés.",
     },
   },
+  openWater: {
+    title: {
+      es: "Certificación PADI Open Water en La Paz",
+      en: "PADI Open Water Certification in La Paz",
+      fr: "Certification PADI Open Water à La Paz",
+      zh: "拉巴斯 PADI 开放水域认证",
+      ca: "Certificació PADI Open Water a La Paz",
+    },
+    description: {
+      es: "Certifícate PADI Open Water en La Paz, BCS. eLearning + 2 inmersiones en playa y 2 desde embarcación. Licencia internacional de por vida, desde 1 persona. $8,000 MXN.",
+      en: "Get PADI Open Water certified in La Paz, BCS. eLearning + 2 beach dives and 2 boat dives. Lifetime international license, from 1 person. $8,000 MXN.",
+      fr: "Certifiez-vous PADI Open Water à La Paz, BCS. eLearning + 2 plongées en plage et 2 en bateau. Licence internationale à vie, dès 1 personne. 8 000 MXN.",
+      zh: "在 BCS 拉巴斯获得 PADI 开放水域认证。eLearning + 2次海滩潜水和2次船潜。终身国际执照，一人成行。8,000 MXN。",
+      ca: "Certifica't PADI Open Water a La Paz, BCS. eLearning + 2 immersions a platja i 2 en vaixell. Llicència internacional de per vida, des d'1 persona. 8.000 MXN.",
+    },
+  },
 } as const satisfies Record<string, PageSeo>
 
 export type PageSeoKey = keyof typeof pageSeoMap

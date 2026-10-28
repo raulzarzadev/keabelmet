@@ -36,6 +36,7 @@ const HERO_BY_SLUG: Record<string, string> = {
 	"tour-ballena-gris": "/ballena-gris-spyhop-drone.jpg",
 	"tour-espiritu-santo": "/espiritu-santo-island-paradise-beach.jpg",
 	"scuba-discovery": "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
+	"certificacion-open-water": "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
 	"safari-bahia-magdalena": "/images/marlin-bahia-magdalena-hero.jpeg",
 }
 
@@ -216,6 +217,7 @@ const LOCATION_BY_SLUG: Record<string, string> = {
 	"tour-ballena-gris": "Puerto Chale, Baja California Sur, México",
 	"tour-espiritu-santo": "Muelle Fiscal de La Paz, Baja California Sur, México",
 	"scuba-discovery": "La Paz, Baja California Sur, México",
+	"certificacion-open-water": "La Paz, Baja California Sur, México",
 	"safari-bahia-magdalena": "Bahía Magdalena, Baja California Sur, México",
 }
 
