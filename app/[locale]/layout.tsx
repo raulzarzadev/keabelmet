@@ -8,6 +8,7 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { CurrencyProvider } from "@/contexts/CurrencyContext"
+import { CartProvider } from "@/contexts/CartContext"
 import { locales, type Locale, isValidLocale } from "@/lib/i18n"
 import { pageMeta, SITE_URL } from "@/lib/seo"
 import { notFound } from "next/navigation"
@@ -184,9 +185,11 @@ export default async function LocaleLayout({
     <html lang={lang}>
       <body className={`${poppins.variable} kbm antialiased`}>
         <CurrencyProvider>
-          <Header locale={locale} />
-          {children}
-          <Footer locale={locale} />
+          <CartProvider>
+            <Header locale={locale} />
+            {children}
+            <Footer locale={locale} />
+          </CartProvider>
         </CurrencyProvider>
         <WhatsAppFloat />
         <Analytics />
