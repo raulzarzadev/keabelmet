@@ -1,4 +1,6 @@
 import { experiences } from "@/constants/experiences"
+import { getAllPosts } from "@/lib/blog"
+import { blogPostToText } from "@/lib/blog/text"
 
 const SITE = "https://www.keabelmet.com"
 
@@ -163,6 +165,18 @@ export async function GET() {
     }
     out.push("---")
     out.push("")
+  }
+
+  const posts = getAllPosts()
+  if (posts.length) {
+    out.push("## Blog: guías para viajeros con fuentes científicas")
+    out.push("")
+    for (const p of posts) {
+      out.push(...blogPostToText(p, "es"))
+      out.push(...blogPostToText(p, "en"))
+      out.push("---")
+      out.push("")
+    }
   }
 
   out.push("## Contacto y reservas")
