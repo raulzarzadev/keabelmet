@@ -519,6 +519,187 @@ export async function sendDepositEmail(d: DepositEmailData): Promise<{ ok: boole
 	}
 }
 
+// ===== DEAL personalizado: voucher de bienvenida =====
+
+export interface DealEmailLine {
+	label: string
+	amountMxn: number
+}
+
+export interface DealEmailData {
+	folio: string
+	paymentIntentId: string
+	customerName: string
+	customerEmail: string
+	customerPhone?: string
+	locale: string
+	title: string
+	subtitle?: string
+	lines: DealEmailLine[]
+	totalMxn: number
+	depositMxn: number
+	remainingMxn: number
+	rate: number
+	includes?: string
+	excludes?: string
+	note?: string
+	startISO?: string
+	endISO?: string
+}
+
+const dealT: Record<string, {
+	subject: string; hello: string; intro: string; folio: string; breakdown: string; total: string; paid: string; remaining: string;
+	includes: string; excludes: string; payRest: string; calNote: string; follow: string; footer: string;
+}> = {
+	es: { subject: "¡Bienvenido/a! Tu reserva en Keabelmet está apartada", hello: "¡Bienvenido/a", intro: "Tu aventura en la Baja ya está apartada. Guarda este correo con el resumen de tu reserva.", folio: "Folio de reserva", breakdown: "Desglose", total: "Total del grupo", paid: "Anticipo pagado", remaining: "Restante por liquidar", includes: "Incluye", excludes: "No incluye", payRest: "El restante lo puedes pagar en efectivo, transferencia o tarjeta el día de tus tours.", calNote: "Adjuntamos un archivo (.ics) con tus fechas para agregarlas a tu calendario.", follow: "Síguenos", footer: "Keabelmet Expeditions · La Paz, Baja California Sur" },
+	en: { subject: "Welcome! Your Keabelmet reservation is held", hello: "Welcome", intro: "Your Baja adventure is reserved. Keep this email with your booking summary.", folio: "Booking reference", breakdown: "Breakdown", total: "Group total", paid: "Deposit paid", remaining: "Balance due", includes: "Included", excludes: "Not included", payRest: "You can pay the balance in cash, bank transfer or card on the day of your tours.", calNote: "We've attached a file (.ics) with your dates to add them to your calendar.", follow: "Follow us", footer: "Keabelmet Expeditions · La Paz, Baja California Sur" },
+	fr: { subject: "Bienvenue ! Votre réservation Keabelmet est enregistrée", hello: "Bienvenue", intro: "Votre aventure en Basse-Californie est réservée. Conservez cet e-mail avec le résumé de votre réservation.", folio: "Référence", breakdown: "Détail", total: "Total du groupe", paid: "Acompte payé", remaining: "Solde à régler", includes: "Inclus", excludes: "Non inclus", payRest: "Vous pouvez régler le solde en espèces, virement ou carte le jour de vos tours.", calNote: "Nous avons joint un fichier (.ics) avec vos dates.", follow: "Suivez-nous", footer: "Keabelmet Expeditions · La Paz, Basse-Californie du Sud" },
+	zh: { subject: "欢迎！您的 Keabelmet 预订已保留", hello: "欢迎", intro: "您的下加州之旅已保留。请保存此邮件及预订摘要。", folio: "预订编号", breakdown: "明细", total: "团队总计", paid: "已付定金", remaining: "待付余额", includes: "包含", excludes: "不包含", payRest: "余额可在行程当天以现金、转账或刷卡支付。", calNote: "我们附上了一个文件（.ics），包含您的日期。", follow: "关注我们", footer: "Keabelmet Expeditions · 拉巴斯，南下加利福尼亚" },
+	ca: { subject: "Benvingut/da! La teva reserva a Keabelmet està apartada", hello: "Benvingut/da", intro: "La teva aventura a la Baixa ja està apartada. Guarda aquest correu amb el resum de la teva reserva.", folio: "Foli", breakdown: "Desglossament", total: "Total del grup", paid: "Bestreta pagada", remaining: "Pendent de liquidar", includes: "Inclou", excludes: "No inclou", payRest: "El pendent el pots pagar en efectiu, transferència o targeta el dia dels teus tours.", calNote: "Adjuntem un fitxer (.ics) amb les teves dates.", follow: "Segueix-nos", footer: "Keabelmet Expeditions · La Paz, Baixa Califòrnia Sud" },
+}
+
+function dealIcsLines(text?: string): string[] {
+	return (text || "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+}
+
+function buildDealIcs(d: DealEmailData): string {
+	const now = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"
+	const lines: string[] = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Keabelmet//Reservas//ES", "METHOD:PUBLISH", "CALSCALE:GREGORIAN"]
+	if (d.startISO) {
+		const endExclusive = d.endISO || d.startISO
+		const title = `Keabelmet: ${d.title} — ${d.customerName}`
+		const desc = [`Folio: ${d.folio}`, `Cliente: ${d.customerName}`, `Total reserva: ${formatMxn(d.totalMxn)} MXN`, `Anticipo pagado: ${formatMxn(d.depositMxn)} MXN`, `Restante por liquidar: ${formatMxn(d.remainingMxn)} MXN`].join("\n")
+		lines.push("BEGIN:VEVENT", `UID:${d.folio}@keabelmet.com`, `DTSTAMP:${now}`, `DTSTART;VALUE=DATE:${icsDate(d.startISO)}`, `DTEND;VALUE=DATE:${icsDate(endExclusive, 1)}`, `SUMMARY:${icsEscape(title)}`, `DESCRIPTION:${icsEscape(desc)}`, "LOCATION:La Paz, Baja California Sur, México", "STATUS:CONFIRMED", "SEQUENCE:0", "TRANSP:TRANSPARENT", "END:VEVENT")
+	}
+	lines.push("END:VCALENDAR")
+	return lines.join("\r\n")
+}
+
+function buildDealHtml(d: DealEmailData): string {
+	const L = dealT[d.locale] ?? dealT.es
+	const ink = "#0d222f", card = "#0f2836", teal = "#28c2a0", sand = "#f4efe4", dim = "#a9c0cc", line = "rgba(244,239,228,0.14)"
+	const hero = heroUrl()
+	const iconBtn = (href: string, icon: string, alt: string) =>
+		`<a href="${href}" style="display:inline-block;padding:10px;margin:0 5px;border-radius:50%;background:rgba(40,194,160,0.12);border:1px solid ${line};line-height:0"><img src="${SITE_URL}/icons/${icon}" width="20" height="20" alt="${alt}" style="display:block;border:0" /></a>`
+	const lineRow = (l: DealEmailLine) =>
+		`<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${sand};font-size:14px">${l.label}</td><td style="padding:11px 0;border-bottom:1px solid ${line};text-align:right;color:${sand};font-size:14px;white-space:nowrap;vertical-align:top">${formatMxn(l.amountMxn)}</td></tr>`
+	const sumRow = (label: string, value: string, strong = false) =>
+		`<tr><td style="padding:9px 0;color:${strong ? sand : dim};font-size:${strong ? "15px" : "13px"};font-weight:${strong ? 700 : 400}">${label}</td><td style="padding:9px 0;text-align:right;color:${strong ? teal : sand};font-size:${strong ? "18px" : "14px"};font-weight:${strong ? 800 : 600}">${value}</td></tr>`
+	const pct = Math.round(d.rate * 100)
+	const inexCol = (title: string, text: string, no = false) =>
+		`<div style="margin-top:12px"><div style="color:${no ? "#ffb4ac" : teal};font-size:12px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;margin-bottom:4px">${no ? "✕" : "✓"} ${title}</div><ul style="margin:0;padding-left:18px;color:${dim};font-size:13px;line-height:1.7">${dealIcsLines(text).map((x) => `<li>${x}</li>`).join("")}</ul></div>`
+	return `<!doctype html><html><body style="margin:0;background:${ink};font-family:'Poppins',Segoe UI,Arial,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:28px 16px"><tr><td align="center">
+<table role="presentation" width="480" cellpadding="0" cellspacing="0" style="max-width:480px;width:100%;background:${card};border:1px solid ${line};border-radius:20px;overflow:hidden">
+	<tr><td style="padding:0"><img src="${hero}" width="480" alt="Keabelmet" style="display:block;width:100%;height:170px;object-fit:cover" /></td></tr>
+	<tr><td style="padding:26px 30px 6px;text-align:center">
+		<img src="${SITE_URL}/logo.png" width="56" height="56" alt="Keabelmet" style="display:block;width:56px;height:56px;margin:0 auto 12px;border-radius:50%;border:2px solid rgba(244,239,228,0.16)" />
+		<h1 style="margin:6px 0 0;color:${sand};font-size:23px;font-weight:800">${L.hello}, ${d.customerName}!</h1>
+		<p style="color:${dim};font-size:14px;line-height:1.55;margin:10px 0 4px">${L.intro}</p>
+		<div style="color:${teal};font-size:15px;font-weight:700;margin-top:8px">${d.title}</div>
+		${d.subtitle ? `<div style="color:${dim};font-size:13px;margin-top:2px">${d.subtitle}</div>` : ""}
+	</td></tr>
+	<tr><td style="padding:16px 30px 0">
+		<div style="background:rgba(40,194,160,0.1);border:1px dashed rgba(40,194,160,0.5);border-radius:14px;padding:14px;text-align:center">
+			<div style="color:${dim};font-size:11px;letter-spacing:0.12em;text-transform:uppercase">${L.folio}</div>
+			<div style="color:${teal};font-size:22px;font-weight:800;letter-spacing:0.04em;margin-top:3px">${d.folio}</div>
+		</div>
+	</td></tr>
+	<tr><td style="padding:22px 30px 6px">
+		<div style="color:${teal};font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:4px">${L.breakdown}</div>
+		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${d.lines.map(lineRow).join("")}</table>
+	</td></tr>
+	<tr><td style="padding:14px 30px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+		${sumRow(L.total, `${formatMxn(d.totalMxn)} MXN`)}
+		${sumRow(`${L.paid} (${pct}%)`, `${formatMxn(d.depositMxn)} MXN`, true)}
+		${sumRow(L.remaining, `${formatMxn(d.remainingMxn)} MXN`)}
+	</table></td></tr>
+	<tr><td style="padding:6px 30px 2px">
+		<p style="background:rgba(244,239,228,0.04);border:1px solid ${line};border-radius:12px;padding:12px 14px;color:${sand};font-size:13px;line-height:1.5;margin:0">💵 ${L.payRest}</p>
+	</td></tr>
+	${d.note ? `<tr><td style="padding:10px 30px 0"><p style="color:${dim};font-size:12px;line-height:1.5;margin:0">${d.note}</p></td></tr>` : ""}
+	${d.includes || d.excludes ? `<tr><td style="padding:8px 30px 0">${d.includes ? inexCol(L.includes, d.includes) : ""}${d.excludes ? inexCol(L.excludes, d.excludes, true) : ""}</td></tr>` : ""}
+	<tr><td style="padding:12px 30px 6px"><p style="color:${dim};font-size:12px;line-height:1.5;margin:0">📅 ${L.calNote}</p></td></tr>
+	<tr><td style="padding:16px 30px 24px;text-align:center;border-top:1px solid ${line}">
+		<div style="color:${dim};font-size:12px;margin:10px 0 10px">${L.follow}</div>
+		${iconBtn(SOCIAL.instagram, "instagram.png", "Instagram")}${iconBtn(SOCIAL.tiktok, "tiktok.png", "TikTok")}${iconBtn(SOCIAL.whatsapp, "whatsapp.png", "WhatsApp")}
+		<p style="color:${dim};font-size:11px;margin:14px 0 0">${L.footer}</p>
+	</td></tr>
+</table></td></tr></table></body></html>`
+}
+
+function buildDealOwnerHtml(d: DealEmailData): string {
+	const ink = "#0d222f", sand = "#f4efe4", dim = "#cdc6b4", teal = "#28c2a0", line = "rgba(244,239,228,0.14)"
+	const waNum = (d.customerPhone || "").replace(/[^\d]/g, "")
+	const lineRow = (l: DealEmailLine) =>
+		`<tr><td style="padding:9px 0;border-bottom:1px solid ${line};color:${sand};font-size:14px">${l.label}</td><td style="padding:9px 0;border-bottom:1px solid ${line};text-align:right;color:${sand};font-size:14px;vertical-align:top">${formatMxn(l.amountMxn)}</td></tr>`
+	const row = (label: string, value: string, strong = false) =>
+		`<tr><td style="padding:9px 0;color:${dim};font-size:13px">${label}</td><td style="padding:9px 0;color:${strong ? teal : sand};font-size:${strong ? "16px" : "14px"};font-weight:${strong ? 700 : 400};text-align:right">${value}</td></tr>`
+	const pct = Math.round(d.rate * 100)
+	return `<!doctype html><html><body style="margin:0;background:${ink};font-family:'Poppins',Segoe UI,Arial,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:24px 0"><tr><td align="center">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#0f2734;border:1px solid ${line};border-radius:16px;overflow:hidden">
+	<tr><td style="padding:26px 32px 8px">
+		<div style="color:${teal};font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Nueva reserva · deal personalizado</div>
+		<h1 style="color:${sand};font-size:22px;margin:8px 0 2px">🎉 ${d.customerName}</h1>
+		<div style="color:${dim};font-size:13px">${d.title}${d.subtitle ? ` · ${d.subtitle}` : ""}</div>
+	</td></tr>
+	<tr><td style="padding:10px 32px 2px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${d.lines.map(lineRow).join("")}</table></td></tr>
+	<tr><td style="padding:12px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+		${row("Total", `${formatMxn(d.totalMxn)} MXN`)}
+		${row(`Anticipo pagado (${pct}%)`, `${formatMxn(d.depositMxn)} MXN`, true)}
+		${row("Restante por liquidar", `${formatMxn(d.remainingMxn)} MXN`)}
+	</table></td></tr>
+	<tr><td style="padding:6px 32px 4px">
+		<div style="color:${teal};font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:8px">Contacto del cliente</div>
+		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+			${row("Folio", d.folio)}
+			${row("Nombre", d.customerName)}
+			${d.customerPhone ? `<tr><td style="padding:9px 0;color:${dim};font-size:13px">Tel / WhatsApp</td><td style="padding:9px 0;text-align:right"><a href="https://wa.me/${waNum}" style="color:${teal};font-size:14px;text-decoration:none">${d.customerPhone}</a></td></tr>` : ""}
+			<tr><td style="padding:9px 0;color:${dim};font-size:13px">Correo</td><td style="padding:9px 0;text-align:right"><a href="mailto:${d.customerEmail}" style="color:${teal};font-size:14px;text-decoration:none">${d.customerEmail}</a></td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding:10px 32px 26px" align="center"><p style="color:${dim};font-size:12px;margin:0">El restante (${formatMxn(d.remainingMxn)} MXN) se cobra el día del tour.</p></td></tr>
+</table></td></tr></table></body></html>`
+}
+
+export async function sendDealEmail(d: DealEmailData): Promise<{ ok: boolean; id?: string; error?: string }> {
+	const apiKey = process.env.RESEND_API_KEY
+	if (!apiKey) return { ok: false, error: "RESEND_API_KEY no configurada" }
+	const L = dealT[d.locale] ?? dealT.es
+	try {
+		const resend = new Resend(apiKey)
+		const attachments = d.startISO
+			? [{ filename: "reserva.ics", content: Buffer.from(buildDealIcs(d), "utf8"), contentType: "text/calendar; charset=UTF-8" }]
+			: undefined
+		const { data, error } = await resend.emails.send({ from: FROM, to: [d.customerEmail], subject: L.subject, html: buildDealHtml(d), attachments })
+		if (error) return { ok: false, error: error.message }
+		return { ok: true, id: data?.id }
+	} catch (err) {
+		return { ok: false, error: err instanceof Error ? err.message : "send_failed" }
+	}
+}
+
+export async function sendDealOwnerNotification(d: DealEmailData): Promise<{ ok: boolean; id?: string; error?: string }> {
+	const apiKey = process.env.RESEND_API_KEY
+	if (!apiKey) return { ok: false, error: "RESEND_API_KEY no configurada" }
+	const to = OWNER_EMAIL.split(",").map((s) => s.trim()).filter(Boolean)
+	if (to.length === 0) return { ok: false, error: "OWNER_NOTIFY_EMAIL vacío" }
+	try {
+		const resend = new Resend(apiKey)
+		const { data, error } = await resend.emails.send({
+			from: FROM,
+			to,
+			subject: `🎉 Nueva reserva (deal): ${d.customerName} · ${formatMxn(d.depositMxn)} de ${formatMxn(d.totalMxn)}`,
+			html: buildDealOwnerHtml(d),
+		})
+		if (error) return { ok: false, error: error.message }
+		return { ok: true, id: data?.id }
+	} catch (err) {
+		return { ok: false, error: err instanceof Error ? err.message : "send_failed" }
+	}
+}
+
 export async function sendDepositOwnerNotification(d: DepositEmailData): Promise<{ ok: boolean; id?: string; error?: string }> {
 	const apiKey = process.env.RESEND_API_KEY
 	if (!apiKey) return { ok: false, error: "RESEND_API_KEY no configurada" }

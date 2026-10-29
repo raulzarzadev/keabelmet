@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
 import { getStripe } from "@/lib/stripe"
 import { folioFromPaymentIntent } from "@/lib/reservation"
-import { sendReservationEmail, sendOwnerNotification, sendDepositEmail, sendDepositOwnerNotification, type DepositEmailData } from "@/lib/email"
+import { sendReservationEmail, sendOwnerNotification, sendDepositEmail, sendDepositOwnerNotification, sendDealEmail, sendDealOwnerNotification, type DepositEmailData, type DealEmailData } from "@/lib/email"
 import { unpackItems, activityName } from "@/lib/deposit"
+import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
 
 export const runtime = "nodejs"
 
@@ -84,6 +85,41 @@ export async function POST(req: NextRequest) {
 			if (!owner.ok) console.error("[stripe-webhook] deposit owner email error:", owner.error)
 			if (cust.ok) await markSent()
 			else console.error("[stripe-webhook] deposit customer email error:", cust.error)
+			return NextResponse.json({ received: true })
+		}
+
+		// --- Deal personalizado (precios negociados): voucher de bienvenida ---
+		if (m.kind === "deal") {
+			const deal = verifyDeal(unchunkToken(m))
+			if (!deal) {
+				console.error("[stripe-webhook] deal token inválido en metadata")
+				return NextResponse.json({ received: true })
+			}
+			const totals = computeDealTotals(deal)
+			const dealData: DealEmailData = {
+				folio: folioFromPaymentIntent(pi.id),
+				paymentIntentId: pi.id,
+				customerName: m.customerName || "",
+				customerEmail: m.customerEmail,
+				customerPhone: m.customerPhone || "",
+				locale: m.locale || "es",
+				title: deal.title,
+				subtitle: deal.subtitle,
+				lines: deal.lines.map((l) => ({ label: l.label, amountMxn: l.amountMxn })),
+				totalMxn: totals.totalMxn,
+				depositMxn: totals.depositMxn,
+				remainingMxn: totals.remainingMxn,
+				rate: totals.rate,
+				includes: deal.includes,
+				excludes: deal.excludes,
+				note: deal.note,
+				startISO: deal.startISO,
+				endISO: deal.endISO,
+			}
+			const [cust, owner] = await Promise.all([sendDealEmail(dealData), sendDealOwnerNotification(dealData)])
+			if (!owner.ok) console.error("[stripe-webhook] deal owner email error:", owner.error)
+			if (cust.ok) await markSent()
+			else console.error("[stripe-webhook] deal customer email error:", cust.error)
 			return NextResponse.json({ received: true })
 		}
 

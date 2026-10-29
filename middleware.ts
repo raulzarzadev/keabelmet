@@ -28,16 +28,17 @@ export function middleware(request: NextRequest) {
   )
 
   if (pathnameLocale) {
-    // Rewrite /en/about -> /[locale]/about with locale param
+    // Rewrite /en/about -> /[locale]/about with locale param (preservando el query)
     return NextResponse.rewrite(
-      new URL(`/${pathnameLocale}${pathname.slice(`/${pathnameLocale}`.length) || "/"}`, request.url)
+      new URL(`/${pathnameLocale}${pathname.slice(`/${pathnameLocale}`.length) || "/"}${request.nextUrl.search}`, request.url)
     )
   }
 
   // No locale prefix = default locale (es), rewrite to /es/...
-  // This allows app/[locale]/page.tsx to handle it
+  // This allows app/[locale]/page.tsx to handle it. Preservamos el query string
+  // (p. ej. /deal?d=<token>), que antes se perdía al reescribir.
   const newPathname = `/es${pathname === "/" ? "" : pathname}`
-  return NextResponse.rewrite(new URL(newPathname, request.url))
+  return NextResponse.rewrite(new URL(newPathname + request.nextUrl.search, request.url))
 }
 
 export const config = {
