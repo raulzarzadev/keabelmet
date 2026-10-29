@@ -1069,3 +1069,54 @@ body.has-book-bar .wa-float { bottom: 94px; }
 @keyframes srFade { from { opacity: 0 } to { opacity: 1 } }
 @keyframes srPopIn { from { opacity: 0; transform: translateY(16px) scale(.97) } to { opacity: 1; transform: none } }
 @keyframes srBlink { 0%,100% { opacity: 1 } 50% { opacity: .3 } }
+
+/* ===== ARMA TU RESERVA (anticipo 20%) ===== */
+.dep-page { padding: 120px 24px 80px; max-width: var(--maxw); margin: 0 auto; }
+.dep-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+.dep-head h1 { font-size: clamp(30px,4.6vw,48px); color: var(--sand); margin-bottom: 14px; }
+.dep-head p { color: var(--sand-dim); font-size: 17px; line-height: 1.55; }
+.dep-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: start; }
+.dep-sec-title { font-family: var(--font-poppins),'Poppins',sans-serif; font-weight:800; font-size:18px; color: var(--sand); margin-bottom:16px; }
+.dep-cards { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 16px; }
+.dep-card { background: var(--ink-2); border:1px solid var(--line); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
+.dep-card-img { height: 120px; background-size:cover; background-position:center; }
+.dep-card-body { padding:14px 16px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.dep-card-body h3 { font-family:var(--font-poppins),'Poppins',sans-serif; font-weight:700; font-size:15px; color:var(--sand); line-height:1.25; }
+.dep-card-price { color: var(--teal); font-weight:700; font-size:14px; margin-top:auto; }
+.dep-card-price span { color: var(--sand-dim); font-weight:400; font-size:12px; }
+.dep-add { width:100%; justify-content:center; padding:10px; font-size:13px; }
+.dep-cart { position: sticky; top: 90px; background: var(--ink-2); border:1px solid var(--line); border-radius:22px; padding:22px; }
+.dep-empty { color: var(--sand-dim); font-size:14px; }
+.dep-item { border:1px solid var(--line); border-radius:14px; padding:14px; margin-bottom:12px; background: rgba(244,239,228,0.02); }
+.dep-item-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+.dep-item-title { font-weight:700; color:var(--sand); font-size:15px; }
+.dep-item-remove { background:none; border:none; color:var(--sand-dim); font-size:22px; line-height:1; cursor:pointer; padding:0 2px; }
+.dep-item-remove:hover { color:#ff8a80; }
+.dep-item-fields { display:grid; grid-template-columns:1fr auto; gap:12px; margin-top:12px; align-items:end; }
+.dep-item-fields label, .dep-item-people { display:flex; flex-direction:column; gap:6px; }
+.dep-item-fields span, .dep-item-people > span { color:var(--sand-dim); font-size:12px; }
+.dep-item-fields input[type=date] { background: rgba(244,239,228,0.04); border:1.5px solid var(--line); border-radius:10px; color:var(--sand); padding:9px 10px; font-family:inherit; }
+.dep-item-foot { display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
+.dep-item-foot em { color:var(--sand-dim); font-size:12px; font-style:normal; }
+.dep-item-foot strong { color:var(--sand); font-size:14px; }
+.dep-sum { border-top:1px solid var(--line); margin-top:8px; padding-top:14px; }
+.dep-sum-row { display:flex; justify-content:space-between; align-items:center; padding:6px 0; color:var(--sand-dim); font-size:14px; }
+.dep-sum-row strong { color:var(--sand); }
+.dep-sum-row.dep-sum-paid { color:var(--sand); font-weight:700; }
+.dep-sum-row.dep-sum-paid strong { color:var(--teal); font-size:20px; }
+.dep-note { background: rgba(40,194,160,0.08); border:1px solid rgba(40,194,160,0.3); border-radius:12px; padding:11px 13px; color:var(--sand); font-size:13px; line-height:1.5; margin:14px 0; }
+.dep-checkout .res-field { margin-top:10px; }
+.dep-pay-btn { width:100%; justify-content:center; margin-top:8px; }
+.dep-pay { max-width:460px; margin:0 auto; background:var(--ink-2); border:1px solid var(--line); border-radius:22px; padding:24px; }
+.dep-pay-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.dep-pay-amount { text-align:right; }
+.dep-pay-amount span { display:block; color:var(--sand-dim); font-size:12px; }
+.dep-pay-amount strong { color:var(--teal); font-size:20px; }
+.dep-result { max-width:460px; margin:0 auto; text-align:center; background:var(--ink-2); border:1px solid rgba(40,194,160,0.4); border-radius:22px; padding:36px 28px; }
+.dep-result-badge { width:60px; height:60px; border-radius:50%; background:var(--teal); color:var(--ink); font-size:30px; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; font-weight:800; }
+.dep-result h2 { color:var(--sand); font-size:26px; margin-bottom:12px; }
+.dep-result-text { color:var(--sand-dim); font-size:15px; line-height:1.55; margin-bottom:18px; }
+.dep-result-folio { color:var(--teal); font-weight:800; font-size:22px; letter-spacing:.04em; margin-bottom:18px; }
+.dep-email-sent { color:var(--sand-dim); font-size:13px; margin-top:12px; }
+@media (max-width: 860px) { .dep-grid { grid-template-columns: 1fr; } .dep-cart { position: static; } }
+@media (max-width: 480px) { .dep-page { padding: 100px 16px 60px; } .dep-cards { grid-template-columns: 1fr 1fr; } }

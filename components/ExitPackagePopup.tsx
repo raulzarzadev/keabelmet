@@ -13,7 +13,7 @@ const copy: Record<Locale, Copy> = {
     title: "Antes de irte…",
     text: "¿Vas a explorar la Baja? No pagues actividad por actividad en distintas empresas. Junta tus safaris y buceos en un solo paquete y obtén un precio especial — te lo armamos a tu medida.",
     wa: "Armar mi paquete",
-    see: "Ver combos",
+    see: "Cotizar por WhatsApp",
     waMsg: "Hola! Quiero armar un paquete con varias actividades en la Baja (safaris + buceo) a precio especial. ¿Me ayudan a cotizarlo?",
     close: "Cerrar",
   },
@@ -22,7 +22,7 @@ const copy: Record<Locale, Copy> = {
     title: "Before you go…",
     text: "Exploring Baja? Don't pay activity by activity at different companies. Bundle your safaris and dives into one package and get a special price — we'll tailor it to you.",
     wa: "Build my package",
-    see: "See bundles",
+    see: "Quote on WhatsApp",
     waMsg: "Hi! I'd like to build a package with several activities in Baja (safaris + diving) at a special price. Can you help me with a quote?",
     close: "Close",
   },
@@ -31,7 +31,7 @@ const copy: Record<Locale, Copy> = {
     title: "Avant de partir…",
     text: "Vous explorez la Basse-Californie ? Ne payez pas activité par activité dans différentes entreprises. Regroupez vos safaris et plongées en un seul forfait et obtenez un prix spécial — sur mesure.",
     wa: "Composer mon forfait",
-    see: "Voir les forfaits",
+    see: "Devis sur WhatsApp",
     waMsg: "Bonjour ! Je souhaite composer un forfait avec plusieurs activités en Basse-Californie (safaris + plongée) à prix spécial. Pouvez-vous me faire un devis ?",
     close: "Fermer",
   },
@@ -40,7 +40,7 @@ const copy: Record<Locale, Copy> = {
     title: "先别走…",
     text: "想探索下加州吗？不要在不同公司一个个单独付费。把你的海洋 safari 和潜水组合成一个套餐，享受特别价格——为你量身定制。",
     wa: "定制我的套餐",
-    see: "查看套餐",
+    see: "WhatsApp 咨询报价",
     waMsg: "你好！我想把下加州的多个活动（safari + 潜水）组合成一个套餐，享受特别价格。能帮我报价吗？",
     close: "关闭",
   },
@@ -49,7 +49,7 @@ const copy: Record<Locale, Copy> = {
     title: "Abans de marxar…",
     text: "Vas a explorar la Baixa? No paguis activitat per activitat en diferents empreses. Ajunta els teus safaris i immersions en un sol paquet i aconsegueix un preu especial — te'l fem a mida.",
     wa: "Muntar el meu paquet",
-    see: "Veure combos",
+    see: "Pressupost per WhatsApp",
     waMsg: "Hola! Vull muntar un paquet amb diverses activitats a la Baixa (safaris + busseig) a preu especial. Em podeu ajudar amb un pressupost?",
     close: "Tancar",
   },
@@ -115,6 +115,8 @@ export default function ExitPackagePopup({ locale = "es" }: { locale?: Locale })
 
   if (!mounted || !open) return null
   const c = copy[locale] ?? copy.es
+  const base = locale === "es" ? "" : `/${locale}`
+  const reservaHref = `${base}/arma-tu-reserva`
 
   const modal = (
     <div className="sr-pop-overlay" onClick={close} role="dialog" aria-modal="true" aria-label={c.title}>
@@ -130,8 +132,8 @@ export default function ExitPackagePopup({ locale = "es" }: { locale?: Locale })
           <h3>{c.title}</h3>
           <p>{c.text}</p>
           <div className="sr-pop-btns">
-            <a className="btn btn-teal" href={buildWhatsAppLink(c.waMsg)} target="_blank" rel="noopener noreferrer" onClick={close}>{c.wa}</a>
-            <a className="btn btn-ghost" href="#paquetes" onClick={close}>{c.see}</a>
+            <a className="btn btn-teal" href={reservaHref} onClick={close}>{c.wa}</a>
+            <a className="btn btn-ghost" href={buildWhatsAppLink(c.waMsg)} target="_blank" rel="noopener noreferrer" onClick={close}>{c.see}</a>
           </div>
         </div>
       </div>
