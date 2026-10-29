@@ -1,0 +1,103 @@
+import type { BlogPost } from "@/lib/blog/types"
+
+export const cuantosDiasLaPaz: BlogPost = {
+	id: "cuantos-dias-la-paz",
+	category: "planea",
+	date: "2026-10-29",
+	cover: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg",
+	experiences: ["tour-espiritu-santo", "tiburon-ballena", "safari-la-ventana", "tour-ballena-gris"],
+	related: ["mejor-epoca-la-paz", "que-llevar-tour-lancha", "snorkel-o-buceo"],
+	sources: [
+		{ id: 1, authors: "Maya Comunicación", year: "2026", title: "Tiburón ballena en La Paz: sin seis ejemplares, no hay nado (aviso de la Semarnat para la temporada 2026-2027)", publication: "Nota periodística", url: "https://mayacomunicacion.com.mx/tiburon-ballena-la-paz-temporada-2026-2027/", kind: "report" },
+		{ id: 2, authors: "NOAA Fisheries", year: "2024", title: "Gray Whale (Eschrichtius robustus)", publication: "National Oceanic and Atmospheric Administration, ficha de especie", url: "https://www.fisheries.noaa.gov/species/gray-whale", kind: "official" },
+		{ id: 3, authors: "Palacios, M. D., et al.", year: "2023", title: "Reproductive behavior, seasonality, and distribution of three devil ray species (Mobula mobular, M. thurstoni, and M. munkiana) in the Southern Gulf of California, Mexico", publication: "Marine Biology 171(1): 12", url: "https://doi.org/10.1007/s00227-023-04314-0", kind: "paper" },
+	],
+	es: {
+		slug: "cuantos-dias-necesito-en-la-paz",
+		title: "¿Cuántos días necesito en La Paz? Itinerarios de 3, 5 y 7 días",
+		metaTitle: "¿Cuántos días quedarse en La Paz? Itinerarios de 3, 5 y 7 días",
+		description: "Con 3 días ves lo esencial de La Paz; con 5 combinas islas, tiburón ballena y safari; con 7 sumas ballena gris o Cabo Pulmo. Itinerarios listos según la temporada.",
+		excerpt: "Tres días para lo esencial, cinco para enamorarte y siete para no dejar nada pendiente. Te armamos los itinerarios según la temporada.",
+		coverAlt: "Playa de arena blanca y agua turquesa en Isla Espíritu Santo",
+		answer: "Para vivir lo esencial del mar en La Paz recomendamos **mínimo 3 días**; con **5 días** combinas Isla Espíritu Santo, tiburón ballena (octubre–abril) [^1] y un safari en La Ventana; con **7 días** puedes sumar la ballena gris en el Pacífico (enero–marzo) [^2] o Cabo Pulmo. Deja siempre un día libre por si el clima obliga a reprogramar.",
+		blocks: [
+			{ type: "p", text: "La Paz engancha. Mucha gente llega pensando quedarse dos días y termina buscando cómo extender el viaje. Aquí van nuestros itinerarios recomendados, pensados para el mar." },
+			{ type: "h2", text: "3 días: lo esencial" },
+			{ type: "ul", items: [
+				"**Día 1:** llegada, malecón y atardecer.",
+				"**Día 2:** [tour de snorkel a Isla Espíritu Santo](/experiencias/tour-espiritu-santo): Balandra desde el mar, lobos marinos, arrecifes y playa.",
+				"**Día 3:** [nado con tiburón ballena](/experiencias/tiburon-ballena) por la mañana (de octubre a abril [^1]) o un [Scuba Discovery](/experiencias/scuba-discovery).",
+			] },
+			{ type: "h2", text: "5 días: para enamorarte" },
+			{ type: "ul", items: [
+				"**Días 1 a 3:** lo esencial.",
+				"**Día 4:** [Ocean Safari en La Ventana](/experiencias/safari-la-ventana) (en mayo, temporada pico de móbulas [^3]).",
+				"**Día 5:** día libre o de reserva por clima; buceo en Espíritu Santo si te quedaste con ganas.",
+			] },
+			{ type: "h2", text: "7 días: sin pendientes" },
+			{ type: "ul", items: [
+				"**Días 1 a 5:** lo de arriba.",
+				"**Día 6:** [ballena gris en Puerto Chale](/experiencias/tour-ballena-gris) (de enero a marzo; las crías nacen entre principios de enero y mediados de febrero [^2]) o [buceo en Cabo Pulmo](/experiencias/buceo-cabo-pulmo).",
+				"**Día 7:** descanso, playa y regreso.",
+			] },
+			{ type: "tip", text: "Haz las salidas de mar al inicio del viaje y deja el día libre al final. Si el viento o el oleaje obligan a reprogramar, todavía tienes margen." },
+			{ type: "h2", text: "Ajusta según la temporada" },
+			{ type: "ul", items: [
+				"**Octubre–abril:** incluye tiburón ballena [^1].",
+				"**Enero–marzo:** suma ballena gris [^2].",
+				"**Marzo–agosto:** suma móbulas en La Ventana [^3].",
+				"**Noviembre–diciembre:** considera el Sardine Run en Bahía Magdalena.",
+			] },
+			{ type: "p", text: "Revisa [la mejor época para visitar La Paz](/blog/mejor-epoca-para-visitar-la-paz) y, cuando tengas tu plan, [arma tu reserva](/arma-tu-reserva) con varias actividades apartando con el 20%." },
+		],
+		faq: [
+			{ q: "¿2 días son suficientes para La Paz?", a: "Alcanzan para una salida al mar, pero recomendamos mínimo 3 días para combinar Espíritu Santo y tiburón ballena (en temporada) sin prisas." },
+			{ q: "¿Qué no me puedo perder en La Paz?", a: "Isla Espíritu Santo y, de octubre a abril, el nado con tiburón ballena [^1]." },
+			{ q: "¿Puedo ver tiburón ballena y ballena gris en el mismo viaje?", a: "Sí, entre enero y marzo coinciden ambas temporadas [^1][^2]." },
+		],
+	},
+	en: {
+		slug: "how-many-days-in-la-paz",
+		title: "How many days do you need in La Paz? 3, 5 and 7-day itineraries",
+		metaTitle: "How many days in La Paz, Mexico? 3, 5 and 7-day itineraries",
+		description: "With 3 days you see La Paz's essentials; with 5 you combine islands, whale sharks and a safari; with 7 you add gray whales or Cabo Pulmo. Ready-made itineraries by season.",
+		excerpt: "Three days for the essentials, five to fall in love and seven to leave nothing undone. Here are our itineraries by season.",
+		coverAlt: "White-sand beach and turquoise water on Isla Espíritu Santo",
+		answer: "To experience the essentials of the sea in La Paz we recommend **at least 3 days**; with **5 days** you combine Isla Espíritu Santo, whale sharks (October–April) [^1] and a La Ventana safari; with **7 days** you can add gray whales on the Pacific (January–March) [^2] or Cabo Pulmo. Always keep a free day in case weather forces a reschedule.",
+		blocks: [
+			{ type: "p", text: "La Paz gets you hooked. Many people arrive planning two days and end up trying to extend their trip. Here are our recommended itineraries, built around the sea." },
+			{ type: "h2", text: "3 days: the essentials" },
+			{ type: "ul", items: [
+				"**Day 1:** arrival, malecón and sunset.",
+				"**Day 2:** [Isla Espíritu Santo snorkel tour](/experiencias/tour-espiritu-santo): Balandra from the sea, sea lions, reefs and beach.",
+				"**Day 3:** [whale shark swim](/experiencias/tiburon-ballena) in the morning (October to April [^1]) or a [Scuba Discovery](/experiencias/scuba-discovery).",
+			] },
+			{ type: "h2", text: "5 days: to fall in love" },
+			{ type: "ul", items: [
+				"**Days 1–3:** the essentials.",
+				"**Day 4:** [La Ventana Ocean Safari](/experiencias/safari-la-ventana) (May is peak mobula season [^3]).",
+				"**Day 5:** free day or weather backup; dive Espíritu Santo if you want more.",
+			] },
+			{ type: "h2", text: "7 days: nothing left undone" },
+			{ type: "ul", items: [
+				"**Days 1–5:** all of the above.",
+				"**Day 6:** [gray whales in Puerto Chale](/experiencias/tour-ballena-gris) (January to March; calves are born between early January and mid-February [^2]) or [diving Cabo Pulmo](/experiencias/buceo-cabo-pulmo).",
+				"**Day 7:** rest, beach and departure.",
+			] },
+			{ type: "tip", text: "Do your sea trips at the start of the trip and keep the free day at the end. If wind or waves force a reschedule, you'll still have room." },
+			{ type: "h2", text: "Adjust for the season" },
+			{ type: "ul", items: [
+				"**October–April:** include whale sharks [^1].",
+				"**January–March:** add gray whales [^2].",
+				"**March–August:** add mobula rays in La Ventana [^3].",
+				"**November–December:** consider the Sardine Run in Magdalena Bay.",
+			] },
+			{ type: "p", text: "Check [the best time to visit La Paz](/blog/best-time-to-visit-la-paz-mexico) and, once you have your plan, [build your reservation](/arma-tu-reserva) with several activities and a 20% deposit." },
+		],
+		faq: [
+			{ q: "Are 2 days enough for La Paz?", a: "Enough for one sea trip, but we recommend at least 3 days to combine Espíritu Santo and whale sharks (in season) without rushing." },
+			{ q: "What can't I miss in La Paz?", a: "Isla Espíritu Santo and, from October to April, swimming with whale sharks [^1]." },
+			{ q: "Can I see whale sharks and gray whales on the same trip?", a: "Yes, between January and March both seasons overlap [^1][^2]." },
+		],
+	},
+}
