@@ -1,4 +1,5 @@
 import crypto from "node:crypto"
+import { sanitizePhotoKeys } from "@/lib/deal-photos"
 
 /**
  * Deals personalizados ("hechos por fuera"): el editor arma un paquete con
@@ -30,6 +31,8 @@ export interface Deal {
 	includes?: string
 	excludes?: string
 	note?: string
+	/** Claves de fotos (ver lib/deal-photos); la primera es la portada. */
+	photos?: string[]
 	exp?: number
 }
 
@@ -84,6 +87,7 @@ export function verifyDeal(token: string | undefined | null): Deal | null {
 			includes: raw.includes ? String(raw.includes).slice(0, 1200) : undefined,
 			excludes: raw.excludes ? String(raw.excludes).slice(0, 1200) : undefined,
 			note: raw.note ? String(raw.note).slice(0, 600) : undefined,
+			photos: sanitizePhotoKeys(raw.photos),
 			exp: typeof raw.exp === "number" ? raw.exp : undefined,
 		}
 	} catch {

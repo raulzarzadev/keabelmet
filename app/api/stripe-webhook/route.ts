@@ -5,6 +5,8 @@ import { folioFromPaymentIntent } from "@/lib/reservation"
 import { sendReservationEmail, sendOwnerNotification, sendDepositEmail, sendDepositOwnerNotification, sendDealEmail, sendDealOwnerNotification, type DepositEmailData, type DealEmailData } from "@/lib/email"
 import { unpackItems, activityName } from "@/lib/deposit"
 import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
+import { dealPhoto } from "@/lib/deal-photos"
+import { SITE_URL } from "@/lib/email"
 
 export const runtime = "nodejs"
 
@@ -115,6 +117,10 @@ export async function POST(req: NextRequest) {
 				note: deal.note,
 				startISO: deal.startISO,
 				endISO: deal.endISO,
+				photos: (deal.photos ?? [])
+					.map((k) => dealPhoto(k))
+					.filter((p): p is NonNullable<typeof p> => !!p)
+					.map((p) => ({ src: `${SITE_URL}${p.src}`, label: p.label })),
 			}
 			const [cust, owner] = await Promise.all([sendDealEmail(dealData), sendDealOwnerNotification(dealData)])
 			if (!owner.ok) console.error("[stripe-webhook] deal owner email error:", owner.error)

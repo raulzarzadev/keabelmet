@@ -545,6 +545,8 @@ export interface DealEmailData {
 	note?: string
 	startISO?: string
 	endISO?: string
+	/** Fotos con URL absoluta; la primera es la portada. */
+	photos?: { src: string; label: string }[]
 }
 
 const dealT: Record<string, {
@@ -578,7 +580,20 @@ function buildDealIcs(d: DealEmailData): string {
 function buildDealHtml(d: DealEmailData): string {
 	const L = dealT[d.locale] ?? dealT.es
 	const ink = "#0d222f", card = "#0f2836", teal = "#28c2a0", sand = "#f4efe4", dim = "#a9c0cc", line = "rgba(244,239,228,0.14)"
-	const hero = heroUrl()
+	const photos = d.photos ?? []
+	const hero = photos[0]?.src || heroUrl()
+	// Mosaico con el resto de las fotos (2 por fila).
+	const rest = photos.slice(1, 5)
+	const photoCell = (p: { src: string; label: string }) =>
+		`<td width="50%" style="padding:4px;vertical-align:top"><img src="${p.src}" width="206" alt="${p.label}" style="display:block;width:100%;height:120px;object-fit:cover;border-radius:12px;border:0" /><div style="color:${dim};font-size:11px;margin-top:4px;text-align:center">${p.label}</div></td>`
+	const mosaicRows: string[] = []
+	for (let i = 0; i < rest.length; i += 2) {
+		const pair = rest.slice(i, i + 2)
+		mosaicRows.push(`<tr>${pair.map(photoCell).join("")}${pair.length === 1 ? '<td width="50%"></td>' : ""}</tr>`)
+	}
+	const mosaic = mosaicRows.length
+		? `<tr><td style="padding:18px 26px 0"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${mosaicRows.join("")}</table></td></tr>`
+		: ""
 	const iconBtn = (href: string, icon: string, alt: string) =>
 		`<a href="${href}" style="display:inline-block;padding:10px;margin:0 5px;border-radius:50%;background:rgba(40,194,160,0.12);border:1px solid ${line};line-height:0"><img src="${SITE_URL}/icons/${icon}" width="20" height="20" alt="${alt}" style="display:block;border:0" /></a>`
 	const lineRow = (l: DealEmailLine) =>
@@ -605,6 +620,7 @@ function buildDealHtml(d: DealEmailData): string {
 			<div style="color:${teal};font-size:22px;font-weight:800;letter-spacing:0.04em;margin-top:3px">${d.folio}</div>
 		</div>
 	</td></tr>
+	${mosaic}
 	<tr><td style="padding:22px 30px 6px">
 		<div style="color:${teal};font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:4px">${L.breakdown}</div>
 		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${d.lines.map(lineRow).join("")}</table>
