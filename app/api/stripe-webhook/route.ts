@@ -74,6 +74,8 @@ export async function POST(req: NextRequest) {
 				customerPhone: m.customerPhone || "",
 				locale,
 				items,
+				subtotalMxn: Number(m.subtotalMxn) || undefined,
+				discountMxn: Number(m.discountMxn) || undefined,
 				totalMxn: Number(m.totalMxn) || 0,
 				depositMxn: Number(m.depositMxn) || Math.round((pi.amount || 0) / 100),
 				remainingMxn: Number(m.remainingMxn) || 0,

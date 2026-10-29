@@ -1,7 +1,8 @@
 import { isValidPrice } from "@/lib/pricing-catalog"
 import { getSeason, isDateInSeason } from "@/lib/expedition-seasons"
 import { experiences } from "@/constants/experiences"
-import { defaultLocale } from "@/lib/i18n"
+import { defaultLocale, type Locale } from "@/lib/i18n"
+import { computePackageDiscount, type AppliedPackage } from "@/lib/packages"
 
 /** Anticipo: 20% del total; el resto se liquida el día del tour. */
 export const DEPOSIT_RATE = 0.2
@@ -52,10 +53,22 @@ export function validateDepositItem(raw: unknown): DepositItem {
 	return { slug, cardName, expeditionName, unitAmountMxn: unit, people, dateISO, subtotalMxn: unit * people }
 }
 
-export function computeDeposit(items: DepositItem[]): { totalMxn: number; depositMxn: number; remainingMxn: number } {
-	const totalMxn = items.reduce((s, it) => s + it.subtotalMxn, 0)
+export function computeDeposit(
+	items: DepositItem[],
+	locale: Locale = defaultLocale,
+): {
+	subtotalMxn: number
+	discountMxn: number
+	totalMxn: number
+	depositMxn: number
+	remainingMxn: number
+	packages: AppliedPackage[]
+} {
+	const subtotalMxn = items.reduce((s, it) => s + it.subtotalMxn, 0)
+	const { discountMxn, applied } = computePackageDiscount(items, locale)
+	const totalMxn = subtotalMxn - discountMxn
 	const depositMxn = Math.round(totalMxn * DEPOSIT_RATE)
-	return { totalMxn, depositMxn, remainingMxn: totalMxn - depositMxn }
+	return { subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn: totalMxn - depositMxn, packages: applied }
 }
 
 /** Serialización compacta de los items para la metadata de Stripe (≤500 chars). */
