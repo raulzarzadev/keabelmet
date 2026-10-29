@@ -112,7 +112,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
             <LanguageSelector locale={locale} />
           </div>
           <a
-            href={pathname.includes("/experiencias/") ? "#precios" : localizeHref("/#expediciones", locale)}
+            href={pathname.includes("/experiencias/") ? "#precios" : localizeHref("/arma-tu-reserva", locale)}
             className="btn btn-teal"
             style={{ padding: "12px 22px" }}
           >

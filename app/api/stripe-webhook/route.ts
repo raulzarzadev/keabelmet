@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
 import { getStripe } from "@/lib/stripe"
 import { folioFromPaymentIntent } from "@/lib/reservation"
-import { sendReservationEmail, sendOwnerNotification } from "@/lib/email"
+import { sendReservationEmail, sendOwnerNotification, sendDepositEmail, sendDepositOwnerNotification, type DepositEmailData } from "@/lib/email"
+import { unpackItems, activityName } from "@/lib/deposit"
 
 export const runtime = "nodejs"
 
@@ -43,7 +44,49 @@ export async function POST(req: NextRequest) {
 		const m = pi.metadata ?? {}
 
 		// Evita correos duplicados si Stripe reintenta el evento.
-		if (m.emailSent === "1" || !m.customerEmail || !m.slug) {
+		if (m.emailSent === "1" || !m.customerEmail) {
+			return NextResponse.json({ received: true })
+		}
+
+		const markSent = async () => {
+			try {
+				await stripe.paymentIntents.update(pi.id, { metadata: { ...m, emailSent: "1" } })
+			} catch {
+				/* no bloqueamos por esto */
+			}
+		}
+
+		// --- Reserva con anticipo (multi-actividad): voucher de bienvenida ---
+		if (m.kind === "deposit") {
+			const locale = m.locale || "es"
+			const items = unpackItems(m.items).map((p) => ({
+				slug: p.slug,
+				expeditionName: activityName(p.slug, locale),
+				dateISO: p.dateISO,
+				people: p.people,
+				subtotalMxn: p.unitAmountMxn * p.people,
+			}))
+			const dep: DepositEmailData = {
+				folio: folioFromPaymentIntent(pi.id),
+				paymentIntentId: pi.id,
+				customerName: m.customerName || "",
+				customerEmail: m.customerEmail,
+				customerPhone: m.customerPhone || "",
+				locale,
+				items,
+				totalMxn: Number(m.totalMxn) || 0,
+				depositMxn: Number(m.depositMxn) || Math.round((pi.amount || 0) / 100),
+				remainingMxn: Number(m.remainingMxn) || 0,
+			}
+			const [cust, owner] = await Promise.all([sendDepositEmail(dep), sendDepositOwnerNotification(dep)])
+			if (!owner.ok) console.error("[stripe-webhook] deposit owner email error:", owner.error)
+			if (cust.ok) await markSent()
+			else console.error("[stripe-webhook] deposit customer email error:", cust.error)
+			return NextResponse.json({ received: true })
+		}
+
+		// --- Reserva de una sola actividad (flujo original) ---
+		if (!m.slug) {
 			return NextResponse.json({ received: true })
 		}
 

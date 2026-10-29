@@ -356,6 +356,22 @@ export const pageSeoMap = {
       ca: "Certifica't PADI Open Water a La Paz, BCS. eLearning + 2 immersions a platja i 2 en vaixell. Llicència internacional de per vida, des d'1 persona. 8.000 MXN.",
     },
   },
+  buildReservation: {
+    title: {
+      es: "Arma tu reserva · aparta con 20%",
+      en: "Build your reservation · reserve with 20%",
+      fr: "Composez votre réservation · 20% d'acompte",
+      zh: "定制你的预订 · 付20%预订",
+      ca: "Munta la teva reserva · aparta amb 20%",
+    },
+    description: {
+      es: "Elige varias actividades en La Paz y la Baja, aparta con solo el 20% y paga el resto en efectivo, transferencia o tarjeta el día de tus tours.",
+      en: "Pick several activities in La Paz and Baja, reserve with just 20% and pay the rest in cash, transfer or card on the day of your tours.",
+      fr: "Choisissez plusieurs activités à La Paz et en Basse-Californie, réservez avec seulement 20% et payez le reste en espèces, virement ou carte le jour de vos tours.",
+      zh: "在拉巴斯和下加州选择多个活动，只需付20%即可预订，其余在行程当天以现金、转账或刷卡支付。",
+      ca: "Tria diverses activitats a La Paz i la Baixa, aparta amb només el 20% i paga la resta en efectiu, transferència o targeta el dia dels teus tours.",
+    },
+  },
 } as const satisfies Record<string, PageSeo>
 
 export type PageSeoKey = keyof typeof pageSeoMap
