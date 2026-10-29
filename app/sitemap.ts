@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { experiences } from "@/constants/experiences"
 import { locales, defaultLocale, type Locale } from "@/lib/i18n"
+import { getAllPosts } from "@/lib/blog"
 
 const baseUrl = "https://www.keabelmet.com"
 
@@ -10,7 +11,6 @@ const staticRoutes = [
   { path: "/experiencias", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/tarifas", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/galeria", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/blog", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/contacto", priority: 0.7, changeFrequency: "monthly" as const },
 ]
 
@@ -49,6 +49,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages },
       })
     }
+  }
+
+  // Blog: solo existe en español e inglés (fr/zh/ca muestran inglés con noindex).
+  const blogIndexLangs = { es: `${baseUrl}/blog`, en: `${baseUrl}/en/blog`, "x-default": `${baseUrl}/blog` }
+  for (const url of [blogIndexLangs.es, blogIndexLangs.en]) {
+    entries.push({ url, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8, alternates: { languages: blogIndexLangs } })
+  }
+  for (const post of getAllPosts()) {
+    const es = `${baseUrl}/blog/${post.es.slug}`
+    const en = `${baseUrl}/en/blog/${post.en.slug}`
+    const languages = { es, en, "x-default": es }
+    const lastModified = new Date(post.updated ?? post.date)
+    entries.push({ url: es, lastModified, changeFrequency: "monthly", priority: 0.7, alternates: { languages } })
+    entries.push({ url: en, lastModified, changeFrequency: "monthly", priority: 0.7, alternates: { languages } })
   }
 
   return entries

@@ -1,4 +1,6 @@
 import { experiences } from "@/constants/experiences"
+import { getAllPosts, plainText } from "@/lib/blog"
+import { blogPostUrl } from "@/lib/blog/text"
 
 const SITE = "https://www.keabelmet.com"
 
@@ -34,6 +36,16 @@ export function GET() {
     lines.push(`- [${i.title}](${SITE}${e.href}): ${i.description}`)
   }
   lines.push("")
+  const posts = getAllPosts()
+  if (posts.length) {
+    lines.push("## Blog: respuestas para viajeros (con fuentes científicas)")
+    lines.push("")
+    for (const p of posts) {
+      lines.push(`- [${p.es.title}](${blogPostUrl(p, "es")}): ${plainText(p.es.answer)}`)
+      lines.push(`- [${p.en.title}](${blogPostUrl(p, "en")}) (EN): ${plainText(p.en.answer)}`)
+    }
+    lines.push("")
+  }
   return new Response(lines.join("\n"), {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
