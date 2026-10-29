@@ -17,6 +17,7 @@ export interface DealView {
 	includes?: string
 	excludes?: string
 	note?: string
+	photos?: { src: string; label: string }[]
 }
 
 interface UI {
@@ -157,10 +158,15 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 			}
 		: undefined
 
+	const photos = deal.photos ?? []
+	const cover = photos[0]
+	const gallery = photos.slice(1)
+
 	if (step === "result") {
 		return (
 			<div className="deal-wrap">
 				<div className="dep-result">
+					{cover && <div className="deal-result-cover" role="img" aria-label={cover.label} style={{ backgroundImage: `url("${cover.src}")` }} />}
 					<div className="dep-result-badge">✓</div>
 					<h2>{t.okTitle}</h2>
 					<p className="dep-result-text">{t.okText}</p>
@@ -201,6 +207,21 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 				<h1>{deal.title}</h1>
 				{deal.subtitle && <p className="deal-subtitle">{deal.subtitle}</p>}
 			</div>
+
+			{cover && (
+				<div className="deal-cover" role="img" aria-label={cover.label} style={{ backgroundImage: `url("${cover.src}")` }}>
+					<span className="deal-cover-label">{cover.label}</span>
+				</div>
+			)}
+			{gallery.length > 0 && (
+				<div className={`deal-gallery deal-gallery-${Math.min(gallery.length, 3)}`}>
+					{gallery.map((p) => (
+						<div key={p.src} className="deal-gallery-item" role="img" aria-label={p.label} style={{ backgroundImage: `url("${p.src}")` }}>
+							<span>{p.label}</span>
+						</div>
+					))}
+				</div>
+			)}
 
 			<div className="deal-card">
 				<h2 className="dep-sec-title">{t.breakdown}</h2>

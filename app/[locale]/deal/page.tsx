@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
 import { verifyDeal, computeDealTotals } from "@/lib/deal"
+import { dealPhoto } from "@/lib/deal-photos"
 import DealCheckout from "@/components/DealCheckout"
 
 export const metadata: Metadata = {
@@ -45,6 +46,10 @@ export default async function DealPage({
 		includes: deal.includes,
 		excludes: deal.excludes,
 		note: deal.note,
+		photos: (deal.photos ?? [])
+			.map((k) => dealPhoto(k))
+			.filter((p): p is NonNullable<typeof p> => !!p)
+			.map((p) => ({ src: p.src, label: p.label })),
 	}
 
 	return (

@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type FormEvent } from "react"
 import { formatMxn } from "@/lib/reservation"
+import { DEAL_PHOTOS, MAX_DEAL_PHOTOS } from "@/lib/deal-photos"
 
 interface Line {
 	key: string
@@ -23,6 +24,11 @@ export default function DealBuilder({ locale = "es" }: { locale?: string }) {
 	const [excludes, setExcludes] = useState("")
 	const [note, setNote] = useState("")
 	const [lines, setLines] = useState<Line[]>([newLine(), newLine()])
+	const [photos, setPhotos] = useState<string[]>([])
+
+	function togglePhoto(key: string) {
+		setPhotos((c) => (c.includes(key) ? c.filter((k) => k !== key) : c.length >= MAX_DEAL_PHOTOS ? c : [...c, key]))
+	}
 	const [busy, setBusy] = useState(false)
 	const [err, setErr] = useState<string | null>(null)
 	const [link, setLink] = useState<string | null>(null)
@@ -61,6 +67,7 @@ export default function DealBuilder({ locale = "es" }: { locale?: string }) {
 						includes: includes.trim() || undefined,
 						excludes: excludes.trim() || undefined,
 						note: note.trim() || undefined,
+						photos,
 						lines: cleanLines,
 					},
 				}),
@@ -111,6 +118,28 @@ export default function DealBuilder({ locale = "es" }: { locale?: string }) {
 					</div>
 				))}
 				<button type="button" className="btn btn-ghost deal-add-line" onClick={addLine}>+ Agregar concepto</button>
+
+				<h2 className="dep-sec-title">Fotos (la 1ª es la portada · máx. {MAX_DEAL_PHOTOS})</h2>
+				<div className="deal-photo-picker">
+					{DEAL_PHOTOS.map((p) => {
+						const idx = photos.indexOf(p.key)
+						const on = idx >= 0
+						return (
+							<button
+								key={p.key}
+								type="button"
+								className={`deal-photo-opt${on ? " on" : ""}`}
+								style={{ backgroundImage: `url("${p.src}")` }}
+								onClick={() => togglePhoto(p.key)}
+								aria-pressed={on}
+								title={p.label}
+							>
+								{on && <span className="deal-photo-num">{idx === 0 ? "1 · Portada" : idx + 1}</span>}
+								<span className="deal-photo-label">{p.label}</span>
+							</button>
+						)
+					})}
+				</div>
 
 				<label className="res-field"><span>Incluye (una línea por punto)</span><textarea rows={4} value={includes} onChange={(e) => setIncludes(e.target.value)} placeholder={"Guía certificado\nEquipo de buceo\nLanchas"} /></label>
 				<label className="res-field"><span>No incluye (una línea por punto)</span><textarea rows={4} value={excludes} onChange={(e) => setExcludes(e.target.value)} placeholder={"Vuelos\nComidas fuera de los tours\nSeguro médico"} /></label>
