@@ -38,12 +38,17 @@ export async function POST(req: NextRequest) {
 	if (!isEmail(emailRaw)) return bad("Correo inválido")
 	if (phone.length < 7) return bad("Teléfono inválido")
 
-	const { totalMxn, depositMxn, remainingMxn } = computeDeposit(validated)
+	const loc = typeof locale === "string" ? locale : "es"
+	const { subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn, packages } = computeDeposit(
+		validated,
+		loc as Parameters<typeof computeDeposit>[1],
+	)
 	if (depositMxn <= 0) return bad("Total inválido")
 
-	const loc = typeof locale === "string" ? locale : "es"
 	const packed = packItems(validated)
 	if (packed.length > 480) return bad("Demasiadas actividades; divídelas en dos reservas")
+	// Resumen compacto de paquetes aplicados para la metadata (p. ej. "semana-baja:1065").
+	const packagesMeta = packages.map((p) => `${p.id}:${p.discountMxn}`).join(",").slice(0, 200)
 
 	try {
 		const stripe = getStripe()
@@ -57,6 +62,9 @@ export async function POST(req: NextRequest) {
 				kind: "deposit",
 				items: packed,
 				itemCount: String(validated.length),
+				subtotalMxn: String(subtotalMxn),
+				discountMxn: String(discountMxn),
+				packages: packagesMeta,
 				totalMxn: String(totalMxn),
 				depositMxn: String(depositMxn),
 				remainingMxn: String(remainingMxn),
@@ -71,6 +79,8 @@ export async function POST(req: NextRequest) {
 			clientSecret: paymentIntent.client_secret,
 			paymentIntentId: paymentIntent.id,
 			folio: folioFromPaymentIntent(paymentIntent.id),
+			subtotalMxn,
+			discountMxn,
 			totalMxn,
 			depositMxn,
 			remainingMxn,
