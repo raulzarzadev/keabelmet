@@ -9,7 +9,7 @@ import Logo from "@/components/Logo"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "@/components/CurrencySelector"
 
-const navLabels: Record<Locale, { items: { label: string; path: string; teal?: boolean }[]; book: string }> = {
+const navLabels: Record<Locale, { items: { label: string; path: string; teal?: boolean }[]; book: string; cart: string }> = {
   es: {
     items: [
       { label: "Expediciones", path: "/#expediciones" },
@@ -20,6 +20,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
       { label: "Contacto", path: "/#contacto" },
     ],
     book: "Reservar",
+    cart: "Arma tu reserva",
   },
   en: {
     items: [
@@ -31,6 +32,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
       { label: "Contact", path: "/#contacto" },
     ],
     book: "Book Now",
+    cart: "Build your reservation",
   },
   fr: {
     items: [
@@ -42,6 +44,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
       { label: "Contact", path: "/#contacto" },
     ],
     book: "Réserver",
+    cart: "Composez votre réservation",
   },
   zh: {
     items: [
@@ -53,6 +56,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
       { label: "联系我们", path: "/#contacto" },
     ],
     book: "预约",
+    cart: "定制你的预订",
   },
   ca: {
     items: [
@@ -64,6 +68,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
       { label: "Contacte", path: "/#contacto" },
     ],
     book: "Reservar",
+    cart: "Munta la teva reserva",
   },
 }
 
@@ -111,6 +116,19 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
             <CurrencySelector />
             <LanguageSelector locale={locale} />
           </div>
+          <Link
+            href={localizeHref("/arma-tu-reserva", locale)}
+            className="nav-cart"
+            aria-label={nav.cart}
+            title={nav.cart}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+          </Link>
           <a
             href={pathname.includes("/experiencias/") ? "#precios" : localizeHref("/arma-tu-reserva", locale)}
             className="btn btn-teal"
