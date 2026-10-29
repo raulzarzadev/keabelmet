@@ -8,6 +8,7 @@ import { defaultLocale } from "@/lib/i18n"
 import Logo from "@/components/Logo"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "@/components/CurrencySelector"
+import { useCart } from "@/contexts/CartContext"
 
 const navLabels: Record<Locale, { items: { label: string; path: string; teal?: boolean }[]; book: string; cart: string }> = {
   es: {
@@ -82,6 +83,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
   const [scrolled, setScrolled] = useState(false)
   const nav = navLabels[locale] || navLabels.es
   const pathname = usePathname()
+  const { count } = useCart()
   // Solo el home lleva header transparente sobre el hero; el resto siempre sólido.
   const isHome = pathname === "/" || /^\/(en|fr|zh)\/?$/.test(pathname)
   const solid = scrolled || !isHome
@@ -128,6 +130,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
               <circle cx="20" cy="21" r="1" />
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
+            {count > 0 && <span className="nav-cart-badge">{count}</span>}
           </Link>
           <a
             href={pathname.includes("/experiencias/") ? "#precios" : localizeHref("/arma-tu-reserva", locale)}

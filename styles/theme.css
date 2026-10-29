@@ -64,9 +64,10 @@ nav.links { display: flex; gap: 38px; align-items: center; }
 nav.links a { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.88; }
 nav.links a:hover { opacity: 1; color: var(--teal); }
 .nav-cta { display: flex; align-items: center; gap: 14px; }
-.nav-cart { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; color: var(--sand); border: 1px solid var(--line); background: rgba(244,239,228,0.05); transition: color .2s, border-color .2s, background .2s; flex: 0 0 auto; }
+.nav-cart { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; color: var(--sand); border: 1px solid var(--line); background: rgba(244,239,228,0.05); transition: color .2s, border-color .2s, background .2s; flex: 0 0 auto; }
 .nav-cart:hover { color: var(--teal); border-color: var(--teal); background: rgba(40,194,160,0.14); }
 .nav-cart svg { display: block; }
+.nav-cart-badge { position: absolute; top: -5px; right: -5px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px; background: var(--teal); color: #06231c; font-size: 11px; font-weight: 800; line-height: 19px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
 .burger span { width: 24px; height: 2px; background: var(--sand); }
 

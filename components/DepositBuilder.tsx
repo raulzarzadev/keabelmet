@@ -8,6 +8,7 @@ import { getSeason, seasonLabel, isDateInSeason } from "@/lib/expedition-seasons
 import { formatMxn } from "@/lib/reservation"
 import type { BookableActivity } from "@/lib/bookable-activities"
 import { computePackageDiscount } from "@/lib/packages"
+import { useCart } from "@/contexts/CartContext"
 import type { Locale } from "@/lib/i18n"
 
 const DEPOSIT_RATE = 0.2
@@ -41,22 +42,9 @@ const copy: Record<string, UI> = {
 	ca: { title: "Munta la teva reserva", sub: "Tria les teves activitats, aparta amb el 20% i paga la resta el dia dels teus tours.", pick: "Tria les teves activitats", add: "Afegir", inCart: "Afegida", yourTrip: "La teva reserva", empty: "Encara no has afegit activitats.", date: "Data", people: "Persones", per: "persona", season: "Temporada", remove: "Treure", from: "des de", name: "Nom complet", email: "Correu electrònic", phone: "Telèfon / WhatsApp", namePh: "El teu nom", phonePh: "+34 …", subtotal: "Subtotal", discount: "Descompte de paquet", total: "Total", deposit: "Bestreta a pagar avui (20%)", remaining: "Pendent (el dia del tour)", payNote: "El pendent el pagues en efectiu, transferència o targeta el dia dels teus tours.", payBtn: "Apartar amb 20%", processing: "Processant…", secure: "Pagament segur processat per Stripe", back: "← Editar", pay: "Pagar bestreta", okTitle: "La teva reserva està apartada!", okText: "T'hem enviat un correu de benvinguda amb el resum, el calendari de totes les teves activitats i el pendent de liquidar.", close: "Tancar", emailSent: "Revisa el teu correu (i el correu brossa).", errItems: "Afegeix almenys una activitat amb la seva data.", errDate: "Tria una data futura i en temporada per a cada activitat.", errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp." },
 }
 
-interface CartItem {
-	key: string
-	slug: string
-	title: string
-	cardName: string
-	unitAmountMxn: number
-	image: string
-	dateISO: string
-	people: number
-}
-
-let keyCounter = 0
-
 export default function DepositBuilder({ locale = "es", activities }: { locale?: Locale; activities: BookableActivity[] }) {
 	const t = copy[locale] ?? copy.es
-	const [cart, setCart] = useState<CartItem[]>([])
+	const { items: cart, add, update: updateItem, remove: removeItem, clear: clearCart } = useCart()
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [phone, setPhone] = useState("")
@@ -78,13 +66,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 
 	function addActivity(a: BookableActivity) {
 		if (cart.length >= MAX_ITEMS) return
-		setCart((c) => [...c, { key: `k${keyCounter++}`, slug: a.slug, title: a.title, cardName: a.cardName, unitAmountMxn: a.unitAmountMxn, image: a.image, dateISO: "", people: 1 }])
-	}
-	function updateItem(key: string, patch: Partial<CartItem>) {
-		setCart((c) => c.map((it) => (it.key === key ? { ...it, ...patch } : it)))
-	}
-	function removeItem(key: string) {
-		setCart((c) => c.filter((it) => it.key !== key))
+		add({ slug: a.slug, title: a.title, cardName: a.cardName, unitAmountMxn: a.unitAmountMxn, image: a.image, dateISO: "", people: 1 })
 	}
 
 	async function startPayment(e: FormEvent) {
@@ -164,7 +146,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 					<div className="dep-pay-amount"><span>{t.deposit}</span><strong>{formatMxn(totals.deposit)} MXN</strong></div>
 				</div>
 				<Elements stripe={getStripeClient()} options={options}>
-					<DepositPaymentForm locale={locale} emailDefault={email} returnUrl={`${window.location.origin}/${locale}/arma-tu-reserva`} onDone={() => setStep("result")} />
+					<DepositPaymentForm locale={locale} emailDefault={email} returnUrl={`${window.location.origin}/${locale}/arma-tu-reserva`} onDone={() => { clearCart(); setStep("result") }} />
 				</Elements>
 			</div>
 		)
