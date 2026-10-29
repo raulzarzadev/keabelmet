@@ -135,7 +135,7 @@ export default function Header({ locale = "es" }: { locale?: Locale }) {
           <a
             href={pathname.includes("/experiencias/") ? "#precios" : localizeHref("/arma-tu-reserva", locale)}
             className="btn btn-teal"
-            style={{ padding: "12px 22px" }}
+            style={{ padding: "11px 18px" }}
           >
             {nav.book}
           </a>

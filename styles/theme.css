@@ -60,10 +60,10 @@ body {
 .logo { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.04em; display: flex; align-items: center; gap: 10px; }
 .logo span.accent { color: var(--teal); }
 .logo-mark { width: 34px; height: 34px; flex-shrink: 0; display: block; }
-nav.links { display: flex; gap: 38px; align-items: center; }
-nav.links a { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.88; }
+nav.links { display: flex; gap: 20px; align-items: center; }
+nav.links a { font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.88; white-space: nowrap; }
 nav.links a:hover { opacity: 1; color: var(--teal); }
-.nav-cta { display: flex; align-items: center; gap: 14px; }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
 .nav-cart { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; color: var(--sand); border: 1px solid var(--line); background: rgba(244,239,228,0.05); transition: color .2s, border-color .2s, background .2s; flex: 0 0 auto; }
 .nav-cart:hover { color: var(--teal); border-color: var(--teal); background: rgba(40,194,160,0.14); }
 .nav-cart svg { display: block; }
@@ -909,7 +909,10 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .testi .section-head h2 { font-size: clamp(28px,3.6vw,44px); }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 920px) {
+/* El menú horizontal completo (logo + 6 enlaces + moneda/idioma/carrito/Reservar)
+   solo cabe holgado a partir de ~1240px; por debajo usamos el menú hamburguesa
+   para que la barra no se amontone en laptops. */
+@media (max-width: 1240px) {
   nav.links {
     display: none; position: fixed; top: 66px; left: 0; right: 0; z-index: 150;
     flex-direction: column; align-items: stretch; gap: 0;
@@ -918,13 +921,15 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
     max-height: calc(100vh - 66px); overflow-y: auto;
   }
   nav.links.open { display: flex; }
-  nav.links a { width: 100%; padding: 14px 0; border-top: 1px solid var(--line); }
+  nav.links a { width: 100%; padding: 14px 0; border-top: 1px solid var(--line); font-size: 13px; letter-spacing: 0.06em; }
   nav.links a:first-child { border-top: none; }
   .burger { display: flex; }
   .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .burger.open span:nth-child(2) { opacity: 0; }
   .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .burger span { transition: transform .2s ease, opacity .2s ease; }
+}
+@media (max-width: 920px) {
   .region::after, .region.region-right::after { background: linear-gradient(to top, rgba(8,21,31,0.96) 10%, rgba(8,21,31,0.25) 60%); }
   .region { align-items: flex-end; }
   .region-inner { justify-content: flex-start !important; padding: 0 24px 50px; }
