@@ -8,7 +8,7 @@ export const FROM = process.env.RESEND_FROM || "Keabelmet <reservas@keabelmet.co
 
 const SOCIAL = {
 	instagram: "https://www.instagram.com/keabelmet__expeditions/",
-	tiktok: "https://www.tiktok.com/@kea_expeditions",
+	tiktok: "https://www.tiktok.com/@keabelmet_expeditions",
 	whatsapp: "https://wa.me/526122347897",
 }
 

@@ -27,7 +27,7 @@ export const socialLinks = [
   // }
   {
     name: "Ticktok",
-    url: "https://www.tiktok.com/@kea_expeditions",
+    url: "https://www.tiktok.com/@keabelmet_expeditions",
     icon: TbBrandTiktok,
   },
 ]
