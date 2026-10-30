@@ -9,8 +9,8 @@ import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
-const INSTAGRAM_HANDLE = "@keabelmet_expeditions"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_HANDLE = "@keabelmet__expeditions"
 
 function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`

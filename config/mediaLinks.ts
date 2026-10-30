@@ -12,7 +12,7 @@ export const socialLinks = [
   // },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/keabelmet_expeditions/",
+    url: "https://www.instagram.com/keabelmet__expeditions/",
     icon: Instagram,
   },
   // {

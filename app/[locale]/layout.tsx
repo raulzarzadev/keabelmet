@@ -127,7 +127,7 @@ const organizationSchema = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 24.0633, longitude: -109.9917 },
   sameAs: [
-    "https://www.instagram.com/keabelmet_expeditions/",
+    "https://www.instagram.com/keabelmet__expeditions/",
     "https://www.tiktok.com/@kea_expeditions",
   ],
   areaServed: [
