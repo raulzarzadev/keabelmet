@@ -132,7 +132,10 @@ const organizationSchema = {
   sameAs: [
     "https://www.instagram.com/keabelmet__expeditions/",
     "https://www.tiktok.com/@kea_expeditions",
+    // Perfil de Empresa en Google (Maps).
+    "https://maps.google.com/?cid=7082429946220755653",
   ],
+  hasMap: "https://maps.google.com/?cid=7082429946220755653",
   areaServed: [
     { "@type": "Place", name: "La Paz, Baja California Sur, Mexico" },
     { "@type": "Place", name: "La Ventana, Baja California Sur, Mexico" },
