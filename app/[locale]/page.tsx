@@ -4,13 +4,12 @@ import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
 import SardineRunPopup from "@/components/SardineRunPopup"
-import ExitPackagePopup from "@/components/ExitPackagePopup"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
 const INSTAGRAM_HANDLE = "@keabelmet_expeditions"
 
 function wa(text: string): string {
@@ -390,7 +389,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       <SardineRunPopup locale={locale} />
-      <ExitPackagePopup locale={locale} />
     </main>
   )
 }

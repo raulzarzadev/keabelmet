@@ -3,7 +3,7 @@ import { defaultLocale, type Locale } from "@/lib/i18n"
 import Logo from "@/components/Logo"
 import { buildWhatsAppLink } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
 
 interface FooterDict {
   tagline: string

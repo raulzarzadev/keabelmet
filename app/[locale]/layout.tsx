@@ -115,7 +115,7 @@ const organizationSchema = {
   image: "https://www.keabelmet.com/logo.png",
   description: "Operador de ecoturismo y expediciones marinas en La Paz, Baja California Sur, México: nado con tiburón ballena, Isla Espíritu Santo, ballena gris, Sardine Run, móbulas y buceo.",
   knowsAbout: ["Tiburón ballena", "Isla Espíritu Santo", "Ballena gris", "Sardine Run", "Móbulas", "Buceo en Cabo Pulmo", "Mar de Cortés"],
-  email: "keabelmet@gmail.com",
+  email: "contacto@keabelmet.com",
   telephone: "+526122347897",
   address: {
     "@type": "PostalAddress",
@@ -127,7 +127,7 @@ const organizationSchema = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 24.0633, longitude: -109.9917 },
   sameAs: [
-    "https://www.instagram.com/keabelmet__expeditions/",
+    "https://www.instagram.com/keabelmet_expeditions/",
     "https://www.tiktok.com/@kea_expeditions",
   ],
   areaServed: [

@@ -3,7 +3,7 @@ import Image from "next/image"
 import { isValidLocale, defaultLocale, getPageDictionary } from "@/lib/i18n"
 import { buildPageMeta } from "@/lib/seo"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params

@@ -7,7 +7,7 @@ export const SITE_URL = "https://www.keabelmet.com"
 export const FROM = process.env.RESEND_FROM || "Keabelmet <reservas@keabelmet.com>"
 
 const SOCIAL = {
-	instagram: "https://www.instagram.com/keabelmet__expeditions/",
+	instagram: "https://www.instagram.com/keabelmet_expeditions/",
 	tiktok: "https://www.tiktok.com/@kea_expeditions",
 	whatsapp: "https://wa.me/526122347897",
 }
