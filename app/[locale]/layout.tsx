@@ -86,6 +86,9 @@ export async function generateMetadata({
       template: "%s | Keabelmet",
     },
     description: m.description,
+    // Verificación de Bing Webmaster Tools (no quitar: Bing la revisa periódicamente).
+    // Google Search Console está verificado por DNS.
+    verification: { other: { "msvalidate.01": "06E57E2E72AC3492C442B286870DBD6D" } },
   }
 }
 
