@@ -1284,3 +1284,55 @@ body.has-book-bar .wa-float { bottom: 94px; }
   .ba-cover { border-radius: 0; }
   .ba-body { font-size: 16.5px; padding: 30px 18px 60px; }
 }
+
+/* ---- Blog: gráficas y animaciones ---- */
+.ba-chart { margin: 32px 0; }
+.ba-chart img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); background: #0b1d2a; }
+.ba-chart figcaption, .ba-anim figcaption { color: var(--sand-dim); font-size: 13.5px; line-height: 1.55; margin-top: 10px; }
+.ba-chart details { margin-top: 8px; font-size: 13.5px; color: var(--sand-dim); }
+.ba-chart summary { cursor: pointer; color: var(--teal); }
+.ba-anim { margin: 32px 0; }
+.ba-anim-svg { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); overflow: hidden; }
+.ba-anim-svg .sg-label { fill: var(--sand); font-family: var(--font-poppins), 'Poppins', sans-serif; font-size: 18px; font-weight: 600; }
+.ba-anim-svg .sg-small { font-size: 15px; font-weight: 500; }
+.ba-anim-svg .sg-tiny { font-size: 12.5px; font-weight: 400; }
+.ba-anim-svg .sg-dim { fill: var(--sand-dim); }
+.ba-anim-svg .sg-teal { fill: var(--teal); }
+.anim-surgencia .sg-surf { animation: sg-surf 3.6s linear infinite; }
+.anim-surgencia .sg-rise { animation: sg-rise 4.4s linear infinite; }
+.anim-surgencia .sg-bloom { transform-box: fill-box; transform-origin: center; animation: sg-bloom 2.7s ease-in-out infinite; }
+.anim-surgencia .sg-wind circle:first-child { animation: sg-wind 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes sg-surf { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(-300px); opacity: 0; } }
+@keyframes sg-rise {
+  0% { transform: translate(300px, 372px); opacity: 0; }
+  12% { opacity: 1; }
+  45% { transform: translate(410px, 280px); }
+  75% { transform: translate(470px, 150px); }
+  100% { transform: translate(380px, 128px); opacity: 0; }
+}
+@keyframes sg-bloom { 0%, 100% { transform: scale(0.6); opacity: 0.35; } 50% { transform: scale(1.35); opacity: 1; } }
+@keyframes sg-wind { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.18); opacity: 1; } }
+.anim-bola .bl-marlin { animation: bl-marlin 6s cubic-bezier(.55,.05,.45,.95) infinite; }
+.anim-bola .bl-top { animation: bl-top 6s ease-in-out infinite; }
+.anim-bola .bl-bottom { animation: bl-bottom 6s ease-in-out infinite; }
+@keyframes bl-marlin { 0% { transform: translate(-180px, 190px); } 100% { transform: translate(820px, 190px); } }
+@keyframes bl-top { 0%, 28% { transform: translate(0, 0); } 42% { transform: translate(-14px, -62px); } 58% { transform: translate(-26px, -48px); } 78%, 100% { transform: translate(0, 0); } }
+@keyframes bl-bottom { 0%, 28% { transform: translate(0, 0); } 42% { transform: translate(-14px, 62px); } 58% { transform: translate(-26px, 48px); } 78%, 100% { transform: translate(0, 0); } }
+.anim-cadena .cd-flow { animation: cd-flow 1.8s linear infinite; }
+.anim-cadena .cd-node { transform-box: fill-box; transform-origin: center; animation: cd-node 2.5s ease-in-out infinite; }
+@keyframes cd-flow { 0% { transform: translateX(0); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateX(var(--dx)); opacity: 0; } }
+@keyframes cd-node { 0%, 100% { transform: scale(1); opacity: 0.55; } 50% { transform: scale(1.12); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .ba-anim-svg * { animation: none !important; }
+  .anim-surgencia .sg-rise { transform: translate(410px, 280px); }
+}
+.ba-chart-open { display: none; font-size: 13px; color: var(--teal); margin-top: 8px; }
+@media (max-width: 720px) {
+  .ba-chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; }
+  .ba-chart-scroll img { width: 680px; max-width: none; }
+  .ba-chart-open { display: inline-block; }
+}
+@media (max-width: 720px) {
+  .ba-anim-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; }
+  .ba-anim-scroll .ba-anim-svg { width: 560px; max-width: none; }
+}

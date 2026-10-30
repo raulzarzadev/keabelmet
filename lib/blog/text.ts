@@ -30,6 +30,15 @@ export function blogPostToText(post: BlogPost, lang: BlogLocale): string[] {
 		else if (b.type === "table") {
 			out.push(b.head.join(" | "))
 			b.rows.forEach((r) => out.push(r.map(txt).join(" | ")))
+		} else if (b.type === "chart") {
+			out.push(`[${lang === "es" ? "Gráfica" : "Chart"}] ${b.alt}${b.caption ? " " + txt(b.caption) : ""}`)
+			if (b.data) {
+				out.push(b.data.head.join(" | "))
+				b.data.rows.forEach((r) => out.push(r.join(" | ")))
+			}
+		} else if (b.type === "anim") {
+			if (!b.caption) continue
+			out.push(`[${lang === "es" ? "Animación" : "Animation"}] ${txt(b.caption)}`)
 		} else continue
 		out.push("")
 	}

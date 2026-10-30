@@ -24,6 +24,14 @@ export type BlogBlock =
 	/** Dato científico destacado (normalmente con cita). */
 	| { type: "fact"; text: string }
 	| { type: "table"; head: string[]; rows: string[][] }
+	/**
+	 * Gráfica con datos reales (SVG en /public/blog/graficas). `alt` describe
+	 * los valores para lectores de pantalla, buscadores e IAs; `data` es la
+	 * tabla opcional con los números que se muestra bajo la gráfica.
+	 */
+	| { type: "chart"; src: string; alt: string; caption?: string; width: number; height: number; data?: { head: string[]; rows: string[][] } }
+	/** Animación explicativa (components/blog/BlogAnimation.tsx). */
+	| { type: "anim"; name: "surgencia" | "bola" | "cadena"; caption?: string }
 
 export interface BlogFaq {
 	q: string
