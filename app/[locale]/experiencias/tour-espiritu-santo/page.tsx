@@ -1,46 +1,31 @@
 import type { Metadata } from "next"
 import { isValidLocale, defaultLocale } from "@/lib/i18n"
-
-import { buildPageMeta, buildUrl, getPageSeo } from "@/lib/seo"
-import { JsonLd, breadcrumbSchema, touristTripSchema } from "@/lib/jsonLd"
+import { JsonLd } from "@/lib/jsonLd"
+import { experienceMeta, experienceSchemas } from "@/lib/experience-seo"
 import ExpeditionDetail from "@/components/ExpeditionDetail"
 import StoryPage from "@/components/StoryPage"
 import { getExpeditionPage } from "@/constants/expedition-pages"
 import { getStoryPage } from "@/constants/story-pages"
 
+const SLUG = "tour-espiritu-santo"
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   if (!isValidLocale(locale)) return {}
-  return buildPageMeta("tourEspirituSanto", "/experiencias/tour-espiritu-santo", locale)
+  return experienceMeta(SLUG, locale)
 }
 
-export default async function TourEspirituSantoPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ExperiencePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: loc } = await params
   const locale = isValidLocale(loc) ? loc : defaultLocale
-  const seo = getPageSeo("tourEspirituSanto", locale)
-  const url = buildUrl("/experiencias/tour-espiritu-santo", locale)
-  const schemas = [
-    breadcrumbSchema([
-      { name: getPageSeo("experiences", locale).title, url: buildUrl("/experiencias", locale) },
-      { name: seo.title, url },
-    ]),
-    touristTripSchema({
-      name: seo.title,
-      description: seo.description,
-      image: `${buildUrl("/", locale).replace(/\/$/, "")}/espiritu-santo-island-paradise-beach.jpg`,
-      url,
-      priceMxn: 1800,
-      touristType: ["Snorkeling", "Wildlife", "Beach", "Family"],
-    }, locale),
-  ]
-  const story = getStoryPage("tour-espiritu-santo", locale)
+  const story = getStoryPage(SLUG, locale)
   return (
     <>
-      <JsonLd data={schemas} />
+      <JsonLd data={experienceSchemas(SLUG, locale)} />
       {story ? (
-        <StoryPage data={story} locale={locale} slug="tour-espiritu-santo" />
+        <StoryPage data={story} locale={locale} slug={SLUG} />
       ) : (
-        <ExpeditionDetail data={getExpeditionPage("tour-espiritu-santo", locale)} locale={locale} slug="tour-espiritu-santo" />
+        <ExpeditionDetail data={getExpeditionPage(SLUG, locale)} locale={locale} slug={SLUG} />
       )}
     </>
   )

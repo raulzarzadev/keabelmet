@@ -3,7 +3,7 @@ import { defaultLocale, type Locale } from "@/lib/i18n"
 import Logo from "@/components/Logo"
 import { buildWhatsAppLink } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
 
 interface FooterDict {
   tagline: string
@@ -23,6 +23,12 @@ interface FooterDict {
   scubaDiscovery: string
   safariBahia: string
   safariVentana: string
+  allTours: string
+  rates: string
+  build: string
+  blog: string
+  contact: string
+  openWater: string
 }
 
 const dict: Record<Locale, FooterDict> = {
@@ -44,6 +50,12 @@ const dict: Record<Locale, FooterDict> = {
     scubaDiscovery: "Scuba Discovery desde Playa",
     safariBahia: "Safari Bahía Magdalena",
     safariVentana: "Ocean Safari La Ventana",
+    allTours: "Todos los tours",
+    rates: "Precios",
+    build: "Arma tu reserva",
+    blog: "Blog de fauna marina",
+    contact: "Contacto",
+    openWater: "Certificación PADI Open Water",
   },
   en: {
     tagline: "Marine safaris and diving in the Gulf of California. Authentic wildlife encounters, guided by biologists.",
@@ -63,6 +75,12 @@ const dict: Record<Locale, FooterDict> = {
     scubaDiscovery: "Scuba Discovery from the Beach",
     safariBahia: "Magdalena Bay Safari",
     safariVentana: "Ocean Safari La Ventana",
+    allTours: "All tours",
+    rates: "Prices",
+    build: "Build your booking",
+    blog: "Marine wildlife blog",
+    contact: "Contact",
+    openWater: "PADI Open Water Certification",
   },
   fr: {
     tagline: "Safaris marins et plongée dans le Golfe de Californie. Rencontres authentiques avec la vie sauvage, guidées par des biologistes.",
@@ -82,6 +100,12 @@ const dict: Record<Locale, FooterDict> = {
     scubaDiscovery: "Scuba Discovery depuis la plage",
     safariBahia: "Safari Bahía Magdalena",
     safariVentana: "Ocean Safari La Ventana",
+    allTours: "Toutes les excursions",
+    rates: "Prix",
+    build: "Composez votre réservation",
+    blog: "Blog faune marine",
+    contact: "Contact",
+    openWater: "Certification PADI Open Water",
   },
   zh: {
     tagline: "加利福尼亚湾海洋探险与潜水。由生物学家带领，与野生动物的真实相遇。",
@@ -101,6 +125,12 @@ const dict: Record<Locale, FooterDict> = {
     scubaDiscovery: "海滩体验潜水",
     safariBahia: "马格达莱纳湾探险",
     safariVentana: "拉文塔纳探险",
+    allTours: "全部行程",
+    rates: "价格",
+    build: "定制预订",
+    blog: "海洋生物博客",
+    contact: "联系我们",
+    openWater: "PADI 开放水域认证",
   },
   ca: {
     tagline: "Safaris marins i submarinisme al Golf de Califòrnia. Trobades autèntiques amb la vida salvatge, guiades per biòlegs.",
@@ -120,6 +150,12 @@ const dict: Record<Locale, FooterDict> = {
     scubaDiscovery: "Scuba Discovery des de la platja",
     safariBahia: "Safari Bahía Magdalena",
     safariVentana: "Ocean Safari La Ventana",
+    allTours: "Tots els tours",
+    rates: "Preus",
+    build: "Munta la teva reserva",
+    blog: "Blog de fauna marina",
+    contact: "Contacte",
+    openWater: "Certificació PADI Open Water",
   },
 }
 
@@ -142,12 +178,19 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
     { label: t.caboPulmo, path: "/experiencias/buceo-cabo-pulmo" },
     { label: t.laPaz, path: "/experiencias/buceo-la-paz" },
     { label: t.scubaDiscovery, path: "/experiencias/scuba-discovery" },
+    { label: t.openWater, path: "/experiencias/certificacion-open-water" },
   ]
 
   const company = [
-    { label: t.about, path: "/#historia" },
+    // Enlaces a las páginas de soporte: sin ellos quedaban huérfanas (solo
+    // aparecían en el sitemap) y Google les daba poca importancia.
+    { label: t.allTours, path: "/experiencias" },
+    { label: t.rates, path: "/tarifas" },
+    { label: t.build, path: "/arma-tu-reserva" },
+    { label: t.blog, path: "/blog" },
+    { label: t.about, path: "/sobre-nosotros" },
+    { label: t.gallery, path: "/galeria" },
     { label: t.quiz, path: "/#quiz" },
-    { label: t.gallery, path: "/#instagram" },
   ]
 
   return (
@@ -184,6 +227,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
         <div>
           <h5>{t.contactTitle}</h5>
           <ul>
+            <li><Link href={lh("/contacto")}>{t.contact}</Link></li>
             <li><a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@keabelmet_expeditions</a></li>
             <li>La Paz, BCS, México</li>

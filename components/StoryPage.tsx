@@ -57,7 +57,7 @@ function MediaSlot({ media, className = "" }: { media: Media; className?: string
       {media.video ? (
         <video src={media.video} autoPlay muted loop playsInline poster={media.src} />
       ) : media.src ? (
-        <img src={media.src} alt={media.alt ?? ""} />
+        <img src={media.src} alt={media.alt ?? ""} loading="lazy" decoding="async" />
       ) : (
         <div className="media-ph">
           <span className="ph-ic">
@@ -140,6 +140,14 @@ export interface StoryPageData {
   blocks: Block[]
 }
 
+const crumbLabels: Record<string, [string, string]> = {
+  es: ["Inicio", "Expediciones"],
+  en: ["Home", "Expeditions"],
+  fr: ["Accueil", "Expéditions"],
+  zh: ["首页", "探险项目"],
+  ca: ["Inici", "Expedicions"],
+}
+
 export default function StoryPage({ data, locale = defaultLocale, slug }: { data: StoryPageData; locale?: Locale; slug: string }) {
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
   const h = data.hero
@@ -169,7 +177,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
   return (
     <main>
       <div className="crumbs">
-        <Link href={lh("/")}>Inicio</Link> / <Link href={lh("/#expediciones")}>Expediciones</Link> / {data.breadcrumb}
+        <Link href={lh("/")}>{crumbLabels[locale]?.[0] ?? "Inicio"}</Link> / <Link href={lh("/experiencias")}>{crumbLabels[locale]?.[1] ?? "Expediciones"}</Link> / {data.breadcrumb}
       </div>
 
       {/* HERO */}
@@ -180,14 +188,15 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
           <picture>
             <source media="(max-width: 767px)" srcSet={h.imageMobile} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={h.image} alt={h.alt} />
+            <img src={h.image} alt={h.alt} fetchPriority="high" />
           </picture>
         ) : (
-          <img src={h.image} alt={h.alt} />
+          <img src={h.image} alt={h.alt} fetchPriority="high" />
         )}
         <div className="thero-inner">
-          <span className="kicker">{h.kicker}</span>
-          <h1>{h.title}</h1>
+          {/* El kicker (lugar · actividad) va dentro del H1 para que el encabezado
+              principal lleve las palabras que se buscan; se ve igual que antes. */}
+          <h1><span className="kicker">{h.kicker}</span>{" "}{h.title}</h1>
           <p>{h.text}</p>
           {h.meta && <p style={{ color: "var(--teal)", fontSize: 14, fontWeight: 600, letterSpacing: "0.02em", margin: "-8px 0 26px" }}>{h.meta}</p>}
           <div className="hero-ctas">
@@ -529,7 +538,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
           case "finalCta":
             return (
               <section key={i} className="final-cta">
-                <img src={b.image} alt={b.alt} />
+                <img src={b.image} alt={b.alt} loading="lazy" decoding="async" />
                 <div className="final-cta-inner">
                   <h2>{b.title}</h2>
                   <p>{b.text}</p>

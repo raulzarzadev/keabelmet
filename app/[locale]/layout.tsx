@@ -82,7 +82,8 @@ export async function generateMetadata({
     ...pageMeta({ path: "/", locale, title: m.ogTitle, description: m.ogDescription }),
     title: {
       default: m.title,
-      template: "%s | Keabelmet Expeditions",
+      // Sufijo corto: Google corta los títulos alrededor de 60 caracteres.
+      template: "%s | Keabelmet",
     },
     description: m.description,
   }
@@ -90,7 +91,9 @@ export async function generateMetadata({
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "TourOperator",
+  // "TourOperator" no existe en schema.org; TravelAgency es el subtipo de
+  // LocalBusiness que Google reconoce para operadores de tours.
+  "@type": "TravelAgency",
   "@id": "https://www.keabelmet.com/#organization",
   name: "Keabelmet Expeditions",
   alternateName: [
@@ -110,8 +113,9 @@ const organizationSchema = {
   url: "https://www.keabelmet.com",
   logo: "https://www.keabelmet.com/logo.png",
   image: "https://www.keabelmet.com/logo.png",
-  description: "Operador de ecoturismo y expediciones marinas en La Paz, Baja California Sur, Mexico.",
-  email: "keabelmet@gmail.com",
+  description: "Operador de ecoturismo y expediciones marinas en La Paz, Baja California Sur, México: nado con tiburón ballena, Isla Espíritu Santo, ballena gris, Sardine Run, móbulas y buceo.",
+  knowsAbout: ["Tiburón ballena", "Isla Espíritu Santo", "Ballena gris", "Sardine Run", "Móbulas", "Buceo en Cabo Pulmo", "Mar de Cortés"],
+  email: "contacto@keabelmet.com",
   telephone: "+526122347897",
   address: {
     "@type": "PostalAddress",
@@ -123,13 +127,13 @@ const organizationSchema = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 24.0633, longitude: -109.9917 },
   sameAs: [
-    "https://www.instagram.com/keabelmet__expeditions/",
+    "https://www.instagram.com/keabelmet_expeditions/",
     "https://www.tiktok.com/@kea_expeditions",
   ],
   areaServed: [
     { "@type": "Place", name: "La Paz, Baja California Sur, Mexico" },
     { "@type": "Place", name: "La Ventana, Baja California Sur, Mexico" },
-    { "@type": "Place", name: "Bahia Magdalena, Baja California Sur, Mexico" },
+    { "@type": "Place", name: "Bahía Magdalena, Baja California Sur, México" },
     { "@type": "Place", name: "Cabo Pulmo, Baja California Sur, Mexico" },
   ],
   currenciesAccepted: "MXN, USD",

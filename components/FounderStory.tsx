@@ -9,7 +9,7 @@ export default function FounderStory({ content }: { content: HomeContent["founde
   return (
     <section className="founder" id="historia">
       <div className="founder-media">
-        <img src="/cofundadores-atardecer.jpg" alt={content.alt} />
+        <img src="/cofundadores-atardecer.jpg" alt={content.alt} loading="lazy" decoding="async" />
       </div>
       <div className="founder-text">
         <span className="kicker">{content.kicker}</span>

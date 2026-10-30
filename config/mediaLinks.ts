@@ -12,7 +12,7 @@ export const socialLinks = [
   // },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/keabelmet__expeditions/",
+    url: "https://www.instagram.com/keabelmet_expeditions/",
     icon: Instagram,
   },
   // {
@@ -35,8 +35,8 @@ export const socialLinks = [
 export const contactLinks = [
   {
     name: "Email",
-    value: "keabelmet@gmail.com",
-    url: "mailto:keabelmet@gmail.com",
+    value: "contacto@keabelmet.com",
+    url: "mailto:contacto@keabelmet.com",
     icon: Mail,
   },
   {

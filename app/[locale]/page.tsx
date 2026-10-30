@@ -4,13 +4,12 @@ import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
 import SardineRunPopup from "@/components/SardineRunPopup"
-import ExitPackagePopup from "@/components/ExitPackagePopup"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
 const INSTAGRAM_HANDLE = "@keabelmet_expeditions"
 
 function wa(text: string): string {
@@ -127,7 +126,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="hero-bg">
           <picture>
             <source media="(max-width: 767px)" srcSet="/tiburon-ballena-mobile.jpg" />
-            <img src="/cachalotecta.jpeg" alt={t.hero.alt} />
+            <img src="/cachalotecta.jpeg" alt={t.hero.alt} fetchPriority="high" />
           </picture>
         </div>
         <div className="hero-content">
@@ -188,10 +187,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           {r.imageMobile ? (
             <picture>
               <source media="(max-width: 767px)" srcSet={r.imageMobile} />
-              <img src={r.image} alt={r.alt} />
+              <img src={r.image} alt={r.alt} loading="lazy" decoding="async" />
             </picture>
           ) : (
-            <img src={r.image} alt={r.alt} />
+            <img src={r.image} alt={r.alt} loading="lazy" decoding="async" />
           )}
           {regionBadge[r.href]?.[locale] && (
             <div className="region-badge-wrap"><span className="region-badge">{regionBadge[r.href][locale]}</span></div>
@@ -223,7 +222,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <Link key={c.href} className="tour-card" href={lh(c.href)}>
               <div className="tour-media">
                 <span className={`tour-tag${c.coral ? " coral" : ""}`}>{c.tag}</span>
-                <img src={c.image} alt={c.alt} />
+                <img src={c.image} alt={c.alt} loading="lazy" decoding="async" />
               </div>
               <div className="tour-body">
                 <h3>{c.title}</h3>
@@ -366,7 +365,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="insta-grid">
           {instaImages.map((src) => (
             <a key={src} href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-              <img src={src} alt="Keabelmet Instagram" />
+              <img src={src} alt="Keabelmet Instagram" loading="lazy" decoding="async" />
             </a>
           ))}
         </div>
@@ -377,7 +376,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <picture>
           {/* Desktop: cachalote bajo el agua. Mobile: mobula vertical. */}
           <source media="(min-width: 768px)" srcSet="/images/especies/cachalote-buceo.jpg" />
-          <img src="/cta-mobula-mobile.jpg" alt={t.finalCta.alt} />
+          <img src="/cta-mobula-mobile.jpg" alt={t.finalCta.alt} loading="lazy" decoding="async" />
         </picture>
         <div className="final-cta-inner">
           <h2>{t.finalCta.title}</h2>
@@ -390,7 +389,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       <SardineRunPopup locale={locale} />
-      <ExitPackagePopup locale={locale} />
     </main>
   )
 }

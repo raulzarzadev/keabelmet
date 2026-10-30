@@ -10,6 +10,7 @@ const staticRoutes = [
   { path: "/sobre-nosotros", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/experiencias", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/tarifas", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/arma-tu-reserva", priority: 0.6, changeFrequency: "monthly" as const },
   { path: "/galeria", priority: 0.6, changeFrequency: "monthly" as const },
   { path: "/contacto", priority: 0.7, changeFrequency: "monthly" as const },
 ]

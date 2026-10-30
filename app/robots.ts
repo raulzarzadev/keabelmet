@@ -5,10 +5,12 @@ const SITE = "https://www.keabelmet.com"
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
+      // /_next/ NO se bloquea: ahí viven el CSS, el JS y las imágenes optimizadas
+      // (/_next/image) que Google necesita para renderizar y para Google Imágenes.
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: ["/api/"],
       },
       // AI crawlers (LLM training + AI search): explicit allow
       { userAgent: "GPTBot", allow: "/" },
@@ -28,6 +30,5 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "DuckAssistBot", allow: "/" },
     ],
     sitemap: `${SITE}/sitemap.xml`,
-    host: SITE,
   }
 }

@@ -67,13 +67,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 	const canonical = lang === "es" ? esUrl : enUrl
 	const title = c.metaTitle ?? c.title
 	return {
-		title,
-		description: c.description,
+		// Si con el sufijo " | Keabelmet" pasaría de ~60 caracteres, Google lo cortaría:
+		// en ese caso el título va solo.
+		title: title.length + 12 > 62 ? { absolute: title } : title,
+		description: metaDescription(c.description),
 		alternates: { canonical, languages: { es: esUrl, en: enUrl, "x-default": esUrl } },
 		openGraph: {
 			type: "article",
 			title,
-			description: c.description,
+			description: metaDescription(c.description),
 			url: canonical,
 			siteName: "Keabelmet Expeditions",
 			locale: lang === "es" ? "es_MX" : "en_US",
@@ -81,10 +83,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 			modifiedTime: post.updated ?? post.date,
 			images: [{ url: post.cover, alt: c.coverAlt }],
 		},
-		twitter: { card: "summary_large_image", title, description: c.description, images: [post.cover] },
+		twitter: { card: "summary_large_image", title, description: metaDescription(c.description), images: [post.cover] },
 		// fr/zh/ca muestran la versión en inglés: que Google indexe solo es/en.
 		robots: locale === "es" || locale === "en" ? undefined : { index: false, follow: true },
 	}
+}
+
+/** Meta description de ≤ 158 caracteres: corta en el último punto o espacio. */
+function metaDescription(d: string): string {
+	if (d.length <= 158) return d
+	const cut = d.slice(0, 157)
+	const dot = cut.lastIndexOf(". ")
+	if (dot > 90) return cut.slice(0, dot + 1)
+	return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + "…"
 }
 
 function Block({ b, locale, lang }: { b: BlogBlock; locale: Locale; lang: BlogLocale }) {
@@ -174,7 +185,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 			"@context": "https://schema.org",
 			"@type": "BlogPosting",
 			headline: c.title,
-			description: c.description,
+			description: metaDescription(c.description),
 			image: [`${SITE_URL}${post.cover}`],
 			datePublished: post.date,
 			dateModified: post.updated ?? post.date,
