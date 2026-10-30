@@ -3,7 +3,7 @@ import { defaultLocale, type Locale } from "@/lib/i18n"
 import Logo from "@/components/Logo"
 import { buildWhatsAppLink } from "@/config/whatsapp"
 
-const INSTAGRAM_URL = "https://www.instagram.com/keabelmet_expeditions/"
+const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
 
 interface FooterDict {
   tagline: string
@@ -229,7 +229,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
           <ul>
             <li><Link href={lh("/contacto")}>{t.contact}</Link></li>
             <li><a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@keabelmet_expeditions</a></li>
+            <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@keabelmet__expeditions</a></li>
             <li>La Paz, BCS, México</li>
           </ul>
         </div>
