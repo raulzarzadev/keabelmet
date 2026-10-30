@@ -29,6 +29,7 @@ interface FooterDict {
   blog: string
   contact: string
   openWater: string
+  review: string
 }
 
 const dict: Record<Locale, FooterDict> = {
@@ -56,6 +57,7 @@ const dict: Record<Locale, FooterDict> = {
     blog: "Blog de fauna marina",
     contact: "Contacto",
     openWater: "Certificación PADI Open Water",
+    review: "⭐ Déjanos tu reseña en Google",
   },
   en: {
     tagline: "Marine safaris and diving in the Gulf of California. Authentic wildlife encounters, guided by biologists.",
@@ -81,6 +83,7 @@ const dict: Record<Locale, FooterDict> = {
     blog: "Marine wildlife blog",
     contact: "Contact",
     openWater: "PADI Open Water Certification",
+    review: "⭐ Review us on Google",
   },
   fr: {
     tagline: "Safaris marins et plongée dans le Golfe de Californie. Rencontres authentiques avec la vie sauvage, guidées par des biologistes.",
@@ -106,6 +109,7 @@ const dict: Record<Locale, FooterDict> = {
     blog: "Blog faune marine",
     contact: "Contact",
     openWater: "Certification PADI Open Water",
+    review: "⭐ Laissez-nous un avis sur Google",
   },
   zh: {
     tagline: "加利福尼亚湾海洋探险与潜水。由生物学家带领，与野生动物的真实相遇。",
@@ -131,6 +135,7 @@ const dict: Record<Locale, FooterDict> = {
     blog: "海洋生物博客",
     contact: "联系我们",
     openWater: "PADI 开放水域认证",
+    review: "⭐ 在 Google 上评价我们",
   },
   ca: {
     tagline: "Safaris marins i submarinisme al Golf de Califòrnia. Trobades autèntiques amb la vida salvatge, guiades per biòlegs.",
@@ -156,6 +161,7 @@ const dict: Record<Locale, FooterDict> = {
     blog: "Blog de fauna marina",
     contact: "Contacte",
     openWater: "Certificació PADI Open Water",
+    review: "⭐ Deixa’ns la teva ressenya a Google",
   },
 }
 
@@ -228,6 +234,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
           <h5>{t.contactTitle}</h5>
           <ul>
             <li><Link href={lh("/contacto")}>{t.contact}</Link></li>
+            <li><a href="/resena" target="_blank" rel="noopener noreferrer">{t.review}</a></li>
             <li><a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@keabelmet__expeditions</a></li>
             <li>La Paz, BCS, México</li>

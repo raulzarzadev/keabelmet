@@ -26,6 +26,14 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Enlaces cortos para imprimir en QR, tarjetas y la lancha.
+  async redirects() {
+    return [
+      // Formulario de reseña del Perfil de Empresa en Google (Maps).
+      { source: "/resena", destination: "https://g.page/r/CcW6EwOD2EliEBM/review", permanent: false },
+      { source: "/review", destination: "https://g.page/r/CcW6EwOD2EliEBM/review", permanent: false },
+    ]
+  },
   async headers() {
     return [
       {
