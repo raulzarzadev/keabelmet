@@ -6,7 +6,7 @@ export const elNinoFauna: BlogPost = {
 	date: "2026-10-29",
 	cover: "/images/especies/sardinas-banco.jpeg",
 	experiences: ["tiburon-ballena", "safari-bahia-magdalena"],
-	related: ["tiburon-ballena-temporada", "sardine-run", "lobos-marinos-nadar"],
+	related: ["super-nino-2026", "la-mancha", "tiburon-ballena-temporada", "sardine-run"],
 	sources: [
 		{ id: 1, authors: "Ornelas, T., García-Baciero, A., Moreno-Mendoza, J., Crespo-Neto, O., Tollrian, R. & Ramírez-Macías, D.", year: "2026", title: "Influence of oceanographic and atmospheric parameters on whale shark Rhincodon typus abundance in Bahía de La Paz, Mexico", publication: "Marine Ecology Progress Series 788: 1–15", url: "https://doi.org/10.3354/meps15136", kind: "paper" },
 		{ id: 2, authors: "García-Aguilar, M. C. & Aurioles-Gamboa, D.", year: "2003", title: "Maternal care in the California sea lion at Los Islotes, Gulf of California, Mexico", publication: "Ciencias Marinas 29(4B): 573–583", url: "https://doi.org/10.7773/cm.v29i42.199", kind: "paper" },

@@ -6,7 +6,7 @@ export const marlinRayado: BlogPost = {
 	date: "2026-10-29",
 	cover: "/images/gallery/marlin-cazando.jpeg",
 	experiences: ["safari-bahia-magdalena"],
-	related: ["sardine-run", "el-nino-fauna"],
+	related: ["marlin-caza", "sardine-run", "bola-de-sardinas", "el-nino-fauna"],
 	sources: [
 		{ id: 1, authors: "Abitia-Cárdenas, L. A., Galván-Magaña, F., Cruz-Escalona, V. H., Peterson, M. S. & Rodríguez-Romero, J.", year: "2011", title: "Daily food intake of Kajikia audax (Philippi, 1887) off Cabo San Lucas, Gulf of California, Mexico", publication: "Latin American Journal of Aquatic Research 39(3): 449–460", url: "https://doi.org/10.3856/vol39-issue3-fulltext-6", kind: "paper" },
 		{ id: 2, authors: "Ortega-García, S., Arizmendi-Rodríguez, D. I. & Zúñiga-Flores, M. S.", year: "2018", title: "Striped marlin (Kajikia audax) diet variability off Cabo San Lucas, B.C.S., Mexico during El Niño–La Niña events", publication: "Journal of the Marine Biological Association of the United Kingdom 98(6): 1513–1524", url: "https://doi.org/10.1017/S0025315417000595", kind: "paper" },

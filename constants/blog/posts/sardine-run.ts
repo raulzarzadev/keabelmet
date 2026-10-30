@@ -6,7 +6,7 @@ export const sardineRun: BlogPost = {
 	date: "2026-10-29",
 	cover: "/images/marlin-bahia-magdalena-hero.jpeg",
 	experiences: ["safari-bahia-magdalena"],
-	related: ["marlin-rayado", "el-nino-fauna", "mejor-epoca-la-paz"],
+	related: ["sardine-run-por-que", "marlin-caza", "animales-sardine-run", "super-nino-2026"],
 	sources: [
 		{ id: 1, authors: "Torres-Villegas, J. R., Ochoa-Báez, R. I., Perezgómez-Álvarez, L. & García-Melgar, G.", year: "1995", title: "Comparison of seasonal variability in the reproduction of Pacific sardine (Sardinops sagax) from Baja California Sur, Mexico in the years 1982–1992", publication: "Scientia Marina 59(3-4): 255–264", url: "https://www.repositoriodigital.ipn.mx/bitstream/123456789/12965/1/Torres_Villegas_Julian_Rene_1995_Scientia_Marina_1240.pdf", kind: "paper" },
 		{ id: 2, authors: "Bizzarro, J. J.", year: "2008", title: "A review of the physical and biological characteristics of the Bahía Magdalena lagoon complex (Baja California Sur, Mexico)", publication: "Bulletin of the Southern California Academy of Sciences 107(1): 1–24", url: "https://doi.org/10.3160/0038-3872(2008)107[1:AROTPA]2.0.CO;2", kind: "paper" },

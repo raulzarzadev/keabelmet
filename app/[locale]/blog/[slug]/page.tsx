@@ -19,18 +19,19 @@ import {
 } from "@/lib/blog"
 import { experiences } from "@/constants/experiences"
 import InlineText from "@/components/blog/InlineText"
+import BlogAnimation from "@/components/blog/BlogAnimation"
 import { Price } from "@/contexts/CurrencyContext"
 
 const ui: Record<BlogLocale, Record<string, string>> = {
 	es: {
-		home: "Inicio", blog: "Blog", answer: "Respuesta rápida", tip: "Tip de guía", fact: "Dato científico",
+		home: "Inicio", blog: "Blog", answer: "Respuesta rápida", tip: "Tip de guía", fact: "Dato científico", chartData: "Ver los datos de la gráfica", chartOpen: "↔ Desliza o ábrela en tamaño completo",
 		by: "Por el equipo de Keabelmet · guías biólogos marinos en La Paz", min: "min de lectura", updated: "Actualizado",
 		live: "Vívelo con Keabelmet", from: "desde", see: "Ver expedición", faq: "Preguntas frecuentes",
 		sources: "Fuentes científicas", sourcesNote: "Los datos sobre fauna, temporadas y geografía de este artículo provienen de estas publicaciones. Las citas [n] del texto enlazan aquí.",
 		related: "Sigue leyendo", back: "Volver al blog",
 	},
 	en: {
-		home: "Home", blog: "Blog", answer: "Quick answer", tip: "Guide tip", fact: "Science fact",
+		home: "Home", blog: "Blog", answer: "Quick answer", tip: "Guide tip", fact: "Science fact", chartData: "See the chart data", chartOpen: "↔ Swipe or open it full size",
 		by: "By the Keabelmet team · marine biologist guides in La Paz", min: "min read", updated: "Updated",
 		live: "Experience it with Keabelmet", from: "from", see: "See expedition", faq: "Frequently asked questions",
 		sources: "Scientific sources", sourcesNote: "The wildlife, season and geography facts in this article come from these publications. The [n] citations in the text link here.",
@@ -110,6 +111,35 @@ function Block({ b, locale, lang }: { b: BlogBlock; locale: Locale; lang: BlogLo
 			return <aside className="ba-callout ba-tip"><span className="ba-callout-label">🧭 {t.tip}</span><p><InlineText text={b.text} locale={locale} /></p></aside>
 		case "fact":
 			return <aside className="ba-callout ba-fact"><span className="ba-callout-label">🔬 {t.fact}</span><p><InlineText text={b.text} locale={locale} /></p></aside>
+		case "chart":
+			return (
+				<figure className="ba-chart">
+					<div className="ba-chart-scroll">
+						{/* eslint-disable-next-line @next/next/no-img-element */}
+						<img src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" />
+					</div>
+					<a className="ba-chart-open" href={b.src} target="_blank" rel="noopener">{t.chartOpen}</a>
+					{b.caption && <figcaption><InlineText text={b.caption} locale={locale} /></figcaption>}
+					{b.data && (
+						<details>
+							<summary>{t.chartData}</summary>
+							<div className="ba-table-wrap">
+								<table className="ba-table">
+									<thead><tr>{b.data.head.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+									<tbody>{b.data.rows.map((r, i) => <tr key={i}>{r.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
+								</table>
+							</div>
+						</details>
+					)}
+				</figure>
+			)
+		case "anim":
+			return (
+				<figure className="ba-anim">
+					<div className="ba-anim-scroll"><BlogAnimation name={b.name} lang={lang} /></div>
+					{b.caption && <figcaption><InlineText text={b.caption} locale={locale} /></figcaption>}
+				</figure>
+			)
 		case "table":
 			return (
 				<div className="ba-table-wrap">

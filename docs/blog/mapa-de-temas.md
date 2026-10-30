@@ -115,3 +115,27 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Fotoidentificación: cómo los científicos reconocen a cada animal | Ramírez-Macías et al. 2012 |
 | ⏳ | La vaquita marina: lo que hay que saber | buscar |
 | ⏳ | Surgencias: por qué el agua fría trae vida | Bizzarro 2008; Herrera-Cervantes 2019 |
+
+## 7. Serie Sardine Run (Bahía Magdalena)
+
+Con gráficas generadas en MATLAB a partir de datos de NOAA/NASA (`public/blog/graficas`, script en `docs/blog/graficas.m`) y animaciones SVG (`components/blog/BlogAnimation.tsx`). Fuentes compartidas en `constants/blog/fuentes.ts`.
+
+| Estado | Pregunta / tema | Fuentes principales |
+|---|---|---|
+| ✅ | ¿Por qué ocurre el Sardine Run? (pilar) | NOAA; Zaitsev et al. 2014; Cervantes-Duarte et al. 2018; Hansen et al. 2022 |
+| ✅ | ¿Qué es una surgencia? (animación + gráfica) | NOAA; Jacox et al. 2018; índice de surgencia 24N 113W |
+| ✅ | La Corriente de California y Bahía Magdalena | Zaitsev et al. 2014; González-Rodríguez et al. 2012 |
+| ✅ | Cadena alimenticia del Sardine Run (animación) | Cervantes-Duarte 2018; van der Lingen 2002; Checkley et al. 2017 |
+| ✅ | ¿Por qué las sardinas forman bolas? (animación) | Hamilton 1971; Bartashevich et al. 2024; Cooper & Herbert-Read 2026 |
+| ✅ | La sardina del Pacífico | Torres-Villegas et al. 1995; Robinson et al. 2007 |
+| ✅ | Animales del Sardine Run (guía) | Hansen et al. 2022, 2023, 2026; Tershy 1992 |
+| ✅ | Cómo caza el marlín rayado (gráfica) | Hansen et al. 2020, 2022; Burns et al. 2024; Pacher et al. 2024 |
+| ✅ | Lobos marinos en el Sardine Run | Hansen et al. 2023; Krylova et al. 2026 |
+| ✅ | Ballena de Bryde | Tershy 1992; Salvadeo et al. 2011 |
+| ✅ | Aves del Sardine Run | Weimerskirch et al. 2009; Velarde et al. 2013; Au & Pitman 1986 |
+| ✅ | Súper El Niño 2026 y el Sardine Run (3 gráficas) | NOAA CPC oct 2026; ONI; OISST; Palomares-García et al. 2003 |
+| ✅ | La Mancha (The Blob) (2 gráficas) | Cavole et al. 2016; Jiménez-Quiroz et al. 2019 |
+| ✅ | ¿Dónde más hay Sardine Run? | Fréon et al. 2010; Thiebault et al. 2015 |
+| ✅ | Sardinas vs. anchovetas: ciclos de décadas | Chavez et al. 2003; Siple et al. 2020 |
+| ✅ | Bahía Magdalena mes a mes (gráfica) | OISST; MODIS-Aqua; índice de surgencia |
+| ⏳ | Actualizar el artículo de El Niño 2026 con el balance de la temporada (enero 2027) | NOAA CPC; OISST |
