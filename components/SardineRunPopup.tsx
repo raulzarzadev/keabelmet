@@ -71,8 +71,16 @@ export default function SardineRunPopup({ locale = "es" }: { locale?: Locale }) 
     let seen = false
     try { seen = sessionStorage.getItem("srPopupSeen") === "1" } catch { /* storage bloqueado */ }
     if (seen) return
-    const t = setTimeout(() => setOpen(true), 1500)
-    return () => clearTimeout(t)
+    // Se abre cuando la persona ya bajó por la página, no con un temporizador:
+    // un modal a pantalla completa al entrar es un "intersticial intrusivo"
+    // para Google en móvil y además se volvía el LCP de la portada (~21 s).
+    const onScroll = () => {
+      if (window.scrollY < window.innerHeight * 0.6) return
+      window.removeEventListener("scroll", onScroll)
+      setOpen(true)
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
   useEffect(() => {

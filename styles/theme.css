@@ -167,7 +167,7 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 /* SECTION HEADS */
 .section-head { padding: 120px 32px 50px; max-width: var(--maxw); margin: 0 auto; }
 .section-head .kicker { margin-bottom: 16px; display: block; }
-.section-head h2 { font-size: clamp(32px,4.5vw,58px); max-width: 760px; }
+.section-head h2, .section-head h1.section-head-title { font-size: clamp(32px,4.5vw,58px); max-width: 760px; }
 .section-head p { color: var(--sand-dim); max-width: 520px; margin-top: 18px; font-size: 16px; }
 
 /* TOUR GRID */

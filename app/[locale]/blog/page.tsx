@@ -23,8 +23,8 @@ const copy: Record<BlogLocale, { kicker: string; title: string; sub: string; all
 		all: "Todo",
 		min: "min",
 		empty: "Pronto publicaremos artículos en esta categoría.",
-		metaTitle: "Blog de La Paz y Baja California Sur: fauna, temporadas y buceo",
-		metaDesc: "Guías claras y respaldadas por ciencia sobre el Mar de Cortés: cuándo ver tiburón ballena, ballena gris, lobos marinos, Sardine Run, buceo en Espíritu Santo y Cabo Pulmo, y cómo planear tu viaje.",
+		metaTitle: "Blog de fauna marina de La Paz y la Baja",
+		metaDesc: "Guías con base científica sobre el Mar de Cortés: cuándo ver tiburón ballena, ballena gris y lobos marinos, el Sardine Run, buceo y cómo planear tu viaje.",
 	},
 	en: {
 		kicker: "Keabelmet Blog",
@@ -33,8 +33,8 @@ const copy: Record<BlogLocale, { kicker: string; title: string; sub: string; all
 		all: "All",
 		min: "min",
 		empty: "We'll publish articles in this category soon.",
-		metaTitle: "La Paz & Baja California Sur Blog: wildlife, seasons and diving",
-		metaDesc: "Clear, science-backed guides to the Sea of Cortez: when to see whale sharks, gray whales, sea lions, the Sardine Run, diving Espíritu Santo and Cabo Pulmo, and how to plan your trip.",
+		metaTitle: "La Paz & Baja Marine Wildlife Blog",
+		metaDesc: "Science-backed guides to the Sea of Cortez: when to see whale sharks, gray whales and sea lions, the Sardine Run, diving and how to plan your trip.",
 	},
 }
 

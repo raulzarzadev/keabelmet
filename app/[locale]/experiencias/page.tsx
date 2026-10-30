@@ -42,7 +42,6 @@ export default async function Experiencias({ params }: { params: Promise<{ local
           url: `${SITE}${e.href}`,
           image: `${SITE}${e.image}`,
           touristType: i.badge,
-          aggregateRating: { "@type": "AggregateRating", ratingValue: e.rating, reviewCount: e.reviews },
           ...(offers ? { offers } : {}),
         },
       }
@@ -55,8 +54,8 @@ export default async function Experiencias({ params }: { params: Promise<{ local
       <Breadcrumbs locale={locale} items={[{ label: getPageSeo("experiences", locale).title }]} />
 
       <div className="section-head" style={{ paddingBottom: 40 }}>
-        <span className="kicker">{getPageSeo("experiences", locale).title}</span>
-        <h2>{t.title}</h2>
+        <span className="kicker">{t.title}</span>
+        <h1 className="section-head-title">{getPageSeo("experiences", locale).title}</h1>
         <p>{t.subtitle}</p>
       </div>
 
@@ -68,7 +67,7 @@ export default async function Experiencias({ params }: { params: Promise<{ local
               <Link key={exp.slug} className="tour-card" href={l(exp.href)}>
                 <div className="tour-media">
                   <span className="tour-tag">{i.durationLabel}</span>
-                  <img src={exp.image} alt={i.title} />
+                  <img src={exp.image} alt={i.title} loading="lazy" decoding="async" />
                 </div>
                 <div className="tour-body">
                   <h3>{i.title}</h3>

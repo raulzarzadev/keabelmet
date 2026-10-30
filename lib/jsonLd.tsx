@@ -83,32 +83,3 @@ export function touristTripSchema(t: TouristTripInput, locale: Locale = "es") {
       : {}),
   }
 }
-
-interface SeasonalEventInput {
-  name: string
-  description: string
-  startDate: string
-  endDate: string
-  location: string
-  url: string
-}
-
-export function seasonalEventSchema(e: SeasonalEventInput) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: e.name,
-    description: e.description,
-    startDate: e.startDate,
-    endDate: e.endDate,
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-      "@type": "Place",
-      name: e.location,
-      address: { "@type": "PostalAddress", addressRegion: "Baja California Sur", addressCountry: "MX" },
-    },
-    organizer: { "@id": `${SITE_URL}/#organization` },
-    url: e.url,
-  }
-}

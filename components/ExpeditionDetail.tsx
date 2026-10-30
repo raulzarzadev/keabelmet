@@ -179,7 +179,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
 
       {/* HERO */}
       <section className="thero">
-        <img src={data.hero.image} alt={data.hero.alt} />
+        <img src={data.hero.image} alt={data.hero.alt} fetchPriority="high" />
         <div className="thero-inner">
           <span className="kicker">{data.hero.kicker}</span>
           <h1>{data.hero.title}</h1>
@@ -216,7 +216,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
       {/* SPLIT */}
       <section className="split">
         <div className="split-grid">
-          <div className="split-media"><img src={data.split.image} alt={data.split.alt} /></div>
+          <div className="split-media"><img src={data.split.image} alt={data.split.alt} loading="lazy" decoding="async" /></div>
           <div className="split-text">
             <span className="kicker">{data.split.kicker}</span>
             <h2>{data.split.title}</h2>
@@ -251,7 +251,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
           <div className="fauna-grid">
             {data.fauna.items.map((f) => (
               <div key={f.label} className="fauna-item">
-                <img src={f.image} alt={f.alt} />
+                <img src={f.image} alt={f.alt} loading="lazy" decoding="async" />
                 <div className="fauna-label">{f.label}</div>
               </div>
             ))}
@@ -325,7 +325,7 @@ export default function ExpeditionDetail({ data, locale = defaultLocale, slug }:
 
       {/* FINAL CTA */}
       <section className="final-cta">
-        <img src={data.finalCta.image} alt={data.finalCta.alt} />
+        <img src={data.finalCta.image} alt={data.finalCta.alt} loading="lazy" decoding="async" />
         <div className="final-cta-inner">
           <h2>{data.finalCta.title}</h2>
           <p>{data.finalCta.text}</p>
