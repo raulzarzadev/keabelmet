@@ -76,6 +76,7 @@ interface QuizDict {
 	}
 	notes: {
 		sealionSummer: string
+		orca: string
 		caboPulmo: string
 		privateOnly: string
 		lvBoat: string
@@ -99,7 +100,7 @@ const es: QuizDict = {
 	monthUnknown: "Aún no tengo fecha",
 	seasons: {
 		winter: { name: "Invierno", hint: "Ballenas y tiburón ballena" },
-		spring: { name: "Primavera", hint: "Móbulas saltando y orcas" },
+		spring: { name: "Primavera", hint: "Móbulas saltando y las últimas ballenas" },
 		summer: { name: "Verano", hint: "Cachalotes, móbulas y crías de lobo marino" },
 		autumn: { name: "Otoño", hint: "Vuelve el tiburón ballena y llega el Sardine Run" },
 	},
@@ -159,7 +160,7 @@ const es: QuizDict = {
 	tours: {
 		"tiburon-ballena": { name: "Tiburón Ballena", blurb: "Nado con snorkel junto al pez más grande del mundo, respetando su espacio. No necesitas experiencia previa.", duration: "2 a 3 h" },
 		"tour-espiritu-santo": { name: "Tour Snorkel Isla Espíritu Santo", blurb: "Snorkel en arrecifes, playas de Balandra y la isla, y la colonia de lobos marinos. Apto para familias.", duration: "6 h" },
-		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en lancha por el canal de Cerralvo buscando móbulas, delfines, ballenas y orcas. Cada día es distinto.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en lancha por el canal de Cerralvo buscando móbulas, delfines y ballenas. Cada día es distinto.", duration: "6 h" },
 		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkel en mar abierto durante el Sardine Run: bolas de sardinas, marlines cazando y lobos marinos.", duration: "~10 h con traslado desde La Paz" },
 		"tour-ballena-gris": { name: "Ballena Gris · Puerto Chale", blurb: "Madres y crías de ballena gris en las aguas tranquilas de Puerto Chale. Todo desde la lancha.", duration: "~9 h con traslado desde La Paz" },
 		"buceo-cabo-pulmo": { name: "Buceo en Cabo Pulmo", blurb: "El arrecife del Parque Nacional Cabo Pulmo, con cardúmenes de miles de peces. Discovery, certificados o snorkel.", duration: "~5 h, más el camino desde La Paz" },
@@ -176,6 +177,7 @@ const es: QuizDict = {
 	},
 	notes: {
 		sealionSummer: "Entre junio y agosto los lobos marinos se observan desde la lancha: es su temporada reproductiva y no se nada con ellos.",
+		orca: "Sí, ya sabemos: viste los videos en internet. Las orcas pasan por aquí, pero van de paso y nadie puede prometerte verlas, así que no te vamos a vender un «tour de orcas». Tranqui: lo que sale en redes no siempre es el día a día. Si aparecen, es un regalazo; si no, el safari vale la pena por todo lo demás.",
 		caboPulmo: "No incluye transporte desde La Paz.",
 		privateOnly: "Con menores de 14 años este safari es solo en salida privada.",
 		lvBoat: "Hay entradas de snorkel cuando es seguro, pero puedes quedarte en la lancha.",
@@ -199,7 +201,7 @@ const en: QuizDict = {
 	monthUnknown: "I don't have dates yet",
 	seasons: {
 		winter: { name: "Winter", hint: "Whales and whale sharks" },
-		spring: { name: "Spring", hint: "Jumping mobulas and orcas" },
+		spring: { name: "Spring", hint: "Jumping mobulas and the last whales" },
 		summer: { name: "Summer", hint: "Sperm whales, mobulas and sea lion pups" },
 		autumn: { name: "Autumn", hint: "Whale sharks return and the Sardine Run arrives" },
 	},
@@ -259,7 +261,7 @@ const en: QuizDict = {
 	tours: {
 		"tiburon-ballena": { name: "Whale Shark", blurb: "Snorkel next to the biggest fish in the world, respecting its space. No previous experience needed.", duration: "2 to 3 h" },
 		"tour-espiritu-santo": { name: "Snorkel Tour Espiritu Santo Island", blurb: "Snorkeling on reefs, Balandra and island beaches, and the sea lion colony. Family friendly.", duration: "6 h" },
-		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "A boat safari through the Cerralvo channel looking for mobulas, dolphins, whales and orcas. Every day is different.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "A boat safari through the Cerralvo channel looking for mobulas, dolphins and whales. Every day is different.", duration: "6 h" },
 		"safari-bahia-magdalena": { name: "Magdalena Bay Safari", blurb: "Open-water snorkeling during the Sardine Run: bait balls, hunting marlin and sea lions.", duration: "~10 h including transfer from La Paz" },
 		"tour-ballena-gris": { name: "Gray Whale · Puerto Chale", blurb: "Gray whale mothers and calves in the calm waters of Puerto Chale. All from the boat.", duration: "~9 h including transfer from La Paz" },
 		"buceo-cabo-pulmo": { name: "Diving in Cabo Pulmo", blurb: "The reef of Cabo Pulmo National Park, with schools of thousands of fish. Discovery, certified or snorkel.", duration: "~5 h, plus the drive from La Paz" },
@@ -276,6 +278,7 @@ const en: QuizDict = {
 	},
 	notes: {
 		sealionSummer: "From June to August sea lions are watched from the boat: it's their breeding season and swimming with them isn't allowed.",
+		orca: "Yes, we know: you saw the videos online. Orcas do pass through here, but they're just passing by and nobody can promise you'll see them, so we're not going to sell you an \"orca tour\". Relax: what you see on social media isn't always everyday reality. If they show up, it's a huge gift; if not, the safari is worth it for everything else.",
 		caboPulmo: "Transport from La Paz is not included.",
 		privateOnly: "With kids under 14 this safari is private only.",
 		lvBoat: "There are snorkel entries when it's safe, but you can stay on the boat.",
@@ -299,7 +302,7 @@ const fr: QuizDict = {
 	monthUnknown: "Je n'ai pas encore de dates",
 	seasons: {
 		winter: { name: "Hiver", hint: "Baleines et requins-baleines" },
-		spring: { name: "Printemps", hint: "Mobules qui sautent et orques" },
+		spring: { name: "Printemps", hint: "Mobules qui sautent et les dernières baleines" },
 		summer: { name: "Été", hint: "Cachalots, mobules et bébés otaries" },
 		autumn: { name: "Automne", hint: "Retour du requin-baleine et arrivée du Sardine Run" },
 	},
@@ -359,7 +362,7 @@ const fr: QuizDict = {
 	tours: {
 		"tiburon-ballena": { name: "Requin-Baleine", blurb: "Snorkeling à côté du plus grand poisson du monde, en respectant son espace. Aucune expérience requise.", duration: "2 à 3 h" },
 		"tour-espiritu-santo": { name: "Tour Snorkel Île Espíritu Santo", blurb: "Snorkeling sur les récifs, plages de Balandra et de l'île, et la colonie d'otaries. Idéal en famille.", duration: "6 h" },
-		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en bateau dans le canal de Cerralvo à la recherche de mobules, dauphins, baleines et orques. Chaque jour est différent.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en bateau dans le canal de Cerralvo à la recherche de mobules, dauphins et baleines. Chaque jour est différent.", duration: "6 h" },
 		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkeling en pleine mer pendant le Sardine Run : boules de sardines, marlins en chasse et otaries.", duration: "~10 h avec le transfert depuis La Paz" },
 		"tour-ballena-gris": { name: "Baleine Grise · Puerto Chale", blurb: "Mères et baleineaux gris dans les eaux calmes de Puerto Chale. Tout depuis le bateau.", duration: "~9 h avec le transfert depuis La Paz" },
 		"buceo-cabo-pulmo": { name: "Plongée à Cabo Pulmo", blurb: "Le récif du parc national de Cabo Pulmo, avec des bancs de milliers de poissons. Baptême, certifiés ou snorkeling.", duration: "~5 h, plus la route depuis La Paz" },
@@ -376,6 +379,7 @@ const fr: QuizDict = {
 	},
 	notes: {
 		sealionSummer: "De juin à août, les otaries s'observent depuis le bateau : c'est leur saison de reproduction et on ne nage pas avec elles.",
+		orca: "Oui, on sait : vous avez vu les vidéos sur internet. Les orques passent par ici, mais elles ne font que passer et personne ne peut vous promettre de les voir, alors on ne va pas vous vendre un « tour des orques ». Tranquille : ce qu'on voit sur les réseaux n'est pas toujours le quotidien. Si elles apparaissent, c'est un cadeau ; sinon, le safari vaut le coup pour tout le reste.",
 		caboPulmo: "Le transport depuis La Paz n'est pas inclus.",
 		privateOnly: "Avec des enfants de moins de 14 ans, ce safari se fait uniquement en privé.",
 		lvBoat: "Il y a des mises à l'eau en snorkeling quand c'est sûr, mais vous pouvez rester sur le bateau.",
@@ -399,7 +403,7 @@ const zh: QuizDict = {
 	monthUnknown: "还没定日期",
 	seasons: {
 		winter: { name: "冬季", hint: "鲸鱼和鲸鲨" },
-		spring: { name: "春季", hint: "跃出水面的蝠鲼和虎鲸" },
+		spring: { name: "春季", hint: "跃出水面的蝠鲼和最后一批鲸鱼" },
 		summer: { name: "夏季", hint: "抹香鲸、蝠鲼和海狮幼崽" },
 		autumn: { name: "秋季", hint: "鲸鲨回归，沙丁鱼洄游登场" },
 	},
@@ -459,7 +463,7 @@ const zh: QuizDict = {
 	tours: {
 		"tiburon-ballena": { name: "鲸鲨", blurb: "浮潜与世界上最大的鱼同游，并与它保持距离。无需经验。", duration: "2到3小时" },
 		"tour-espiritu-santo": { name: "圣灵岛浮潜之旅", blurb: "在珊瑚礁浮潜、游览巴兰德拉和岛上海滩，探访海狮群。适合家庭。", duration: "6小时" },
-		"safari-la-ventana": { name: "拉文塔纳海洋探险", blurb: "乘船穿越塞拉尔沃海峡，寻找蝠鲼、海豚、鲸鱼和虎鲸。每天都不一样。", duration: "6小时" },
+		"safari-la-ventana": { name: "拉文塔纳海洋探险", blurb: "乘船穿越塞拉尔沃海峡，寻找蝠鲼、海豚和鲸鱼。每天都不一样。", duration: "6小时" },
 		"safari-bahia-magdalena": { name: "马格达莱纳湾探险", blurb: "沙丁鱼洄游期间在开阔海域浮潜：沙丁鱼球、捕猎的马林鱼和海狮。", duration: "约10小时，含拉巴斯往返交通" },
 		"tour-ballena-gris": { name: "灰鲸 · 查莱港", blurb: "在查莱港平静的海域观赏灰鲸母子，全程在船上。", duration: "约9小时，含拉巴斯往返交通" },
 		"buceo-cabo-pulmo": { name: "卡波普尔莫潜水", blurb: "卡波普尔莫国家公园的珊瑚礁，成千上万的鱼群。体验潜水、持证潜水或浮潜。", duration: "约5小时，另加从拉巴斯出发的车程" },
@@ -476,6 +480,7 @@ const zh: QuizDict = {
 	},
 	notes: {
 		sealionSummer: "6月至8月是海狮的繁殖季，只能在船上观赏，不能与它们同游。",
+		orca: "是的，我们知道：你在网上看过虎鲸的视频。虎鲸确实会经过这里，但它们只是路过，没人能保证你一定看到，所以我们不会卖给你什么“虎鲸之旅”。放轻松：社交媒体上看到的不一定是日常。如果它们出现，那是大海的礼物；如果没有，这趟探险的其他一切也值得。",
 		caboPulmo: "不含从拉巴斯出发的交通。",
 		privateOnly: "有14岁以下儿童时，此行程仅限包船。",
 		lvBoat: "安全时会下水浮潜，但你也可以留在船上。",
@@ -499,7 +504,7 @@ const ca: QuizDict = {
 	monthUnknown: "Encara no tinc dates",
 	seasons: {
 		winter: { name: "Hivern", hint: "Balenes i tauró balena" },
-		spring: { name: "Primavera", hint: "Mòbules saltant i orques" },
+		spring: { name: "Primavera", hint: "Mòbules saltant i les últimes balenes" },
 		summer: { name: "Estiu", hint: "Catxalots, mòbules i cries de lleó marí" },
 		autumn: { name: "Tardor", hint: "Torna el tauró balena i arriba el Sardine Run" },
 	},
@@ -559,7 +564,7 @@ const ca: QuizDict = {
 	tours: {
 		"tiburon-ballena": { name: "Tauró Balena", blurb: "Snorkel al costat del peix més gran del món, respectant el seu espai. No cal experiència prèvia.", duration: "2 a 3 h" },
 		"tour-espiritu-santo": { name: "Tour Snorkel Illa Espíritu Santo", blurb: "Snorkel en esculls, platges de Balandra i de l'illa, i la colònia de lleons marins. Apte per a famílies.", duration: "6 h" },
-		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en barca pel canal de Cerralvo buscant mòbules, dofins, balenes i orques. Cada dia és diferent.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en barca pel canal de Cerralvo buscant mòbules, dofins i balenes. Cada dia és diferent.", duration: "6 h" },
 		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkel en mar obert durant el Sardine Run: boles de sardines, marlins caçant i lleons marins.", duration: "~10 h amb el trasllat des de La Paz" },
 		"tour-ballena-gris": { name: "Balena Grisa · Puerto Chale", blurb: "Mares i cries de balena grisa a les aigües tranquil·les de Puerto Chale. Tot des de la barca.", duration: "~9 h amb el trasllat des de La Paz" },
 		"buceo-cabo-pulmo": { name: "Busseig a Cabo Pulmo", blurb: "L'escull del Parc Nacional Cabo Pulmo, amb bancs de milers de peixos. Discovery, certificats o snorkel.", duration: "~5 h, més el camí des de La Paz" },
@@ -576,6 +581,7 @@ const ca: QuizDict = {
 	},
 	notes: {
 		sealionSummer: "Entre juny i agost els lleons marins s'observen des de la barca: és la seva temporada reproductiva i no s'hi neda.",
+		orca: "Sí, ja ho sabem: has vist els vídeos a internet. Les orques passen per aquí, però van de pas i ningú no et pot prometre veure-les, així que no et vendrem un «tour d'orques». Tranquil: el que surt a les xarxes no sempre és el dia a dia. Si apareixen, és un regalàs; si no, el safari val la pena per tota la resta.",
 		caboPulmo: "No inclou transport des de La Paz.",
 		privateOnly: "Amb menors de 14 anys aquest safari només es fa en sortida privada.",
 		lvBoat: "Hi ha entrades de snorkel quan és segur, però et pots quedar a la barca.",
@@ -842,7 +848,10 @@ function Result({
 
 	const why: string[] = []
 	if (animalName && best.animalMatch) {
-		if (best.animalMatch.maybe) why.push(t.why.maybe(animalName))
+		// Orcas: en vez de la línea genérica va un mensaje honesto (notes.orca); no las vendemos.
+		if (answers.animal === "orca") {
+			/* nada */
+		} else if (best.animalMatch.maybe) why.push(t.why.maybe(animalName))
 		else if (monthName && answers.month && best.animalMatch.peak?.includes(answers.month)) why.push(t.why.peak(animalName, monthName))
 		else why.push(t.why.match(animalName))
 	}
@@ -850,6 +859,7 @@ function Result({
 	else why.push(t.why.season(seasonRange(best.tour.months, t)))
 
 	const notes: string[] = []
+	if (answers.animal === "orca") notes.push(t.notes.orca)
 	const seaLionTour = best.tour.id === "tour-espiritu-santo" || best.tour.id === "buceo-la-paz"
 	if (seaLionTour && (!answers.month || SEA_LION_NO_SWIM.includes(answers.month))) notes.push(t.notes.sealionSummer)
 	if (best.tour.id === "safari-la-ventana" && best.mode === "boat") notes.push(t.notes.lvBoat)
