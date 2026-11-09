@@ -1,739 +1,927 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
+import {
+	MODE_IMAGES,
+	SEASON_GROUPS,
+	SEA_LION_NO_SWIM,
+	STEP_ORDER,
+	animalOptions,
+	pickImage,
+	recommend,
+	shouldAsk,
+	type AnimalId,
+	type Comfort,
+	type FinderAnswers,
+	type Group,
+	type Mode,
+	type Pick,
+	type StepId,
+	type Time,
+	type TourId,
+} from "@/lib/tour-finder"
 
-interface QuizPrice {
-  label?: string
-  mxn: number
-}
-
-interface QuizTourBase {
-  id: string
-  tags: string[]
-  months: number[]
-  peak: number[]
-  prices: QuizPrice[]
-  per?: "person" | "none"
-  view: string
-}
-
-interface QuizTourText {
-  name: string
-  reason: string
-  seasonNotes?: string
-  waText: string
-}
-
-const tourBase: QuizTourBase[] = [
-  {
-    id: "la-ventana",
-    tags: ["surface", "wildlife_watch", "adrenaline", "mobulas_dolphins", "half_day"],
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    peak: [4, 5, 6],
-    prices: [{ mxn: 3000 }],
-    per: "person",
-    view: "/experiencias/safari-la-ventana",
-  },
-  {
-    id: "bahia-magdalena",
-    tags: ["surface", "wildlife_watch", "adrenaline", "full_day"],
-    months: [11, 12],
-    peak: [11, 12],
-    prices: [{ mxn: 3500 }],
-    per: "person",
-    view: "/experiencias/safari-bahia-magdalena",
-  },
-  {
-    id: "ballena-gris",
-    tags: ["whales", "surface", "wildlife_watch", "full_day"],
-    months: [1, 2, 3],
-    peak: [2, 3],
-    prices: [{ mxn: 2800 }],
-    per: "person",
-    view: "/experiencias/tour-ballena-gris",
-  },
-  {
-    id: "tiburon-ballena",
-    tags: ["whale_shark", "surface", "half_day"],
-    months: [11, 12, 1, 2, 3],
-    peak: [12, 1, 2],
-    prices: [{ mxn: 1800 }],
-    per: "person",
-    view: "/experiencias/tiburon-ballena",
-  },
-  {
-    id: "espiritu-santo-dia",
-    tags: ["sea_lions", "surface", "wildlife_watch", "full_day"],
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    peak: [6, 8, 12, 1],
-    prices: [{ mxn: 1800 }],
-    per: "person",
-    view: "/experiencias/tour-espiritu-santo",
-  },
-  {
-    id: "cabo-pulmo",
-    tags: ["certified_diver", "beginner_diver", "reef_sharks", "full_day"],
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    peak: [7, 8, 9, 10, 11, 12],
-    prices: [
-      { label: "certified", mxn: 3200 },
-      { label: "discovery", mxn: 3800 },
-    ],
-    per: "none",
-    view: "/experiencias/buceo-cabo-pulmo",
-  },
-  {
-    id: "espiritu-santo-buceo",
-    tags: ["certified_diver", "beginner_diver", "sea_lions", "full_day"],
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    peak: [5, 6, 7, 8, 9, 10, 11, 12],
-    prices: [
-      { label: "certified", mxn: 3700 },
-      { label: "discovery", mxn: 4200 },
-    ],
-    per: "none",
-    view: "/experiencias/buceo-la-paz",
-  },
-  {
-    id: "scuba-discovery",
-    tags: ["beginner_diver", "half_day"],
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    peak: [5, 6, 7, 8, 9, 10, 11, 12],
-    prices: [{ mxn: 1500 }],
-    per: "person",
-    view: "/experiencias/scuba-discovery",
-  },
-]
+type SeasonId = (typeof SEASON_GROUPS)[number]["id"]
 
 interface QuizDict {
-  badge: string
-  kicker: string
-  title: string
-  sub: string
-  note: string
-  q1: string
-  q1opts: { value: string; label: string; subtle?: boolean }[]
-  q2: string
-  q2opts: { value: string; label: string; subtle?: boolean }[]
-  q3: string
-  q3opts: { value: string; label: string; subtle?: boolean }[]
-  q4: string
-  months: string[]
-  back: string
-  eyebrow: string
-  view: string
-  book: string
-  alts: string
-  reset: string
-  perPerson: string
-  certified: string
-  discovery: string
-  tours: Record<string, QuizTourText>
+	badge: string
+	kicker: string
+	title: string
+	sub: string
+	note: string
+	monthsShort: string[]
+	monthsLong: string[]
+	allYear: string
+	qMonth: string
+	monthHint: string
+	monthUnknown: string
+	seasons: Record<SeasonId, { name: string; hint: string }>
+	qMode: string
+	modes: Record<Mode, { title: string; desc: string; badge: string }>
+	qComfort: string
+	comfort: Record<Comfort, string>
+	qAnimal: string
+	animalHint: string
+	animals: Record<AnimalId, string>
+	surprise: string
+	peakTag: string
+	maybeTag: string
+	qGroup: string
+	groups: Record<Group, string>
+	qTime: string
+	times: Record<Time, string>
+	anyTime: string
+	back: string
+	eyebrow: string
+	view: string
+	book: string
+	alts: string
+	reset: string
+	perPerson: string
+	from: string
+	duration: string
+	tours: Record<TourId, { name: string; blurb: string; duration: string }>
+	why: {
+		match: (animal: string) => string
+		peak: (animal: string, month: string) => string
+		maybe: (animal: string) => string
+		inMonth: (month: string) => string
+		season: (range: string) => string
+	}
+	notes: {
+		sealionSummer: string
+		caboPulmo: string
+		privateOnly: string
+		lvBoat: string
+		openSea: string
+		relaxed: string
+	}
+	wa: (name: string, month: string | null, mode: string) => string
 }
 
 const es: QuizDict = {
-  badge: "¿No sabes qué elegir?",
-  kicker: "Encuentra tu expedición",
-  title: "¿Estás en La Paz y no sabes qué tour tomar?",
-  sub: "Responde 4 preguntas rápidas — incluyendo tu mes de viaje — y te decimos qué expedición te conviene más según la temporada real de cada una.",
-  note: "Toma 30 segundos. Cero compromiso.",
-  q1: "1. ¿Ya sabes bucear?",
-  q1opts: [
-    { value: "beginner_diver", label: "Nunca he buceado y no sé qué esperar" },
-    { value: "surface", label: "No buceo, prefiero quedarme en superficie / snorkel" },
-    { value: "certified_diver", label: "Sí, tengo certificación de buceo" },
-    { value: "wildlife_watch", label: "No me interesa el agua, quiero ver fauna desde la lancha" },
-    { value: "", label: "No estoy seguro/a, sorpréndeme", subtle: true },
-  ],
-  q2: "2. ¿Qué te emociona más ver?",
-  q2opts: [
-    { value: "whales", label: "Ballenas grises (madres y crías, muy de cerca)" },
-    { value: "sea_lions", label: "Lobos marinos jugando junto a ti" },
-    { value: "reef_sharks", label: "Arrecife de coral, tiburones y cardúmenes" },
-    { value: "adrenaline", label: "Adrenalina pura: marlines cazando sardinas" },
-    { value: "mobulas_dolphins", label: "Móbulas volando y delfines escoltando la lancha" },
-    { value: "whale_shark", label: "Nadar junto al pez más grande del mundo" },
-    { value: "", label: "No estoy seguro/a, sorpréndeme", subtle: true },
-  ],
-  q3: "3. ¿Cuánto tiempo tienes disponible?",
-  q3opts: [
-    { value: "half_day", label: "Medio día (mañana o tarde)" },
-    { value: "full_day", label: "Día completo" },
-    { value: "", label: "Cualquiera, me adapto", subtle: true },
-  ],
-  q4: "4. ¿En qué mes viajas?",
-  months: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
-  back: "← Regresar",
-  eyebrow: "Tu expedición ideal",
-  view: "Ver expedición",
-  book: "Reservar por WhatsApp",
-  alts: "También te podría gustar",
-  reset: "↺ Volver a empezar",
-  perPerson: "por persona",
-  certified: "Certificado",
-  discovery: "Discovery",
-  tours: {
-    "la-ventana": {
-      name: "Ocean Safari La Ventana",
-      reason: "Media jornada en lancha con móbulas saltando y avistamientos sorpresa de ballenas y delfines — ideal si no buceas y quieres adrenalina en poco tiempo.",
-      waText: "Hola! quiero reservar Ocean Safari La Ventana",
-    },
-    "bahia-magdalena": {
-      name: "Safari Bahía Magdalena",
-      reason: "Un día completo en mar abierto viendo el Sardine Run: miles de sardinas, marlines cazando y ballenas alimentándose. Solo pasa dos meses al año.",
-      waText: "Hola! quiero reservar Safari Bahía Magdalena",
-    },
-    "ballena-gris": {
-      name: "Ballena Gris · Puerto Chale",
-      reason: "Encuentros cercanos con madres y crías de ballena gris en sus aguas de crianza — de los avistamientos más emotivos de Baja California Sur.",
-      waText: "Hola! quiero reservar Ballena Gris Puerto Chale",
-    },
-    "tiburon-ballena": {
-      name: "Tiburón Ballena",
-      reason: "Snorkel de medio día para nadar junto al pez más grande del mundo — perfecto si tienes poco tiempo y quieres algo inolvidable.",
-      waText: "Hola! quiero reservar Tiburón Ballena",
-    },
-    "espiritu-santo-dia": {
-      name: "Tour Snorkel Isla Espíritu Santo",
-      reason: "Snorkel todo el año con una de las colonias de lobos marinos más grandes del Golfo, playas vírgenes y picnic incluido.",
-      seasonNotes: "De jun a ago los lobeznos recién nacidos restringen el nado — se observa sin entrar al agua por su seguridad.",
-      waText: "Hola! quiero reservar Isla Espíritu Santo",
-    },
-    "cabo-pulmo": {
-      name: "Scuba Diving Cabo Pulmo",
-      reason: "El único arrecife de coral vivo del Golfo de California — 25,000 años de coral, tiburones toro y cardúmenes masivos, todo el año.",
-      waText: "Hola! quiero reservar Buceo en Cabo Pulmo",
-    },
-    "espiritu-santo-buceo": {
-      name: "Scuba Diving Isla Espíritu Santo",
-      reason: "Buceo junto a lobos marinos curiosos y barcos hundidos en un Patrimonio UNESCO — la combinación de buceo y fauna más juguetona de La Paz.",
-      waText: "Hola! quiero reservar Buceo en Isla Espíritu Santo",
-    },
-    "scuba-discovery": {
-      name: "Scuba Discovery desde Playa",
-      reason: "Tu primera vez bajo el agua, sin certificación, máximo 6 metros de profundidad y un instructor todo el tiempo contigo.",
-      waText: "Hola! quiero reservar Scuba Discovery desde Playa",
-    },
-  },
+	badge: "¿No sabes qué elegir?",
+	kicker: "Encuentra tu expedición",
+	title: "¿Estás en La Paz y no sabes qué tour tomar?",
+	sub: "Elige con fotos: tu mes, cómo quieres vivir el mar y qué animal te gustaría ver. Solo te mostramos lo que de verdad puedes hacer en tu fecha.",
+	note: "Toma 30 segundos. Cero compromiso.",
+	monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+	monthsLong: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+	allYear: "todo el año",
+	qMonth: "¿En qué mes vienes?",
+	monthHint: "Cada temporada trae animales distintos. Toca tu mes.",
+	monthUnknown: "Aún no tengo fecha",
+	seasons: {
+		winter: { name: "Invierno", hint: "Ballenas y tiburón ballena" },
+		spring: { name: "Primavera", hint: "Móbulas saltando y orcas" },
+		summer: { name: "Verano", hint: "Cachalotes, móbulas y crías de lobo marino" },
+		autumn: { name: "Otoño", hint: "Vuelve el tiburón ballena y llega el Sardine Run" },
+	},
+	qMode: "¿Cómo quieres vivir el mar?",
+	modes: {
+		boat: { title: "Desde la lancha", desc: "Sin meterte al agua: observas a los animales desde la embarcación.", badge: "Desde la lancha" },
+		snorkel: { title: "Snorkel", desc: "Nadar en la superficie con visor y aletas. No es buceo.", badge: "Snorkel" },
+		firstDive: { title: "Bucear por primera vez", desc: "Sin certificación, con un instructor a tu lado.", badge: "Buceo · primera vez" },
+		certified: { title: "Ya buceo", desc: "Tengo certificación (Open Water o superior).", badge: "Buceo certificado" },
+	},
+	qComfort: "¿Qué tan cómodo/a te sientes nadando en mar abierto?",
+	comfort: {
+		openSea: "Bien: ya he hecho snorkel y respiro tranquilo/a por el tubo",
+		easy: "Poco o es mi primera vez: prefiero algo tranquilo",
+	},
+	qAnimal: "¿Qué te gustaría ver?",
+	animalHint: "Solo aparecen los animales posibles en tu mes y con tu forma de vivir el mar.",
+	animals: {
+		grayWhale: "Ballena gris",
+		bigWhales: "Ballenas jorobada y azul",
+		whaleShark: "Tiburón ballena",
+		sealion: "Lobos marinos",
+		mobula: "Móbulas",
+		giantManta: "Mantas gigantes",
+		orca: "Orcas",
+		dolphin: "Delfines",
+		spermWhale: "Cachalotes",
+		sardineRun: "Marlines y sardinas",
+		reef: "Arrecife y cardúmenes",
+	},
+	surprise: "Me da igual, sorpréndeme",
+	peakTag: "Temporada alta",
+	maybeTag: "Ocasional",
+	qGroup: "¿Quién viene?",
+	groups: {
+		adults: "Adultos (todos de 14 años o más)",
+		teens: "Con alguien de 12 o 13 años",
+		kids: "Con niños menores de 12",
+	},
+	qTime: "¿Cuánto tiempo tienes ese día?",
+	times: {
+		short: "Unas horas (2 a 4 h)",
+		medium: "Media jornada larga (6 a 7 h)",
+		full: "El día completo, no me importa madrugar",
+		days: "Varios días: quiero certificarme",
+	},
+	anyTime: "Me adapto",
+	back: "← Regresar",
+	eyebrow: "Tu expedición ideal",
+	view: "Ver expedición",
+	book: "Reservar por WhatsApp",
+	alts: "También encaja contigo",
+	reset: "↺ Volver a empezar",
+	perPerson: "por persona",
+	from: "desde",
+	duration: "Duración",
+	tours: {
+		"tiburon-ballena": { name: "Tiburón Ballena", blurb: "Nado con snorkel junto al pez más grande del mundo, respetando su espacio. No necesitas experiencia previa.", duration: "2 a 3 h" },
+		"tour-espiritu-santo": { name: "Tour Snorkel Isla Espíritu Santo", blurb: "Snorkel en arrecifes, playas de Balandra y la isla, y la colonia de lobos marinos. Apto para familias.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en lancha por el canal de Cerralvo buscando móbulas, delfines, ballenas y orcas. Cada día es distinto.", duration: "6 h" },
+		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkel en mar abierto durante el Sardine Run: bolas de sardinas, marlines cazando y lobos marinos.", duration: "~10 h con traslado desde La Paz" },
+		"tour-ballena-gris": { name: "Ballena Gris · Puerto Chale", blurb: "Madres y crías de ballena gris en las aguas tranquilas de Puerto Chale. Todo desde la lancha.", duration: "~9 h con traslado desde La Paz" },
+		"buceo-cabo-pulmo": { name: "Buceo en Cabo Pulmo", blurb: "El arrecife del Parque Nacional Cabo Pulmo, con cardúmenes de miles de peces. Discovery, certificados o snorkel.", duration: "~5 h, más el camino desde La Paz" },
+		"buceo-la-paz": { name: "Buceo Isla Espíritu Santo", blurb: "Dos inmersiones guiadas en Espíritu Santo, el archipiélago de los lobos marinos.", duration: "~7 h" },
+		"scuba-discovery": { name: "Scuba Discovery desde Playa", blurb: "Tu primera respiración bajo el agua: máximo 6 m, unos 50 min abajo y un instructor contigo.", duration: "~4 h" },
+		"certificacion-open-water": { name: "Certificación PADI Open Water", blurb: "Teoría en línea a tu ritmo y 4 inmersiones (2 en playa y 2 en barco) para salir certificado/a.", duration: "Normalmente un par de días" },
+	},
+	why: {
+		match: (a) => `Aquí es donde ves ${a.toLowerCase()}.`,
+		peak: (a, m) => `${a}: ${m} es de los meses con más probabilidad.`,
+		maybe: (a) => `${a}: pueden aparecer, pero nunca está garantizado.`,
+		inMonth: (m) => `Disponible en ${m}.`,
+		season: (r) => `Temporada: ${r}.`,
+	},
+	notes: {
+		sealionSummer: "Entre junio y agosto los lobos marinos se observan desde la lancha: es su temporada reproductiva y no se nada con ellos.",
+		caboPulmo: "No incluye transporte desde La Paz.",
+		privateOnly: "Con menores de 14 años este safari es solo en salida privada.",
+		lvBoat: "Hay entradas de snorkel cuando es seguro, pero puedes quedarte en la lancha.",
+		openSea: "Necesitas sentirte cómodo/a nadando en mar abierto con snorkel.",
+		relaxed: "Ninguna opción de esa forma de vivir el mar encaja con tu fecha o tu grupo. Esto es lo más cercano:",
+	},
+	wa: (n, m, mode) => `Hola! Me interesa ${n}${m ? ` en ${m}` : ""} (${mode}).`,
 }
 
 const en: QuizDict = {
-  badge: "Not sure what to pick?",
-  kicker: "Find your expedition",
-  title: "In La Paz and not sure which tour to take?",
-  sub: "Answer 4 quick questions — including your travel month — and we'll tell you which expedition suits you best based on each one's real season.",
-  note: "Takes 30 seconds. Zero commitment.",
-  q1: "1. Do you know how to dive?",
-  q1opts: [
-    { value: "beginner_diver", label: "I've never dived and don't know what to expect" },
-    { value: "surface", label: "I don't dive, I prefer staying at the surface / snorkeling" },
-    { value: "certified_diver", label: "Yes, I'm a certified diver" },
-    { value: "wildlife_watch", label: "Not into the water — I want to watch wildlife from the boat" },
-    { value: "", label: "Not sure, surprise me", subtle: true },
-  ],
-  q2: "2. What excites you most?",
-  q2opts: [
-    { value: "whales", label: "Gray whales (mothers and calves, up close)" },
-    { value: "sea_lions", label: "Sea lions playing right next to you" },
-    { value: "reef_sharks", label: "Coral reef, sharks and schools of fish" },
-    { value: "adrenaline", label: "Pure adrenaline: marlin hunting sardines" },
-    { value: "mobulas_dolphins", label: "Flying mobulas and dolphins escorting the boat" },
-    { value: "whale_shark", label: "Swimming next to the biggest fish in the world" },
-    { value: "", label: "Not sure, surprise me", subtle: true },
-  ],
-  q3: "3. How much time do you have?",
-  q3opts: [
-    { value: "half_day", label: "Half day (morning or afternoon)" },
-    { value: "full_day", label: "Full day" },
-    { value: "", label: "Either works for me", subtle: true },
-  ],
-  q4: "4. Which month are you traveling?",
-  months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  back: "← Back",
-  eyebrow: "Your ideal expedition",
-  view: "View expedition",
-  book: "Book on WhatsApp",
-  alts: "You might also like",
-  reset: "↺ Start over",
-  perPerson: "per person",
-  certified: "Certified",
-  discovery: "Discovery",
-  tours: {
-    "la-ventana": {
-      name: "Ocean Safari La Ventana",
-      reason: "Half a day on the boat with jumping mobulas and surprise sightings of whales and dolphins — ideal if you don't dive and want adrenaline in little time.",
-      waText: "Hi! I want to book the Ocean Safari La Ventana",
-    },
-    "bahia-magdalena": {
-      name: "Magdalena Bay Safari",
-      reason: "A full day in open water watching the Sardine Run: thousands of sardines, hunting marlin and feeding whales. It only happens two months a year.",
-      waText: "Hi! I want to book the Magdalena Bay Safari",
-    },
-    "ballena-gris": {
-      name: "Gray Whale · Puerto Chale",
-      reason: "Close encounters with gray whale mothers and calves in their nursing waters — among the most moving sightings in Baja California Sur.",
-      waText: "Hi! I want to book Gray Whale Puerto Chale",
-    },
-    "tiburon-ballena": {
-      name: "Whale Shark",
-      reason: "A half-day snorkel to swim next to the biggest fish in the world — perfect if you're short on time and want something unforgettable.",
-      waText: "Hi! I want to book the Whale Shark tour",
-    },
-    "espiritu-santo-dia": {
-      name: "Snorkel Tour Espiritu Santo Island",
-      reason: "Year-round snorkeling with one of the largest sea lion colonies in the Gulf, pristine beaches and picnic included.",
-      seasonNotes: "From Jun to Aug newborn pups restrict swimming — observation is done from the boat for their safety.",
-      waText: "Hi! I want to book Espiritu Santo Island",
-    },
-    "cabo-pulmo": {
-      name: "Scuba Diving Cabo Pulmo",
-      reason: "The only living coral reef in the Gulf of California — 25,000 years of coral, bull sharks and massive schools of fish, year-round.",
-      waText: "Hi! I want to book Diving in Cabo Pulmo",
-    },
-    "espiritu-santo-buceo": {
-      name: "Scuba Diving Espiritu Santo Island",
-      reason: "Diving alongside curious sea lions and shipwrecks in a UNESCO World Heritage site — the most playful combination of diving and wildlife in La Paz.",
-      waText: "Hi! I want to book Diving at Espiritu Santo Island",
-    },
-    "scuba-discovery": {
-      name: "Scuba Discovery from the Beach",
-      reason: "Your first time underwater, no certification needed, max 6 meters deep with an instructor by your side the whole time.",
-      waText: "Hi! I want to book Scuba Discovery from the Beach",
-    },
-  },
+	badge: "Not sure what to pick?",
+	kicker: "Find your expedition",
+	title: "In La Paz and not sure which tour to take?",
+	sub: "Pick with photos: your month, how you want to experience the sea and which animal you'd love to see. We only show what you can really do on your dates.",
+	note: "Takes 30 seconds. Zero commitment.",
+	monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+	monthsLong: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+	allYear: "all year",
+	qMonth: "Which month are you coming?",
+	monthHint: "Each season brings different animals. Tap your month.",
+	monthUnknown: "I don't have dates yet",
+	seasons: {
+		winter: { name: "Winter", hint: "Whales and whale sharks" },
+		spring: { name: "Spring", hint: "Jumping mobulas and orcas" },
+		summer: { name: "Summer", hint: "Sperm whales, mobulas and sea lion pups" },
+		autumn: { name: "Autumn", hint: "Whale sharks return and the Sardine Run arrives" },
+	},
+	qMode: "How do you want to experience the sea?",
+	modes: {
+		boat: { title: "From the boat", desc: "No getting in the water: you watch the wildlife from the boat.", badge: "From the boat" },
+		snorkel: { title: "Snorkeling", desc: "Swimming at the surface with mask and fins. Not diving.", badge: "Snorkeling" },
+		firstDive: { title: "Try diving for the first time", desc: "No certification, with an instructor by your side.", badge: "Diving · first time" },
+		certified: { title: "I already dive", desc: "I'm certified (Open Water or higher).", badge: "Certified diving" },
+	},
+	qComfort: "How comfortable are you swimming in open water?",
+	comfort: {
+		openSea: "Comfortable: I've snorkeled before and breathe calmly through the tube",
+		easy: "Not much, or it's my first time: I'd rather keep it calm",
+	},
+	qAnimal: "What would you love to see?",
+	animalHint: "Only animals you can actually see in your month, the way you chose, are shown.",
+	animals: {
+		grayWhale: "Gray whale",
+		bigWhales: "Humpback and blue whales",
+		whaleShark: "Whale shark",
+		sealion: "Sea lions",
+		mobula: "Mobula rays",
+		giantManta: "Giant mantas",
+		orca: "Orcas",
+		dolphin: "Dolphins",
+		spermWhale: "Sperm whales",
+		sardineRun: "Marlin and sardines",
+		reef: "Reef and fish schools",
+	},
+	surprise: "Anything, surprise me",
+	peakTag: "Peak season",
+	maybeTag: "Occasional",
+	qGroup: "Who's coming?",
+	groups: {
+		adults: "Adults (everyone 14 or older)",
+		teens: "Someone aged 12 or 13",
+		kids: "Kids under 12",
+	},
+	qTime: "How much time do you have that day?",
+	times: {
+		short: "A few hours (2 to 4 h)",
+		medium: "A long half day (6 to 7 h)",
+		full: "The whole day, I don't mind an early start",
+		days: "Several days: I want to get certified",
+	},
+	anyTime: "I'm flexible",
+	back: "← Back",
+	eyebrow: "Your ideal expedition",
+	view: "View expedition",
+	book: "Book on WhatsApp",
+	alts: "Also a good fit",
+	reset: "↺ Start over",
+	perPerson: "per person",
+	from: "from",
+	duration: "Duration",
+	tours: {
+		"tiburon-ballena": { name: "Whale Shark", blurb: "Snorkel next to the biggest fish in the world, respecting its space. No previous experience needed.", duration: "2 to 3 h" },
+		"tour-espiritu-santo": { name: "Snorkel Tour Espiritu Santo Island", blurb: "Snorkeling on reefs, Balandra and island beaches, and the sea lion colony. Family friendly.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "A boat safari through the Cerralvo channel looking for mobulas, dolphins, whales and orcas. Every day is different.", duration: "6 h" },
+		"safari-bahia-magdalena": { name: "Magdalena Bay Safari", blurb: "Open-water snorkeling during the Sardine Run: bait balls, hunting marlin and sea lions.", duration: "~10 h including transfer from La Paz" },
+		"tour-ballena-gris": { name: "Gray Whale · Puerto Chale", blurb: "Gray whale mothers and calves in the calm waters of Puerto Chale. All from the boat.", duration: "~9 h including transfer from La Paz" },
+		"buceo-cabo-pulmo": { name: "Diving in Cabo Pulmo", blurb: "The reef of Cabo Pulmo National Park, with schools of thousands of fish. Discovery, certified or snorkel.", duration: "~5 h, plus the drive from La Paz" },
+		"buceo-la-paz": { name: "Diving Espiritu Santo Island", blurb: "Two guided dives at Espiritu Santo, the sea lion archipelago.", duration: "~7 h" },
+		"scuba-discovery": { name: "Scuba Discovery from the Beach", blurb: "Your first breath underwater: 6 m max, about 50 min down and an instructor with you.", duration: "~4 h" },
+		"certificacion-open-water": { name: "PADI Open Water Certification", blurb: "Online theory at your own pace and 4 dives (2 from the beach, 2 from the boat) to get certified.", duration: "Usually a couple of days" },
+	},
+	why: {
+		match: (a) => `This is where you see ${a.toLowerCase()}.`,
+		peak: (a, m) => `${a}: ${m} is one of the months with the best chances.`,
+		maybe: (a) => `${a}: they may appear, but it's never guaranteed.`,
+		inMonth: (m) => `Available in ${m}.`,
+		season: (r) => `Season: ${r}.`,
+	},
+	notes: {
+		sealionSummer: "From June to August sea lions are watched from the boat: it's their breeding season and swimming with them isn't allowed.",
+		caboPulmo: "Transport from La Paz is not included.",
+		privateOnly: "With kids under 14 this safari is private only.",
+		lvBoat: "There are snorkel entries when it's safe, but you can stay on the boat.",
+		openSea: "You need to feel comfortable snorkeling in open water.",
+		relaxed: "No option of that kind fits your dates or your group. This is the closest match:",
+	},
+	wa: (n, m, mode) => `Hi! I'm interested in ${n}${m ? ` in ${m}` : ""} (${mode}).`,
 }
 
 const fr: QuizDict = {
-  badge: "Vous ne savez pas quoi choisir ?",
-  kicker: "Trouvez votre expédition",
-  title: "À La Paz et vous ne savez pas quel tour choisir ?",
-  sub: "Répondez à 4 questions rapides — dont votre mois de voyage — et nous vous dirons quelle expédition vous convient le mieux selon la vraie saison de chacune.",
-  note: "Ça prend 30 secondes. Aucun engagement.",
-  q1: "1. Savez-vous plonger ?",
-  q1opts: [
-    { value: "beginner_diver", label: "Je n'ai jamais plongé et je ne sais pas à quoi m'attendre" },
-    { value: "surface", label: "Je ne plonge pas, je préfère rester en surface / snorkeling" },
-    { value: "certified_diver", label: "Oui, je suis plongeur certifié" },
-    { value: "wildlife_watch", label: "L'eau ne m'intéresse pas — je veux observer la faune depuis le bateau" },
-    { value: "", label: "Pas sûr(e), surprenez-moi", subtle: true },
-  ],
-  q2: "2. Qu'est-ce qui vous enthousiasme le plus ?",
-  q2opts: [
-    { value: "whales", label: "Les baleines grises (mères et baleineaux, de très près)" },
-    { value: "sea_lions", label: "Les otaries qui jouent juste à côté de vous" },
-    { value: "reef_sharks", label: "Le récif corallien, les requins et les bancs de poissons" },
-    { value: "adrenaline", label: "L'adrénaline pure : les marlins qui chassent les sardines" },
-    { value: "mobulas_dolphins", label: "Les mobules qui volent et les dauphins qui escortent le bateau" },
-    { value: "whale_shark", label: "Nager à côté du plus grand poisson du monde" },
-    { value: "", label: "Pas sûr(e), surprenez-moi", subtle: true },
-  ],
-  q3: "3. De combien de temps disposez-vous ?",
-  q3opts: [
-    { value: "half_day", label: "Une demi-journée (matin ou après-midi)" },
-    { value: "full_day", label: "Une journée complète" },
-    { value: "", label: "Peu importe, je m'adapte", subtle: true },
-  ],
-  q4: "4. En quel mois voyagez-vous ?",
-  months: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
-  back: "← Retour",
-  eyebrow: "Votre expédition idéale",
-  view: "Voir l'expédition",
-  book: "Réserver sur WhatsApp",
-  alts: "Vous pourriez aussi aimer",
-  reset: "↺ Recommencer",
-  perPerson: "par personne",
-  certified: "Certifié",
-  discovery: "Baptême",
-  tours: {
-    "la-ventana": {
-      name: "Ocean Safari La Ventana",
-      reason: "Une demi-journée en bateau avec des mobules qui sautent et des observations surprises de baleines et de dauphins — idéal si vous ne plongez pas et voulez de l'adrénaline en peu de temps.",
-      waText: "Bonjour ! Je veux réserver Ocean Safari La Ventana",
-    },
-    "bahia-magdalena": {
-      name: "Safari Bahía Magdalena",
-      reason: "Une journée complète en mer ouverte pour observer le Sardine Run : des milliers de sardines, des marlins qui chassent et des baleines qui se nourrissent. Cela n'arrive que deux mois par an.",
-      waText: "Bonjour ! Je veux réserver le Safari Bahía Magdalena",
-    },
-    "ballena-gris": {
-      name: "Baleine Grise · Puerto Chale",
-      reason: "Des rencontres rapprochées avec des mères et des baleineaux gris dans leurs eaux de reproduction — parmi les observations les plus émouvantes de Basse-Californie du Sud.",
-      waText: "Bonjour ! Je veux réserver Baleine Grise Puerto Chale",
-    },
-    "tiburon-ballena": {
-      name: "Requin-Baleine",
-      reason: "Une demi-journée de snorkeling pour nager à côté du plus grand poisson du monde — parfait si vous manquez de temps et voulez quelque chose d'inoubliable.",
-      waText: "Bonjour ! Je veux réserver le tour Requin-Baleine",
-    },
-    "espiritu-santo-dia": {
-      name: "Tour Snorkel Île Espíritu Santo",
-      reason: "Du snorkeling toute l'année avec l'une des plus grandes colonies d'otaries du Golfe, des plages vierges et un pique-nique inclus.",
-      seasonNotes: "De juin à août, les nouveau-nés limitent la baignade — l'observation se fait depuis le bateau pour leur sécurité.",
-      waText: "Bonjour ! Je veux réserver Île Espíritu Santo",
-    },
-    "cabo-pulmo": {
-      name: "Plongée Cabo Pulmo",
-      reason: "Le seul récif corallien vivant du golfe de Californie — 25 000 ans de corail, des requins bouledogues et d'immenses bancs de poissons, toute l'année.",
-      waText: "Bonjour ! Je veux réserver la plongée à Cabo Pulmo",
-    },
-    "espiritu-santo-buceo": {
-      name: "Plongée Île Espíritu Santo",
-      reason: "Plonger aux côtés d'otaries curieuses et d'épaves dans un site du patrimoine mondial de l'UNESCO — la combinaison de plongée et de faune la plus ludique de La Paz.",
-      waText: "Bonjour ! Je veux réserver la plongée à l'Île Espíritu Santo",
-    },
-    "scuba-discovery": {
-      name: "Baptême de Plongée depuis la Plage",
-      reason: "Votre première fois sous l'eau, sans certification, à 6 mètres de profondeur maximum, avec un instructeur à vos côtés en permanence.",
-      waText: "Bonjour ! Je veux réserver le Baptême de Plongée depuis la Plage",
-    },
-  },
+	badge: "Vous ne savez pas quoi choisir ?",
+	kicker: "Trouvez votre expédition",
+	title: "À La Paz et vous ne savez pas quel tour choisir ?",
+	sub: "Choisissez en photos : votre mois, votre façon de vivre la mer et l'animal que vous aimeriez voir. Nous ne montrons que ce qui est vraiment possible à vos dates.",
+	note: "Ça prend 30 secondes. Aucun engagement.",
+	monthsShort: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
+	monthsLong: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+	allYear: "toute l'année",
+	qMonth: "En quel mois venez-vous ?",
+	monthHint: "Chaque saison amène d'autres animaux. Touchez votre mois.",
+	monthUnknown: "Je n'ai pas encore de dates",
+	seasons: {
+		winter: { name: "Hiver", hint: "Baleines et requins-baleines" },
+		spring: { name: "Printemps", hint: "Mobules qui sautent et orques" },
+		summer: { name: "Été", hint: "Cachalots, mobules et bébés otaries" },
+		autumn: { name: "Automne", hint: "Retour du requin-baleine et arrivée du Sardine Run" },
+	},
+	qMode: "Comment voulez-vous vivre la mer ?",
+	modes: {
+		boat: { title: "Depuis le bateau", desc: "Sans entrer dans l'eau : vous observez la faune depuis le bateau.", badge: "Depuis le bateau" },
+		snorkel: { title: "Snorkeling", desc: "Nager en surface avec masque et palmes. Ce n'est pas de la plongée.", badge: "Snorkeling" },
+		firstDive: { title: "Plonger pour la première fois", desc: "Sans certification, avec un instructeur à vos côtés.", badge: "Plongée · première fois" },
+		certified: { title: "Je plonge déjà", desc: "Je suis certifié(e) (Open Water ou plus).", badge: "Plongée certifiée" },
+	},
+	qComfort: "Êtes-vous à l'aise pour nager en pleine mer ?",
+	comfort: {
+		openSea: "Oui : j'ai déjà fait du snorkeling et je respire calmement par le tuba",
+		easy: "Peu, ou c'est ma première fois : je préfère quelque chose de calme",
+	},
+	qAnimal: "Qu'aimeriez-vous voir ?",
+	animalHint: "Seuls les animaux possibles pendant votre mois, de la façon choisie, apparaissent.",
+	animals: {
+		grayWhale: "Baleine grise",
+		bigWhales: "Baleines à bosse et bleue",
+		whaleShark: "Requin-baleine",
+		sealion: "Otaries",
+		mobula: "Raies mobula",
+		giantManta: "Mantas géantes",
+		orca: "Orques",
+		dolphin: "Dauphins",
+		spermWhale: "Cachalots",
+		sardineRun: "Marlins et sardines",
+		reef: "Récif et bancs de poissons",
+	},
+	surprise: "Peu importe, surprenez-moi",
+	peakTag: "Haute saison",
+	maybeTag: "Occasionnel",
+	qGroup: "Qui vient ?",
+	groups: {
+		adults: "Des adultes (tous 14 ans ou plus)",
+		teens: "Quelqu'un de 12 ou 13 ans",
+		kids: "Des enfants de moins de 12 ans",
+	},
+	qTime: "De combien de temps disposez-vous ce jour-là ?",
+	times: {
+		short: "Quelques heures (2 à 4 h)",
+		medium: "Une longue demi-journée (6 à 7 h)",
+		full: "La journée entière, je me lève tôt sans souci",
+		days: "Plusieurs jours : je veux me certifier",
+	},
+	anyTime: "Je m'adapte",
+	back: "← Retour",
+	eyebrow: "Votre expédition idéale",
+	view: "Voir l'expédition",
+	book: "Réserver sur WhatsApp",
+	alts: "Vous correspond aussi",
+	reset: "↺ Recommencer",
+	perPerson: "par personne",
+	from: "dès",
+	duration: "Durée",
+	tours: {
+		"tiburon-ballena": { name: "Requin-Baleine", blurb: "Snorkeling à côté du plus grand poisson du monde, en respectant son espace. Aucune expérience requise.", duration: "2 à 3 h" },
+		"tour-espiritu-santo": { name: "Tour Snorkel Île Espíritu Santo", blurb: "Snorkeling sur les récifs, plages de Balandra et de l'île, et la colonie d'otaries. Idéal en famille.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en bateau dans le canal de Cerralvo à la recherche de mobules, dauphins, baleines et orques. Chaque jour est différent.", duration: "6 h" },
+		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkeling en pleine mer pendant le Sardine Run : boules de sardines, marlins en chasse et otaries.", duration: "~10 h avec le transfert depuis La Paz" },
+		"tour-ballena-gris": { name: "Baleine Grise · Puerto Chale", blurb: "Mères et baleineaux gris dans les eaux calmes de Puerto Chale. Tout depuis le bateau.", duration: "~9 h avec le transfert depuis La Paz" },
+		"buceo-cabo-pulmo": { name: "Plongée à Cabo Pulmo", blurb: "Le récif du parc national de Cabo Pulmo, avec des bancs de milliers de poissons. Baptême, certifiés ou snorkeling.", duration: "~5 h, plus la route depuis La Paz" },
+		"buceo-la-paz": { name: "Plongée Île Espíritu Santo", blurb: "Deux plongées guidées à Espíritu Santo, l'archipel des otaries.", duration: "~7 h" },
+		"scuba-discovery": { name: "Baptême de Plongée depuis la Plage", blurb: "Votre première respiration sous l'eau : 6 m max, environ 50 min sous l'eau et un instructeur avec vous.", duration: "~4 h" },
+		"certificacion-open-water": { name: "Certification PADI Open Water", blurb: "Théorie en ligne à votre rythme et 4 plongées (2 du bord, 2 en bateau) pour être certifié(e).", duration: "En général deux jours" },
+	},
+	why: {
+		match: (a) => `C'est ici que vous voyez : ${a.toLowerCase()}.`,
+		peak: (a, m) => `${a} : ${m} est l'un des mois les plus favorables.`,
+		maybe: (a) => `${a} : peuvent apparaître, mais ce n'est jamais garanti.`,
+		inMonth: (m) => `Disponible en ${m}.`,
+		season: (r) => `Saison : ${r}.`,
+	},
+	notes: {
+		sealionSummer: "De juin à août, les otaries s'observent depuis le bateau : c'est leur saison de reproduction et on ne nage pas avec elles.",
+		caboPulmo: "Le transport depuis La Paz n'est pas inclus.",
+		privateOnly: "Avec des enfants de moins de 14 ans, ce safari se fait uniquement en privé.",
+		lvBoat: "Il y a des mises à l'eau en snorkeling quand c'est sûr, mais vous pouvez rester sur le bateau.",
+		openSea: "Il faut être à l'aise en snorkeling en pleine mer.",
+		relaxed: "Aucune option de ce type ne correspond à vos dates ou à votre groupe. Voici la plus proche :",
+	},
+	wa: (n, m, mode) => `Bonjour ! ${n} m'intéresse${m ? ` en ${m}` : ""} (${mode}).`,
 }
 
 const zh: QuizDict = {
-  badge: "不知道该选哪个？",
-  kicker: "找到你的探险",
-  title: "在拉巴斯，不知道该参加哪个行程？",
-  sub: "回答4个快速问题——包括你的出行月份——我们会根据每个行程的真实季节，告诉你最适合你的探险。",
-  note: "只需30秒。毫无约束。",
-  q1: "1. 你会潜水吗？",
-  q1opts: [
-    { value: "beginner_diver", label: "我从未潜过水，也不知道会怎样" },
-    { value: "surface", label: "我不潜水，更喜欢待在水面 / 浮潜" },
-    { value: "certified_diver", label: "会，我有潜水证书" },
-    { value: "wildlife_watch", label: "我对下水没兴趣，想在船上观赏动物" },
-    { value: "", label: "不确定，给我个惊喜", subtle: true },
-  ],
-  q2: "2. 你最想看到什么？",
-  q2opts: [
-    { value: "whales", label: "灰鲸（母鲸与幼鲸，近距离）" },
-    { value: "sea_lions", label: "在你身边嬉戏的海狮" },
-    { value: "reef_sharks", label: "珊瑚礁、鲨鱼和鱼群" },
-    { value: "adrenaline", label: "纯粹的刺激：马林鱼捕猎沙丁鱼" },
-    { value: "mobulas_dolphins", label: "飞翔的蝠鲼和护送船只的海豚" },
-    { value: "whale_shark", label: "与世界上最大的鱼同游" },
-    { value: "", label: "不确定，给我个惊喜", subtle: true },
-  ],
-  q3: "3. 你有多少时间？",
-  q3opts: [
-    { value: "half_day", label: "半天（上午或下午）" },
-    { value: "full_day", label: "一整天" },
-    { value: "", label: "都行，我很灵活", subtle: true },
-  ],
-  q4: "4. 你在哪个月出行？",
-  months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-  back: "← 返回",
-  eyebrow: "你的理想探险",
-  view: "查看行程",
-  book: "通过 WhatsApp 预订",
-  alts: "你可能也会喜欢",
-  reset: "↺ 重新开始",
-  perPerson: "每人",
-  certified: "持证",
-  discovery: "体验潜水",
-  tours: {
-    "la-ventana": {
-      name: "拉文塔纳海洋探险",
-      reason: "半天的乘船之旅，蝠鲼跃起、鲸鱼与海豚不期而遇——如果你不潜水又想在短时间里体验刺激，这是理想之选。",
-      waText: "你好！我想预订拉文塔纳海洋探险",
-    },
-    "bahia-magdalena": {
-      name: "马格达莱纳湾探险",
-      reason: "在开阔海域度过一整天，观赏沙丁鱼洄游：成千上万的沙丁鱼、捕猎的马林鱼和觅食的鲸鱼。一年仅两个月。",
-      waText: "你好！我想预订马格达莱纳湾探险",
-    },
-    "ballena-gris": {
-      name: "灰鲸 · 查莱港",
-      reason: "在灰鲸的育幼海域近距离接触母鲸与幼鲸——下加利福尼亚州最动人的观赏体验之一。",
-      waText: "你好！我想预订灰鲸查莱港",
-    },
-    "tiburon-ballena": {
-      name: "鲸鲨",
-      reason: "半天浮潜，与世界上最大的鱼同游——如果你时间有限又想要难忘的体验，非常合适。",
-      waText: "你好！我想预订鲸鲨行程",
-    },
-    "espiritu-santo-dia": {
-      name: "圣灵岛浮潜之旅",
-      reason: "全年浮潜，畅游海湾最大的海狮群之一，含原始海滩与野餐。",
-      seasonNotes: "6月至8月，新生幼崽期间限制下水——为了它们的安全，将在船上观赏。",
-      waText: "你好！我想预订圣灵岛",
-    },
-    "cabo-pulmo": {
-      name: "卡波普尔莫潜水",
-      reason: "加利福尼亚湾唯一的活珊瑚礁——25,000年的珊瑚、公牛鲨和庞大的鱼群，全年开放。",
-      waText: "你好！我想预订卡波普尔莫潜水",
-    },
-    "espiritu-santo-buceo": {
-      name: "圣灵岛潜水",
-      reason: "在联合国教科文组织世界遗产地，与好奇的海狮和沉船一同潜水——拉巴斯最有趣的潜水与野生动物组合。",
-      waText: "你好！我想预订圣灵岛潜水",
-    },
-    "scuba-discovery": {
-      name: "海滩体验潜水",
-      reason: "你的首次水下体验，无需证书，最深6米，全程有教练陪伴。",
-      waText: "你好！我想预订海滩体验潜水",
-    },
-  },
+	badge: "不知道该选哪个？",
+	kicker: "找到你的探险",
+	title: "在拉巴斯，不知道该参加哪个行程？",
+	sub: "用图片来选：你的月份、你想怎样体验大海、你最想看到的动物。我们只显示你的日期里真正能参加的行程。",
+	note: "只需30秒。毫无约束。",
+	monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+	monthsLong: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+	allYear: "全年",
+	qMonth: "你几月来？",
+	monthHint: "每个季节能看到的动物都不一样。点选你的月份。",
+	monthUnknown: "还没定日期",
+	seasons: {
+		winter: { name: "冬季", hint: "鲸鱼和鲸鲨" },
+		spring: { name: "春季", hint: "跃出水面的蝠鲼和虎鲸" },
+		summer: { name: "夏季", hint: "抹香鲸、蝠鲼和海狮幼崽" },
+		autumn: { name: "秋季", hint: "鲸鲨回归，沙丁鱼洄游登场" },
+	},
+	qMode: "你想怎样体验大海？",
+	modes: {
+		boat: { title: "在船上观赏", desc: "不用下水：在船上观赏海洋动物。", badge: "船上观赏" },
+		snorkel: { title: "浮潜", desc: "戴面镜和脚蹼在水面游泳，不是潜水。", badge: "浮潜" },
+		firstDive: { title: "第一次潜水", desc: "无需证书，教练全程陪同。", badge: "潜水 · 初次体验" },
+		certified: { title: "我会潜水", desc: "我有潜水证书（Open Water 或更高）。", badge: "持证潜水" },
+	},
+	qComfort: "你在开阔海域游泳有多自在？",
+	comfort: {
+		openSea: "很自在：我浮潜过，能用呼吸管平稳呼吸",
+		easy: "不太自在或第一次：我想要平静一点的",
+	},
+	qAnimal: "你最想看到什么？",
+	animalHint: "只显示你的月份、以你选择的方式真正能看到的动物。",
+	animals: {
+		grayWhale: "灰鲸",
+		bigWhales: "座头鲸和蓝鲸",
+		whaleShark: "鲸鲨",
+		sealion: "海狮",
+		mobula: "蝠鲼",
+		giantManta: "巨型蝠鲼",
+		orca: "虎鲸",
+		dolphin: "海豚",
+		spermWhale: "抹香鲸",
+		sardineRun: "马林鱼和沙丁鱼",
+		reef: "珊瑚礁和鱼群",
+	},
+	surprise: "都可以，给我惊喜",
+	peakTag: "旺季",
+	maybeTag: "偶尔出现",
+	qGroup: "谁一起来？",
+	groups: {
+		adults: "成人（所有人都满14岁）",
+		teens: "有12或13岁的孩子",
+		kids: "有12岁以下的孩子",
+	},
+	qTime: "那天你有多少时间？",
+	times: {
+		short: "几个小时（2到4小时）",
+		medium: "较长的半天（6到7小时）",
+		full: "一整天，早起也没关系",
+		days: "好几天：我想考证",
+	},
+	anyTime: "都可以",
+	back: "← 返回",
+	eyebrow: "你的理想探险",
+	view: "查看行程",
+	book: "通过 WhatsApp 预订",
+	alts: "也很适合你",
+	reset: "↺ 重新开始",
+	perPerson: "每人",
+	from: "起",
+	duration: "时长",
+	tours: {
+		"tiburon-ballena": { name: "鲸鲨", blurb: "浮潜与世界上最大的鱼同游，并与它保持距离。无需经验。", duration: "2到3小时" },
+		"tour-espiritu-santo": { name: "圣灵岛浮潜之旅", blurb: "在珊瑚礁浮潜、游览巴兰德拉和岛上海滩，探访海狮群。适合家庭。", duration: "6小时" },
+		"safari-la-ventana": { name: "拉文塔纳海洋探险", blurb: "乘船穿越塞拉尔沃海峡，寻找蝠鲼、海豚、鲸鱼和虎鲸。每天都不一样。", duration: "6小时" },
+		"safari-bahia-magdalena": { name: "马格达莱纳湾探险", blurb: "沙丁鱼洄游期间在开阔海域浮潜：沙丁鱼球、捕猎的马林鱼和海狮。", duration: "约10小时，含拉巴斯往返交通" },
+		"tour-ballena-gris": { name: "灰鲸 · 查莱港", blurb: "在查莱港平静的海域观赏灰鲸母子，全程在船上。", duration: "约9小时，含拉巴斯往返交通" },
+		"buceo-cabo-pulmo": { name: "卡波普尔莫潜水", blurb: "卡波普尔莫国家公园的珊瑚礁，成千上万的鱼群。体验潜水、持证潜水或浮潜。", duration: "约5小时，另加从拉巴斯出发的车程" },
+		"buceo-la-paz": { name: "圣灵岛潜水", blurb: "在海狮群岛圣灵岛进行两次导潜。", duration: "约7小时" },
+		"scuba-discovery": { name: "海滩体验潜水", blurb: "你的第一次水下呼吸：最深6米，水下约50分钟，教练全程陪同。", duration: "约4小时" },
+		"certificacion-open-water": { name: "PADI 开放水域潜水证书", blurb: "按自己节奏在线学习理论，加上4次潜水（2次岸潜、2次船潜）即可获得证书。", duration: "通常需要两天左右" },
+	},
+	why: {
+		match: (a) => `在这里可以看到${a}。`,
+		peak: (a, m) => `${a}：${m}是概率最高的月份之一。`,
+		maybe: (a) => `${a}：可能出现，但无法保证。`,
+		inMonth: (m) => `${m}可参加。`,
+		season: (r) => `季节：${r}。`,
+	},
+	notes: {
+		sealionSummer: "6月至8月是海狮的繁殖季，只能在船上观赏，不能与它们同游。",
+		caboPulmo: "不含从拉巴斯出发的交通。",
+		privateOnly: "有14岁以下儿童时，此行程仅限包船。",
+		lvBoat: "安全时会下水浮潜，但你也可以留在船上。",
+		openSea: "需要能在开阔海域自在地浮潜。",
+		relaxed: "这种方式没有适合你日期或同行人的行程。以下是最接近的：",
+	},
+	wa: (n, m, mode) => `你好！我对${m ? `${m}的` : ""}${n}感兴趣（${mode}）。`,
 }
 
 const ca: QuizDict = {
-  badge: "No saps què triar?",
-  kicker: "Troba la teva expedició",
-  title: "Ets a La Paz i no saps quin tour fer?",
-  sub: "Respon 4 preguntes ràpides —incloent el teu mes de viatge— i et diem quina expedició et convé més segons la temporada real de cadascuna.",
-  note: "Triga 30 segons. Zero compromís.",
-  q1: "1. Ja saps bussejar?",
-  q1opts: [
-    { value: "beginner_diver", label: "Mai he bussejat i no sé què esperar" },
-    { value: "surface", label: "No bussejo, prefereixo quedar-me a la superfície / snorkel" },
-    { value: "certified_diver", label: "Sí, tinc certificació de busseig" },
-    { value: "wildlife_watch", label: "No m'interessa l'aigua, vull veure fauna des de la barca" },
-    { value: "", label: "No n'estic segur/a, sorprèn-me", subtle: true },
-  ],
-  q2: "2. Què t'emociona més veure?",
-  q2opts: [
-    { value: "whales", label: "Balenes grises (mares i cries, molt de prop)" },
-    { value: "sea_lions", label: "Lleons marins jugant al teu costat" },
-    { value: "reef_sharks", label: "Escull de coral, taurons i bancs de peixos" },
-    { value: "adrenaline", label: "Adrenalina pura: marlins caçant sardines" },
-    { value: "mobulas_dolphins", label: "Móbules volant i dofins escortant la barca" },
-    { value: "whale_shark", label: "Nedar al costat del peix més gran del món" },
-    { value: "", label: "No n'estic segur/a, sorprèn-me", subtle: true },
-  ],
-  q3: "3. Quant temps tens disponible?",
-  q3opts: [
-    { value: "half_day", label: "Mig dia (matí o tarda)" },
-    { value: "full_day", label: "Dia complet" },
-    { value: "", label: "Qualsevol, m'adapto", subtle: true },
-  ],
-  q4: "4. Quin mes viatges?",
-  months: ["Gen", "Feb", "Març", "Abr", "Maig", "Juny", "Jul", "Ag", "Set", "Oct", "Nov", "Des"],
-  back: "← Tornar",
-  eyebrow: "La teva expedició ideal",
-  view: "Veure expedició",
-  book: "Reservar per WhatsApp",
-  alts: "També et podria agradar",
-  reset: "↺ Tornar a començar",
-  perPerson: "per persona",
-  certified: "Certificat",
-  discovery: "Discovery",
-  tours: {
-    "la-ventana": {
-      name: "Ocean Safari La Ventana",
-      reason: "Mitja jornada en barca amb móbules saltant i albiraments sorpresa de balenes i dofins — ideal si no bussejes i vols adrenalina en poc temps.",
-      waText: "Hola! vull reservar Ocean Safari La Ventana",
-    },
-    "bahia-magdalena": {
-      name: "Safari Bahía Magdalena",
-      reason: "Un dia complet en mar obert veient el Sardine Run: milers de sardines, marlins caçant i balenes alimentant-se. Només passa dos mesos l'any.",
-      waText: "Hola! vull reservar Safari Bahía Magdalena",
-    },
-    "ballena-gris": {
-      name: "Balena Grisa · Puerto Chale",
-      reason: "Trobades properes amb mares i cries de balena grisa a les seves aigües de criança — dels albiraments més emotius de Baixa Califòrnia Sud.",
-      waText: "Hola! vull reservar Balena Grisa Puerto Chale",
-    },
-    "tiburon-ballena": {
-      name: "Tauró Balena",
-      reason: "Snorkel de mig dia per nedar al costat del peix més gran del món — perfecte si tens poc temps i vols alguna cosa inoblidable.",
-      waText: "Hola! vull reservar Tauró Balena",
-    },
-    "espiritu-santo-dia": {
-      name: "Tour Snorkel Illa Espíritu Santo",
-      reason: "Snorkel tot l'any amb una de les colònies de lleons marins més grans del Golf, platges verges i pícnic inclòs.",
-      seasonNotes: "De juny a agost els lleons nadons acabats de néixer restringeixen el nedar — s'observa sense entrar a l'aigua per la seva seguretat.",
-      waText: "Hola! vull reservar Illa Espíritu Santo",
-    },
-    "cabo-pulmo": {
-      name: "Submarinisme Cabo Pulmo",
-      reason: "L'únic escull de coral viu del Golf de Califòrnia — 25.000 anys de coral, taurons toro i bancs massius, tot l'any.",
-      waText: "Hola! vull reservar Submarinisme a Cabo Pulmo",
-    },
-    "espiritu-santo-buceo": {
-      name: "Submarinisme Illa Espíritu Santo",
-      reason: "Busseig al costat de lleons marins curiosos i vaixells enfonsats en un Patrimoni UNESCO — la combinació de busseig i fauna més juganera de La Paz.",
-      waText: "Hola! vull reservar Submarinisme a l'Illa Espíritu Santo",
-    },
-    "scuba-discovery": {
-      name: "Scuba Discovery des de la platja",
-      reason: "La teva primera vegada sota l'aigua, sense certificació, màxim 6 metres de profunditat i un instructor tota l'estona amb tu.",
-      waText: "Hola! vull reservar Scuba Discovery des de la platja",
-    },
-  },
+	badge: "No saps què triar?",
+	kicker: "Troba la teva expedició",
+	title: "Ets a La Paz i no saps quin tour fer?",
+	sub: "Tria amb fotos: el teu mes, com vols viure el mar i quin animal t'agradaria veure. Només et mostrem el que de veritat pots fer a les teves dates.",
+	note: "Triga 30 segons. Zero compromís.",
+	monthsShort: ["Gen", "Feb", "Març", "Abr", "Maig", "Juny", "Jul", "Ag", "Set", "Oct", "Nov", "Des"],
+	monthsLong: ["gener", "febrer", "març", "abril", "maig", "juny", "juliol", "agost", "setembre", "octubre", "novembre", "desembre"],
+	allYear: "tot l'any",
+	qMonth: "Quin mes vens?",
+	monthHint: "Cada temporada porta animals diferents. Toca el teu mes.",
+	monthUnknown: "Encara no tinc dates",
+	seasons: {
+		winter: { name: "Hivern", hint: "Balenes i tauró balena" },
+		spring: { name: "Primavera", hint: "Mòbules saltant i orques" },
+		summer: { name: "Estiu", hint: "Catxalots, mòbules i cries de lleó marí" },
+		autumn: { name: "Tardor", hint: "Torna el tauró balena i arriba el Sardine Run" },
+	},
+	qMode: "Com vols viure el mar?",
+	modes: {
+		boat: { title: "Des de la barca", desc: "Sense entrar a l'aigua: observes els animals des de l'embarcació.", badge: "Des de la barca" },
+		snorkel: { title: "Snorkel", desc: "Nedar a la superfície amb ulleres i aletes. No és busseig.", badge: "Snorkel" },
+		firstDive: { title: "Bussejar per primera vegada", desc: "Sense certificació, amb un instructor al teu costat.", badge: "Busseig · primera vegada" },
+		certified: { title: "Ja busso", desc: "Tinc certificació (Open Water o superior).", badge: "Busseig certificat" },
+	},
+	qComfort: "Com et sents nedant en mar obert?",
+	comfort: {
+		openSea: "Bé: ja he fet snorkel i respiro tranquil·lament pel tub",
+		easy: "Poc o és la primera vegada: prefereixo alguna cosa tranquil·la",
+	},
+	qAnimal: "Què t'agradaria veure?",
+	animalHint: "Només hi surten els animals possibles al teu mes i amb la teva manera de viure el mar.",
+	animals: {
+		grayWhale: "Balena grisa",
+		bigWhales: "Balenes geperuda i blava",
+		whaleShark: "Tauró balena",
+		sealion: "Lleons marins",
+		mobula: "Mòbules",
+		giantManta: "Mantes gegants",
+		orca: "Orques",
+		dolphin: "Dofins",
+		spermWhale: "Catxalots",
+		sardineRun: "Marlins i sardines",
+		reef: "Escull i bancs de peixos",
+	},
+	surprise: "M'és igual, sorprèn-me",
+	peakTag: "Temporada alta",
+	maybeTag: "Ocasional",
+	qGroup: "Qui ve?",
+	groups: {
+		adults: "Adults (tots de 14 anys o més)",
+		teens: "Amb algú de 12 o 13 anys",
+		kids: "Amb nens de menys de 12",
+	},
+	qTime: "Quant temps tens aquell dia?",
+	times: {
+		short: "Unes hores (2 a 4 h)",
+		medium: "Mitja jornada llarga (6 a 7 h)",
+		full: "El dia sencer, no em fa res matinar",
+		days: "Uns quants dies: vull certificar-me",
+	},
+	anyTime: "M'adapto",
+	back: "← Tornar",
+	eyebrow: "La teva expedició ideal",
+	view: "Veure expedició",
+	book: "Reservar per WhatsApp",
+	alts: "També encaixa amb tu",
+	reset: "↺ Tornar a començar",
+	perPerson: "per persona",
+	from: "des de",
+	duration: "Durada",
+	tours: {
+		"tiburon-ballena": { name: "Tauró Balena", blurb: "Snorkel al costat del peix més gran del món, respectant el seu espai. No cal experiència prèvia.", duration: "2 a 3 h" },
+		"tour-espiritu-santo": { name: "Tour Snorkel Illa Espíritu Santo", blurb: "Snorkel en esculls, platges de Balandra i de l'illa, i la colònia de lleons marins. Apte per a famílies.", duration: "6 h" },
+		"safari-la-ventana": { name: "Ocean Safari La Ventana", blurb: "Safari en barca pel canal de Cerralvo buscant mòbules, dofins, balenes i orques. Cada dia és diferent.", duration: "6 h" },
+		"safari-bahia-magdalena": { name: "Safari Bahía Magdalena", blurb: "Snorkel en mar obert durant el Sardine Run: boles de sardines, marlins caçant i lleons marins.", duration: "~10 h amb el trasllat des de La Paz" },
+		"tour-ballena-gris": { name: "Balena Grisa · Puerto Chale", blurb: "Mares i cries de balena grisa a les aigües tranquil·les de Puerto Chale. Tot des de la barca.", duration: "~9 h amb el trasllat des de La Paz" },
+		"buceo-cabo-pulmo": { name: "Busseig a Cabo Pulmo", blurb: "L'escull del Parc Nacional Cabo Pulmo, amb bancs de milers de peixos. Discovery, certificats o snorkel.", duration: "~5 h, més el camí des de La Paz" },
+		"buceo-la-paz": { name: "Busseig Illa Espíritu Santo", blurb: "Dues immersions guiades a Espíritu Santo, l'arxipèlag dels lleons marins.", duration: "~7 h" },
+		"scuba-discovery": { name: "Scuba Discovery des de la platja", blurb: "La teva primera respiració sota l'aigua: màxim 6 m, uns 50 min a sota i un instructor amb tu.", duration: "~4 h" },
+		"certificacion-open-water": { name: "Certificació PADI Open Water", blurb: "Teoria en línia al teu ritme i 4 immersions (2 des de platja i 2 en barca) per sortir certificat/da.", duration: "Normalment un parell de dies" },
+	},
+	why: {
+		match: (a) => `Aquí és on veus: ${a.toLowerCase()}.`,
+		peak: (a, m) => `${a}: ${m} és dels mesos amb més probabilitat.`,
+		maybe: (a) => `${a}: poden aparèixer, però mai no està garantit.`,
+		inMonth: (m) => `Disponible al ${m}.`,
+		season: (r) => `Temporada: ${r}.`,
+	},
+	notes: {
+		sealionSummer: "Entre juny i agost els lleons marins s'observen des de la barca: és la seva temporada reproductiva i no s'hi neda.",
+		caboPulmo: "No inclou transport des de La Paz.",
+		privateOnly: "Amb menors de 14 anys aquest safari només es fa en sortida privada.",
+		lvBoat: "Hi ha entrades de snorkel quan és segur, però et pots quedar a la barca.",
+		openSea: "Cal sentir-se còmode fent snorkel en mar obert.",
+		relaxed: "Cap opció d'aquest tipus encaixa amb les teves dates o el teu grup. Això és el més proper:",
+	},
+	wa: (n, m, mode) => `Hola! M'interessa ${n}${m ? ` al ${m}` : ""} (${mode}).`,
 }
 
-/** ES, EN, FR, ZH y CA nativos. */
-const dicts: Partial<Record<Locale, QuizDict>> & { es: QuizDict } = { es, en, fr, zh, ca }
+const dicts: Record<Locale, QuizDict> = { es, en, fr, zh, ca }
 
 function waLink(text: string): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
+	return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 }
 
-function TourPrice({ tour, t }: { tour: QuizTourBase; t: QuizDict }) {
-  if (tour.prices.length === 1) {
-    return (
-      <>
-        <Price amount={tour.prices[0].mxn} /> {tour.per === "person" ? t.perPerson : ""}
-      </>
-    )
-  }
-  return (
-    <>
-      {tour.prices.map((p, i) => (
-        <span key={i}>
-          {i > 0 && " · "}
-          {p.label === "certified" ? t.certified : t.discovery} <Price amount={p.mxn} />
-        </span>
-      ))}
-    </>
-  )
+function seasonRange(months: number[], t: QuizDict): string {
+	if (months.length === 12) return t.allYear
+	const a = t.monthsLong[months[0] - 1]
+	const b = t.monthsLong[months[months.length - 1] - 1]
+	return `${a} – ${b}`
+}
+
+function nextStep(after: StepId | null, ans: FinderAnswers): StepId | null {
+	const start = after ? STEP_ORDER.indexOf(after) + 1 : 0
+	for (const s of STEP_ORDER.slice(start)) if (shouldAsk(s, ans)) return s
+	return null
+}
+
+function PickPrice({ pick, t }: { pick: Pick; t: QuizDict }) {
+	const p = pick.tour.modes[pick.mode]
+	if (!p) return null
+	return (
+		<>
+			{p.from ? `${t.from} ` : ""}
+			<Price amount={p.mxn} /> <span className="tf-per">{t.perPerson}</span>
+		</>
+	)
+}
+
+function Photo({ src, alt, sizes }: { src: string; alt: string; sizes: string }) {
+	return <Image src={src} alt={alt} fill sizes={sizes} className="tf-img" />
 }
 
 export default function HomeQuiz({ locale = defaultLocale }: { locale?: Locale }) {
-  const [step, setStep] = useState(1)
-  const [answers, setAnswers] = useState<{ q1?: string; q2?: string; q3?: string; month?: number | null }>({})
-  const [result, setResult] = useState<{ best: QuizTourBase; alts: QuizTourBase[] } | null>(null)
+	const t = dicts[locale] || dicts.es
+	const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
 
-  const t = dicts[locale] || dicts.es
-  const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
+	const [answers, setAnswers] = useState<FinderAnswers>({})
+	const [history, setHistory] = useState<StepId[]>([])
+	const [step, setStep] = useState<StepId | null>("month")
 
-  function showResult(finalAnswers: typeof answers) {
-    const userTags = [finalAnswers.q1, finalAnswers.q2, finalAnswers.q3].filter(Boolean) as string[]
-    const month = finalAnswers.month
+	function answer<K extends keyof FinderAnswers>(key: K & StepId, value: FinderAnswers[K]) {
+		const next: FinderAnswers = { ...answers, [key]: value }
+		// Al cambiar una respuesta se borran las posteriores: pueden dejar de tener sentido.
+		for (const s of STEP_ORDER.slice(STEP_ORDER.indexOf(key) + 1)) delete next[s as keyof FinderAnswers]
+		setAnswers(next)
+		setHistory([...history, key])
+		setStep(nextStep(key, next))
+	}
 
-    const candidates = tourBase.map((tour) => {
-      let score = 0
-      userTags.forEach((tag) => {
-        if (tour.tags.includes(tag)) score += 2
-      })
-      if (month) {
-        if (tour.months.includes(month)) score += 3
-        else score -= 4
-        if (tour.peak.includes(month)) score += 2
-      }
-      return { tour, score }
-    })
+	function back() {
+		const prev = history[history.length - 1]
+		if (!prev) return
+		const next: FinderAnswers = { ...answers }
+		for (const s of STEP_ORDER.slice(STEP_ORDER.indexOf(prev))) delete next[s as keyof FinderAnswers]
+		setAnswers(next)
+		setHistory(history.slice(0, -1))
+		setStep(prev)
+	}
 
-    candidates.sort((a, b) => b.score - a.score)
-    setResult({ best: candidates[0].tour, alts: candidates.slice(1, 3).map((c) => c.tour) })
-  }
+	function reset() {
+		setAnswers({})
+		setHistory([])
+		setStep("month")
+	}
 
-  function answer(currentStep: number, value: string) {
-    const next = { ...answers }
-    if (currentStep === 1) next.q1 = value
-    if (currentStep === 2) next.q2 = value
-    if (currentStep === 3) next.q3 = value
-    if (currentStep === 4) next.month = value ? parseInt(value) : null
-    setAnswers(next)
+	// Progreso: pasos ya contestados + los que faltan con las respuestas actuales.
+	const remaining = step ? STEP_ORDER.slice(STEP_ORDER.indexOf(step)).filter((s) => s === step || shouldAsk(s, answers)) : []
+	const total = history.length + remaining.length
+	const result = step === null ? recommend(answers) : null
+	const monthName = answers.month ? t.monthsLong[answers.month - 1] : null
 
-    if (currentStep < 4) setStep(currentStep + 1)
-    else showResult(next)
-  }
+	return (
+		<section id="quiz" className="quizsec">
+			<div className="quiz-box">
+				<div className="quiz-intro">
+					<span className="quiz-badge">{t.badge}</span>
+					<span className="kicker">{t.kicker}</span>
+					<h2>{t.title}</h2>
+					<p>{t.sub}</p>
+					<p>{t.note}</p>
+				</div>
 
-  function reset() {
-    setAnswers({})
-    setResult(null)
-    setStep(1)
-  }
+				<div className="quiz-panel">
+					<div className="quiz-progress" aria-hidden="true">
+						{Array.from({ length: Math.max(total, 1) }).map((_, i) => (
+							<div key={i} className={`quiz-dot${i < history.length ? " done" : ""}`}></div>
+						))}
+					</div>
 
-  const dotsDone = result ? 4 : step - 1
-  const bestText = result ? t.tours[result.best.id] : null
+					{step === "month" && (
+						<div className="quiz-step active">
+							<h3>{t.qMonth}</h3>
+							<p className="tf-hint">{t.monthHint}</p>
+							<div className="tf-seasons">
+								{SEASON_GROUPS.map((g) => (
+									<div key={g.id} className="tf-season">
+										<div className="tf-season-photo">
+											<Photo src={g.image} alt={t.seasons[g.id].hint} sizes="(max-width: 700px) 50vw, 280px" />
+											<div className="tf-season-text">
+												<b>{t.seasons[g.id].name}</b>
+												<span>{t.seasons[g.id].hint}</span>
+											</div>
+										</div>
+										<div className="tf-season-months">
+											{g.months.map((m) => (
+												<button
+													key={m}
+													type="button"
+													className={`tf-chip${answers.month === m ? " on" : ""}`}
+													onClick={() => answer("month", m)}
+												>
+													{t.monthsShort[m - 1]}
+												</button>
+											))}
+										</div>
+									</div>
+								))}
+							</div>
+							<button type="button" className="quiz-opt subtle tf-skip" onClick={() => answer("month", null)}>
+								{t.monthUnknown}
+							</button>
+						</div>
+					)}
 
-  return (
-    <section id="quiz" className="quizsec">
-      <div className="quiz-box">
-        <div className="quiz-intro">
-          <span className="quiz-badge">{t.badge}</span>
-          <span className="kicker">{t.kicker}</span>
-          <h2>{t.title}</h2>
-          <p>{t.sub}</p>
-          <p>{t.note}</p>
-        </div>
+					{step === "mode" && (
+						<div className="quiz-step active">
+							<h3>{t.qMode}</h3>
+							<div className="tf-grid tf-grid-2">
+								{(Object.keys(MODE_IMAGES) as Mode[]).map((m) => (
+									<button key={m} type="button" className={`tf-card${answers.mode === m ? " on" : ""}`} onClick={() => answer("mode", m)}>
+										<div className="tf-card-photo">
+											<Photo src={MODE_IMAGES[m]} alt={t.modes[m].title} sizes="(max-width: 700px) 50vw, 280px" />
+										</div>
+										<b>{t.modes[m].title}</b>
+										<span>{t.modes[m].desc}</span>
+									</button>
+								))}
+							</div>
+						</div>
+					)}
 
-        <div className="quiz-panel">
-          <div className="quiz-progress">
-            {[1, 2, 3, 4].map((d) => (
-              <div key={d} className={`quiz-dot${d <= dotsDone ? " done" : ""}`}></div>
-            ))}
-          </div>
+					{step === "comfort" && (
+						<div className="quiz-step active">
+							<h3>{t.qComfort}</h3>
+							<div className="quiz-options">
+								{(["openSea", "easy"] as Comfort[]).map((c) => (
+									<button key={c} type="button" className="quiz-opt" onClick={() => answer("comfort", c)}>
+										{t.comfort[c]}
+									</button>
+								))}
+							</div>
+						</div>
+					)}
 
-          {!result && step === 1 && (
-            <div className="quiz-step active">
-              <h3>{t.q1}</h3>
-              <div className="quiz-options">
-                {t.q1opts.map((o) => (
-                  <button key={o.label} className={`quiz-opt${o.subtle ? " subtle" : ""}`} onClick={() => answer(1, o.value)}>{o.label}</button>
-                ))}
-              </div>
-            </div>
-          )}
+					{step === "animal" && (
+						<div className="quiz-step active">
+							<h3>{t.qAnimal}</h3>
+							<p className="tf-hint">{t.animalHint}</p>
+							<div className="tf-grid tf-grid-3">
+								{animalOptions(answers).map((a) => {
+									const spots = a.where.filter((s) => !answers.mode || s.modes.includes(answers.mode))
+									const peak = !!answers.month && spots.some((s) => s.peak?.includes(answers.month!))
+									const maybe = spots.every((s) => s.maybe)
+									return (
+										<button key={a.id} type="button" className={`tf-card tf-animal${answers.animal === a.id ? " on" : ""}`} onClick={() => answer("animal", a.id)}>
+											<div className="tf-card-photo">
+												<Photo src={a.image} alt={t.animals[a.id]} sizes="(max-width: 700px) 50vw, 190px" />
+												{maybe ? <em className="tf-tag">{t.maybeTag}</em> : peak ? <em className="tf-tag tf-tag-peak">{t.peakTag}</em> : null}
+											</div>
+											<b>{t.animals[a.id]}</b>
+										</button>
+									)
+								})}
+							</div>
+							<button type="button" className="quiz-opt subtle tf-skip" onClick={() => answer("animal", null)}>
+								{t.surprise}
+							</button>
+						</div>
+					)}
 
-          {!result && step === 2 && (
-            <div className="quiz-step active">
-              <h3>{t.q2}</h3>
-              <div className="quiz-options">
-                {t.q2opts.map((o) => (
-                  <button key={o.label} className={`quiz-opt${o.subtle ? " subtle" : ""}`} onClick={() => answer(2, o.value)}>{o.label}</button>
-                ))}
-              </div>
-              <div className="quiz-back" onClick={() => setStep(1)}>{t.back}</div>
-            </div>
-          )}
+					{step === "group" && (
+						<div className="quiz-step active">
+							<h3>{t.qGroup}</h3>
+							<div className="quiz-options">
+								{(["adults", "teens", "kids"] as Group[]).map((g) => (
+									<button key={g} type="button" className="quiz-opt" onClick={() => answer("group", g)}>
+										{t.groups[g]}
+									</button>
+								))}
+							</div>
+						</div>
+					)}
 
-          {!result && step === 3 && (
-            <div className="quiz-step active">
-              <h3>{t.q3}</h3>
-              <div className="quiz-options">
-                {t.q3opts.map((o) => (
-                  <button key={o.label} className={`quiz-opt${o.subtle ? " subtle" : ""}`} onClick={() => answer(3, o.value)}>{o.label}</button>
-                ))}
-              </div>
-              <div className="quiz-back" onClick={() => setStep(2)}>{t.back}</div>
-            </div>
-          )}
+					{step === "time" && (
+						<div className="quiz-step active">
+							<h3>{t.qTime}</h3>
+							<div className="quiz-options">
+								{(["short", "medium", "full"] as Time[]).concat(answers.mode === "firstDive" ? ["days"] : []).map((v) => (
+									<button key={v} type="button" className="quiz-opt" onClick={() => answer("time", v)}>
+										{t.times[v]}
+									</button>
+								))}
+								<button type="button" className="quiz-opt subtle" onClick={() => answer("time", null)}>
+									{t.anyTime}
+								</button>
+							</div>
+						</div>
+					)}
 
-          {!result && step === 4 && (
-            <div className="quiz-step active">
-              <h3>{t.q4}</h3>
-              <div className="quiz-months">
-                {t.months.map((m, i) => (
-                  <button key={m} className="quiz-month" onClick={() => answer(4, String(i + 1))}>{m}</button>
-                ))}
-              </div>
-              <div className="quiz-back" onClick={() => setStep(3)}>{t.back}</div>
-            </div>
-          )}
+					{step !== null && history.length > 0 && (
+						<button type="button" className="quiz-back" onClick={back}>
+							{t.back}
+						</button>
+					)}
 
-          {result && bestText && (
-            <div className="quiz-result active">
-              <span className="quiz-eyebrow">{t.eyebrow}</span>
-              <h3>{bestText.name}</h3>
-              <p className="reason">
-                {bestText.reason}
-                {bestText.seasonNotes ? ` ${bestText.seasonNotes}` : ""}
-              </p>
-              <div className="quiz-result-price"><TourPrice tour={result.best} t={t} /></div>
-              <div className="quiz-result-ctas">
-                <Link href={lh(result.best.view)} className="btn btn-solid">{t.view}</Link>
-                <a href={waLink(bestText.waText)} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">{t.book}</a>
-              </div>
-              <div className="quiz-alts">
-                <span>{t.alts}</span>
-                {result.alts.map((a) => (
-                  <div key={a.id} className="quiz-alt-item">
-                    <b>{t.tours[a.id].name}</b> — <TourPrice tour={a} t={t} />
-                  </div>
-                ))}
-              </div>
-              <div className="quiz-reset" onClick={reset}>{t.reset}</div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
-  )
+					{result && (
+						<Result
+							pickResult={result}
+							answers={answers}
+							t={t}
+							lh={lh}
+							monthName={monthName}
+							onBack={back}
+							onReset={reset}
+						/>
+					)}
+				</div>
+			</div>
+		</section>
+	)
+}
+
+function Result({
+	pickResult,
+	answers,
+	t,
+	lh,
+	monthName,
+	onBack,
+	onReset,
+}: {
+	pickResult: NonNullable<ReturnType<typeof recommend>>
+	answers: FinderAnswers
+	t: QuizDict
+	lh: (p: string) => string
+	monthName: string | null
+	onBack: () => void
+	onReset: () => void
+}) {
+	const { best, alts, relaxedMode } = pickResult
+	const text = t.tours[best.tour.id]
+	const animalName = answers.animal ? t.animals[answers.animal] : null
+
+	const why: string[] = []
+	if (animalName && best.animalMatch) {
+		if (best.animalMatch.maybe) why.push(t.why.maybe(animalName))
+		else if (monthName && answers.month && best.animalMatch.peak?.includes(answers.month)) why.push(t.why.peak(animalName, monthName))
+		else why.push(t.why.match(animalName))
+	}
+	if (monthName) why.push(t.why.inMonth(monthName))
+	else why.push(t.why.season(seasonRange(best.tour.months, t)))
+
+	const notes: string[] = []
+	const seaLionTour = best.tour.id === "tour-espiritu-santo" || best.tour.id === "buceo-la-paz"
+	if (seaLionTour && (!answers.month || SEA_LION_NO_SWIM.includes(answers.month))) notes.push(t.notes.sealionSummer)
+	if (best.tour.id === "safari-la-ventana" && best.mode === "boat") notes.push(t.notes.lvBoat)
+	if (best.tour.id === "buceo-cabo-pulmo") notes.push(t.notes.caboPulmo)
+	if (best.tour.needsOpenSea) notes.push(t.notes.openSea)
+	if (best.privateOnly) notes.push(t.notes.privateOnly)
+
+	const modeLabel = t.modes[best.mode].badge
+
+	return (
+		<div className="quiz-result active tf-result">
+			{relaxedMode && <p className="tf-note tf-note-top">{t.notes.relaxed}</p>}
+			<div className="tf-result-photo">
+				<Photo src={pickImage(best)} alt={text.name} sizes="(max-width: 700px) 100vw, 560px" />
+				<span className={`tf-mode tf-mode-${best.mode}`}>{modeLabel}</span>
+			</div>
+			<span className="quiz-eyebrow">{t.eyebrow}</span>
+			<h3>{text.name}</h3>
+			<p className="reason">{text.blurb}</p>
+			<ul className="tf-why">
+				{why.map((w) => (
+					<li key={w}>{w}</li>
+				))}
+				<li>
+					{t.duration}: {text.duration}
+				</li>
+			</ul>
+			{notes.map((n) => (
+				<p key={n} className="tf-note">
+					{n}
+				</p>
+			))}
+			<div className="quiz-result-price">
+				<PickPrice pick={best} t={t} />
+			</div>
+			<div className="quiz-result-ctas">
+				<Link href={lh(best.tour.href)} className="btn btn-solid">
+					{t.view}
+				</Link>
+				<a href={waLink(t.wa(text.name, monthName, modeLabel))} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+					{t.book}
+				</a>
+			</div>
+
+			{alts.length > 0 && (
+				<div className="tf-alts">
+					<span className="tf-alts-title">{t.alts}</span>
+					{alts.map((a) => (
+						<Link key={a.tour.id} href={lh(a.tour.href)} className="tf-alt">
+							<div className="tf-alt-photo">
+								<Photo src={pickImage(a)} alt={t.tours[a.tour.id].name} sizes="96px" />
+							</div>
+							<div className="tf-alt-body">
+								<b>{t.tours[a.tour.id].name}</b>
+								<span className={`tf-mode tf-mode-${a.mode} tf-mode-sm`}>{t.modes[a.mode].badge}</span>
+								<span className="tf-alt-price">
+									<PickPrice pick={a} t={t} /> · {t.tours[a.tour.id].duration}
+								</span>
+							</div>
+						</Link>
+					))}
+				</div>
+			)}
+
+			<div className="tf-result-foot">
+				<button type="button" className="quiz-back" onClick={onBack}>
+					{t.back}
+				</button>
+				<button type="button" className="quiz-reset" onClick={onReset}>
+					{t.reset}
+				</button>
+			</div>
+		</div>
+	)
 }
