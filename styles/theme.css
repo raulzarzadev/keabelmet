@@ -211,14 +211,7 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 }
 .quiz-opt:hover { border-color: var(--teal); background: rgba(40,194,160,0.08); }
 .quiz-opt.subtle { color: var(--sand-dim); font-size: 13px; font-style: italic; }
-.quiz-months { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 10px; }
-.quiz-month {
-  background: var(--ink-2); border: 1px solid var(--line); color: var(--sand);
-  padding: 13px 6px; border-radius: 14px; font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 600; font-size: 13px;
-  letter-spacing: 0.03em; text-transform: uppercase; cursor: pointer; transition: all .2s ease; text-align: center;
-}
-.quiz-month:hover { border-color: var(--teal); background: rgba(40,194,160,0.08); color: var(--teal); }
-.quiz-back { margin-top: auto; padding-top: 20px; font-size: 12px; color: var(--sand-dim); cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; align-self: flex-start; }
+.quiz-back { background: none; border: 0; padding: 20px 0 0; font-family: inherit; margin-top: auto; font-size: 12px; color: var(--sand-dim); cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; align-self: flex-start; }
 .quiz-back:hover { color: var(--teal); }
 .quiz-result { display: none; flex-direction: column; flex: 1; }
 .quiz-result.active { display: flex; }
@@ -227,12 +220,62 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .quiz-result p.reason { color: var(--sand-dim); font-size: 14.5px; margin-bottom: 22px; }
 .quiz-result-price { font-family: var(--font-poppins), 'Poppins', sans-serif; font-weight: 800; color: var(--teal); font-size: 20px; margin-bottom: 22px; }
 .quiz-result-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
-.quiz-alts { border-top: 1px solid var(--line); padding-top: 18px; margin-top: auto; }
-.quiz-alts span { font-size: 11px; color: var(--sand-dim); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 10px; }
-.quiz-alt-item { font-size: 13.5px; color: var(--sand-dim); padding: 6px 0; }
-.quiz-alt-item b { color: var(--sand); font-weight: 600; }
-.quiz-reset { font-size: 12px; color: var(--sand-dim); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; cursor: pointer; margin-top: 14px; align-self: flex-start; }
+.quiz-reset { background: none; border: 0; padding: 0; font-family: inherit; font-size: 12px; color: var(--sand-dim); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; cursor: pointer; margin-top: 14px; align-self: flex-start; }
 .quiz-reset:hover { color: var(--teal); }
+/* Cuestionario con fotos (components/HomeQuiz.tsx + lib/tour-finder.ts) */
+.tf-hint { color: var(--sand-dim); font-size: 13.5px; margin: -12px 0 16px; }
+.tf-img { object-fit: cover; }
+.tf-seasons { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.tf-season { background: var(--ink-2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.tf-season-photo { position: relative; aspect-ratio: 16 / 10; }
+.tf-season-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,0) 30%, rgba(6,18,26,0.88) 100%); }
+.tf-season-text { position: absolute; left: 12px; right: 12px; bottom: 10px; z-index: 1; display: flex; flex-direction: column; gap: 2px; color: #f4efe4; }
+.tf-season-text b { font-family: var(--font-poppins), "Poppins", sans-serif; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
+.tf-season-text span { font-size: 12px; line-height: 1.3; opacity: 0.92; }
+.tf-season-months { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; padding: 8px; }
+.tf-chip { background: var(--ink); border: 1px solid var(--line); color: var(--sand); padding: 9px 4px; border-radius: 10px; font-family: var(--font-poppins), "Poppins", sans-serif; font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em; cursor: pointer; transition: all .2s ease; }
+.tf-chip:hover, .tf-chip.on { border-color: var(--teal); color: var(--teal); background: rgba(40,194,160,0.08); }
+.tf-skip { margin-top: 12px; text-align: center; }
+.tf-grid { display: grid; gap: 12px; }
+.tf-grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.tf-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.tf-card { display: flex; flex-direction: column; gap: 4px; text-align: left; background: var(--ink-2); border: 1px solid var(--line); color: var(--sand); padding: 0 0 12px; border-radius: 16px; overflow: hidden; font-family: var(--font-poppins), "Poppins", sans-serif; cursor: pointer; transition: border-color .2s ease, transform .2s ease; }
+.tf-card:hover, .tf-card.on { border-color: var(--teal); transform: translateY(-2px); }
+.tf-card-photo { position: relative; aspect-ratio: 4 / 3; margin-bottom: 8px; }
+.tf-card b { font-size: 14.5px; font-weight: 700; padding: 0 12px; line-height: 1.25; }
+.tf-card span { font-size: 12.5px; color: var(--sand-dim); padding: 0 12px; line-height: 1.35; }
+.tf-animal b { font-size: 13.5px; }
+.tf-tag { position: absolute; top: 8px; left: 8px; z-index: 1; font-style: normal; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 3px 8px; border-radius: 100px; background: rgba(6,18,26,0.78); color: #f4efe4; }
+.tf-tag-peak { background: var(--teal); color: #06121a; }
+.tf-result-photo { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; margin-bottom: 16px; }
+.tf-mode { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 10px; border-radius: 100px; background: rgba(6,18,26,0.82); color: #f4efe4; border: 1px solid rgba(244,239,228,0.25); }
+.tf-result-photo .tf-mode { position: absolute; left: 12px; bottom: 12px; z-index: 1; }
+.tf-mode-boat { border-color: #e9b949; color: #f5d27a; }
+.tf-mode-snorkel { border-color: var(--teal); color: #7fe3cb; }
+.tf-mode-firstDive, .tf-mode-certified { border-color: #6fa8ff; color: #a9cbff; }
+.tf-mode-sm { font-size: 10px; padding: 3px 8px; background: transparent; align-self: flex-start; }
+.tf-result p.reason { margin-bottom: 12px; }
+.tf-why { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 6px; }
+.tf-why li { position: relative; padding-left: 20px; font-size: 13.5px; color: var(--sand); }
+.tf-why li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+.tf-note { font-size: 13px; color: var(--sand-dim); border-left: 3px solid #e9b949; padding: 6px 10px; margin: 0 0 10px; background: rgba(233,185,73,0.07); border-radius: 0 8px 8px 0; }
+.tf-note-top { margin-bottom: 14px; }
+.tf-per { font-size: 13px; font-weight: 600; color: var(--sand-dim); }
+.tf-alts { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 6px; display: flex; flex-direction: column; gap: 10px; }
+.tf-alts-title { font-size: 11px; color: var(--sand-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+.tf-alt { display: flex; gap: 12px; align-items: center; padding: 8px; border: 1px solid var(--line); border-radius: 14px; color: var(--sand); text-decoration: none; transition: border-color .2s ease; }
+.tf-alt:hover { border-color: var(--teal); }
+.tf-alt-photo { position: relative; width: 84px; height: 64px; flex: none; border-radius: 10px; overflow: hidden; }
+.tf-alt-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.tf-alt-body b { font-size: 13.5px; font-weight: 600; }
+.tf-alt-price { font-size: 12.5px; color: var(--sand-dim); }
+.tf-result-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 8px; }
+.tf-result-foot .quiz-back, .tf-result-foot .quiz-reset { margin-top: 0; padding-top: 0; }
+@media (max-width: 520px) {
+  .tf-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .tf-season-text span { display: none; }
+  .tf-card span { font-size: 12px; }
+}
 @media (max-width: 920px) {
   .quiz-box { grid-template-columns: 1fr; padding: 36px; gap: 32px; }
 }
@@ -975,7 +1018,6 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
   .btn { padding: 13px 22px; font-size: 12.5px; }
   .quiz-box { padding: 20px; }
   .quiz-panel { padding: 20px; }
-  .quiz-months { grid-template-columns: repeat(3,1fr); }
   .tour-grid { grid-template-columns: 1fr; }
   .stats .wrap { padding: 24px 18px; }
   .why-grid { grid-template-columns: 1fr; }
