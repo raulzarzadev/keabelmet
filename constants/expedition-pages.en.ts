@@ -693,7 +693,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Certified divers",
-					amountMxn: 3700,
+					amountMxn: 3800,
 					amountNote: "/ person",
 					items: [
 						"2-3 dives in the archipelago",

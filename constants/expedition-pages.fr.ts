@@ -693,7 +693,7 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Plongeurs certifiés",
-					amountMxn: 3700,
+					amountMxn: 3800,
 					amountNote: "/ personne",
 					items: [
 						"2-3 plongées dans l'archipel",
