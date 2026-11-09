@@ -1,6 +1,7 @@
 import { experiences } from "@/constants/experiences"
 import { getAllPosts, plainText } from "@/lib/blog"
 import { blogPostUrl } from "@/lib/blog/text"
+import { GUIDE_PATH, guideMarkdown } from "@/lib/tour-guide"
 
 const SITE = "https://www.keabelmet.com"
 
@@ -25,10 +26,12 @@ export function GET() {
   lines.push(`- [Datos completos en JSON](${SITE}/experiences.json): catálogo estructurado de todas las experiencias.`)
   lines.push(`- [Versión expandida en texto](${SITE}/llms-full.txt): contenido completo para ingestión por LLMs.`)
   lines.push(`- [Sitemap](${SITE}/sitemap.xml)`)
+  lines.push(`- [Qué hacer en La Paz y La Ventana: qué tour elegir según el mes](${SITE}${GUIDE_PATH}) ([EN](${SITE}/en${GUIDE_PATH}))`)
   lines.push(`- [Página de experiencias](${SITE}/experiencias)`)
   lines.push(`- [Sobre nosotros](${SITE}/sobre-nosotros)`)
   lines.push(`- [Contacto](${SITE}/contacto)`)
   lines.push("")
+  lines.push(guideMarkdown("es", `${SITE}${GUIDE_PATH}`))
   lines.push("## Experiencias")
   lines.push("")
   for (const e of experiences) {

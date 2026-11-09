@@ -14,7 +14,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
   es: {
     items: [
       { label: "Expediciones", path: "/#expediciones" },
-      { label: "¿Qué Tour Elegir?", path: "/#quiz", teal: true },
+      { label: "¿Qué Tour Elegir?", path: "/que-hacer-en-la-paz", teal: true },
       { label: "Calendario", path: "/#calendario", teal: true },
       { label: "Galería", path: "/#instagram" },
       { label: "Certifícate", path: "/experiencias/certificacion-open-water", teal: true },
@@ -26,7 +26,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
   en: {
     items: [
       { label: "Expeditions", path: "/#expediciones" },
-      { label: "Which Tour?", path: "/#quiz", teal: true },
+      { label: "Which Tour?", path: "/que-hacer-en-la-paz", teal: true },
       { label: "Calendar", path: "/#calendario", teal: true },
       { label: "Gallery", path: "/#instagram" },
       { label: "Get Certified", path: "/experiencias/certificacion-open-water", teal: true },
@@ -38,7 +38,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
   fr: {
     items: [
       { label: "Expéditions", path: "/#expediciones" },
-      { label: "Quel tour ?", path: "/#quiz", teal: true },
+      { label: "Quel tour ?", path: "/que-hacer-en-la-paz", teal: true },
       { label: "Calendrier", path: "/#calendario", teal: true },
       { label: "Galerie", path: "/#instagram" },
       { label: "Certifiez-vous", path: "/experiencias/certificacion-open-water", teal: true },
@@ -50,7 +50,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
   zh: {
     items: [
       { label: "探险项目", path: "/#expediciones" },
-      { label: "选择行程？", path: "/#quiz", teal: true },
+      { label: "选择行程？", path: "/que-hacer-en-la-paz", teal: true },
       { label: "季节日历", path: "/#calendario", teal: true },
       { label: "图库", path: "/#instagram" },
       { label: "潜水认证", path: "/experiencias/certificacion-open-water", teal: true },
@@ -62,7 +62,7 @@ const navLabels: Record<Locale, { items: { label: string; path: string; teal?: b
   ca: {
     items: [
       { label: "Expedicions", path: "/#expediciones" },
-      { label: "Quin tour triar?", path: "/#quiz", teal: true },
+      { label: "Quin tour triar?", path: "/que-hacer-en-la-paz", teal: true },
       { label: "Calendari", path: "/#calendario", teal: true },
       { label: "Galeria", path: "/#instagram" },
       { label: "Certifica't", path: "/experiencias/certificacion-open-water", teal: true },

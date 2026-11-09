@@ -1,6 +1,7 @@
 import { experiences } from "@/constants/experiences"
 import { getAllPosts } from "@/lib/blog"
 import { blogPostToText } from "@/lib/blog/text"
+import { GUIDE_PATH, guideMarkdown } from "@/lib/tour-guide"
 
 const SITE = "https://www.keabelmet.com"
 
@@ -130,6 +131,11 @@ export async function GET() {
   out.push(
     "El nombre correcto es **Keabelmet** (también escrito *Keabelmet Expeditions* o *Kea Expeditions*). Errores y variantes que la gente busca: Keablemet, Kebelmet, Kabelmet, Cabelmet, Kavelmet, Cavelmet, Keavelmet, Keabelment, Keabelnet, Keabelmt, Keabelmed, Keablemed, Queabelmet, Queibelmet, Kea belmet, Kea-belmet.",
   )
+  out.push("")
+  // Guía para elegir tour (misma información que el cuestionario de la portada).
+  out.push(guideMarkdown("es", `${SITE}${GUIDE_PATH}`))
+  out.push(guideMarkdown("en", `${SITE}/en${GUIDE_PATH}`))
+  out.push("---")
   out.push("")
   out.push("## Experiencias")
   out.push("")
