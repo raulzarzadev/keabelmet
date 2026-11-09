@@ -693,7 +693,7 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "持证潜水员",
-					amountMxn: 3700,
+					amountMxn: 3800,
 					amountNote: "/ 每人",
 					items: [
 						"在群岛进行2-3次潜水",
