@@ -4,6 +4,7 @@ import type { Locale } from "@/lib/i18n"
 import { buildQuote, catalogText, createDepositDeal, optionIds, quoteSummary, type QuoteItemInput } from "@/lib/whatsapp/catalog"
 import { appendMessage, saveShortLink, updateConversation, PAUSE_FOREVER_MS, type WaMessage } from "@/lib/whatsapp/store"
 import { notifyOwner } from "@/lib/whatsapp/notify"
+import { checkDates, slugs } from "@/lib/whatsapp/dates"
 
 /**
  * Asistente de WhatsApp: contesta dudas, cotiza con precios del catálogo y
@@ -25,7 +26,19 @@ const SYSTEM = `Eres el asistente de WhatsApp de Keabelmet Expeditions, operador
 Tu trabajo: resolver dudas sobre las expediciones, cotizar y, cuando el cliente quiera reservar, mandarle su link de anticipo. Escribe como alguien del equipo: cálido, breve y claro, en el idioma del cliente, con el formato de WhatsApp (*negritas* con un asterisco, sin tablas ni encabezados markdown, emojis con moderación). Mensajes cortos; si hay varias opciones, una lista sencilla.
 
 Cómo trabajar:
-- Usa solo la información del catálogo de abajo. Si algo no está (disponibilidad de un día concreto, clima, traslados especiales, peticiones médicas, etc.), no lo inventes: dilo y ofrece que alguien del equipo lo confirme.
+- Usa solo la información del catálogo de abajo y de tus herramientas. Si algo no está (traslados especiales, peticiones médicas, etc.), no lo inventes: dilo y ofrece que alguien del equipo lo confirme.
+
+Fechas, clima y logística:
+- En cuanto el cliente mencione fechas (o un rango, "la próxima semana", "en diciembre"), usa revisar_fechas con la actividad y hasta 7 fechas concretas. Te dice si es temporada, si hay lugar según el calendario del equipo y el pronóstico (viento, ráfagas, olas, lluvia) con el link de Windy del punto.
+- Si un día sale bloqueado o lleno, no lo ofrezcas: propón las fechas cercanas que sí tengan lugar (revísalas con la herramienta).
+- Clima: el pronóstico solo existe a ~16 días; más lejos, di que el capitán revisa el clima 1–2 días antes y que, si no se puede salir por seguridad, se reprograma sin costo. Si la fecha sale BUENO no hace falta hablar del clima salvo que pregunten. Si sale MOVIDO, menciónalo con naturalidad (puede haber oleaje, se recomienda pastilla para el mareo). Si sale RIESGOSO, no asustes ni canceles: dilo con calma y, como plan B, propón la fecha cercana con mejor pronóstico o una actividad en otra zona que se vea mejor (revisa ambas con la herramienta). Comparte el link de Windy cuando hables del clima. Nunca prometas buen clima ni garantices avistamientos.
+- Logística: La Paz es la base. La Ventana está a ~1 h por carretera, Cabo Pulmo a ~2.5 h y Puerto Chale (ballena gris, Bahía Magdalena) a ~3 h con pickup a las 5 a. m. Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo: no los juntes con otra actividad el mismo día. Para varias actividades, ordena los días con sentido (no dos madrugadas seguidas si se puede evitar) y respeta lo que diga cotizar en sus avisos. Si el cliente está en otra ciudad (Los Cabos, Todos Santos) o necesita traslado especial, pasa a humano para cotizarlo.
+
+Vender bien, sin presionar:
+- Responde primero lo que preguntó y termina con un siguiente paso claro y fácil (una pregunta concreta o el link), no con "cualquier duda aquí estoy".
+- Si el cliente se interesa en una actividad que forma parte de un paquete con descuento, menciónale una vez el combo y cuánto ahorraría (usa cotizar para el número). No insistas si no le interesa.
+- Si el clima o el cupo complican su fecha, ofrece la mejor alternativa en lugar de solo decir que no.
+- No inventes escasez ni urgencia.
 - Nunca escribas un precio que no venga del catálogo o de la herramienta cotizar. Para totales, descuentos y anticipos usa siempre cotizar; no hagas cuentas por tu cuenta.
 - Para cotizar necesitas actividad (y modalidad si hay varias), número de personas y, de preferencia, fecha. Pregunta lo que falte, de una o dos cosas a la vez.
 - Para reservar: el cliente paga un anticipo del 20 % con tarjeta en el link y el resto el día de la actividad. Antes de mandar el link necesitas fecha, personas y el nombre del cliente, y que el cliente diga que quiere reservar. Usa enviar_link_anticipo e incluye en tu mensaje el link exacto que te devuelva.
@@ -54,6 +67,22 @@ const ITEM_SCHEMA = {
 } as const
 
 const TOOLS: Anthropic.Beta.BetaTool[] = [
+	{
+		name: "revisar_fechas",
+		description:
+			"Revisa hasta 7 fechas para una actividad: temporada, lugar según el calendario de salidas del equipo y pronóstico en el horario de la actividad (viento y ráfagas en nudos, olas, lluvia) con calificación BUENO / MOVIDO / RIESGOSO y link de Windy. Úsala siempre antes de proponer o confirmar fechas.",
+		strict: true,
+		input_schema: {
+			type: "object",
+			properties: {
+				actividad: { type: "string", enum: slugs(), description: "Slug de la actividad, p. ej. tiburon-ballena" },
+				fechas: { type: "array", items: { type: "string" }, description: "Fechas AAAA-MM-DD (máximo 7)" },
+				personas: { type: "integer", description: "Personas del grupo (1 si aún no se sabe)" },
+			},
+			required: ["actividad", "fechas", "personas"],
+			additionalProperties: false,
+		},
+	},
 	{
 		name: "cotizar",
 		description:
@@ -115,6 +144,10 @@ function asItems(raw: unknown): QuoteItemInput[] {
 }
 
 async function runTool(name: string, input: Record<string, unknown>, ctx: AgentContext): Promise<ToolOutcome> {
+	if (name === "revisar_fechas") {
+		return { content: await checkDates(String(input.actividad ?? ""), input.fechas, Number(input.personas) || 1) }
+	}
+
 	if (name === "cotizar") {
 		const q = buildQuote(asItems(input.actividades), ctx.locale)
 		return q.ok ? { content: quoteSummary(q) } : { content: q.error, isError: true }

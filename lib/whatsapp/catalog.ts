@@ -169,6 +169,9 @@ export interface Quote {
 
 export type QuoteResult = Quote | { ok: false; error: string }
 
+/** Expediciones que salen de madrugada o lejos de La Paz y ocupan el día. */
+const FULL_DAY = new Set(["safari-bahia-magdalena", "tour-ballena-gris", "buceo-cabo-pulmo"])
+
 function todayISO(): string {
 	// La Paz (BCS) usa la hora del Pacífico mexicano.
 	return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Mazatlan" }).format(new Date())
@@ -238,6 +241,19 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 	const totalMxn = lines.reduce((s, l) => s + l.netMxn, 0)
 	const discountMxn = lines.reduce((s, l) => s + l.discountMxn, 0)
 	const depositMxn = Math.round(totalMxn * DEAL_DEPOSIT_RATE)
+	// Logística: actividades de día completo no se combinan con otra el mismo día.
+	const byDate = new Map<string, QuoteLine[]>()
+	for (const l of lines) if (l.dateISO) byDate.set(l.dateISO, [...(byDate.get(l.dateISO) ?? []), l])
+	for (const [date, same] of byDate) {
+		const distinct = new Set(same.map((l) => l.slug))
+		if (distinct.size < 2) continue
+		const full = same.filter((l) => FULL_DAY.has(l.slug))
+		warnings.push(
+			full.length
+				? `${date}: ${full[0].label} ocupa el día completo; mueve la otra actividad a otro día.`
+				: `${date}: dos actividades el mismo día; confirma con el equipo que los horarios no se crucen o muévela a otro día.`,
+		)
+	}
 	if (lines.some((l) => !l.dateISO)) warnings.push("Falta la fecha de alguna actividad: pídela antes de generar el link de anticipo.")
 	return { ok: true, lines, totalMxn, discountMxn, depositMxn, remainingMxn: totalMxn - depositMxn, warnings }
 }
