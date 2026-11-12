@@ -196,7 +196,7 @@ export default function Footer({ locale = defaultLocale }: { locale?: Locale }) 
     { label: t.blog, path: "/blog" },
     { label: t.about, path: "/sobre-nosotros" },
     { label: t.gallery, path: "/galeria" },
-    { label: t.quiz, path: "/#quiz" },
+    { label: t.quiz, path: "/que-hacer-en-la-paz" },
   ]
 
   return (

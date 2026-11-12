@@ -249,7 +249,7 @@ export const ANIMALS: FinderAnimal[] = [
 /** Estaciones con lo que representa cada una en La Paz (meses de lib/fauna-calendar.ts). */
 export const SEASON_GROUPS: { id: "winter" | "spring" | "summer" | "autumn"; months: number[]; image: string }[] = [
 	{ id: "winter", months: [12, 1, 2], image: "/ballena-gris-spyhop-new.jpg" },
-	{ id: "spring", months: [3, 4, 5], image: "/images/especies/mobula-salto.jpg" },
+	{ id: "spring", months: [3, 4, 5], image: "/images/gallery/mobula-saltando.jpeg" },
 	{ id: "summer", months: [6, 7, 8], image: "/images/especies/cachalote-buceo.jpg" },
 	{ id: "autumn", months: [9, 10, 11], image: "/images/especies/sardinas-banco.jpeg" },
 ]

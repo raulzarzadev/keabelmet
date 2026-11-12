@@ -198,22 +198,6 @@ export const pageSeoMap = {
       ca: "Preus per persona de tots els nostres tours a La Paz, BCS: tauró balena, Espíritu Santo, balena grisa, Sardine Run, busseig i més. Aparta amb el 20%.",
     },
   },
-  quiz: {
-    title: {
-      es: "¿Qué tour hacer en La Paz? Encuentra el tuyo",
-      en: "Which Tour to Do in La Paz? Find Yours",
-      fr: "Quelle excursion faire à La Paz ? Trouvez la vôtre",
-      zh: "在拉巴斯参加哪个行程？找到适合你的",
-      ca: "Quin tour fer a La Paz? Troba el teu",
-    },
-    description: {
-      es: "Responde 4 preguntas, incluido tu mes de viaje, y te recomendamos el tour ideal en La Paz según la temporada real de cada animal.",
-      en: "Answer 4 questions, including your travel month, and we'll recommend the best tour in La Paz based on each animal's real season.",
-      fr: "Répondez à 4 questions, dont votre mois de voyage, et nous vous recommandons l'excursion idéale à La Paz selon la vraie saison de chaque animal.",
-      zh: "回答4个问题（包括出行月份），我们会根据每种动物的真实季节推荐最适合你的拉巴斯行程。",
-      ca: "Respon 4 preguntes, inclòs el teu mes de viatge, i et recomanem el tour ideal a La Paz segons la temporada real de cada animal.",
-    },
-  },
   tourEspirituSanto: {
     title: {
       es: "Isla Espíritu Santo: snorkel con lobos marinos",

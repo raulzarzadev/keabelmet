@@ -32,6 +32,9 @@ const nextConfig = {
       // Formulario de reseña del Perfil de Empresa en Google (Maps).
       { source: "/resena", destination: "https://g.page/r/CcW6EwOD2EliEBM/review", permanent: false },
       { source: "/review", destination: "https://g.page/r/CcW6EwOD2EliEBM/review", permanent: false },
+      // El cuestionario viejo vive ahora dentro de la guía.
+      { source: "/quiz", destination: "/que-hacer-en-la-paz", permanent: true },
+      { source: "/:locale(en|fr|zh|ca)/quiz", destination: "/:locale/que-hacer-en-la-paz", permanent: true },
     ]
   },
   async headers() {
