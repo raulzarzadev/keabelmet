@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import s from "./ReservasPanel.module.css"
 
 type Cell = string | number | null
@@ -117,6 +117,7 @@ export default function ReservasPanel() {
 	const [edit, setEdit] = useState<Booking | null>(null)
 	const [showCancelled, setShowCancelled] = useState(false)
 	const [importOpen, setImportOpen] = useState(false)
+	const [pickSignal, setPickSignal] = useState(0)
 	const [notice, setNotice] = useState("")
 
 	const load = useCallback(async (sync = false) => {
@@ -266,7 +267,7 @@ export default function ReservasPanel() {
 				<div className={s.row}>
 					<button className={`${s.btn} ${s.btnOn}`} onClick={() => setEdit({ ...EMPTY, dateISO: day })}>+ Nueva reserva</button>
 					<a className={s.btn} href={`/api/reservas/excel?from=${monthKey}&to=${addMonths(y, m, 2)}`}>Descargar Excel (3 meses)</a>
-					<button className={s.btn} onClick={() => setImportOpen(true)}>Importar Excel</button>
+					<button className={s.btn} onClick={() => { setImportOpen(true); setPickSignal((n) => n + 1) }}>Importar Excel</button>
 					<button className={s.btn} disabled={busy} onClick={() => load(true)}>Revisar pagos</button>
 					<button className={s.btn} onClick={async () => { await post({ action: "logout" }); load() }}>Salir</button>
 				</div>
@@ -277,12 +278,13 @@ export default function ReservasPanel() {
 
 			{(!state.since || importOpen) && (
 				<ImportCard
+					pickSignal={pickSignal}
 					first={!state.since}
 					onClose={() => setImportOpen(false)}
 					onDone={async (msg) => {
 						setImportOpen(false)
-						setNotice(msg)
 						await load(true)
+						setNotice(msg)
 					}}
 				/>
 			)}
@@ -497,49 +499,64 @@ function Editor({ booking, activities, busy, onSave, onDelete, onClose }: { book
 	)
 }
 
-function ImportCard({ first, onClose, onDone }: { first: boolean; onClose: () => void; onDone: (msg: string) => void }) {
-	const [file, setFile] = useState<File | null>(null)
+function ImportCard({ first, pickSignal, onClose, onDone }: { first: boolean; pickSignal: number; onClose: () => void; onDone: (msg: string) => void }) {
+	const inputRef = useRef<HTMLInputElement>(null)
+	const [fileName, setFileName] = useState("")
 	const [busy, setBusy] = useState(false)
 	const [error, setError] = useState("")
+
+	// "Importar Excel" de arriba abre directo el selector de archivo.
+	useEffect(() => {
+		if (pickSignal > 0) inputRef.current?.click()
+	}, [pickSignal])
+
+	async function importFile(file: File) {
+		setFileName(file.name)
+		setBusy(true)
+		setError("")
+		try {
+			// Leer primero: si el Excel está abierto en la compu, el navegador a veces no puede leerlo.
+			let data: ArrayBuffer
+			try {
+				data = await file.arrayBuffer()
+			} catch {
+				throw new Error("No pude leer el archivo. Cierra el Excel (o guárdalo y ciérralo) y vuelve a elegirlo.")
+			}
+			const fd = new FormData()
+			fd.append("file", new Blob([data], { type: file.type || "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), file.name)
+			fd.append("since", String(file.lastModified || Date.now()))
+			const res = await fetch("/api/reservas/import", { method: "POST", body: fd })
+			const j = await res.json().catch(() => ({}))
+			if (!res.ok) throw new Error(j.error || `No pude importar (error ${res.status}).`)
+			onDone(`Importé ${j.imported} reservas.${j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""}`)
+		} catch (e) {
+			setError(e instanceof Error ? e.message : "No pude importar")
+		} finally {
+			setBusy(false)
+			if (inputRef.current) inputRef.current.value = ""
+		}
+	}
+
 	return (
 		<div className={s.card}>
 			<h3>{first ? "Empieza importando tu Excel" : "Importar Excel"}</h3>
 			<p className={s.muted}>
-				Sube el Excel de actividades (columnas MES, NOMBRE, ACTIVIDAD…). Las reservas de la página pagadas antes de la última vez que guardaste el archivo se toman del Excel; las posteriores entran solas desde Stripe.
+				Elige el Excel de actividades (columnas MES, NOMBRE, ACTIVIDAD…) y se importa solo. Las reservas de la página pagadas antes de la última vez que guardaste el archivo se toman del Excel; las posteriores entran solas desde Stripe.
 				{!first && " Reemplaza lo importado antes; no toca lo que agregaste en el panel ni las reservas que llegaron de la página después."}
 			</p>
 			<div className={s.row}>
-				<input type="file" accept=".xlsx" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
-				<button
-					className={`${s.btn} ${s.btnOn}`}
-					disabled={!file || busy}
-					onClick={async () => {
-						if (!file) return
-						setBusy(true)
-						setError("")
-						try {
-							// Leer primero: si el Excel está abierto en la compu, el navegador a veces no puede leerlo.
-							let data: ArrayBuffer
-							try {
-								data = await file.arrayBuffer()
-							} catch {
-								throw new Error("No pude leer el archivo. Cierra el Excel (o guárdalo y ciérralo) y vuelve a elegirlo.")
-							}
-							const fd = new FormData()
-							fd.append("file", new Blob([data], { type: file.type || "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), file.name)
-							fd.append("since", String(file.lastModified || Date.now()))
-							const res = await fetch("/api/reservas/import", { method: "POST", body: fd })
-							const j = await res.json().catch(() => ({}))
-							if (!res.ok) throw new Error(j.error || `No pude importar (error ${res.status}).`)
-							onDone(`Importé ${j.imported} reservas.${j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""}`)
-						} catch (e) {
-							setError(e instanceof Error ? e.message : "No pude importar")
-						} finally {
-							setBusy(false)
-						}
+				<input
+					ref={inputRef}
+					type="file"
+					accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+					style={{ display: "none" }}
+					onChange={(e) => {
+						const f = e.target.files?.[0]
+						if (f) importFile(f)
 					}}
-				>
-					{busy ? "Importando…" : "Importar"}
+				/>
+				<button className={`${s.btn} ${s.btnOn}`} disabled={busy} onClick={() => inputRef.current?.click()}>
+					{busy ? `Importando ${fileName}…` : "Elegir Excel e importar"}
 				</button>
 				{!first && <button className={s.btn} onClick={onClose}>Cerrar</button>}
 			</div>
