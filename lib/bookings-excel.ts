@@ -11,7 +11,7 @@ export const HEADERS = ["MES", "NOMBRE", "ACTIVIDAD", "PERSONAS", "PAGO COMPLETO
 const WIDTHS = [8, 22, 35, 11, 17, 11, 11, 14, 16, 12, 16, 13]
 export const MONTH_NAMES = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]
 
-function cellValue(v: ExcelJS.CellValue): Cell {
+export function cellValue(v: ExcelJS.CellValue): Cell {
 	if (v === null || v === undefined) return null
 	if (typeof v === "number") return v
 	if (typeof v === "string") return v.trim() || null
@@ -30,6 +30,10 @@ const txt = (c: Cell) => (c === null ? "" : String(c).trim())
 export async function parseBookingsExcel(data: ArrayBuffer, today = new Date()): Promise<{ bookings: Booking[]; warnings: string[] }> {
 	const wb = new ExcelJS.Workbook()
 	await wb.xlsx.load(data)
+	return parseBookingsWorkbook(wb, today)
+}
+
+export function parseBookingsWorkbook(wb: ExcelJS.Workbook, today = new Date()): { bookings: Booking[]; warnings: string[] } {
 	const ws = wb.worksheets[0]
 	if (!ws) throw new Error("El archivo no tiene hojas")
 	const warnings: string[] = []

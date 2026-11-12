@@ -2,11 +2,14 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import s from "./ReservasPanel.module.css"
+import PanelFinanzas from "./PanelFinanzas"
+import PanelInventario from "./PanelInventario"
+import { DEFAULT_FIN, collectedOf, pendingOf, saleOf, type Expense, type FinSettings, type InventoryItem } from "@/lib/finance-calc"
 
 type Cell = string | number | null
 interface Booking {
 	id: string
-	source: "web" | "manual" | "excel"
+	source: "web" | "manual" | "excel" | "presupuesto"
 	folio?: string
 	dateISO: string
 	activity: string
@@ -24,6 +27,7 @@ interface Booking {
 	transport: string
 	notes: string
 	status: "active" | "cancelled"
+	cost?: number | null
 }
 interface Activity {
 	slug: string
@@ -38,6 +42,9 @@ interface State {
 	sync?: { added: number; checked: number; skipped?: string; error?: string }
 	bookings?: Booking[]
 	activities?: Activity[]
+	expenses?: Expense[]
+	inventory?: InventoryItem[]
+	fin?: FinSettings
 }
 
 const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
@@ -113,6 +120,7 @@ export default function ReservasPanel() {
 	const [y, setY] = useState(t0.y)
 	const [m, setM] = useState(t0.m)
 	const [view, setView] = useState<"cal" | "list">("cal")
+	const [tab, setTab] = useState<"res" | "fin" | "inv">("res")
 	const [day, setDay] = useState<string>(t0.iso)
 	const [edit, setEdit] = useState<Booking | null>(null)
 	const [showCancelled, setShowCancelled] = useState(false)
@@ -166,8 +174,8 @@ export default function ReservasPanel() {
 	const totals = {
 		n: activeMonth.length,
 		people: activeMonth.reduce((a, b) => a + (b.people || 0), 0),
-		collected: activeMonth.reduce((a, b) => a + num(b.paidFull) + num(b.deposit), 0),
-		pending: activeMonth.reduce((a, b) => a + num(b.balance), 0),
+		collected: activeMonth.reduce((a, b) => a + collectedOf(b), 0),
+		pending: activeMonth.reduce((a, b) => a + pendingOf(b), 0),
 	}
 
 	function byActivity(list: Booking[]): Group[] {
@@ -263,7 +271,14 @@ export default function ReservasPanel() {
 	return (
 		<main className={s.page}>
 			<div className={s.bar}>
-				<h1 className={s.title}>Reservas</h1>
+				<div className={s.row}>
+					<h1 className={s.title}>Panel</h1>
+					<div className={s.tabs}>
+						<button className={tab === "res" ? s.tabOn : ""} onClick={() => setTab("res")}>Reservas</button>
+						<button className={tab === "fin" ? s.tabOn : ""} onClick={() => setTab("fin")}>Finanzas</button>
+						<button className={tab === "inv" ? s.tabOn : ""} onClick={() => setTab("inv")}>Inventario</button>
+					</div>
+				</div>
 				<div className={s.row}>
 					<button className={`${s.btn} ${s.btnOn}`} onClick={() => setEdit({ ...EMPTY, dateISO: day })}>+ Nueva reserva</button>
 					<a className={s.btn} href={`/api/reservas/excel?from=${monthKey}&to=${addMonths(y, m, 2)}`}>Descargar Excel (3 meses)</a>
@@ -289,6 +304,12 @@ export default function ReservasPanel() {
 				/>
 			)}
 
+			{tab === "fin" && (
+				<PanelFinanzas bookings={all} expenses={state.expenses ?? []} fin={state.fin ?? DEFAULT_FIN} post={post} reload={() => load()} />
+			)}
+			{tab === "inv" && <PanelInventario items={state.inventory ?? []} post={post} reload={() => load()} />}
+
+			{tab === "res" && (<>
 			<div className={s.monthBar}>
 				<button className={s.btn} onClick={prevMonth}>‹</button>
 				<h2 className={s.month}>{MONTHS[m - 1]} {y}</h2>
@@ -336,11 +357,11 @@ export default function ReservasPanel() {
 					<table className={s.table}>
 						<thead>
 							<tr>
-								<th>Día</th><th>Nombre</th><th>Actividad</th><th>Pers.</th><th>Pago completo</th><th>Anticipo</th><th>Liquidado</th><th>Por liquidar</th><th>Teléfono</th><th>Guía</th><th>Capitán</th><th>Transp.</th>
+								<th>Día</th><th>Nombre</th><th>Actividad</th><th>Pers.</th><th>Pago completo</th><th>Anticipo</th><th>Liquidado</th><th>Por liquidar</th><th>Teléfono</th><th>Guía</th><th>Capitán / proveedor</th><th>Transp.</th><th>Costo</th><th>Utilidad</th>
 							</tr>
 						</thead>
 						<tbody>
-							{daysWithBookings.length === 0 && <tr><td colSpan={12} className={s.muted}>Sin reservas este mes.</td></tr>}
+							{daysWithBookings.length === 0 && <tr><td colSpan={14} className={s.muted}>Sin reservas este mes.</td></tr>}
 							{daysWithBookings.flatMap((iso) =>
 								inMonth.filter((b) => b.dateISO === iso).map((b) => (
 									<tr key={b.id} className={b.status === "cancelled" ? s.cancelled : ""} onClick={() => setEdit(b)}>
@@ -356,6 +377,8 @@ export default function ReservasPanel() {
 										<td>{b.guide}</td>
 										<td>{b.captain}</td>
 										<td>{b.transport}</td>
+										<td>{typeof b.cost === "number" ? money(b.cost) : ""}</td>
+										<td>{typeof b.cost === "number" ? money(saleOf(b) - b.cost) : ""}</td>
 									</tr>
 								)),
 							)}
@@ -363,6 +386,7 @@ export default function ReservasPanel() {
 					</table>
 				</div>
 			)}
+			</>)}
 
 			{edit && <Editor booking={edit} activities={activities} busy={busy} onSave={save} onDelete={remove} onClose={() => setEdit(null)} />}
 		</main>
@@ -470,6 +494,8 @@ function Editor({ booking, activities, busy, onSave, onDelete, onClose }: { book
 					<label>Anticipo{cellIn("deposit")}</label>
 					<label>Liquidado{cellIn("settled")}</label>
 					<label>Por liquidar{cellIn("balance")}</label>
+					<label>Costo (lo que pagas al proveedor)<input className={s.input} inputMode="decimal" value={b.cost === null || b.cost === undefined ? "" : String(b.cost)} onChange={(e) => set("cost", e.target.value)} /></label>
+					<label>Utilidad<input className={s.input} disabled value={b.cost === null || b.cost === undefined || b.cost === ("" as unknown) ? "" : money(saleOf(b) - (Number(b.cost) || 0))} /></label>
 					<label>Guía<input className={s.input} value={b.guide} onChange={(e) => set("guide", e.target.value)} /></label>
 					<label>Capitán<input className={s.input} value={b.captain} onChange={(e) => set("captain", e.target.value)} /></label>
 					<label>Transporte
@@ -528,7 +554,12 @@ function ImportCard({ first, pickSignal, onClose, onDone }: { first: boolean; pi
 			const res = await fetch("/api/reservas/import", { method: "POST", body: fd })
 			const j = await res.json().catch(() => ({}))
 			if (!res.ok) throw new Error(j.error || `No pude importar (error ${res.status}).`)
-			onDone(`Importé ${j.imported} reservas.${j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""}`)
+			const avisos = j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""
+			onDone(
+				j.kind === "presupuesto"
+					? `Presupuesto importado: ${j.imported} ventas pasadas, costo agregado a ${j.costs} reservas del panel, ${j.expenses} gastos y ${j.inventory} artículos de inventario${j.reparto ? ", y tus % de reparto" : ""}.${avisos}`
+					: `Importé ${j.imported} reservas.${avisos}`,
+			)
 		} catch (e) {
 			setError(e instanceof Error ? e.message : "No pude importar")
 		} finally {
@@ -541,7 +572,7 @@ function ImportCard({ first, pickSignal, onClose, onDone }: { first: boolean; pi
 		<div className={s.card}>
 			<h3>{first ? "Empieza importando tu Excel" : "Importar Excel"}</h3>
 			<p className={s.muted}>
-				Elige el Excel de actividades (columnas MES, NOMBRE, ACTIVIDAD…) y se importa solo. Las reservas de la página pagadas antes de la última vez que guardaste el archivo se toman del Excel; las posteriores entran solas desde Stripe.
+				Elige el Excel de actividades (columnas MES, NOMBRE, ACTIVIDAD…) o el libro de presupuesto (hojas Ingresos, Gastos, Inventario, Reparto) y se importa solo. Las reservas de la página pagadas antes de la última vez que guardaste el archivo se toman del Excel; las posteriores entran solas desde Stripe.
 				{!first && " Reemplaza lo importado antes; no toca lo que agregaste en el panel ni las reservas que llegaron de la página después."}
 			</p>
 			<div className={s.row}>

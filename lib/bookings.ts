@@ -27,7 +27,8 @@ export type Cell = string | number | null
 
 export interface Booking {
 	id: string
-	source: "web" | "manual" | "excel"
+	/** excel = Excel de actividades; presupuesto = hoja de Ingresos del libro de presupuesto. */
+	source: "web" | "manual" | "excel" | "presupuesto"
 	piId?: string
 	folio?: string
 	dateISO: string
@@ -50,6 +51,8 @@ export interface Booking {
 	transport: string
 	notes: string
 	status: "active" | "cancelled"
+	/** Lo que se le paga al proveedor o capitán por esta reserva (para la utilidad). */
+	cost?: number | null
 	createdAt: number
 	updatedAt: number
 }
@@ -80,12 +83,13 @@ export function guessActivity(text: string): string {
 		.toLowerCase()
 		.normalize("NFD")
 		.replace(/[̀-ͯ]/g, "")
-	if (/ventana|safari la/.test(t)) return "safari-la-ventana"
 	if (/sardine|magdalena|sardina/.test(t)) return "safari-bahia-magdalena"
 	if (/tiburon|whale shark/.test(t)) return "tiburon-ballena"
 	if (/ballena gris|gray whale|chale/.test(t)) return "tour-ballena-gris"
 	if (/cabo pulmo/.test(t)) return "buceo-cabo-pulmo"
-	if (/discovery/.test(t)) return "scuba-discovery"
+	if (/discovery|buceo playa|buceo de playa/.test(t)) return "scuba-discovery"
+	if (/buceo.*ventana|shark safari/.test(t)) return "otro"
+	if (/ventana|cerralvo|safari la/.test(t)) return "safari-la-ventana"
 	if (/open water|certific/.test(t)) return "certificacion-open-water"
 	if (/buceo|dive|diving/.test(t)) return "buceo-la-paz"
 	if (/espiritu|snorkel/.test(t)) return "tour-espiritu-santo"
@@ -142,6 +146,28 @@ const cell = (v: unknown): Cell => {
 	return s
 }
 
+/** Número dentro de una celda: 4600, "5000 cash" -> 5000, "nd" -> 0. */
+export function cellNumber(c: Cell | undefined): number {
+	if (typeof c === "number") return c
+	if (typeof c === "string") {
+		const m = c.replace(/,/g, "").match(/-?\d+(\.\d+)?/)
+		return m ? Number(m[0]) : 0
+	}
+	return 0
+}
+
+/** Venta total de la reserva: pago completo, o anticipo + saldo. */
+export function bookingTotal(b: Booking): number {
+	if (typeof b.paidFull === "number") return b.paidFull
+	return cellNumber(b.deposit) + cellNumber(b.balance)
+}
+
+/** Lo que falta por cobrar (0 si está liquidado). */
+export function bookingPending(b: Booking): number {
+	if (typeof b.paidFull === "number" || b.settled === "si") return 0
+	return cellNumber(b.balance)
+}
+
 /** Limpia lo que manda el panel. */
 export function sanitizeBooking(input: Record<string, unknown>, base?: Booking): Booking {
 	const now = Date.now()
@@ -170,6 +196,7 @@ export function sanitizeBooking(input: Record<string, unknown>, base?: Booking):
 		captain: str(input.captain, 80),
 		transport: transport === "si" || transport === "sí" ? "si" : transport === "no" ? "no" : "",
 		notes: str(input.notes, 1000),
+		cost: (() => { const c = cell(input.cost); return typeof c === "number" ? c : null })(),
 		status: input.status === "cancelled" ? "cancelled" : "active",
 		createdAt: base?.createdAt ?? now,
 		updatedAt: now,
@@ -323,10 +350,10 @@ export async function getSince(): Promise<number> {
 	return Number(await kv("GET", "bk:since")) || 0
 }
 
-/** Reemplaza lo importado antes del Excel (no toca reservas web ni manuales posteriores). */
-export async function replaceImported(list: Booking[]): Promise<void> {
+/** Reemplaza lo importado antes de ese mismo tipo de Excel (no toca reservas web ni manuales). */
+export async function replaceImported(list: Booking[], source: "excel" | "presupuesto" = "excel"): Promise<void> {
 	const current = await listBookings()
-	const old = current.filter((b) => b.source === "excel").map((b) => b.id)
+	const old = current.filter((b) => b.source === source).map((b) => b.id)
 	if (old.length) await kv("HDEL", "bk", ...old)
 	await saveBookings(list)
 }

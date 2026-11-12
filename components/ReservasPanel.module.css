@@ -62,6 +62,27 @@
 .full { grid-column: 1 / -1; }
 .modalFoot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; }
 
+/* Pestañas y finanzas */
+.tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-left: 6px; }
+.tabs button { border: 0; background: transparent; color: var(--sand-dim); padding: 7px 14px; font: inherit; font-size: 0.88rem; cursor: pointer; }
+.tabs button + button { border-left: 1px solid var(--line); }
+.tabs .tabOn { background: var(--teal-dim); color: var(--sand); }
+.fin { display: flex; flex-direction: column; gap: 12px; }
+.h3 { margin: 14px 0 4px; font-size: 1.05rem; text-transform: none; letter-spacing: 0; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.kpi { display: flex; flex-direction: column; gap: 2px; border: 1px solid var(--line); background: var(--ink-2); border-radius: 12px; padding: 12px 14px; }
+.kpi b { font-size: 1.25rem; color: var(--sand); }
+.table tbody tr.static { cursor: default; }
+.table tbody tr.static:hover { background: transparent; }
+.totalRow td { font-weight: 700; border-top: 2px solid var(--line); }
+.cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.cat { display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: var(--ink-2); }
+.pctIn { width: 72px; display: inline-block; }
+.bar2 { height: 10px; border-radius: 999px; background: var(--ink); border: 1px solid var(--line); overflow: hidden; margin: 6px 0; }
+.bar2 i { display: block; height: 100%; background: var(--teal); }
+.bad { color: var(--coral); font-weight: 600; }
+.warn { color: #e9b949; }
+
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); }
   .detail { position: static; max-height: none; }

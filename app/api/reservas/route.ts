@@ -11,6 +11,20 @@ import {
 	saveBookings,
 	syncFromStripe,
 } from "@/lib/bookings"
+import {
+	deleteExpense,
+	deleteItem,
+	getExpense,
+	getFinSettings,
+	getItem,
+	listExpenses,
+	listInventory,
+	sanitizeExpense,
+	sanitizeItem,
+	saveExpenses,
+	saveFinSettings,
+	saveItems,
+} from "@/lib/finance"
 import { RESERVAS_COOKIE, checkReservasPassword, isReservasRequest, reservasToken } from "@/lib/reservas-auth"
 
 export const runtime = "nodejs"
@@ -28,8 +42,8 @@ export async function GET(req: NextRequest) {
 	} catch (err) {
 		sync = { added: 0, checked: 0, error: err instanceof Error ? err.message : "error" }
 	}
-	const [bookings, since] = await Promise.all([listBookings(), getSince()])
-	return NextResponse.json({ auth: true, configured: true, since, sync, bookings, activities: ACTIVITIES }, { headers: noStore })
+	const [bookings, since, expenses, inventory, fin] = await Promise.all([listBookings(), getSince(), listExpenses(), listInventory(), getFinSettings()])
+	return NextResponse.json({ auth: true, configured: true, since, sync, bookings, activities: ACTIVITIES, expenses, inventory, fin }, { headers: noStore })
 }
 
 export async function POST(req: NextRequest) {
@@ -62,6 +76,34 @@ export async function POST(req: NextRequest) {
 			const booking = sanitizeBooking(input, base ?? undefined)
 			await saveBookings([booking])
 			return NextResponse.json({ ok: true, booking })
+		}
+		if (action === "saveExpense") {
+			const input = (body.expense ?? {}) as Record<string, unknown>
+			const id = typeof input.id === "string" ? input.id : ""
+			const base = id ? await getExpense(id) : null
+			const expense = sanitizeExpense(input, base)
+			await saveExpenses([expense])
+			return NextResponse.json({ ok: true, expense })
+		}
+		if (action === "deleteExpense") {
+			await deleteExpense(String(body.id ?? ""))
+			return NextResponse.json({ ok: true })
+		}
+		if (action === "saveItem") {
+			const input = (body.item ?? {}) as Record<string, unknown>
+			const id = typeof input.id === "string" ? input.id : ""
+			const base = id ? await getItem(id) : null
+			const item = sanitizeItem(input, base)
+			await saveItems([item])
+			return NextResponse.json({ ok: true, item })
+		}
+		if (action === "deleteItem") {
+			await deleteItem(String(body.id ?? ""))
+			return NextResponse.json({ ok: true })
+		}
+		if (action === "saveFin") {
+			const fin = await saveFinSettings(body.fin)
+			return NextResponse.json({ ok: true, fin })
 		}
 		if (action === "delete") {
 			const id = String(body.id ?? "")

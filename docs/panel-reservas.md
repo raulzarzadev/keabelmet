@@ -9,6 +9,23 @@ Sirve para ver disponibilidad, cupos y logística de todas las reservas:
 - **Lista:** las mismas columnas del Excel (pago completo, anticipo, liquidado, por liquidar, guía, capitán, transporte).
 - **Descargar Excel:** el mismo formato del archivo del equipo, 3 meses a partir del mes que estás viendo.
 
+## Finanzas e inventario
+
+- **Costo por reserva:** cada reserva lleva **Costo** (lo que se le paga al proveedor o capitán). La lista muestra costo y utilidad.
+- **Pestaña Finanzas** (por año):
+  - Ventas, pagado a proveedores, utilidad, margen, gastos de equipo, por cobrar y ticket promedio.
+  - Tabla mes por mes.
+  - Reparto de utilidades con porcentajes editables.
+  - Avance de la meta (pickup) y escenarios.
+  - Lista de gastos: agregar, editar y borrar.
+  - La utilidad solo cuenta reservas con costo capturado; las que no lo tienen se avisan aparte.
+- **Pestaña Inventario:** artículos con categoría, cantidad, estado, ubicación y descripción. Avisa de lo que está en mantenimiento o crítico.
+- **Importar el libro "Presupuesto Keabelmet 20XX":** con el mismo botón "Importar Excel", sin cambiarle nada al archivo.
+  - Las ventas de Ingresos anteriores a la primera reserva del panel entran como historial, con su costo y proveedor.
+  - Las que ya están en el panel no se duplican: solo les pone el costo y el proveedor.
+  - También trae los gastos, el inventario y los % de reparto y la meta.
+  - Volver a importar reemplaza solo lo que vino del libro.
+
 ## Cómo entran las reservas
 
 - **Pagadas en la página:** entran solas. El webhook de Stripe las guarda al confirmarse el pago. Además, el panel revisa Stripe al abrirse (máximo cada 5 min, o con "Revisar pagos") por si alguna se escapó.
