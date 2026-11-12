@@ -517,14 +517,26 @@ function ImportCard({ first, onClose, onDone }: { first: boolean; onClose: () =>
 						if (!file) return
 						setBusy(true)
 						setError("")
-						const fd = new FormData()
-						fd.append("file", file)
-						fd.append("since", String(file.lastModified || Date.now()))
-						const res = await fetch("/api/reservas/import", { method: "POST", body: fd })
-						const j = await res.json().catch(() => ({}))
-						setBusy(false)
-						if (!res.ok) return setError(j.error || "No pude importar")
-						onDone(`Importé ${j.imported} reservas.${j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""}`)
+						try {
+							// Leer primero: si el Excel está abierto en la compu, el navegador a veces no puede leerlo.
+							let data: ArrayBuffer
+							try {
+								data = await file.arrayBuffer()
+							} catch {
+								throw new Error("No pude leer el archivo. Cierra el Excel (o guárdalo y ciérralo) y vuelve a elegirlo.")
+							}
+							const fd = new FormData()
+							fd.append("file", new Blob([data], { type: file.type || "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), file.name)
+							fd.append("since", String(file.lastModified || Date.now()))
+							const res = await fetch("/api/reservas/import", { method: "POST", body: fd })
+							const j = await res.json().catch(() => ({}))
+							if (!res.ok) throw new Error(j.error || `No pude importar (error ${res.status}).`)
+							onDone(`Importé ${j.imported} reservas.${j.warnings?.length ? " Avisos: " + j.warnings.join(" · ") : ""}`)
+						} catch (e) {
+							setError(e instanceof Error ? e.message : "No pude importar")
+						} finally {
+							setBusy(false)
+						}
 					}}
 				>
 					{busy ? "Importando…" : "Importar"}
