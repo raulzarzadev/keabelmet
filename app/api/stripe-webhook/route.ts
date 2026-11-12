@@ -7,6 +7,7 @@ import { unpackItems, activityName } from "@/lib/deposit"
 import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
 import { dealPhoto } from "@/lib/deal-photos"
 import { SITE_URL } from "@/lib/email"
+import { recordPaymentIntent } from "@/lib/bookings"
 
 export const runtime = "nodejs"
 
@@ -45,6 +46,13 @@ export async function POST(req: NextRequest) {
 		}
 
 		const m = pi.metadata ?? {}
+
+		// Panel de reservas: la reserva entra sola (idempotente; no hace nada sin Redis).
+		try {
+			await recordPaymentIntent(pi)
+		} catch (err) {
+			console.error("[stripe-webhook] no se pudo registrar en el panel de reservas:", err)
+		}
 
 		// Evita correos duplicados si Stripe reintenta el evento.
 		if (m.emailSent === "1" || !m.customerEmail) {
