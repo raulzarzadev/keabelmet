@@ -40,6 +40,12 @@ import { laMancha } from "./posts/la-mancha"
 import { sardineRunMundo } from "./posts/sardine-run-mundo"
 import { ciclosSardinaAnchoveta } from "./posts/ciclos-sardina-anchoveta"
 import { magdalenaMesAMes } from "./posts/magdalena-mes-a-mes"
+import { certificacionOpenWaterPrecio } from "./posts/certificacion-open-water-precio"
+import { mareoEnLancha } from "./posts/mareo-en-lancha"
+import { ninosToursLaPaz } from "./posts/ninos-tours-la-paz"
+import { huracanesBcs } from "./posts/huracanes-bcs"
+import { mejorEpocaBucearLaPaz } from "./posts/mejor-epoca-bucear-la-paz"
+import { losIslotesLobosMarinos } from "./posts/los-islotes-lobos-marinos"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -88,4 +94,10 @@ export const blogPosts: BlogPost[] = [
 	sardineRunMundo,
 	ciclosSardinaAnchoveta,
 	magdalenaMesAMes,
+	certificacionOpenWaterPrecio,
+	mareoEnLancha,
+	ninosToursLaPaz,
+	huracanesBcs,
+	mejorEpocaBucearLaPaz,
+	losIslotesLobosMarinos,
 ]
