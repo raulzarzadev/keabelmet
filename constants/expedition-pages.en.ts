@@ -267,7 +267,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 					amountNote: "/ person",
 					items: [
 						"Shared boat, 2-6 people",
-						"Transport from La Paz",
+						"Convoy from La Paz (optional transport +$500 per person)",
 						"Snorkeling gear included",
 						"Lunch and drinks",
 						"Marine biologist guide, photo/video included",

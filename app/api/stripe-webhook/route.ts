@@ -8,6 +8,9 @@ import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
 import { dealPhoto } from "@/lib/deal-photos"
 import { SITE_URL } from "@/lib/email"
 import { recordPaymentIntent } from "@/lib/bookings"
+import { rideAddonMxn, rideRoute } from "@/lib/ride-addon"
+
+const RIDE_WORD: Record<string, string> = { es: "transporte", en: "transport", fr: "transfert", zh: "接送", ca: "transport" }
 
 export const runtime = "nodejs"
 
@@ -72,10 +75,10 @@ export async function POST(req: NextRequest) {
 			const locale = m.locale || "es"
 			const items = unpackItems(m.items).map((p) => ({
 				slug: p.slug,
-				expeditionName: activityName(p.slug, locale),
+				expeditionName: activityName(p.slug, locale) + (p.ride ? ` + ${RIDE_WORD[locale] ?? RIDE_WORD.es} ${rideRoute(p.slug, locale)}` : ""),
 				dateISO: p.dateISO,
 				people: p.people,
-				subtotalMxn: p.unitAmountMxn * p.people,
+				subtotalMxn: p.unitAmountMxn * p.people + (p.ride ? rideAddonMxn(p.slug, p.people) : 0),
 			}))
 			const dep: DepositEmailData = {
 				folio: folioFromPaymentIntent(pi.id),

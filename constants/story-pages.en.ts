@@ -1795,7 +1795,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "An ocean where everything happens at once",
 			text: "Thousands of sardines try to stay together. Marlin tear through the bait ball at full speed. Sea lions appear from the depths to join the hunt. Flocks of birds mark where the action is. That's Bahía Magdalena. Here we don't follow an itinerary: we follow what the sea decides to show us.",
-			meta: "From La Paz · ~10 hours · November–December",
+			meta: "Convoy departure from La Paz · November–December",
 			primaryLabel: "Book your Ocean Safari",
 			primaryWa: "Hi! I'd like to book the Ocean Safari in Bahía Magdalena",
 			secondaryLabel: "See what the expedition is like",
@@ -1805,7 +1805,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			{
 				type: "quickfacts",
 				items: [
-					{ value: "~10 hours", label: "With round-trip transport" },
+					{ value: "5:00 AM", label: "Convoy departure from La Paz" },
 					{ value: "Nov – Dec", label: "Season" },
 					{ value: "Snorkel", label: "In open water" },
 					{ value: "Small groups", label: "Lower impact" },
@@ -1833,7 +1833,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				note: "On an Ocean Safari there's no fixed route. We don't navigate from point A to point B: we observe constantly and follow the ocean's signs.",
 				items: [
 					{
-						time: "Before dawn · departure from La Paz",
+						time: "5:00 AM · convoy departure from La Paz",
 						title: "We cross the desert toward the Pacific",
 						paragraphs: [
 							"Our adventure begins before the ocean fully wakes. Very early we leave La Paz toward Bahía Magdalena, crossing the desert until we reach the Pacific coast. The Sea of Cortez is left behind and before us appears one of the most dynamic marine ecosystems in Mexico.",
@@ -1915,7 +1915,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				kicker: "Everything included",
 				title: "What's already taken care of",
 				items: [
-					{ title: "Round-trip transport from La Paz", text: "We cross the desert to the Pacific coast and back." },
+					{ title: "Convoy from La Paz", text: "We meet in La Paz at 5:00 AM and drive together to Puerto Chale. No car? Add our round-trip transport for $500 MXN per person when you book." },
 					{ title: "Boat and certified captain", text: "With knowledge of the Bahía Magdalena ecosystem." },
 					{ title: "Marine biologist guide", text: "Interprets the ocean and helps you understand what's happening." },
 					{ title: "Full snorkel gear", text: "Mask, snorkel, fins and wetsuit." },
@@ -1929,7 +1929,9 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				title: "Important information",
 				items: [
 					{ label: "Season", value: "November and December." },
-					{ label: "Duration", value: "Approximately 10 hours, including round-trip transport from La Paz and the activity at sea." },
+					{ label: "Duration", value: "Approximately 10 hours from La Paz, including the drive there and back and the activity at sea." },
+					{ label: "Meeting point", value: "La Paz, 5:00 AM. From there we drive in a convoy to Puerto Chale, where the safari starts at 8:00 AM. If you prefer, you can meet us directly in Puerto Chale, although we recommend the convoy. We send you the locations when you book." },
+					{ label: "Transport", value: "Not included. If you don't have a car, add our round-trip transport La Paz ⇄ Puerto Chale for $500 MXN per person when you book." },
 					{ label: "Level", value: "You need to feel comfortable swimming in open water and with snorkeling experience (breathing through the tube)." },
 					{ label: "Small groups", value: "We work with small groups to enjoy the experience calmly and minimize impact on wildlife." },
 				],
@@ -1942,6 +1944,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 					{ q: "Is the Sardine Run guaranteed?", a: ["No. We work with completely wild wildlife and every day is different. We run the activity only during the best season and put all our experience into interpreting the ocean and increasing the chances of witnessing the phenomenon."] },
 					{ q: "What if we don't find a bait ball?", a: ["We'll keep exploring Bahía Magdalena in search of other opportunities. Every trip is different and there's always the chance to observe other pelagic species and unique natural behaviors."] },
 					{ q: "Do I need snorkeling experience?", a: ["Yes. You need to feel comfortable swimming and following the guide's instructions to fully enjoy the experience."] },
+					{ q: "Is transport from La Paz included?", a: ["No. We meet in La Paz at 5:00 AM and drive in a convoy to Puerto Chale. If you don't have a car, you can add our round-trip transport for $500 MXN per person when you book. You can also meet us directly in Puerto Chale at 8:00 AM, although we recommend the convoy."] },
 					{ q: "What if the weather doesn't allow us to go out?", a: ["If conditions aren't safe, you can choose to reschedule the activity or receive the corresponding refund."] },
 				],
 			},
@@ -1955,9 +1958,9 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 						name: "Shared",
 						amountMxn: 3500,
 						amountNote: "/ person",
-						desc: "The Sardine Run with round-trip transport from La Paz and a marine biologist guide included.",
+						desc: "The Sardine Run with a marine biologist guide included. Convoy departure from La Paz; optional transport +$500 MXN per person.",
 						items: [
-							"Round-trip transport from La Paz",
+							"Convoy from La Paz (optional transport +$500 per person)",
 							"Marine biologist guide and certified captain",
 							"Full snorkel gear and wetsuit",
 							"Snacks and water",

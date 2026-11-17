@@ -233,7 +233,7 @@ const es: GuideText = {
 		{ title: "Si tienes pocas horas", text: `${h.name("tiburon-ballena")} dura 2 a 3 h (${h.range(shark().months)}) y ${h.name("scuba-discovery")} unas 4 h, todo el año.` },
 		{ title: "Si no quieres meterte al agua", text: `${h.name("tour-ballena-gris")} es todo desde la lancha (${h.range(gray().months)}). En ${h.name("safari-la-ventana")} puedes quedarte en la lancha durante los encuentros.` },
 		{ title: "Si nunca has buceado", text: `${h.name("scuba-discovery")} (${h.price("scuba-discovery")}, máximo 6 m, sin certificación). También hay Discovery en Espíritu Santo (${h.price("buceo-la-paz", "firstDive")}) y en Cabo Pulmo (${h.price("buceo-cabo-pulmo", "firstDive")}). Para certificarte: ${h.name("certificacion-open-water")} (${h.price("certificacion-open-water")}).` },
-		{ title: "La Paz o La Ventana", text: `Desde La Paz salen Espíritu Santo (snorkel y buceo) y el tiburón ballena. ${h.name("safari-la-ventana")} sale de La Ventana; podemos organizar transporte redondo desde La Paz por $1,000 MXN adicionales (hasta 4 personas, sujeto a disponibilidad). Cabo Pulmo no incluye transporte desde La Paz.` },
+		{ title: "La Paz o La Ventana", text: `Desde La Paz salen Espíritu Santo (snorkel y buceo) y el tiburón ballena. ${h.name("safari-la-ventana")} sale de La Ventana; podemos organizar transporte redondo desde La Paz por $1,000 MXN adicionales (hasta 4 personas, sujeto a disponibilidad). Cabo Pulmo no incluye transporte desde La Paz. El Sardine Run sale a las 5:00 a. m. de La Paz en caravana hasta Puerto Chale; si no tienes auto, el transporte cuesta $500 MXN por persona.` },
 	],
 	faqTitle: "Preguntas frecuentes",
 	faqs: (h) => [
@@ -303,7 +303,7 @@ const en: GuideText = {
 		{ title: "If you only have a few hours", text: `${h.name("tiburon-ballena")} takes 2 to 3 h (${h.range(shark().months)}) and ${h.name("scuba-discovery")} about 4 h, all year.` },
 		{ title: "If you don't want to get in the water", text: `${h.name("tour-ballena-gris")} is all from the boat (${h.range(gray().months)}). On ${h.name("safari-la-ventana")} you can stay on the boat during encounters.` },
 		{ title: "If you've never dived", text: `${h.name("scuba-discovery")} (${h.price("scuba-discovery")}, 6 m max, no certification). There's also Discovery at Espiritu Santo (${h.price("buceo-la-paz", "firstDive")}) and Cabo Pulmo (${h.price("buceo-cabo-pulmo", "firstDive")}). To get certified: ${h.name("certificacion-open-water")} (${h.price("certificacion-open-water")}).` },
-		{ title: "La Paz or La Ventana", text: `Espiritu Santo (snorkeling and diving) and the whale shark tour leave from La Paz. ${h.name("safari-la-ventana")} leaves from La Ventana; we can arrange round-trip transport from La Paz for an extra $1,000 MXN (up to 4 people, subject to availability). Cabo Pulmo doesn't include transport from La Paz.` },
+		{ title: "La Paz or La Ventana", text: `Espiritu Santo (snorkeling and diving) and the whale shark tour leave from La Paz. ${h.name("safari-la-ventana")} leaves from La Ventana; we can arrange round-trip transport from La Paz for an extra $1,000 MXN (up to 4 people, subject to availability). Cabo Pulmo doesn't include transport from La Paz. The Sardine Run leaves La Paz at 5:00 AM in a convoy to Puerto Chale; if you don't have a car, transport is $500 MXN per person.` },
 	],
 	faqTitle: "Frequently asked questions",
 	faqs: (h) => [
@@ -373,7 +373,7 @@ const fr: GuideText = {
 		{ title: "Si vous avez peu de temps", text: `${h.name("tiburon-ballena")} dure 2 à 3 h (${h.range(shark().months)}) et ${h.name("scuba-discovery")} environ 4 h, toute l'année.` },
 		{ title: "Si vous ne voulez pas entrer dans l'eau", text: `${h.name("tour-ballena-gris")} se fait entièrement depuis le bateau (${h.range(gray().months)}). Pendant ${h.name("safari-la-ventana")}, vous pouvez rester sur le bateau.` },
 		{ title: "Si vous n'avez jamais plongé", text: `${h.name("scuba-discovery")} (${h.price("scuba-discovery")}, 6 m max, sans certification). Il y a aussi un baptême à Espíritu Santo (${h.price("buceo-la-paz", "firstDive")}) et à Cabo Pulmo (${h.price("buceo-cabo-pulmo", "firstDive")}). Pour vous certifier : ${h.name("certificacion-open-water")} (${h.price("certificacion-open-water")}).` },
-		{ title: "La Paz ou La Ventana", text: `Espíritu Santo (snorkeling et plongée) et le requin-baleine partent de La Paz. ${h.name("safari-la-ventana")} part de La Ventana ; nous pouvons organiser le transport aller-retour depuis La Paz pour 1 000 MXN de plus (jusqu'à 4 personnes, selon disponibilité). Cabo Pulmo n'inclut pas de transport depuis La Paz.` },
+		{ title: "La Paz ou La Ventana", text: `Espíritu Santo (snorkeling et plongée) et le requin-baleine partent de La Paz. ${h.name("safari-la-ventana")} part de La Ventana ; nous pouvons organiser le transport aller-retour depuis La Paz pour 1 000 MXN de plus (jusqu'à 4 personnes, selon disponibilité). Cabo Pulmo n'inclut pas de transport depuis La Paz. Le Sardine Run part de La Paz à 5h00 en convoi jusqu'à Puerto Chale ; sans voiture, le transport coûte 500 MXN par personne.` },
 	],
 	faqTitle: "Questions fréquentes",
 	faqs: (h) => [
@@ -443,7 +443,7 @@ const zh: GuideText = {
 		{ title: "时间不多", text: `${h.name("tiburon-ballena")}约2到3小时（${h.range(shark().months)}），${h.name("scuba-discovery")}约4小时，全年开放。` },
 		{ title: "不想下水", text: `${h.name("tour-ballena-gris")}全程在船上（${h.range(gray().months)}）。参加${h.name("safari-la-ventana")}时也可以留在船上。` },
 		{ title: "从没潜过水", text: `${h.name("scuba-discovery")}（${h.price("scuba-discovery")}，最深6米，无需证书）。圣灵岛（${h.price("buceo-la-paz", "firstDive")}）和卡波普尔莫（${h.price("buceo-cabo-pulmo", "firstDive")}）也有体验潜水。想考证：${h.name("certificacion-open-water")}（${h.price("certificacion-open-water")}）。` },
-		{ title: "拉巴斯还是拉文塔纳", text: `圣灵岛（浮潜和潜水）和鲸鲨行程从拉巴斯出发。${h.name("safari-la-ventana")}从拉文塔纳出发；可安排拉巴斯往返交通，另加1,000墨西哥比索（最多4人，视情况而定）。卡波普尔莫不含从拉巴斯出发的交通。` },
+		{ title: "拉巴斯还是拉文塔纳", text: `圣灵岛（浮潜和潜水）和鲸鲨行程从拉巴斯出发。${h.name("safari-la-ventana")}从拉文塔纳出发；可安排拉巴斯往返交通，另加1,000墨西哥比索（最多4人，视情况而定）。卡波普尔莫不含从拉巴斯出发的交通。沙丁鱼洄游早上5:00从拉巴斯结队出发前往查莱港;没有车的话,交通每人500墨西哥比索。` },
 	],
 	faqTitle: "常见问题",
 	faqs: (h) => [
@@ -513,7 +513,7 @@ const ca: GuideText = {
 		{ title: "Si tens poques hores", text: `${h.name("tiburon-ballena")} dura de 2 a 3 h (${h.range(shark().months)}) i ${h.name("scuba-discovery")} unes 4 h, tot l'any.` },
 		{ title: "Si no vols entrar a l'aigua", text: `${h.name("tour-ballena-gris")} és tot des de la barca (${h.range(gray().months)}). A ${h.name("safari-la-ventana")} et pots quedar a la barca durant els encontres.` },
 		{ title: "Si no has bussejat mai", text: `${h.name("scuba-discovery")} (${h.price("scuba-discovery")}, màxim 6 m, sense certificació). També hi ha Discovery a Espíritu Santo (${h.price("buceo-la-paz", "firstDive")}) i a Cabo Pulmo (${h.price("buceo-cabo-pulmo", "firstDive")}). Per certificar-te: ${h.name("certificacion-open-water")} (${h.price("certificacion-open-water")}).` },
-		{ title: "La Paz o La Ventana", text: `Des de La Paz surten Espíritu Santo (snorkel i busseig) i el tauró balena. ${h.name("safari-la-ventana")} surt de La Ventana; podem organitzar transport d'anada i tornada des de La Paz per 1.000 MXN addicionals (fins a 4 persones, segons disponibilitat). Cabo Pulmo no inclou transport des de La Paz.` },
+		{ title: "La Paz o La Ventana", text: `Des de La Paz surten Espíritu Santo (snorkel i busseig) i el tauró balena. ${h.name("safari-la-ventana")} surt de La Ventana; podem organitzar transport d'anada i tornada des de La Paz per 1.000 MXN addicionals (fins a 4 persones, segons disponibilitat). Cabo Pulmo no inclou transport des de La Paz. El Sardine Run surt de La Paz a les 5:00 h en caravana fins a Puerto Chale; si no tens cotxe, el transport costa 500 MXN per persona.` },
 	],
 	faqTitle: "Preguntes freqüents",
 	faqs: (h) => [

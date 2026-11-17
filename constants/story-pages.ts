@@ -1898,7 +1898,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océano donde todo ocurre al mismo tiempo",
 			text: "Miles de sardinas intentan mantenerse unidas. Los marlines atraviesan la bola de carnada a toda velocidad. Lobos marinos aparecen desde las profundidades para unirse a la cacería. Bandadas de aves señalan dónde está la acción. Eso es Bahía Magdalena. Aquí no seguimos un itinerario: seguimos lo que el mar decide mostrarnos.",
-			meta: "Desde La Paz · ~10 horas · Noviembre–diciembre",
+			meta: "Salida en caravana desde La Paz · Noviembre–diciembre",
 			primaryLabel: "Reserva tu Ocean Safari",
 			primaryWa: "Hola! quiero reservar el Ocean Safari en Bahía Magdalena",
 			secondaryLabel: "Ver cómo será la expedición",
@@ -1908,7 +1908,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			{
 				type: "quickfacts",
 				items: [
-					{ value: "~10 horas", label: "Con traslado redondo" },
+					{ value: "5:00 a. m.", label: "Salida en caravana desde La Paz" },
 					{ value: "Nov – dic", label: "Temporada" },
 					{ value: "Snorkel", label: "En mar abierto" },
 					{ value: "Grupos pequeños", label: "Menor impacto" },
@@ -1936,7 +1936,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				note: "En un Ocean Safari no existe una ruta fija. No navegamos de un punto A a un punto B: observamos constantemente y seguimos las señales del océano.",
 				items: [
 					{
-						time: "Antes del amanecer · salida desde La Paz",
+						time: "5:00 a. m. · salida en caravana desde La Paz",
 						title: "Cruzamos el desierto hacia el Pacífico",
 						paragraphs: [
 							"Nuestra aventura comienza antes de que el océano despierte por completo. Muy temprano salimos desde La Paz rumbo a Bahía Magdalena, atravesando el desierto hasta llegar a la costa del Pacífico. El Mar de Cortés queda atrás y frente a nosotros aparece uno de los ecosistemas marinos más dinámicos de México.",
@@ -2018,7 +2018,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				kicker: "Todo lo que incluye",
 				title: "Lo que ya está resuelto",
 				items: [
-					{ title: "Transporte redondo desde La Paz", text: "Cruzamos el desierto hasta la costa del Pacífico y de regreso." },
+					{ title: "Caravana desde La Paz", text: "Nos vemos en La Paz a las 5:00 a. m. y vamos juntos hasta Puerto Chale. ¿No tienes auto? Agrega nuestro transporte redondo por $500 MXN por persona al reservar." },
 					{ title: "Embarcación y capitán certificado", text: "Con conocimiento del ecosistema de Bahía Magdalena." },
 					{ title: "Guía biólogo marino", text: "Interpreta el océano y te ayuda a entender lo que está ocurriendo." },
 					{ title: "Equipo completo de snorkel", text: "Visor, snorkel, aletas y traje de neopreno." },
@@ -2032,7 +2032,9 @@ export const storyPages: Record<string, StoryPageData> = {
 				title: "Información importante",
 				items: [
 					{ label: "Temporada", value: "Noviembre y diciembre." },
-					{ label: "Duración", value: "Aproximadamente 10 horas, considerando el traslado redondo desde La Paz y la actividad en el mar." },
+					{ label: "Duración", value: "Aproximadamente 10 horas desde La Paz, contando el camino de ida y vuelta y la actividad en el mar." },
+					{ label: "Punto de encuentro", value: "La Paz, 5:00 a. m. De ahí salimos en caravana hacia Puerto Chale, donde el safari empieza a las 8:00 a. m. Si lo prefieres, puedes vernos directamente en Puerto Chale, aunque recomendamos la caravana. Te mandamos las ubicaciones al reservar." },
+					{ label: "Transporte", value: "No está incluido. Si no tienes auto, agrega nuestro transporte redondo La Paz ⇄ Puerto Chale por $500 MXN por persona al reservar." },
 					{ label: "Nivel", value: "Necesitas sentirte cómodo nadando en mar abierto y con experiencia de snorkel (respirar desde el tubo)." },
 					{ label: "Grupos pequeños", value: "Trabajamos con grupos reducidos para disfrutar con tranquilidad y minimizar el impacto sobre la fauna." },
 				],
@@ -2045,6 +2047,7 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ q: "¿Está garantizado el Sardine Run?", a: ["No. Trabajamos con fauna completamente salvaje y cada día es diferente. Realizamos la actividad únicamente durante la mejor temporada y ponemos toda nuestra experiencia para interpretar el océano y aumentar las posibilidades de vivir el fenómeno."] },
 					{ q: "¿Qué pasa si no encontramos una bola de sardinas?", a: ["Seguiremos explorando Bahía Magdalena en busca de otras oportunidades. Cada salida es distinta y siempre existe la posibilidad de observar otras especies pelágicas y comportamientos naturales únicos."] },
 					{ q: "¿Necesito experiencia haciendo snorkel?", a: ["Sí. Necesitas sentirte cómodo nadando y siguiendo las indicaciones del guía para poder disfrutar plenamente de la experiencia."] },
+					{ q: "¿Incluye transporte desde La Paz?", a: ["No. Nos vemos en La Paz a las 5:00 a. m. y vamos en caravana hasta Puerto Chale. Si no tienes auto, puedes agregar nuestro transporte redondo por $500 MXN por persona al reservar. También puedes vernos directamente en Puerto Chale a las 8:00 a. m., aunque recomendamos la caravana."] },
 					{ q: "¿Qué pasa si el clima no permite salir?", a: ["Si las condiciones no son seguras podrás elegir entre reprogramar la actividad o recibir el reembolso correspondiente."] },
 				],
 			},
@@ -2058,9 +2061,9 @@ export const storyPages: Record<string, StoryPageData> = {
 						name: "Compartido",
 						amountMxn: 3500,
 						amountNote: "/ persona",
-						desc: "El Sardine Run con traslado redondo desde La Paz y guía biólogo marino incluido.",
+						desc: "El Sardine Run con guía biólogo marino incluido. Salida en caravana desde La Paz; transporte opcional +$500 MXN por persona.",
 						items: [
-							"Transporte redondo desde La Paz",
+							"Caravana desde La Paz (transporte opcional +$500 por persona)",
 							"Guía biólogo marino y capitán certificado",
 							"Equipo completo de snorkel y neopreno",
 							"Snacks y agua",

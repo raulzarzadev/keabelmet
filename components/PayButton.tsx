@@ -13,7 +13,7 @@ import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-
 import { getStripeClient } from "@/lib/stripe-client"
 import { getSeason, seasonLabel, isDateInSeason } from "@/lib/expedition-seasons"
 import { formatMxn } from "@/lib/reservation"
-import { RIDE_ADDON_MXN, rideAddonAvailable } from "@/lib/ride-addon"
+import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel } from "@/lib/ride-addon"
 import Voucher from "@/components/Voucher"
 
 function stripeLocale(locale: string): StripeElementLocale {
@@ -52,7 +52,7 @@ const copy: Record<string, UI> = {
 		preparing: "Preparando tu pago…", close: "Cerrar", viewVoucher: "Ver mi voucher", includes: "Qué incluye",
 		errDate: "Elige una fecha.", errPast: "Elige una fecha futura.", errSeason: "Esa fecha está fuera de temporada.", errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.",
 		namePh: "Tu nombre", phonePh: "+52 …",
-		rideQuestion: "¿Necesitas raite de La Paz a La Ventana?", rideNote: "Transporte redondo · +$1,000 MXN por reserva", rideLine: "Raite La Paz ⇄ La Ventana",
+		rideQuestion: "¿Necesitas transporte {route}?", rideNote: "Transporte redondo · +{price} MXN {unit}", rideLine: "Transporte {route}",
 	},
 	en: {
 		detailsTitle: "Your reservation details", date: "Preferred date", people: "People", name: "Full name", email: "Email", phone: "Phone / WhatsApp",
@@ -61,7 +61,7 @@ const copy: Record<string, UI> = {
 		preparing: "Preparing your payment…", close: "Close", viewVoucher: "View my voucher", includes: "What's included",
 		errDate: "Choose a date.", errPast: "Choose a future date.", errSeason: "That date is out of season.", errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp.",
 		namePh: "Your name", phonePh: "+1 …",
-		rideQuestion: "Need a ride from La Paz to La Ventana?", rideNote: "Round-trip transport · +$1,000 MXN per booking", rideLine: "Ride La Paz ⇄ La Ventana",
+		rideQuestion: "Need transport {route}?", rideNote: "Round-trip transport · +{price} MXN {unit}", rideLine: "Transport {route}",
 	},
 	fr: {
 		detailsTitle: "Détails de votre réservation", date: "Date souhaitée", people: "Personnes", name: "Nom complet", email: "E-mail", phone: "Téléphone / WhatsApp",
@@ -70,7 +70,7 @@ const copy: Record<string, UI> = {
 		preparing: "Préparation de votre paiement…", close: "Fermer", viewVoucher: "Voir mon voucher", includes: "Ce qui est inclus",
 		errDate: "Choisissez une date.", errPast: "Choisissez une date future.", errSeason: "Cette date est hors saison.", errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp.",
 		namePh: "Votre nom", phonePh: "+33 …",
-		rideQuestion: "Besoin d'un transfert de La Paz à La Ventana ?", rideNote: "Transport aller-retour · +1 000 MXN par réservation", rideLine: "Transfert La Paz ⇄ La Ventana",
+		rideQuestion: "Besoin d'un transfert {route} ?", rideNote: "Transport aller-retour · +{price} MXN {unit}", rideLine: "Transfert {route}",
 	},
 	zh: {
 		detailsTitle: "您的预订详情", date: "希望的日期", people: "人数", name: "全名", email: "电子邮箱", phone: "电话 / WhatsApp",
@@ -79,7 +79,7 @@ const copy: Record<string, UI> = {
 		preparing: "正在准备付款…", close: "关闭", viewVoucher: "查看我的凭证", includes: "包含内容",
 		errDate: "请选择日期。", errPast: "请选择未来的日期。", errSeason: "该日期不在季节内。", errName: "请输入您的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。",
 		namePh: "您的姓名", phonePh: "+86 …",
-		rideQuestion: "需要从拉巴斯到拉文塔纳的接送吗？", rideNote: "往返接送 · 每次预订 +$1,000 MXN", rideLine: "接送 拉巴斯 ⇄ 拉文塔纳",
+		rideQuestion: "需要{route}的接送吗？", rideNote: "往返接送 · {unit} +{price} MXN", rideLine: "接送 {route}",
 	},
 	ca: {
 		detailsTitle: "Detalls de la teva reserva", date: "Data desitjada", people: "Persones", name: "Nom complet", email: "Correu electrònic", phone: "Telèfon / WhatsApp",
@@ -88,7 +88,7 @@ const copy: Record<string, UI> = {
 		preparing: "Preparant el teu pagament…", close: "Tancar", viewVoucher: "Veure el meu voucher", includes: "Què inclou",
 		errDate: "Tria una data.", errPast: "Tria una data futura.", errSeason: "Aquesta data és fora de temporada.", errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp.",
 		namePh: "El teu nom", phonePh: "+34 …",
-		rideQuestion: "Necessites transport de La Paz a La Ventana?", rideNote: "Transport d'anada i tornada · +$1.000 MXN per reserva", rideLine: "Transport La Paz ⇄ La Ventana",
+		rideQuestion: "Necessites transport {route}?", rideNote: "Transport d'anada i tornada · +{price} MXN {unit}", rideLine: "Transport {route}",
 	},
 }
 
@@ -157,7 +157,10 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 	const quantity = perPerson ? people : 1
 	const rideEligible = rideAddonAvailable(slug)
-	const rideMxn = ride && rideEligible ? RIDE_ADDON_MXN : 0
+	const rideCost = rideAddonMxn(slug, people)
+	const rideMxn = ride && rideEligible ? rideCost : 0
+	const fillRide = (txt: string) =>
+		txt.replace("{route}", rideRoute(slug, locale)).replace("{price}", formatMxn(rideAddonMxn(slug, 1))).replace("{unit}", rideUnitLabel(slug, locale))
 	const totalMxn = unitAmountMxn * quantity + rideMxn
 
 	useEffect(() => {
@@ -281,15 +284,15 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 							<label className={`res-ride${ride ? " is-on" : ""}`}>
 								<input type="checkbox" checked={ride} onChange={(e) => setRide(e.target.checked)} />
 								<span className="res-ride-body">
-									<span className="res-ride-q">🚐 {t.rideQuestion}</span>
-									<span className="res-ride-note">{t.rideNote}</span>
+									<span className="res-ride-q">🚐 {fillRide(t.rideQuestion)}</span>
+									<span className="res-ride-note">{fillRide(t.rideNote)}</span>
 								</span>
-								<span className="res-ride-price">+{formatMxn(RIDE_ADDON_MXN)}</span>
+								<span className="res-ride-price">+{formatMxn(rideCost)}</span>
 							</label>
 						)}
 
 						{rideMxn > 0 && (
-							<div className="checkout-breakdown res-ride-line">+ {t.rideLine} · {formatMxn(RIDE_ADDON_MXN)} MXN</div>
+							<div className="checkout-breakdown res-ride-line">+ {fillRide(t.rideLine)} · {formatMxn(rideMxn)} MXN</div>
 						)}
 
 						<div className="res-total">
@@ -319,7 +322,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 				{step === "result" && reservation && (
 					<>
-						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus, includes: rideMxn > 0 ? [...(items ?? []), t.rideLine] : items }} />
+						<Voucher data={{ folio: reservation.folio, expeditionName, cardName, dateISO: reservation.dateISO, people: reservation.people, totalMxn: reservation.totalMxn, locale, status: resultStatus, includes: rideMxn > 0 ? [...(items ?? []), fillRide(t.rideLine)] : items }} />
 						<div className="voucher-actions">
 							<a className="btn btn-solid" href={`/${locale}/reserva/${reservation.paymentIntentId}`}>{t.viewVoucher}</a>
 							<button type="button" className="btn btn-ghost" onClick={onClose}>{t.close}</button>
