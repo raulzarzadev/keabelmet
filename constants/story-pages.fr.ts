@@ -22,7 +22,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 		},
 		blocks: [
 			{ type: "quickfacts", items: [
-				{ value: "8 000 MXN", label: "Par personne" },
+				{ value: "10 000 MXN", label: "Par personne" },
 				{ value: "4 plongées", label: "2 en plage + 2 en bateau" },
 				{ value: "eLearning", label: "Théorie incluse" },
 				{ value: "Dès 1 personne", label: "Seul ou en groupe" },
@@ -59,7 +59,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				"Vous ne vous sentez pas à l'aise en nageant.",
 			] } },
 			{ type: "info", ink2: true, kicker: "Avant de réserver", title: "Informations importantes", items: [
-				{ label: "Prix", value: "8 000 MXN par personne." },
+				{ label: "Prix", value: "10 000 MXN par personne." },
 				{ label: "Inclus", value: "eLearning (théorie), 4 plongées et équipement complet." },
 				{ label: "Plongées", value: "2 en plages calmes + 2 depuis le bateau." },
 				{ label: "Groupe", value: "Dès 1 personne ; groupes bienvenus." },
@@ -74,7 +74,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				{ q: "Comment réserver ?", a: ["Contactez-nous d'abord sur WhatsApp pour coordonner les dates et confirmer les disponibilités. Une fois convenu, vous réservez votre place avec le paiement."] },
 			] },
 			{ type: "pricing", id: "precios", kicker: "Prix", title: "Réservez votre certification", note: "Avant de réserver, contactez-nous sur WhatsApp pour coordonner les dates et la logistique de votre certification (seul ou en groupe). Sous réserve de disponibilité.", cards: [
-				{ name: "Certification PADI Open Water", amountMxn: 8000, amountNote: "/ personne", desc: "Votre licence internationale de plongée, valable à vie, avec instructeur certifié.", items: [
+				{ name: "Certification PADI Open Water", amountMxn: 10000, amountNote: "/ personne", desc: "Votre licence internationale de plongée, valable à vie, avec instructeur certifié.", items: [
 					"eLearning officiel PADI (théorie)",
 					"Instructeur PADI certifié",
 					"2 plongées en plages calmes",

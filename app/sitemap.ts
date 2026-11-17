@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import { experiences } from "@/constants/experiences"
 import { locales, defaultLocale, type Locale } from "@/lib/i18n"
-import { getAllPosts } from "@/lib/blog"
+import { getAllPosts, CATEGORY_META } from "@/lib/blog"
 
 const baseUrl = "https://www.keabelmet.com"
 
@@ -57,6 +57,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogIndexLangs = { es: `${baseUrl}/blog`, en: `${baseUrl}/en/blog`, "x-default": `${baseUrl}/blog` }
   for (const url of [blogIndexLangs.es, blogIndexLangs.en]) {
     entries.push({ url, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8, alternates: { languages: blogIndexLangs } })
+  }
+  // Páginas de tema del blog (es / en)
+  for (const m of CATEGORY_META) {
+    const es = `${baseUrl}/blog/tema/${m.slug.es}`
+    const en = `${baseUrl}/en/blog/tema/${m.slug.en}`
+    const languages = { es, en, "x-default": es }
+    for (const url of [es, en]) entries.push({ url, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7, alternates: { languages } })
   }
   for (const post of getAllPosts()) {
     const es = `${baseUrl}/blog/${post.es.slug}`

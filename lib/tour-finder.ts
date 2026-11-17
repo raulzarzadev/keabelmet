@@ -130,7 +130,7 @@ export const TOURS: FinderTour[] = [
 		id: "certificacion-open-water",
 		href: "/experiencias/certificacion-open-water",
 		image: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-		modes: { firstDive: { mxn: 8000 } },
+		modes: { firstDive: { mxn: 10000 } },
 		months: ALL,
 		time: "days",
 		// La página no publica edad mínima; no lo recomendamos con menores de 12.

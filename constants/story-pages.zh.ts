@@ -21,7 +21,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		},
 		blocks: [
 			{ type: "quickfacts", items: [
-				{ value: "$8,000 MXN", label: "每人" },
+				{ value: "$10,000 MXN", label: "每人" },
 				{ value: "4次潜水", label: "2次海滩 + 2次船潜" },
 				{ value: "eLearning", label: "含理论" },
 				{ value: "一人成行", label: "单人或团体" },
@@ -58,7 +58,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				"你在游泳时感到不自在。",
 			] } },
 			{ type: "info", ink2: true, kicker: "预订前", title: "重要信息", items: [
-				{ label: "价格", value: "每人 $8,000 MXN。" },
+				{ label: "价格", value: "每人 $10,000 MXN。" },
 				{ label: "包含", value: "eLearning（理论）、4次潜水和全套装备。" },
 				{ label: "潜水", value: "2次平静海滩 + 2次船潜。" },
 				{ label: "团体", value: "一人成行；欢迎团体。" },
@@ -73,7 +73,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				{ q: "如何预订？", a: ["请先通过 WhatsApp 联系我们协调日期并确认名额。确定后，再通过付款锁定名额。"] },
 			] },
 			{ type: "pricing", id: "precios", kicker: "价格", title: "锁定你的认证", note: "预订前，请通过 WhatsApp 联系我们，协调你（单人或团体）认证的日期与行程。视名额而定。", cards: [
-				{ name: "PADI 开放水域认证", amountMxn: 8000, amountNote: "/ 每人", desc: "你的终身国际潜水执照，由持证教练带领。", items: [
+				{ name: "PADI 开放水域认证", amountMxn: 10000, amountNote: "/ 每人", desc: "你的终身国际潜水执照，由持证教练带领。", items: [
 					"官方 PADI eLearning（理论）",
 					"持证 PADI 教练",
 					"2次平静海滩潜水",

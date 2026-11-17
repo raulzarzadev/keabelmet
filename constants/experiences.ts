@@ -47,7 +47,7 @@ export const experiences: Experience[] = [
 		image: "/buceo-la-paz-buzo.jpg",
 		rating: 5.0,
 		reviews: 0,
-		fromMxn: 8000,
+		fromMxn: 10000,
 		days: 2,
 		difficulty: "moderate",
 		capacity: { min: 1, max: 6 },

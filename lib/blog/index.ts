@@ -3,6 +3,8 @@ import { defaultLocale, type Locale } from "@/lib/i18n"
 import type { BlogCategory, BlogLocale, BlogPost, BlogPostContent } from "./types"
 
 export * from "./types"
+export * from "./search"
+import { normalizeSearch, type SearchItem } from "./search"
 
 export const BLOG_CATEGORIES: { key: BlogCategory; es: string; en: string }[] = [
 	{ key: "fauna", es: "Fauna marina", en: "Marine wildlife" },
@@ -83,4 +85,112 @@ export function relatedPosts(post: BlogPost, max = 3): BlogPost[] {
 	const sameCat = getAllPosts().filter((p) => p.id !== post.id && p.category === post.category && !explicit.includes(p))
 	const others = getAllPosts().filter((p) => p.id !== post.id && !explicit.includes(p) && !sameCat.includes(p))
 	return [...explicit, ...sameCat, ...others].slice(0, max)
+}
+
+// ── Temas (subpáginas /blog/tema/<slug>) ────────────────────────────────────
+
+export interface CategoryMeta {
+	key: BlogCategory
+	slug: Record<BlogLocale, string>
+	image: string
+	desc: Record<BlogLocale, string>
+}
+
+export const CATEGORY_META: CategoryMeta[] = [
+	{
+		key: "fauna",
+		slug: { es: "fauna-marina", en: "marine-wildlife" },
+		image: "/images/especies/lobomarinonadando.jpeg",
+		desc: {
+			es: "Tiburón ballena, ballenas, lobos marinos, móbulas, marlines y más: cómo viven, qué comen y cómo verlos con respeto.",
+			en: "Whale sharks, whales, sea lions, mobula rays, marlin and more: how they live, what they eat and how to see them respectfully.",
+		},
+	},
+	{
+		key: "temporadas",
+		slug: { es: "cuando-ir", en: "when-to-go" },
+		image: "/images/especies/ballena-jorobada-saltando.jpeg",
+		desc: {
+			es: "Mes por mes: cuándo llega cada animal, la temperatura del agua y la mejor época para tu viaje.",
+			en: "Month by month: when each animal arrives, water temperature and the best time for your trip.",
+		},
+	},
+	{
+		key: "destinos",
+		slug: { es: "lugares", en: "places" },
+		image: "/espiritu-santo-aerea.jpg",
+		desc: {
+			es: "Isla Espíritu Santo, Balandra, Bahía Magdalena, Cabo Pulmo y los rincones del Mar de Cortés.",
+			en: "Espíritu Santo Island, Balandra, Magdalena Bay, Cabo Pulmo and the corners of the Sea of Cortez.",
+		},
+	},
+	{
+		key: "actividades",
+		slug: { es: "buceo-y-tours", en: "diving-and-tours" },
+		image: "/images/buceo/espiritu-buzo-cardumen.jpg",
+		desc: {
+			es: "Snorkel, buceo, certificación y safaris: qué esperar, qué nivel necesitas y cómo elegir.",
+			en: "Snorkeling, diving, certification and safaris: what to expect, the level you need and how to choose.",
+		},
+	},
+	{
+		key: "planea",
+		slug: { es: "planea-tu-viaje", en: "plan-your-trip" },
+		image: "/images/safari/lancha-avistando-ballena.jpg",
+		desc: {
+			es: "Cuántos días quedarte, qué llevar a la lancha y cómo armar tu viaje a La Paz.",
+			en: "How many days to stay, what to bring on the boat and how to put together your trip to La Paz.",
+		},
+	},
+	{
+		key: "conservacion",
+		slug: { es: "ciencia-y-conservacion", en: "science-and-conservation" },
+		image: "/buceo-cabo-pulmo-cardumen.jpg",
+		desc: {
+			es: "Surgencias, El Niño, la recuperación de Cabo Pulmo y la ciencia que explica el Mar de Cortés.",
+			en: "Upwellings, El Niño, Cabo Pulmo's recovery and the science behind the Sea of Cortez.",
+		},
+	},
+]
+
+export function categoryMeta(key: BlogCategory): CategoryMeta {
+	return CATEGORY_META.find((c) => c.key === key)!
+}
+
+/** Ruta de la subpágina de un tema para un idioma del sitio. */
+export function categoryPath(key: BlogCategory, locale: Locale): string {
+	return `${localePrefix(locale)}/blog/tema/${categoryMeta(key).slug[contentLocale(locale)]}`
+}
+
+/** Busca un tema por su slug en cualquier idioma. */
+export function findCategoryBySlug(slug: string): { meta: CategoryMeta; lang: BlogLocale } | undefined {
+	for (const meta of CATEGORY_META) {
+		if (meta.slug.es === slug) return { meta, lang: "es" }
+		if (meta.slug.en === slug) return { meta, lang: "en" }
+	}
+	return undefined
+}
+
+export function searchIndex(locale: Locale, posts: BlogPost[] = getAllPosts()): SearchItem[] {
+	const lang = contentLocale(locale)
+	return posts.map((p) => {
+		const c = p[lang]
+		const heads = c.blocks.filter((b) => b.type === "h2" || b.type === "h3").map((b) => ("text" in b ? b.text : ""))
+		const text = normalizeSearch(
+			plainText([c.title, c.excerpt, c.description, c.answer, ...heads, ...c.faq.map((f) => f.q), categoryLabel(p.category, lang)].join(" ")),
+		)
+		return {
+			id: p.id,
+			href: postPath(p, locale),
+			title: c.title,
+			excerpt: c.excerpt,
+			cover: p.cover,
+			coverAlt: c.coverAlt,
+			category: p.category,
+			categoryLabel: categoryLabel(p.category, lang),
+			minutes: readMinutes(c),
+			text,
+			titleN: normalizeSearch(c.title),
+		}
+	})
 }

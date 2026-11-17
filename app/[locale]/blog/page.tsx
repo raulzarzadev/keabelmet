@@ -1,48 +1,30 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { permanentRedirect } from "next/navigation"
 import { isValidLocale, defaultLocale, type Locale } from "@/lib/i18n"
 import { SITE_URL } from "@/lib/seo"
+import BlogSearch from "@/components/blog/BlogSearch"
+import { blogCopy } from "@/lib/blog/copy"
 import {
 	getAllPosts,
 	contentLocale,
 	categoryLabel,
+	categoryPath,
 	postPath,
 	readMinutes,
-	localizeHref,
+	searchIndex,
 	BLOG_CATEGORIES,
+	CATEGORY_META,
 	type BlogCategory,
 	type BlogLocale,
 } from "@/lib/blog"
-
-const copy: Record<BlogLocale, { kicker: string; title: string; sub: string; all: string; min: string; empty: string; metaTitle: string; metaDesc: string }> = {
-	es: {
-		kicker: "Blog Keabelmet",
-		title: "Todo lo que quieres saber antes de lanzarte al Mar de Cortés",
-		sub: "Respuestas claras, con fotos reales y respaldadas por ciencia, a las preguntas que todo viajero se hace sobre La Paz y Baja California Sur: fauna, temporadas, lugares, buceo y cómo planear tu viaje.",
-		all: "Todo",
-		min: "min",
-		empty: "Pronto publicaremos artículos en esta categoría.",
-		metaTitle: "Blog de fauna marina de La Paz y la Baja",
-		metaDesc: "Guías con base científica sobre el Mar de Cortés: cuándo ver tiburón ballena, ballena gris y lobos marinos, el Sardine Run, buceo y cómo planear tu viaje.",
-	},
-	en: {
-		kicker: "Keabelmet Blog",
-		title: "Everything you want to know before diving into the Sea of Cortez",
-		sub: "Clear, science-backed answers with real photos to the questions every traveler asks about La Paz and Baja California Sur: wildlife, seasons, places, diving and how to plan your trip.",
-		all: "All",
-		min: "min",
-		empty: "We'll publish articles in this category soon.",
-		metaTitle: "La Paz & Baja Marine Wildlife Blog",
-		metaDesc: "Science-backed guides to the Sea of Cortez: when to see whale sharks, gray whales and sea lions, the Sardine Run, diving and how to plan your trip.",
-	},
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
 	const { locale: loc } = await params
 	const locale: Locale = isValidLocale(loc) ? loc : defaultLocale
 	const lang = contentLocale(locale)
-	const c = copy[lang]
+	const c = blogCopy[lang]
 	const esUrl = `${SITE_URL}/blog`
 	const enUrl = `${SITE_URL}/en/blog`
 	return {
@@ -64,12 +46,13 @@ export default async function BlogIndex({
 	const { locale: loc } = await params
 	const locale: Locale = isValidLocale(loc) ? loc : defaultLocale
 	const lang = contentLocale(locale)
-	const c = copy[lang]
+	const c = blogCopy[lang]
 	const { cat } = await searchParams
-	const active = BLOG_CATEGORIES.some((x) => x.key === cat) ? (cat as BlogCategory) : null
-	const all = getAllPosts()
-	const posts = active ? all.filter((p) => p.category === active) : all
-	const base = localizeHref("/blog", locale)
+	// Los enlaces viejos ?cat=… ahora tienen su propia página de tema.
+	if (cat && BLOG_CATEGORIES.some((x) => x.key === cat)) permanentRedirect(categoryPath(cat as BlogCategory, locale))
+
+	const posts = getAllPosts()
+	const count = (k: BlogCategory) => posts.filter((p) => p.category === k).length
 
 	return (
 		<main>
@@ -80,18 +63,27 @@ export default async function BlogIndex({
 			</section>
 
 			<div className="page-wrap blog-wrap">
-				<nav className="blog-cats" aria-label={lang === "es" ? "Categorías" : "Categories"}>
-					<Link href={base} className={!active ? "on" : undefined}>{c.all}</Link>
-					{BLOG_CATEGORIES.map((x) => (
-						<Link key={x.key} href={`${base}?cat=${x.key}`} className={active === x.key ? "on" : undefined}>
-							{x[lang]}
-						</Link>
-					))}
-				</nav>
+				<BlogSearch
+					items={searchIndex(locale, posts)}
+					suggestions={c.suggestions}
+					lang={lang}
+					placeholder={c.placeholder}
+				>
+					<h2 className="blog-section-title">{c.topics}</h2>
+					<div className="blog-topics">
+						{CATEGORY_META.map((m) => (
+							<Link key={m.key} href={categoryPath(m.key, locale)} className="blog-topic">
+								<Image src={m.image} alt={categoryLabel(m.key, lang)} fill sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 380px" style={{ objectFit: "cover" }} />
+								<span className="blog-topic-body">
+									<strong>{categoryLabel(m.key, lang)}</strong>
+									<span>{m.desc[lang]}</span>
+									<em>{c.articles(count(m.key))} →</em>
+								</span>
+							</Link>
+						))}
+					</div>
 
-				{posts.length === 0 ? (
-					<p className="blog-empty">{c.empty}</p>
-				) : (
+					<h2 className="blog-section-title">{c.latest}</h2>
 					<div className="blog-grid">
 						{posts.map((p) => {
 							const pc = p[lang]
@@ -109,7 +101,7 @@ export default async function BlogIndex({
 							)
 						})}
 					</div>
-				)}
+				</BlogSearch>
 			</div>
 		</main>
 	)

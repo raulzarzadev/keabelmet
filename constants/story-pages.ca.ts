@@ -22,7 +22,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 		},
 		blocks: [
 			{ type: "quickfacts", items: [
-				{ value: "8.000 MXN", label: "Per persona" },
+				{ value: "10.000 MXN", label: "Per persona" },
 				{ value: "4 immersions", label: "2 a platja + 2 en vaixell" },
 				{ value: "eLearning", label: "Teoria inclosa" },
 				{ value: "Des d'1 persona", label: "Individual o en grup" },
@@ -59,7 +59,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				"No et sents còmode nedant.",
 			] } },
 			{ type: "info", ink2: true, kicker: "Abans de reservar", title: "Informació important", items: [
-				{ label: "Preu", value: "8.000 MXN per persona." },
+				{ label: "Preu", value: "10.000 MXN per persona." },
 				{ label: "Inclou", value: "eLearning (teoria), 4 immersions i equip complet." },
 				{ label: "Immersions", value: "2 en platges tranquil·les + 2 des de l'embarcació." },
 				{ label: "Grup", value: "Des d'1 persona; grups benvinguts." },
@@ -74,7 +74,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				{ q: "Com reservo?", a: ["Primer contacta'ns per WhatsApp per coordinar dates i confirmar disponibilitat. Un cop acordat, assegures el teu lloc amb el pagament."] },
 			] },
 			{ type: "pricing", id: "precios", kicker: "Preu", title: "Assegura la teva certificació", note: "Abans de reservar, contacta'ns per WhatsApp per coordinar les dates i la logística de la teva certificació (individual o en grup). Subjecte a disponibilitat.", cards: [
-				{ name: "Certificació PADI Open Water", amountMxn: 8000, amountNote: "/ persona", desc: "La teva llicència internacional de busseig, vàlida de per vida, amb instructor certificat.", items: [
+				{ name: "Certificació PADI Open Water", amountMxn: 10000, amountNote: "/ persona", desc: "La teva llicència internacional de busseig, vàlida de per vida, amb instructor certificat.", items: [
 					"eLearning oficial PADI (teoria)",
 					"Instructor PADI certificat",
 					"2 immersions en platges tranquil·les",
