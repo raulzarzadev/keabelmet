@@ -3,6 +3,7 @@ import { getSeason, isDateInSeason } from "@/lib/expedition-seasons"
 import { experiences } from "@/constants/experiences"
 import { defaultLocale, type Locale } from "@/lib/i18n"
 import { computePackageDiscount, type AppliedPackage } from "@/lib/packages"
+import { rideAddonAvailable, rideAddonMxn } from "@/lib/ride-addon"
 
 /** Anticipo: 20% del total; el resto se liquida el día del tour. */
 export const DEPOSIT_RATE = 0.2
@@ -16,6 +17,10 @@ export interface DepositItem {
 	unitAmountMxn: number
 	people: number
 	dateISO: string
+	/** Transporte opcional desde La Paz (lib/ride-addon.ts). */
+	ride: boolean
+	rideMxn: number
+	/** Tour + transporte. */
 	subtotalMxn: number
 }
 
@@ -50,7 +55,9 @@ export function validateDepositItem(raw: unknown): DepositItem {
 	const cardName = typeof it.cardName === "string" ? it.cardName.slice(0, 120) : ""
 	const expeditionName =
 		typeof it.expeditionName === "string" && it.expeditionName ? it.expeditionName.slice(0, 120) : activityName(slug, defaultLocale)
-	return { slug, cardName, expeditionName, unitAmountMxn: unit, people, dateISO, subtotalMxn: unit * people }
+	const ride = it.ride === true && rideAddonAvailable(slug)
+	const rideMxn = ride ? rideAddonMxn(slug, people) : 0
+	return { slug, cardName, expeditionName, unitAmountMxn: unit, people, dateISO, ride, rideMxn, subtotalMxn: unit * people + rideMxn }
 }
 
 export function computeDeposit(
@@ -73,7 +80,7 @@ export function computeDeposit(
 
 /** Serialización compacta de los items para la metadata de Stripe (≤500 chars). */
 export function packItems(items: DepositItem[]): string {
-	return JSON.stringify(items.map((it) => ({ s: it.slug, u: it.unitAmountMxn, p: it.people, d: it.dateISO })))
+	return JSON.stringify(items.map((it) => ({ s: it.slug, u: it.unitAmountMxn, p: it.people, d: it.dateISO, ...(it.ride ? { r: 1 } : {}) })))
 }
 
 export interface PackedItem {
@@ -81,6 +88,7 @@ export interface PackedItem {
 	unitAmountMxn: number
 	people: number
 	dateISO: string
+	ride: boolean
 }
 
 export function unpackItems(json: string | undefined): PackedItem[] {
@@ -89,7 +97,7 @@ export function unpackItems(json: string | undefined): PackedItem[] {
 		const arr = JSON.parse(json)
 		if (!Array.isArray(arr)) return []
 		return arr
-			.map((x) => ({ slug: String(x.s), unitAmountMxn: Number(x.u), people: Number(x.p), dateISO: String(x.d) }))
+			.map((x) => ({ slug: String(x.s), unitAmountMxn: Number(x.u), people: Number(x.p), dateISO: String(x.d), ride: x.r === 1 }))
 			.filter((x) => x.slug && Number.isFinite(x.unitAmountMxn))
 	} catch {
 		return []

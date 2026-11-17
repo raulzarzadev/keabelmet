@@ -276,7 +276,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 					amountNote: "/ persona",
 					items: [
 						"Lancha compartida, 2-6 personas",
-						"Transporte desde La Paz",
+						"Caravana desde La Paz (transporte opcional +$500 por persona)",
 						"Equipo de snorkel incluido",
 						"Lunch y bebidas",
 						"Guía biólogo marino y foto/video incluidos",

@@ -1,3 +1,4 @@
+import { rideRoute } from "@/lib/ride-addon"
 import { Resend } from "resend"
 import { formatDate, formatMxn, reservationWhatsAppLink, type ReservationDetails } from "@/lib/reservation"
 import { getActivityDetails } from "@/lib/activity-details"
@@ -19,12 +20,15 @@ type EmailData = Pick<ReservationDetails, "expeditionName" | "cardName" | "dateI
 	rideAddon?: boolean
 }
 
-const rideLineByLocale: Record<string, string> = {
-	es: "Raite redondo La Paz ⇄ La Ventana",
-	en: "Round-trip ride La Paz ⇄ La Ventana",
-	fr: "Transfert aller-retour La Paz ⇄ La Ventana",
-	zh: "往返接送 拉巴斯 ⇄ 拉文塔纳",
-	ca: "Transport d'anada i tornada La Paz ⇄ La Ventana",
+const rideLinePrefix: Record<string, string> = {
+	es: "Transporte redondo",
+	en: "Round-trip transport",
+	fr: "Transfert aller-retour",
+	zh: "往返接送",
+	ca: "Transport d'anada i tornada",
+}
+function rideLine(slug: string | undefined, locale: string): string {
+	return `${rideLinePrefix[locale] ?? rideLinePrefix.es} ${rideRoute(slug ?? "", locale)}`
 }
 
 /** Foto principal por expedición (misma que el hero de cada página). */
@@ -117,7 +121,7 @@ function buildHtml(d: EmailData): string {
 	const row = (label: string, value: string, strong = false) =>
 		`<tr><td style="padding:11px 0;border-bottom:1px solid ${line};color:${dim};font-size:13px">${label}</td><td style="padding:11px 0;border-bottom:1px solid ${line};color:${strong ? teal : sand};font-size:${strong ? "16px" : "14px"};font-weight:${strong ? 700 : 400};text-align:right">${value}</td></tr>`
 	const baseIncludes = (d.slug ? getActivityDetails(d.slug, d.locale as Locale, d.cardName).includes : []).slice(0, 8)
-	const includes = d.rideAddon ? [...baseIncludes, rideLineByLocale[d.locale] ?? rideLineByLocale.es] : baseIncludes
+	const includes = d.rideAddon ? [...baseIncludes, rideLine(d.slug, d.locale)] : baseIncludes
 	const incItem = (it: string) =>
 		`<tr><td width="22" style="padding:5px 0;color:${teal};font-size:14px;font-weight:700;vertical-align:top">&#10003;</td><td style="padding:5px 0;color:${sand};font-size:13.5px;line-height:1.45">${it}</td></tr>`
 	const iconBtn = (href: string, icon: string, alt: string) =>
@@ -245,7 +249,7 @@ function eventDetailLines(d: OwnerNotifyData): string[] {
 		`Correo: ${d.customerEmail}`,
 		`Personas: ${d.people}`,
 		`Total: ${formatMxn(d.totalMxn)} MXN`,
-		d.rideAddon ? "Raite La Paz ⇄ La Ventana: Sí" : "",
+		d.rideAddon ? `Transporte ${rideRoute(d.slug ?? "", "es")}: Sí` : "",
 		`Expedición: ${d.cardName}`,
 	].filter(Boolean)
 }
@@ -305,7 +309,7 @@ function buildOwnerHtml(d: OwnerNotifyData): string {
 			${row("Folio", d.folio)}
 			${row("Fecha", formatDate(d.dateISO, "es"))}
 			${row("Personas", String(d.people))}
-			${d.rideAddon ? row("Raite La Paz ⇄ La Ventana", "Sí") : ""}
+			${d.rideAddon ? row(`Transporte ${rideRoute(d.slug ?? "", "es")}`, "Sí") : ""}
 			${row("Total", `${formatMxn(d.totalMxn)} MXN`, true)}
 		</table>
 	</td></tr>

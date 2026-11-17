@@ -11,6 +11,8 @@ export interface CartItem {
 	image: string
 	dateISO: string
 	people: number
+	/** Transporte opcional desde La Paz (solo expediciones que lo ofrecen). */
+	ride?: boolean
 }
 
 const STORAGE_KEY = "kbm-cart-v1"

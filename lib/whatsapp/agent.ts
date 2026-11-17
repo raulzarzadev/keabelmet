@@ -32,7 +32,7 @@ Fechas, clima y logística:
 - En cuanto el cliente mencione fechas (o un rango, "la próxima semana", "en diciembre"), usa revisar_fechas con la actividad y hasta 7 fechas concretas. Te dice si es temporada, si hay lugar según el calendario del equipo y el pronóstico (viento, ráfagas, olas, lluvia) con el link de Windy del punto.
 - Si un día sale bloqueado o lleno, no lo ofrezcas: propón las fechas cercanas que sí tengan lugar (revísalas con la herramienta).
 - Clima: el pronóstico solo existe a ~16 días; más lejos, di que el capitán revisa el clima 1–2 días antes y que, si no se puede salir por seguridad, se reprograma sin costo. Si la fecha sale BUENO no hace falta hablar del clima salvo que pregunten. Si sale MOVIDO, menciónalo con naturalidad (puede haber oleaje, se recomienda pastilla para el mareo). Si sale RIESGOSO, no asustes ni canceles: dilo con calma y, como plan B, propón la fecha cercana con mejor pronóstico o una actividad en otra zona que se vea mejor (revisa ambas con la herramienta). Comparte el link de Windy cuando hables del clima. Nunca prometas buen clima ni garantices avistamientos.
-- Logística: La Paz es la base. La Ventana está a ~1 h por carretera, Cabo Pulmo a ~2.5 h y Puerto Chale (ballena gris, Bahía Magdalena) a ~3 h con pickup a las 5 a. m. Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo: no los juntes con otra actividad el mismo día. Para varias actividades, ordena los días con sentido (no dos madrugadas seguidas si se puede evitar) y respeta lo que diga cotizar en sus avisos. Si el cliente está en otra ciudad (Los Cabos, Todos Santos) o necesita traslado especial, pasa a humano para cotizarlo.
+- Logística: La Paz es la base. La Ventana está a ~1 h por carretera, Cabo Pulmo a ~2.5 h y Puerto Chale (ballena gris, Bahía Magdalena) a ~3 h con pickup a las 5 a. m. En el Sardine Run (Bahía Magdalena) el transporte NO está incluido: el punto de encuentro es en La Paz a las 5 a. m. y de ahí vamos en caravana a Puerto Chale (el safari empieza a las 8 a. m.); también pueden vernos directo en Puerto Chale, pero recomendamos la caravana. Si no tienen auto, ofrece el transporte redondo opcional ($500 MXN por persona) y, si lo quieren, cotízalo con transporte: true. Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo: no los juntes con otra actividad el mismo día. Para varias actividades, ordena los días con sentido (no dos madrugadas seguidas si se puede evitar) y respeta lo que diga cotizar en sus avisos. Si el cliente está en otra ciudad (Los Cabos, Todos Santos) o necesita traslado especial, pasa a humano para cotizarlo.
 
 Vender bien, sin presionar:
 - Responde primero lo que preguntó y termina con un siguiente paso claro y fácil (una pregunta concreta o el link), no con "cualquier duda aquí estoy".
@@ -61,8 +61,12 @@ const ITEM_SCHEMA = {
 		opcion: { type: "string", enum: optionIds(), description: "Id de la opción del catálogo, p. ej. tiburon-ballena#0" },
 		personas: { type: "integer", description: "Número de personas" },
 		fecha: { type: "string", description: "Fecha AAAA-MM-DD, o cadena vacía si aún no se sabe" },
+		transporte: {
+			type: "boolean",
+			description: "true solo si el cliente pidió el transporte opcional desde La Paz (Sardine Run: $500 por persona; Safari La Ventana: $1,000 por reserva). En otras actividades, false.",
+		},
 	},
-	required: ["opcion", "personas", "fecha"],
+	required: ["opcion", "personas", "fecha", "transporte"],
 	additionalProperties: false,
 } as const
 
@@ -139,7 +143,7 @@ function asItems(raw: unknown): QuoteItemInput[] {
 	const list = Array.isArray(raw) ? raw : []
 	return list.map((r) => {
 		const o = (r ?? {}) as Record<string, unknown>
-		return { opcion: String(o.opcion ?? ""), personas: Number(o.personas), fecha: typeof o.fecha === "string" && o.fecha ? o.fecha : null }
+		return { opcion: String(o.opcion ?? ""), personas: Number(o.personas), fecha: typeof o.fecha === "string" && o.fecha ? o.fecha : null, transporte: o.transporte === true }
 	})
 }
 

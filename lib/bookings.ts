@@ -255,6 +255,7 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 			deposit: i === 0 ? deposit : null,
 			settled: null,
 			balance: i === 0 ? remaining : null,
+			transport: it.ride ? "si" : "",
 			notes: items.length > 1 ? `Paquete con anticipo (${items.length} actividades), folio ${base.folio}` : "",
 		}))
 	}

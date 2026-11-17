@@ -5,6 +5,7 @@ import { computePackageDiscount, PACKAGES } from "@/lib/packages"
 import { isValidPrice } from "@/lib/pricing-catalog"
 import { signDeal, computeDealTotals, DEAL_DEPOSIT_RATE, type Deal, type DealLine } from "@/lib/deal"
 import { SITE_URL } from "@/lib/seo"
+import { rideAddonAvailable, rideAddonMxn, rideRoute } from "@/lib/ride-addon"
 import type { Locale } from "@/lib/i18n"
 
 /**
@@ -141,6 +142,8 @@ export interface QuoteItemInput {
 	opcion: string
 	personas: number
 	fecha?: string | null
+	/** Transporte opcional desde La Paz (solo expediciones que lo ofrecen). */
+	transporte?: boolean
 }
 
 export interface QuoteLine {
@@ -155,6 +158,8 @@ export interface QuoteLine {
 	discountMxn: number
 	discountLabel?: string
 	netMxn: number
+	/** Renglón de transporte opcional (no lleva descuento de paquete). */
+	extra?: boolean
 }
 
 export interface Quote {
@@ -238,6 +243,29 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 		}
 	}
 
+	// Transporte opcional desde La Paz: renglón aparte, sin descuento de paquete.
+	for (const it of items) {
+		if (!it.transporte) continue
+		const opt = options.get(it.opcion)
+		if (!opt || !rideAddonAvailable(opt.slug)) continue
+		const people = Math.floor(it.personas)
+		const cost = rideAddonMxn(opt.slug, people)
+		const dateISO = it.fecha && /^\d{4}-\d{2}-\d{2}$/.test(it.fecha) ? it.fecha : undefined
+		lines.push({
+			optionId: `${opt.id}#transporte`,
+			slug: opt.slug,
+			label: `Transporte ${rideRoute(opt.slug, "es")}`,
+			people,
+			dateISO,
+			unitMxn: cost,
+			perBoat: true,
+			grossMxn: cost,
+			discountMxn: 0,
+			netMxn: cost,
+			extra: true,
+		})
+	}
+
 	const totalMxn = lines.reduce((s, l) => s + l.netMxn, 0)
 	const discountMxn = lines.reduce((s, l) => s + l.discountMxn, 0)
 	const depositMxn = Math.round(totalMxn * DEAL_DEPOSIT_RATE)
@@ -260,7 +288,7 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 
 export function quoteSummary(q: Quote): string {
 	const rows = q.lines.map((l) => {
-		const qty = l.perBoat ? "embarcación completa" : `${l.people} × ${mxn(l.unitMxn)}`
+		const qty = l.extra ? `${l.people} ${l.people === 1 ? "persona" : "personas"}` : l.perBoat ? "embarcación completa" : `${l.people} × ${mxn(l.unitMxn)}`
 		const disc = l.discountMxn ? ` (−${mxn(l.discountMxn)} ${l.discountLabel})` : ""
 		return `• ${l.label}${l.dateISO ? ` · ${l.dateISO}` : ""}: ${qty} = ${mxn(l.netMxn)}${disc}`
 	})
@@ -280,7 +308,7 @@ export function createDepositDeal(q: Quote, customerName: string, locale: Locale
 	const lines: DealLine[] = q.lines.map((l) => ({
 		label: [
 			l.label,
-			l.perBoat ? "embarcación" : `${l.people} ${l.people === 1 ? "persona" : "personas"}`,
+			l.perBoat && !l.extra ? "embarcación" : `${l.people} ${l.people === 1 ? "persona" : "personas"}`,
 			l.dateISO,
 			l.discountLabel,
 		]

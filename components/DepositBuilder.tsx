@@ -1,5 +1,6 @@
 "use client"
 
+import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel } from "@/lib/ride-addon"
 import { useEffect, useMemo, useState, type FormEvent } from "react"
 import { Elements, PaymentElement, LinkAuthenticationElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-js"
@@ -23,6 +24,8 @@ function tomorrowISO(): string {
 	d.setDate(d.getDate() + 1)
 	return d.toISOString().slice(0, 10)
 }
+
+const RIDE_Q: Record<string, string> = { es: "Transporte", en: "Transport", fr: "Transfert", zh: "接送", ca: "Transport" }
 
 interface UI {
 	title: string; sub: string; pick: string; add: string; inCart: string; yourTrip: string; empty: string;
@@ -55,7 +58,8 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 	const [err, setErr] = useState<string | null>(null)
 	const [busy, setBusy] = useState(false)
 
-	const subtotal = useMemo(() => cart.reduce((s, it) => s + it.unitAmountMxn * it.people, 0), [cart])
+	const itemRide = (it: { slug: string; people: number; ride?: boolean }) => (it.ride && rideAddonAvailable(it.slug) ? rideAddonMxn(it.slug, it.people) : 0)
+	const subtotal = useMemo(() => cart.reduce((s, it) => s + it.unitAmountMxn * it.people + itemRide(it), 0), [cart])
 	const { discountMxn: discount, applied: appliedPackages } = useMemo(
 		() => computePackageDiscount(cart.map((it) => ({ slug: it.slug, unitAmountMxn: it.unitAmountMxn, people: it.people })), locale),
 		[cart, locale],
@@ -85,7 +89,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
-					items: cart.map((it) => ({ slug: it.slug, cardName: it.cardName, expeditionName: it.title, unitAmountMxn: it.unitAmountMxn, people: it.people, dateISO: it.dateISO })),
+					items: cart.map((it) => ({ slug: it.slug, cardName: it.cardName, expeditionName: it.title, unitAmountMxn: it.unitAmountMxn, people: it.people, dateISO: it.dateISO, ride: !!it.ride && rideAddonAvailable(it.slug) })),
 					customerName: name.trim(), customerEmail: email.trim(), customerPhone: phone.trim(), locale,
 				}),
 			})
@@ -205,9 +209,19 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 										</div>
 									</div>
 								</div>
+								{rideAddonAvailable(it.slug) && (
+									<label className={`res-ride dep-item-ride${it.ride ? " is-on" : ""}`}>
+										<input type="checkbox" checked={!!it.ride} onChange={(e) => updateItem(it.key, { ride: e.target.checked })} />
+										<span className="res-ride-body">
+											<span className="res-ride-q">🚐 {RIDE_Q[locale] ?? RIDE_Q.es} {rideRoute(it.slug, locale)}</span>
+											<span className="res-ride-note">+{formatMxn(rideAddonMxn(it.slug, 1))} MXN {rideUnitLabel(it.slug, locale)}</span>
+										</span>
+										<span className="res-ride-price">+{formatMxn(rideAddonMxn(it.slug, it.people))}</span>
+									</label>
+								)}
 								<div className="dep-item-foot">
 									<em>{t.season}: {seasonLabel(it.slug, locale)}</em>
-									<strong>{formatMxn(it.unitAmountMxn * it.people)} MXN</strong>
+									<strong>{formatMxn(it.unitAmountMxn * it.people + itemRide(it))} MXN</strong>
 								</div>
 							</div>
 						)
