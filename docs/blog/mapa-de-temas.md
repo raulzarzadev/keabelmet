@@ -49,10 +49,10 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Mejor época para visitar La Paz (calendario mes a mes de fauna) | compilación de fuentes publicadas |
 | ✅ | ¿Cuándo es el Sardine Run de Bahía Magdalena? | buscar fuente científica sobre desove de sardina |
 | ✅ | Temperatura del agua en La Paz por mes y qué traje usar | Herrera-Cervantes 2019 (+ fuente con cifras) |
-| ⏳ | Mejor época para bucear en La Paz (visibilidad y temperatura) | buscar |
+| ✅ | Mejor época para bucear en La Paz (visibilidad y temperatura) | buscar |
 | ⏳ | ¿Cuándo hay ballena jorobada en Los Cabos y La Paz? | buscar |
 | ⏳ | ¿Cuándo ver ballena azul en Loreto? | Paniagua-Mendoza et al. 2017 |
-| ⏳ | Temporada de huracanes en BCS: ¿es seguro viajar en septiembre? | Servicio Meteorológico / NOAA |
+| ✅ | Temporada de huracanes en BCS: ¿es seguro viajar en septiembre? | Servicio Meteorológico / NOAA |
 | ⏳ | La Paz en invierno vs. verano: qué esperar | buscar |
 | ⏳ | Viento en La Ventana (temporada de kite) y cómo afecta a los tours | buscar |
 
@@ -63,7 +63,7 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | ¿Por qué el Mar de Cortés es "el acuario del mundo"? | UNESCO; Lluch-Cota et al. 2007; Oskin & Stock |
 | ✅ | Isla Espíritu Santo: qué es y cómo visitarla | UNESCO; Programa de Manejo; García-Aguilar 2003 |
 | ✅ | Playa Balandra: reglas, horarios y cómo llegar | Decreto APFF 2012; UNESCO (zona Balandra agregada en 2011) |
-| ⏳ | Los Islotes: la colonia de lobos marinos | García-Aguilar & Aurioles-Gamboa 2003 |
+| ✅ | Los Islotes: la colonia de lobos marinos | García-Aguilar & Aurioles-Gamboa 2003 |
 | ⏳ | Bahía Magdalena: geografía y fauna | Bizzarro 2008 |
 | ⏳ | Isla Cerralvo y el canal de La Ventana | buscar |
 | ⏳ | Puerto Chale: el santuario de la ballena gris | buscar |
@@ -79,14 +79,14 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Reglas para nadar con tiburón ballena (NOM-171) | NOM-171-SEMARNAT-2018 |
 | ✅ | Nadar con lobos marinos en La Paz | Conanp; García-Aguilar 2003 |
 | ✅ | ¿Puedo bucear sin certificación en La Paz? (Discovery vs. Open Water) | PADI (requisitos oficiales) |
-| ⏳ | ¿Cuánto cuesta certificarse PADI Open Water en La Paz? | PADI |
+| ✅ | ¿Cuánto cuesta certificarse PADI Open Water en La Paz? | PADI |
 | ✅ | Snorkel vs. buceo: ¿cuál elegir? | — |
 | ⏳ | Buceo en Cabo Pulmo: guía completa | Aburto-Oropeza et al. 2011 |
 | ⏳ | Barcos hundidos de La Paz (Salvatierra, Fang Ming) | buscar |
 | ⏳ | ¿Qué es un safari marino? | — |
 | ⏳ | Tour a Espíritu Santo: qué incluye y cómo elegir operador | — |
-| ⏳ | ¿Me voy a marear en la lancha? Consejos | buscar fuente médica |
-| ⏳ | ¿Se puede ir con niños a los tours? Edades mínimas | — |
+| ✅ | ¿Me voy a marear en la lancha? Consejos | buscar fuente médica |
+| ✅ | ¿Se puede ir con niños a los tours? Edades mínimas | — |
 
 ## 5. Planea tu viaje
 
