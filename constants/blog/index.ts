@@ -46,6 +46,12 @@ import { ninosToursLaPaz } from "./posts/ninos-tours-la-paz"
 import { huracanesBcs } from "./posts/huracanes-bcs"
 import { mejorEpocaBucearLaPaz } from "./posts/mejor-epoca-bucear-la-paz"
 import { losIslotesLobosMarinos } from "./posts/los-islotes-lobos-marinos"
+import { seguridadLaPaz } from "./posts/seguridad-la-paz"
+import { comoLlegarLaPaz } from "./posts/como-llegar-la-paz"
+import { mejoresPlayasLaPaz } from "./posts/mejores-playas-la-paz"
+import { queComerLaPaz } from "./posts/que-comer-la-paz"
+import { laPazOLosCabos } from "./posts/la-paz-o-los-cabos"
+import { climaLaPazMesAMes } from "./posts/clima-la-paz-mes-a-mes"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -100,4 +106,10 @@ export const blogPosts: BlogPost[] = [
 	huracanesBcs,
 	mejorEpocaBucearLaPaz,
 	losIslotesLobosMarinos,
+	seguridadLaPaz,
+	comoLlegarLaPaz,
+	mejoresPlayasLaPaz,
+	queComerLaPaz,
+	laPazOLosCabos,
+	climaLaPazMesAMes,
 ]

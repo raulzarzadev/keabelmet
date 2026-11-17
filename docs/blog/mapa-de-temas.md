@@ -53,6 +53,7 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ⏳ | ¿Cuándo hay ballena jorobada en Los Cabos y La Paz? | buscar |
 | ⏳ | ¿Cuándo ver ballena azul en Loreto? | Paniagua-Mendoza et al. 2017 |
 | ✅ | Temporada de huracanes en BCS: ¿es seguro viajar en septiembre? | Servicio Meteorológico / NOAA |
+| ✅ | Clima de La Paz mes a mes (invierno vs verano) | SMN, estación 3074, promedios 1991–2020; NOAA OISST |
 | ⏳ | La Paz en invierno vs. verano: qué esperar | buscar |
 | ⏳ | Viento en La Ventana (temporada de kite) y cómo afecta a los tours | buscar |
 
@@ -67,7 +68,7 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ⏳ | Bahía Magdalena: geografía y fauna | Bizzarro 2008 |
 | ⏳ | Isla Cerralvo y el canal de La Ventana | buscar |
 | ⏳ | Puerto Chale: el santuario de la ballena gris | buscar |
-| ⏳ | Las mejores playas de La Paz | buscar |
+| ✅ | Las mejores playas de La Paz | Cofepris, monitoreo de playas verano 2026; decreto APFF Balandra |
 | ⏳ | Isla Partida y Ensenada Grande | buscar |
 | ⏳ | Todos Santos, El Triunfo y otros pueblos cerca de La Paz | buscar |
 | ⏳ | ¿Qué es el Golfo de California y cómo se formó? (geología) | Oskin & Stock 2001, 2003 |
@@ -94,13 +95,13 @@ Leyenda: ✅ publicado · ⏳ pendiente
 |---|---|---|
 | ✅ | ¿Cuántos días necesito en La Paz? Itinerarios de 3, 5 y 7 días | — |
 | ✅ | Qué llevar a un tour en lancha en La Paz | — |
-| ⏳ | ¿Es seguro viajar a La Paz? | fuentes oficiales |
-| ⏳ | Cómo llegar a La Paz (aeropuerto, ferry, carretera) | — |
-| ⏳ | La Paz o Los Cabos: ¿dónde hospedarse para ver fauna? | — |
+| ✅ | ¿Es seguro viajar a La Paz? | INEGI ENSU sept. 2026; alertas de Canadá y Reino Unido |
+| ✅ | Cómo llegar a La Paz (aeropuerto, ferry, carretera) | GAP; Baja Ferries; OpenStreetMap/OSRM |
+| ✅ | La Paz o Los Cabos: ¿dónde hospedarse para ver fauna? | OSRM; fuentes de temporadas ya publicadas; INEGI ENSU |
 | ✅ | Bloqueador biodegradable: por qué es obligatorio | NOM-171; estudios de oxibenzona |
 | ⏳ | ¿Cuánto cuesta un viaje a La Paz? Presupuesto | — |
-| ⏳ | Moverse en La Paz: coche, taxi, transporte | — |
-| ⏳ | Qué comer en La Paz (almejas chocolatas, tacos de pescado) | — |
+| ✅ | Moverse en La Paz: coche, taxi, transporte (dentro de "Cómo llegar") | GOV.UK; OSRM |
+| ✅ | Qué comer en La Paz (almejas chocolatas, tacos de pescado) | López-Rocha et al. 2010; Palacios-Abrantes et al. 2018; Gárate-Lizárraga et al. 2004 |
 | ⏳ | Fotografía submarina para principiantes | — |
 
 ## 6. Ciencia y conservación
