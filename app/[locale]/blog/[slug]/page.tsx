@@ -9,6 +9,7 @@ import {
 	findPostBySlug,
 	contentLocale,
 	categoryLabel,
+	categoryPath,
 	postPath,
 	readMinutes,
 	plainText,
@@ -228,7 +229,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 					<nav className="ba-crumbs" aria-label="breadcrumb">
 						<Link href={localizeHref("/", locale)}>{t.home}</Link> <span>›</span>{" "}
 						<Link href={localizeHref("/blog", locale)}>{t.blog}</Link> <span>›</span>{" "}
-						<Link href={`${localizeHref("/blog", locale)}?cat=${post.category}`}>{categoryLabel(post.category, lang)}</Link>
+						<Link href={categoryPath(post.category, locale)}>{categoryLabel(post.category, lang)}</Link>
 					</nav>
 					<h1>{c.title}</h1>
 					<p className="ba-meta">

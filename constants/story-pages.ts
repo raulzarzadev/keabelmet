@@ -29,7 +29,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			{
 				type: "quickfacts",
 				items: [
-					{ value: "$8,000 MXN", label: "Por persona" },
+					{ value: "$10,000 MXN", label: "Por persona" },
 					{ value: "4 inmersiones", label: "2 en playa + 2 en barco" },
 					{ value: "eLearning", label: "Teoría incluida" },
 					{ value: "Desde 1 persona", label: "Individual o en grupo" },
@@ -128,7 +128,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				kicker: "Antes de reservar",
 				title: "Información importante",
 				items: [
-					{ label: "Precio", value: "$8,000 MXN por persona." },
+					{ label: "Precio", value: "$10,000 MXN por persona." },
 					{ label: "Incluye", value: "eLearning (teoría), 4 inmersiones y equipo completo." },
 					{ label: "Inmersiones", value: "2 en playas tranquilas + 2 desde embarcación." },
 					{ label: "Grupo", value: "Desde 1 persona; grupos bienvenidos." },
@@ -157,7 +157,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				cards: [
 					{
 						name: "Certificación PADI Open Water",
-						amountMxn: 8000,
+						amountMxn: 10000,
 						amountNote: "/ persona",
 						desc: "Tu licencia internacional de buceo, válida de por vida, con instructor certificado.",
 						items: [

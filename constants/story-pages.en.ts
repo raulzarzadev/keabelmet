@@ -22,7 +22,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 		},
 		blocks: [
 			{ type: "quickfacts", items: [
-				{ value: "$8,000 MXN", label: "Per person" },
+				{ value: "$10,000 MXN", label: "Per person" },
 				{ value: "4 dives", label: "2 beach + 2 boat" },
 				{ value: "eLearning", label: "Theory included" },
 				{ value: "From 1 person", label: "Solo or group" },
@@ -59,7 +59,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				"You don't feel comfortable swimming.",
 			] } },
 			{ type: "info", ink2: true, kicker: "Before booking", title: "Important information", items: [
-				{ label: "Price", value: "$8,000 MXN per person." },
+				{ label: "Price", value: "$10,000 MXN per person." },
 				{ label: "Includes", value: "eLearning (theory), 4 dives and full gear." },
 				{ label: "Dives", value: "2 in calm beaches + 2 from the boat." },
 				{ label: "Group", value: "From 1 person; groups welcome." },
@@ -74,7 +74,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				{ q: "How do I book?", a: ["First contact us on WhatsApp to coordinate dates and confirm availability. Once agreed, you secure your spot with payment."] },
 			] },
 			{ type: "pricing", id: "precios", kicker: "Price", title: "Secure your certification", note: "Before booking, contact us on WhatsApp to coordinate the dates and logistics of your certification (solo or group). Subject to availability.", cards: [
-				{ name: "PADI Open Water Certification", amountMxn: 8000, amountNote: "/ person", desc: "Your lifetime international diving license, with a certified instructor.", items: [
+				{ name: "PADI Open Water Certification", amountMxn: 10000, amountNote: "/ person", desc: "Your lifetime international diving license, with a certified instructor.", items: [
 					"Official PADI eLearning (theory)",
 					"Certified PADI instructor",
 					"2 dives in calm beaches",
