@@ -1,4 +1,4 @@
-import { isValidPrice } from "@/lib/pricing-catalog"
+import { isValidPrice, isPerPersonPrice } from "@/lib/pricing-catalog"
 import { getSeason, isDateInSeason } from "@/lib/expedition-seasons"
 import { experiences } from "@/constants/experiences"
 import { defaultLocale, type Locale } from "@/lib/i18n"
@@ -42,6 +42,8 @@ export function validateDepositItem(raw: unknown): DepositItem {
 	const unit = Number(it.unitAmountMxn)
 	if (!Number.isFinite(unit) || unit <= 0) throw new Error("Monto inválido")
 	if (!isValidPrice(slug, unit)) throw new Error("El precio no coincide con el catálogo")
+	// El carrito multiplica por personas: solo acepta precios por persona.
+	if (!isPerPersonPrice(slug, unit)) throw new Error("Esa opción no se puede apartar en el carrito")
 	const people = Number(it.people)
 	const season = getSeason(slug)
 	if (!Number.isInteger(people) || people < 1 || people > season.maxPeople) throw new Error("Número de personas inválido")

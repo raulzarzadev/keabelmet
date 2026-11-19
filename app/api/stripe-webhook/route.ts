@@ -9,6 +9,7 @@ import { dealPhoto } from "@/lib/deal-photos"
 import { SITE_URL } from "@/lib/email"
 import { recordPaymentIntent } from "@/lib/bookings"
 import { rideAddonMxn, rideRoute } from "@/lib/ride-addon"
+import { optionLabel } from "@/lib/bookable-activities"
 
 const RIDE_WORD: Record<string, string> = { es: "transporte", en: "transport", fr: "transfert", zh: "接送", ca: "transport" }
 
@@ -75,7 +76,7 @@ export async function POST(req: NextRequest) {
 			const locale = m.locale || "es"
 			const items = unpackItems(m.items).map((p) => ({
 				slug: p.slug,
-				expeditionName: activityName(p.slug, locale) + (p.ride ? ` + ${RIDE_WORD[locale] ?? RIDE_WORD.es} ${rideRoute(p.slug, locale)}` : ""),
+				expeditionName: activityName(p.slug, locale) + (optionLabel(p.slug, p.unitAmountMxn, locale) ? ` — ${optionLabel(p.slug, p.unitAmountMxn, locale)}` : "") + (p.ride ? ` + ${RIDE_WORD[locale] ?? RIDE_WORD.es} ${rideRoute(p.slug, locale)}` : ""),
 				dateISO: p.dateISO,
 				people: p.people,
 				subtotalMxn: p.unitAmountMxn * p.people + (p.ride ? rideAddonMxn(p.slug, p.people) : 0),

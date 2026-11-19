@@ -20,6 +20,7 @@ import { getSeason } from "@/lib/expedition-seasons"
 import { unpackItems } from "@/lib/deposit"
 import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
 import { folioFromPaymentIntent } from "@/lib/reservation"
+import { optionLabel } from "@/lib/bookable-activities"
 
 export { kvConfigured }
 
@@ -248,7 +249,7 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 			id: `${pi.id}#${i}`,
 			dateISO: it.dateISO,
 			activity: it.slug,
-			activityLabel: activityLabel(it.slug),
+			activityLabel: activityLabel(it.slug) + (optionLabel(it.slug, it.unitAmountMxn, "es") ? ` (${optionLabel(it.slug, it.unitAmountMxn, "es")})` : ""),
 			people: it.people,
 			// Como en tu Excel: el anticipo y el saldo van en el primer renglón del paquete.
 			paidFull: null,

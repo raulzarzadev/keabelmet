@@ -25,8 +25,8 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
   const t = await getPageDictionary("rates", locale) as Record<string, any>
   const u = ui[locale] ?? ui.es
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
-  // Mismos precios que valida el servidor al cobrar: la tarjeta más barata de cada experiencia.
-  const activities = getBookableActivities(locale).sort((a, b) => a.unitAmountMxn - b.unitAmountMxn)
+  // Mismos precios que valida el servidor al cobrar: todas las opciones por persona de cada experiencia.
+  const activities = getBookableActivities(locale).sort((a, b) => a.fromAmountMxn - b.fromAmountMxn)
 
   return (
     <main>
@@ -43,9 +43,17 @@ export default async function Tarifas({ params }: { params: Promise<{ locale: st
               <h3>{a.title}</h3>
               <p className="rate-dur">{u.season}: {a.season}</p>
               <div className="rate-amount">
-                <small style={{ fontSize: "0.42em", fontWeight: 600, marginRight: 6 }}>{u.from}</small><Price amount={a.unitAmountMxn} />
+                <small style={{ fontSize: "0.42em", fontWeight: 600, marginRight: 6 }}>{u.from}</small><Price amount={a.fromAmountMxn} />
               </div>
-              <p className="rate-dur">{a.cardName} · {u.perPerson}</p>
+              {a.options.length > 1 ? (
+                <ul className="rate-dur" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {[...a.options].sort((x, y) => x.amountMxn - y.amountMxn).map((o) => (
+                    <li key={o.name}>{o.name}: <Price amount={o.amountMxn} /> · {u.perPerson}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="rate-dur">{a.cardName} · {u.perPerson}</p>
+              )}
               <Link href={lh(a.href)} className="btn btn-solid" style={{ justifyContent: "center", marginTop: "auto" }}>
                 {u.details}
               </Link>
