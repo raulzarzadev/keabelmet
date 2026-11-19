@@ -1,6 +1,6 @@
 "use client"
 
-import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel } from "@/lib/ride-addon"
+import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel, RIDE_NOT_INCLUDED } from "@/lib/ride-addon"
 import { useEffect, useMemo, useState, type FormEvent } from "react"
 import { Elements, PaymentElement, LinkAuthenticationElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-js"
@@ -263,6 +263,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 								</div>
 								{rideAddonAvailable(it.slug) && (
 									<label className={`res-ride dep-item-ride${it.ride ? " is-on" : ""}`}>
+										<span className="res-ride-flag">⚠️ {RIDE_NOT_INCLUDED[locale] ?? RIDE_NOT_INCLUDED.es}</span>
 										<input type="checkbox" checked={!!it.ride} onChange={(e) => updateItem(it.key, { ride: e.target.checked })} />
 										<span className="res-ride-body">
 											<span className="res-ride-q">🚐 {RIDE_Q[locale] ?? RIDE_Q.es} {rideRoute(it.slug, locale)}</span>

@@ -1913,7 +1913,7 @@ export const storyPages: Record<string, StoryPageData> = {
 					{ value: "5:00 a. m.", label: "Salida en caravana desde La Paz" },
 					{ value: "Nov – dic", label: "Temporada" },
 					{ value: "Snorkel", label: "En mar abierto" },
-					{ value: "Grupos pequeños", label: "Menor impacto" },
+					{ value: "No incluido", label: "Transporte · opcional +$500 por persona" },
 				],
 			},
 			{
@@ -2058,6 +2058,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Precios",
 				title: "Reserva tu Ocean Safari",
+				notice: "🚐 El transporte NO está incluido en el precio. Llega en tu auto (nos vemos en La Paz a las 5:00 a. m. y vamos en caravana a Puerto Chale) o, si no tienes auto, agrega el transporte redondo La Paz ⇄ Puerto Chale por $500 MXN por persona al reservar.",
 				cards: [
 					{
 						name: "Compartido",
@@ -2065,7 +2066,7 @@ export const storyPages: Record<string, StoryPageData> = {
 						amountNote: "/ persona",
 						desc: "El Sardine Run con guía biólogo marino incluido. Salida en caravana desde La Paz; transporte opcional +$500 MXN por persona.",
 						items: [
-							"Caravana desde La Paz (transporte opcional +$500 por persona)",
+							"🚐 Transporte NO incluido: llega en tu auto (caravana desde La Paz) o agrégalo por +$500 por persona",
 							"Guía biólogo marino y capitán certificado",
 							"Equipo completo de snorkel y neopreno",
 							"Snacks y agua",

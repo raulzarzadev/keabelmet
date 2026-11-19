@@ -1810,7 +1810,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 					{ value: "5:00 AM", label: "Convoy departure from La Paz" },
 					{ value: "Nov – Dec", label: "Season" },
 					{ value: "Snorkel", label: "In open water" },
-					{ value: "Small groups", label: "Lower impact" },
+					{ value: "Not included", label: "Transport · optional +$500 per person" },
 				],
 			},
 			{
@@ -1955,6 +1955,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Prices",
 				title: "Book your Ocean Safari",
+				notice: "🚐 Transport is NOT included in the price. Drive your own car (we meet in La Paz at 5:00 AM and drive in a convoy to Puerto Chale) or, if you don't have a car, add round-trip transport La Paz ⇄ Puerto Chale for $500 MXN per person when you book.",
 				cards: [
 					{
 						name: "Shared",
@@ -1962,7 +1963,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 						amountNote: "/ person",
 						desc: "The Sardine Run with a marine biologist guide included. Convoy departure from La Paz; optional transport +$500 MXN per person.",
 						items: [
-							"Convoy from La Paz (optional transport +$500 per person)",
+							"🚐 Transport NOT included: drive your own car (convoy from La Paz) or add it for +$500 per person",
 							"Marine biologist guide and certified captain",
 							"Full snorkel gear and wetsuit",
 							"Snacks and water",

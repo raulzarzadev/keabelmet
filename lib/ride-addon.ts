@@ -25,6 +25,15 @@ export const RIDE_ADDONS: Record<string, RideAddon> = {
 	},
 }
 
+/** Aviso corto de que el transporte NO está incluido en el precio (se agrega aparte). */
+export const RIDE_NOT_INCLUDED: Record<string, string> = {
+	es: "Transporte NO incluido · agrégalo si no tienes auto",
+	en: "Transport NOT included · add it if you don't have a car",
+	fr: "Transport NON inclus · ajoute-le si tu n'as pas de voiture",
+	zh: "不含交通 · 如果没有车请加选",
+	ca: "Transport NO inclòs · afegeix-lo si no tens cotxe",
+}
+
 export function rideAddonAvailable(slug: string): boolean {
 	return slug in RIDE_ADDONS
 }

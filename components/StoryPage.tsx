@@ -115,6 +115,8 @@ export type Block =
       title?: string
       ink2?: boolean
       note?: string
+      /** Aviso destacado arriba de las tarjetas (p. ej. "transporte no incluido"). */
+      notice?: string
       cards: {
         name: string
         amountMxn?: number
@@ -450,6 +452,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                   {b.kicker && <span className="kicker">{b.kicker}</span>}
                   {b.title && <h2>{b.title}</h2>}
                 </div>
+                {b.notice && <div className="sp-notice" role="note">{b.notice}</div>}
                 <div className="price-grid">
                   {b.cards.map((c) => (
                     <div key={c.name} className={`price-card${c.featured ? " feat" : ""}`}>
@@ -461,7 +464,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                       </div>
                       {c.desc && <p className="sp-price-desc">{c.desc}</p>}
                       {c.items && (
-                        <ul>{c.items.map((it) => <li key={it}>{it}</li>)}</ul>
+                        <ul>{c.items.map((it) => <li key={it} className={it.startsWith("🚐") ? "price-item-warn" : undefined}>{it}</li>)}</ul>
                       )}
                       <div className="price-ctas" style={{ marginTop: c.items ? undefined : "auto" }}>
                         {typeof c.amountMxn === "number" ? (

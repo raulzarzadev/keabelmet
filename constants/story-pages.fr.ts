@@ -1810,7 +1810,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 					{ value: "5h00", label: "Départ en convoi depuis La Paz" },
 					{ value: "Nov - déc", label: "Saison" },
 					{ value: "Snorkeling", label: "En pleine mer" },
-					{ value: "Petits groupes", label: "Moindre impact" },
+					{ value: "Non inclus", label: "Transport · en option +500 MXN par personne" },
 				],
 			},
 			{
@@ -1955,6 +1955,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Tarifs",
 				title: "Réservez votre Ocean Safari",
+				notice: "🚐 Le transport N'EST PAS inclus dans le prix. Viens avec ta voiture (rendez-vous à La Paz à 5h00, puis convoi jusqu'à Puerto Chale) ou, si tu n'as pas de voiture, ajoute le transport aller-retour La Paz ⇄ Puerto Chale pour 500 MXN par personne lors de la réservation.",
 				cards: [
 					{
 						name: "Partagé",
@@ -1962,7 +1963,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 						amountNote: "/ personne",
 						desc: "Le Sardine Run avec guide biologiste marin inclus. Départ en convoi depuis La Paz ; transport en option +500 MXN par personne.",
 						items: [
-							"Convoi depuis La Paz (transport en option +500 MXN par personne)",
+							"🚐 Transport NON inclus : viens avec ta voiture (convoi depuis La Paz) ou ajoute-le pour +500 MXN par personne",
 							"Guide biologiste marin et capitaine certifié",
 							"Équipement complet de snorkeling et combinaison",
 							"Collations et eau",
