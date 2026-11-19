@@ -691,6 +691,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Edad mínima", value: "12 años." },
 					{ label: "Certificación mínima", value: "Open Water para la modalidad de buceo certificado." },
+					{ label: "Refresher", value: "Si no has buceado en los últimos 6 meses, el centro de buceo puede cobrar $600 MXN extra por un refresher (repaso con instructor antes de la inmersión)." },
 					{ label: "Fotografía y video", value: "Esta actividad no incluye servicio de fotografía ni video." },
 					{ label: "Transporte", value: "No contamos con transporte desde La Paz hacia Cabo Pulmo." },
 					{ label: "Baños", value: "El centro de buceo cuenta con baños antes de salir. La embarcación no dispone de sanitario, así que recomendamos usar las instalaciones antes de abordar." },
@@ -701,6 +702,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Precios",
 				title: "Elige tu experiencia en Cabo Pulmo",
+				note: "Buceo certificado: si no has buceado en los últimos 6 meses, el centro de buceo puede cobrar $600 MXN extra por un refresher.",
 				cards: [
 					{
 						name: "Discovery",

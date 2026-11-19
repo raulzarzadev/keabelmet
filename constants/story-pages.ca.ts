@@ -789,6 +789,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Edat mínima", value: "12 anys." },
 					{ label: "Certificació mínima", value: "Open Water per a la modalitat de busseig certificat." },
+					{ label: "Refresher", value: "Si no has bussejat en els últims 6 mesos, el centre de busseig pot cobrar 600 MXN més per un refresher (repàs amb instructor abans de la immersió)." },
 					{ label: "Fotografia i vídeo", value: "Aquesta activitat no inclou servei de fotografia ni vídeo." },
 					{ label: "Transport", value: "No tenim transport des de La Paz cap a Cabo Pulmo." },
 					{ label: "Banys", value: "El centre de busseig té banys abans de sortir. L'embarcació no disposa de lavabo, així que recomanem fer servir les instal·lacions abans d'embarcar." },
@@ -799,6 +800,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Preus",
 				title: "Tria la teva experiència a Cabo Pulmo",
+				note: "Busseig certificat: si no has bussejat en els últims 6 mesos, el centre de busseig pot cobrar 600 MXN més per un refresher.",
 				cards: [
 					{
 						name: "Discovery",

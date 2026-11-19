@@ -588,6 +588,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Minimum age", value: "12 years old." },
 					{ label: "Minimum certification", value: "Open Water for the certified diving option." },
+					{ label: "Refresher", value: "If you haven't dived in the last 6 months, the dive center may charge an extra $600 MXN for a refresher (a review with an instructor before the dive)." },
 					{ label: "Photos and video", value: "This activity does not include photo or video service." },
 					{ label: "Transport", value: "We don't offer transport from La Paz to Cabo Pulmo." },
 					{ label: "Restrooms", value: "The dive center has restrooms before setting out. The boat has no restroom, so we recommend using the facilities before boarding." },
@@ -598,6 +599,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Prices",
 				title: "Choose your experience in Cabo Pulmo",
+				note: "Certified diving: if you haven't dived in the last 6 months, the dive center may charge an extra $600 MXN for a refresher.",
 				cards: [
 					{
 						name: "Discovery",
