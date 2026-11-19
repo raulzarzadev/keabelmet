@@ -13,7 +13,7 @@ import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-
 import { getStripeClient } from "@/lib/stripe-client"
 import { getSeason, seasonLabel, isDateInSeason } from "@/lib/expedition-seasons"
 import { formatMxn } from "@/lib/reservation"
-import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel } from "@/lib/ride-addon"
+import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel, RIDE_NOT_INCLUDED } from "@/lib/ride-addon"
 import Voucher from "@/components/Voucher"
 
 function stripeLocale(locale: string): StripeElementLocale {
@@ -282,6 +282,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 						{rideEligible && (
 							<label className={`res-ride${ride ? " is-on" : ""}`}>
+								<span className="res-ride-flag">ℹ️ {RIDE_NOT_INCLUDED[locale] ?? RIDE_NOT_INCLUDED.es}</span>
 								<input type="checkbox" checked={ride} onChange={(e) => setRide(e.target.checked)} />
 								<span className="res-ride-body">
 									<span className="res-ride-q">🚐 {fillRide(t.rideQuestion)}</span>

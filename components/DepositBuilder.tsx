@@ -1,6 +1,6 @@
 "use client"
 
-import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel } from "@/lib/ride-addon"
+import { rideAddonAvailable, rideAddonMxn, rideRoute, rideUnitLabel, RIDE_NOT_INCLUDED } from "@/lib/ride-addon"
 import { useEffect, useMemo, useState, type FormEvent } from "react"
 import { Elements, PaymentElement, LinkAuthenticationElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import type { StripeElementLocale, StripeElementsOptions } from "@stripe/stripe-js"
@@ -47,7 +47,7 @@ const copy: Record<string, UI> = {
 
 export default function DepositBuilder({ locale = "es", activities }: { locale?: Locale; activities: BookableActivity[] }) {
 	const t = copy[locale] ?? copy.es
-	const { items: cart, add, update: updateItem, remove: removeItem, clear: clearCart } = useCart()
+	const { items: cart, add, update: updateItem, remove: removeItem, clear: clearCart, ready: cartReady } = useCart()
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [phone, setPhone] = useState("")
@@ -77,6 +77,31 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 			if (match && match.name !== it.cardName) updateItem(it.key, { cardName: match.name })
 		}
 	}, [cart, optionsBySlug, updateItem])
+
+	// Enlaces como /arma-tu-reserva?add=safari-bahia-magdalena,tiburon-ballena (p. ej. desde el aviso de
+	// temporada) llegan con esas actividades ya en el carrito, sin duplicar las que ya estaban.
+	const [addedFromLink, setAddedFromLink] = useState(false)
+	useEffect(() => {
+		if (addedFromLink || !cartReady) return
+		setAddedFromLink(true)
+		let slugs: string[] = []
+		try {
+			const url = new URL(window.location.href)
+			slugs = (url.searchParams.get("add") ?? "").split(",").map((s) => s.trim()).filter(Boolean)
+			if (!slugs.length) return
+			url.searchParams.delete("add")
+			window.history.replaceState(null, "", url.pathname + url.search + url.hash)
+		} catch {
+			return
+		}
+		let count = cart.length
+		for (const slug of slugs) {
+			const a = activities.find((x) => x.slug === slug)
+			if (!a || cart.some((it) => it.slug === slug) || count >= MAX_ITEMS) continue
+			add({ slug: a.slug, title: a.title, cardName: a.cardName, unitAmountMxn: a.unitAmountMxn, image: a.image, dateISO: "", people: 1 })
+			count++
+		}
+	}, [addedFromLink, cartReady, cart, activities, add])
 
 	function addActivity(a: BookableActivity) {
 		if (cart.length >= MAX_ITEMS) return
@@ -238,6 +263,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 								</div>
 								{rideAddonAvailable(it.slug) && (
 									<label className={`res-ride dep-item-ride${it.ride ? " is-on" : ""}`}>
+										<span className="res-ride-flag">ℹ️ {RIDE_NOT_INCLUDED[locale] ?? RIDE_NOT_INCLUDED.es}</span>
 										<input type="checkbox" checked={!!it.ride} onChange={(e) => updateItem(it.key, { ride: e.target.checked })} />
 										<span className="res-ride-body">
 											<span className="res-ride-q">🚐 {RIDE_Q[locale] ?? RIDE_Q.es} {rideRoute(it.slug, locale)}</span>
@@ -263,7 +289,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 										<div className="dep-sum-row"><span>{t.subtotal}</span><strong>{formatMxn(subtotal)} MXN</strong></div>
 										{appliedPackages.map((p) => (
 											<div key={p.id} className="dep-sum-row dep-sum-disc">
-												<span>🎁 {p.name} · −{Math.round(p.off * 100)}%</span>
+												<span>🎁 {p.name} · {p.offLabel}</span>
 												<strong>−{formatMxn(p.discountMxn)} MXN</strong>
 											</div>
 										))}

@@ -1810,7 +1810,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 					{ value: "5:00 h", label: "Sortida en caravana des de La Paz" },
 					{ value: "Nov – des", label: "Temporada" },
 					{ value: "Snorkel", label: "En mar obert" },
-					{ value: "Grups petits", label: "Menys impacte" },
+					{ value: "No inclòs", label: "Transport · opcional +500 MXN per persona" },
 				],
 			},
 			{
@@ -1955,6 +1955,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Preus",
 				title: "Reserva el teu Ocean Safari",
+				notice: "🚐 El transport NO està inclòs en el preu. Vine amb el teu cotxe (ens trobem a La Paz a les 5:00 h i anem en caravana fins a Puerto Chale) o, si no tens cotxe, afegeix el transport d'anada i tornada La Paz ⇄ Puerto Chale per 500 MXN per persona en reservar.",
 				cards: [
 					{
 						name: "Compartit",
@@ -1962,7 +1963,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 						amountNote: "/ persona",
 						desc: "El Sardine Run amb guia biòleg marí inclòs. Sortida en caravana des de La Paz; transport opcional +500 MXN per persona.",
 						items: [
-							"Caravana des de La Paz (transport opcional +500 MXN per persona)",
+							"🚐 Transport NO inclòs: vine amb el teu cotxe (caravana des de La Paz) o afegeix-lo per +500 MXN per persona",
 							"Guia biòleg marí i capità certificat",
 							"Equip complet de snorkel i neoprè",
 							"Snacks i aigua",

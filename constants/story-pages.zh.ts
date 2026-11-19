@@ -1809,7 +1809,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 					{ value: "早上5:00", label: "从拉巴斯结队出发" },
 					{ value: "11月 - 12月", label: "季节" },
 					{ value: "浮潜", label: "在开阔水域" },
-					{ value: "小团体", label: "减少影响" },
+					{ value: "不包含", label: "交通 · 可选,每人+500" },
 				],
 			},
 			{
@@ -1954,6 +1954,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "价格",
 				title: "预订你的海洋探险",
+				notice: "🚐 价格不含交通。可以自驾(早上5:00在拉巴斯集合,结队开往查莱港);如果没有车,预订时可加购拉巴斯 ⇄ 查莱港往返交通,每人500墨西哥比索。",
 				cards: [
 					{
 						name: "拼团",
@@ -1961,7 +1962,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 						amountNote: "/ 人",
 						desc: "沙丁鱼奇观之旅,含海洋生物学家向导。从拉巴斯结队出发;交通可选,每人加500墨西哥比索。",
 						items: [
-							"从拉巴斯结队出发(交通可选,每人+500)",
+							"🚐 不含交通:自驾(从拉巴斯结队出发)或加购交通,每人+500",
 							"海洋生物学家向导与持证船长",
 							"全套浮潜装备和潜水服",
 							"零食和水",
