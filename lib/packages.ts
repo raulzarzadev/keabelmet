@@ -13,7 +13,13 @@ import type { Locale } from "@/lib/i18n"
  */
 export interface ActivityPackage {
 	id: string
+	/** Descuento en porcentaje sobre todas las actividades del paquete (0.15 = 15%). */
 	off: number
+	/**
+	 * Descuento fijo en pesos por persona en actividades concretas (en lugar del
+	 * porcentaje). P. ej. { "tiburon-ballena": 300 }: el Sardine Run queda igual.
+	 */
+	perPersonOffMxn?: Record<string, number>
 	slugs: string[]
 	name: Record<Locale, string>
 }
@@ -31,6 +37,14 @@ export const PACKAGES: ActivityPackage[] = [
 		slugs: ["tiburon-ballena", "tour-espiritu-santo"],
 		name: { es: "Dúo La Paz", en: "La Paz Duo", fr: "Duo La Paz", zh: "拉巴斯双人组合", ca: "Duo La Paz" },
 	},
+	{
+		// Temporada nov–dic: Sardine Run a precio normal y $300 menos por persona en el tiburón ballena.
+		id: "temporada",
+		off: 0,
+		perPersonOffMxn: { "tiburon-ballena": 300 },
+		slugs: ["safari-bahia-magdalena", "tiburon-ballena"],
+		name: { es: "Paquete Temporada", en: "Season Combo", fr: "Combo Saison", zh: "季节套餐", ca: "Paquet Temporada" },
+	},
 ]
 
 export interface PricedItem {
@@ -45,6 +59,10 @@ export interface AppliedPackage {
 	off: number
 	units: number
 	discountMxn: number
+	/** Descuento total por actividad (slug → MXN), para repartirlo por renglón. */
+	perSlug: Record<string, number>
+	/** Etiqueta corta del descuento: "−15%" o "−$300". */
+	offLabel: string
 }
 
 /**
@@ -76,10 +94,19 @@ export function computePackageDiscount(
 		})
 		if (avail.some((a) => a <= 0)) continue
 		const units = Math.min(...avail)
-		const unitSum = pkg.slugs.reduce((sum, s) => sum + (bySlug.get(s)?.unit ?? 0), 0)
-		const discountMxn = Math.round(pkg.off * unitSum * units)
+		const perSlug: Record<string, number> = {}
+		for (const s of pkg.slugs) {
+			const unit = bySlug.get(s)?.unit ?? 0
+			const d = pkg.perPersonOffMxn
+				? Math.min(pkg.perPersonOffMxn[s] ?? 0, unit) * units
+				: Math.round(pkg.off * unit * units)
+			if (d > 0) perSlug[s] = d
+		}
+		const discountMxn = Object.values(perSlug).reduce((a, b) => a + b, 0)
 		if (discountMxn <= 0) continue
-		applied.push({ id: pkg.id, name: pkg.name[locale] ?? pkg.name.es, off: pkg.off, units, discountMxn })
+		const fixedVals = Object.values(pkg.perPersonOffMxn ?? {})
+		const offLabel = fixedVals.length ? `−$${fixedVals[0].toLocaleString("en-US")} c/u` : `−${Math.round(pkg.off * 100)}%`
+		applied.push({ id: pkg.id, name: pkg.name[locale] ?? pkg.name.es, off: pkg.off, units, discountMxn, perSlug, offLabel })
 		for (const s of pkg.slugs) consumed.set(s, (consumed.get(s) ?? 0) + units)
 	}
 

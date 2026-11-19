@@ -288,7 +288,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 										<div className="dep-sum-row"><span>{t.subtotal}</span><strong>{formatMxn(subtotal)} MXN</strong></div>
 										{appliedPackages.map((p) => (
 											<div key={p.id} className="dep-sum-row dep-sum-disc">
-												<span>🎁 {p.name} · −{Math.round(p.off * 100)}%</span>
+												<span>🎁 {p.name} · {p.offLabel}</span>
 												<strong>−{formatMxn(p.discountMxn)} MXN</strong>
 											</div>
 										))}

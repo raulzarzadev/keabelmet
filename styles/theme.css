@@ -1135,6 +1135,9 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .season-pop-price { color: var(--sand); font-size: 13px; font-weight: 700; margin-top: 4px; }
 .season-pop-btns { padding: 0 24px 24px; }
 .season-pop-btns .btn { text-align: center; }
+.season-pop-combo { margin-top: 10px !important; padding: 10px 12px; border-radius: 12px; background: rgba(40,194,160,0.12); border: 1px solid rgba(40,194,160,0.35); color: var(--sand) !important; font-weight: 600; font-size: 13.5px !important; }
+.season-pop-price s { color: var(--sand-dim); font-weight: 500; margin-right: 2px; }
+.season-pop-price em { display: block; font-style: normal; color: var(--teal); font-size: 11.5px; font-weight: 600; }
 @media (max-width: 480px) { .season-pop-cards { gap: 10px; padding: 14px 16px; } .season-pop-head { padding: 18px 18px 0; } .season-pop-head h3 { font-size: 19px; margin-top: 12px; } .season-pop-head p { font-size: 13.5px; } .season-pop-btns { padding: 0 16px 18px; gap: 8px; } .season-pop-img { height: 80px; } .season-pop-info { padding: 10px; gap: 3px; } .season-pop-info strong { font-size: 14px; } .season-pop-hook { display: none; } .season-pop-price { font-size: 12px; } .season-pop-btns .btn { padding-top: 12px; padding-bottom: 12px; } }
 @keyframes srFade { from { opacity: 0 } to { opacity: 1 } }
 @keyframes srPopIn { from { opacity: 0; transform: translateY(16px) scale(.97) } to { opacity: 1; transform: none } }

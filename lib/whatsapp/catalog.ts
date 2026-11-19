@@ -131,7 +131,10 @@ export function catalogText(): string {
 		parts.push(lines.join("\n"))
 	}
 	const combos = PACKAGES.map(
-		(p) => `- ${p.name.es}: ${Math.round(p.off * 100)}% de descuento por persona que haga todas estas actividades: ${p.slugs.join(", ")}`,
+		(p) =>
+			p.perPersonOffMxn
+				? `- ${p.name.es}: por persona que haga todas estas actividades (${p.slugs.join(", ")}), descuento fijo de ${Object.entries(p.perPersonOffMxn).map(([s, v]) => `$${v} MXN en ${s}`).join(" y ")}; las demás quedan a precio normal`
+				: `- ${p.name.es}: ${Math.round(p.off * 100)}% de descuento por persona que haga todas estas actividades: ${p.slugs.join(", ")}`,
 	)
 	return `${parts.join("\n\n")}\n\n## Paquetes con descuento (se aplican solos al cotizar)\n${combos.join("\n")}`
 }
@@ -235,10 +238,11 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 		for (const slug of def.slugs) {
 			const line = perPerson.find((l) => l.slug === slug && l.netMxn > 0)
 			if (!line) continue
-			const d = Math.round(pkg.off * line.unitMxn * pkg.units)
+			const d = pkg.perSlug[slug] ?? 0
+			if (d <= 0) continue
 			line.discountMxn += d
 			line.netMxn -= d
-			const tag = `${pkg.name} -${Math.round(pkg.off * 100)}%`
+			const tag = `${pkg.name} ${pkg.offLabel}`
 			line.discountLabel = line.discountLabel ? `${line.discountLabel} + ${tag}` : tag
 		}
 	}
