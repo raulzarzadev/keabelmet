@@ -587,6 +587,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				items: [
 					{ label: "最低年龄", value: "12岁。" },
 					{ label: "最低认证要求", value: "认证潜水方案需要开放水域(Open Water)认证。" },
+					{ label: "复习课程(Refresher)", value: "如果你在过去6个月内没有潜过水,潜水中心可能会额外收取600墨西哥比索的复习课程费用(下水前由教练带领复习)。" },
 					{ label: "摄影和视频", value: "此活动不包含摄影或视频服务。" },
 					{ label: "交通", value: "我们不提供从拉巴斯到卡波普尔莫的交通服务。" },
 					{ label: "洗手间", value: "潜水中心在出发前设有洗手间。船上没有洗手间,因此建议在登船前使用设施。" },
@@ -597,6 +598,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "价格",
 				title: "选择你在卡波普尔莫的体验",
+				note: "认证潜水:如果你在过去6个月内没有潜过水,潜水中心可能会额外收取600墨西哥比索的复习课程(Refresher)费用。",
 				cards: [
 					{
 						name: "体验潜水(Discovery)",

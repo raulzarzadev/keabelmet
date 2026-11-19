@@ -1151,6 +1151,11 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .dep-item-fields label, .dep-item-people { display:flex; flex-direction:column; gap:6px; }
 .dep-item-fields span, .dep-item-people > span { color:var(--sand-dim); font-size:12px; }
 .dep-item-fields input[type=date] { background: rgba(244,239,228,0.04); border:1.5px solid var(--line); border-radius:10px; color:var(--sand); padding:9px 10px; font-family:inherit; }
+.dep-item-option { display:flex; flex-direction:column; gap:6px; margin-top:12px; }
+.dep-item-option > span { color:var(--sand-dim); font-size:12px; }
+.dep-item-option select { background: rgba(244,239,228,0.04); border:1.5px solid var(--line); border-radius:10px; color:var(--sand); padding:9px 10px; font-family:inherit; font-size:14px; width:100%; }
+.dep-item-option select option { background:#0d222f; color:var(--sand); }
+.dep-item-hint { margin:10px 0 0; font-size:12.5px; line-height:1.45; color:var(--sand-dim); }
 .dep-item-foot { display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
 .dep-item-foot em { color:var(--sand-dim); font-size:12px; font-style:normal; }
 .dep-item-foot strong { color:var(--sand); font-size:14px; }

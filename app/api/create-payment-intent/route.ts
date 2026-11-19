@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getStripe } from "@/lib/stripe"
-import { isValidPrice } from "@/lib/pricing-catalog"
+import { isValidPrice, isPerPersonPrice } from "@/lib/pricing-catalog"
 import { isDateInSeason, getSeason } from "@/lib/expedition-seasons"
 import { folioFromPaymentIntent, MAX_PEOPLE } from "@/lib/reservation"
 import { rideAddonAvailable, rideAddonMxn } from "@/lib/ride-addon"
@@ -41,12 +41,15 @@ export async function POST(req: NextRequest) {
 	if (typeof unitAmountMxn !== "number" || !Number.isFinite(unitAmountMxn) || unitAmountMxn <= 0) return bad("Monto inválido")
 	if (!isValidPrice(slug, unitAmountMxn)) return bad("El precio no coincide con el catálogo")
 
-	const qty = Number(quantity)
-	if (!Number.isInteger(qty) || qty < 1 || qty > MAX_PEOPLE) return bad("Cantidad inválida")
-
 	const season = getSeason(slug)
 	const headcount = Number(people)
 	if (!Number.isInteger(headcount) || headcount < 1 || headcount > season.maxPeople) return bad("Número de personas inválido")
+
+	// La cantidad la decide el servidor: precio por persona × personas, o una
+	// sola vez si el precio es por embarcación. Nunca confiamos en la del cliente.
+	const qty = isPerPersonPrice(slug, unitAmountMxn) ? headcount : 1
+	if (qty > MAX_PEOPLE) return bad("Cantidad inválida")
+	if (quantity !== undefined && Number(quantity) !== qty) return bad("La cantidad no coincide con el número de personas")
 
 	if (typeof dateISO !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(dateISO)) return bad("Fecha inválida")
 	// La fecha solicitada debe ser a futuro (al menos mañana) y en temporada.

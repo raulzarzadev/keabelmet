@@ -588,6 +588,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Âge minimum", value: "12 ans." },
 					{ label: "Certification minimale", value: "Open Water pour la formule plongée certifiée." },
+					{ label: "Refresher", value: "Si vous n'avez pas plongé au cours des 6 derniers mois, le centre de plongée peut facturer 600 MXN de plus pour un refresher (révision avec un instructeur avant la plongée)." },
 					{ label: "Photo et vidéo", value: "Cette activité n'inclut pas de service de photo ou vidéo." },
 					{ label: "Transport", value: "Nous ne proposons pas de transport depuis La Paz vers Cabo Pulmo." },
 					{ label: "Toilettes", value: "Le centre de plongée dispose de toilettes avant le départ. Le bateau n'en a pas, nous recommandons donc d'utiliser les installations avant l'embarquement." },
@@ -598,6 +599,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Tarifs",
 				title: "Choisissez votre expérience à Cabo Pulmo",
+				note: "Plongée certifiée : si vous n'avez pas plongé au cours des 6 derniers mois, le centre de plongée peut facturer 600 MXN de plus pour un refresher.",
 				cards: [
 					{
 						name: "Discovery",
