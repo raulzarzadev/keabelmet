@@ -282,7 +282,7 @@ function CheckoutModal({ slug, expeditionName, cardName, unitAmountMxn, perPerso
 
 						{rideEligible && (
 							<label className={`res-ride${ride ? " is-on" : ""}`}>
-								<span className="res-ride-flag">⚠️ {RIDE_NOT_INCLUDED[locale] ?? RIDE_NOT_INCLUDED.es}</span>
+								<span className="res-ride-flag">ℹ️ {RIDE_NOT_INCLUDED[locale] ?? RIDE_NOT_INCLUDED.es}</span>
 								<input type="checkbox" checked={ride} onChange={(e) => setRide(e.target.checked)} />
 								<span className="res-ride-body">
 									<span className="res-ride-q">🚐 {fillRide(t.rideQuestion)}</span>
