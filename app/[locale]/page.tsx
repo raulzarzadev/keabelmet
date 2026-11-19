@@ -3,7 +3,8 @@ import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
-import SardineRunPopup from "@/components/SardineRunPopup"
+import SeasonPopup from "@/components/SeasonPopup"
+import { getBookableActivities } from "@/lib/bookable-activities"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
@@ -388,7 +389,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <SardineRunPopup locale={locale} />
+      <SeasonPopup
+        locale={locale}
+        items={getBookableActivities(locale)
+          .filter((a) => a.slug === "safari-bahia-magdalena" || a.slug === "tiburon-ballena")
+          .map((a) => ({ slug: a.slug, fromMxn: a.fromAmountMxn }))}
+      />
     </main>
   )
 }

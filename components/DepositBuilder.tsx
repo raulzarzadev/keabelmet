@@ -47,7 +47,7 @@ const copy: Record<string, UI> = {
 
 export default function DepositBuilder({ locale = "es", activities }: { locale?: Locale; activities: BookableActivity[] }) {
 	const t = copy[locale] ?? copy.es
-	const { items: cart, add, update: updateItem, remove: removeItem, clear: clearCart } = useCart()
+	const { items: cart, add, update: updateItem, remove: removeItem, clear: clearCart, ready: cartReady } = useCart()
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [phone, setPhone] = useState("")
@@ -77,6 +77,31 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 			if (match && match.name !== it.cardName) updateItem(it.key, { cardName: match.name })
 		}
 	}, [cart, optionsBySlug, updateItem])
+
+	// Enlaces como /arma-tu-reserva?add=safari-bahia-magdalena,tiburon-ballena (p. ej. desde el aviso de
+	// temporada) llegan con esas actividades ya en el carrito, sin duplicar las que ya estaban.
+	const [addedFromLink, setAddedFromLink] = useState(false)
+	useEffect(() => {
+		if (addedFromLink || !cartReady) return
+		setAddedFromLink(true)
+		let slugs: string[] = []
+		try {
+			const url = new URL(window.location.href)
+			slugs = (url.searchParams.get("add") ?? "").split(",").map((s) => s.trim()).filter(Boolean)
+			if (!slugs.length) return
+			url.searchParams.delete("add")
+			window.history.replaceState(null, "", url.pathname + url.search + url.hash)
+		} catch {
+			return
+		}
+		let count = cart.length
+		for (const slug of slugs) {
+			const a = activities.find((x) => x.slug === slug)
+			if (!a || cart.some((it) => it.slug === slug) || count >= MAX_ITEMS) continue
+			add({ slug: a.slug, title: a.title, cardName: a.cardName, unitAmountMxn: a.unitAmountMxn, image: a.image, dateISO: "", people: 1 })
+			count++
+		}
+	}, [addedFromLink, cartReady, cart, activities, add])
 
 	function addActivity(a: BookableActivity) {
 		if (cart.length >= MAX_ITEMS) return
