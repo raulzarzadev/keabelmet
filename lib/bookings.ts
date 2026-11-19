@@ -197,7 +197,12 @@ export function sanitizeBooking(input: Record<string, unknown>, base?: Booking):
 		captain: str(input.captain, 80),
 		transport: transport === "si" || transport === "sí" ? "si" : transport === "no" ? "no" : "",
 		notes: str(input.notes, 1000),
-		cost: (() => { const c = cell(input.cost); return typeof c === "number" ? c : null })(),
+		cost: (() => {
+			const c = cell(input.cost)
+			if (typeof c === "number") return c
+			// Reserva nueva sin costo: usamos el costo fijo de la actividad si lo tiene.
+			return base ? null : defaultCost(activity, people, cellNumber(cell(input.paidFull)))
+		})(),
 		status: input.status === "cancelled" ? "cancelled" : "active",
 		createdAt: base?.createdAt ?? now,
 		updatedAt: now,
@@ -216,6 +221,20 @@ export function prettyPhone(raw: string): string {
 	if (d.startsWith("1") && d.length === 11) return `1 ${d.slice(1, 4)} ${d.slice(4, 7)} ${d.slice(7)}`
 	const cc = d.length > 11 ? d.slice(0, 3) : d.slice(0, 2)
 	return `${cc} ${d.slice(cc.length).replace(/(\d{3})(?=\d)/g, "$1 ")}`.trim()
+}
+
+/**
+ * Costo por defecto de una reserva nueva de la página (lo que se le paga al
+ * proveedor), para que la utilidad salga sola. Solo para actividades con
+ * costo fijo; las demás (La Ventana, Sardine Run, buceo en La Paz…) varían y
+ * se capturan a mano en el panel. Editar la reserva siempre manda.
+ *   - Tiburón ballena y snorkel en Espíritu Santo: $1,300 por persona.
+ *   - Cabo Pulmo: el centro de buceo nos da 10% de comisión → costo = 90% del precio.
+ */
+export function defaultCost(slug: string, people: number, tourMxn: number): number | null {
+	if (slug === "tiburon-ballena" || slug === "tour-espiritu-santo") return 1300 * Math.max(0, people)
+	if (slug === "buceo-cabo-pulmo") return tourMxn > 0 ? Math.round(tourMxn * 0.9) : null
+	return null
 }
 
 /** Convierte un pago exitoso en una o varias reservas (una por actividad). */
@@ -257,6 +276,7 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 			settled: null,
 			balance: i === 0 ? remaining : null,
 			transport: it.ride ? "si" : "",
+			cost: defaultCost(it.slug, it.people, it.unitAmountMxn * it.people),
 			notes: items.length > 1 ? `Paquete con anticipo (${items.length} actividades), folio ${base.folio}` : "",
 		}))
 	}
@@ -297,6 +317,11 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 			settled: "si",
 			balance: "nd",
 			transport: m.rideAddon === "true" ? "si" : "",
+			cost: defaultCost(
+				m.slug,
+				Number(m.people) || 1,
+				(Number(m.unitAmountMxn) || 0) * (Number(m.quantity) || 0) || (Number(m.totalMxn) || total) - (Number(m.rideAddonMxn) || 0),
+			),
 		},
 	]
 }
