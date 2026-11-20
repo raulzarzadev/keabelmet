@@ -99,7 +99,21 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Cómo llegar a La Paz (aeropuerto, ferry, carretera) | GAP; Baja Ferries; OpenStreetMap/OSRM |
 | ✅ | La Paz o Los Cabos: ¿dónde hospedarse para ver fauna? | OSRM; fuentes de temporadas ya publicadas; INEGI ENSU |
 | ✅ | Bloqueador biodegradable: por qué es obligatorio | NOM-171; estudios de oxibenzona |
-| ⏳ | ¿Cuánto cuesta un viaje a La Paz? Presupuesto | — |
+| ✅ | ¿Cuánto cuesta un viaje a La Paz? Presupuesto | INEGI EVI ago. 2026; Banxico FIX |
+| ✅ | Cómo llegar a La Paz desde Europa | AICM; GAP; Los Cabos Tourism Board (Condor FRA–SJD) |
+| ✅ | Cómo llegar a La Paz desde EE. UU. y Canadá | Alaska Airlines; GAP |
+| ✅ | Requisitos para entrar a México | Exteriores (España); FCDO; Gobierno de Canadá |
+| ✅ | ¿Vale la pena visitar La Paz? | UNESCO; INEGI; Cofepris; SMN |
+| ✅ | Reservar tours con anticipación o de último momento | NOM-171; Conanp |
+| ✅ | Dinero en La Paz: pesos, tarjetas y cajeros | Gobierno de Canadá; FCDO; Banxico |
+| ✅ | Rentar auto y manejar en BCS | FCDO; Gobierno de Canadá; OSRM |
+| ✅ | Salud para viajar a La Paz | FCDO; Gobierno de Canadá; SMN |
+| ✅ | Viajar a La Paz en Navidad, Semana Santa o verano | Semarnat; NOAA; Palacios et al. 2023; Conanp; SMN |
+| ✅ | Tour de tiburón ballena: precio, horarios y reserva | NOM-171; Semarnat 2026-2027 |
+| ✅ | ¿Qué comen los tiburones ballena? | Whitehead et al. 2020; de la Parra et al. 2011; Barry et al. 2026 |
+| ✅ | Tiburón ballena en La Paz vs. Holbox | Ornelas et al. 2026; Hueter et al. 2013 |
+| ✅ | ¿Por qué hay tiburones ballena en La Paz y cuántos? | Ornelas et al. 2026; Whitehead et al. 2019 |
+| ✅ | Nadar con tiburón ballena por primera vez | NOM-171 |
 | ✅ | Moverse en La Paz: coche, taxi, transporte (dentro de "Cómo llegar") | GOV.UK; OSRM |
 | ✅ | Qué comer en La Paz (almejas chocolatas, tacos de pescado) | López-Rocha et al. 2010; Palacios-Abrantes et al. 2018; Gárate-Lizárraga et al. 2004 |
 | ⏳ | Fotografía submarina para principiantes | — |

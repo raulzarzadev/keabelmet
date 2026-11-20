@@ -62,6 +62,21 @@ import { ballenaJorobadaTemporada } from "./posts/ballena-jorobada-temporada"
 import { ballenaAzulLoreto } from "./posts/ballena-azul-loreto"
 import { vaquitaMarina } from "./posts/vaquita-marina"
 import { pecesSnorkelLaPaz } from "./posts/peces-snorkel-la-paz"
+import { tourTiburonBallenaLaPaz } from "./posts/tour-tiburon-ballena-la-paz"
+import { queComenTiburonesBallena } from "./posts/que-comen-tiburones-ballena"
+import { tiburonBallenaLaPazVsHolbox } from "./posts/tiburon-ballena-la-paz-vs-holbox"
+import { porQueHayTiburonesBallenaEnLaPaz } from "./posts/por-que-hay-tiburones-ballena-en-la-paz"
+import { nadarTiburonBallenaPrimeraVez } from "./posts/nadar-tiburon-ballena-primera-vez"
+import { llegarLaPazDesdeEuropa } from "./posts/llegar-la-paz-desde-europa"
+import { llegarLaPazDesdeEstadosUnidos } from "./posts/llegar-la-paz-desde-estados-unidos"
+import { requisitosEntrarMexico } from "./posts/requisitos-entrar-mexico"
+import { cuantoCuestaViajeLaPaz } from "./posts/cuanto-cuesta-viaje-la-paz"
+import { valeLaPenaLaPaz } from "./posts/vale-la-pena-la-paz"
+import { reservarToursAnticipacion } from "./posts/reservar-tours-anticipacion"
+import { dineroEnLaPaz } from "./posts/dinero-en-la-paz"
+import { rentarAutoBcs } from "./posts/rentar-auto-bcs"
+import { saludViajarLaPaz } from "./posts/salud-viajar-la-paz"
+import { cuandoViajarDesdeEuropa } from "./posts/cuando-viajar-desde-europa"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -132,4 +147,19 @@ export const blogPosts: BlogPost[] = [
 	ballenaAzulLoreto,
 	vaquitaMarina,
 	pecesSnorkelLaPaz,
+	tourTiburonBallenaLaPaz,
+	queComenTiburonesBallena,
+	tiburonBallenaLaPazVsHolbox,
+	porQueHayTiburonesBallenaEnLaPaz,
+	nadarTiburonBallenaPrimeraVez,
+	llegarLaPazDesdeEuropa,
+	llegarLaPazDesdeEstadosUnidos,
+	requisitosEntrarMexico,
+	cuantoCuestaViajeLaPaz,
+	valeLaPenaLaPaz,
+	reservarToursAnticipacion,
+	dineroEnLaPaz,
+	rentarAutoBcs,
+	saludViajarLaPaz,
+	cuandoViajarDesdeEuropa,
 ]
