@@ -37,7 +37,7 @@ export const sardineRun: BlogPost = {
 			{ type: "p", text: "En nuestras salidas, el espectáculo cambia cada día: a veces los marlines son los protagonistas, otras veces un grupo de lobos marinos o de delfines se une a la cacería, y algunos días aparece una ballena de Bryde alimentándose entre los peces. Las aves son la primera pista: cuando se lanzan en picada, sabemos que la acción está justo debajo." },
 			{ type: "tip", text: "En el Sardine Run, la regla de oro es no meterse a la bola de sardinas. Nos quedamos a un lado, flotando, y dejamos que la acción pase frente a nosotros. Así ves más y molestas menos." },
 			{ type: "h2", text: "Cómo vivirlo" },
-			{ type: "p", text: "Nuestro [Ocean Safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena) sale de La Paz antes del amanecer, cruza el desierto hasta el Pacífico y dura unas 10 horas en total. Opera en noviembre y diciembre, cuesta $3,500 MXN por persona e incluye transporte, guía biólogo marino, equipo de snorkel, neopreno y fotos. Necesitas sentirte cómodo nadando en mar abierto con snorkel." },
+			{ type: "p", text: "Nuestro [Ocean Safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena) sale de La Paz antes del amanecer, cruza el desierto hasta el Pacífico y dura unas 10 horas en total. Opera en noviembre y diciembre, cuesta $4,500 MXN por persona e incluye transporte redondo desde La Paz, guía biólogo marino, equipo de snorkel, neopreno y fotos. Necesitas sentirte cómodo nadando en mar abierto con snorkel." },
 		],
 		faq: [
 			{ q: "¿Cuándo es el Sardine Run en Baja California Sur?", a: "Keabelmet lo opera en noviembre y diciembre. La sardina del Pacífico se reproduce en Bahía Magdalena de diciembre a julio, con su máximo en enero y febrero [^1]." },
@@ -69,7 +69,7 @@ export const sardineRun: BlogPost = {
 			{ type: "p", text: "On our trips the show changes every day: sometimes marlin steal the spotlight, other times a group of sea lions or dolphins joins the hunt, and some days a Bryde's whale shows up feeding among the fish. Birds are the first clue: when they start diving, we know the action is right below." },
 			{ type: "tip", text: "On the Sardine Run, the golden rule is not to swim into the bait ball. We stay to the side, floating, and let the action pass in front of us. You see more and disturb less." },
 			{ type: "h2", text: "How to experience it" },
-			{ type: "p", text: "Our [Magdalena Bay Ocean Safari](/experiencias/safari-bahia-magdalena) leaves La Paz before dawn, crosses the desert to the Pacific and lasts about 10 hours in total. It runs in November and December, costs $3,500 MXN per person and includes transport, a marine biologist guide, snorkel gear, wetsuit and photos. You need to be comfortable swimming in open water with a snorkel." },
+			{ type: "p", text: "Our [Magdalena Bay Ocean Safari](/experiencias/safari-bahia-magdalena) leaves La Paz before dawn, crosses the desert to the Pacific and lasts about 10 hours in total. It runs in November and December, costs $4,500 MXN per person and includes round-trip transport from La Paz, a marine biologist guide, snorkel gear, wetsuit and photos. You need to be comfortable swimming in open water with a snorkel." },
 		],
 		faq: [
 			{ q: "When is the Sardine Run in Baja California Sur?", a: "Keabelmet runs it in November and December. Pacific sardine reproduce in Magdalena Bay from December to July, peaking in January and February [^1]." },

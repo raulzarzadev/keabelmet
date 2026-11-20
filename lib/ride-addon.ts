@@ -3,8 +3,7 @@
  * El monto es autoritativo en el servidor; el cliente solo manda un boolean.
  *
  *   - Safari La Ventana: precio fijo por reserva (hasta 4 personas).
- *   - Sardine Run (Bahía Magdalena): por persona. El safari sale a las 8:00 a. m. de
- *     Puerto Chale; con transporte, la salida desde La Paz es a las 5:00 a. m.
+ *   (El Sardine Run ya incluye el transporte redondo en su precio desde nov 2026.)
  */
 export interface RideAddon {
 	mode: "booking" | "person"
@@ -17,11 +16,6 @@ export const RIDE_ADDONS: Record<string, RideAddon> = {
 		mode: "booking",
 		mxn: 1000,
 		route: { es: "La Paz ⇄ La Ventana", en: "La Paz ⇄ La Ventana", fr: "La Paz ⇄ La Ventana", zh: "拉巴斯 ⇄ 拉文塔纳", ca: "La Paz ⇄ La Ventana" },
-	},
-	"safari-bahia-magdalena": {
-		mode: "person",
-		mxn: 500,
-		route: { es: "La Paz ⇄ Puerto Chale", en: "La Paz ⇄ Puerto Chale", fr: "La Paz ⇄ Puerto Chale", zh: "拉巴斯 ⇄ 查莱港", ca: "La Paz ⇄ Puerto Chale" },
 	},
 }
 

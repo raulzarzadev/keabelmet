@@ -81,7 +81,7 @@ export const TOURS: FinderTour[] = [
 		id: "safari-bahia-magdalena",
 		href: "/experiencias/safari-bahia-magdalena",
 		image: "/images/marlin-bahia-magdalena-hero.jpeg",
-		modes: { snorkel: { mxn: 3500 } },
+		modes: { snorkel: { mxn: 4500 } },
 		months: [11, 12],
 		time: "full",
 		// La página no publica edad mínima; no lo recomendamos con menores de 12 (10 h en mar abierto).

@@ -263,11 +263,11 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "Partagé",
-					amountMxn: 3500,
+					amountMxn: 4500,
 					amountNote: "/ personne",
 					items: [
 						"Bateau partagé, 2-6 personnes",
-						"Convoi depuis La Paz (transport en option +500 MXN par personne)",
+						"Transport aller-retour depuis La Paz inclus",
 						"Équipement de snorkeling inclus",
 						"Déjeuner et boissons",
 						"Guide biologiste marin, photo/vidéo inclus",
