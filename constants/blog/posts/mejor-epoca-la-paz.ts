@@ -53,6 +53,7 @@ export const mejorEpocaLaPaz: BlogPost = {
 				"**Lobos marinos:** se puede nadar con ellos de septiembre a mayo; del 1 de junio al 31 de agosto el nado en Los Islotes se restringe por su temporada reproductiva [^6]. Más en [nadar con lobos marinos](/blog/nadar-con-lobos-marinos-en-la-paz).",
 			] },
 			{ type: "fact", text: "La temperatura del agua en la bahía cambia casi **9 °C** entre febrero y septiembre [^7]. Por eso el mismo arrecife se siente distinto según el mes, y por eso el traje de neopreno es tu mejor amigo en invierno." },
+			{ type: "img", src: "/images/blog/dos-ballenas-jorobadas-cerca-de-la-costa-baja-california-sur.webp", alt: "Dos ballenas jorobadas en la superficie con la costa y las montañas al fondo", caption: "Dos ballenas jorobadas cerca de la costa de Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Entonces, ¿cuándo venir?" },
 			{ type: "ul", items: [
 				"**Si sueñas con el tiburón ballena:** noviembre a marzo.",
@@ -107,6 +108,7 @@ export const mejorEpocaLaPaz: BlogPost = {
 				"**Sea lions:** you can swim with them September to May; from June 1 to August 31 swimming at Los Islotes is restricted for the breeding season [^6]. More in [swimming with sea lions](/blog/swim-with-sea-lions-in-la-paz).",
 			] },
 			{ type: "fact", text: "Water temperature in the bay changes by almost **9 °C (16 °F)** between February and September [^7]. That's why the same reef feels different depending on the month, and why a wetsuit is your best friend in winter." },
+			{ type: "img", src: "/images/blog/dos-ballenas-jorobadas-cerca-de-la-costa-baja-california-sur.webp", alt: "Two humpback whales at the surface with the coast and mountains behind", caption: "Two humpback whales near the coast of Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "So when should you come?" },
 			{ type: "ul", items: [
 				"**If you dream of whale sharks:** November to March.",

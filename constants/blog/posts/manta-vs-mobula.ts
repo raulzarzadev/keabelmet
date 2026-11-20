@@ -26,6 +26,7 @@ export const mantaVsMobula: BlogPost = {
 			{ type: "p", text: "En La Paz mucha gente dice \"mantarrayas\" para todo, pero no es lo mismo una móbula que salta en grupo en La Ventana que una manta gigante del tamaño de una lancha. Aquí te explicamos en qué se parecen y en qué no." },
 			{ type: "h2", text: "Son parientes cercanos" },
 			{ type: "p", text: "Hasta hace poco las mantas tenían su propio género, *Manta*. Un estudio genético de toda la familia encontró que las mantas quedan **dentro** del grupo de las móbulas, así que hoy todas se clasifican en un solo género: **Mobula** [^1]. La manta gigante se llama ahora *Mobula birostris*." },
+			{ type: "img", src: "/images/blog/apneista-nadando-bajo-manta-gigante.webp", alt: "Apneísta con aletas amarillas nadando bajo una manta gigante", caption: "Un apneísta junto a una manta gigante: así se aprecia su tamaño. Foto: Keabelmet." },
 			{ type: "h2", text: "La diferencia principal: el tamaño" },
 			{ type: "table", head: ["", "Manta gigante (oceánica)", "Móbula de Munk"], rows: [
 				["Nombre científico", "*Mobula birostris*", "*Mobula munkiana*"],
@@ -59,6 +60,7 @@ export const mantaVsMobula: BlogPost = {
 			{ type: "p", text: "In La Paz many people say \"manta rays\" for everything, but a mobula leaping in a group at La Ventana isn't the same as a giant manta the size of a boat. Here's how they're alike and how they differ." },
 			{ type: "h2", text: "They're close relatives" },
 			{ type: "p", text: "Until recently mantas had their own genus, *Manta*. A genetic study of the whole family found that mantas sit **inside** the mobula group, so today they're all placed in a single genus: **Mobula** [^1]. The giant manta is now called *Mobula birostris*." },
+			{ type: "img", src: "/images/blog/apneista-nadando-bajo-manta-gigante.webp", alt: "Freediver with yellow fins swimming below a giant manta", caption: "A freediver next to a giant manta shows how big it is. Photo: Keabelmet." },
 			{ type: "h2", text: "The main difference: size" },
 			{ type: "table", head: ["", "Giant (oceanic) manta", "Munk's mobula"], rows: [
 				["Scientific name", "*Mobula birostris*", "*Mobula munkiana*"],

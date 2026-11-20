@@ -32,6 +32,7 @@ export const marDeCortesAcuario: BlogPost = {
 			{ type: "p", text: "El Golfo de California es, en tiempo geológico, un mar muy joven. Tomó su forma actual cuando el límite entre las placas tectónicas del Pacífico y de Norteamérica se movió al este de la península de Baja California, hace unos **6 millones de años** [^4]. Para hace 4.7 millones de años, el movimiento entre las placas ya ocurría dentro del Golfo [^4]." },
 			{ type: "fact", text: "Rocas marinas de hasta **8.2 millones de años** en el sur del Golfo indican una primera entrada del mar, y la cuenca completa ya estaba inundada hace entre **6.5 y 6.3 millones de años** [^3]." },
 			{ type: "p", text: "Esa historia explica el paisaje que ves desde la lancha: montañas volcánicas y desérticas cayendo directo a un mar profundo y azul. Donde el desierto se encuentra con el océano." },
+			{ type: "img", src: "/images/blog/tiburon-sedoso-nadando-baja-california-sur.webp", alt: "Tiburón sedoso nadando en agua azul cerca de la superficie", caption: "Un tiburón sedoso nada cerca de la superficie en Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Tres pruebas vivas de su riqueza" },
 			{ type: "ul", items: [
 				"**Cabo Pulmo**: tras dejar de pescar, su biomasa de peces aumentó 463% en una década, el mayor aumento absoluto medido en una reserva marina del mundo [^5]. Lee [la historia de Cabo Pulmo](/blog/cabo-pulmo-el-arrecife-que-volvio-a-la-vida).",
@@ -66,6 +67,7 @@ export const marDeCortesAcuario: BlogPost = {
 			{ type: "p", text: "In geological terms, the Gulf of California is a very young sea. It took its present shape when the boundary between the Pacific and North American tectonic plates shifted east of the Baja California peninsula, about **6 million years ago** [^4]. By 4.7 million years ago, plate motion was already taking place inside the Gulf [^4]." },
 			{ type: "fact", text: "Marine rocks as old as **8.2 million years** in the southern Gulf point to an early incursion of the sea, and the whole basin was flooded between **6.5 and 6.3 million years ago** [^3]." },
 			{ type: "p", text: "That history explains the landscape you see from the boat: volcanic desert mountains plunging straight into a deep blue sea. Where the desert meets the ocean." },
+			{ type: "img", src: "/images/blog/tiburon-sedoso-nadando-baja-california-sur.webp", alt: "Silky shark swimming in blue water near the surface", caption: "A silky shark swims near the surface in Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "Three living proofs of its richness" },
 			{ type: "ul", items: [
 				"**Cabo Pulmo**: after fishing stopped, its fish biomass grew 463% in a decade, the largest absolute increase measured in a marine reserve anywhere [^5]. Read [the Cabo Pulmo story](/blog/cabo-pulmo-reef-recovery-story).",

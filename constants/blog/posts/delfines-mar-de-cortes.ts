@@ -37,6 +37,7 @@ export const delfinesMarDeCortes: BlogPost = {
 				["Invierno a inicios del verano", "Tursiones, delfines comunes y ballena azul [^2]"],
 				["Finales del verano y otoño", "Ballena de aleta, ballena de Bryde y calderón de aletas cortas [^2]"],
 			] },
+			{ type: "img", src: "/images/blog/manada-de-tursiones-vista-desde-dron-baja-california-sur.webp", alt: "Manada de tursiones nadando juntos vista desde un dron", caption: "Una manada de tursiones (Tursiops truncatus) vista desde dron en Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Cómo verlos sin molestarlos" },
 			{ type: "p", text: "Los delfines se comunican con silbidos, y el ruido de las lanchas los afecta: en la bahía de La Paz, con lanchas pequeñas en movimiento, los tursiones oceánicos **bajaron** la frecuencia de sus silbidos y los costeros la **subieron** [^3]. Por eso una buena observación es tranquila:" },
 			{ type: "ul", items: [
@@ -77,6 +78,7 @@ export const delfinesMarDeCortes: BlogPost = {
 				["Winter to early summer", "Bottlenose dolphins, common dolphins and blue whales [^2]"],
 				["Late summer and fall", "Fin whales, Bryde's whales and short-finned pilot whales [^2]"],
 			] },
+			{ type: "img", src: "/images/blog/manada-de-tursiones-vista-desde-dron-baja-california-sur.webp", alt: "Pod of bottlenose dolphins swimming together seen from a drone", caption: "A pod of bottlenose dolphins (Tursiops truncatus) seen from a drone in Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "How to watch them without disturbing them" },
 			{ type: "p", text: "Dolphins communicate with whistles, and boat noise affects them: in La Paz Bay, with small boats moving nearby, offshore bottlenose dolphins **lowered** their whistle frequencies while coastal ones **raised** them [^3]. That's why good dolphin watching is calm:" },
 			{ type: "ul", items: [

@@ -42,6 +42,7 @@ export const valeLaPenaLaPaz: BlogPost = {
 				"**Necesitas moverte:** para playas como Balandra o La Ventana conviene rentar auto o reservar tours con transporte.",
 				"**El mar manda:** si hay viento fuerte se cancelan las salidas en lancha; deja días libres.",
 			] },
+			{ type: "img", src: "/images/blog/grupo-en-tour-en-lancha-keabelmet-la-paz.webp", alt: "Grupo sonriente con chalecos salvavidas en una lancha", caption: "Un grupo en un tour de Keabelmet en Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "¿Para quién es La Paz?" },
 			{ type: "table", head: ["Te va a encantar si…", "Quizá no sea para ti si…"], rows: [
 				["Quieres nadar con fauna silvestre", "Buscas vida nocturna y resorts todo incluido"],
@@ -84,6 +85,7 @@ export const valeLaPenaLaPaz: BlogPost = {
 				"**You need to get around:** for beaches like Balandra or La Ventana, rent a car or book tours with transport.",
 				"**The sea is in charge:** strong winds cancel boat trips, so leave spare days.",
 			] },
+			{ type: "img", src: "/images/blog/grupo-en-tour-en-lancha-keabelmet-la-paz.webp", alt: "Smiling group wearing life vests on a boat", caption: "A group on a Keabelmet tour in Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "Who is La Paz for?" },
 			{ type: "table", head: ["You'll love it if…", "It might not be for you if…"], rows: [
 				["You want to swim with wildlife", "You're after nightlife and all-inclusive resorts"],
