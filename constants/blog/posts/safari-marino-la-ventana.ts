@@ -32,6 +32,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "h2", text: "¿Por qué en La Ventana?" },
 			{ type: "p", text: "Frente a La Ventana está el **canal de Cerralvo**. Un estudio que combinó lanchas, drones, avionetas y reportes ciudadanos encontró que el cortejo y apareamiento de tres especies de móbula ocurre **de marzo a agosto, con un pico en mayo**, y que **209 de 221** eventos se concentraron en la zona de La Ventana y Ensenada de Muertos [^1]. Más en [cuándo ver móbulas en La Ventana](/blog/cuando-ver-mobulas-en-la-ventana)." },
 			{ type: "p", text: "En la vecina bahía de La Paz, un estudio de 1988 a 1991 registró **seis especies de cetáceos con dientes** y **seis de ballenas con barbas**; los más importantes fueron el delfín común de rostro largo, el tursión y la ballena de Bryde [^2]. Lee [qué delfines hay en el Mar de Cortés](/blog/que-delfines-hay-en-el-mar-de-cortes)." },
+			{ type: "img", src: "/images/blog/orca-nadando-aleta-dorsal-baja-california-sur.webp", alt: "Orca nadando en la superficie con la aleta dorsal fuera del agua", caption: "Una orca, uno de los encuentros ocasionales de un safari marino. Foto: Keabelmet." },
 			{ type: "h2", text: "Qué puedes ver" },
 			{ type: "table", head: ["Frecuencia", "Especies"], rows: [
 				["Lo más habitual", "Delfines, móbulas (en temporada), ballenas, lobos marinos"],
@@ -79,6 +80,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "h2", text: "Why La Ventana?" },
 			{ type: "p", text: "La Ventana faces the **Cerralvo channel**. A study combining boats, drones, spotter planes and citizen reports found that courtship and mating of three mobula species happen **from March to August, peaking in May**, and that **209 of 221** events were concentrated around La Ventana and Ensenada de Muertos [^1]. More in [when to see mobula rays in La Ventana](/blog/when-to-see-mobula-rays-in-la-ventana)." },
 			{ type: "p", text: "In nearby La Paz Bay, a 1988–1991 study recorded **six toothed cetacean species** and **six baleen whale species**; the most important were the long-beaked common dolphin, the bottlenose dolphin and the Bryde's whale [^2]. Read [dolphins in the Sea of Cortez](/blog/dolphins-in-the-sea-of-cortez)." },
+			{ type: "img", src: "/images/blog/orca-nadando-aleta-dorsal-baja-california-sur.webp", alt: "Orca swimming at the surface with its dorsal fin out of the water", caption: "An orca, one of the occasional encounters on a marine safari. Photo: Keabelmet." },
 			{ type: "h2", text: "What you can see" },
 			{ type: "table", head: ["Frequency", "Species"], rows: [
 				["Most common", "Dolphins, mobulas (in season), whales, sea lions"],
