@@ -5,7 +5,7 @@ export const avesSardineRun: BlogPost = {
 	id: "aves-sardine-run",
 	category: "fauna",
 	date: "2026-10-29",
-	cover: "/brown-pelicans-flying-over-ocean-in-baja-californi.jpg",
+	cover: "/images/blog/pelicanos-pardos-volando-sobre-el-mar-baja-california-sur.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["animales-sardine-run", "bola-de-sardinas", "sardina-del-pacifico", "la-mancha"],
 	sources: fuentes(S.weimerskirch2009, S.velarde2013, S.anderson2017, S.pitman1986, S.thiebault2015),
@@ -15,7 +15,7 @@ export const avesSardineRun: BlogPost = {
 		metaTitle: "Aves marinas del Sardine Run: bobos, pelícanos y fragatas",
 		description: "Las aves marinas encuentran las bolas de sardinas antes que nadie. Qué comen los bobos y pelícanos de Baja California, cómo se clavan y por qué anuncian la salud del mar.",
 		excerpt: "Antes de ver un marlín, verás aves cayendo en picada. Son la mejor pista del Sardine Run y, según la ciencia, también un termómetro de la salud del mar.",
-		coverAlt: "Pelícanos pardos volando sobre el mar en Baja California",
+		coverAlt: "Grupo de pelícanos pardos volando sobre el mar en Baja California Sur",
 		answer: "En el Sardine Run, las aves marinas son la primera señal de que hay peces cerca. Los **bobos de patas azules y cafés** del Golfo de California se alimentan principalmente de **sardinas** [^1], y lo que comen los **pelícanos**, gaviotas y charranes anticipa las caídas de la pesca de sardina [^2]. En mar abierto, las parvadas suelen seguir a delfines y atunes que les acercan la comida [^4].",
 		blocks: [
 			{ type: "p", text: "En el Sardine Run, la primera pista casi nunca está bajo el agua: está en el cielo. Una nube de aves girando y lanzándose en picada sobre el mismo punto significa que abajo hay peces acorralados." },
@@ -43,7 +43,7 @@ export const avesSardineRun: BlogPost = {
 		metaTitle: "Seabirds of the Sardine Run: boobies, pelicans and frigatebirds",
 		description: "Seabirds find sardine balls before anyone else. What Baja California's boobies and pelicans eat, how they dive and why they signal the health of the sea.",
 		excerpt: "Before you see a marlin, you'll see birds diving. They're the best clue on the Sardine Run and, according to science, a gauge of the sea's health too.",
-		coverAlt: "Brown pelicans flying over the sea in Baja California",
+		coverAlt: "Flock of brown pelicans flying over the sea in Baja California Sur",
 		answer: "On the Sardine Run, seabirds are the first sign that fish are nearby. The Gulf of California's **blue-footed and brown boobies** feed mainly on **sardines** [^1], and what **pelicans**, gulls and terns eat predicts drops in the sardine fishery [^2]. In open water, flocks often follow dolphins and tuna that bring food within reach [^4].",
 		blocks: [
 			{ type: "p", text: "On the Sardine Run, the first clue is almost never underwater: it's in the sky. A cloud of birds circling and diving on the same spot means there are fish trapped below." },

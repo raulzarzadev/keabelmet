@@ -36,6 +36,7 @@ export const islaEspirituSanto: BlogPost = {
 				"**Los Islotes**, una colonia de lobo marino de California en el sur del Golfo [^4].",
 			] },
 			{ type: "p", text: "Y algo que pocos saben: en las aguas oceánicas cerca de Isla Espíritu Santo, los científicos han identificado **hembras adultas de tiburón ballena**, mientras que en la bahía de La Paz solo se encuentran juveniles [^6]." },
+			{ type: "img", src: "/images/blog/rocas-y-mar-isla-espiritu-santo-la-paz.webp", alt: "Paso entre rocas volcánicas iluminadas por el sol sobre el agua en Isla Espíritu Santo", caption: "Formaciones de roca sobre el mar en Isla Espíritu Santo, frente a La Paz. Foto: Keabelmet." },
 			{ type: "h2", text: "Las reglas que debes conocer" },
 			{ type: "ul", items: [
 				"**Del 1 de junio al 31 de agosto** se restringe el nado, el buceo libre y el buceo autónomo en Los Islotes por la temporada reproductiva de los lobos marinos [^5]. Se observan desde la lancha.",
@@ -79,6 +80,7 @@ export const islaEspirituSanto: BlogPost = {
 				"**Los Islotes**, a California sea lion colony in the southern Gulf [^4].",
 			] },
 			{ type: "p", text: "And something few people know: in the oceanic waters near Isla Espíritu Santo, scientists have identified **adult female whale sharks**, while only juveniles are found in the bay of La Paz [^6]." },
+			{ type: "img", src: "/images/blog/rocas-y-mar-isla-espiritu-santo-la-paz.webp", alt: "Sunlit volcanic rock passage over the water at Espíritu Santo Island", caption: "Rock formations over the sea at Espíritu Santo Island, off La Paz. Photo: Keabelmet." },
 			{ type: "h2", text: "Rules you should know" },
 			{ type: "ul", items: [
 				"**From June 1 to August 31** swimming, free diving and scuba diving are restricted at Los Islotes during the sea lion breeding season [^5]. They're watched from the boat.",
