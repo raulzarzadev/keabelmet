@@ -25,6 +25,7 @@ export const tiburonBallenaReglas: BlogPost = {
 			{ type: "h2", text: "Las distancias: 2 metros de la cabeza, 3 de la cola" },
 			{ type: "p", text: "La norma pide a los nadadores mantener una distancia mínima de **2 metros a los lados de la cabeza** y de **3 metros de la aleta caudal** (la cola) [^1]. Además, **no se permite nadar enfrente** del tiburón ballena [^1]. La idea es acompañarlo de lado, sin bloquear su camino." },
 			{ type: "fact", text: "La norma reconoce que el tiburón puede mostrar molestia con \"nado evasivo\" o \"coleteo defensivo\". Si eso pasa, la actividad con ese animal debe terminar y la lancha se retira despacio [^1]. Por eso la distancia a la cola es mayor." },
+			{ type: "img", src: "/images/blog/tiburon-ballena-vista-cenital-dron-baja-california-sur.webp", alt: "Tiburón ballena solo en el agua visto desde un dron", caption: "Un tiburón ballena visto desde un dron en Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Grupos pequeños y tiempo limitado" },
 			{ type: "ul", items: [
 				"**Hasta 5 nadadores por guía.** El guía controla la actividad de un grupo de máximo cinco personas [^1].",
@@ -68,6 +69,7 @@ export const tiburonBallenaReglas: BlogPost = {
 			{ type: "h2", text: "Distances: 2 meters from the head, 3 from the tail" },
 			{ type: "p", text: "The standard requires swimmers to keep a minimum distance of **2 meters from the sides of the head** and **3 meters from the caudal fin** (the tail) [^1]. Also, **swimming in front of the whale shark is not allowed** [^1]. The idea is to swim alongside it without blocking its way." },
 			{ type: "fact", text: "The standard recognizes that a shark can show discomfort through \"evasive swimming\" or \"defensive tail strikes\". If that happens, the activity with that animal must end and the boat moves away slowly [^1]. That's why the tail distance is bigger." },
+			{ type: "img", src: "/images/blog/tiburon-ballena-vista-cenital-dron-baja-california-sur.webp", alt: "Lone whale shark in the water seen from a drone", caption: "A whale shark seen from a drone in Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "Small groups and limited time" },
 			{ type: "ul", items: [
 				"**Up to 5 swimmers per guide.** The guide supervises a group of five people at most [^1].",

@@ -32,6 +32,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "h2", text: "¿Por qué en La Ventana?" },
 			{ type: "p", text: "Frente a La Ventana está el **canal de Cerralvo**. Un estudio que combinó lanchas, drones, avionetas y reportes ciudadanos encontró que el cortejo y apareamiento de tres especies de móbula ocurre **de marzo a agosto, con un pico en mayo**, y que **209 de 221** eventos se concentraron en la zona de La Ventana y Ensenada de Muertos [^1]. Más en [cuándo ver móbulas en La Ventana](/blog/cuando-ver-mobulas-en-la-ventana)." },
 			{ type: "p", text: "En la vecina bahía de La Paz, un estudio de 1988 a 1991 registró **seis especies de cetáceos con dientes** y **seis de ballenas con barbas**; los más importantes fueron el delfín común de rostro largo, el tursión y la ballena de Bryde [^2]. Lee [qué delfines hay en el Mar de Cortés](/blog/que-delfines-hay-en-el-mar-de-cortes)." },
+			{ type: "img", src: "/images/blog/orca-nadando-aleta-dorsal-baja-california-sur.webp", alt: "Orca nadando en la superficie con la aleta dorsal fuera del agua", caption: "Una orca, uno de los encuentros ocasionales de un safari marino. Foto: Keabelmet." },
 			{ type: "h2", text: "Qué puedes ver" },
 			{ type: "table", head: ["Frecuencia", "Especies"], rows: [
 				["Lo más habitual", "Delfines, móbulas (en temporada), ballenas, lobos marinos"],
@@ -40,6 +41,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "fact", text: "En un safari nunca se garantiza una especie. Lo que sí se garantiza es una búsqueda activa, decisiones pensadas en la seguridad y una observación respetuosa." },
 			{ type: "h2", text: "Cómo se observa con respeto" },
 			{ type: "p", text: "Con las ballenas, la **NOM-131-SEMARNAT-2010** marca cómo acercarse: velocidad menor a 5 nudos en zonas con ballenas, acercamiento diagonal desde atrás, máximo **30 minutos** por ballena o grupo y nunca interponerse entre una madre y su cría [^3]. Está prohibido nadar o bucear con ballenas [^3]. Lee más en [turismo responsable con fauna](/blog/turismo-responsable-con-fauna-marina-en-baja-california-sur)." },
+			{ type: "img", src: "/images/blog/tursiones-sobre-fondo-de-arena-safari-la-ventana.webp", alt: "Cuatro tursiones nadando juntos sobre un fondo de arena", caption: "Tursiones (Tursiops truncatus) sobre el fondo de arena durante el safari en La Ventana. Foto: Keabelmet." },
 			{ type: "h2", text: "Cómo es el safari de Keabelmet" },
 			{ type: "table", head: ["", "Safari La Ventana"], rows: [
 				["Duración", "≈ 6 horas, salida 8:00 a. m."],
@@ -79,6 +81,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "h2", text: "Why La Ventana?" },
 			{ type: "p", text: "La Ventana faces the **Cerralvo channel**. A study combining boats, drones, spotter planes and citizen reports found that courtship and mating of three mobula species happen **from March to August, peaking in May**, and that **209 of 221** events were concentrated around La Ventana and Ensenada de Muertos [^1]. More in [when to see mobula rays in La Ventana](/blog/when-to-see-mobula-rays-in-la-ventana)." },
 			{ type: "p", text: "In nearby La Paz Bay, a 1988–1991 study recorded **six toothed cetacean species** and **six baleen whale species**; the most important were the long-beaked common dolphin, the bottlenose dolphin and the Bryde's whale [^2]. Read [dolphins in the Sea of Cortez](/blog/dolphins-in-the-sea-of-cortez)." },
+			{ type: "img", src: "/images/blog/orca-nadando-aleta-dorsal-baja-california-sur.webp", alt: "Orca swimming at the surface with its dorsal fin out of the water", caption: "An orca, one of the occasional encounters on a marine safari. Photo: Keabelmet." },
 			{ type: "h2", text: "What you can see" },
 			{ type: "table", head: ["Frequency", "Species"], rows: [
 				["Most common", "Dolphins, mobulas (in season), whales, sea lions"],
@@ -87,6 +90,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ type: "fact", text: "No species is ever guaranteed on a safari. What is guaranteed is an active search, safety-first decisions and respectful observation." },
 			{ type: "h2", text: "How to watch respectfully" },
 			{ type: "p", text: "With whales, Mexico's **NOM-131-SEMARNAT-2010** sets how to approach: under 5 knots in whale areas, a diagonal approach from behind, a maximum of **30 minutes** per whale or group, and never between a mother and her calf [^3]. Swimming or diving with whales is prohibited [^3]. Read more in [responsible wildlife tourism](/blog/responsible-marine-wildlife-tourism-baja-california-sur)." },
+			{ type: "img", src: "/images/blog/tursiones-sobre-fondo-de-arena-safari-la-ventana.webp", alt: "Four bottlenose dolphins swimming together over a sandy bottom", caption: "Bottlenose dolphins (Tursiops truncatus) over the sandy bottom during the La Ventana safari. Photo: Keabelmet." },
 			{ type: "h2", text: "What Keabelmet's safari is like" },
 			{ type: "table", head: ["", "La Ventana safari"], rows: [
 				["Duration", "≈ 6 hours, leaving 8:00 am"],

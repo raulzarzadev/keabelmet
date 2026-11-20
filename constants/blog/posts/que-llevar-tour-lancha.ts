@@ -39,6 +39,7 @@ export const queLlevarTourLancha: BlogPost = {
 			{ type: "h2", text: "Si viajas en los meses frescos" },
 			{ type: "p", text: "Entre diciembre y abril el agua de la bahía de La Paz promedia entre 20.5 y 23.4 °C [^2]. No es helada, pero al salir del agua con viento se siente. Agrega:" },
 			{ type: "ul", items: ["Sudadera.", "Rompevientos.", "Ropa seca adicional."] },
+			{ type: "img", src: "/images/blog/grupo-de-snorkel-en-lancha-keabelmet.webp", alt: "Grupo con trajes de neopreno, visores y aletas sentado en la proa de una lancha", caption: "Un grupo listo para hacer snorkel en un tour de Keabelmet. Foto: Keabelmet." },
 			{ type: "h2", text: "Para tus cosas" },
 			{ type: "ul", items: [
 				"Funda impermeable para el celular.",
@@ -91,6 +92,7 @@ export const queLlevarTourLancha: BlogPost = {
 			{ type: "h2", text: "If you're traveling in the cooler months" },
 			{ type: "p", text: "From December to April the water in the bay of La Paz averages between 20.5 and 23.4 °C (69–74 °F) [^2]. It's not freezing, but getting out into the wind you'll feel it. Add:" },
 			{ type: "ul", items: ["Hoodie.", "Windbreaker.", "Extra dry clothes."] },
+			{ type: "img", src: "/images/blog/grupo-de-snorkel-en-lancha-keabelmet.webp", alt: "Group in wetsuits, masks and fins sitting on the bow of a boat", caption: "A group ready to snorkel on a Keabelmet tour. Photo: Keabelmet." },
 			{ type: "h2", text: "For your stuff" },
 			{ type: "ul", items: [
 				"Waterproof phone case.",

@@ -29,6 +29,7 @@ export const snorkelOBuceo: BlogPost = {
 				["Lo mejor para", "Tiburón ballena, lobos marinos, playas y arrecifes someros", "Paredes, cañones, cardúmenes y barcos hundidos"],
 				["Edad mínima en Keabelmet", "Variable según el tour", "12 años"],
 			] },
+			{ type: "img", src: "/images/blog/snorkel-en-el-mar-baja-california-sur.webp", alt: "Persona sonriente con visor y snorkel flotando en el mar", caption: "Listo para hacer snorkel en Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Encuentros donde el snorkel es la estrella" },
 			{ type: "ul", items: [
 				"**Tiburón ballena:** la norma oficial define la actividad como nado en superficie con visor, snorkel, aletas y chaleco o neopreno [^1]. No se bucea con tanque con ellos. Lee [las reglas del encuentro](/blog/reglas-para-nadar-con-tiburon-ballena-en-la-paz).",
@@ -69,6 +70,7 @@ export const snorkelOBuceo: BlogPost = {
 				["Best for", "Whale sharks, sea lions, beaches and shallow reefs", "Walls, canyons, schools and shipwrecks"],
 				["Minimum age with Keabelmet", "Varies by tour", "12 years"],
 			] },
+			{ type: "img", src: "/images/blog/snorkel-en-el-mar-baja-california-sur.webp", alt: "Smiling person with mask and snorkel floating in the sea", caption: "Ready to snorkel in Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "Encounters where snorkeling is the star" },
 			{ type: "ul", items: [
 				"**Whale sharks:** the official standard defines the activity as surface swimming with mask, snorkel, fins and a life vest or wetsuit [^1]. No scuba diving with them. Read [the rules of the encounter](/blog/whale-shark-swimming-rules-in-la-paz).",

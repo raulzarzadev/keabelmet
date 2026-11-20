@@ -31,6 +31,7 @@ export const lobosMarinosNadar: BlogPost = {
 			{ type: "fact", text: "En el Golfo de California, el tiempo entre el nacimiento de la cría y la siguiente cópula es de **más de 30 días**, mayor que los 21 días estimados para los lobos marinos de California, y en Los Islotes los nacimientos están menos sincronizados entre hembras que en Los Cantiles, en el norte del Golfo [^1]." },
 			{ type: "p", text: "En esos meses las madres alternan viajes al mar para alimentarse con días en la colonia amamantando. Un estudio en Los Islotes midió que sus viajes de alimentación duraban **1.3 días** en un año normal y **2 días** en un año de El Niño, cuando la comida escaseaba [^2]. Cualquier molestia extra cuesta energía en un momento clave." },
 			{ type: "tip", text: "Si visitas en verano, no te pierdas la colonia: la vemos desde la lancha, con sus cachorros. Y el resto del día haces snorkel en arrecifes y disfrutas las playas de Espíritu Santo." },
+			{ type: "img", src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "Lobo marino de California asomando la cabeza fuera del agua", caption: "Un lobo marino de California se asoma a la superficie durante el safari en La Ventana. Foto: Keabelmet." },
 			{ type: "h2", text: "¿Cómo es el encuentro en el agua?" },
 			{ type: "p", text: "No hay dos iguales. Algunos lobos pasan a lo lejos; otros, sobre todo los jóvenes, se acercan curiosos y juegan alrededor por unos segundos. En Keabelmet seguimos tres reglas sencillas:" },
 			{ type: "ul", items: [
@@ -65,6 +66,7 @@ export const lobosMarinosNadar: BlogPost = {
 			{ type: "fact", text: "In the Gulf of California, the time between giving birth and the next mating is **more than 30 days**, longer than the 21 days estimated for sea lions in California, and at Los Islotes births are less synchronized among females than at Los Cantiles, in the northern Gulf [^1]." },
 			{ type: "p", text: "During those months mothers alternate feeding trips at sea with days nursing at the colony. A study at Los Islotes measured feeding trips of **1.3 days** in a normal year and **2 days** in an El Niño year, when food was scarce [^2]. Any extra disturbance costs them energy at a critical time." },
 			{ type: "tip", text: "If you visit in summer, don't skip the colony: we watch it from the boat, pups included. The rest of the day you snorkel reefs and enjoy Espíritu Santo's beaches." },
+			{ type: "img", src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "California sea lion poking its head out of the water", caption: "A California sea lion pokes its head above the surface during the La Ventana safari. Photo: Keabelmet." },
 			{ type: "h2", text: "What is the encounter like in the water?" },
 			{ type: "p", text: "No two are the same. Some sea lions pass by at a distance; others, especially the young ones, come over curious and play around you for a few seconds. At Keabelmet we follow three simple rules:" },
 			{ type: "ul", items: [
