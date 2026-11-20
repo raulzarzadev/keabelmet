@@ -77,6 +77,16 @@ import { dineroEnLaPaz } from "./posts/dinero-en-la-paz"
 import { rentarAutoBcs } from "./posts/rentar-auto-bcs"
 import { saludViajarLaPaz } from "./posts/salud-viajar-la-paz"
 import { cuandoViajarDesdeEuropa } from "./posts/cuando-viajar-desde-europa"
+import { guiaBuceoCaboPulmo } from "./posts/guia-buceo-cabo-pulmo"
+import { tiburonToroCaboPulmo } from "./posts/tiburon-toro-cabo-pulmo"
+import { tiburonMartilloElBajo } from "./posts/tiburon-martillo-el-bajo"
+import { mejoresSitiosBuceoLaPaz } from "./posts/mejores-sitios-buceo-la-paz"
+import { tourEspirituSantoGuia } from "./posts/tour-espiritu-santo-guia"
+import { safariMarinoLaVentana } from "./posts/safari-marino-la-ventana"
+import { tourBallenaGrisPuertoChale } from "./posts/tour-ballena-gris-puerto-chale"
+import { elegirOperadorToursLaPaz } from "./posts/elegir-operador-tours-la-paz"
+import { turismoResponsableFauna } from "./posts/turismo-responsable-fauna"
+import { islaPartidaEnsenadaGrande } from "./posts/isla-partida-ensenada-grande"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -162,4 +172,14 @@ export const blogPosts: BlogPost[] = [
 	rentarAutoBcs,
 	saludViajarLaPaz,
 	cuandoViajarDesdeEuropa,
+	guiaBuceoCaboPulmo,
+	tiburonToroCaboPulmo,
+	tiburonMartilloElBajo,
+	mejoresSitiosBuceoLaPaz,
+	tourEspirituSantoGuia,
+	safariMarinoLaVentana,
+	tourBallenaGrisPuertoChale,
+	elegirOperadorToursLaPaz,
+	turismoResponsableFauna,
+	islaPartidaEnsenadaGrande,
 ]

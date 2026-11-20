@@ -32,7 +32,7 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Marlín rayado: el cazador más rápido del Sardine Run | Abitia-Cárdenas et al. (dieta, LAJAR 2011) |
 | ✅ | Tortugas marinas de Baja California Sur | López-Castro et al. 2009; Seminoff et al. 2014; Mancini & Koch 2009 |
 | ✅ | Mantarraya gigante (manta oceánica) vs. móbula: diferencias | White et al. 2018; Cronin et al. 2025; Palacios et al. 2021 |
-| ⏳ | Tiburones de Cabo Pulmo: ¿hay tiburón toro? | buscar |
+| ✅ | Tiburones de Cabo Pulmo: ¿hay tiburón toro? | Lara-Lizardi et al. 2024; Ayres et al. 2024 |
 | ⏳ | Aves marinas: fragatas, pelícanos y bobos | buscar |
 | ✅ | ¿Qué peces veré haciendo snorkel en La Paz? | Pérez-España et al. 1996; Barjau-González et al. 2016 |
 | ⏳ | Pulpos, morenas y nudibranquios del arrecife | buscar |
@@ -67,9 +67,9 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | Los Islotes: la colonia de lobos marinos | García-Aguilar & Aurioles-Gamboa 2003 |
 | ⏳ | Bahía Magdalena: geografía y fauna | Bizzarro 2008 |
 | ⏳ | Isla Cerralvo y el canal de La Ventana | buscar |
-| ⏳ | Puerto Chale: el santuario de la ballena gris | buscar |
+| ✅ | Puerto Chale: el santuario de la ballena gris | NOAA; Pérez-Cortés et al. 2004; NOM-131 |
 | ✅ | Las mejores playas de La Paz | Cofepris, monitoreo de playas verano 2026; decreto APFF Balandra |
-| ⏳ | Isla Partida y Ensenada Grande | buscar |
+| ✅ | Isla Partida y Ensenada Grande | Palacios et al. 2021 |
 | ⏳ | Todos Santos, El Triunfo y otros pueblos cerca de La Paz | buscar |
 | ⏳ | ¿Qué es el Golfo de California y cómo se formó? (geología) | Oskin & Stock 2001, 2003 |
 
@@ -82,10 +82,13 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | ¿Puedo bucear sin certificación en La Paz? (Discovery vs. Open Water) | PADI (requisitos oficiales) |
 | ✅ | ¿Cuánto cuesta certificarse PADI Open Water en La Paz? | PADI |
 | ✅ | Snorkel vs. buceo: ¿cuál elegir? | — |
-| ⏳ | Buceo en Cabo Pulmo: guía completa | Aburto-Oropeza et al. 2011 |
+| ✅ | Buceo en Cabo Pulmo: guía completa | Aburto-Oropeza et al. 2011 |
 | ⏳ | Barcos hundidos de La Paz (Salvatierra, Fang Ming) | buscar |
-| ⏳ | ¿Qué es un safari marino? | — |
-| ⏳ | Tour a Espíritu Santo: qué incluye y cómo elegir operador | — |
+| ✅ | ¿Qué es un safari marino? | Palacios et al. 2023; Flores-Ramírez et al. 1996; NOM-131 |
+| ✅ | Tour a Espíritu Santo: qué incluye y cómo elegir operador | UNESCO; Conanp; NOM-09-TUR-2002 |
+| ✅ | Buceo en La Paz: los sitios más famosos | Labrada-Martagón et al. 2005; Villalobos et al. 2021; Barjau-González et al. 2016 |
+| ✅ | Tiburón martillo en El Bajo de Espíritu Santo | Klimley 1983, 1993; Ayres et al. 2023; Hoyos-Padilla et al. 2014 |
+| ✅ | Cómo elegir un operador de tours en La Paz | NOM-09-TUR-2002; NOM-171; NOM-131; FCDO |
 | ✅ | ¿Me voy a marear en la lancha? Consejos | buscar fuente médica |
 | ✅ | ¿Se puede ir con niños a los tours? Edades mínimas | — |
 
@@ -126,7 +129,7 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | ¿Por qué el tiburón ballena está en peligro? | UICN; Womersley et al. 2022 |
 | ✅ | El Niño y La Niña: cómo cambian la fauna del Golfo | Ornelas et al. 2026 |
 | ⏳ | Áreas naturales protegidas de BCS explicadas | Conanp |
-| ⏳ | Turismo responsable con fauna: el código Keabelmet | NOM-171; Conanp |
+| ✅ | Turismo responsable con fauna: el código Keabelmet | NOM-171; NOM-131; Conanp |
 | ✅ | Fotoidentificación: cómo los científicos reconocen a cada animal | Ramírez-Macías et al. 2012 |
 | ✅ | La vaquita marina: lo que hay que saber | Jaramillo-Legorreta et al. 2017, 2019; Robinson et al. 2022; López-Arzate et al. 2026 |
 | ⏳ | Surgencias: por qué el agua fría trae vida | Bizzarro 2008; Herrera-Cervantes 2019 |
