@@ -18,7 +18,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 		slug: "tour-a-isla-espiritu-santo-que-incluye",
 		title: "Tour a Isla Espíritu Santo desde La Paz: cómo es el día, qué incluye y cuánto cuesta",
 		metaTitle: "Tour a Isla Espíritu Santo: itinerario, precio y qué incluye",
-		description: "Cómo es un tour de snorkel a Isla Espíritu Santo desde La Paz: salida del Muelle Fiscal, Balandra desde el mar, Isla Partida, snorkel, playa y lobos marinos. Precio, qué incluye y qué revisar antes de reservar.",
+		description: "Cómo es un tour de snorkel a Isla Espíritu Santo desde La Paz: salida a las 11:00 a. m. del Muelle Fiscal, Balandra desde el mar, Isla Partida, snorkel, playa y lobos marinos. Precio, qué incluye y qué revisar antes de reservar.",
 		excerpt: "Seis horas entre islas volcánicas, arrecifes y lobos marinos. Así es el día y esto es lo que deberías revisar antes de reservar.",
 		coverAlt: "Descanso en una playa virgen de Isla Espíritu Santo",
 		answer: "Un tour a Isla Espíritu Santo sale en lancha desde La Paz y dura alrededor de **6 horas**: se ve Balandra desde el mar, se navega entre **Isla Espíritu Santo e Isla Partida**, se hace snorkel en arrecifes y se pasa tiempo en la playa. Con Keabelmet cuesta **$1,800 MXN por persona** (niños de 0 a 3 años gratis) e incluye los brazaletes del Parque Nacional. Del **1 de junio al 31 de agosto** no se nada con los lobos marinos de Los Islotes [^4].",
@@ -26,7 +26,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ type: "p", text: "Espíritu Santo es un archipiélago protegido: su zona marina es un **Parque Nacional** de unas **48,654 hectáreas** [^2] y forma parte de un sitio Patrimonio Mundial de la UNESCO [^1]. Solo se llega en lancha, así que el tour que elijas define tu día. Esto es lo que puedes esperar." },
 			{ type: "h2", text: "Cómo es el día, paso a paso" },
 			{ type: "ol", items: [
-				"**Muelle Fiscal de La Paz.** Conoces al equipo, abordas y la ciudad se queda atrás.",
+				"**Muelle Fiscal de La Paz:** check-in a las **10:30 a. m.** y salida a las **11:00 a. m.** Conoces al equipo, abordas y la ciudad se queda atrás.",
 				"**Balandra desde el mar.** Una vista de la bahía que pocos visitantes tienen. Lee más sobre [Playa Balandra](/blog/playa-balandra-como-visitarla).",
 				"**Entre Espíritu Santo e Isla Partida.** Acantilados volcánicos, aves marinas y formaciones de roca.",
 				"**Snorkel en arrecifes**, en sitios elegidos según las condiciones del día.",
@@ -39,6 +39,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ type: "h2", text: "Qué incluye el tour de Keabelmet" },
 			{ type: "table", head: ["", "Tour Espíritu Santo (compartido)"], rows: [
 				["Duración", "≈ 6 horas"],
+				["Horario", "Check-in 10:30 a. m.; salida 11:00 a. m. del Muelle Fiscal"],
 				["Precio", "$1,800 MXN por persona; niños de 0 a 3 años gratis"],
 				["Acceso al parque", "Brazaletes del Parque Nacional incluidos"],
 				["Recorrido", "Balandra desde el mar, Isla Espíritu Santo e Isla Partida"],
@@ -58,7 +59,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 		],
 		faq: [
 			{ q: "¿Cuánto cuesta el tour a Isla Espíritu Santo?", a: "Con Keabelmet, $1,800 MXN por persona en tour compartido, con brazaletes del Parque Nacional incluidos; niños de 0 a 3 años gratis." },
-			{ q: "¿Cuánto dura el tour a Espíritu Santo?", a: "Alrededor de 6 horas, saliendo del Muelle Fiscal de La Paz." },
+			{ q: "¿Cuánto dura el tour a Espíritu Santo?", a: "Alrededor de 6 horas. La salida es a las 11:00 a. m. desde el Muelle Fiscal de La Paz, con check-in a las 10:30 a. m." },
 			{ q: "¿Se puede nadar con lobos marinos en el tour?", a: "Sí, excepto del 1 de junio al 31 de agosto, cuando la Conanp restringe el nado en Los Islotes por la temporada reproductiva [^4]." },
 			{ q: "¿Necesito saber bucear?", a: "No. El tour es de snorkel y playa; si quieres bucear con tanque existe el buceo en Espíritu Santo." },
 			{ q: "¿La lancha tiene baño?", a: "Sí, la lancha del tour de Keabelmet tiene baño, toldo, colchones y WiFi." },
@@ -68,7 +69,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 		slug: "espiritu-santo-island-tour-what-to-expect",
 		title: "Espíritu Santo Island tour from La Paz: what the day is like, what's included and the price",
 		metaTitle: "Espíritu Santo Island tour: itinerary, price and what's included",
-		description: "What a snorkel tour to Espíritu Santo Island from La Paz is like: departure from the Muelle Fiscal, Balandra from the sea, Isla Partida, snorkeling, beach and sea lions. Price, what's included and what to check before booking.",
+		description: "What a snorkel tour to Espíritu Santo Island from La Paz is like: 11:00 am departure from the Muelle Fiscal, Balandra from the sea, Isla Partida, snorkeling, beach and sea lions. Price, what's included and what to check before booking.",
 		excerpt: "Six hours among volcanic islands, reefs and sea lions. Here's what the day is like and what to check before booking.",
 		coverAlt: "Relaxing on an untouched beach at Espíritu Santo Island",
 		answer: "An Espíritu Santo Island tour leaves La Paz by boat and lasts about **6 hours**: you see Balandra from the sea, cruise between **Espíritu Santo and Isla Partida**, snorkel on reefs and spend time on the beach. With Keabelmet it costs **$1,800 MXN per person** (ages 0–3 free) and includes National Park wristbands. From **June 1 to August 31** there's no swimming with the Los Islotes sea lions [^4].",
@@ -76,7 +77,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ type: "p", text: "Espíritu Santo is a protected archipelago: its marine area is a **National Park** of about **48,654 hectares** [^2] and part of a UNESCO World Heritage site [^1]. You can only get there by boat, so the tour you choose shapes your day. Here's what to expect." },
 			{ type: "h2", text: "The day, step by step" },
 			{ type: "ol", items: [
-				"**Muelle Fiscal, La Paz.** Meet the crew, board and leave the city behind.",
+				"**Muelle Fiscal, La Paz:** check-in at **10:30 am**, departure at **11:00 am**. Meet the crew, board and leave the city behind.",
 				"**Balandra from the sea.** A view of the bay few visitors get. Read more about [Balandra Beach](/blog/balandra-beach-la-paz-guide).",
 				"**Between Espíritu Santo and Isla Partida.** Volcanic cliffs, seabirds and rock formations.",
 				"**Reef snorkeling**, at sites chosen for the day's conditions.",
@@ -89,6 +90,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ type: "h2", text: "What Keabelmet's tour includes" },
 			{ type: "table", head: ["", "Espíritu Santo tour (shared)"], rows: [
 				["Duration", "≈ 6 hours"],
+				["Schedule", "Check-in 10:30 am; departure 11:00 am from the Muelle Fiscal"],
 				["Price", "$1,800 MXN per person; ages 0–3 free"],
 				["Park access", "National Park wristbands included"],
 				["Route", "Balandra from the sea, Espíritu Santo and Isla Partida"],
@@ -108,7 +110,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 		],
 		faq: [
 			{ q: "How much is the Espíritu Santo Island tour?", a: "With Keabelmet, $1,800 MXN per person on the shared tour, National Park wristbands included; ages 0–3 free." },
-			{ q: "How long is the Espíritu Santo tour?", a: "About 6 hours, leaving from the Muelle Fiscal in La Paz." },
+			{ q: "How long is the Espíritu Santo tour?", a: "About 6 hours. It leaves at 11:00 am from the Muelle Fiscal in La Paz, with check-in at 10:30 am." },
 			{ q: "Can you swim with sea lions on the tour?", a: "Yes, except from June 1 to August 31, when Conanp restricts swimming at Los Islotes during the breeding season [^4]." },
 			{ q: "Do I need to know how to dive?", a: "No. The tour is snorkeling and beach; if you want scuba there's the Espíritu Santo dive trip." },
 			{ q: "Does the boat have a bathroom?", a: "Yes, Keabelmet's tour boat has a bathroom, shade, mattresses and WiFi." },
