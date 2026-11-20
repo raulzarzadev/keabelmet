@@ -53,7 +53,7 @@ const copy: Record<Locale, Copy> = {
 		close: "Cerrar",
 		names: { "safari-bahia-magdalena": "Sardine Run", "tiburon-ballena": "Tiburón ballena" },
 		hooks: { "safari-bahia-magdalena": "Marlines cazando sardinas en Bahía Magdalena", "tiburon-ballena": "Nado con el pez más grande del mundo" },
-		combo: "🎁 Paquete Temporada: si reservas los dos, el tiburón ballena te sale {off} más barato por persona.",
+		combo: "🎁 Paquete Temporada: las dos experiencias por {price} por persona.",
 		withCombo: "con el paquete",
 	},
 	en: {
@@ -69,7 +69,7 @@ const copy: Record<Locale, Copy> = {
 		close: "Close",
 		names: { "safari-bahia-magdalena": "Sardine Run", "tiburon-ballena": "Whale sharks" },
 		hooks: { "safari-bahia-magdalena": "Marlin hunting sardines in Magdalena Bay", "tiburon-ballena": "Swim with the biggest fish in the world" },
-		combo: "🎁 Season Combo: book both and the whale sharks are {off} cheaper per person.",
+		combo: "🎁 Season Combo: both experiences for {price} per person.",
 		withCombo: "with the combo",
 	},
 	fr: {
@@ -85,7 +85,7 @@ const copy: Record<Locale, Copy> = {
 		close: "Fermer",
 		names: { "safari-bahia-magdalena": "Sardine Run", "tiburon-ballena": "Requin-baleine" },
 		hooks: { "safari-bahia-magdalena": "Des marlins chassent les sardines à Bahía Magdalena", "tiburon-ballena": "Nage avec le plus grand poisson du monde" },
-		combo: "🎁 Combo Saison : réserve les deux et le requin-baleine te coûte {off} de moins par personne.",
+		combo: "🎁 Combo Saison : les deux expériences pour {price} par personne.",
 		withCombo: "avec le combo",
 	},
 	zh: {
@@ -101,7 +101,7 @@ const copy: Record<Locale, Copy> = {
 		close: "关闭",
 		names: { "safari-bahia-magdalena": "沙丁鱼奔流", "tiburon-ballena": "鲸鲨" },
 		hooks: { "safari-bahia-magdalena": "马林鱼在马格达莱纳湾追捕沙丁鱼", "tiburon-ballena": "与世界上最大的鱼一起游泳" },
-		combo: "🎁 季节套餐：两项一起预订，鲸鲨每人便宜 {off}。",
+		combo: "🎁 季节套餐：两项体验每人 {price}。",
 		withCombo: "套餐价",
 	},
 	ca: {
@@ -117,7 +117,7 @@ const copy: Record<Locale, Copy> = {
 		close: "Tancar",
 		names: { "safari-bahia-magdalena": "Sardine Run", "tiburon-ballena": "Tauró balena" },
 		hooks: { "safari-bahia-magdalena": "Marlins caçant sardines a Badia Magdalena", "tiburon-ballena": "Neda amb el peix més gran del món" },
-		combo: "🎁 Paquet Temporada: si reserves les dues, el tauró balena et surt {off} més barat per persona.",
+		combo: "🎁 Paquet Temporada: les dues experiències per {price} per persona.",
 		withCombo: "amb el paquet",
 	},
 }
@@ -182,7 +182,9 @@ export default function SeasonPopup({ locale = "es", items }: { locale?: Locale;
 	const c = copy[locale] ?? copy.es
 	const seasonPkg = PACKAGES.find((p) => p.id === "temporada")
 	const comboOff = seasonPkg?.perPersonOffMxn ?? {}
-	const offAny = Object.values(comboOff)[0]
+	// Precio del paquete por persona: suma de los dos precios menos el descuento.
+	const comboPrice = items.reduce((s, it) => s + it.fromMxn - (comboOff[it.slug] ?? 0), 0)
+	const hasCombo = items.length > 1 && Object.keys(comboOff).length > 0
 	const addHref = localize(`/arma-tu-reserva?add=${items.map((i) => i.slug).join(",")}`, locale)
 
 	const modal = (
@@ -193,7 +195,7 @@ export default function SeasonPopup({ locale = "es", items }: { locale?: Locale;
 					<span className="sr-pop-badge"><span className="sr-dot" />{c.badge}</span>
 					<h3>{c.title}</h3>
 					<p>{c.text}</p>
-					{offAny ? <p className="season-pop-combo">{c.combo.replace("{off}", `${formatMxn(offAny)} MXN`)}</p> : null}
+					{hasCombo ? <p className="season-pop-combo">{c.combo.replace("{price}", `${formatMxn(comboPrice)} MXN`)}</p> : null}
 				</div>
 				<div className="season-pop-cards">
 					{items.map((it) => (
@@ -204,14 +206,7 @@ export default function SeasonPopup({ locale = "es", items }: { locale?: Locale;
 								<small className="season-pop-hook">{c.hooks[it.slug]}</small>
 								<small className="season-pop-season">{seasonLabel(it.slug, locale)}</small>
 								{it.slug === "safari-bahia-magdalena" && <small className="season-pop-warn">🚐 {RIDE_INCLUDED[locale] ?? RIDE_INCLUDED.es}</small>}
-								{comboOff[it.slug] ? (
-									<span className="season-pop-price">
-										<s>{formatMxn(it.fromMxn)}</s> {formatMxn(it.fromMxn - comboOff[it.slug])} MXN / {c.per}
-										<em>{c.withCombo}</em>
-									</span>
-								) : (
-									<span className="season-pop-price">{c.from} {formatMxn(it.fromMxn)} MXN / {c.per}</span>
-								)}
+								<span className="season-pop-price">{c.from} {formatMxn(it.fromMxn)} MXN / {c.per}</span>
 							</span>
 						</a>
 					))}
