@@ -14,6 +14,8 @@ import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
 const INSTAGRAM_URL = "https://www.instagram.com/keabelmet__expeditions/"
 const INSTAGRAM_HANDLE = "@keabelmet__expeditions"
+// Página hermana: viajes de varios días todo incluido (grupos abiertos y privados).
+const CON_GORRA_URL = "https://congorraexpeditions.com/"
 
 function wa(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
@@ -75,7 +77,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     { id: "gran-temporada", image: "/images/paquetes/marlin-rayado-sardine-run-bahia-magdalena.webp", featured: true },
   ]
   type ComboItem = { name: string; badge: string; days: string; activities: string[] }
-  const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; priceLabel: string; note: string; cta: string; items: Record<string, ComboItem>; customBadge: string; customTitle: string; customText: string; customCta: string; customWa: string }> = {
+  const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; priceLabel: string; note: string; cta: string; items: Record<string, ComboItem>; customBadge: string; customTitle: string; customText: string; customCta: string }> = {
     es: {
       kicker: "Temporada nov – dic", title: "Combina y vive la temporada", sub: "Solo en noviembre y diciembre coinciden el Sardine Run en Bahía Magdalena y el tiburón ballena en La Paz. Júntalos en un mismo viaje.",
       perPerson: "por persona", priceLabel: "Precio de paquete", note: "Se aplica al reservar las actividades juntas.", cta: "Reservar paquete",
@@ -83,7 +85,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         temporada: { name: "Paquete Temporada", badge: "Nov – dic", days: "2 días", activities: ["Sardine Run en Bahía Magdalena (transporte desde La Paz incluido)", "Nado con tiburón ballena"] },
         "gran-temporada": { name: "Gran Temporada", badge: "La más completa", days: "3 días", activities: ["Sardine Run en Bahía Magdalena (transporte desde La Paz incluido)", "Safari marino en La Ventana", "Nado con tiburón ballena"] },
       },
-      customBadge: "A tu medida", customTitle: "Arma tu viaje", customText: "¿Quieres sumar Espíritu Santo, buceo o más días? Cuéntanos qué te emociona y te armamos un itinerario con precio de paquete.", customCta: "Planear mi viaje", customWa: "Hola! Quiero armar un viaje de varios días con ustedes. ¿Me ayudan a planearlo?",
+      customBadge: "Viajes todo incluido", customTitle: "Expediciones de varios días", customText: "¿Buscas el viaje completo? Con Gorra Expeditions, nuestra página hermana, organiza expediciones todo incluido en Baja California Sur: transporte, hospedaje, comidas y experiencias. Únete a un grupo pequeño con otros viajeros o armamos un viaje privado para tu grupo.", customCta: "Ver viajes en Con Gorra",
     },
     en: {
       kicker: "Season · Nov – Dec", title: "Combine and live the season", sub: "Only in November and December do the Magdalena Bay Sardine Run and the La Paz whale sharks overlap. Do both on the same trip.",
@@ -92,7 +94,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         temporada: { name: "Season Combo", badge: "Nov – Dec", days: "2 days", activities: ["Magdalena Bay Sardine Run (transport from La Paz included)", "Swim with whale sharks"] },
         "gran-temporada": { name: "Grand Season Combo", badge: "Most complete", days: "3 days", activities: ["Magdalena Bay Sardine Run (transport from La Paz included)", "La Ventana marine safari", "Swim with whale sharks"] },
       },
-      customBadge: "Tailor-made", customTitle: "Build your trip", customText: "Want to add Espíritu Santo, diving or more days? Tell us what excites you and we'll build an itinerary at a package price.", customCta: "Plan my trip", customWa: "Hi! I want to plan a multi-day trip with you. Can you help me?",
+      customBadge: "All-inclusive trips", customTitle: "Multi-day expeditions", customText: "Looking for the full trip? Con Gorra Expeditions, our sister company, runs all-inclusive expeditions in Baja California Sur: transport, lodging, meals and experiences. Join a small group with other travelers, or we'll build a private trip for your group.", customCta: "See trips at Con Gorra",
     },
     fr: {
       kicker: "Saison · nov – déc", title: "Combinez et vivez la saison", sub: "Ce n'est qu'en novembre et décembre que le Sardine Run de Bahía Magdalena et les requins-baleines de La Paz coïncident. Faites les deux pendant le même voyage.",
@@ -101,7 +103,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         temporada: { name: "Combo Saison", badge: "Nov – déc", days: "2 jours", activities: ["Sardine Run à Bahía Magdalena (transport depuis La Paz inclus)", "Nage avec les requins-baleines"] },
         "gran-temporada": { name: "Grande Saison", badge: "Le plus complet", days: "3 jours", activities: ["Sardine Run à Bahía Magdalena (transport depuis La Paz inclus)", "Safari marin à La Ventana", "Nage avec les requins-baleines"] },
       },
-      customBadge: "Sur mesure", customTitle: "Composez votre voyage", customText: "Vous voulez ajouter Espíritu Santo, la plongée ou plus de jours ? Dites-nous ce qui vous passionne et nous créons un itinéraire à prix de forfait.", customCta: "Planifier mon voyage", customWa: "Bonjour ! Je veux organiser un voyage de plusieurs jours avec vous. Pouvez-vous m'aider ?",
+      customBadge: "Voyages tout compris", customTitle: "Expéditions de plusieurs jours", customText: "Vous cherchez le voyage complet ? Con Gorra Expeditions, notre société sœur, organise des expéditions tout compris en Basse-Californie du Sud : transport, hébergement, repas et expériences. Rejoignez un petit groupe avec d'autres voyageurs, ou nous créons un voyage privé pour votre groupe.", customCta: "Voir les voyages Con Gorra",
     },
     zh: {
       kicker: "季节 · 11月–12月", title: "组合体验本季精彩", sub: "只有在11月和12月，马格达莱纳湾的沙丁鱼奔流和拉巴斯的鲸鲨才会同时出现。在同一次旅行中两者兼得。",
@@ -110,7 +112,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         temporada: { name: "季节套餐", badge: "11月–12月", days: "2 天", activities: ["马格达莱纳湾沙丁鱼奔流（含拉巴斯往返交通）", "与鲸鲨同游"] },
         "gran-temporada": { name: "季节大套餐", badge: "最完整", days: "3 天", activities: ["马格达莱纳湾沙丁鱼奔流（含拉巴斯往返交通）", "拉文塔纳海洋探险", "与鲸鲨同游"] },
       },
-      customBadge: "量身定制", customTitle: "定制您的行程", customText: "想加上圣灵岛、潜水或更多天数？告诉我们您的兴趣，我们以套餐价为您安排行程。", customCta: "规划我的旅程", customWa: "你好！我想和你们规划一次多日行程，可以帮我吗？",
+      customBadge: "全包旅行", customTitle: "多日探险之旅", customText: "想要完整的旅程？我们的姊妹品牌 Con Gorra Expeditions 在南下加利福尼亚州组织全包式探险：交通、住宿、餐食和体验一应俱全。您可以加入与其他旅行者同行的小团，也可以为您的团体定制私人行程。", customCta: "查看 Con Gorra 行程",
     },
     ca: {
       kicker: "Temporada · nov – des", title: "Combina i viu la temporada", sub: "Només al novembre i al desembre coincideixen el Sardine Run de Badia Magdalena i el tauró balena de La Paz. Fes els dos en un mateix viatge.",
@@ -119,7 +121,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         temporada: { name: "Paquet Temporada", badge: "Nov – des", days: "2 dies", activities: ["Sardine Run a Badia Magdalena (transport des de La Paz inclòs)", "Neda amb el tauró balena"] },
         "gran-temporada": { name: "Gran Temporada", badge: "El més complet", days: "3 dies", activities: ["Sardine Run a Badia Magdalena (transport des de La Paz inclòs)", "Safari marí a La Ventana", "Neda amb el tauró balena"] },
       },
-      customBadge: "A mida", customTitle: "Munta el teu viatge", customText: "Vols afegir Espíritu Santo, busseig o més dies? Explica'ns què t'emociona i et muntem un itinerari a preu de paquet.", customCta: "Planejar el meu viatge", customWa: "Hola! Vull organitzar un viatge de diversos dies amb vosaltres. Em podeu ajudar?",
+      customBadge: "Viatges tot inclòs", customTitle: "Expedicions de diversos dies", customText: "Busques el viatge complet? Con Gorra Expeditions, la nostra pàgina germana, organitza expedicions tot inclòs a Baixa Califòrnia Sud: transport, allotjament, menjars i experiències. Uneix-te a un grup petit amb altres viatgers o et muntem un viatge privat per al teu grup.", customCta: "Veure viatges a Con Gorra",
     },
   }
   const pk = packagesT[locale] ?? packagesT.es
@@ -295,7 +297,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <span className="pkg-badge">{pk.customBadge}</span>
               <h3>{pk.customTitle}</h3>
               <p>{pk.customText}</p>
-              <a href={wa(pk.customWa)} className="btn btn-ghost" style={{ marginTop: "auto" }} target="_blank" rel="noopener noreferrer">{pk.customCta}</a>
+              <a href={CON_GORRA_URL} className="btn btn-ghost" style={{ marginTop: "auto" }} target="_blank" rel="noopener">{pk.customCta} ↗</a>
             </div>
           </div>
         </div>
