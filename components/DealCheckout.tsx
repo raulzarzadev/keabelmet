@@ -192,7 +192,7 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 						<div className="dep-pay-amount"><span>{t.deposit}</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
 					</div>
 					<Elements stripe={getStripeClient()} options={options}>
-						<DealPaymentForm locale={locale} emailDefault={email} returnUrl={`${window.location.origin}/${locale === "es" ? "" : locale + "/"}deal`} onDone={() => setStep("result")} />
+						<DealPaymentForm locale={locale} emailDefault={email} returnUrl={window.location.href.split("#")[0]} onDone={() => setStep("result")} />
 					</Elements>
 				</div>
 			</div>

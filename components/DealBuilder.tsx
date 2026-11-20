@@ -76,7 +76,7 @@ export default function DealBuilder({ locale = "es" }: { locale?: string }) {
 			if (!res.ok) throw new Error(data.error || "Error")
 			const base = typeof window !== "undefined" ? window.location.origin : "https://keabelmet.com"
 			const prefix = locale === "es" ? "" : `/${locale}`
-			setLink(`${base}${prefix}/deal?d=${encodeURIComponent(data.token)}`)
+			setLink(data.id ? `${base}${prefix}/deal/${data.id}` : `${base}${prefix}/deal?d=${encodeURIComponent(data.token)}`)
 		} catch (e2) {
 			setErr(e2 instanceof Error ? e2.message : "No se pudo generar el link.")
 		} finally {

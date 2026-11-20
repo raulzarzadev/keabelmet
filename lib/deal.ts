@@ -1,5 +1,6 @@
 import crypto from "node:crypto"
 import { sanitizePhotoKeys } from "@/lib/deal-photos"
+import { kv, kvConfigured } from "@/lib/kv"
 
 /**
  * Deals personalizados ("hechos por fuera"): el editor arma un paquete con
@@ -122,4 +123,40 @@ export function safeKeyEqual(a: string, b: string): boolean {
 	const ha = crypto.createHash("sha256").update(String(a)).digest()
 	const hb = crypto.createHash("sha256").update(String(b)).digest()
 	return crypto.timingSafeEqual(ha, hb)
+}
+
+/**
+ * Links cortos: el token firmado se guarda en Redis bajo un id de 8
+ * caracteres y la página /deal/<id> lo recupera. La firma se sigue
+ * verificando al mostrar y al cobrar, así que el id solo es un atajo.
+ */
+const ID_ALPHABET = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+const DEAL_ID_RE = /^[A-Za-z0-9]{6,16}$/
+const linkKey = (id: string) => `deal:link:${id}`
+
+function newDealId(len = 8): string {
+	const bytes = crypto.randomBytes(len)
+	let out = ""
+	for (let i = 0; i < len; i++) out += ID_ALPHABET[bytes[i] % ID_ALPHABET.length]
+	return out
+}
+
+/** Guarda el token y devuelve su id corto, o null si no hay Redis. */
+export async function storeDealLink(token: string, exp?: number): Promise<string | null> {
+	if (!kvConfigured()) return null
+	// Sin vencimiento propio, el link vive 1 año; si el deal vence, 30 días después.
+	const ttl = exp ? Math.max(3600, Math.round((exp - Date.now()) / 1000) + 30 * 24 * 3600) : 365 * 24 * 3600
+	for (let i = 0; i < 5; i++) {
+		const id = newDealId()
+		const ok = await kv("SET", linkKey(id), token, "NX", "EX", ttl)
+		if (ok === "OK") return id
+	}
+	throw new Error("No se pudo crear el link corto")
+}
+
+/** Devuelve el token firmado guardado bajo un id corto. */
+export async function loadDealToken(id: string | undefined | null): Promise<string | null> {
+	if (!id || !DEAL_ID_RE.test(id) || !kvConfigured()) return null
+	const v = await kv("GET", linkKey(id)).catch(() => null)
+	return typeof v === "string" ? v : null
 }
