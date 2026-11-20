@@ -42,7 +42,9 @@ export default function LanguageSelector({ locale }: { locale: Locale }) {
     setOpen(false)
     if (targetLocale === locale) return
     const newPath = pathnameForLocale(pathname, targetLocale)
-    router.push(newPath)
+    // Conserva el query y el ancla (p. ej. /deal?d=<token>), que antes se perdían.
+    const extra = typeof window !== "undefined" ? window.location.search + window.location.hash : ""
+    router.push(newPath + extra)
   }
 
   const current = localeLabels[locale]

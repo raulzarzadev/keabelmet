@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { signDeal, computeDealTotals, safeKeyEqual, MAX_DEAL_LINES, DEAL_DEPOSIT_RATE, type Deal, type DealLine } from "@/lib/deal"
+import { signDeal, storeDealLink, computeDealTotals, safeKeyEqual, MAX_DEAL_LINES, DEAL_DEPOSIT_RATE, type Deal, type DealLine } from "@/lib/deal"
 import { sanitizePhotoKeys } from "@/lib/deal-photos"
 
 export const runtime = "nodejs"
@@ -62,5 +62,7 @@ export async function POST(req: NextRequest) {
 
 	const token = signDeal(built)
 	const totals = computeDealTotals(built)
-	return NextResponse.json({ token, totals, title: built.title })
+	// Link corto (/deal/<id>); si Redis falla, el editor recibe el link largo.
+	const id = await storeDealLink(token, built.exp).catch(() => null)
+	return NextResponse.json({ token, id, totals, title: built.title })
 }
