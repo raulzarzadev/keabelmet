@@ -26,6 +26,7 @@ import {
 	saveItems,
 } from "@/lib/finance"
 import { RESERVAS_COOKIE, checkReservasPassword, isReservasRequest, reservasToken } from "@/lib/reservas-auth"
+import { buildCustomerEmail, sendCustomerEmail } from "@/lib/customer-confirmation"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -104,6 +105,26 @@ export async function POST(req: NextRequest) {
 		if (action === "saveFin") {
 			const fin = await saveFinSettings(body.fin)
 			return NextResponse.json({ ok: true, fin })
+		}
+		if (action === "resendConfirmation") {
+			// Reenvía el correo de confirmación que el cliente recibió al pagar, armado
+			// otra vez desde el pago en Stripe (mismo idioma y datos). `to` opcional
+			// manda una copia a otra dirección (p. ej. para verla uno mismo).
+			const b = await getBooking(String(body.id ?? ""))
+			if (!b) return NextResponse.json({ error: "No encontré esa reserva" }, { status: 404 })
+			const piId = b.piId || (b.id.startsWith("pi_") ? b.id.split("#")[0] : "")
+			if (!piId) return NextResponse.json({ error: "Esta reserva no se pagó en la página: no hay correo de confirmación que reenviar." }, { status: 400 })
+			const pi = await getStripe().paymentIntents.retrieve(piId)
+			const email = buildCustomerEmail(pi)
+			if (!email) return NextResponse.json({ error: "El pago no tiene los datos del correo de confirmación." }, { status: 400 })
+			const to = typeof body.to === "string" ? body.to.trim() : ""
+			if (to) {
+				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) return NextResponse.json({ error: "Correo no válido" }, { status: 400 })
+				email.data.customerEmail = to
+			}
+			const sent = await sendCustomerEmail(email)
+			if (!sent.ok) return NextResponse.json({ error: `No se pudo enviar: ${sent.error ?? "error"}` }, { status: 502 })
+			return NextResponse.json({ ok: true, to: email.data.customerEmail })
 		}
 		if (action === "delete") {
 			const id = String(body.id ?? "")
