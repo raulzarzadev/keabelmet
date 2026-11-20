@@ -1797,7 +1797,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océan où tout se passe en même temps",
 			text: "Des milliers de sardines essaient de rester unies. Les marlins traversent le banc de proies à toute vitesse. Des otaries apparaissent des profondeurs pour se joindre à la chasse. Des volées d'oiseaux survolent la surface en indiquant où se passe l'action. C'est ça, Bahía Magdalena. Ici, nous ne suivons pas un itinéraire : nous suivons ce que la mer décide de nous montrer.",
-			meta: "Départ en convoi depuis La Paz · Novembre-décembre",
+			meta: "Départ de La Paz · Transport inclus · Novembre-décembre",
 			primaryLabel: "Réservez votre Ocean Safari",
 			primaryWa: "Bonjour! Je voudrais réserver l'Ocean Safari à Bahía Magdalena",
 			secondaryLabel: "Découvrir le déroulement de l'expédition",
@@ -1807,10 +1807,10 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			{
 				type: "quickfacts",
 				items: [
-					{ value: "5h00", label: "Départ en convoi depuis La Paz" },
+					{ value: "5h00", label: "Départ de La Paz" },
 					{ value: "Nov - déc", label: "Saison" },
 					{ value: "Snorkeling", label: "En pleine mer" },
-					{ value: "Non inclus", label: "Transport · en option +500 MXN par personne" },
+					{ value: "Inclus", label: "Transport aller-retour depuis La Paz" },
 				],
 			},
 			{
@@ -1835,7 +1835,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				note: "Sur un Ocean Safari, il n'existe pas d'itinéraire fixe. Nous ne naviguons pas d'un point A à un point B : nous observons constamment et suivons les signes de l'océan.",
 				items: [
 					{
-						time: "5h00 · départ en convoi depuis La Paz",
+						time: "5h00 · départ de La Paz",
 						title: "Nous traversons le désert vers le Pacifique",
 						paragraphs: [
 							"Notre aventure commence avant que l'océan ne se réveille complètement. Très tôt, nous quittons La Paz vers Bahía Magdalena, traversant le désert jusqu'à la côte du Pacifique. La mer de Cortez reste derrière nous et devant nous apparaît l'un des écosystèmes marins les plus dynamiques du Mexique.",
@@ -1917,7 +1917,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				kicker: "Tout ce qui est inclus",
 				title: "Ce qui est déjà pris en charge",
 				items: [
-					{ title: "Convoi depuis La Paz", text: "Rendez-vous à La Paz à 5h00, puis nous roulons ensemble jusqu'à Puerto Chale. Pas de voiture ? Ajoutez notre transport aller-retour pour 500 MXN par personne lors de la réservation." },
+					{ title: "Transport inclus depuis La Paz", text: "Nous partons de La Paz à 5h00 et allons ensemble jusqu'à Puerto Chale. Le transport aller-retour est déjà inclus dans le prix." },
 					{ title: "Bateau et capitaine certifié", text: "Avec une connaissance de l'écosystème de Bahía Magdalena." },
 					{ title: "Guide biologiste marin", text: "Interprète l'océan et vous aide à comprendre ce qui se passe." },
 					{ title: "Équipement complet de snorkeling", text: "Masque, tuba, palmes et combinaison." },
@@ -1932,8 +1932,8 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Saison", value: "Novembre et décembre." },
 					{ label: "Durée", value: "Environ 10 heures depuis La Paz, en comptant la route aller-retour et l'activité en mer." },
-					{ label: "Point de rendez-vous", value: "La Paz, 5h00. De là, nous partons en convoi vers Puerto Chale, où le safari commence à 8h00. Si vous préférez, vous pouvez nous retrouver directement à Puerto Chale, mais nous recommandons le convoi. Nous vous envoyons les adresses lors de la réservation." },
-					{ label: "Transport", value: "Non inclus. Si vous n'avez pas de voiture, ajoutez notre transport aller-retour La Paz ⇄ Puerto Chale pour 500 MXN par personne lors de la réservation." },
+					{ label: "Point de rendez-vous", value: "La Paz, 5h00. De là, nous partons ensemble vers Puerto Chale, où le safari commence à 8h00. Nous vous envoyons l'adresse lors de la réservation." },
+					{ label: "Transport", value: "Inclus : transport aller-retour La Paz ⇄ Puerto Chale." },
 					{ label: "Niveau", value: "Vous devez vous sentir à l'aise pour nager en pleine mer et avoir de l'expérience en snorkeling (respirer par le tuba)." },
 					{ label: "Petits groupes", value: "Nous travaillons avec de petits groupes pour profiter de l'expérience calmement et minimiser l'impact sur la faune." },
 				],
@@ -1946,7 +1946,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 					{ q: "Le Sardine Run est-il garanti ?", a: ["Non. Nous travaillons avec une faune complètement sauvage et chaque jour est différent. Nous réalisons l'activité uniquement pendant la meilleure saison et mettons toute notre expérience à interpréter l'océan et à augmenter les chances de vivre le phénomène."] },
 					{ q: "Que se passe-t-il si nous ne trouvons pas de banc de sardines ?", a: ["Nous continuerons à explorer Bahía Magdalena à la recherche d'autres opportunités. Chaque sortie est différente et il existe toujours la possibilité d'observer d'autres espèces pélagiques et des comportements naturels uniques."] },
 					{ q: "Ai-je besoin d'expérience en snorkeling ?", a: ["Oui. Vous devez vous sentir à l'aise pour nager et suivre les indications du guide afin de profiter pleinement de l'expérience."] },
-					{ q: "Le transport depuis La Paz est-il inclus ?", a: ["Non. Rendez-vous à La Paz à 5h00, puis nous roulons en convoi jusqu'à Puerto Chale. Si vous n'avez pas de voiture, vous pouvez ajouter notre transport aller-retour pour 500 MXN par personne lors de la réservation. Vous pouvez aussi nous retrouver directement à Puerto Chale à 8h00, mais nous recommandons le convoi."] },
+					{ q: "Le transport depuis La Paz est-il inclus ?", a: ["Oui. Le transport aller-retour La Paz ⇄ Puerto Chale est inclus dans le prix. Nous partons de La Paz à 5h00 et le safari commence à Puerto Chale à 8h00."] },
 					{ q: "Que se passe-t-il si la météo ne permet pas de sortir ?", a: ["Si les conditions ne sont pas sûres, vous pourrez choisir entre reprogrammer l'activité ou obtenir le remboursement correspondant."] },
 				],
 			},
@@ -1955,15 +1955,15 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Tarifs",
 				title: "Réservez votre Ocean Safari",
-				notice: "🚐 Le transport N'EST PAS inclus dans le prix. Viens avec ta voiture (rendez-vous à La Paz à 5h00, puis convoi jusqu'à Puerto Chale) ou, si tu n'as pas de voiture, ajoute le transport aller-retour La Paz ⇄ Puerto Chale pour 500 MXN par personne lors de la réservation.",
+				notice: "🚐 Transport aller-retour depuis La Paz inclus : départ à 5h00 vers Puerto Chale.",
 				cards: [
 					{
 						name: "Partagé",
-						amountMxn: 3500,
+						amountMxn: 4500,
 						amountNote: "/ personne",
-						desc: "Le Sardine Run avec guide biologiste marin inclus. Départ en convoi depuis La Paz ; transport en option +500 MXN par personne.",
+						desc: "Le Sardine Run avec guide biologiste marin et transport aller-retour depuis La Paz inclus.",
 						items: [
-							"🚐 Transport NON inclus : viens avec ta voiture (convoi depuis La Paz) ou ajoute-le pour +500 MXN par personne",
+							"🚐 Transport aller-retour depuis La Paz inclus",
 							"Guide biologiste marin et capitaine certifié",
 							"Équipement complet de snorkeling et combinaison",
 							"Collations et eau",

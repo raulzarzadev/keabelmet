@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
 		image: "/images/marlin-bahia-magdalena-hero.jpeg",
 		rating: 5.0,
 		reviews: 187,
-		fromMxn: 3500,
+		fromMxn: 4500,
 		days: 1,
 		difficulty: "moderate",
 		capacity: { min: 2, max: 6 },

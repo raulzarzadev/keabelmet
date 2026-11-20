@@ -1797,7 +1797,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un oceà on tot passa alhora",
 			text: "Milers de sardines intenten mantenir-se unides. Els marlins travessen la bola d'esquer a tota velocitat. Lleons marins apareixen des de les profunditats per unir-se a la cacera. Estols d'ocells assenyalen on és l'acció. Això és Bahía Magdalena. Aquí no seguim un itinerari: seguim el que el mar decideix mostrar-nos.",
-			meta: "Sortida en caravana des de La Paz · Novembre–desembre",
+			meta: "Sortida des de La Paz · Transport inclòs · Novembre–desembre",
 			primaryLabel: "Reserva el teu Ocean Safari",
 			primaryWa: "Hola! vull reservar l'Ocean Safari a Bahía Magdalena",
 			secondaryLabel: "Veure com serà l'expedició",
@@ -1807,10 +1807,10 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			{
 				type: "quickfacts",
 				items: [
-					{ value: "5:00 h", label: "Sortida en caravana des de La Paz" },
+					{ value: "5:00 h", label: "Sortida des de La Paz" },
 					{ value: "Nov – des", label: "Temporada" },
 					{ value: "Snorkel", label: "En mar obert" },
-					{ value: "No inclòs", label: "Transport · opcional +500 MXN per persona" },
+					{ value: "Inclòs", label: "Transport d'anada i tornada des de La Paz" },
 				],
 			},
 			{
@@ -1835,7 +1835,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				note: "En un Ocean Safari no existeix una ruta fixa. No naveguem d'un punt A a un punt B: observem constantment i seguim els senyals de l'oceà.",
 				items: [
 					{
-						time: "5:00 h · sortida en caravana des de La Paz",
+						time: "5:00 h · sortida des de La Paz",
 						title: "Creuem el desert cap al Pacífic",
 						paragraphs: [
 							"La nostra aventura comença abans que l'oceà es desperti del tot. Molt d'hora sortim des de La Paz rumb a Bahía Magdalena, travessant el desert fins a arribar a la costa del Pacífic. El Mar de Cortés queda enrere i davant nostre apareix un dels ecosistemes marins més dinàmics de Mèxic.",
@@ -1917,7 +1917,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				kicker: "Tot el que inclou",
 				title: "El que ja està resolt",
 				items: [
-					{ title: "Caravana des de La Paz", text: "Ens trobem a La Paz a les 5:00 h i anem junts fins a Puerto Chale. No tens cotxe? Afegeix el nostre transport d'anada i tornada per 500 MXN per persona en reservar." },
+					{ title: "Transport inclòs des de La Paz", text: "Sortim de La Paz a les 5:00 h i anem junts fins a Puerto Chale. El transport d'anada i tornada ja està inclòs en el preu." },
 					{ title: "Embarcació i capità certificat", text: "Amb coneixement de l'ecosistema de Bahía Magdalena." },
 					{ title: "Guia biòleg marí", text: "Interpreta l'oceà i t'ajuda a entendre el que està passant." },
 					{ title: "Equip complet de snorkel", text: "Visor, snorkel, aletes i vestit de neoprè." },
@@ -1932,8 +1932,8 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				items: [
 					{ label: "Temporada", value: "Novembre i desembre." },
 					{ label: "Durada", value: "Aproximadament 10 hores des de La Paz, comptant el camí d'anada i tornada i l'activitat al mar." },
-					{ label: "Punt de trobada", value: "La Paz, 5:00 h. D'allà sortim en caravana cap a Puerto Chale, on el safari comença a les 8:00 h. Si ho prefereixes, ens pots trobar directament a Puerto Chale, tot i que recomanem la caravana. T'enviem les ubicacions en reservar." },
-					{ label: "Transport", value: "No està inclòs. Si no tens cotxe, afegeix el nostre transport d'anada i tornada La Paz ⇄ Puerto Chale per 500 MXN per persona en reservar." },
+					{ label: "Punt de trobada", value: "La Paz, 5:00 h. D'allà sortim junts cap a Puerto Chale, on el safari comença a les 8:00 h. T'enviem la ubicació en reservar." },
+					{ label: "Transport", value: "Inclòs: transport d'anada i tornada La Paz ⇄ Puerto Chale." },
 					{ label: "Nivell", value: "Necessites sentir-te còmode nedant en mar obert i amb experiència de snorkel (respirar des del tub)." },
 					{ label: "Grups petits", value: "Treballem amb grups reduïts per gaudir amb tranquil·litat i minimitzar l'impacte sobre la fauna." },
 				],
@@ -1946,7 +1946,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 					{ q: "Està garantit el Sardine Run?", a: ["No. Treballem amb fauna completament salvatge i cada dia és diferent. Fem l'activitat únicament durant la millor temporada i posem tota la nostra experiència per interpretar l'oceà i augmentar les possibilitats de viure el fenomen."] },
 					{ q: "Què passa si no trobem una bola de sardines?", a: ["Continuarem explorant Bahía Magdalena a la recerca d'altres oportunitats. Cada sortida és diferent i sempre existeix la possibilitat d'observar altres espècies pelàgiques i comportaments naturals únics."] },
 					{ q: "Necessito experiència fent snorkel?", a: ["Sí. Necessites sentir-te còmode nedant i seguint les indicacions del guia per poder gaudir plenament de l'experiència."] },
-					{ q: "Inclou transport des de La Paz?", a: ["No. Ens trobem a La Paz a les 5:00 h i anem en caravana fins a Puerto Chale. Si no tens cotxe, pots afegir el nostre transport d'anada i tornada per 500 MXN per persona en reservar. També ens pots trobar directament a Puerto Chale a les 8:00 h, tot i que recomanem la caravana."] },
+					{ q: "Inclou transport des de La Paz?", a: ["Sí. El transport d'anada i tornada La Paz ⇄ Puerto Chale està inclòs en el preu. Sortim de La Paz a les 5:00 h i el safari comença a Puerto Chale a les 8:00 h."] },
 					{ q: "Què passa si el clima no permet sortir?", a: ["Si les condicions no són segures podràs triar entre reprogramar l'activitat o rebre el reemborsament corresponent."] },
 				],
 			},
@@ -1955,15 +1955,15 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				id: "precios",
 				kicker: "Preus",
 				title: "Reserva el teu Ocean Safari",
-				notice: "🚐 El transport NO està inclòs en el preu. Vine amb el teu cotxe (ens trobem a La Paz a les 5:00 h i anem en caravana fins a Puerto Chale) o, si no tens cotxe, afegeix el transport d'anada i tornada La Paz ⇄ Puerto Chale per 500 MXN per persona en reservar.",
+				notice: "🚐 Transport d'anada i tornada des de La Paz inclòs: sortim a les 5:00 h cap a Puerto Chale.",
 				cards: [
 					{
 						name: "Compartit",
-						amountMxn: 3500,
+						amountMxn: 4500,
 						amountNote: "/ persona",
-						desc: "El Sardine Run amb guia biòleg marí inclòs. Sortida en caravana des de La Paz; transport opcional +500 MXN per persona.",
+						desc: "El Sardine Run amb guia biòleg marí i transport d'anada i tornada des de La Paz inclosos.",
 						items: [
-							"🚐 Transport NO inclòs: vine amb el teu cotxe (caravana des de La Paz) o afegeix-lo per +500 MXN per persona",
+							"🚐 Transport d'anada i tornada des de La Paz inclòs",
 							"Guia biòleg marí i capità certificat",
 							"Equip complet de snorkel i neoprè",
 							"Snacks i aigua",

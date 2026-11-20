@@ -47,7 +47,7 @@ export const comoLlegarLaPaz: BlogPost = {
 				["Cabo Pulmo", "≈ 163 km", "≈ 3 h"],
 			] },
 			{ type: "h2", text: "¿Y para llegar a los tours?" },
-			{ type: "p", text: "Los tours a Isla Espíritu Santo y de tiburón ballena salen desde La Paz. Para el [safari en La Ventana](/experiencias/safari-la-ventana) necesitas aproximadamente una hora de carretera. Para el [safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena) nos vemos en La Paz a las **5:00 a. m.** y vamos en caravana a Puerto Chale, donde el safari empieza a las 8:00; si no tienes auto, puedes agregar transporte redondo por $500 MXN por persona." },
+			{ type: "p", text: "Los tours a Isla Espíritu Santo y de tiburón ballena salen desde La Paz. Para el [safari en La Ventana](/experiencias/safari-la-ventana) necesitas aproximadamente una hora de carretera. Para el [safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena) salimos de La Paz a las **5:00 a. m.** hacia Puerto Chale, donde el safari empieza a las 8:00; el transporte redondo ya está incluido." },
 			{ type: "p", text: "¿Te preocupa la seguridad en carretera o en la ciudad? Lee [¿es seguro viajar a La Paz?](/blog/es-seguro-viajar-a-la-paz-baja-california-sur). Y si aún no decides dónde dormir, compara [La Paz o Los Cabos](/blog/la-paz-o-los-cabos-donde-quedarte-para-ver-fauna)." },
 		],
 		faq: [
@@ -91,7 +91,7 @@ export const comoLlegarLaPaz: BlogPost = {
 				["Cabo Pulmo", "≈ 163 km", "≈ 3 h"],
 			] },
 			{ type: "h2", text: "What about getting to the tours?" },
-			{ type: "p", text: "Espíritu Santo Island and whale shark tours depart from La Paz. The [La Ventana safari](/experiencias/safari-la-ventana) is about an hour's drive away. For the [Magdalena Bay safari](/experiencias/safari-bahia-magdalena) we meet in La Paz at **5:00 am** and drive in a caravan to Puerto Chale, where the safari starts at 8:00; if you don't have a car, you can add round-trip transport for $500 MXN per person." },
+			{ type: "p", text: "Espíritu Santo Island and whale shark tours depart from La Paz. The [La Ventana safari](/experiencias/safari-la-ventana) is about an hour's drive away. For the [Magdalena Bay safari](/experiencias/safari-bahia-magdalena) we leave La Paz at **5:00 am** for Puerto Chale, where the safari starts at 8:00; round-trip transport is included." },
 			{ type: "p", text: "Worried about safety on the road or in town? Read [is La Paz safe?](/blog/is-la-paz-baja-california-sur-safe). And if you haven't decided where to stay, compare [La Paz or Los Cabos](/blog/la-paz-or-los-cabos-where-to-stay-for-wildlife)." },
 		],
 		faq: [

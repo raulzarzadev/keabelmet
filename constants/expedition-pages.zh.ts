@@ -263,11 +263,11 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 			cards: [
 				{
 					name: "拼团",
-					amountMxn: 3500,
+					amountMxn: 4500,
 					amountNote: "/ 每人",
 					items: [
 						"拼船，2-6人",
-						"从拉巴斯结队出发(交通可选,每人+500)",
+						"含拉巴斯往返交通",
 						"含浮潜装备",
 						"午餐和饮品",
 						"海洋生物学家向导，含照片/视频",

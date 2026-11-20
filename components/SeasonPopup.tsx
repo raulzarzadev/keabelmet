@@ -7,7 +7,6 @@ import { seasonLabel } from "@/lib/expedition-seasons"
 import { formatMxn } from "@/lib/reservation"
 import { defaultLocale, type Locale } from "@/lib/i18n"
 import { PACKAGES } from "@/lib/packages"
-import { rideAddonAvailable } from "@/lib/ride-addon"
 
 /**
  * Aviso de temporada compartido: Sardine Run (noviembre–diciembre) y nado con
@@ -124,13 +123,13 @@ const copy: Record<Locale, Copy> = {
 }
 
 /** Encuadre de cada foto en la tarjeta (que se vea el marlín y no solo las sardinas). */
-/** El Sardine Run no incluye transporte: que quede claro desde el aviso. */
-const NO_RIDE: Record<string, string> = {
-	es: "Transporte no incluido (opcional +$500)",
-	en: "Transport not included (optional +$500)",
-	fr: "Transport non inclus (option +500 MXN)",
-	zh: "不含交通(可选 +500)",
-	ca: "Transport no inclòs (opcional +500)",
+/** El Sardine Run incluye transporte redondo desde La Paz: que se vea desde el aviso. */
+const RIDE_INCLUDED: Record<string, string> = {
+	es: "Transporte desde La Paz incluido",
+	en: "Transport from La Paz included",
+	fr: "Transport depuis La Paz inclus",
+	zh: "含拉巴斯往返交通",
+	ca: "Transport des de La Paz inclòs",
 }
 
 const IMAGE_POS: Record<string, string> ={ "safari-bahia-magdalena": "30% 65%", "tiburon-ballena": "center" }
@@ -204,7 +203,7 @@ export default function SeasonPopup({ locale = "es", items }: { locale?: Locale;
 								<strong>{c.names[it.slug] ?? it.slug}</strong>
 								<small className="season-pop-hook">{c.hooks[it.slug]}</small>
 								<small className="season-pop-season">{seasonLabel(it.slug, locale)}</small>
-								{rideAddonAvailable(it.slug) && <small className="season-pop-warn">🚐 {NO_RIDE[locale] ?? NO_RIDE.es}</small>}
+								{it.slug === "safari-bahia-magdalena" && <small className="season-pop-warn">🚐 {RIDE_INCLUDED[locale] ?? RIDE_INCLUDED.es}</small>}
 								{comboOff[it.slug] ? (
 									<span className="season-pop-price">
 										<s>{formatMxn(it.fromMxn)}</s> {formatMxn(it.fromMxn - comboOff[it.slug])} MXN / {c.per}

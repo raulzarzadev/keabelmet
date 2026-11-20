@@ -48,7 +48,7 @@ export const rentarAutoBcs: BlogPost = {
 				["Cabo Pulmo", "≈ 163 km", "≈ 3 h [^3]"],
 				["Puerto Chale (Bahía Magdalena)", "≈ 180 km", "≈ 2 h 30 min [^3]"],
 			] },
-			{ type: "tip", text: "¿No quieres manejar de madrugada al Sardine Run? Puedes agregar transporte redondo La Paz ⇄ Puerto Chale por $500 MXN por persona al reservar el [safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena)." },
+			{ type: "tip", text: "¿No quieres manejar de madrugada al Sardine Run? No hace falta: el [safari en Bahía Magdalena](/experiencias/safari-bahia-magdalena) ya incluye el transporte redondo La Paz ⇄ Puerto Chale." },
 			{ type: "p", text: "Más detalles en [cómo llegar a La Paz y moverte](/blog/como-llegar-a-la-paz-y-como-moverte)." },
 		],
 		faq: [
@@ -93,7 +93,7 @@ export const rentarAutoBcs: BlogPost = {
 				["Cabo Pulmo", "≈ 163 km", "≈ 3 h [^3]"],
 				["Puerto Chale (Magdalena Bay)", "≈ 180 km", "≈ 2 h 30 min [^3]"],
 			] },
-			{ type: "tip", text: "Don't want to drive before dawn to the Sardine Run? Add round-trip transport La Paz ⇄ Puerto Chale for $500 MXN per person when you book the [Magdalena Bay safari](/experiencias/safari-bahia-magdalena)." },
+			{ type: "tip", text: "Don't want to drive before dawn to the Sardine Run? You don't need to: the [Magdalena Bay safari](/experiencias/safari-bahia-magdalena) already includes round-trip transport La Paz ⇄ Puerto Chale." },
 			{ type: "p", text: "More in [how to get to La Paz and get around](/blog/how-to-get-to-la-paz-and-get-around)." },
 		],
 		faq: [
