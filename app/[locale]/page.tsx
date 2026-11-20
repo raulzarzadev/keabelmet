@@ -71,8 +71,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     return pkgDef.slugs.reduce((sum, slug) => sum + (fromBySlug.get(slug) ?? 0) - (pkgDef.perPersonOffMxn?.[slug] ?? 0), 0)
   }
   const comboCards = [
-    { id: "temporada", image: "/images/marlin-bahia-magdalena-hero.jpeg", featured: false },
-    { id: "gran-temporada", image: "/images/orca-safari.jpg", featured: true },
+    { id: "temporada", image: "/images/paquetes/lobo-marino-bola-de-sardinas-sardine-run.webp", featured: false },
+    { id: "gran-temporada", image: "/images/paquetes/marlin-rayado-sardine-run-bahia-magdalena.webp", featured: true },
   ]
   type ComboItem = { name: string; badge: string; days: string; activities: string[] }
   const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; priceLabel: string; note: string; cta: string; items: Record<string, ComboItem>; customBadge: string; customTitle: string; customText: string; customCta: string; customWa: string }> = {
