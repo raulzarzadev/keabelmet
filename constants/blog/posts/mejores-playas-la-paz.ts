@@ -50,6 +50,7 @@ export const mejoresPlayasLaPaz: BlogPost = {
 			{ type: "p", text: "Justo después de Balandra (≈ 25 km del centro) [^4]. Es una playa abierta y larga, con vista a Isla Espíritu Santo; revisa las condiciones del mar antes de meterte." },
 			{ type: "h2", text: "Las que solo se alcanzan en lancha" },
 			{ type: "p", text: "Las playas más vírgenes están en **Isla Espíritu Santo** e **Isla Partida**: arena blanca, agua cristalina y cero construcciones. Solo se llega en lancha con operador autorizado. En nuestro [tour a Espíritu Santo](/experiencias/tour-espiritu-santo) paramos en estas playas, vemos Balandra desde el mar y nadamos con lobos marinos. Conoce más en [Isla Espíritu Santo: qué es y cómo visitarla](/blog/isla-espiritu-santo-que-es-y-como-visitarla)." },
+			{ type: "img", src: "/images/blog/playa-los-viejos-isla-cerralvo-vista-aerea.webp", alt: "Vista aérea de Playa Los Viejos en Isla Cerralvo, con arena blanca y agua turquesa", caption: "Playa Los Viejos, en Isla Cerralvo, Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "Consejos para disfrutar las playas" },
 			{ type: "ul", items: [
 				"**Algunas playas no tienen salvavidas.** Sigue las indicaciones locales sobre si es seguro nadar [^5].",
@@ -101,6 +102,7 @@ export const mejoresPlayasLaPaz: BlogPost = {
 			{ type: "p", text: "Just past Balandra (≈ 25 km from downtown) [^4]. A long, open beach facing Espíritu Santo Island; check sea conditions before going in." },
 			{ type: "h2", text: "The ones you can only reach by boat" },
 			{ type: "p", text: "The most pristine beaches are on **Espíritu Santo** and **Isla Partida**: white sand, crystal water and no buildings at all. You can only get there by boat with an authorized operator. On our [Espíritu Santo tour](/experiencias/tour-espiritu-santo) we stop at these beaches, see Balandra from the sea and swim with sea lions. Learn more in [Espíritu Santo Island guide](/blog/espiritu-santo-island-guide)." },
+			{ type: "img", src: "/images/blog/playa-los-viejos-isla-cerralvo-vista-aerea.webp", alt: "Aerial view of Playa Los Viejos on Isla Cerralvo, with white sand and turquoise water", caption: "Playa Los Viejos on Isla Cerralvo, Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "Tips for enjoying the beaches" },
 			{ type: "ul", items: [
 				"**Some beaches have no lifeguards.** Follow local guidance on whether it's safe to swim [^5].",
