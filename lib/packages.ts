@@ -38,6 +38,16 @@ export const PACKAGES: ActivityPackage[] = [
 		name: { es: "Dúo La Paz", en: "La Paz Duo", fr: "Duo La Paz", zh: "拉巴斯双人组合", ca: "Duo La Paz" },
 	},
 	{
+		// Gran Temporada nov–dic: Sardine Run a precio normal y $500 menos por persona en
+		// La Ventana y en el tiburón ballena ($1,000 en total). Va antes que "temporada",
+		// que es un subconjunto, para que se aplique primero el paquete más grande.
+		id: "gran-temporada",
+		off: 0,
+		perPersonOffMxn: { "safari-la-ventana": 500, "tiburon-ballena": 500 },
+		slugs: ["safari-bahia-magdalena", "safari-la-ventana", "tiburon-ballena"],
+		name: { es: "Gran Temporada", en: "Grand Season Combo", fr: "Grande Saison", zh: "季节大套餐", ca: "Gran Temporada" },
+	},
+	{
 		// Temporada nov–dic: Sardine Run a precio normal y $500 menos por persona en el tiburón ballena.
 		// En la web se presenta como precio de paquete (las dos experiencias), no como rebaja.
 		id: "temporada",
@@ -105,8 +115,8 @@ export function computePackageDiscount(
 		}
 		const discountMxn = Object.values(perSlug).reduce((a, b) => a + b, 0)
 		if (discountMxn <= 0) continue
-		const fixedVals = Object.values(pkg.perPersonOffMxn ?? {})
-		const offLabel = fixedVals.length ? `−$${fixedVals[0].toLocaleString("en-US")} c/u` : `−${Math.round(pkg.off * 100)}%`
+		const fixedPerPerson = Object.values(pkg.perPersonOffMxn ?? {}).reduce((a, b) => a + b, 0)
+		const offLabel = fixedPerPerson ? `−$${fixedPerPerson.toLocaleString("en-US")} c/u` : `−${Math.round(pkg.off * 100)}%`
 		applied.push({ id: pkg.id, name: pkg.name[locale] ?? pkg.name.es, off: pkg.off, units, discountMxn, perSlug, offLabel })
 		for (const s of pkg.slugs) consumed.set(s, (consumed.get(s) ?? 0) + units)
 	}

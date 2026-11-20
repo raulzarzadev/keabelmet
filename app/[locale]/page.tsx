@@ -1,10 +1,12 @@
 import Link from "next/link"
+import Image from "next/image"
 import { type Locale, defaultLocale, isValidLocale } from "@/lib/i18n"
 import HomeQuiz from "@/components/HomeQuiz"
 import SeasonCalendar from "@/components/SeasonCalendar"
 import FounderStory from "@/components/FounderStory"
 import SeasonPopup from "@/components/SeasonPopup"
 import { getBookableActivities } from "@/lib/bookable-activities"
+import { PACKAGES } from "@/lib/packages"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import { homeContent } from "@/constants/home-content"
@@ -60,55 +62,64 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   }
   const hc = homeCta[locale] ?? homeCta.es
 
-  const comboMeta = [
-    { regularMxn: 4100, off: 0.10 },
-    { regularMxn: 7100, off: 0.15 },
+  // Paquetes de temporada (nov–dic). El precio sale del catálogo menos el descuento del
+  // paquete en lib/packages, así que siempre coincide con lo que cobra el carrito.
+  const fromBySlug = new Map(getBookableActivities(locale).map((a) => [a.slug, a.fromAmountMxn]))
+  const packagePrice = (id: string) => {
+    const pkgDef = PACKAGES.find((x) => x.id === id)
+    if (!pkgDef) return 0
+    return pkgDef.slugs.reduce((sum, slug) => sum + (fromBySlug.get(slug) ?? 0) - (pkgDef.perPersonOffMxn?.[slug] ?? 0), 0)
+  }
+  const comboCards = [
+    { id: "temporada", image: "/images/paquetes/lobo-marino-bola-de-sardinas-sardine-run.webp", featured: false },
+    { id: "gran-temporada", image: "/images/paquetes/marlin-rayado-sardine-run-bahia-magdalena.webp", featured: true },
   ]
-  const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; save: string; cta: string; best: string; items: { name: string; days: string; activities: string[] }[]; customBadge: string; customTitle: string; customText: string; customCta: string; customWa: string }> = {
+  type ComboItem = { name: string; badge: string; days: string; activities: string[] }
+  const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; priceLabel: string; note: string; cta: string; items: Record<string, ComboItem>; customBadge: string; customTitle: string; customText: string; customCta: string; customWa: string }> = {
     es: {
-      kicker: "Vive varios días", title: "Combina y ahorra", sub: "¿Vienes varios días a la Baja? Junta actividades y paga menos. Coordinamos tus fechas por WhatsApp.",
-      perPerson: "por persona", save: "Ahorras", cta: "Reservar por WhatsApp", best: "El más elegido",
-      items: [
-        { name: "Dúo La Paz", days: "2 días", activities: ["Nado con Tiburón Ballena", "Snorkel en Isla Espíritu Santo"] },
-        { name: "Semana Baja", days: "3 días", activities: ["Nado con Tiburón Ballena", "Isla Espíritu Santo", "Safari La Ventana"] },
-      ],
-      customBadge: "A tu medida", customTitle: "Arma tu semana", customText: "Cuéntanos cuántos días vienes y qué te emociona. Diseñamos tu itinerario ideal y te damos precio de paquete.", customCta: "Planear mi viaje", customWa: "Hola! Quiero armar un viaje de varios días con ustedes. ¿Me ayudan a planearlo?",
+      kicker: "Temporada nov – dic", title: "Combina y vive la temporada", sub: "Solo en noviembre y diciembre coinciden el Sardine Run en Bahía Magdalena y el tiburón ballena en La Paz. Júntalos en un mismo viaje.",
+      perPerson: "por persona", priceLabel: "Precio de paquete", note: "Se aplica al reservar las actividades juntas.", cta: "Reservar paquete",
+      items: {
+        temporada: { name: "Paquete Temporada", badge: "Nov – dic", days: "2 días", activities: ["Sardine Run en Bahía Magdalena (transporte desde La Paz incluido)", "Nado con tiburón ballena"] },
+        "gran-temporada": { name: "Gran Temporada", badge: "La más completa", days: "3 días", activities: ["Sardine Run en Bahía Magdalena (transporte desde La Paz incluido)", "Safari marino en La Ventana", "Nado con tiburón ballena"] },
+      },
+      customBadge: "A tu medida", customTitle: "Arma tu viaje", customText: "¿Quieres sumar Espíritu Santo, buceo o más días? Cuéntanos qué te emociona y te armamos un itinerario con precio de paquete.", customCta: "Planear mi viaje", customWa: "Hola! Quiero armar un viaje de varios días con ustedes. ¿Me ayudan a planearlo?",
     },
     en: {
-      kicker: "Stay several days", title: "Combine and save", sub: "Coming to Baja for several days? Bundle activities and pay less. We coordinate your dates over WhatsApp.",
-      perPerson: "per person", save: "You save", cta: "Book on WhatsApp", best: "Most popular",
-      items: [
-        { name: "La Paz Duo", days: "2 days", activities: ["Swim with Whale Sharks", "Snorkel at Espíritu Santo Island"] },
-        { name: "Baja Week", days: "3 days", activities: ["Swim with Whale Sharks", "Espíritu Santo Island", "La Ventana Safari"] },
-      ],
-      customBadge: "Tailor-made", customTitle: "Build your week", customText: "Tell us how many days you're coming and what excites you. We'll design your ideal itinerary at a package price.", customCta: "Plan my trip", customWa: "Hi! I want to plan a multi-day trip with you. Can you help me?",
+      kicker: "Season · Nov – Dec", title: "Combine and live the season", sub: "Only in November and December do the Magdalena Bay Sardine Run and the La Paz whale sharks overlap. Do both on the same trip.",
+      perPerson: "per person", priceLabel: "Package price", note: "Applies when you book the activities together.", cta: "Book package",
+      items: {
+        temporada: { name: "Season Combo", badge: "Nov – Dec", days: "2 days", activities: ["Magdalena Bay Sardine Run (transport from La Paz included)", "Swim with whale sharks"] },
+        "gran-temporada": { name: "Grand Season Combo", badge: "Most complete", days: "3 days", activities: ["Magdalena Bay Sardine Run (transport from La Paz included)", "La Ventana marine safari", "Swim with whale sharks"] },
+      },
+      customBadge: "Tailor-made", customTitle: "Build your trip", customText: "Want to add Espíritu Santo, diving or more days? Tell us what excites you and we'll build an itinerary at a package price.", customCta: "Plan my trip", customWa: "Hi! I want to plan a multi-day trip with you. Can you help me?",
     },
     fr: {
-      kicker: "Restez plusieurs jours", title: "Combinez et économisez", sub: "Vous venez plusieurs jours en Basse-Californie ? Regroupez des activités et payez moins. Nous coordonnons vos dates sur WhatsApp.",
-      perPerson: "par personne", save: "Vous économisez", cta: "Réserver sur WhatsApp", best: "Le plus choisi",
-      items: [
-        { name: "Duo La Paz", days: "2 jours", activities: ["Nager avec les requins-baleines", "Snorkeling à l'île Espíritu Santo"] },
-        { name: "Semaine Baja", days: "3 jours", activities: ["Nager avec les requins-baleines", "Île Espíritu Santo", "Safari La Ventana"] },
-      ],
-      customBadge: "Sur mesure", customTitle: "Composez votre semaine", customText: "Dites-nous combien de jours vous venez et ce qui vous passionne. Nous concevons votre itinéraire idéal à prix de forfait.", customCta: "Planifier mon voyage", customWa: "Bonjour ! Je veux organiser un voyage de plusieurs jours avec vous. Pouvez-vous m'aider ?",
+      kicker: "Saison · nov – déc", title: "Combinez et vivez la saison", sub: "Ce n'est qu'en novembre et décembre que le Sardine Run de Bahía Magdalena et les requins-baleines de La Paz coïncident. Faites les deux pendant le même voyage.",
+      perPerson: "par personne", priceLabel: "Prix du forfait", note: "S'applique en réservant les activités ensemble.", cta: "Réserver le forfait",
+      items: {
+        temporada: { name: "Combo Saison", badge: "Nov – déc", days: "2 jours", activities: ["Sardine Run à Bahía Magdalena (transport depuis La Paz inclus)", "Nage avec les requins-baleines"] },
+        "gran-temporada": { name: "Grande Saison", badge: "Le plus complet", days: "3 jours", activities: ["Sardine Run à Bahía Magdalena (transport depuis La Paz inclus)", "Safari marin à La Ventana", "Nage avec les requins-baleines"] },
+      },
+      customBadge: "Sur mesure", customTitle: "Composez votre voyage", customText: "Vous voulez ajouter Espíritu Santo, la plongée ou plus de jours ? Dites-nous ce qui vous passionne et nous créons un itinéraire à prix de forfait.", customCta: "Planifier mon voyage", customWa: "Bonjour ! Je veux organiser un voyage de plusieurs jours avec vous. Pouvez-vous m'aider ?",
     },
     zh: {
-      kicker: "畅玩多日", title: "组合更省", sub: "来下加州玩几天？组合多个活动，享更低价格。我们通过 WhatsApp 协调您的日期。",
-      perPerson: "每人", save: "节省", cta: "通过 WhatsApp 预订", best: "最受欢迎",
-      items: [
-        { name: "拉巴斯双人组合", days: "2 天", activities: ["与鲸鲨同游", "圣灵岛浮潜"] },
-        { name: "下加州一周", days: "3 天", activities: ["与鲸鲨同游", "圣灵岛", "拉文塔纳探险"] },
-      ],
-      customBadge: "量身定制", customTitle: "定制您的行程", customText: "告诉我们您来几天、对什么感兴趣。我们将以套餐价为您设计理想行程。", customCta: "规划我的旅程", customWa: "你好！我想和你们规划一次多日行程，可以帮我吗？",
+      kicker: "季节 · 11月–12月", title: "组合体验本季精彩", sub: "只有在11月和12月，马格达莱纳湾的沙丁鱼奔流和拉巴斯的鲸鲨才会同时出现。在同一次旅行中两者兼得。",
+      perPerson: "每人", priceLabel: "套餐价", note: "一起预订这些活动时适用。", cta: "预订套餐",
+      items: {
+        temporada: { name: "季节套餐", badge: "11月–12月", days: "2 天", activities: ["马格达莱纳湾沙丁鱼奔流（含拉巴斯往返交通）", "与鲸鲨同游"] },
+        "gran-temporada": { name: "季节大套餐", badge: "最完整", days: "3 天", activities: ["马格达莱纳湾沙丁鱼奔流（含拉巴斯往返交通）", "拉文塔纳海洋探险", "与鲸鲨同游"] },
+      },
+      customBadge: "量身定制", customTitle: "定制您的行程", customText: "想加上圣灵岛、潜水或更多天数？告诉我们您的兴趣，我们以套餐价为您安排行程。", customCta: "规划我的旅程", customWa: "你好！我想和你们规划一次多日行程，可以帮我吗？",
     },
     ca: {
-      kicker: "Viu diversos dies", title: "Combina i estalvia", sub: "Véns diversos dies a la Baixa? Ajunta activitats i paga menys. Coordinem les teves dates per WhatsApp.",
-      perPerson: "per persona", save: "Estalvies", cta: "Reservar per WhatsApp", best: "El més triat",
-      items: [
-        { name: "Duo La Paz", days: "2 dies", activities: ["Neda amb taurons balena", "Snorkel a l'Illa Espíritu Santo"] },
-        { name: "Setmana Baixa", days: "3 dies", activities: ["Neda amb taurons balena", "Illa Espíritu Santo", "Safari La Ventana"] },
-      ],
-      customBadge: "A mida", customTitle: "Munta la teva setmana", customText: "Explica'ns quants dies véns i què t'emociona. Dissenyem el teu itinerari ideal a preu de paquet.", customCta: "Planejar el meu viatge", customWa: "Hola! Vull organitzar un viatge de diversos dies amb vosaltres. Em podeu ajudar?",
+      kicker: "Temporada · nov – des", title: "Combina i viu la temporada", sub: "Només al novembre i al desembre coincideixen el Sardine Run de Badia Magdalena i el tauró balena de La Paz. Fes els dos en un mateix viatge.",
+      perPerson: "per persona", priceLabel: "Preu de paquet", note: "S'aplica en reservar les activitats juntes.", cta: "Reservar paquet",
+      items: {
+        temporada: { name: "Paquet Temporada", badge: "Nov – des", days: "2 dies", activities: ["Sardine Run a Badia Magdalena (transport des de La Paz inclòs)", "Neda amb el tauró balena"] },
+        "gran-temporada": { name: "Gran Temporada", badge: "El més complet", days: "3 dies", activities: ["Sardine Run a Badia Magdalena (transport des de La Paz inclòs)", "Safari marí a La Ventana", "Neda amb el tauró balena"] },
+      },
+      customBadge: "A mida", customTitle: "Munta el teu viatge", customText: "Vols afegir Espíritu Santo, busseig o més dies? Explica'ns què t'emociona i et muntem un itinerari a preu de paquet.", customCta: "Planejar el meu viatge", customWa: "Hola! Vull organitzar un viatge de diversos dies amb vosaltres. Em podeu ajudar?",
     },
   }
   const pk = packagesT[locale] ?? packagesT.es
@@ -250,32 +261,42 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p>{pk.sub}</p>
         </div>
         <div className="packages-grid">
-          {pk.items.map((combo, idx) => {
-            const meta = comboMeta[idx]
-            const now = Math.round(meta.regularMxn * (1 - meta.off))
-            const savings = meta.regularMxn - now
+          {comboCards.map((card) => {
+            const combo = pk.items[card.id]
+            const pkgDef = PACKAGES.find((x) => x.id === card.id)
+            if (!combo || !pkgDef) return null
             return (
-              <div key={combo.name} className={`pkg-card${idx === 1 ? " pkg-featured" : ""}`}>
-                {idx === 1 && <span className="pkg-badge">{pk.best}</span>}
-                <h3>{combo.name}</h3>
-                <div className="pkg-days">{combo.days}</div>
-                <ul className="pkg-acts">
-                  {combo.activities.map((a) => <li key={a}>{a}</li>)}
-                </ul>
-                <div className="pkg-price">
-                  <span className="reg"><Price amount={meta.regularMxn} /></span>
-                  <span className="now"><b><Price amount={now} /></b><span className="per">{pk.perPerson}</span></span>
-                  <span className="pkg-save">{pk.save} <Price amount={savings} /></span>
+              <div key={card.id} className={`pkg-card pkg-photo${card.featured ? " pkg-featured" : ""}`}>
+                <div className="pkg-bg" aria-hidden="true">
+                  <Image src={card.image} alt="" fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
                 </div>
-                <a href={wa(`Hola! Me interesa el paquete "${combo.name}" (${combo.activities.join(" + ")}). ¿Me ayudan con fechas y precio?`)} className="btn btn-teal" target="_blank" rel="noopener noreferrer">{pk.cta}</a>
+                <div className="pkg-body">
+                  <span className="pkg-badge">{combo.badge}</span>
+                  <h3>{combo.name}</h3>
+                  <div className="pkg-days">{combo.days}</div>
+                  <ul className="pkg-acts">
+                    {combo.activities.map((a) => <li key={a}>{a}</li>)}
+                  </ul>
+                  <div className="pkg-price">
+                    <span className="pkg-price-label">{pk.priceLabel}</span>
+                    <span className="now"><b><Price amount={packagePrice(card.id)} /></b><span className="per">{pk.perPerson}</span></span>
+                    <span className="pkg-note">{pk.note}</span>
+                  </div>
+                  <a href={`${locale === defaultLocale ? "" : `/${locale}`}/arma-tu-reserva?add=${pkgDef.slugs.join(",")}`} className="btn btn-teal">{pk.cta}</a>
+                </div>
               </div>
             )
           })}
-          <div className="pkg-card pkg-custom">
-            <span className="pkg-badge">{pk.customBadge}</span>
-            <h3>{pk.customTitle}</h3>
-            <p>{pk.customText}</p>
-            <a href={wa(pk.customWa)} className="btn btn-ghost" style={{ marginTop: "auto" }} target="_blank" rel="noopener noreferrer">{pk.customCta}</a>
+          <div className="pkg-card pkg-photo pkg-custom">
+            <div className="pkg-bg" aria-hidden="true">
+              <Image src="/espiritu-santo-aerea.jpg" alt="" fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="pkg-body">
+              <span className="pkg-badge">{pk.customBadge}</span>
+              <h3>{pk.customTitle}</h3>
+              <p>{pk.customText}</p>
+              <a href={wa(pk.customWa)} className="btn btn-ghost" style={{ marginTop: "auto" }} target="_blank" rel="noopener noreferrer">{pk.customCta}</a>
+            </div>
           </div>
         </div>
       </section>

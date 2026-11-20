@@ -1111,6 +1111,22 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .pkg-card .btn { width: 100%; justify-content: center; }
 .pkg-card.pkg-custom { background: rgba(40,194,160,0.07); border: 1px dashed rgba(40,194,160,0.42); }
 .pkg-custom p { color: var(--sand-dim); font-size: 15px; line-height: 1.55; margin: 0 0 22px; }
+/* Paquetes con foto de fondo: la foto arriba y el texto sobre un degradado oscuro */
+.pkg-card.pkg-photo { position: relative; overflow: hidden; padding: 0; min-height: 540px; background: #0b2230; }
+.pkg-photo .pkg-bg { position: absolute; top: 0; left: 0; right: 0; height: 330px; z-index: 0; }
+.pkg-photo .pkg-bg img { transition: transform 0.7s ease; }
+.pkg-photo:hover .pkg-bg img { transform: scale(1.05); }
+.pkg-photo .pkg-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,20,28,0.05) 0%, rgba(6,20,28,0.1) 45%, rgba(11,34,48,0.75) 78%, #0b2230 100%); }
+.pkg-photo .pkg-body { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; padding: 26px 28px 30px; }
+.pkg-photo .pkg-badge { box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+.pkg-photo h3 { margin-top: 205px; font-size: 26px; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
+.pkg-photo.pkg-featured { border-color: rgba(40,194,160,0.7); box-shadow: 0 0 0 1px rgba(40,194,160,0.35), 0 18px 40px rgba(0,0,0,0.35); }
+.pkg-photo.pkg-custom { border: 1px dashed rgba(40,194,160,0.5); }
+.pkg-photo.pkg-custom .pkg-badge { background: rgba(6,20,28,0.6); }
+.pkg-photo.pkg-custom .pkg-bg::after { background: linear-gradient(180deg, rgba(6,20,28,0.05) 0%, rgba(6,20,28,0.15) 45%, rgba(11,34,48,0.8) 78%, #0b2230 100%); }
+.pkg-price-label { display: block; color: var(--sand-dim); font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.pkg-note { display: block; color: var(--sand-dim); font-size: 12.5px; margin-top: 6px; }
+@media (max-width: 640px) { .pkg-photo .pkg-bg { height: 280px; } .pkg-photo h3 { margin-top: 170px; } }
 
 /* ===== POP-UP PROMOCIONAL (Sardine Run) ===== */
 .sr-pop-overlay { position: fixed; inset: 0; z-index: 3000; background: rgba(5,15,22,0.74); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; animation: srFade .25s ease; }
