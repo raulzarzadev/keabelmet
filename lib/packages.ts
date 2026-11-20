@@ -17,7 +17,7 @@ export interface ActivityPackage {
 	off: number
 	/**
 	 * Descuento fijo en pesos por persona en actividades concretas (en lugar del
-	 * porcentaje). P. ej. { "tiburon-ballena": 300 }: el Sardine Run queda igual.
+	 * porcentaje). P. ej. { "tiburon-ballena": 500 }: el Sardine Run queda igual.
 	 */
 	perPersonOffMxn?: Record<string, number>
 	slugs: string[]
@@ -38,10 +38,11 @@ export const PACKAGES: ActivityPackage[] = [
 		name: { es: "Dúo La Paz", en: "La Paz Duo", fr: "Duo La Paz", zh: "拉巴斯双人组合", ca: "Duo La Paz" },
 	},
 	{
-		// Temporada nov–dic: Sardine Run a precio normal y $300 menos por persona en el tiburón ballena.
+		// Temporada nov–dic: Sardine Run a precio normal y $500 menos por persona en el tiburón ballena.
+		// En la web se presenta como precio de paquete (las dos experiencias), no como rebaja.
 		id: "temporada",
 		off: 0,
-		perPersonOffMxn: { "tiburon-ballena": 300 },
+		perPersonOffMxn: { "tiburon-ballena": 500 },
 		slugs: ["safari-bahia-magdalena", "tiburon-ballena"],
 		name: { es: "Paquete Temporada", en: "Season Combo", fr: "Combo Saison", zh: "季节套餐", ca: "Paquet Temporada" },
 	},
@@ -61,7 +62,7 @@ export interface AppliedPackage {
 	discountMxn: number
 	/** Descuento total por actividad (slug → MXN), para repartirlo por renglón. */
 	perSlug: Record<string, number>
-	/** Etiqueta corta del descuento: "−15%" o "−$300". */
+	/** Etiqueta corta del descuento: "−15%" o "−$500 c/u". */
 	offLabel: string
 }
 

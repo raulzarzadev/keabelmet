@@ -47,7 +47,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 				"**O combínalo** con otras actividades en [Arma tu reserva](/arma-tu-reserva) y aparta con el 20 %.",
 				"**Cancelación con reembolso** hasta 24 horas antes de la salida.",
 			] },
-			{ type: "tip", text: "¿Vas a hacer también el Sardine Run en noviembre o diciembre? Con el **Paquete Temporada** el tiburón ballena te sale $300 MXN más barato por persona." },
+			{ type: "tip", text: "¿Vas a hacer también el Sardine Run en noviembre o diciembre? Con el **Paquete Temporada** te llevas las dos experiencias por $6,300 MXN por persona." },
 			{ type: "p", text: "Si es tu primera vez, lee [qué esperar al nadar con tiburón ballena](/blog/nadar-con-tiburon-ballena-por-primera-vez-que-esperar)." },
 		],
 		faq: [
@@ -92,7 +92,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 				"**Or combine it** with other activities in [Build your reservation](/arma-tu-reserva) and hold it with 20%.",
 				"**Refundable cancellation** up to 24 hours before departure.",
 			] },
-			{ type: "tip", text: "Also doing the Sardine Run in November or December? With the **Season Combo** the whale shark swim is $300 MXN cheaper per person." },
+			{ type: "tip", text: "Also doing the Sardine Run in November or December? With the **Season Combo** you get both experiences for $6,300 MXN per person." },
 			{ type: "p", text: "First time? Read [what to expect when you swim with a whale shark](/blog/swimming-with-whale-sharks-for-the-first-time-what-to-expect)." },
 		],
 		faq: [

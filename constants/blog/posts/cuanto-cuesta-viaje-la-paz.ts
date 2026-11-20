@@ -40,7 +40,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 			{ type: "table", head: ["Paquete", "Incluye", "Precio por persona", "≈ USD"], rows: [
 				["Semana Baja (−15 %)", "Tiburón ballena + Espíritu Santo + La Ventana", "$6,035 MXN", "$317"],
 				["Dúo La Paz (−10 %)", "Tiburón ballena + Espíritu Santo", "$3,690 MXN", "$194"],
-				["Temporada (nov–dic)", "Sardine Run + tiburón ballena (−$300 en el tiburón)", "$6,500 MXN", "$342"],
+				["Temporada (nov–dic)", "Sardine Run + tiburón ballena", "$6,300 MXN", "$331"],
 			] },
 			{ type: "p", text: "Los descuentos se aplican solos en [Arma tu reserva](/arma-tu-reserva), donde apartas con el 20 % y pagas el resto el día del tour." },
 			{ type: "h2", text: "Ejemplos de presupuesto solo en tours" },
@@ -58,7 +58,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 			{ q: "¿Cuánto cuesta un viaje a La Paz?", a: "Como referencia, un turista internacional que llega en avión gasta en promedio US$1,269.6 dentro de México por viaje [^1]." },
 			{ q: "¿Cuánto cuesta nadar con tiburón ballena en La Paz?", a: "$2,300 MXN por persona, unos US$121 al tipo de cambio de Banxico [^2]." },
 			{ q: "¿Cuánto cuesta el tour a Isla Espíritu Santo?", a: "$1,800 MXN por persona en salida compartida, unos US$95 [^2]." },
-			{ q: "¿Hay descuentos si reservo varios tours?", a: "Sí: el paquete Semana Baja da 15 % y el Dúo La Paz 10 %; en noviembre y diciembre, el Paquete Temporada baja $300 el tiburón ballena." },
+			{ q: "¿Hay descuentos si reservo varios tours?", a: "Sí: el paquete Semana Baja da 15 % y el Dúo La Paz 10 %; en noviembre y diciembre, el Paquete Temporada junta el Sardine Run y el tiburón ballena por $6,300 MXN por persona." },
 		],
 	},
 	en: {
@@ -89,7 +89,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 			{ type: "table", head: ["Package", "Includes", "Price per person", "≈ USD"], rows: [
 				["Baja Week (−15%)", "Whale sharks + Espíritu Santo + La Ventana", "$6,035 MXN", "$317"],
 				["La Paz Duo (−10%)", "Whale sharks + Espíritu Santo", "$3,690 MXN", "$194"],
-				["Season Combo (Nov–Dec)", "Sardine Run + whale sharks (−$300 on the whale sharks)", "$6,500 MXN", "$342"],
+				["Season Combo (Nov–Dec)", "Sardine Run + whale sharks", "$6,300 MXN", "$331"],
 			] },
 			{ type: "p", text: "Discounts apply automatically in [Build your reservation](/arma-tu-reserva), where you hold your spot with 20% and pay the rest on the day of the tour." },
 			{ type: "h2", text: "Sample tour-only budgets" },
@@ -107,7 +107,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 			{ q: "How much does a trip to La Paz cost?", a: "As a benchmark, international tourists arriving by air spend an average of US$1,269.6 inside Mexico per trip [^1]." },
 			{ q: "How much is the whale shark swim in La Paz?", a: "$2,300 MXN per person, about US$121 at Banxico's exchange rate [^2]." },
 			{ q: "How much is the Espíritu Santo Island tour?", a: "$1,800 MXN per person on a shared trip, about US$95 [^2]." },
-			{ q: "Are there discounts for booking several tours?", a: "Yes: Baja Week gives 15% off and La Paz Duo 10%; in November and December, the Season Combo takes $300 off the whale shark swim." },
+			{ q: "Are there discounts for booking several tours?", a: "Yes: Baja Week gives 15% off and La Paz Duo 10%; in November and December, the Season Combo bundles the Sardine Run and the whale shark swim for $6,300 MXN per person." },
 		],
 	},
 }
