@@ -30,6 +30,7 @@ export const delfinesMarDeCortes: BlogPost = {
 			{ type: "p", text: "Los del Golfo de California son grandes para su especie: en un grupo de 105 delfines varados en el norte del Golfo en 1995, los machos midieron hasta **2.65 metros**, los *Delphinus* más grandes reportados hasta entonces en el mundo [^5]." },
 			{ type: "h3", text: "Tursión o delfín nariz de botella" },
 			{ type: "p", text: "En la bahía de La Paz viven **dos ecotipos**: uno **costero** y otro **oceánico** [^3]. Los costeros se acercan mucho a la orilla: con grabadoras submarinas en la entrada de la Ensenada de La Paz se detectaron sus silbidos en **todos** los periodos de muestreo de junio a noviembre de 2017, y también de noche [^4]." },
+			{ type: "img", src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Delfín nariz de botella saltando fuera del agua frente a la costa de Baja California Sur", caption: "Un tursión o delfín nariz de botella saltando frente a la costa de Baja California Sur. Foto: Keabelmet." },
 			{ type: "h2", text: "¿Cuándo hay más delfines?" },
 			{ type: "p", text: "La bahía cambia con las estaciones. Durante el invierno, cuando el agua se mezcla, y en primavera y principios del verano, ofrece buen hábitat para **tursiones y delfines comunes** (y también para la ballena azul) [^2]. A finales del verano y en otoño, con el agua estratificada, dominan otras especies como la ballena de aleta, la de Bryde y el **calderón de aletas cortas** [^2]." },
 			{ type: "table", head: ["Época", "Qué domina en la bahía de La Paz"], rows: [
@@ -69,6 +70,7 @@ export const delfinesMarDeCortes: BlogPost = {
 			{ type: "p", text: "Gulf of California animals are big for their species: in a group of 105 dolphins stranded in the northern Gulf in 1995, males measured up to **2.65 meters**, the largest *Delphinus* reported anywhere at the time [^5]." },
 			{ type: "h3", text: "Bottlenose dolphin" },
 			{ type: "p", text: "La Paz Bay is home to **two ecotypes**: one **coastal** and one **offshore** [^3]. The coastal ones come very close to shore: underwater recorders at the entrance of the Ensenada de La Paz picked up their whistles in **every** sampling period from June to November 2017, including at night [^4]." },
+			{ type: "img", src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Bottlenose dolphin leaping out of the water off the coast of Baja California Sur", caption: "A bottlenose dolphin leaping off the coast of Baja California Sur. Photo: Keabelmet." },
 			{ type: "h2", text: "When are there more dolphins?" },
 			{ type: "p", text: "The bay changes with the seasons. In winter, when the water mixes, and in spring and early summer, it offers good habitat for **bottlenose and common dolphins** (and blue whales too) [^2]. In late summer and fall, when the water is stratified, other species dominate, such as fin whales, Bryde's whales and **short-finned pilot whales** [^2]." },
 			{ type: "table", head: ["Season", "What dominates in La Paz Bay"], rows: [
