@@ -24,20 +24,20 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | ¿Por qué saltan las móbulas? | Klimley et al. 2024; Palacios et al. 2023 |
 | ✅ | ¿Hay orcas en el Mar de Cortés? | Gallo-Reynoso et al. 2025; Higuera-Rivas et al. 2025 |
 | ✅ | ¿Qué ballenas se pueden ver en La Paz y cuándo? (jorobada, azul, aleta, Bryde, cachalote) | Paniagua-Mendoza et al. 2017 (ballena azul); Viloria-Gómora et al. 2015 (Bryde) |
-| ⏳ | ¿Qué delfines hay en el Mar de Cortés? | buscar estudios de cetáceos del Golfo |
-| ⏳ | ¿Cuánto mide y cuánto vive un tiburón ballena? | UICN; literatura de crecimiento |
+| ✅ | ¿Qué delfines hay en el Mar de Cortés? | Flores-Ramírez et al. 1996; Pardo et al. 2013; Antichi et al. 2022 |
+| ✅ | ¿Cuánto mide y cuánto vive un tiburón ballena? | McClain et al. 2015; Ong et al. 2020; Meekan et al. 2020 |
 | ⏳ | Lobo marino de California: ¿por qué juegan con los buzos? | García-Aguilar & Aurioles-Gamboa 2003 |
 | ⏳ | ¿Qué es la ballena de Bryde y por qué aparece en el Sardine Run? | Viloria-Gómora et al. 2015 |
 | ⏳ | Cachalotes en el Golfo de California | buscar |
 | ✅ | Marlín rayado: el cazador más rápido del Sardine Run | Abitia-Cárdenas et al. (dieta, LAJAR 2011) |
-| ⏳ | Tortugas marinas de Baja California Sur | buscar |
-| ⏳ | Mantarraya gigante (manta oceánica) vs. móbula: diferencias | buscar |
+| ✅ | Tortugas marinas de Baja California Sur | López-Castro et al. 2009; Seminoff et al. 2014; Mancini & Koch 2009 |
+| ✅ | Mantarraya gigante (manta oceánica) vs. móbula: diferencias | White et al. 2018; Cronin et al. 2025; Palacios et al. 2021 |
 | ⏳ | Tiburones de Cabo Pulmo: ¿hay tiburón toro? | buscar |
 | ⏳ | Aves marinas: fragatas, pelícanos y bobos | buscar |
-| ⏳ | ¿Qué peces veré haciendo snorkel en La Paz? | buscar |
+| ✅ | ¿Qué peces veré haciendo snorkel en La Paz? | Pérez-España et al. 1996; Barjau-González et al. 2016 |
 | ⏳ | Pulpos, morenas y nudibranquios del arrecife | buscar |
 | ⏳ | ¿Hay medusas en La Paz? ¿Pican? | buscar |
-| ⏳ | Mantarrayas en la playa: cómo evitar picaduras (stingray shuffle) | buscar |
+| ✅ | Mantarrayas en la playa: cómo evitar picaduras (stingray shuffle) | CSULB Shark Lab; Clark et al. 2007; Myatt et al. 2018 |
 
 ## 2. Cuándo ir (temporadas)
 
@@ -50,8 +50,8 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | ✅ | ¿Cuándo es el Sardine Run de Bahía Magdalena? | buscar fuente científica sobre desove de sardina |
 | ✅ | Temperatura del agua en La Paz por mes y qué traje usar | Herrera-Cervantes 2019 (+ fuente con cifras) |
 | ✅ | Mejor época para bucear en La Paz (visibilidad y temperatura) | buscar |
-| ⏳ | ¿Cuándo hay ballena jorobada en Los Cabos y La Paz? | buscar |
-| ⏳ | ¿Cuándo ver ballena azul en Loreto? | Paniagua-Mendoza et al. 2017 |
+| ✅ | ¿Cuándo hay ballena jorobada en Los Cabos y La Paz? | Urbán & Aguayo 1987; Urbán et al. 2000 |
+| ✅ | ¿Cuándo ver ballena azul en Loreto? | Paniagua-Mendoza et al. 2017; Sears et al. 2013; Whittome et al. 2024 |
 | ✅ | Temporada de huracanes en BCS: ¿es seguro viajar en septiembre? | Servicio Meteorológico / NOAA |
 | ✅ | Clima de La Paz mes a mes (invierno vs verano) | SMN, estación 3074, promedios 1991–2020; NOAA OISST |
 | ⏳ | La Paz en invierno vs. verano: qué esperar | buscar |
@@ -109,12 +109,12 @@ Leyenda: ✅ publicado · ⏳ pendiente
 | Estado | Pregunta | Fuentes candidatas |
 |---|---|---|
 | ✅ | Cabo Pulmo: el arrecife que volvió a la vida | Aburto-Oropeza et al. 2011 |
-| ⏳ | ¿Por qué el tiburón ballena está en peligro? | UICN |
+| ✅ | ¿Por qué el tiburón ballena está en peligro? | UICN; Womersley et al. 2022 |
 | ✅ | El Niño y La Niña: cómo cambian la fauna del Golfo | Ornelas et al. 2026 |
 | ⏳ | Áreas naturales protegidas de BCS explicadas | Conanp |
 | ⏳ | Turismo responsable con fauna: el código Keabelmet | NOM-171; Conanp |
 | ✅ | Fotoidentificación: cómo los científicos reconocen a cada animal | Ramírez-Macías et al. 2012 |
-| ⏳ | La vaquita marina: lo que hay que saber | buscar |
+| ✅ | La vaquita marina: lo que hay que saber | Jaramillo-Legorreta et al. 2017, 2019; Robinson et al. 2022; López-Arzate et al. 2026 |
 | ⏳ | Surgencias: por qué el agua fría trae vida | Bizzarro 2008; Herrera-Cervantes 2019 |
 
 ## 7. Serie Sardine Run (Bahía Magdalena)

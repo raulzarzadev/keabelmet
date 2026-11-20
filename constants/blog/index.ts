@@ -52,6 +52,16 @@ import { mejoresPlayasLaPaz } from "./posts/mejores-playas-la-paz"
 import { queComerLaPaz } from "./posts/que-comer-la-paz"
 import { laPazOLosCabos } from "./posts/la-paz-o-los-cabos"
 import { climaLaPazMesAMes } from "./posts/clima-la-paz-mes-a-mes"
+import { tiburonBallenaTamanoEdad } from "./posts/tiburon-ballena-tamano-edad"
+import { tiburonBallenaEnPeligro } from "./posts/tiburon-ballena-en-peligro"
+import { delfinesMarDeCortes } from "./posts/delfines-mar-de-cortes"
+import { tortugasMarinasBcs } from "./posts/tortugas-marinas-bcs"
+import { mantaVsMobula } from "./posts/manta-vs-mobula"
+import { rayasPlayaPicaduras } from "./posts/rayas-playa-picaduras"
+import { ballenaJorobadaTemporada } from "./posts/ballena-jorobada-temporada"
+import { ballenaAzulLoreto } from "./posts/ballena-azul-loreto"
+import { vaquitaMarina } from "./posts/vaquita-marina"
+import { pecesSnorkelLaPaz } from "./posts/peces-snorkel-la-paz"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -112,4 +122,14 @@ export const blogPosts: BlogPost[] = [
 	queComerLaPaz,
 	laPazOLosCabos,
 	climaLaPazMesAMes,
+	tiburonBallenaTamanoEdad,
+	tiburonBallenaEnPeligro,
+	delfinesMarDeCortes,
+	tortugasMarinasBcs,
+	mantaVsMobula,
+	rayasPlayaPicaduras,
+	ballenaJorobadaTemporada,
+	ballenaAzulLoreto,
+	vaquitaMarina,
+	pecesSnorkelLaPaz,
 ]
