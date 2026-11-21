@@ -4,7 +4,7 @@ export const cuandoViajarDesdeEuropa: BlogPost = {
 	id: "cuando-viajar-desde-europa",
 	category: "temporadas",
 	date: "2026-11-20",
-	cover: "/gray-whale-mother-calf-magdalena.jpg",
+	cover: "/images/ballena-gris/cola-de-ballena-gris.jpg",
 	experiences: ["tiburon-ballena", "tour-ballena-gris", "safari-bahia-magdalena", "safari-la-ventana"],
 	related: ["mejor-epoca-la-paz", "clima-la-paz-mes-a-mes", "llegar-la-paz-desde-europa"],
 	sources: [
@@ -22,7 +22,7 @@ export const cuandoViajarDesdeEuropa: BlogPost = {
 		metaTitle: "La Paz en Navidad, Semana Santa o verano: fauna, clima y qué esperar",
 		description: "Si tus vacaciones son en Navidad, Semana Santa o el verano europeo, esto es lo que podrás ver en La Paz en cada época: tiburón ballena, ballena gris, Sardine Run, móbulas y el clima de cada mes.",
 		excerpt: "Tus vacaciones no se mueven, así que te decimos qué fauna y qué clima te esperan en La Paz en Navidad, Semana Santa y verano.",
-		coverAlt: "Ballena gris madre con su cría en Bahía Magdalena",
+		coverAlt: "Cola de ballena gris con marcas y cicatrices en Puerto Chale",
 		answer: "**Navidad** es de las mejores épocas: hay **tiburón ballena** (temporada del 1 de octubre al 30 de abril) [^1], es el final del **Sardine Run** y las máximas rondan **25 °C** [^5]. En **Semana Santa** coinciden el tiburón ballena [^1], las **móbulas** (marzo a agosto) [^3] y, si cae en marzo, la **ballena gris** [^2]. En el **verano europeo** no hay tiburón ballena [^1], hace mucho calor (38.2 °C en julio) [^5] y en Los Islotes se restringe el nado con lobos marinos del 1 de junio al 31 de agosto [^4].",
 		blocks: [
 			{ type: "p", text: "Muchos viajeros europeos no eligen el mes: viajan cuando tienen vacaciones. Esta guía te dice qué esperar en La Paz en las tres épocas más comunes." },
@@ -71,7 +71,7 @@ export const cuandoViajarDesdeEuropa: BlogPost = {
 		metaTitle: "La Paz at Christmas, Easter or in summer: wildlife, weather and what to expect",
 		description: "If your holidays fall at Christmas, Easter or during the European summer, here's what you can see in La Paz in each: whale sharks, gray whales, the Sardine Run, mobulas and the weather each month.",
 		excerpt: "Your holiday dates are fixed, so here's the wildlife and weather waiting for you in La Paz at Christmas, Easter and in summer.",
-		coverAlt: "Gray whale mother and calf in Magdalena Bay",
+		coverAlt: "Gray whale fluke with markings and scars in Puerto Chale",
 		answer: "**Christmas** is one of the best times: **whale sharks** are in season (October 1 to April 30) [^1], it's the end of the **Sardine Run**, and highs are around **25 °C (77 °F)** [^5]. At **Easter**, whale sharks [^1] overlap with **mobulas** (March to August) [^3] and, if Easter falls in March, **gray whales** [^2]. In the **European summer** there are no whale sharks [^1], it's very hot (38.2 °C in July) [^5], and swimming with sea lions at Los Islotes is restricted from June 1 to August 31 [^4].",
 		blocks: [
 			{ type: "p", text: "Many European travelers don't pick the month: they travel when they have time off. This guide tells you what to expect in La Paz in the three most common holiday periods." },

@@ -24,7 +24,7 @@ export default async function Galeria({ params }: { params: Promise<{ locale: st
     "/manta-ray-swimming.png",
     "/kayaking-tropical-beach.jpg",
     "/snorkeling-coral-reef.jpg",
-    "/gray-whale-close-up.jpg",
+    "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg",
     "/desert-beach-landscape-baja.jpg",
     "/coral-reef-underwater-cabo-pulmo-colorful-tropical.jpg",
   ]

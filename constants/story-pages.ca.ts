@@ -1326,16 +1326,24 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 	"tour-ballena-gris": {
 		breadcrumb: "Balena Grisa Puerto Chale",
 		hero: {
-			image: "/ballena-gris-spyhop-drone.jpg",
-			alt: "Balena grisa treient el cap al costat d'una barca a Puerto Chale",
+			image: "/images/ballena-gris/video-portada.jpg",
+			imageMobile: "/images/ballena-gris/video-portada-movil.jpg",
+			alt: "Balena grisa traient el cap al costat d'una barca a Puerto Chale",
 			kicker: "Puerto Chale · Balena Grisa",
-			title: "Imagina que una balena de 40 tones decideix acostar-se a saludar-te",
-			text: "No perquè la vas cridar. No perquè la vas alimentar. Simplement perquè va voler. Hi ha molt pocs llocs al món on un animal tan gran decideix acostar-se voluntàriament a les persones. Puerto Chale és un d'ells. I quan passa, és impossible no somriure.",
-			meta: "Puerto Chale · Dia complet des de La Paz · Gener–març",
-			primaryLabel: "Reservar la meva trobada",
+			title: "Imagina una balena grisa acostant-se a saludar-te",
+			text: "",
+			meta: "Gen–març · Transport des de La Paz inclòs · Guia especialitzat",
+			primaryLabel: "Reserva la teva trobada",
 			primaryWa: "Hola! vull reservar el tour de balena grisa a Puerto Chale",
 			secondaryLabel: "Veure com serà el dia",
 			secondaryHref: "#itinerario",
+			heroVideo: "/videos/ballena-gris-asomandose-junto-a-la-lancha.mp4",
+			heroVideoMobile: "/videos/ballena-gris-asomandose-junto-a-la-lancha-movil.mp4",
+			heroVideoUploaded: "2026-11-21T12:00:00-07:00",
+			heroVideoDuration: "PT3S",
+			cinematic: true,
+			ctaShowPrice: true,
+			note: "Una temporada de només tres mesos l'any.",
 		},
 		blocks: [
 			{
@@ -1359,7 +1367,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-close-up-magdalena-bay.jpg", alt: "Balena grisa a prop de la superfície a Puerto Chale" },
+				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dues balenes grises vistes des de l'aire" },
 				quote: "Durant uns segons desapareix qualsevol sensació de por. Només queda admiració.",
 			},
 			{
@@ -1383,7 +1391,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"En arribar coneixeràs el capità i pujarem a una embarcació dissenyada per recórrer les tranquil·les aigües on les balenes passen l'hivern. No passen gaires minuts abans de sentir el primer buf. Després apareix una esquena grisa trencant la superfície. Més endavant, una cua.",
 							"I aleshores comença el més emocionant.",
 						],
-						media: { src: "/gray-whale-in-ocean.jpg", alt: "Balena grisa trencant la superfície a Puerto Chale" },
+						media: { src: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg", alt: "L'esquena d'una balena grisa trencant la superfície, amb muntanyes al fons" },
 					},
 					{
 						title: "Observem, esperem i deixem que elles decideixin",
@@ -1405,10 +1413,11 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaSplit",
-				media: { src: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg", alt: "Mare i cria de balena grisa nedant juntes a Puerto Chale" },
+				media: { src: "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg", alt: "Una balena grisa treu el cap al costat de la barca mentre una visitant saluda" },
 				kicker: "La curiositat també existeix a la natura",
 				title: "No passa sempre. I precisament per això cada trobada resulta tan especial.",
 				paragraphs: [
+					"No perquè la vas cridar. No perquè la vas alimentar. Simplement perquè va voler. I quan passa, és impossible no somriure.",
 					"A diferència de moltes altres espècies, les balenes grises són conegudes per acostar-se voluntàriament a les embarcacions en algunes de les llacunes de reproducció de Baixa Califòrnia. No passa amb tots els individus.",
 					"Nosaltres mai intentem provocar-ho. Simplement respectem el seu espai i deixem que elles marquin el ritme.",
 				],
@@ -1533,14 +1542,14 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-breaching-sunset-baja-california.jpg", alt: "Balena grisa saltant a la posta de sol a Baixa Califòrnia" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cua de balena grisa amb marques i cicatrius a Puerto Chale" },
 				quote: "Alguns dels moments més extraordinaris de la natura no es poden planejar. Només es poden rebre.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/ballena-gris-encuentro.jpg",
-				alt: "Trobada amb una balena grisa a Puerto Chale",
+				image: "/images/hero/ballena-gris-hero.jpeg",
+				alt: "Balena grisa a la superfície amb muntanyes al fons",
 				title: "Potser recordes la seva mida o el so del seu buf. Però recordaràs l'instant en què una balena va decidir acostar-se a observar-te.",
 				text: "Explica'ns quan visites Baixa Califòrnia Sud entre gener i març, i t'ajudem a reservar el teu dia amb les balenes grises de Puerto Chale.",
 				primaryLabel: "Consultar disponibilitat",

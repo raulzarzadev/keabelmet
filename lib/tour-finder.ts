@@ -175,7 +175,7 @@ const DIVE: Mode[] = ["firstDive", "certified"]
 export const ANIMALS: FinderAnimal[] = [
 	{
 		id: "grayWhale",
-		image: "/gray-whale-mother-calf-magdalena.jpg",
+		image: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg",
 		where: [{ tour: "tour-ballena-gris", modes: ["boat"], months: [1, 2, 3] }],
 	},
 	{
