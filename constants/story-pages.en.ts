@@ -1245,6 +1245,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				kicker: "Who is this experience for?",
 				title: "So you book with clear expectations",
 				good: {
+					media: { src: "/images/ballena-gris/visitantes-sonriendo-en-la-lancha.jpg", alt: "Five guests smiling on the boat in life jackets", position: "50% 25%" },
 					title: "It's perfect if…",
 					items: [
 						"You dream of seeing whales in freedom.",
@@ -1255,6 +1256,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
+					media: { src: "/instagram/ballena-gris-aerea.jpg", alt: "Gray whale seen from above in turquoise water" },
 					title: "It may not be for you if…",
 					items: [
 						"You're looking for an adrenaline-filled activity.",
