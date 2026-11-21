@@ -24,6 +24,8 @@ export interface MapArea {
 	lng: number
 	lat: number
 	radiusKm: number
+	/** Zona real (en lugar del círculo); la etiqueta va en lng/lat. */
+	polygon?: [number, number][]
 	label: string
 }
 
@@ -40,6 +42,12 @@ function circle(lng: number, lat: number, km: number, steps = 64): [number, numb
 		out.push([lng + dLng * Math.cos(a), lat + dLat * Math.sin(a)])
 	}
 	return out
+}
+
+/** Contorno de la zona: el polígono real o un círculo aproximado. */
+function shape(a: MapArea, steps = 64): [number, number][] {
+	if (a.polygon?.length) return [...a.polygon, a.polygon[0]]
+	return circle(a.lng, a.lat, a.radiusKm, steps)
 }
 
 function bounds(pts: [number, number][]): [[number, number], [number, number]] {
@@ -115,7 +123,7 @@ export default function ExpeditionMap({
 			// Si se actualiza maplibre-gl, copia de nuevo dist/maplibre-gl-worker.mjs a esa carpeta.
 			ml.setWorkerUrl(WORKER_URL)
 			if (cancelled || !box.current) return
-			const all: [number, number][] = [...pins.map((p) => [p.lng, p.lat] as [number, number]), ...areas.flatMap((a) => circle(a.lng, a.lat, a.radiusKm, 8)), ...(route ?? [])]
+			const all: [number, number][] = [...pins.map((p) => [p.lng, p.lat] as [number, number]), ...areas.flatMap((a) => shape(a, 8)), ...(route ?? [])]
 			const map = new ml.Map({
 				container: box.current,
 				style: STYLE,
@@ -151,7 +159,7 @@ export default function ExpeditionMap({
 				}
 				map.addSource("kb-areas", {
 					type: "geojson",
-					data: { type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id }, geometry: { type: "Polygon", coordinates: [circle(a.lng, a.lat, a.radiusKm)] } })) },
+					data: { type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id }, geometry: { type: "Polygon", coordinates: [shape(a)] } })) },
 				})
 				map.addLayer({ id: "kb-areas-fill", type: "fill", source: "kb-areas", paint: { "fill-color": "#28c2a0", "fill-opacity": 0.14 } })
 				map.addLayer({ id: "kb-areas-line", type: "line", source: "kb-areas", paint: { "line-color": "#28c2a0", "line-width": 1.5, "line-dasharray": [2, 2], "line-opacity": 0.8 } })
@@ -194,8 +202,10 @@ export default function ExpeditionMap({
 				const el = document.createElement("div")
 				el.className = "xmap-area"
 				el.textContent = a.label
-				// Etiqueta arriba del círculo para que no choque con el pin
-				const m = new ml.Marker({ element: el, anchor: "bottom", offset: [0, -4] }).setLngLat([a.lng, a.lat + a.radiusKm / 110.574]).addTo(map)
+				// Círculo: etiqueta arriba para que no choque con el pin. Polígono: en el punto indicado.
+				const m = a.polygon?.length
+					? new ml.Marker({ element: el, anchor: "center" }).setLngLat([a.lng, a.lat]).addTo(map)
+					: new ml.Marker({ element: el, anchor: "bottom", offset: [0, -4] }).setLngLat([a.lng, a.lat + a.radiusKm / 110.574]).addTo(map)
 				markers.current["area:" + a.id] = { m, el }
 			}
 			if (route?.length && routeLabel) {
@@ -207,7 +217,7 @@ export default function ExpeditionMap({
 				markers.current["route"] = { m, el }
 			}
 			const src = map.getSource("kb-areas") as unknown as { setData: (d: unknown) => void } | undefined
-			src?.setData({ type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id }, geometry: { type: "Polygon", coordinates: [circle(a.lng, a.lat, a.radiusKm)] } })) })
+			src?.setData({ type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id }, geometry: { type: "Polygon", coordinates: [shape(a)] } })) })
 			const rs = map.getSource("kb-route") as unknown as { setData: (d: unknown) => void } | undefined
 			rs?.setData({ type: "FeatureCollection", features: route ? [{ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: route } }] : [] })
 			highlight()
@@ -228,7 +238,7 @@ export default function ExpeditionMap({
 		if (!map) return
 		const ps = focus?.pins ? pins.filter((p) => focus.pins!.includes(p.id)) : pins
 		const as = focus?.areas ? areas.filter((a) => focus.areas!.includes(a.id)) : areas
-		const pts: [number, number][] = [...ps.map((p) => [p.lng, p.lat] as [number, number]), ...as.flatMap((a) => circle(a.lng, a.lat, a.radiusKm, 8)), ...(focus?.route === false ? [] : route ?? [])]
+		const pts: [number, number][] = [...ps.map((p) => [p.lng, p.lat] as [number, number]), ...as.flatMap((a) => shape(a, 8)), ...(focus?.route === false ? [] : route ?? [])]
 		if (!pts.length) return
 		const narrow = (box.current?.clientWidth ?? 800) < 560
 		map.fitBounds(bounds(pts), { padding: narrow ? { top: 50, bottom: 70, left: 30, right: 110 } : { top: 60, bottom: 70, left: 60, right: 170 }, maxZoom: pts.length === 1 ? 9.6 : 11.5, duration: 900 })

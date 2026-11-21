@@ -50,7 +50,7 @@ export default function MeetingPointMap({ slug, locale, tourTitle }: { slug: str
 		if (!info) return []
 		if (!info.zone) return []
 		const z = ZONES[info.zone]
-		return [{ id: info.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, label: z.name[locale] }]
+		return [{ id: info.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, polygon: z.polygon, label: z.name[locale] }]
 	}, [info, locale])
 
 	if (!info) return null

@@ -21,7 +21,7 @@ type L = Record<Locale, string>
 
 export type PointId = "muelle-fiscal" | "la-ventana" | "cabo-pulmo" | "puerto-chale" | "el-saltito"
 export type StayId = "la-paz" | "la-ventana" | "los-barriles" | "todos-santos" | "san-jose" | "cabo-san-lucas"
-export type ZoneId = "bahia-la-paz" | "espiritu-santo" | "cerralvo" | "cabo-pulmo" | "bahia-magdalena"
+export type ZoneId = "bahia-la-paz" | "espiritu-santo" | "cerralvo" | "cabo-pulmo" | "bahia-magdalena" | "sardine-run"
 
 export interface MapPoint {
 	lng: number
@@ -79,19 +79,36 @@ export const POINTS: Record<PointId, MapPoint> = {
 }
 
 export interface MapZone {
+	/** Centro (para el círculo) o, con polígono, dónde va la etiqueta. */
 	lng: number
 	lat: number
-	/** Radio del círculo en km (zona aproximada). */
+	/** Radio del círculo en km (zona aproximada). Se ignora si hay polígono. */
 	radiusKm: number
+	/** Zona real dibujada por Keabelmet (se usa en lugar del círculo). */
+	polygon?: [number, number][]
 	name: L
 }
 
+/**
+ * Polígonos trazados sobre los dibujos que hizo Keabelmet en el mapa
+ * (2026-11-21), georreferenciados con las islas (Cerralvo, Margarita, Espíritu
+ * Santo), El Centenario y los pines de salida. Son aproximados: muestran la
+ * zona habitual del recorrido.
+ */
+const ZONE_LA_VENTANA: [number, number][] = [[-109.9064,24.432],[-110.0212,24.3947],[-110.1195,24.3247],[-110.1359,24.2781],[-110.0649,24.2221],[-110.0048,24.1662],[-109.9829,24.0915],[-109.9228,24.0216],[-109.8354,23.9796],[-109.8135,23.905],[-109.7152,23.905],[-109.584,24.0169],[-109.5731,24.0915],[-109.6715,24.2035],[-109.7589,24.3341],[-109.8791,24.4273]]
+/** Snorkel y buceo: alrededor de Isla Partida e Isla Espíritu Santo. */
+const ZONE_ESPIRITU_SANTO: [number, number][] = [[-110.4305,24.5337],[-110.4001,24.4902],[-110.387,24.4427],[-110.374,24.3952],[-110.3609,24.3793],[-110.3262,24.3734],[-110.287,24.3872],[-110.2718,24.407],[-110.274,24.4427],[-110.2957,24.4902],[-110.3218,24.5377],[-110.3479,24.5575],[-110.3783,24.5614],[-110.4131,24.5496]]
+/** Tiburón ballena: franja de la bahía a lo largo de la orilla norte de El Mogote, hacia el oeste. */
+const ZONE_TIBURON_BALLENA: [number, number][] = [[-110.5056,24.2234],[-110.4221,24.2093],[-110.3316,24.1967],[-110.3253,24.1905],[-110.3264,24.1795],[-110.3455,24.1716],[-110.4221,24.1811],[-110.5091,24.2046]]
+const ZONE_SARDINE_RUN: [number, number][] = [[-111.5546,24.4228],[-111.7016,24.4056],[-111.9285,24.4583],[-112.1644,24.4745],[-112.2551,24.3453],[-112.2642,24.2322],[-112.11,24.1433],[-111.8377,24.0706],[-111.6562,23.8929],[-111.511,23.8444],[-111.3477,23.8202],[-111.2207,23.9252],[-111.1571,24.0868],[-111.2025,24.2],[-111.3477,24.3129],[-111.4747,24.4018]]
+
 export const ZONES: Record<ZoneId, MapZone> = {
-	"bahia-la-paz": { lng: -110.36, lat: 24.2, radiusKm: 6, name: { es: "Bahía de La Paz", en: "Bay of La Paz", fr: "Baie de La Paz", zh: "拉巴斯湾", ca: "Badia de La Paz" } },
-	"espiritu-santo": { lng: -110.33, lat: 24.47, radiusKm: 9, name: { es: "Isla Espíritu Santo", en: "Espíritu Santo Island", fr: "Île Espíritu Santo", zh: "圣灵岛", ca: "Illa Espíritu Santo" } },
-	cerralvo: { lng: -109.9, lat: 24.13, radiusKm: 7, name: { es: "Canal de Cerralvo", en: "Cerralvo Channel", fr: "Canal de Cerralvo", zh: "塞拉尔沃海峡", ca: "Canal de Cerralvo" } },
+	"bahia-la-paz": { lng: -110.42, lat: 24.196, radiusKm: 0, polygon: ZONE_TIBURON_BALLENA, name: { es: "Bahía de La Paz, frente a El Mogote", en: "Bay of La Paz, off El Mogote", fr: "Baie de La Paz, au large d'El Mogote", zh: "拉巴斯湾，El Mogote 外侧", ca: "Badia de La Paz, davant d'El Mogote" } },
+	"espiritu-santo": { lng: -110.35, lat: 24.575, radiusKm: 0, polygon: ZONE_ESPIRITU_SANTO, name: { es: "Islas Espíritu Santo y Partida", en: "Espíritu Santo & Partida islands", fr: "Îles Espíritu Santo et Partida", zh: "圣灵岛与帕尔蒂达岛", ca: "Illes Espíritu Santo i Partida" } },
+	cerralvo: { lng: -109.85, lat: 24.45, radiusKm: 0, polygon: ZONE_LA_VENTANA, name: { es: "Alrededor de Isla Cerralvo", en: "Around Cerralvo Island", fr: "Autour de l'île Cerralvo", zh: "塞拉尔沃岛周边", ca: "Al voltant de l'illa Cerralvo" } },
 	"cabo-pulmo": { lng: -109.41, lat: 23.43, radiusKm: 4, name: { es: "Parque Nacional Cabo Pulmo", en: "Cabo Pulmo National Park", fr: "Parc national de Cabo Pulmo", zh: "卡波普尔莫国家公园", ca: "Parc Nacional Cabo Pulmo" } },
 	"bahia-magdalena": { lng: -111.66, lat: 24.42, radiusKm: 10, name: { es: "Bahía Magdalena", en: "Magdalena Bay", fr: "Baie Magdalena", zh: "马格达莱纳湾", ca: "Badia Magdalena" } },
+	"sardine-run": { lng: -111.75, lat: 24.12, radiusKm: 0, polygon: ZONE_SARDINE_RUN, name: { es: "Pacífico frente a Isla Margarita", en: "Pacific off Isla Margarita", fr: "Pacifique au large de l'île Margarita", zh: "玛格丽塔岛外的太平洋", ca: "Pacífic davant l'illa Margarita" } },
 }
 
 /** Traslado incluido La Paz → Puerto Chale (carretera, OSRM simplificado). */
@@ -141,7 +158,7 @@ export const EXPEDITION_MAP: Partial<Record<TourId, ExpeditionMapInfo>> = {
 	"safari-la-ventana": { point: "la-ventana", zone: "cerralvo", transport: { kind: "optional", mxn: 1000 } },
 	"buceo-cabo-pulmo": { point: "cabo-pulmo", zone: "cabo-pulmo", transport: { kind: "none" } },
 	"tour-ballena-gris": { point: "puerto-chale", zone: "bahia-magdalena", transport: { kind: "included", pickup: "hotel" }, route: true },
-	"safari-bahia-magdalena": { point: "puerto-chale", zone: "bahia-magdalena", transport: { kind: "included", pickup: "point" }, route: true },
+	"safari-bahia-magdalena": { point: "puerto-chale", zone: "sardine-run", transport: { kind: "included", pickup: "point" }, route: true },
 	"scuba-discovery": { point: "el-saltito" },
 	"certificacion-open-water": { point: "muelle-fiscal" },
 }
