@@ -34,6 +34,7 @@ export const cuandoViajarDesdeEuropa: BlogPost = {
 				"**Clima:** máximas de unos 25 °C y mínimas de 12–14 °C [^5]. Lleva sudadera para la lancha.",
 			] },
 			{ type: "tip", text: "En invierno también vuela Condor directo de Frankfurt a Los Cabos (noviembre a abril) [^7]." },
+			{ type: "img", src: "/images/blog/ballena-jorobada-sacando-la-cabeza-baja-california-sur.webp", alt: "Ballena jorobada sacando la cabeza del agua", caption: "Una ballena jorobada en Baja California Sur, uno de los encuentros del invierno. Foto: Keabelmet." },
 			{ type: "h2", text: "Semana Santa (marzo–abril)" },
 			{ type: "ul", items: [
 				"**Tiburón ballena:** aún en temporada, hasta el 30 de abril [^1].",
@@ -82,6 +83,7 @@ export const cuandoViajarDesdeEuropa: BlogPost = {
 				"**Weather:** highs around 25 °C (77 °F) and lows of 12–14 °C [^5]. Bring a hoodie for the boat.",
 			] },
 			{ type: "tip", text: "In winter Condor also flies nonstop from Frankfurt to Los Cabos (November to April) [^7]." },
+			{ type: "img", src: "/images/blog/ballena-jorobada-sacando-la-cabeza-baja-california-sur.webp", alt: "Humpback whale lifting its head out of the water", caption: "A humpback whale in Baja California Sur, one of the winter encounters. Photo: Keabelmet." },
 			{ type: "h2", text: "Easter (March–April)" },
 			{ type: "ul", items: [
 				"**Whale sharks:** still in season, until April 30 [^1].",
