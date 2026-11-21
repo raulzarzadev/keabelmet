@@ -33,7 +33,7 @@ export const tortugasMarinasBcs: BlogPost = {
 			{ type: "h3", text: "Carey" },
 			{ type: "p", text: "La carey está clasificada como **En Peligro Crítico** por la UICN y su población cayó más de **80 %** en el último siglo [^5]. En el noroeste de México se identificaron **52 sitios** con registros de carey, sobre todo juveniles en arrecifes rocosos y manglares, y el **71 %** de esos sitios no está protegido [^5]." },
 			{ type: "fact", text: "Las tortugas usan Baja California Sur sobre todo para **alimentarse y crecer**: la gran mayoría de las que se encuentran en sus bahías son juveniles [^2]." },
-			{ type: "img", src: "/images/blog/tortuga-marina-nadando-sobre-arrecife-baja-california-sur.webp", alt: "Tortuga marina nadando sobre un arrecife rocoso con peces al fondo", caption: "Una tortuga marina nada sobre el arrecife en Baja California Sur. Foto: Keabelmet." },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-la-reina-la-ventana.webp", alt: "Tortuga marina nadando sobre un arrecife rocoso con peces al fondo", caption: "Una tortuga marina nada sobre el arrecife de La Reina, durante el safari en La Ventana. Foto: Keabelmet." },
 			{ type: "h2", text: "Lo que las amenaza" },
 			{ type: "ul", items: [
 				"**Captura incidental en redes:** de 2005 a 2006 murieron entre **1,500 y 2,950 caguamas al año** en dos flotas pesqueras observadas en la región [^4].",
@@ -75,7 +75,7 @@ export const tortugasMarinasBcs: BlogPost = {
 			{ type: "h3", text: "Hawksbill" },
 			{ type: "p", text: "The hawksbill is listed as **Critically Endangered** by the IUCN and its population fell by more than **80%** in the last century [^5]. In northwest Mexico, **52 sites** with hawksbill records were identified, mostly juveniles on rocky reefs and in mangroves, and **71%** of those sites are unprotected [^5]." },
 			{ type: "fact", text: "Turtles use Baja California Sur mainly to **feed and grow**: the vast majority found in its bays are juveniles [^2]." },
-			{ type: "img", src: "/images/blog/tortuga-marina-nadando-sobre-arrecife-baja-california-sur.webp", alt: "Sea turtle swimming over a rocky reef with fish in the background", caption: "A sea turtle swims over the reef in Baja California Sur. Photo: Keabelmet." },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-la-reina-la-ventana.webp", alt: "Sea turtle swimming over a rocky reef with fish in the background", caption: "A sea turtle swims over the La Reina reef during the La Ventana safari. Photo: Keabelmet." },
 			{ type: "h2", text: "What threatens them" },
 			{ type: "ul", items: [
 				"**Bycatch in nets:** in 2005–2006, between **1,500 and 2,950 loggerheads a year** died in two observed fishing fleets in the region [^4].",
