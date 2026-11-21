@@ -1797,7 +1797,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			alt: "Striped marlin swimming underwater in Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "An ocean where everything happens at once",
-			text: "Thousands of sardines try to stay together. Marlin tear through the bait ball at full speed. Sea lions appear from the depths to join the hunt. Flocks of birds mark where the action is. That's Bahía Magdalena. Here we don't follow an itinerary: we follow what the sea decides to show us.",
+			text: "Marlin, sea lions and thousands of sardines in open water. A safari that never repeats itself.",
 			meta: "Departure from La Paz · Transport included · November–December",
 			primaryLabel: "Book your Ocean Safari",
 			primaryWa: "Hi! I'd like to book the Ocean Safari in Bahía Magdalena",

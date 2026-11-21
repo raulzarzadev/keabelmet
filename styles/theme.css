@@ -421,11 +421,16 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .pc { position: relative; max-width: var(--maxw); margin: 28px auto 0; padding: 0 24px; }
 .pc-track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .pc-track::-webkit-scrollbar { display: none; }
-.pc-slide { flex: 0 0 min(88%, 980px); scroll-snap-align: center; margin: 0; }
+.pc-slide { flex: 0 0 min(88%, 980px); scroll-snap-align: center; scroll-snap-stop: always; margin: 0; }
 .pc-slide img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; display: block; }
 .pc-slide figcaption { color: var(--sand-dim); font-size: 14px; margin-top: 10px; text-align: center; }
-.pc-btn { position: absolute; top: calc(50% - 16px); transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); background: rgba(8,21,31,0.65); color: var(--sand); font-size: 26px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.pc-btn { position: absolute; top: calc(50% - 30px); transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); background: rgba(8,21,31,0.65); color: var(--sand); font-size: 26px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .pc-btn:hover { background: rgba(8,21,31,0.85); }
+.pc-btn:disabled { opacity: 0; pointer-events: none; }
+.pc-btn { transition: opacity .2s ease, background .2s ease; }
+.pc-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+.pc-dot { width: 8px; height: 8px; border-radius: 999px; border: 0; padding: 0; background: rgba(255,255,255,0.28); cursor: pointer; transition: width .25s ease, background .25s ease; }
+.pc-dot.on { width: 22px; background: var(--teal); }
 .pc-prev { left: 34px; }
 .pc-next { right: 34px; }
 @media (max-width: 640px) { .pc { padding: 0 16px; } .pc-slide { flex-basis: 92%; } .pc-btn { display: none; } }
