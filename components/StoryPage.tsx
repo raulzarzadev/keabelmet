@@ -5,6 +5,8 @@ import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import PhotoCarousel from "@/components/PhotoCarousel"
 import HeroVideo from "@/components/HeroVideo"
+import MeetingPointMap from "@/components/MeetingPointMap"
+import { EXPEDITION_MAP } from "@/lib/expedition-map"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
 import StickyBookBar from "@/components/StickyBookBar"
@@ -470,7 +472,10 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
           case "info":
             return (
-              <section key={i} className={sec(b.ink2, "", true)}>
+              <Fragment key={i}>
+              {/* Mapa "Dónde empieza tu aventura" justo antes de la información importante (antes de reservar) */}
+              {i === renderBlocks.findIndex((x) => x.type === "info") && slug in EXPEDITION_MAP && <MeetingPointMap slug={slug} locale={locale} tourTitle={data.breadcrumb} />}
+              <section className={sec(b.ink2, "", true)}>
                 <div className="sp-head" style={{ textAlign: "center" }}>
                   {b.kicker && <span className="kicker">{b.kicker}</span>}
                   {b.title && <h2>{b.title}</h2>}
@@ -484,6 +489,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                   ))}
                 </dl>
               </section>
+              </Fragment>
             )
 
           case "pricing":

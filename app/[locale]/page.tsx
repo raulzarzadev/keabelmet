@@ -9,6 +9,7 @@ import { getBookableActivities } from "@/lib/bookable-activities"
 import { PACKAGES } from "@/lib/packages"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
+import HomeExpeditionMap from "@/components/HomeExpeditionMap"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
@@ -254,6 +255,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ))}
         </div>
       </section>
+
+      {/* MAPA DE EXPEDICIONES */}
+      <HomeExpeditionMap locale={locale} />
 
       {/* PAQUETES */}
       <section className="packages" id="paquetes">
