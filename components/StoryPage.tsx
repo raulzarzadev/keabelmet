@@ -4,6 +4,7 @@ import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
 import PhotoCarousel from "@/components/PhotoCarousel"
+import HeroVideo from "@/components/HeroVideo"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
 import StickyBookBar from "@/components/StickyBookBar"
@@ -81,6 +82,10 @@ export interface StoryHero {
   image: string
   imageMobile?: string
   heroVideo?: string
+  /** Versión vertical del video de portada para celular (con heroVideo). */
+  heroVideoMobile?: string
+  /** Portada de mensaje corto (título grande, línea de confianza, botón con precio). Se activa sola con `slides`. */
+  cinematic?: boolean
   /** Fotos que se suceden en la portada con zoom lento (efecto de video con fotos reales). La primera es `image`. */
   slides?: { src: string; srcMobile?: string }[]
   /** Muestra el precio "desde" de la tarjeta de precios dentro del botón principal. */
@@ -198,7 +203,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
       </div>
 
       {/* HERO */}
-      <section className={`thero${h.slides?.length ? " thero-cine" : ""}`}>
+      <section className={`thero${h.slides?.length || h.cinematic ? " thero-cine" : ""}`}>
         {h.slides?.length ? (
           <div className="thero-slides" aria-hidden={false}>
             {[{ src: h.image, srcMobile: h.imageMobile }, ...h.slides].slice(0, 5).map((s, k) => (
@@ -209,6 +214,8 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
               </picture>
             ))}
           </div>
+        ) : h.heroVideo && h.heroVideoMobile ? (
+          <div className="thero-video"><HeroVideo src={h.heroVideo} srcMobile={h.heroVideoMobile} poster={h.image} posterMobile={h.imageMobile} label={h.alt} /></div>
         ) : h.heroVideo ? (
           <video src={h.heroVideo} autoPlay muted loop playsInline poster={h.image} aria-label={h.alt} />
         ) : h.imageMobile ? (
@@ -228,7 +235,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
           {h.meta && <p style={{ color: "var(--teal)", fontSize: 14, fontWeight: 600, letterSpacing: "0.02em", margin: "-8px 0 26px" }}>{h.meta}</p>}
           <div className="hero-ctas">
             <a href="#precios" className="btn btn-pop">{h.primaryLabel}{h.ctaShowPrice && heroPriceMxn ? <> · <Price amount={heroPriceMxn} /></> : null}</a>
-            {h.secondaryLabel && <a href={h.secondaryHref ?? "#itinerario"} className={h.slides?.length ? "thero-link" : "btn btn-ghost"}>{h.secondaryLabel}</a>}
+            {h.secondaryLabel && <a href={h.secondaryHref ?? "#itinerario"} className={h.slides?.length || h.cinematic ? "thero-link" : "btn btn-ghost"}>{h.secondaryLabel}</a>}
           </div>
           {h.note && <p className="thero-note">{h.note}</p>}
         </div>

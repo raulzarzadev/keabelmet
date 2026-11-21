@@ -1791,9 +1791,9 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "马格达莱纳湾探险",
 		hero: {
-			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
-			imageMobile: "/images/sardine-run/movil-marlin-rayado.jpg",
-			alt: "条纹马林鱼在马格达莱纳湾水下游动",
+			image: "/images/sardine-run/video-portada.jpg",
+			imageMobile: "/images/sardine-run/video-portada-movil.jpg",
+			alt: "海狮和马林鱼在马格达莱纳湾捕食沙丁鱼球",
 			kicker: "马格达莱纳湾 · 沙丁鱼奇观",
 			title: "与捕食沙丁鱼的马林鱼同游",
 			text: "",
@@ -1802,12 +1802,9 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			primaryWa: "你好!我想预订马格达莱纳湾海洋探险",
 			secondaryLabel: "了解这次探险将如何进行",
 			secondaryHref: "#itinerario",
-			slides: [
-				{ src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", srcMobile: "/images/sardine-run/movil-lobos-marinos-bola-de-sardinas.jpg" },
-				{ src: "/images/sardine-run/tiburon-sedoso-sardine-run.jpg", srcMobile: "/images/sardine-run/movil-tiburon-sedoso.jpg" },
-				{ src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", srcMobile: "/images/sardine-run/movil-ballena-jorobada.jpg" },
-				{ src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", srcMobile: "/images/sardine-run/movil-ballena-jorobada-desde-arriba.jpg" },
-			],
+			heroVideo: "/videos/sardine-run-bola-marlines-lobos.mp4",
+			heroVideoMobile: "/videos/sardine-run-bola-marlines-lobos-movil.mp4",
+			cinematic: true,
 			ctaShowPrice: true,
 			note: "每年只有两个月的季节。",
 		},

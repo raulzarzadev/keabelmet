@@ -791,6 +791,8 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .thero-inner h1 { font-size: clamp(30px,4.6vw,64px); max-width: 900px; line-height: 1.15; }
 .thero-inner p { max-width: 540px; color: var(--sand-dim); font-size: 17px; margin: 20px 0 30px; }
 /* Portada cinematográfica: fotos reales que se suceden con zoom lento (5 fotos × 6 s) */
+.thero-video { position: absolute; inset: 0; overflow: hidden; }
+.thero-video .hv-poster, .thero-video .hv-poster img, .thero-video .hv-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .thero-cine .thero-slides { position: absolute; inset: 0; overflow: hidden; }
 .thero-cine .ts { position: absolute; inset: 0; opacity: 0; animation: thero-fade 30s linear infinite; }
 .thero-cine .ts img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: thero-zoom 30s linear infinite; }

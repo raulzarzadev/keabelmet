@@ -1895,9 +1895,9 @@ export const storyPages: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
-			imageMobile: "/images/sardine-run/movil-marlin-rayado.jpg",
-			alt: "Marlín rayado nadando bajo el agua en Bahía Magdalena",
+			image: "/images/sardine-run/video-portada.jpg",
+			imageMobile: "/images/sardine-run/video-portada-movil.jpg",
+			alt: "Lobos marinos y marlines cazando una bola de sardinas en Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Nada junto a marlines cazando sardinas",
 			text: "",
@@ -1906,12 +1906,9 @@ export const storyPages: Record<string, StoryPageData> = {
 			primaryWa: "Hola! quiero reservar el Ocean Safari en Bahía Magdalena",
 			secondaryLabel: "Ver cómo será la expedición",
 			secondaryHref: "#itinerario",
-			slides: [
-				{ src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", srcMobile: "/images/sardine-run/movil-lobos-marinos-bola-de-sardinas.jpg" },
-				{ src: "/images/sardine-run/tiburon-sedoso-sardine-run.jpg", srcMobile: "/images/sardine-run/movil-tiburon-sedoso.jpg" },
-				{ src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", srcMobile: "/images/sardine-run/movil-ballena-jorobada.jpg" },
-				{ src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", srcMobile: "/images/sardine-run/movil-ballena-jorobada-desde-arriba.jpg" },
-			],
+			heroVideo: "/videos/sardine-run-bola-marlines-lobos.mp4",
+			heroVideoMobile: "/videos/sardine-run-bola-marlines-lobos-movil.mp4",
+			cinematic: true,
 			ctaShowPrice: true,
 			note: "Una temporada de solo dos meses al año.",
 		},
