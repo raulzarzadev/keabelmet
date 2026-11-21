@@ -3,6 +3,7 @@ import { Fragment, type ReactNode } from "react"
 import type { Locale } from "@/lib/i18n"
 import { defaultLocale } from "@/lib/i18n"
 import { Price } from "@/contexts/CurrencyContext"
+import PhotoCarousel from "@/components/PhotoCarousel"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 import PayButton from "@/components/PayButton"
 import StickyBookBar from "@/components/StickyBookBar"
@@ -99,7 +100,9 @@ export type Block =
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
   | { type: "faunaCalendar"; kicker?: string; title?: string; intro?: string; ink2?: boolean }
   | { type: "fauna"; kicker?: string; title?: string; note?: string; ink2?: boolean; tiers: { label: string; warn?: boolean; species: string[] }[] }
-  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom" }
+  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom"; /** Texto más chico para que se vea la foto. */ size?: "sm" }
+  /** Galería deslizable de fotos a lo ancho; el texto va arriba, fuera de las fotos. */
+  | { type: "carousel"; ink2?: boolean; kicker?: string; quote?: string; items: { src: string; alt: string; caption?: string }[] }
   | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
   | { type: "video"; ink2?: boolean; kicker?: string; title?: string; media: Media }
   | { type: "gallery"; ink2?: boolean; kicker?: string; title?: string; cols?: 3 | 4; items: Media[] }
@@ -134,7 +137,7 @@ export type Block =
   | { type: "policies"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; paragraphs: string[] }[] }
   | { type: "faq"; kicker?: string; title?: string; ink2?: boolean; items: { q: string; a: string[] }[] }
   | { type: "closing"; ink2?: boolean; heading: string; paragraphs: (string | { accent: string })[] }
-  | { type: "finalCta"; image: string; alt: string; title: string; text: string; primaryLabel: string; primaryWa: string; secondaryLabel?: string; secondaryHref?: string }
+  | { type: "finalCta"; image: string; alt: string; title: string; text: string; primaryLabel: string; primaryWa: string; secondaryLabel?: string; secondaryHref?: string; /** Texto más chico y abajo, para que se vea la foto. */ compact?: boolean }
 
 export interface StoryPageData {
   breadcrumb: string
@@ -540,7 +543,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
           case "finalCta":
             return (
-              <section key={i} className="final-cta">
+              <section key={i} className={`final-cta${b.compact ? " final-compact" : ""}`}>
                 <img src={b.image} alt={b.alt} loading="lazy" decoding="async" />
                 <div className="final-cta-inner">
                   <h2>{b.title}</h2>
@@ -555,7 +558,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
           case "mediaBanner":
             return (
-              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}${b.align === "bottom" ? " mb-bottom" : ""}`}>
+              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}${b.align === "bottom" ? " mb-bottom" : ""}${b.size === "sm" ? " mb-sm" : ""}`}>
                 <MediaSlot media={b.media} />
                 {(b.quote || b.sub) && (
                   <div className="mb-inner">
@@ -563,6 +566,19 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                     {b.sub && <p className="mb-sub">{b.sub}</p>}
                   </div>
                 )}
+              </section>
+            )
+
+          case "carousel":
+            return (
+              <section key={i} className={sec(b.ink2)}>
+                {(b.kicker || b.quote) && (
+                  <div className="sp-head pc-head">
+                    {b.kicker && <span className="kicker">{b.kicker}</span>}
+                    {b.quote && <p className="pc-quote">{b.quote}</p>}
+                  </div>
+                )}
+                <PhotoCarousel items={b.items} />
               </section>
             )
 
