@@ -1805,6 +1805,8 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			secondaryHref: "#itinerario",
 			heroVideo: "/videos/sardine-run-bola-marlines-lobos.mp4",
 			heroVideoMobile: "/videos/sardine-run-bola-marlines-lobos-movil.mp4",
+			heroVideoUploaded: "2026-11-20T12:00:00-07:00",
+			heroVideoDuration: "PT22S",
 			cinematic: true,
 			ctaShowPrice: true,
 			note: "A season that lasts only two months a year.",

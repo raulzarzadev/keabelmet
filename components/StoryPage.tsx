@@ -84,6 +84,9 @@ export interface StoryHero {
   heroVideo?: string
   /** Versión vertical del video de portada para celular (con heroVideo). */
   heroVideoMobile?: string
+  /** Para la ficha de video en Google (VideoObject): fecha ISO de publicación y duración ISO 8601 (p. ej. PT22S). */
+  heroVideoUploaded?: string
+  heroVideoDuration?: string
   /** Portada de mensaje corto (título grande, línea de confianza, botón con precio). Se activa sola con `slides`. */
   cinematic?: boolean
   /** Fotos que se suceden en la portada con zoom lento (efecto de video con fotos reales). La primera es `image`. */

@@ -1804,6 +1804,8 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			secondaryHref: "#itinerario",
 			heroVideo: "/videos/sardine-run-bola-marlines-lobos.mp4",
 			heroVideoMobile: "/videos/sardine-run-bola-marlines-lobos-movil.mp4",
+			heroVideoUploaded: "2026-11-20T12:00:00-07:00",
+			heroVideoDuration: "PT22S",
 			cinematic: true,
 			ctaShowPrice: true,
 			note: "每年只有两个月的季节。",
