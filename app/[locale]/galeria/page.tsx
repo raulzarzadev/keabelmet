@@ -20,7 +20,7 @@ export default async function Galeria({ params }: { params: Promise<{ locale: st
   const imageUrls = [
     "/sea-lions-swimming-underwater.jpg",
     "/whale-breaching-ocean.jpg",
-    "/striped-marlin-underwater.jpg",
+    "/images/sardine-run/marlin-rayado-mar-abierto.jpg",
     "/manta-ray-swimming.png",
     "/kayaking-tropical-beach.jpg",
     "/snorkeling-coral-reef.jpg",

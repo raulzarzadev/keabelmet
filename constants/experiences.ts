@@ -63,7 +63,7 @@ export const experiences: Experience[] = [
 		slug: "safari-bahia-magdalena",
 		href: "/experiencias/safari-bahia-magdalena",
 		category: "safari",
-		image: "/images/marlin-bahia-magdalena-hero.jpeg",
+		image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 		rating: 5.0,
 		reviews: 187,
 		fromMxn: 4500,

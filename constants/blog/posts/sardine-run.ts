@@ -4,7 +4,7 @@ export const sardineRun: BlogPost = {
 	id: "sardine-run",
 	category: "fauna",
 	date: "2026-10-29",
-	cover: "/images/marlin-bahia-magdalena-hero.jpeg",
+	cover: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["sardine-run-por-que", "marlin-caza", "animales-sardine-run", "super-nino-2026"],
 	sources: [
@@ -20,7 +20,7 @@ export const sardineRun: BlogPost = {
 		metaTitle: "Sardine Run en Bahía Magdalena: qué es, cuándo ir y qué verás",
 		description: "El Sardine Run de Bahía Magdalena es una de las escenas de caza más intensas del Pacífico mexicano: marlines rayados, lobos marinos y aves atacan bolas de sardinas. Te explicamos la ciencia detrás.",
 		excerpt: "Una bola de miles de sardinas, marlines rayados atravesándola a toda velocidad y aves lanzándose en picada. Esto es lo que hay detrás del espectáculo, según la ciencia.",
-		coverAlt: "Marlín rayado cazando dentro de una bola de sardinas en Bahía Magdalena",
+		coverAlt: "Marlín rayado nadando bajo el agua en Bahía Magdalena",
 		answer: "El Sardine Run es el momento en que grandes bancos de sardina del Pacífico se concentran en Bahía Magdalena y atraen a depredadores como el **marlín rayado**, lobos marinos, delfines y aves. La sardina tiene en esta región un ciclo reproductivo de **diciembre a julio, con su máximo en enero y febrero** [^1], y es una de las presas principales del marlín rayado [^4]. Keabelmet opera este safari en **noviembre y diciembre**.",
 		blocks: [
 			{ type: "p", text: "Imagina una nube plateada de miles de sardinas girando como un solo animal. De pronto, una sombra azul con rayas eléctricas la atraviesa a toda velocidad. Luego otra. Arriba, las aves se lanzan en picada. Eso es el Sardine Run, y es uno de los espectáculos más salvajes que puedes ver con snorkel." },
@@ -53,7 +53,7 @@ export const sardineRun: BlogPost = {
 		metaTitle: "Magdalena Bay Sardine Run: what it is, when to go, what you'll see",
 		description: "The Magdalena Bay Sardine Run is one of the most intense hunting scenes in the Mexican Pacific: striped marlin, sea lions and birds attacking sardine bait balls. Here's the science behind it.",
 		excerpt: "A ball of thousands of sardines, striped marlin slicing through it at full speed and birds diving from above. Here's what's behind the show, according to science.",
-		coverAlt: "Striped marlin hunting inside a sardine bait ball in Magdalena Bay",
+		coverAlt: "Striped marlin swimming underwater in Magdalena Bay",
 		answer: "The Sardine Run is when large schools of Pacific sardine concentrate in Magdalena Bay and attract predators like **striped marlin**, sea lions, dolphins and birds. In this region the sardine's reproductive cycle runs **December to July, peaking in January and February** [^1], and sardine is one of the striped marlin's main prey [^4]. Keabelmet runs this safari in **November and December**.",
 		blocks: [
 			{ type: "p", text: "Picture a silver cloud of thousands of sardines turning like a single animal. Suddenly a blue shadow with electric stripes cuts through it at full speed. Then another. Above, birds dive-bomb the water. That's the Sardine Run, and it's one of the wildest shows you can see with a snorkel." },

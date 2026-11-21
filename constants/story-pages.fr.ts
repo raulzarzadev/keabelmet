@@ -1792,8 +1792,9 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin rayé chassant dans un banc de sardines à Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			alt: "Marlin rayé nageant sous l'eau à Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océan où tout se passe en même temps",
 			text: "Des milliers de sardines essaient de rester unies. Les marlins traversent le banc de proies à toute vitesse. Des otaries apparaissent des profondeurs pour se joindre à la chasse. Des volées d'oiseaux survolent la surface en indiquant où se passe l'action. C'est ça, Bahía Magdalena. Ici, nous ne suivons pas un itinéraire : nous suivons ce que la mer décide de nous montrer.",
@@ -1847,7 +1848,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"Après avoir préparé l'équipement et rencontré le capitaine, nous embarquons. À partir de ce moment, nous cessons de suivre un horaire et commençons à suivre les signes de l'océan : oiseaux qui se nourrissent, changements de couleur de l'eau, mouvement en surface.",
 							"De petits détails qui annoncent souvent que quelque chose d'extraordinaire se produit quelques centaines de mètres plus loin.",
 						],
-						media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Banc de sardines formant une boule d'appât" },
+						media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Banc de sardines formant une boule d'appât" },
 					},
 					{
 						title: "Nous entrons dans l'eau",
@@ -1865,17 +1866,18 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				title: "Chaque jour à Bahía Magdalena est différent",
 				intro: "Nous ne promettons aucune espèce en particulier, car nous pensons que la nature est bien plus passionnante quand elle reste complètement libre. Voici ce que l'océan met souvent en scène.",
 				items: [
-					{ title: "Bancs de sardines", text: "Des milliers de sardines se rassemblent et tournoient comme un seul organisme pour se défendre. Elles sont le cœur du spectacle : là où il y a des proies, tout le reste apparaît.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Banc de sardines tournoyant à Bahía Magdalena" } },
+					{ title: "Bancs de sardines", text: "Des milliers de sardines se rassemblent et tournoient comme un seul organisme pour se défendre. Elles sont le cœur du spectacle : là où il y a des proies, tout le reste apparaît.", media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Banc de sardines tournoyant à Bahía Magdalena" } },
 					{ title: "Marlins rayés", text: "Les stars les plus rapides. Ils traversent le banc de sardines à toute vitesse, allument leurs couleurs et coordonnent des attaques qui ne durent que quelques secondes.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Marlin rayé chassant dans un banc de sardines" } },
 					{ title: "Baleines de Bryde", text: "Parfois, le géant de la scène. Elles émergent parmi les bancs pour se nourrir en surface, à quelques mètres du bateau.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Baleine de Bryde se nourrissant parmi les sardines" } },
 					{ title: "Otaries", text: "Elles profitent du chaos pour chasser. Agiles et curieuses, elles entrent et sortent du banc de proies avec une adresse hypnotisante.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Otarie chassant pendant le Sardine Run" } },
+					{ title: "Requins soyeux", text: "Ils s'approchent parfois de l'action. On les observe calmement, à distance et toujours en suivant les consignes du guide.", media: { src: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg", alt: "Apnéiste observant un requin soyeux en pleine mer pendant le Sardine Run" } },
 					{ title: "Dauphins", text: "Quand un groupe décide de se joindre à la chasse, la coordination se multiplie. Ils poussent les sardines vers la surface et orchestrent tout le spectacle.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Dauphins coopérant pendant la chasse" } },
 					{ title: "Oiseaux marins", text: "Pélicans, mouettes et frégates sont le premier indice. Quand ils plongent, nous savons que l'action se déroule juste en dessous.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Oiseaux marins signalant l'activité à Bahía Magdalena" } },
 				],
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Baleine de Bryde se nourrissant parmi des bancs de poissons" },
+				media: { src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", alt: "Baleine à bosse nageant sous l'eau pendant le Sardine Run" },
 				quote: "Le Sardine Run dure à peine quelques minutes. Parfois, quelques secondes. Mais vous comprenez que vous assistez à quelque chose qui se produit exactement comme la nature le fait depuis des milliers d'années.",
 			},
 			{
@@ -1991,14 +1993,14 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/striped-marlin-underwater.jpg", alt: "Marlin rayé traversant un banc de poissons à Bahía Magdalena" },
+				media: { src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Marlin rayé nageant en pleine mer à Bahía Magdalena" },
 				quote: "L'océan ne répète jamais la même histoire deux fois. Et c'est précisément pour cela que nous continuons à y revenir.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/images/marlin-bahia-magdalena-hero.jpeg",
-				alt: "Marlin chassant à Bahía Magdalena",
+				image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+				alt: "Marlin rayé à Bahía Magdalena",
 				title: "Vous vous souviendrez peut-être d'un marlin traversant le banc de sardines. Ou de l'instant où vous avez compris que l'océan ne répète jamais la même histoire.",
 				text: "Nous réalisons le safari uniquement pendant la meilleure saison, en novembre et décembre. Dites-nous vos dates et nous vous aiderons à réserver votre Ocean Safari à Bahía Magdalena.",
 				primaryLabel: "Vérifier les disponibilités",

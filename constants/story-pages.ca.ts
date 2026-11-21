@@ -1792,8 +1792,9 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlí ratllat caçant en una bola de sardines a Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			alt: "Marlí ratllat nedant sota l'aigua a Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un oceà on tot passa alhora",
 			text: "Milers de sardines intenten mantenir-se unides. Els marlins travessen la bola d'esquer a tota velocitat. Lleons marins apareixen des de les profunditats per unir-se a la cacera. Estols d'ocells assenyalen on és l'acció. Això és Bahía Magdalena. Aquí no seguim un itinerari: seguim el que el mar decideix mostrar-nos.",
@@ -1847,7 +1848,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"Després de preparar l'equip i conèixer el capità, pugem a l'embarcació. A partir d'aquell moment deixem de seguir un horari i comencem a seguir els senyals de l'oceà: ocells alimentant-se, canvis de color a l'aigua, moviment a la superfície.",
 							"Petits detalls que moltes vegades anuncien que alguna cosa extraordinària està passant uns quants centenars de metres més endavant.",
 						],
-						media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Banc de sardines formant una bola d'esquer" },
+						media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Banc de sardines formant una bola d'esquer" },
 					},
 					{
 						title: "Entrem a l'aigua",
@@ -1865,17 +1866,18 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				title: "Cada dia a Bahía Magdalena és diferent",
 				intro: "No prometem cap espècie en particular, perquè creiem que la natura és molt més emocionant quan continua sent completament lliure. Això és el que l'oceà sol posar en escena.",
 				items: [
-					{ title: "Boles de sardines", text: "Milers de sardines s'agrupen i giren com un sol organisme per defensar-se. Són el cor de l'espectacle: on hi ha esquer, apareix tota la resta.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Bola de sardines girant a Bahía Magdalena" } },
+					{ title: "Boles de sardines", text: "Milers de sardines s'agrupen i giren com un sol organisme per defensar-se. Són el cor de l'espectacle: on hi ha esquer, apareix tota la resta.", media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Bola de sardines girant a Bahía Magdalena" } },
 					{ title: "Marlins ratllats", text: "Els protagonistes més veloços. Travessen la bola de sardines a gran velocitat, encenen els seus colors i coordinen atacs que duren tot just segons.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Marlí ratllat caçant en una bola de sardines" } },
 					{ title: "Balenes de Bryde", text: "De vegades, el gegant de l'escena. Emergeixen entre els bancs per alimentar-se a la superfície, a pocs metres de l'embarcació.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Balena de Bryde alimentant-se entre sardines" } },
 					{ title: "Lleons marins", text: "Aprofiten el caos per caçar. Àgils i curiosos, entren i surten de la bola d'esquer amb una destresa que hipnotitza.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Lleó marí caçant al Sardine Run" } },
+					{ title: "Taurons sedosos", text: "De vegades s'acosten a l'acció. Els observem amb calma, a distància i seguint sempre les indicacions del guia.", media: { src: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg", alt: "Apneista observant un tauró sedós en mar obert durant el Sardine Run" } },
 					{ title: "Dofins", text: "Quan un grup decideix unir-se a la cacera, la coordinació es multiplica. Empenyen les sardines cap a la superfície i ordenen l'espectacle.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Dofins cooperant durant la cacera" } },
 					{ title: "Ocells marins", text: "Pelicans, gavines i fragates són la primera pista. Quan es llancen en picat, sabem que l'acció està passant just a sota.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Ocells marins assenyalant l'activitat a Bahía Magdalena" } },
 				],
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Balena de Bryde alimentant-se entre bancs" },
+				media: { src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", alt: "Balena geperuda nedant sota l'aigua durant el Sardine Run" },
 				quote: "El Sardine Run dura tot just uns minuts. De vegades, segons. Però entens que presencies una cosa que passa com la natura ho ha fet durant milers d'anys.",
 			},
 			{
@@ -1991,14 +1993,14 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/striped-marlin-underwater.jpg", alt: "Marlí ratllat travessant un banc a Bahía Magdalena" },
+				media: { src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Marlí ratllat nedant en mar obert a Bahía Magdalena" },
 				quote: "L'oceà mai repeteix la mateixa història dues vegades. I aquesta és exactament la raó per la qual continuem tornant.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/images/marlin-bahia-magdalena-hero.jpeg",
-				alt: "Marlí caçant a Bahía Magdalena",
+				image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+				alt: "Marlí ratllat a Bahía Magdalena",
 				title: "Potser recordes un marlí creuant la bola de sardines. O l'instant en què vas comprendre que l'oceà mai repeteix la mateixa història.",
 				text: "Fem el safari només durant la millor temporada, al novembre i desembre. Explica'ns les teves dates i t'ajudem a reservar el teu Ocean Safari a Bahía Magdalena.",
 				primaryLabel: "Consultar disponibilitat",

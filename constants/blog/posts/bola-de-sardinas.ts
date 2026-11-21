@@ -5,7 +5,7 @@ export const bolaDeSardinas: BlogPost = {
 	id: "bola-de-sardinas",
 	category: "fauna",
 	date: "2026-10-29",
-	cover: "/striped-marlin-underwater.jpg",
+	cover: "/images/sardine-run/marlin-rayado-mar-abierto.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["marlin-caza", "sardina-del-pacifico", "aves-sardine-run", "sardine-run-por-que"],
 	sources: fuentes(S.hamilton1971, S.larsson2012, S.bartashevich2024, S.cooper2026, S.thiebault2015, S.pacher2024, S.herbertread2016),
@@ -15,7 +15,7 @@ export const bolaDeSardinas: BlogPost = {
 		metaTitle: "¿Por qué las sardinas forman bolas? El efecto fuente explicado",
 		description: "Las sardinas se juntan en bolas para protegerse: confunden al depredador y cada una intenta quedar al centro. Te explicamos el efecto fuente con animación y estudios reales.",
 		excerpt: "Una bola de sardinas parece un solo animal gigante. En realidad es miles de peces siguiendo reglas simples para no ser el siguiente. Así funciona.",
-		coverAlt: "Marlín rayado bajo el agua junto a un cardumen",
+		coverAlt: "Marlín rayado nadando en mar abierto en Bahía Magdalena",
 		answer: "Las sardinas se agrupan porque estar juntas reduce el riesgo de cada una: cada pez intenta poner a otros entre él y el depredador [^1], y miles de peces moviéndose en sincronía confunden los sentidos del cazador [^2]. Cuando un marlín ataca, el cardumen suele abrirse en dos alrededor de él y volver a unirse detrás, el llamado **efecto fuente** [^3]. Pero no es una defensa perfecta: los depredadores han evolucionado formas de romper y aprovechar los cardúmenes [^4].",
 		blocks: [
 			{ type: "p", text: "Desde la superficie, una bola de sardinas parece un animal plateado que respira, se estira y gira. Pero no hay líder ni plan: cada sardina sigue reglas muy simples, y del conjunto surge una de las defensas más fascinantes del océano." },
@@ -52,7 +52,7 @@ export const bolaDeSardinas: BlogPost = {
 		metaTitle: "Why do sardines form bait balls? The fountain effect explained",
 		description: "Sardines bunch into balls to protect themselves: they confuse predators and each fish tries to reach the center. The fountain effect explained with animation and studies.",
 		excerpt: "A sardine ball looks like one giant animal. It's really thousands of fish following simple rules so they're not next. Here's how it works.",
-		coverAlt: "Striped marlin underwater next to a school of fish",
+		coverAlt: "Striped marlin swimming in open water in Magdalena Bay",
 		answer: "Sardines group together because being close cuts each fish's risk: every fish tries to put others between itself and the predator [^1], and thousands of fish moving in sync confuse the hunter's senses [^2]. When a marlin attacks, the school often splits in two around it and rejoins behind it, the so-called **fountain effect** [^3]. But it's not a perfect defense: predators have evolved ways to break up and exploit schools [^4].",
 		blocks: [
 			{ type: "p", text: "From the surface, a sardine ball looks like a silver animal that breathes, stretches and turns. But there's no leader and no plan: each sardine follows very simple rules, and one of the ocean's most fascinating defenses emerges from the whole." },

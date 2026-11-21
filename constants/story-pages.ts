@@ -1895,8 +1895,9 @@ export const storyPages: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlín rayado cazando en una bola de sardinas en Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			alt: "Marlín rayado nadando bajo el agua en Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océano donde todo ocurre al mismo tiempo",
 			text: "Miles de sardinas intentan mantenerse unidas. Los marlines atraviesan la bola de carnada a toda velocidad. Lobos marinos aparecen desde las profundidades para unirse a la cacería. Bandadas de aves señalan dónde está la acción. Eso es Bahía Magdalena. Aquí no seguimos un itinerario: seguimos lo que el mar decide mostrarnos.",
@@ -1950,7 +1951,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Después de preparar el equipo y conocer al capitán, abordamos la embarcación. A partir de ese momento dejamos de seguir un horario y comenzamos a seguir las señales del océano: aves alimentándose, cambios de color en el agua, movimiento en la superficie.",
 							"Pequeños detalles que muchas veces anuncian que algo extraordinario está ocurriendo unos cientos de metros más adelante.",
 						],
-						media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Banco de sardinas formando una bola de carnada" },
+						media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Banco de sardinas formando una bola de carnada" },
 					},
 					{
 						title: "Entramos al agua",
@@ -1968,17 +1969,18 @@ export const storyPages: Record<string, StoryPageData> = {
 				title: "Cada día en Bahía Magdalena es diferente",
 				intro: "No prometemos ninguna especie en particular, porque creemos que la naturaleza es mucho más emocionante cuando sigue siendo completamente libre. Esto es lo que el océano suele poner en escena.",
 				items: [
-					{ title: "Bolas de sardinas", text: "Miles de sardinas se agrupan y giran como un solo organismo para defenderse. Son el corazón del espectáculo: donde hay carnada, aparece todo lo demás.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Bola de sardinas girando en Bahía Magdalena" } },
+					{ title: "Bolas de sardinas", text: "Miles de sardinas se agrupan y giran como un solo organismo para defenderse. Son el corazón del espectáculo: donde hay carnada, aparece todo lo demás.", media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Bola de sardinas girando en Bahía Magdalena" } },
 					{ title: "Marlines rayados", text: "Los protagonistas más veloces. Atraviesan la bola de sardinas a gran velocidad, encienden sus colores y coordinan ataques que duran apenas segundos.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Marlín rayado cazando en una bola de sardinas" } },
 					{ title: "Ballenas de Bryde", text: "A veces, el gigante de la escena. Emergen entre los cardúmenes para alimentarse en la superficie, a pocos metros de la embarcación.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Ballena de Bryde alimentándose entre sardinas" } },
 					{ title: "Lobos marinos", text: "Aprovechan el caos para cazar. Ágiles y curiosos, entran y salen de la bola de carnada con una destreza que hipnotiza.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino cazando en el Sardine Run" } },
+					{ title: "Tiburones sedosos", text: "A veces se acercan a la acción. Se observan con calma, a distancia y siguiendo siempre las indicaciones del guía.", media: { src: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg", alt: "Apneísta observando a un tiburón sedoso en mar abierto durante el Sardine Run" } },
 					{ title: "Delfines", text: "Cuando un grupo decide unirse a la cacería, la coordinación se multiplica. Empujan a las sardinas hacia la superficie y ordenan el espectáculo.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Delfines cooperando durante la cacería" } },
 					{ title: "Aves marinas", text: "Pelícanos, gaviotas y fragatas son la primera pista. Cuando se lanzan en picada, sabemos que la acción está ocurriendo justo debajo.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Aves marinas señalando la actividad en Bahía Magdalena" } },
 				],
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Ballena de Bryde alimentándose entre cardúmenes" },
+				media: { src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", alt: "Ballena jorobada nadando bajo el agua durante el Sardine Run" },
 				quote: "El Sardine Run dura apenas unos minutos. A veces, segundos. Pero entiendes que presencias algo que sucede como la naturaleza lo ha hecho durante miles de años.",
 			},
 			{
@@ -2094,14 +2096,14 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/striped-marlin-underwater.jpg", alt: "Marlín rayado atravesando un cardumen en Bahía Magdalena" },
+				media: { src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Marlín rayado nadando en mar abierto en Bahía Magdalena" },
 				quote: "El océano nunca repite la misma historia dos veces. Y esa es exactamente la razón por la que seguimos regresando.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/images/marlin-bahia-magdalena-hero.jpeg",
-				alt: "Marlín cazando en Bahía Magdalena",
+				image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+				alt: "Marlín rayado en Bahía Magdalena",
 				title: "Puede que recuerdes un marlín cruzando la bola de sardinas. O el instante en que comprendiste que el océano nunca repite la misma historia.",
 				text: "Realizamos el safari solo durante la mejor temporada, en noviembre y diciembre. Cuéntanos tus fechas y te ayudamos a reservar tu Ocean Safari en Bahía Magdalena.",
 				primaryLabel: "Consultar disponibilidad",

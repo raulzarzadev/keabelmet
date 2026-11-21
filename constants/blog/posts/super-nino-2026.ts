@@ -6,7 +6,7 @@ export const superNino2026: BlogPost = {
 	id: "super-nino-2026",
 	category: "conservacion",
 	date: "2026-10-29",
-	cover: "/images/marlin-bahia-magdalena-hero.jpeg",
+	cover: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["el-nino-fauna", "la-mancha", "sardine-run-por-que", "magdalena-mes-a-mes"],
 	sources: fuentes(S.cpcOct2026, S.oni, S.oisst, S.datosSurgencia, S.meganoticias2026, S.torres1995, S.palomares2003, S.ortega2018, S.salvadeo2011, S.hansen2022, S.jacox2016, S.elorriaga2016),
@@ -16,7 +16,7 @@ export const superNino2026: BlogPost = {
 		metaTitle: "Súper El Niño 2026 y el Sardine Run: lo que dicen los datos",
 		description: "NOAA da 83% de probabilidad de un El Niño histórico a finales de 2026. Frente a Bahía Magdalena el mar ya está 3.5 °C más caliente. Qué dice la ciencia sobre las sardinas.",
 		excerpt: "El Pacífico se está calentando como pocas veces desde 1950, y el mar frente a Bahía Magdalena ya lo resiente. Te explicamos con datos qué está pasando y qué podría cambiar.",
-		coverAlt: "Marlín rayado cazando en el Pacífico de Bahía Magdalena",
+		coverAlt: "Marlín rayado en el Pacífico de Bahía Magdalena",
 		answer: "En octubre de 2026, NOAA reportó que El Niño sigue fortaleciéndose y dio un **83% de probabilidad** de que entre octubre y diciembre supere a todos los eventos desde 1950 [^1]. Frente a Bahía Magdalena, el mar estuvo en agosto y septiembre **unos 3.5 °C más caliente que lo normal** [^3]. En El Niño de 1982–83 no se registró reproducción de sardina en la zona [^6] y en 1997–98 sus larvas bajaron 50% [^7], así que el Sardine Run de 2026 podría ser distinto. Nadie puede predecirlo con certeza.",
 		blocks: [
 			{ type: "p", text: "Si sigues las noticias del clima, ya escuchaste hablar del \"súper El Niño\". No es exageración: el Pacífico ecuatorial se está calentando como pocas veces en la historia registrada. Te explicamos con datos oficiales qué está pasando, cómo se siente ya frente a Baja California Sur y qué podría significar para el Sardine Run." },
@@ -69,7 +69,7 @@ export const superNino2026: BlogPost = {
 		metaTitle: "Super El Niño 2026 and the Sardine Run: what the data say",
 		description: "NOAA gives an 83% chance of a historic El Niño in late 2026. Off Magdalena Bay the sea is already 3.5 °C warmer than normal. What science says about the sardines.",
 		excerpt: "The Pacific is warming like few times since 1950, and the sea off Magdalena Bay is already feeling it. We explain with data what's happening and what could change.",
-		coverAlt: "Striped marlin hunting in the Pacific off Magdalena Bay",
+		coverAlt: "Striped marlin in the Pacific off Magdalena Bay",
 		answer: "In October 2026, NOAA reported that El Niño keeps strengthening and gave an **83% chance** that between October and December it will exceed every event since 1950 [^1]. Off Magdalena Bay, the sea in August and September was **about 3.5 °C warmer than normal** [^3]. During the 1982–83 El Niño no sardine spawning was recorded in the area [^6] and in 1997–98 sardine larvae fell 50% [^7], so the 2026 Sardine Run could be different. Nobody can predict it with certainty.",
 		blocks: [
 			{ type: "p", text: "If you follow weather news, you've heard about the \"super El Niño\". It's no exaggeration: the equatorial Pacific is warming like few times in recorded history. Using official data, we explain what's happening, how it already feels off Baja California Sur and what it could mean for the Sardine Run." },

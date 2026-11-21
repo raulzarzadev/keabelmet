@@ -80,7 +80,7 @@ export const TOURS: FinderTour[] = [
 	{
 		id: "safari-bahia-magdalena",
 		href: "/experiencias/safari-bahia-magdalena",
-		image: "/images/marlin-bahia-magdalena-hero.jpeg",
+		image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 		modes: { snorkel: { mxn: 4500 } },
 		months: [11, 12],
 		time: "full",

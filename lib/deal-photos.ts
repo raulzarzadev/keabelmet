@@ -14,7 +14,7 @@ export const MAX_DEAL_PHOTOS = 6
 
 export const DEAL_PHOTOS: DealPhoto[] = [
 	{ key: "tiburon", src: "/tiburon-ballena-drone.jpg", label: "Tiburón ballena" },
-	{ key: "sardine", src: "/images/marlin-bahia-magdalena-hero.jpeg", label: "Sardine run · marlin" },
+	{ key: "sardine", src: "/images/sardine-run/marlin-rayado-sardine-run.jpg", label: "Sardine run · marlin" },
 	{ key: "sardine-lancha", src: "/sardine-run-lancha-snorkel.jpg", label: "Sardine run · lancha" },
 	{ key: "orca", src: "/images/orca-la-ventana-hero.jpeg", label: "Ocean Safari La Ventana" },
 	{ key: "delfines", src: "/images/especies/delfinsaltando.jpeg", label: "Delfines" },

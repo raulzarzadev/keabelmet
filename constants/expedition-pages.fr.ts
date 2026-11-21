@@ -195,8 +195,8 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin chassant des sardines à Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Marlin rayé nageant sous l'eau à Bahía Magdalena",
 			kicker: "Bahía Magdalena · Nov-Déc",
 			title: "Le safari le plus sauvage du Pacifique",
 			text: "Des milliers de sardines, des marlins qui chassent à pleine vitesse, des baleines qui se nourrissent. Un phénomène qui ne dure que deux mois par an — et vous pouvez le vivre de l'intérieur.",
@@ -240,7 +240,7 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 			title: "Les vedettes du sardine run",
 			items: [
 				{ image: "/images/especies/sardinas-banco.jpeg", alt: "Banc de sardines", label: "Sardines · Nov-Déc" },
-				{ image: "/striped-marlin-underwater.jpg", alt: "Marlin rayé", label: "Marlin rayé · Nov-Déc" },
+				{ image: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Marlin rayé", label: "Marlin rayé · Nov-Déc" },
 				{ image: "/images/especies/dorado.jpeg", alt: "Dorade", label: "Dorade · Nov-Déc" },
 				{ image: "/images/especies/lobomarinonadando.jpeg", alt: "Otarie", label: "Otaries · Toute l'année" },
 				{ image: "/images/especies/ballenasaltando2.jpeg", alt: "Baleine", label: "Baleines · Nov-Déc" },
@@ -292,8 +292,8 @@ export const expeditionPagesFr: Record<string, ExpeditionPageData> = {
 			note: "Un phénomène saisonnier : novembre et décembre seulement. Places très limitées par départ — réservez tôt.",
 		},
 		finalCta: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin chassant à Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Marlin rayé à Bahía Magdalena",
 			title: "Cela n'arrive que deux mois par an",
 			text: "Le safari le plus sauvage du Pacifique vous attend à Bahía Magdalena. Places limitées par saison.",
 			waText: "Je veux réserver le Safari Bahía Magdalena",

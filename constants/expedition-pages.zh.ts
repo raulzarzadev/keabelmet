@@ -195,8 +195,8 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "马格达莱纳湾探险",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "在马格达莱纳湾捕猎沙丁鱼的马林鱼",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "在马格达莱纳湾水下游动的条纹马林鱼",
 			kicker: "马格达莱纳湾 · 11-12月",
 			title: "太平洋最狂野的探险",
 			text: "成千上万的沙丁鱼、全速捕猎的马林鱼、觅食的鲸鱼。一年仅两个月的自然奇观——而你可以身临其境。",
@@ -240,7 +240,7 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 			title: "沙丁鱼洄游的主角",
 			items: [
 				{ image: "/images/especies/sardinas-banco.jpeg", alt: "沙丁鱼球", label: "沙丁鱼 · 11-12月" },
-				{ image: "/striped-marlin-underwater.jpg", alt: "条纹马林鱼", label: "条纹马林鱼 · 11-12月" },
+				{ image: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "条纹马林鱼", label: "条纹马林鱼 · 11-12月" },
 				{ image: "/images/especies/dorado.jpeg", alt: "鲯鳅", label: "鲯鳅 · 11-12月" },
 				{ image: "/images/especies/lobomarinonadando.jpeg", alt: "海狮", label: "海狮 · 全年" },
 				{ image: "/images/especies/ballenasaltando2.jpeg", alt: "鲸鱼", label: "鲸鱼 · 11-12月" },
@@ -292,8 +292,8 @@ export const expeditionPagesZh: Record<string, ExpeditionPageData> = {
 			note: "季节性奇观：仅限11月和12月。每次出海名额非常有限——请尽早预订。",
 		},
 		finalCta: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "在马格达莱纳湾捕猎的马林鱼",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "马格达莱纳湾的条纹马林鱼",
 			title: "一年仅两个月",
 			text: "太平洋最狂野的探险在马格达莱纳湾等你。每季名额有限。",
 			waText: "我想预订马格达莱纳湾探险",

@@ -1791,8 +1791,9 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "马格达莱纳湾探险",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "条纹马林鱼在马格达莱纳湾追捕沙丁鱼群",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			alt: "条纹马林鱼在马格达莱纳湾水下游动",
 			kicker: "马格达莱纳湾 · 沙丁鱼奇观",
 			title: "一片一切同时发生的海洋",
 			text: "成千上万条沙丁鱼努力保持聚集。马林鱼以极快的速度穿过鱼群。海狮从深处涌现,加入这场狩猎。成群的鸟儿在水面上盘旋,标示着行动发生的地点。这就是马格达莱纳湾。在这里,我们不遵循行程安排,而是跟随大海决定向我们展示的一切。",
@@ -1846,7 +1847,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"在准备好装备并认识船长后,我们登船。从那一刻起,我们不再遵循时间表,而是开始跟随大海的信号:觅食的鸟儿、水色的变化、水面的动向。",
 							"这些小细节常常预示着几百米外正发生着不寻常的事情。",
 						],
-						media: { src: "/images/especies/sardinas-banco.jpeg", alt: "沙丁鱼群形成的诱饵球" },
+						media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "沙丁鱼群形成的诱饵球" },
 					},
 					{
 						title: "我们下水",
@@ -1864,17 +1865,18 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				title: "马格达莱纳湾的每一天都不同",
 				intro: "我们不承诺任何特定物种,因为我们相信,当大自然保持完全自由时,它才最令人兴奋。以下是海洋通常会为你上演的角色。",
 				items: [
-					{ title: "沙丁鱼群", text: "成千上万条沙丁鱼聚集起来,像一个整体一样旋转以自卫。它们是这场奇观的核心:哪里有猎物,其他一切就会出现。", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "马格达莱纳湾旋转的沙丁鱼群" } },
+					{ title: "沙丁鱼群", text: "成千上万条沙丁鱼聚集起来,像一个整体一样旋转以自卫。它们是这场奇观的核心:哪里有猎物,其他一切就会出现。", media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "马格达莱纳湾旋转的沙丁鱼群" } },
 					{ title: "条纹马林鱼", text: "最迅捷的主角。它们全速穿过沙丁鱼群,点亮身上的色彩,协同发起仅持续几秒的攻击。", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "条纹马林鱼在沙丁鱼群中捕猎" } },
 					{ title: "布氏鲸", text: "有时是场上的巨兽。它们从鱼群中浮出水面,在离船仅几米处进食。", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "布氏鲸在沙丁鱼群中觅食" } },
 					{ title: "海狮", text: "它们利用混乱来捕猎。敏捷而好奇,以令人着迷的技巧在鱼群中穿梭进出。", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "海狮在沙丁鱼奇观中捕猎" } },
+					{ title: "镰状真鲨", text: "它们有时会靠近捕食现场。我们保持冷静和距离观察，并始终听从向导的指示。", media: { src: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg", alt: "自由潜水者在沙丁鱼奔流期间于开阔海域观察镰状真鲨" } },
 					{ title: "海豚", text: "当一群海豚决定加入捕猎,协同便成倍增加。它们把沙丁鱼逼向水面,统筹整场奇观。", media: { src: "/images/especies/delfin-salto.jpg", alt: "海豚在捕猎中协作" } },
 					{ title: "海鸟", text: "鹈鹕、海鸥和军舰鸟是第一个线索。当它们俯冲时,我们就知道行动正发生在下方。", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "海鸟标示着马格达莱纳湾的活动" } },
 				],
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "布氏鲸在鱼群中觅食" },
+				media: { src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", alt: "沙丁鱼奔流期间在水下游动的座头鲸" },
 				quote: "沙丁鱼奇观仅持续几分钟,有时甚至只有几秒钟。但你会明白,你正见证着大自然数千年来一直如此进行的事情。",
 			},
 			{
@@ -1990,14 +1992,14 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/striped-marlin-underwater.jpg", alt: "条纹马林鱼在马格达莱纳湾穿过鱼群" },
+				media: { src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "条纹马林鱼在马格达莱纳湾的开阔海域游动" },
 				quote: "大海从不重复同一个故事,这正是我们不断回来的原因。",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/images/marlin-bahia-magdalena-hero.jpeg",
-				alt: "马格达莱纳湾的马林鱼狩猎场景",
+				image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+				alt: "马格达莱纳湾的条纹马林鱼",
 				title: "你可能记得一条马林鱼穿过沙丁鱼群,也可能记得你明白大海从不重复同一个故事的那一刻。",
 				text: "我们只在最佳季节——11月和12月——进行这项探险。告诉我们你的日期,我们会帮你预订马格达莱纳湾的海洋探险。",
 				primaryLabel: "查询空位",

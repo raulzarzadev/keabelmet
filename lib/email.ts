@@ -41,7 +41,7 @@ const HERO_BY_SLUG: Record<string, string> = {
 	"tour-espiritu-santo": "/lobo-marino-espiritu-hero.jpg",
 	"scuba-discovery": "/scuba-discovery-glide.jpg",
 	"certificacion-open-water": "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
-	"safari-bahia-magdalena": "/images/marlin-bahia-magdalena-hero.jpeg",
+	"safari-bahia-magdalena": "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 }
 
 export function heroUrl(slug?: string): string {
