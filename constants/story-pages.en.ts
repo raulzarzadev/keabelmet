@@ -1792,8 +1792,9 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Bahía Magdalena Safari",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Striped marlin hunting in a bait ball in Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			alt: "Striped marlin swimming underwater in Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "An ocean where everything happens at once",
 			text: "Thousands of sardines try to stay together. Marlin tear through the bait ball at full speed. Sea lions appear from the depths to join the hunt. Flocks of birds mark where the action is. That's Bahía Magdalena. Here we don't follow an itinerary: we follow what the sea decides to show us.",
@@ -1847,7 +1848,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"After preparing the gear and meeting the captain, we board. From that moment on we stop following a schedule and start following the ocean's signs: feeding birds, color changes in the water, movement at the surface.",
 							"Small details that often announce something extraordinary is happening a few hundred meters ahead.",
 						],
-						media: { src: "/images/especies/sardinas-banco.jpeg", alt: "School of sardines forming a bait ball" },
+						media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "School of sardines forming a bait ball" },
 					},
 					{
 						title: "We get in the water",
@@ -1865,17 +1866,23 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				title: "Every day in Bahía Magdalena is different",
 				intro: "We don't promise any particular species, because we believe nature is far more thrilling when it stays completely free. Here's what the ocean tends to bring on stage.",
 				items: [
-					{ title: "Sardine bait balls", text: "Thousands of sardines gather and spin as a single organism to defend themselves. They're the heart of the spectacle: where there's bait, everything else appears.", media: { src: "/images/especies/sardinas-banco.jpeg", alt: "Sardine bait ball spinning in Bahía Magdalena" } },
+					{ title: "Sardine bait balls", text: "Thousands of sardines gather and spin as a single organism to defend themselves. They're the heart of the spectacle: where there's bait, everything else appears.", media: { src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Sardine bait ball spinning in Bahía Magdalena" } },
 					{ title: "Striped marlin", text: "The fastest stars of the show. They tear through the bait ball at full speed, light up their colors and coordinate attacks that last just seconds.", media: { src: "/images/gallery/marlin-cazando.jpeg", alt: "Striped marlin hunting in a sardine bait ball" } },
 					{ title: "Bryde's whales", text: "Sometimes the giant of the scene. They surface among the schools to feed at the top of the water, just meters from the boat.", media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Bryde's whale feeding among sardines" } },
 					{ title: "Sea lions", text: "They use the chaos to hunt. Agile and curious, they dart in and out of the bait ball with a mastery that's mesmerizing.", media: { src: "/images/especies/lobomarinonadando.jpeg", alt: "Sea lion hunting during the Sardine Run" } },
+					{ title: "Silky sharks", text: "Sometimes they come close to the action. We watch them calmly, at a distance and always following the guide's instructions.", media: { src: "/images/sardine-run/tiburon-sedoso-sardine-run.jpg", alt: "Silky shark swimming in open water during the Sardine Run" } },
 					{ title: "Dolphins", text: "When a pod decides to join the hunt, the coordination multiplies. They push the sardines toward the surface and orchestrate the whole show.", media: { src: "/images/especies/delfin-salto.jpg", alt: "Dolphins cooperating during the hunt" } },
 					{ title: "Seabirds", text: "Pelicans, gulls and frigatebirds are the first clue. When they dive, we know the action is happening right below.", media: { src: "/magnificent-frigatebird-soaring-over-ocean-in-baja.jpg", alt: "Seabirds marking the activity in Bahía Magdalena" } },
+					{ title: "Humpback whales", text: "Sometimes they show up near the action. Seeing them underwater is a rare encounter and never guaranteed.", media: { src: "/images/sardine-run/ballena-jorobada-subiendo-sardine-run.jpg", alt: "Humpback whale rising toward the surface underwater during the Sardine Run" } },
 				],
 			},
 			{
-				type: "mediaBanner",
-				media: { src: "/images/especies/ballena-bryde-underwater.jpeg", alt: "Bryde's whale feeding among schools of fish" },
+				type: "carousel",
+				items: [
+					{ src: "/images/sardine-run/ballena-jorobada-bajo-el-agua-sardine-run.jpg", alt: "Humpback whale swimming underwater during the Sardine Run", caption: "A humpback whale underwater." },
+					{ src: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg", alt: "Freediver watching a silky shark in open water during the Sardine Run", caption: "A silky shark passes close to a freediver." },
+					{ src: "/images/sardine-run/lobos-marinos-bola-de-sardinas.jpg", alt: "Sea lions hunting a sardine bait ball in Bahía Magdalena", caption: "Sea lions hunting in the sardine bait ball." },
+				],
 				quote: "The Sardine Run lasts just a few minutes. Sometimes seconds. But you realize you're witnessing something that has happened exactly as nature has done it for thousands of years.",
 			},
 			{
@@ -1991,14 +1998,16 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/striped-marlin-underwater.jpg", alt: "Striped marlin cutting through a school in Bahía Magdalena" },
+				size: "sm",
+				media: { src: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Striped marlin swimming in open water in Bahía Magdalena" },
 				quote: "The ocean never repeats the same story twice. And that's exactly why we keep coming back.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/images/marlin-bahia-magdalena-hero.jpeg",
-				alt: "Marlin hunting in Bahía Magdalena",
+				compact: true,
+				image: "/images/sardine-run/apneista-y-tiburon-sedoso-sardine-run.jpg",
+				alt: "Freediver and silky shark in open water during the Sardine Run",
 				title: "You may remember a marlin cutting through the bait ball. Or the moment you understood the ocean never repeats the same story.",
 				text: "We run the safari only during the best season, in November and December. Tell us your dates and we'll help you book your Ocean Safari in Bahía Magdalena.",
 				primaryLabel: "Check availability",

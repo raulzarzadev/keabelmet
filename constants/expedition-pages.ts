@@ -204,8 +204,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Safari Bahía Magdalena",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin cazando sardinas en Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Marlín rayado nadando bajo el agua en Bahía Magdalena",
 			kicker: "Bahía Magdalena · Nov-Dic",
 			title: "El safari más salvaje del Pacífico",
 			text: "Miles de sardinas, marlines cazando a máxima velocidad, ballenas alimentándose. Un fenómeno de solo dos meses al año — y tú puedes presenciarlo desde adentro.",
@@ -249,7 +249,7 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			title: "Los protagonistas del sardine run",
 			items: [
 				{ image: "/images/especies/sardinas-banco.jpeg", alt: "Banco de sardinas", label: "Sardinas · Nov-Dic" },
-				{ image: "/striped-marlin-underwater.jpg", alt: "Marlín rayado", label: "Marlín Rayado · Nov-Dic" },
+				{ image: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Marlín rayado", label: "Marlín Rayado · Nov-Dic" },
 				{ image: "/images/especies/dorado.jpeg", alt: "Pez dorado", label: "Dorado · Nov-Dic" },
 				{ image: "/images/especies/lobomarinonadando.jpeg", alt: "Lobo marino", label: "Lobos Marinos · Todo el año" },
 				{ image: "/images/especies/ballenasaltando2.jpeg", alt: "Ballena", label: "Ballenas · Nov-Dic" },
@@ -301,8 +301,8 @@ export const expeditionPages: Record<string, ExpeditionPageData> = {
 			note: "Fenómeno de temporada: solo noviembre y diciembre. Cupo muy limitado por salida — reserva con anticipación.",
 		},
 		finalCta: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin cazando en Bahía Magdalena",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Marlín rayado en Bahía Magdalena",
 			title: "Solo pasa dos meses al año",
 			text: "El safari más salvaje del Pacífico te espera en Bahía Magdalena. Cupos limitados por temporada.",
 			waText: "Quiero reservar el Safari Bahía Magdalena",

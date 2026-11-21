@@ -6,7 +6,7 @@ export const marlinCaza: BlogPost = {
 	id: "marlin-caza",
 	category: "fauna",
 	date: "2026-10-29",
-	cover: "/striped-marlin-underwater.jpg",
+	cover: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["marlin-rayado", "bola-de-sardinas", "lobos-sardine-run", "animales-sardine-run"],
 	sources: fuentes(S.hansen2022, S.burns2024, S.hansen2020, S.pacher2024, S.bartashevich2024, S.hansen2023, S.hansen2026, S.domenici2014),

@@ -195,8 +195,8 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 	"safari-bahia-magdalena": {
 		breadcrumb: "Magdalena Bay Safari",
 		hero: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin hunting sardines in Magdalena Bay",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Striped marlin swimming underwater in Magdalena Bay",
 			kicker: "Magdalena Bay · Nov-Dec",
 			title: "The wildest safari in the Pacific",
 			text: "Thousands of sardines, marlin hunting at full speed, whales feeding. A phenomenon that lasts only two months a year — and you can witness it from the inside.",
@@ -240,7 +240,7 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 			title: "The stars of the sardine run",
 			items: [
 				{ image: "/images/especies/sardinas-banco.jpeg", alt: "Sardine bait ball", label: "Sardines · Nov-Dec" },
-				{ image: "/striped-marlin-underwater.jpg", alt: "Striped marlin", label: "Striped Marlin · Nov-Dec" },
+				{ image: "/images/sardine-run/marlin-rayado-mar-abierto.jpg", alt: "Striped marlin", label: "Striped Marlin · Nov-Dec" },
 				{ image: "/images/especies/dorado.jpeg", alt: "Mahi-mahi", label: "Mahi-mahi · Nov-Dec" },
 				{ image: "/images/especies/lobomarinonadando.jpeg", alt: "Sea lion", label: "Sea Lions · Year-round" },
 				{ image: "/images/especies/ballenasaltando2.jpeg", alt: "Whale", label: "Whales · Nov-Dec" },
@@ -292,8 +292,8 @@ export const expeditionPagesEn: Record<string, ExpeditionPageData> = {
 			note: "A seasonal phenomenon: November and December only. Very limited spots per departure — book early.",
 		},
 		finalCta: {
-			image: "/images/marlin-bahia-magdalena-hero.jpeg",
-			alt: "Marlin hunting in Magdalena Bay",
+			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
+			alt: "Striped marlin in Magdalena Bay",
 			title: "It only happens two months a year",
 			text: "The wildest safari in the Pacific awaits in Magdalena Bay. Limited spots per season.",
 			waText: "I want to book the Magdalena Bay Safari",
