@@ -87,8 +87,11 @@ export async function generateMetadata({
     },
     description: m.description,
     // Verificación de Bing Webmaster Tools (no quitar: Bing la revisa periódicamente).
-    // Google Search Console está verificado por DNS.
-    verification: { other: { "msvalidate.01": "06E57E2E72AC3492C442B286870DBD6D" } },
+    // Google Search Console: etiqueta de la propiedad https://www.keabelmet.com/ (no quitar: Google la revisa periódicamente).
+    verification: {
+      google: "brxrZU6a-Dm5js-r6EXy4b34aYMCotc3rQd6B0fZrqM",
+      other: { "msvalidate.01": "06E57E2E72AC3492C442B286870DBD6D" },
+    },
   }
 }
 
