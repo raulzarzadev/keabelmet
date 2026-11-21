@@ -559,9 +559,10 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .sp-check li::before { content: "✓"; color: var(--teal); font-weight: 800; flex: none; }
 .sp-check.bad li::before { content: "✕"; color: #ff5a5a; }
 .sp-check { overflow: hidden; }
-.sp-check > .chk-media { margin: -30px -30px 26px; height: 210px; border-radius: 0; }
+/* Foto completa (3:2, la proporción de las fotos de cámara) */
+.sp-check > .chk-media { margin: -30px -30px 26px; height: auto; aspect-ratio: 3 / 2; border-radius: 0; }
 .sp-check > .chk-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-@media (max-width: 720px) { .sp-check > .chk-media { height: 180px; } }
+
 
 /* rich includes / detail cards */
 .sp-detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
