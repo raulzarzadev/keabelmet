@@ -116,7 +116,7 @@ export type Block =
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
   | { type: "faunaCalendar"; kicker?: string; title?: string; intro?: string; ink2?: boolean }
   | { type: "fauna"; kicker?: string; title?: string; note?: string; ink2?: boolean; tiers: { label: string; warn?: boolean; species: string[] }[] }
-  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom"; /** Texto más chico para que se vea la foto. */ size?: "sm" }
+  | { type: "mediaBanner"; media: Media; quote?: string; sub?: string; align?: "bottom"; /** Texto más chico para que se vea la foto (md: un poco; sm: bastante). */ size?: "sm" | "md" }
   /** Galería deslizable de fotos a lo ancho; el texto va arriba, fuera de las fotos. */
   | { type: "carousel"; ink2?: boolean; kicker?: string; quote?: string; items: { src: string; alt: string; caption?: string }[] }
   | { type: "mediaSplit"; media: Media; reverse?: boolean; ink2?: boolean; kicker?: string; title: string; paragraphs: string[] }
@@ -594,7 +594,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
           case "mediaBanner":
             return (
-              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}${b.align === "bottom" ? " mb-bottom" : ""}${b.size === "sm" ? " mb-sm" : ""}`}>
+              <section key={i} className={`media-banner${!(b.media.src || b.media.video) ? " has-ph" : ""}${b.align === "bottom" ? " mb-bottom" : ""}${b.size ? " mb-" + b.size : ""}`}>
                 <MediaSlot media={b.media} />
                 {(b.quote || b.sub) && (
                   <div className="mb-inner">

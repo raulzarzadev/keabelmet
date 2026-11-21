@@ -1267,6 +1267,7 @@ export const storyPages: Record<string, StoryPageData> = {
 				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Ballena gris asomando la cabeza en un mar en calma", position: "50% 90%" },
 				quote: "Durante unos segundos desaparece cualquier sensación de miedo. Solo queda admiración.",
 				align: "bottom",
+				size: "md",
 			},
 			{
 				type: "timeline",

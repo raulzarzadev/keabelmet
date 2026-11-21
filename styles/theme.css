@@ -407,6 +407,7 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .media-banner.mb-bottom::after { background: linear-gradient(to top, rgba(8,21,31,0.94) 0%, rgba(8,21,31,0.66) 26%, rgba(8,21,31,0.14) 56%, rgba(8,21,31,0) 80%); }
 .media-banner.mb-bottom .mb-inner { padding-bottom: 56px; }
 /* Banner con texto chico: la foto manda, el texto acompaña */
+.media-banner.mb-md .mb-quote { font-size: clamp(20px, 2.7vw, 32px); }
 .media-banner.mb-sm .mb-quote { font-size: clamp(16px, 1.9vw, 24px); line-height: 1.35; max-width: 620px; margin: 0 auto; }
 .media-banner.mb-sm.mb-bottom .mb-inner { padding-bottom: 36px; }
 .media-banner.mb-sm.mb-bottom::after { background: linear-gradient(to top, rgba(8,21,31,0.88) 0%, rgba(8,21,31,0.4) 22%, rgba(8,21,31,0) 45%); }
