@@ -790,6 +790,24 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .thero-inner .kicker { display: block; margin-bottom: 16px; }
 .thero-inner h1 { font-size: clamp(30px,4.6vw,64px); max-width: 900px; line-height: 1.15; }
 .thero-inner p { max-width: 540px; color: var(--sand-dim); font-size: 17px; margin: 20px 0 30px; }
+/* Portada dividida: el texto no tapa al animal */
+.thero.thero-split { background: #08151f; }
+@media (min-width: 900px) {
+  .thero.thero-split { align-items: center; }
+  .thero-split > img, .thero-split > picture { left: auto; right: 0; width: 64%; transform: none; }
+  .thero-split > img, .thero-split > picture img { object-fit: cover; object-position: 70% center; }
+  .thero-split::after { background: linear-gradient(to right, #08151f 36%, rgba(8,21,31,0.75) 44%, rgba(8,21,31,0) 60%), linear-gradient(to top, rgba(8,21,31,0.7), rgba(8,21,31,0) 30%); }
+  .thero-split .thero-inner { padding-bottom: 0; }
+  .thero-split .thero-inner h1 { font-size: clamp(30px, 3.4vw, 50px); max-width: 560px; }
+  .thero-split .thero-inner p { max-width: 480px; }
+}
+@media (max-width: 899px) {
+  .thero.thero-split { flex-direction: column; align-items: stretch; height: auto; min-height: 0; margin-top: 0; }
+  .thero-split > img, .thero-split > picture { position: relative; inset: auto; display: block; width: 100%; height: 54vh; min-height: 320px; transform: none; }
+  .thero-split > img { object-fit: cover; }
+  .thero-split::after { inset: 0 0 auto 0; height: 54vh; min-height: 320px; background: linear-gradient(to top, #08151f 0%, rgba(8,21,31,0) 32%); }
+  .thero-split .thero-inner { margin-top: -28px; padding-bottom: 40px; }
+}
 
 .quickfacts { background: var(--ink-2); border-bottom: 1px solid var(--line); }
 .quickfacts .wrap { display: grid; grid-template-columns: repeat(4,1fr); padding: 30px 32px; }

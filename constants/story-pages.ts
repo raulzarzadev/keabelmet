@@ -1897,6 +1897,7 @@ export const storyPages: Record<string, StoryPageData> = {
 		hero: {
 			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			layout: "split",
 			alt: "Marlín rayado nadando bajo el agua en Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océano donde todo ocurre al mismo tiempo",

@@ -1793,6 +1793,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		hero: {
 			image: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 			imageMobile: "/images/sardine-run/marlin-rayado-sardine-run-vertical.jpg",
+			layout: "split",
 			alt: "条纹马林鱼在马格达莱纳湾水下游动",
 			kicker: "马格达莱纳湾 · 沙丁鱼奇观",
 			title: "一片一切同时发生的海洋",

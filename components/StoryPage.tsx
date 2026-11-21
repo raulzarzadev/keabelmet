@@ -81,6 +81,8 @@ export interface StoryHero {
   image: string
   imageMobile?: string
   heroVideo?: string
+  /** "split": el texto no va encima del animal (escritorio: lado a lado; celular: foto arriba, texto abajo). */
+  layout?: "split"
   alt: string
   kicker: string
   title: string
@@ -186,7 +188,7 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
       </div>
 
       {/* HERO */}
-      <section className="thero">
+      <section className={`thero${h.layout === "split" ? " thero-split" : ""}`}>
         {h.heroVideo ? (
           <video src={h.heroVideo} autoPlay muted loop playsInline poster={h.image} aria-label={h.alt} />
         ) : h.imageMobile ? (
