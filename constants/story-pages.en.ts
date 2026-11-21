@@ -1217,14 +1217,16 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "Much more than a sighting",
 				title: "What usually appears during the navigation",
-				note: "Every trip tells a different story, and that's what makes no experience the same as the one before.",
-				tiers: [
-					{ label: "Frequent during the navigation", species: ["Adult whales", "Blows and tails emerging", "Dolphins", "Seabirds", "Sea lions", "The desert–Pacific contrast"] },
-					{ label: "With luck", warn: true, species: ["Mothers with their calves"] },
+				intro: "Every trip tells a different story, and that's what makes no experience the same as the one before. With luck, mothers with their calves too.",
+				items: [
+					{ title: "Gray whales", text: "The stars of the day. You'll see them breathe, show their backs and lift their flukes before diving. Some raise their heads out of the water to look around.", media: { src: "/ballena-gris-spyhop-drone.jpg", alt: "Gray whale with its head out of the water" } },
+					{ title: "Dolphins", text: "They often show up along the way. Sometimes they ride the bow; other times they just pass by.", media: { src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Bottlenose dolphin leaping" } },
+					{ title: "Sea lions", text: "They may appear near the shore or pop their heads up curiously near the boat.", media: { src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "California sea lion with its head above water" } },
+					{ title: "Seabirds", text: "Pelicans and other seabirds keep you company for much of the trip.", media: { src: "/images/blog/pelicano-pardo-sobre-roca-baja-california-sur.webp", alt: "Brown pelican on a rock" } },
 				],
 			},
 			{

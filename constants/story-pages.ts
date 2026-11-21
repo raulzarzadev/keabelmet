@@ -1320,14 +1320,16 @@ export const storyPages: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "Mucho más que un avistamiento",
 				title: "Lo que suele aparecer durante la navegación",
-				note: "Cada salida cuenta una historia diferente, y eso hace que ninguna experiencia sea igual a la anterior.",
-				tiers: [
-					{ label: "Frecuente durante la navegación", species: ["Ballenas adultas", "Soplidos y colas emergiendo", "Delfines", "Aves marinas", "Lobos marinos", "El contraste desierto–Pacífico"] },
-					{ label: "Con suerte", warn: true, species: ["Madres con sus ballenatos"] },
+				intro: "Cada salida cuenta una historia diferente, y eso hace que ninguna experiencia sea igual a la anterior. Con suerte, también madres con sus ballenatos.",
+				items: [
+					{ title: "Ballenas grises", text: "Las protagonistas. Las verás respirar, mostrar el lomo y levantar la cola antes de sumergirse. Algunas asoman la cabeza fuera del agua para mirar a su alrededor.", media: { src: "/ballena-gris-spyhop-drone.jpg", alt: "Ballena gris asomando la cabeza fuera del agua" } },
+					{ title: "Delfines", text: "Suelen aparecer durante la navegación. A veces se acercan a la proa; otras veces solo pasan de largo.", media: { src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Delfín nariz de botella saltando" } },
+					{ title: "Lobos marinos", text: "Pueden aparecer cerca de la costa o asomarse con curiosidad cerca de la lancha.", media: { src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "Lobo marino de California asomando la cabeza" } },
+					{ title: "Aves marinas", text: "Pelícanos y otras aves marinas acompañan buena parte del recorrido.", media: { src: "/images/blog/pelicano-pardo-sobre-roca-baja-california-sur.webp", alt: "Pelícano pardo sobre una roca" } },
 				],
 			},
 			{

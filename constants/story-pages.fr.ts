@@ -1217,14 +1217,16 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "Bien plus qu'une observation",
 				title: "Ce qui apparaît habituellement pendant la navigation",
-				note: "Chaque sortie raconte une histoire différente, et c'est ce qui fait qu'aucune expérience ne ressemble à la précédente.",
-				tiers: [
-					{ label: "Fréquent pendant la navigation", species: ["Baleines adultes", "Souffles et queues émergeant", "Dauphins", "Oiseaux marins", "Otaries", "Le contraste désert-Pacifique"] },
-					{ label: "Avec de la chance", warn: true, species: ["Mères avec leurs baleineaux"] },
+				intro: "Chaque sortie raconte une histoire différente, et c'est ce qui fait qu'aucune expérience ne ressemble à la précédente. Avec un peu de chance, des mères avec leurs baleineaux.",
+				items: [
+					{ title: "Baleines grises", text: "Les vedettes de la journée. Vous les verrez souffler, montrer leur dos et lever la queue avant de plonger. Certaines sortent la tête de l'eau pour regarder autour d'elles.", media: { src: "/ballena-gris-spyhop-drone.jpg", alt: "Baleine grise sortant la tête de l'eau" } },
+					{ title: "Dauphins", text: "Ils apparaissent souvent pendant la navigation. Parfois ils viennent à la proue ; d'autres fois ils passent simplement.", media: { src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Grand dauphin en plein saut" } },
+					{ title: "Otaries", text: "Elles peuvent apparaître près de la côte ou sortir la tête, curieuses, près du bateau.", media: { src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "Otarie de Californie sortant la tête de l'eau" } },
+					{ title: "Oiseaux marins", text: "Pélicans et autres oiseaux marins accompagnent une bonne partie du trajet.", media: { src: "/images/blog/pelicano-pardo-sobre-roca-baja-california-sur.webp", alt: "Pélican brun sur un rocher" } },
 				],
 			},
 			{
