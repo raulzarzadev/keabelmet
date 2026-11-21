@@ -1161,7 +1161,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Baleine grise sortant la tête sur une mer calme", position: "50% 90%" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Baleine grise sortant la tête sur une mer calme" },
 				quote: "Pendant quelques secondes, toute sensation de peur disparaît. Il ne reste que l'admiration.",
 				align: "bottom",
 				size: "md",

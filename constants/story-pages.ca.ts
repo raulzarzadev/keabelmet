@@ -1367,7 +1367,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Balena grisa traient el cap en un mar en calma", position: "50% 90%" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Balena grisa traient el cap en un mar en calma" },
 				quote: "Durant uns segons desapareix qualsevol sensació de por. Només queda admiració.",
 				align: "bottom",
 				size: "md",

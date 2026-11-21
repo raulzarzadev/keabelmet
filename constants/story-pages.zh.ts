@@ -1160,7 +1160,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "灰鲸在平静的海面上探出头来", position: "50% 90%" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "灰鲸在平静的海面上探出头来" },
 				quote: "有那么几秒钟,任何恐惧感都消失了,只剩下敬畏。",
 				align: "bottom",
 				size: "md",

@@ -1161,7 +1161,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Gray whale spyhopping in a calm sea", position: "50% 90%" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Gray whale spyhopping in a calm sea" },
 				quote: "For a few seconds any sense of fear disappears. Only admiration remains.",
 				align: "bottom",
 				size: "md",
