@@ -1256,7 +1256,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
-					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "Gray whale spyhopping in a calm sea" },
+					media: { src: "/instagram/ballena-gris-aerea.jpg", alt: "Gray whale seen from above in turquoise water" },
 					title: "It may not be for you if…",
 					items: [
 						"You're looking for an adrenaline-filled activity.",

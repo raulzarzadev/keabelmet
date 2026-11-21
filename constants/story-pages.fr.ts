@@ -1256,7 +1256,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
-					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "Baleine grise sortant la tête sur une mer calme" },
+					media: { src: "/instagram/ballena-gris-aerea.jpg", alt: "Baleine grise vue du ciel dans une eau turquoise" },
 					title: "Ce n'est peut-être pas pour vous si…",
 					items: [
 						"Vous cherchez une activité pleine d'adrénaline.",

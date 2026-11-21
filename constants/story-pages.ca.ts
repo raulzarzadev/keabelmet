@@ -1462,7 +1462,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
-					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "Balena grisa traient el cap en un mar en calma" },
+					media: { src: "/instagram/ballena-gris-aerea.jpg", alt: "Balena grisa vista des de l'aire en aigües turquesa" },
 					title: "Potser no és per a tu si…",
 					items: [
 						"Busques una activitat plena d'adrenalina.",

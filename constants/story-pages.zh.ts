@@ -1255,7 +1255,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
-					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "灰鲸在平静的海面上探出头来" },
+					media: { src: "/instagram/ballena-gris-aerea.jpg", alt: "从空中俯瞰碧绿海水中的灰鲸" },
 					title: "如果以下情况,可能不适合你……",
 					items: [
 						"你在寻找充满肾上腺素的活动。",
