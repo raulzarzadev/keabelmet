@@ -81,6 +81,12 @@ export interface StoryHero {
   image: string
   imageMobile?: string
   heroVideo?: string
+  /** Fotos que se suceden en la portada con zoom lento (efecto de video con fotos reales). La primera es `image`. */
+  slides?: { src: string; srcMobile?: string }[]
+  /** Muestra el precio "desde" de la tarjeta de precios dentro del botón principal. */
+  ctaShowPrice?: boolean
+  /** Línea corta bajo los botones (p. ej. la temporada). */
+  note?: string
   alt: string
   kicker: string
   title: string
@@ -157,6 +163,12 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
   const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
   const h = data.hero
 
+  const heroPriceMxn = (() => {
+    const p = data.blocks.find((b) => b.type === "pricing")
+    if (!p || p.type !== "pricing") return 0
+    const nums = p.cards.map((c) => c.amountMxn).filter((n): n is number => typeof n === "number" && n > 0)
+    return nums.length ? Math.min(...nums) : 0
+  })()
   const sec = (ink2?: boolean, extra = "", tight = false) =>
     `sp-section${tight ? " tight" : ""}${ink2 ? " sp-ink2" : ""}${extra ? " " + extra : ""}`
 
@@ -186,8 +198,18 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
       </div>
 
       {/* HERO */}
-      <section className="thero">
-        {h.heroVideo ? (
+      <section className={`thero${h.slides?.length ? " thero-cine" : ""}`}>
+        {h.slides?.length ? (
+          <div className="thero-slides" aria-hidden={false}>
+            {[{ src: h.image, srcMobile: h.imageMobile }, ...h.slides].slice(0, 5).map((s, k) => (
+              <picture key={k} className={`ts ts-${k}`}>
+                {s.srcMobile && <source media="(max-width: 767px)" srcSet={s.srcMobile} />}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.src} alt={k === 0 ? h.alt : ""} fetchPriority={k === 0 ? "high" : "low"} decoding="async" />
+              </picture>
+            ))}
+          </div>
+        ) : h.heroVideo ? (
           <video src={h.heroVideo} autoPlay muted loop playsInline poster={h.image} aria-label={h.alt} />
         ) : h.imageMobile ? (
           <picture>
@@ -202,12 +224,13 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
           {/* El kicker (lugar · actividad) va dentro del H1 para que el encabezado
               principal lleve las palabras que se buscan; se ve igual que antes. */}
           <h1><span className="kicker">{h.kicker}</span>{" "}{h.title}</h1>
-          <p>{h.text}</p>
+          {h.text && <p>{h.text}</p>}
           {h.meta && <p style={{ color: "var(--teal)", fontSize: 14, fontWeight: 600, letterSpacing: "0.02em", margin: "-8px 0 26px" }}>{h.meta}</p>}
           <div className="hero-ctas">
-            <a href="#precios" className="btn btn-pop">{h.primaryLabel}</a>
-            {h.secondaryLabel && <a href={h.secondaryHref ?? "#itinerario"} className="btn btn-ghost">{h.secondaryLabel}</a>}
+            <a href="#precios" className="btn btn-pop">{h.primaryLabel}{h.ctaShowPrice && heroPriceMxn ? <> · <Price amount={heroPriceMxn} /></> : null}</a>
+            {h.secondaryLabel && <a href={h.secondaryHref ?? "#itinerario"} className={h.slides?.length ? "thero-link" : "btn btn-ghost"}>{h.secondaryLabel}</a>}
           </div>
+          {h.note && <p className="thero-note">{h.note}</p>}
         </div>
       </section>
 
