@@ -85,6 +85,21 @@ export function experienceSchemas(slug: string, locale: Locale): object[] {
 		]),
 		trip,
 	]
+	// Video de portada: ficha VideoObject para que Google pueda mostrar la miniatura del video.
+	const hero = getStoryPage(slug, locale)?.hero
+	if (hero?.heroVideo && hero.heroVideoUploaded) {
+		schemas.push({
+			"@context": "https://schema.org",
+			"@type": "VideoObject",
+			name: seo.title,
+			description: seo.description,
+			thumbnailUrl: [abs(hero.image)],
+			contentUrl: abs(hero.heroVideo),
+			uploadDate: hero.heroVideoUploaded,
+			...(hero.heroVideoDuration ? { duration: hero.heroVideoDuration } : {}),
+			publisher: { "@id": `${SITE_URL}/#organization` },
+		})
+	}
 	if (faq.length) {
 		schemas.push({
 			"@context": "https://schema.org",
