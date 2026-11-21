@@ -64,7 +64,7 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 	const areas = useMemo<MapArea[]>(() => {
 		if (!selInfo?.zone) return []
 		const z = ZONES[selInfo.zone]
-		return [{ id: selInfo.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, label: z.name[locale] }]
+		return [{ id: selInfo.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, polygon: z.polygon, label: z.name[locale] }]
 	}, [selInfo, locale])
 
 	const season = (m: number[]) => (m.length >= 12 ? t.allMonths : `${t.months[m[0] - 1]}–${t.months[m[m.length - 1] - 1]}`)
