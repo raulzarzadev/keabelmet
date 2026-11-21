@@ -211,6 +211,15 @@ export default function ReservasPanel() {
 			await load()
 		}
 	}
+	async function resend(b: Booking, copy: boolean) {
+		let to = ""
+		if (copy) {
+			to = prompt("¿A qué correo te mando la copia?")?.trim() ?? ""
+			if (!to) return
+		} else if (!confirm(`¿Reenviar el correo de confirmación a ${b.email || "el cliente"}?`)) return
+		const j = await post({ action: "resendConfirmation", id: b.id, ...(to ? { to } : {}) })
+		if (j) setNotice(`Correo de confirmación enviado a ${j.to}.`)
+	}
 	async function remove(b: Booking) {
 		const msg = b.source === "web" ? "¿Marcar esta reserva como cancelada? (No reembolsa nada en Stripe.)" : "¿Borrar esta reserva? No se puede deshacer."
 		if (!confirm(msg)) return
@@ -388,7 +397,7 @@ export default function ReservasPanel() {
 			)}
 			</>)}
 
-			{edit && <Editor booking={edit} activities={activities} busy={busy} onSave={save} onDelete={remove} onClose={() => setEdit(null)} />}
+			{edit && <Editor booking={edit} activities={activities} busy={busy} onSave={save} onDelete={remove} onResend={resend} onClose={() => setEdit(null)} />}
 		</main>
 	)
 }
@@ -457,7 +466,7 @@ function payLine(b: Booking) {
 	return parts.join(" · ") || "Sin pago registrado"
 }
 
-function Editor({ booking, activities, busy, onSave, onDelete, onClose }: { booking: Booking; activities: Activity[]; busy: boolean; onSave: (b: Booking) => void; onDelete: (b: Booking) => void; onClose: () => void }) {
+function Editor({ booking, activities, busy, onSave, onDelete, onResend, onClose }: { booking: Booking; activities: Activity[]; busy: boolean; onSave: (b: Booking) => void; onDelete: (b: Booking) => void; onResend: (b: Booking, copy: boolean) => void; onClose: () => void }) {
 	const [b, setB] = useState<Booking>(booking)
 	const set = (k: keyof Booking, v: unknown) => setB((x) => ({ ...x, [k]: v }))
 	const cellIn = (k: "paidFull" | "deposit" | "settled" | "balance") => (
@@ -513,6 +522,12 @@ function Editor({ booking, activities, busy, onSave, onDelete, onClose }: { book
 					</label>
 					<label className={s.full}>Notas<textarea className={s.input} rows={2} value={b.notes} onChange={(e) => set("notes", e.target.value)} /></label>
 				</div>
+				{b.source === "web" && b.id && (
+					<div className={s.row}>
+						<button type="button" className={s.btn} onClick={() => onResend(b, false)} disabled={busy}>Reenviar confirmación al cliente</button>
+						<button type="button" className={s.btn} onClick={() => onResend(b, true)} disabled={busy}>Enviarme una copia</button>
+					</div>
+				)}
 				<div className={s.modalFoot}>
 					{b.id ? <button type="button" className={`${s.btn} ${s.btnWarn}`} onClick={() => onDelete(b)} disabled={busy}>{b.source === "web" ? "Cancelar reserva" : "Borrar"}</button> : <span />}
 					<div className={s.row}>

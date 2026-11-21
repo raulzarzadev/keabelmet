@@ -1,17 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
 import { getStripe } from "@/lib/stripe"
-import { folioFromPaymentIntent } from "@/lib/reservation"
-import { sendReservationEmail, sendOwnerNotification, sendDepositEmail, sendDepositOwnerNotification, sendDealEmail, sendDealOwnerNotification, type DepositEmailData, type DealEmailData } from "@/lib/email"
-import { unpackItems, activityName } from "@/lib/deposit"
-import { unchunkToken, verifyDeal, computeDealTotals } from "@/lib/deal"
-import { dealPhoto } from "@/lib/deal-photos"
-import { SITE_URL } from "@/lib/email"
+import { sendOwnerNotification, sendDepositOwnerNotification, sendDealOwnerNotification } from "@/lib/email"
+import { buildCustomerEmail, sendCustomerEmail } from "@/lib/customer-confirmation"
 import { recordPaymentIntent } from "@/lib/bookings"
-import { rideAddonMxn, rideRoute } from "@/lib/ride-addon"
-import { optionLabel } from "@/lib/bookable-activities"
-
-const RIDE_WORD: Record<string, string> = { es: "transporte", en: "transport", fr: "transfert", zh: "接送", ca: "transport" }
 
 export const runtime = "nodejs"
 
@@ -71,116 +63,24 @@ export async function POST(req: NextRequest) {
 			}
 		}
 
-		// --- Reserva con anticipo (multi-actividad): voucher de bienvenida ---
-		if (m.kind === "deposit") {
-			const locale = m.locale || "es"
-			const items = unpackItems(m.items).map((p) => ({
-				slug: p.slug,
-				expeditionName: activityName(p.slug, locale) + (optionLabel(p.slug, p.unitAmountMxn, locale) ? ` — ${optionLabel(p.slug, p.unitAmountMxn, locale)}` : "") + (p.ride ? ` + ${RIDE_WORD[locale] ?? RIDE_WORD.es} ${rideRoute(p.slug, locale)}` : ""),
-				dateISO: p.dateISO,
-				people: p.people,
-				subtotalMxn: p.unitAmountMxn * p.people + (p.ride ? rideAddonMxn(p.slug, p.people) : 0),
-			}))
-			const dep: DepositEmailData = {
-				folio: folioFromPaymentIntent(pi.id),
-				paymentIntentId: pi.id,
-				customerName: m.customerName || "",
-				customerEmail: m.customerEmail,
-				customerPhone: m.customerPhone || "",
-				locale,
-				items,
-				subtotalMxn: Number(m.subtotalMxn) || undefined,
-				discountMxn: Number(m.discountMxn) || undefined,
-				totalMxn: Number(m.totalMxn) || 0,
-				depositMxn: Number(m.depositMxn) || Math.round((pi.amount || 0) / 100),
-				remainingMxn: Number(m.remainingMxn) || 0,
-			}
-			const [cust, owner] = await Promise.all([sendDepositEmail(dep), sendDepositOwnerNotification(dep)])
-			if (!owner.ok) console.error("[stripe-webhook] deposit owner email error:", owner.error)
-			if (cust.ok) await markSent()
-			else console.error("[stripe-webhook] deposit customer email error:", cust.error)
+		// Correo de confirmación al cliente + aviso interno al dueño. Enviamos ambos;
+		// ninguno bloquea al otro. El correo del cliente se arma en
+		// lib/customer-confirmation (el panel lo reutiliza para reenviarlo).
+		const email = buildCustomerEmail(pi)
+		if (!email) {
+			if (m.kind === "deal") console.error("[stripe-webhook] deal token inválido en metadata")
 			return NextResponse.json({ received: true })
 		}
-
-		// --- Deal personalizado (precios negociados): voucher de bienvenida ---
-		if (m.kind === "deal") {
-			const deal = verifyDeal(unchunkToken(m))
-			if (!deal) {
-				console.error("[stripe-webhook] deal token inválido en metadata")
-				return NextResponse.json({ received: true })
-			}
-			const totals = computeDealTotals(deal)
-			const dealData: DealEmailData = {
-				folio: folioFromPaymentIntent(pi.id),
-				paymentIntentId: pi.id,
-				customerName: m.customerName || "",
-				customerEmail: m.customerEmail,
-				customerPhone: m.customerPhone || "",
-				locale: m.locale || "es",
-				title: deal.title,
-				subtitle: deal.subtitle,
-				lines: deal.lines.map((l) => ({ label: l.label, amountMxn: l.amountMxn })),
-				totalMxn: totals.totalMxn,
-				depositMxn: totals.depositMxn,
-				remainingMxn: totals.remainingMxn,
-				rate: totals.rate,
-				includes: deal.includes,
-				excludes: deal.excludes,
-				note: deal.note,
-				startISO: deal.startISO,
-				endISO: deal.endISO,
-				photos: (deal.photos ?? [])
-					.map((k) => dealPhoto(k))
-					.filter((p): p is NonNullable<typeof p> => !!p)
-					.map((p) => ({ src: `${SITE_URL}${p.src}`, label: p.label })),
-			}
-			const [cust, owner] = await Promise.all([sendDealEmail(dealData), sendDealOwnerNotification(dealData)])
-			if (!owner.ok) console.error("[stripe-webhook] deal owner email error:", owner.error)
-			if (cust.ok) await markSent()
-			else console.error("[stripe-webhook] deal customer email error:", cust.error)
-			return NextResponse.json({ received: true })
-		}
-
-		// --- Reserva de una sola actividad (flujo original) ---
-		if (!m.slug) {
-			return NextResponse.json({ received: true })
-		}
-
-		const reservation = {
-			folio: folioFromPaymentIntent(pi.id),
-			paymentIntentId: pi.id,
-			slug: m.slug,
-			expeditionName: m.expeditionName || m.slug,
-			cardName: m.cardName || "",
-			dateISO: m.dateISO || "",
-			people: Number(m.people) || 1,
-			totalMxn: Number(m.totalMxn) || Math.round((pi.amount || 0) / 100),
-			rideAddon: m.rideAddon === "true",
-			customerName: m.customerName || "",
-			customerEmail: m.customerEmail,
-			locale: m.locale || "es",
-		}
-
-		// Correo de confirmación al cliente + aviso interno al dueño (con invitación
-		// de calendario). Enviamos ambos; ninguno bloquea al otro.
-		const [result, ownerResult] = await Promise.all([
-			sendReservationEmail(reservation),
-			sendOwnerNotification({ ...reservation, customerPhone: m.customerPhone || "" }),
-		])
-
-		if (!ownerResult.ok) {
-			console.error("[stripe-webhook] error enviando aviso al dueño:", ownerResult.error)
-		}
-
-		if (result.ok) {
-			try {
-				await stripe.paymentIntents.update(pi.id, { metadata: { ...m, emailSent: "1" } })
-			} catch {
-				/* no bloqueamos por esto */
-			}
-		} else {
-			console.error("[stripe-webhook] error enviando correo:", result.error)
-		}
+		const owner =
+			email.kind === "deposit"
+				? sendDepositOwnerNotification(email.data)
+				: email.kind === "deal"
+					? sendDealOwnerNotification(email.data)
+					: sendOwnerNotification({ ...email.data, customerPhone: m.customerPhone || "" })
+		const [cust, ownerResult] = await Promise.all([sendCustomerEmail(email), owner])
+		if (!ownerResult.ok) console.error(`[stripe-webhook] ${email.kind} owner email error:`, ownerResult.error)
+		if (cust.ok) await markSent()
+		else console.error(`[stripe-webhook] ${email.kind} customer email error:`, cust.error)
 	}
 
 	return NextResponse.json({ received: true })
