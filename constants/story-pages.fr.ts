@@ -1797,7 +1797,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			alt: "Marlin rayé nageant sous l'eau à Bahía Magdalena",
 			kicker: "Bahía Magdalena · Sardine Run",
 			title: "Un océan où tout se passe en même temps",
-			text: "Des milliers de sardines essaient de rester unies. Les marlins traversent le banc de proies à toute vitesse. Des otaries apparaissent des profondeurs pour se joindre à la chasse. Des volées d'oiseaux survolent la surface en indiquant où se passe l'action. C'est ça, Bahía Magdalena. Ici, nous ne suivons pas un itinéraire : nous suivons ce que la mer décide de nous montrer.",
+			text: "Marlins, otaries et des milliers de sardines en pleine mer. Un safari qui ne se répète jamais.",
 			meta: "Départ de La Paz · Transport inclus · Novembre-décembre",
 			primaryLabel: "Réservez votre Ocean Safari",
 			primaryWa: "Bonjour! Je voudrais réserver l'Ocean Safari à Bahía Magdalena",
