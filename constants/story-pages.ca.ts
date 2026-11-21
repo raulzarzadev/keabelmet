@@ -1423,14 +1423,16 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "Molt més que un albirament",
 				title: "El que sol aparèixer durant la navegació",
-				note: "Cada sortida explica una història diferent, i això fa que cap experiència sigui igual a l'anterior.",
-				tiers: [
-					{ label: "Freqüent durant la navegació", species: ["Balenes adultes", "Bufs i cues emergint", "Dofins", "Ocells marins", "Lleons marins", "El contrast desert–Pacífic"] },
-					{ label: "Amb sort", warn: true, species: ["Mares amb els seus balenons"] },
+				intro: "Cada sortida explica una història diferent, i això fa que cap experiència sigui igual a l'anterior. Amb sort, també mares amb els seus balenatons.",
+				items: [
+					{ title: "Balenes grises", text: "Les protagonistes del dia. Les veuràs respirar, mostrar l'esquena i aixecar la cua abans de submergir-se. Algunes treuen el cap fora de l'aigua per mirar al seu voltant.", media: { src: "/ballena-gris-spyhop-drone.jpg", alt: "Balena grisa traient el cap fora de l'aigua" } },
+					{ title: "Dofins", text: "Solen aparèixer durant la navegació. De vegades s'acosten a la proa; altres vegades només passen de llarg.", media: { src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "Dofí mular saltant" } },
+					{ title: "Lleons marins", text: "Poden aparèixer a prop de la costa o treure el cap amb curiositat a prop de la barca.", media: { src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "Lleó marí de Califòrnia traient el cap" } },
+					{ title: "Aus marines", text: "Pelicans i altres aus marines acompanyen bona part del recorregut.", media: { src: "/images/blog/pelicano-pardo-sobre-roca-baja-california-sur.webp", alt: "Pelicà bru sobre una roca" } },
 				],
 			},
 			{

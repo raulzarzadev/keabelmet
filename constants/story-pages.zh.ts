@@ -1216,14 +1216,16 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				],
 			},
 			{
-				type: "fauna",
+				type: "encounters",
 				ink2: true,
 				kicker: "远不止一次观鲸",
 				title: "航行途中通常会出现的景象",
-				note: "每次出行都讲述着不同的故事,这正是让每次体验都与众不同的原因。",
-				tiers: [
-					{ label: "航行途中常见", species: ["成年鲸鱼", "浮现的喷气与尾巴", "海豚", "海鸟", "海狮", "沙漠与太平洋的对比"] },
-					{ label: "幸运时可见", warn: true, species: ["带着幼崽的母鲸"] },
+				intro: "每次出行都讲述着不同的故事,这正是让每次体验都与众不同的原因。运气好的话，还能看到母鲸带着幼鲸。",
+				items: [
+					{ title: "灰鲸", text: "当天的主角。你会看到它们呼吸、露出背部、在下潜前扬起尾鳍。有些还会把头探出水面四处张望。", media: { src: "/ballena-gris-spyhop-drone.jpg", alt: "灰鲸将头探出水面" } },
+					{ title: "海豚", text: "航行途中经常出现。有时会靠近船头，有时只是从旁游过。", media: { src: "/images/blog/delfin-nariz-de-botella-saltando-baja-california-sur.webp", alt: "跃出水面的宽吻海豚" } },
+					{ title: "海狮", text: "可能出现在海岸附近，或好奇地在船边探出头来。", media: { src: "/images/blog/lobo-marino-de-california-asomando-la-cabeza-la-ventana.webp", alt: "探出水面的加州海狮" } },
+					{ title: "海鸟", text: "鹈鹕和其他海鸟会陪伴大部分航程。", media: { src: "/images/blog/pelicano-pardo-sobre-roca-baja-california-sur.webp", alt: "站在岩石上的褐鹈鹕" } },
 				],
 			},
 			{
