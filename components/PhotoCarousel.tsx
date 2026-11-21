@@ -55,7 +55,7 @@ export default function PhotoCarousel({ items, prevLabel = "Foto anterior", next
 	}, [])
 
 	return (
-		<div className="pc">
+		<div className={`pc${items.length === 3 ? " pc-mosaic" : ""}`}>
 			<div className="pc-track" ref={track}>
 				{items.map((p, i) => (
 					<figure key={i} className="pc-slide">

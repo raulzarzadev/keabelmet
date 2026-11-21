@@ -434,6 +434,16 @@ nav.links a:hover { opacity: 1; color: var(--teal); }
 .pc-prev { left: 34px; }
 .pc-next { right: 34px; }
 @media (max-width: 640px) { .pc { padding: 0 16px; } .pc-slide { flex-basis: 92%; } .pc-btn { display: none; } }
+/* Mosaico (3 fotos, pantallas anchas): todas visibles, sin flechas ni puntos */
+@media (min-width: 900px) {
+  .pc-mosaic .pc-track { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto; overflow: visible; scroll-snap-type: none; }
+  .pc-mosaic .pc-slide { position: relative; border-radius: 18px; overflow: hidden; }
+  .pc-mosaic .pc-slide:first-child { grid-row: 1 / span 2; }
+  .pc-mosaic .pc-slide:first-child img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+  .pc-mosaic .pc-slide img { border-radius: 0; }
+  .pc-mosaic .pc-slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 28px 16px 12px; text-align: left; font-size: 13px; color: var(--sand); background: linear-gradient(to top, rgba(8,21,31,0.75), rgba(8,21,31,0)); }
+  .pc-mosaic .pc-btn, .pc-mosaic .pc-dots { display: none; }
+}
 
 /* media split (image + text) */
 .media-split { max-width: var(--maxw); margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
