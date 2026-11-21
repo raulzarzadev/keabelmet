@@ -1451,6 +1451,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 				kicker: "Per a qui és aquesta experiència?",
 				title: "Perquè reservis amb expectatives clares",
 				good: {
+					media: { src: "/images/ballena-gris/visitantes-sonriendo-en-la-lancha.jpg", alt: "Cinc visitants somrient a la barca amb armilla salvavides", position: "50% 25%" },
 					title: "És perfecta si…",
 					items: [
 						"Somies veure balenes en llibertat.",
@@ -1461,6 +1462,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
+					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "Balena grisa traient el cap en un mar en calma" },
 					title: "Potser no és per a tu si…",
 					items: [
 						"Busques una activitat plena d'adrenalina.",

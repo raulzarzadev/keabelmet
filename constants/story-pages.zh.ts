@@ -1244,6 +1244,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 				kicker: "这次体验适合谁?",
 				title: "让你带着清晰的期待去预订",
 				good: {
+					media: { src: "/images/ballena-gris/visitantes-sonriendo-en-la-lancha.jpg", alt: "五位穿着救生衣的游客在船上微笑", position: "50% 25%" },
 					title: "非常适合你,如果……",
 					items: [
 						"你梦想着看到自由的鲸鱼。",
@@ -1254,6 +1255,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
+					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "灰鲸在平静的海面上探出头来" },
 					title: "如果以下情况,可能不适合你……",
 					items: [
 						"你在寻找充满肾上腺素的活动。",

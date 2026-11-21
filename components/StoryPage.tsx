@@ -123,7 +123,7 @@ export type Block =
   | { type: "video"; ink2?: boolean; kicker?: string; title?: string; media: Media }
   | { type: "gallery"; ink2?: boolean; kicker?: string; title?: string; cols?: 3 | 4; items: Media[] }
   | { type: "encounters"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { title: string; text: string; media: Media }[] }
-  | { type: "checklist"; kicker?: string; title?: string; ink2?: boolean; good: { title: string; items: string[] }; bad: { title: string; items: string[] } }
+  | { type: "checklist"; kicker?: string; title?: string; ink2?: boolean; /** media: foto opcional arriba de cada recuadro. */ good: { title: string; items: string[]; media?: Media }; bad: { title: string; items: string[]; media?: Media } }
   | { type: "details"; kicker?: string; title?: string; ink2?: boolean; items: { title: string; text: string }[] }
   | { type: "groups"; kicker?: string; title?: string; ink2?: boolean; groups: { name: string; items: string[] }[] }
   | { type: "info"; kicker?: string; title?: string; ink2?: boolean; items: { label: string; value: string }[] }
@@ -419,10 +419,12 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
                 </div>
                 <div className="sp-checks">
                   <div className="sp-check good">
+                    {b.good.media?.src && <MediaSlot media={b.good.media} className="chk-media" />}
                     <h4>{b.good.title}</h4>
                     <ul>{b.good.items.map((it) => <li key={it}>{it}</li>)}</ul>
                   </div>
                   <div className="sp-check bad">
+                    {b.bad.media?.src && <MediaSlot media={b.bad.media} className="chk-media" />}
                     <h4>{b.bad.title}</h4>
                     <ul>{b.bad.items.map((it) => <li key={it}>{it}</li>)}</ul>
                   </div>

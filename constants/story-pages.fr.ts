@@ -1245,6 +1245,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 				kicker: "Pour qui est cette expérience ?",
 				title: "Pour réserver avec des attentes claires",
 				good: {
+					media: { src: "/images/ballena-gris/visitantes-sonriendo-en-la-lancha.jpg", alt: "Cinq voyageurs souriants dans le bateau, en gilet de sauvetage", position: "50% 25%" },
 					title: "C'est parfait si…",
 					items: [
 						"Vous rêvez de voir des baleines en liberté.",
@@ -1255,6 +1256,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 					],
 				},
 				bad: {
+					media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg", alt: "Baleine grise sortant la tête sur une mer calme" },
 					title: "Ce n'est peut-être pas pour vous si…",
 					items: [
 						"Vous cherchez une activité pleine d'adrénaline.",
