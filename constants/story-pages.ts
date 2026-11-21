@@ -1282,7 +1282,7 @@ export const storyPages: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Nuestra aventura comienza muy temprano. Dejamos La Paz mientras el desierto apenas empieza a iluminarse y ponemos rumbo hacia Puerto Chale, un pequeño pueblo pesquero en la costa del Pacífico. Durante el camino el paisaje cambia por completo.",
 						],
-						media: { suggest: "Amanecer cruzando el desierto de la Baja entre cardones gigantes, camino a Puerto Chale." },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desierto con cardones bajo un cielo rosado" },
 					},
 					{
 						title: "Abordamos y comienza el encuentro",
@@ -1298,6 +1298,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"No perseguimos a las ballenas. Apagamos el motor cuando es necesario, observamos y esperamos. Dejamos que ellas decidan si quieren acercarse. Porque esa es la esencia de esta experiencia.",
 							"A mediodía hacemos una pausa para comer en Puerto Chale, con comida preparada por la comunidad local.",
 						],
+						media: { src: "/images/ballena-gris/visitante-mirando-el-mar-desde-la-lancha.jpg", alt: "Visitante mirando el mar desde la lancha" },
 					},
 				],
 			},

@@ -1178,7 +1178,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 						paragraphs: [
 							"我们的探险从很早开始。我们在沙漠刚刚开始被阳光照亮时离开拉巴斯,前往太平洋海岸的小渔村查莱港。一路上,风景完全改变。",
 						],
-						media: { suggest: "日出时分,穿越下加利福尼亚沙漠,途经巨大的柱状仙人掌,前往查莱港。" },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "粉色天空下长着巨人柱仙人掌的沙漠" },
 					},
 					{
 						title: "我们登船,相遇开始",
@@ -1194,6 +1194,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"我们不会追逐鲸鱼。在需要时我们会关闭引擎,进行观察和等待,让它们决定是否靠近。因为这正是这次体验的核心所在。",
 							"中午,我们会在查莱港稍作停留用餐,享用当地社区准备的食物。",
 						],
+						media: { src: "/images/ballena-gris/visitante-mirando-el-mar-desde-la-lancha.jpg", alt: "游客在船上眺望大海" },
 					},
 				],
 			},

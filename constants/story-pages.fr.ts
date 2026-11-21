@@ -1179,7 +1179,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Notre aventure commence très tôt. Nous quittons La Paz alors que le désert commence à peine à s'éclairer et mettons le cap vers Puerto Chale, un petit village de pêcheurs sur la côte du Pacifique. En chemin, le paysage change complètement.",
 						],
-						media: { suggest: "Lever du soleil traversant le désert de Baja parmi des cactus cardón géants, en route vers Puerto Chale." },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Désert avec des cardons sous un ciel rose" },
 					},
 					{
 						title: "Nous embarquons et la rencontre commence",
@@ -1195,6 +1195,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"Nous ne poursuivons pas les baleines. Nous coupons le moteur quand c'est nécessaire, nous observons et nous attendons. Nous laissons celles-ci décider si elles veulent s'approcher. Car c'est l'essence même de cette expérience.",
 							"À midi, nous faisons une pause pour manger à Puerto Chale, avec des repas préparés par la communauté locale.",
 						],
+						media: { src: "/images/ballena-gris/visitante-mirando-el-mar-desde-la-lancha.jpg", alt: "Voyageuse regardant la mer depuis le bateau" },
 					},
 				],
 			},

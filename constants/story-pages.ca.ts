@@ -1385,7 +1385,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 						paragraphs: [
 							"La nostra aventura comença molt d'hora. Deixem La Paz mentre el desert tot just comença a il·luminar-se i posem rumb cap a Puerto Chale, un petit poble pesquer a la costa del Pacífic. Durant el camí el paisatge canvia completament.",
 						],
-						media: { suggest: "Alba creuant el desert de la Baixa entre cardons gegants, camí a Puerto Chale." },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desert amb cardons sota un cel rosat" },
 					},
 					{
 						title: "Embarquem i comença la trobada",
@@ -1401,6 +1401,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 							"No perseguim les balenes. Aturem el motor quan és necessari, observem i esperem. Deixem que elles decideixin si volen acostar-se. Perquè aquesta és l'essència d'aquesta experiència.",
 							"Al migdia fem una pausa per menjar a Puerto Chale, amb menjar preparat per la comunitat local.",
 						],
+						media: { src: "/images/ballena-gris/visitante-mirando-el-mar-desde-la-lancha.jpg", alt: "Visitant mirant el mar des de la barca" },
 					},
 				],
 			},
