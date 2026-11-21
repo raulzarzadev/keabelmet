@@ -1385,7 +1385,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 						paragraphs: [
 							"La nostra aventura comença molt d'hora. Deixem La Paz mentre el desert tot just comença a il·luminar-se i posem rumb cap a Puerto Chale, un petit poble pesquer a la costa del Pacífic. Durant el camí el paisatge canvia completament.",
 						],
-						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desert amb cardons sota un cel rosat" },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desert amb cardons al capvespre a Playa El Conejo" },
 					},
 					{
 						title: "Embarquem i comença la trobada",

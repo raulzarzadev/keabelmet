@@ -1179,7 +1179,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Our adventure begins very early. We leave La Paz as the desert is just beginning to light up and head toward Puerto Chale, a small fishing village on the Pacific coast. Along the way the landscape changes completely.",
 						],
-						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desert scrub and cardón cacti under a pink sky" },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desert scrub and cardón cacti at sunset near Playa El Conejo" },
 					},
 					{
 						title: "We board and the encounter begins",

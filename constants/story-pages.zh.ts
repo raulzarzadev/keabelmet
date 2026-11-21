@@ -1178,7 +1178,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 						paragraphs: [
 							"我们的探险从很早开始。我们在沙漠刚刚开始被阳光照亮时离开拉巴斯,前往太平洋海岸的小渔村查莱港。一路上,风景完全改变。",
 						],
-						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "粉色天空下长着巨人柱仙人掌的沙漠" },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "El Conejo海滩日落时长着巨人柱仙人掌的沙漠" },
 					},
 					{
 						title: "我们登船,相遇开始",

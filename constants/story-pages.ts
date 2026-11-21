@@ -1282,7 +1282,7 @@ export const storyPages: Record<string, StoryPageData> = {
 						paragraphs: [
 							"Nuestra aventura comienza muy temprano. Dejamos La Paz mientras el desierto apenas empieza a iluminarse y ponemos rumbo hacia Puerto Chale, un pequeño pueblo pesquero en la costa del Pacífico. Durante el camino el paisaje cambia por completo.",
 						],
-						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desierto con cardones bajo un cielo rosado" },
+						media: { src: "/images/ballena-gris/desierto-con-cardones-cielo-rosado.jpg", alt: "Desierto con cardones al atardecer en Playa El Conejo" },
 					},
 					{
 						title: "Abordamos y comienza el encuentro",
