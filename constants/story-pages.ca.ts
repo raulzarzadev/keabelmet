@@ -1534,7 +1534,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cua de balena grisa amb marques i cicatrius" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cua de balena grisa amb marques i cicatrius a Puerto Chale" },
 				quote: "Alguns dels moments més extraordinaris de la natura no es poden planejar. Només es poden rebre.",
 				align: "bottom",
 			},

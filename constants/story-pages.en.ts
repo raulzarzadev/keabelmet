@@ -1328,7 +1328,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Gray whale fluke with markings and scars" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Gray whale fluke with markings and scars in Puerto Chale" },
 				quote: "Some of nature's most extraordinary moments can't be planned. They can only be received.",
 				align: "bottom",
 			},

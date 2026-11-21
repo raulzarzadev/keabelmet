@@ -1431,7 +1431,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cola de ballena gris con marcas y cicatrices" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cola de ballena gris con marcas y cicatrices en Puerto Chale" },
 				quote: "Algunos de los momentos más extraordinarios de la naturaleza no pueden planearse. Solo pueden recibirse.",
 				align: "bottom",
 			},

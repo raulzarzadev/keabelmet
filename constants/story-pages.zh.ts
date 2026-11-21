@@ -1327,7 +1327,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "带有斑痕的灰鲸尾鳍" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "查莱港一头带有斑痕的灰鲸尾鳍" },
 				quote: "大自然中一些最非凡的时刻是无法计划的,它们只能被接受。",
 				align: "bottom",
 			},

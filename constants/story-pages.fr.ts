@@ -1328,7 +1328,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Nageoire caudale de baleine grise avec marques et cicatrices" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Nageoire caudale de baleine grise avec marques et cicatrices à Puerto Chale" },
 				quote: "Certains des moments les plus extraordinaires de la nature ne peuvent pas se planifier. Ils ne peuvent que se recevoir.",
 				align: "bottom",
 			},
