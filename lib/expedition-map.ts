@@ -9,8 +9,8 @@ import type { TourId } from "@/lib/tour-finder"
  * Fuentes:
  * - Puntos de salida confirmados por Keabelmet (2026-11-21). Coordenadas de
  *   OpenStreetMap: Muelle Fiscal y Playa Central (La Ventana) son el lugar
- *   exacto; Playa El Saltito viene del enlace de Google Maps que mandó Keabelmet; Cabo Pulmo y Puerto Chale son el centro del pueblo (falta el punto
- *   exacto de Cabo Pulmo Watersports y del muelle de Puerto Chale).
+ *   exacto. Playa El Saltito, Cabo Pulmo Watersports y el muelle de Puerto
+ *   Chale vienen de los enlaces de Google Maps que mandó Keabelmet.
  * - Tiempos de camino: OSRM (router.project-osrm.org, 2026-11-21), redondeados
  *   hacia arriba a 15 min porque suele quedarse corto. Son aproximados.
  * - Ruta La Paz → Puerto Chale: OSRM, geometría simplificada (≈ 179 km).
@@ -61,20 +61,20 @@ export const POINTS: Record<PointId, MapPoint> = {
 		exact: true,
 	},
 	"cabo-pulmo": {
-		lng: -109.424,
-		lat: 23.4454,
+		lng: -109.4298,
+		lat: 23.4362,
 		name: { es: "Cabo Pulmo Watersports", en: "Cabo Pulmo Watersports", fr: "Cabo Pulmo Watersports", zh: "Cabo Pulmo Watersports", ca: "Cabo Pulmo Watersports" },
 		place: { es: "Cabo Pulmo", en: "Cabo Pulmo", fr: "Cabo Pulmo", zh: "卡波普尔莫", ca: "Cabo Pulmo" },
-		mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cabo%20Pulmo%20Watersports",
-		exact: false,
+		mapsUrl: "https://maps.app.goo.gl/314ckegQdjZ3Dnd2A",
+		exact: true,
 	},
 	"puerto-chale": {
-		lng: -111.5532,
-		lat: 24.4235,
+		lng: -111.5546,
+		lat: 24.4228,
 		name: { es: "Muelle de Puerto Chale", en: "Puerto Chale pier", fr: "Jetée de Puerto Chale", zh: "查莱港码头", ca: "Moll de Puerto Chale" },
 		place: { es: "Puerto Chale, costa del Pacífico", en: "Puerto Chale, Pacific coast", fr: "Puerto Chale, côte Pacifique", zh: "查莱港，太平洋沿岸", ca: "Puerto Chale, costa del Pacífic" },
-		mapsUrl: "https://www.google.com/maps/search/?api=1&query=Puerto%20Chale%20Baja%20California%20Sur",
-		exact: false,
+		mapsUrl: "https://maps.app.goo.gl/ADNBeyhR2y5XhcYn9",
+		exact: true,
 	},
 }
 
@@ -95,7 +95,7 @@ export const ZONES: Record<ZoneId, MapZone> = {
 }
 
 /** Traslado incluido La Paz → Puerto Chale (carretera, OSRM simplificado). */
-export const ROUTE_LA_PAZ_CHALE: [number, number][] = [[-110.3184,24.1612],[-110.343,24.1309],[-110.3447,24.1161],[-110.3634,24.107],[-110.4043,24.0964],[-110.4339,24.1191],[-110.4739,24.1216],[-110.5585,24.0664],[-110.5685,24.0533],[-110.5729,24.0586],[-110.5799,24.0517],[-110.6436,24.0961],[-110.7146,24.0889],[-110.7361,24.1022],[-110.7608,24.134],[-110.7757,24.1418],[-110.7935,24.1458],[-110.8169,24.1398],[-110.8271,24.1516],[-110.8429,24.1554],[-110.8668,24.1539],[-110.9044,24.1613],[-110.9198,24.1573],[-110.925,24.1712],[-110.9453,24.1817],[-110.9511,24.2142],[-110.947,24.2299],[-110.9571,24.2679],[-110.9993,24.3468],[-111.0135,24.3494],[-111.0215,24.3636],[-111.0933,24.38],[-111.1369,24.4175],[-111.1438,24.4365],[-111.1641,24.4503],[-111.3411,24.5019],[-111.3673,24.5394],[-111.4688,24.5905],[-111.4815,24.5846],[-111.4961,24.5562],[-111.4965,24.5395],[-111.5073,24.5374],[-111.5091,24.4897],[-111.5209,24.4549],[-111.5532,24.4235]]
+export const ROUTE_LA_PAZ_CHALE: [number, number][] = [[-110.3184,24.1612],[-110.343,24.1309],[-110.3447,24.1161],[-110.3634,24.107],[-110.4043,24.0964],[-110.4339,24.1191],[-110.4739,24.1216],[-110.5585,24.0664],[-110.5685,24.0533],[-110.5729,24.0586],[-110.5799,24.0517],[-110.6436,24.0961],[-110.7146,24.0889],[-110.7361,24.1022],[-110.7608,24.134],[-110.7757,24.1418],[-110.7935,24.1458],[-110.8169,24.1398],[-110.8271,24.1516],[-110.8429,24.1554],[-110.8668,24.1539],[-110.9044,24.1613],[-110.9198,24.1573],[-110.925,24.1712],[-110.9453,24.1817],[-110.9511,24.2142],[-110.947,24.2299],[-110.9571,24.2679],[-110.9993,24.3468],[-111.0135,24.3494],[-111.0215,24.3636],[-111.0933,24.38],[-111.1369,24.4175],[-111.1438,24.4365],[-111.1641,24.4503],[-111.3411,24.5019],[-111.3673,24.5394],[-111.4688,24.5905],[-111.4815,24.5846],[-111.4961,24.5562],[-111.4965,24.5395],[-111.5073,24.5374],[-111.5091,24.4897],[-111.5209,24.4549],[-111.5532,24.4235],[-111.5546,24.4228]]
 export const ROUTE_LA_PAZ_CHALE_MIN = 150
 
 export interface Stay {
