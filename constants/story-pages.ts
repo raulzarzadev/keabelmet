@@ -1264,8 +1264,9 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dos ballenas grises vistas desde el aire" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Ballena gris asomando la cabeza en un mar en calma", position: "50% 90%" },
 				quote: "Durante unos segundos desaparece cualquier sensación de miedo. Solo queda admiración.",
+				align: "bottom",
 			},
 			{
 				type: "timeline",
@@ -1301,6 +1302,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "callout",
+				bg: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dos ballenas grises vistas desde el aire" },
 				ink2: true,
 				heading: "Aquí no buscamos tocar una ballena. Esperamos a que ella decida acercarse.",
 				paragraphs: [

@@ -49,6 +49,8 @@ export interface Media {
   suggest?: string
   /** Etiqueta pequeña sobre la imagen real. */
   caption?: string
+  /** Encuadre de la foto (object-position), p. ej. "50% 90%" para mostrar más la parte de abajo. */
+  position?: string
 }
 
 function MediaSlot({ media, className = "" }: { media: Media; className?: string }) {
@@ -59,7 +61,7 @@ function MediaSlot({ media, className = "" }: { media: Media; className?: string
       {media.video ? (
         <video src={media.video} autoPlay muted loop playsInline poster={media.src} />
       ) : media.src ? (
-        <img src={media.src} alt={media.alt ?? ""} loading="lazy" decoding="async" />
+        <img src={media.src} alt={media.alt ?? ""} loading="lazy" decoding="async" style={media.position ? { objectPosition: media.position } : undefined} />
       ) : (
         <div className="media-ph">
           <span className="ph-ic">
@@ -109,7 +111,7 @@ export interface StoryHero {
 export type Block =
   | { type: "quickfacts"; items: { value: string; label: string }[] }
   | { type: "prose"; id?: string; kicker?: string; heading?: string; paragraphs: (string | { lead: string })[]; ink2?: boolean }
-  | { type: "callout"; heading: string; paragraphs: string[]; ink2?: boolean }
+  | { type: "callout"; heading: string; paragraphs: string[]; ink2?: boolean; /** Foto de fondo detrás del recuadro. */ bg?: Media }
   | { type: "timeline"; id?: string; kicker?: string; title?: string; note?: string; ink2?: boolean; items: { time?: string; title: string; paragraphs: string[]; media?: Media }[] }
   | { type: "seasons"; kicker?: string; title?: string; intro?: string; ink2?: boolean; items: { name: string; text: string }[] }
   | { type: "faunaCalendar"; kicker?: string; title?: string; intro?: string; ink2?: boolean }
@@ -285,7 +287,8 @@ export default function StoryPage({ data, locale = defaultLocale, slug }: { data
 
           case "callout":
             return (
-              <section key={i} className={sec(b.ink2, "", true)}>
+              <section key={i} className={sec(b.ink2, b.bg?.src ? "sp-callout-bg" : "", !b.bg?.src)}>
+                {b.bg?.src && <MediaSlot media={b.bg} className="callout-bg" />}
                 <div className="sp-callout">
                   <h3>{b.heading}</h3>
                   {b.paragraphs.map((p, j) => <p key={j}>{p}</p>)}

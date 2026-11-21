@@ -1160,8 +1160,9 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "从空中俯瞰的两头灰鲸" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "灰鲸在平静的海面上探出头来", position: "50% 90%" },
 				quote: "有那么几秒钟,任何恐惧感都消失了,只剩下敬畏。",
+				align: "bottom",
 			},
 			{
 				type: "timeline",
@@ -1197,6 +1198,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "callout",
+				bg: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "从空中俯瞰的两头灰鲸" },
 				ink2: true,
 				heading: "在这里,我们不会试图触摸鲸鱼,我们等待它自己决定靠近。",
 				paragraphs: [

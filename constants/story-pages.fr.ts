@@ -1161,8 +1161,9 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Deux baleines grises vues du ciel" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Baleine grise sortant la tête sur une mer calme", position: "50% 90%" },
 				quote: "Pendant quelques secondes, toute sensation de peur disparaît. Il ne reste que l'admiration.",
+				align: "bottom",
 			},
 			{
 				type: "timeline",
@@ -1198,6 +1199,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "callout",
+				bg: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Deux baleines grises vues du ciel" },
 				ink2: true,
 				heading: "Ici, on ne cherche pas à toucher une baleine. On attend qu'elle décide de s'approcher.",
 				paragraphs: [

@@ -1367,8 +1367,9 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dues balenes grises vistes des de l'aire" },
+				media: { src: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-mar-en-calma.jpg", alt: "Balena grisa traient el cap en un mar en calma", position: "50% 90%" },
 				quote: "Durant uns segons desapareix qualsevol sensació de por. Només queda admiració.",
+				align: "bottom",
 			},
 			{
 				type: "timeline",
@@ -1404,6 +1405,7 @@ export const storyPagesCa: Record<string, StoryPageData> = {
 			},
 			{
 				type: "callout",
+				bg: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dues balenes grises vistes des de l'aire" },
 				ink2: true,
 				heading: "Aquí no busquem tocar una balena. Esperem que ella decideixi acostar-se.",
 				paragraphs: [
