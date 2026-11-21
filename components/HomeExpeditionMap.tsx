@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import ExpeditionMap, { type MapArea, type MapPin } from "@/components/ExpeditionMap"
 import { Price } from "@/contexts/CurrencyContext"
 import { getExperience } from "@/constants/experiences"
@@ -29,6 +29,15 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 	const lh = (path: string) => (locale === defaultLocale ? path : `/${locale}${path}`)
 	const [month, setMonth] = useState<number | null>(null)
 	const [active, setActive] = useState<TourId | null>(null)
+	const listRef = useRef<HTMLUListElement>(null)
+
+	// En celular el mapa queda fijo arriba: al elegir, la expedición se acomoda justo debajo de él
+	useEffect(() => {
+		if (!active || !listRef.current) return
+		if (!window.matchMedia("(max-width: 900px)").matches) return
+		const li = listRef.current.querySelector<HTMLElement>(`[data-id="${active}"]`)
+		li?.scrollIntoView({ behavior: "smooth", block: "nearest" })
+	}, [active])
 
 	const rows = useMemo<Row[]>(() => {
 		const out: Row[] = []
@@ -84,10 +93,10 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 				))}
 			</div>
 			<div className="xmap-home-grid">
-				<ul className="xmap-list">
+				<ul className="xmap-list" ref={listRef}>
 					{visible.length === 0 && <li className="xmap-empty">{t.noneInMonth}</li>}
 					{visible.map((r) => (
-						<li key={r.id}>
+						<li key={r.id} data-id={r.id}>
 							<button type="button" className={`xmap-item${active === r.id ? " on" : ""}`} onClick={() => setActive(active === r.id ? null : r.id)} aria-pressed={active === r.id}>
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img src={r.image} alt="" loading="lazy" decoding="async" />
