@@ -9,7 +9,7 @@ import type { TourId } from "@/lib/tour-finder"
  * Fuentes:
  * - Puntos de salida confirmados por Keabelmet (2026-11-21). Coordenadas de
  *   OpenStreetMap: Muelle Fiscal y Playa Central (La Ventana) son el lugar
- *   exacto; Cabo Pulmo y Puerto Chale son el centro del pueblo (falta el punto
+ *   exacto; Playa El Saltito viene del enlace de Google Maps que mandó Keabelmet; Cabo Pulmo y Puerto Chale son el centro del pueblo (falta el punto
  *   exacto de Cabo Pulmo Watersports y del muelle de Puerto Chale).
  * - Tiempos de camino: OSRM (router.project-osrm.org, 2026-11-21), redondeados
  *   hacia arriba a 15 min porque suele quedarse corto. Son aproximados.
@@ -19,7 +19,7 @@ import type { TourId } from "@/lib/tour-finder"
 
 type L = Record<Locale, string>
 
-export type PointId = "muelle-fiscal" | "la-ventana" | "cabo-pulmo" | "puerto-chale"
+export type PointId = "muelle-fiscal" | "la-ventana" | "cabo-pulmo" | "puerto-chale" | "el-saltito"
 export type StayId = "la-paz" | "la-ventana" | "los-barriles" | "todos-santos" | "san-jose" | "cabo-san-lucas"
 export type ZoneId = "bahia-la-paz" | "espiritu-santo" | "cerralvo" | "cabo-pulmo" | "bahia-magdalena"
 
@@ -50,6 +50,14 @@ export const POINTS: Record<PointId, MapPoint> = {
 		name: { es: "Keabelmet Expeditions · La Ventana", en: "Keabelmet Expeditions · La Ventana", fr: "Keabelmet Expeditions · La Ventana", zh: "Keabelmet Expeditions · 拉文塔纳", ca: "Keabelmet Expeditions · La Ventana" },
 		place: { es: "Playa Central, La Ventana", en: "Playa Central, La Ventana", fr: "Playa Central, La Ventana", zh: "拉文塔纳中央海滩", ca: "Playa Central, La Ventana" },
 		mapsUrl: "https://maps.google.com/?cid=7082429946220755653",
+		exact: true,
+	},
+	"el-saltito": {
+		lng: -110.1464,
+		lat: 24.2438,
+		name: { es: "Playa El Saltito", en: "Playa El Saltito", fr: "Playa El Saltito", zh: "El Saltito 海滩", ca: "Playa El Saltito" },
+		place: { es: "Costa del Golfo, al noreste de La Paz", en: "Gulf coast, northeast of La Paz", fr: "Côte du golfe, au nord-est de La Paz", zh: "拉巴斯东北方的海湾沿岸", ca: "Costa del golf, al nord-est de La Paz" },
+		mapsUrl: "https://maps.app.goo.gl/F1KgENP73mRCSkDu8",
 		exact: true,
 	},
 	"cabo-pulmo": {
@@ -94,16 +102,16 @@ export interface Stay {
 	id: StayId
 	name: L
 	/** Minutos aproximados en auto hasta cada punto de salida (y hasta La Paz para los traslados). */
-	minutes: Record<"muelle-fiscal" | "la-ventana" | "cabo-pulmo", number>
+	minutes: Record<"muelle-fiscal" | "la-ventana" | "cabo-pulmo" | "el-saltito", number>
 }
 
 export const STAYS: Stay[] = [
-	{ id: "la-paz", name: { es: "La Paz (centro y malecón)", en: "La Paz (downtown & waterfront)", fr: "La Paz (centre et front de mer)", zh: "拉巴斯（市中心与海滨）", ca: "La Paz (centre i passeig marítim)" }, minutes: { "muelle-fiscal": 15, "la-ventana": 60, "cabo-pulmo": 180 } },
-	{ id: "la-ventana", name: { es: "La Ventana / El Sargento", en: "La Ventana / El Sargento", fr: "La Ventana / El Sargento", zh: "拉文塔纳 / 埃尔萨尔亨托", ca: "La Ventana / El Sargento" }, minutes: { "muelle-fiscal": 60, "la-ventana": 10, "cabo-pulmo": 165 } },
-	{ id: "los-barriles", name: { es: "Los Barriles", en: "Los Barriles", fr: "Los Barriles", zh: "洛斯巴里莱斯", ca: "Los Barriles" }, minutes: { "muelle-fiscal": 105, "la-ventana": 90, "cabo-pulmo": 90 } },
-	{ id: "todos-santos", name: { es: "Todos Santos", en: "Todos Santos", fr: "Todos Santos", zh: "托多斯桑托斯", ca: "Todos Santos" }, minutes: { "muelle-fiscal": 75, "la-ventana": 120, "cabo-pulmo": 195 } },
-	{ id: "san-jose", name: { es: "San José del Cabo", en: "San José del Cabo", fr: "San José del Cabo", zh: "圣何塞德尔卡沃", ca: "San José del Cabo" }, minutes: { "muelle-fiscal": 165, "la-ventana": 180, "cabo-pulmo": 135 } },
-	{ id: "cabo-san-lucas", name: { es: "Cabo San Lucas", en: "Cabo San Lucas", fr: "Cabo San Lucas", zh: "卡波圣卢卡斯", ca: "Cabo San Lucas" }, minutes: { "muelle-fiscal": 135, "la-ventana": 180, "cabo-pulmo": 165 } },
+	{ id: "la-paz", name: { es: "La Paz (centro y malecón)", en: "La Paz (downtown & waterfront)", fr: "La Paz (centre et front de mer)", zh: "拉巴斯（市中心与海滨）", ca: "La Paz (centre i passeig marítim)" }, minutes: { "muelle-fiscal": 15, "la-ventana": 60, "cabo-pulmo": 180, "el-saltito": 45 } },
+	{ id: "la-ventana", name: { es: "La Ventana / El Sargento", en: "La Ventana / El Sargento", fr: "La Ventana / El Sargento", zh: "拉文塔纳 / 埃尔萨尔亨托", ca: "La Ventana / El Sargento" }, minutes: { "muelle-fiscal": 60, "la-ventana": 10, "cabo-pulmo": 165, "el-saltito": 90 } },
+	{ id: "los-barriles", name: { es: "Los Barriles", en: "Los Barriles", fr: "Los Barriles", zh: "洛斯巴里莱斯", ca: "Los Barriles" }, minutes: { "muelle-fiscal": 105, "la-ventana": 90, "cabo-pulmo": 90, "el-saltito": 135 } },
+	{ id: "todos-santos", name: { es: "Todos Santos", en: "Todos Santos", fr: "Todos Santos", zh: "托多斯桑托斯", ca: "Todos Santos" }, minutes: { "muelle-fiscal": 75, "la-ventana": 120, "cabo-pulmo": 195, "el-saltito": 105 } },
+	{ id: "san-jose", name: { es: "San José del Cabo", en: "San José del Cabo", fr: "San José del Cabo", zh: "圣何塞德尔卡沃", ca: "San José del Cabo" }, minutes: { "muelle-fiscal": 165, "la-ventana": 180, "cabo-pulmo": 135, "el-saltito": 195 } },
+	{ id: "cabo-san-lucas", name: { es: "Cabo San Lucas", en: "Cabo San Lucas", fr: "Cabo San Lucas", zh: "卡波圣卢卡斯", ca: "Cabo San Lucas" }, minutes: { "muelle-fiscal": 135, "la-ventana": 180, "cabo-pulmo": 165, "el-saltito": 180 } },
 ]
 
 export type Transport =
@@ -115,15 +123,16 @@ export type Transport =
 
 export interface ExpeditionMapInfo {
 	point: PointId
-	zone: ZoneId
-	transport: Transport
+	/** Zona aproximada de la actividad (sin zona: la actividad es en el mismo punto o no está confirmada). */
+	zone?: ZoneId
+	/** Sin dato: no se muestra la línea de transporte. */
+	transport?: Transport
 	/** Dibuja la ruta del traslado La Paz → Puerto Chale. */
 	route?: boolean
 }
 
 /**
- * Solo las expediciones con punto de salida confirmado. Scuba Discovery y la
- * certificación Open Water quedan fuera hasta confirmar su punto de encuentro.
+ * Solo las expediciones con punto de salida confirmado (todas, al 2026-11-21).
  */
 export const EXPEDITION_MAP: Partial<Record<TourId, ExpeditionMapInfo>> = {
 	"tiburon-ballena": { point: "muelle-fiscal", zone: "bahia-la-paz", transport: { kind: "none" } },
@@ -133,6 +142,8 @@ export const EXPEDITION_MAP: Partial<Record<TourId, ExpeditionMapInfo>> = {
 	"buceo-cabo-pulmo": { point: "cabo-pulmo", zone: "cabo-pulmo", transport: { kind: "none" } },
 	"tour-ballena-gris": { point: "puerto-chale", zone: "bahia-magdalena", transport: { kind: "included", pickup: "hotel" }, route: true },
 	"safari-bahia-magdalena": { point: "puerto-chale", zone: "bahia-magdalena", transport: { kind: "included", pickup: "point" }, route: true },
+	"scuba-discovery": { point: "el-saltito" },
+	"certificacion-open-water": { point: "muelle-fiscal" },
 }
 
 /** "≈ 2 h 30 min" en cada idioma. */

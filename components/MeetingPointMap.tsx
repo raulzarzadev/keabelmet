@@ -48,15 +48,16 @@ export default function MeetingPointMap({ slug, locale, tourTitle }: { slug: str
 	}, [info, locale])
 	const areas = useMemo<MapArea[]>(() => {
 		if (!info) return []
+		if (!info.zone) return []
 		const z = ZONES[info.zone]
 		return [{ id: info.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, label: z.name[locale] }]
 	}, [info, locale])
 
 	if (!info) return null
 	const point = POINTS[info.point]
-	const zone = ZONES[info.zone]
+	const zone = info.zone ? ZONES[info.zone] : null
 	const tr = info.transport
-	const included = tr.kind === "included"
+	const included = tr?.kind === "included"
 
 	let stayLine: string | null = null
 	let far = false
@@ -70,7 +71,7 @@ export default function MeetingPointMap({ slug, locale, tourTitle }: { slug: str
 				stayLine = `${formatMinutes(min, locale)} ${t.stayToLaPaz}`
 			}
 		} else {
-			const key = info.point as "muelle-fiscal" | "la-ventana" | "cabo-pulmo"
+			const key = info.point as "muelle-fiscal" | "la-ventana" | "cabo-pulmo" | "el-saltito"
 			const min = s.minutes[key]
 			far = min > FAR_MINUTES
 			stayLine = `${formatMinutes(min, locale)} ${t.stayTo}`
@@ -106,6 +107,7 @@ export default function MeetingPointMap({ slug, locale, tourTitle }: { slug: str
 							<a className="xmap-link" href={point.mapsUrl} target="_blank" rel="noopener noreferrer">{t.openMaps} ↗</a>
 						</div>
 					</div>
+					{tr && (
 					<div className="xmap-block">
 						<p className={`xmap-transport${included ? " yes" : ""}`}>
 							{tr.kind === "none" && t.transportNone}
@@ -113,11 +115,14 @@ export default function MeetingPointMap({ slug, locale, tourTitle }: { slug: str
 							{tr.kind === "included" && (tr.pickup === "hotel" ? t.transportIncludedHotel : t.transportIncludedPoint)}
 						</p>
 					</div>
+					)}
+					{zone && (
 					<div className="xmap-block">
 						<span className="xmap-tag">{t.zone}</span>
 						<strong className="xmap-zone">{zone.name[locale]}</strong>
 						<span className="xmap-note">{t.zoneNote}</span>
 					</div>
+					)}
 					<div className="xmap-block xmap-stay">
 						<label className="xmap-tag" htmlFor={`xmap-stay-${slug}`}>{t.stayQ}</label>
 						<select

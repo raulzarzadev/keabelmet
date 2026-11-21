@@ -231,7 +231,7 @@ export default function ExpeditionMap({
 		const pts: [number, number][] = [...ps.map((p) => [p.lng, p.lat] as [number, number]), ...as.flatMap((a) => circle(a.lng, a.lat, a.radiusKm, 8)), ...(focus?.route === false ? [] : route ?? [])]
 		if (!pts.length) return
 		const narrow = (box.current?.clientWidth ?? 800) < 560
-		map.fitBounds(bounds(pts), { padding: narrow ? { top: 50, bottom: 70, left: 30, right: 110 } : { top: 60, bottom: 70, left: 60, right: 170 }, maxZoom: 11.5, duration: 900 })
+		map.fitBounds(bounds(pts), { padding: narrow ? { top: 50, bottom: 70, left: 30, right: 110 } : { top: 60, bottom: 70, left: 60, right: 170 }, maxZoom: pts.length === 1 ? 9.6 : 11.5, duration: 900 })
 	}
 	useEffect(() => {
 		if (!ready) return

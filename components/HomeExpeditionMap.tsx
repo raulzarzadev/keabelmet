@@ -62,7 +62,7 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 	}, [visible.map((r) => r.id).join(","), locale])
 
 	const areas = useMemo<MapArea[]>(() => {
-		if (!selInfo) return []
+		if (!selInfo?.zone) return []
 		const z = ZONES[selInfo.zone]
 		return [{ id: selInfo.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, label: z.name[locale] }]
 	}, [selInfo, locale])
@@ -118,7 +118,7 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 						const first = visible.find((r) => r.point === pid)
 						if (first) setActive(first.id)
 					}}
-					focus={sel ? { pins: [sel.point], areas: selInfo ? [selInfo.zone] : [], route: !!selInfo?.route } : undefined}
+					focus={sel ? { pins: [sel.point], areas: selInfo?.zone ? [selInfo.zone] : [], route: !!selInfo?.route } : undefined}
 					label={t.mapLabel}
 					loadingText={t.loading}
 					uiText={t}
