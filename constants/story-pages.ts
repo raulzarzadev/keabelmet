@@ -1224,7 +1224,8 @@ export const storyPages: Record<string, StoryPageData> = {
 		breadcrumb: "Ballena Gris Puerto Chale",
 		hero: {
 			image: "/ballena-gris-spyhop-drone.jpg",
-			alt: "Ballena gris asomando la cabeza junto a una lancha en Puerto Chale",
+			imageMobile: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg",
+			alt: "Ballena gris asomando la cabeza fuera del agua",
 			kicker: "Puerto Chale · Ballena Gris",
 			title: "Imagina que una ballena de 40 toneladas decide acercarse a saludarte",
 			text: "No porque la llamaste. No porque la alimentaste. Simplemente porque quiso. Hay muy pocos lugares en el mundo donde un animal tan grande decide acercarse voluntariamente a las personas. Puerto Chale es uno de ellos. Y cuando ocurre, es imposible no sonreír.",
@@ -1256,7 +1257,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-close-up-magdalena-bay.jpg", alt: "Ballena gris cerca de la superficie en Puerto Chale" },
+				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Dos ballenas grises vistas desde el aire" },
 				quote: "Durante unos segundos desaparece cualquier sensación de miedo. Solo queda admiración.",
 			},
 			{
@@ -1280,7 +1281,7 @@ export const storyPages: Record<string, StoryPageData> = {
 							"Al llegar conocerás al capitán y abordaremos una embarcación diseñada para recorrer las tranquilas aguas donde las ballenas pasan el invierno. No pasan muchos minutos antes de escuchar el primer soplido. Después aparece una espalda gris rompiendo la superficie. Más adelante, una cola.",
 							"Y entonces comienza lo más emocionante.",
 						],
-						media: { src: "/gray-whale-in-ocean.jpg", alt: "Ballena gris rompiendo la superficie en Puerto Chale" },
+						media: { src: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg", alt: "Lomo de una ballena gris rompiendo la superficie, con montañas al fondo" },
 					},
 					{
 						title: "Observamos, esperamos y dejamos que ellas decidan",
@@ -1302,7 +1303,7 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaSplit",
-				media: { src: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg", alt: "Madre y cría de ballena gris nadando juntas en Puerto Chale" },
+				media: { src: "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg", alt: "Ballena gris asomando la cabeza junto a la lancha mientras una visitante saluda" },
 				kicker: "La curiosidad también existe en la naturaleza",
 				title: "No sucede siempre. Y precisamente por eso cada encuentro resulta tan especial.",
 				paragraphs: [
@@ -1430,14 +1431,14 @@ export const storyPages: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-breaching-sunset-baja-california.jpg", alt: "Ballena gris saltando al atardecer en Baja California" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Cola de ballena gris con marcas y cicatrices" },
 				quote: "Algunos de los momentos más extraordinarios de la naturaleza no pueden planearse. Solo pueden recibirse.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/ballena-gris-encuentro.jpg",
-				alt: "Encuentro con una ballena gris en Puerto Chale",
+				image: "/images/hero/ballena-gris-hero.jpeg",
+				alt: "Ballena gris en la superficie con montañas al fondo",
 				title: "Puede que recuerdes su tamaño o el sonido de su soplido. Pero recordarás el instante en que una ballena decidió acercarse a observarte.",
 				text: "Cuéntanos cuándo visitas Baja California Sur entre enero y marzo, y te ayudamos a reservar tu día con las ballenas grises de Puerto Chale.",
 				primaryLabel: "Consultar disponibilidad",

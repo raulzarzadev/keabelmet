@@ -6,7 +6,7 @@ export const magdalenaMesAMes: BlogPost = {
 	id: "magdalena-mes-a-mes",
 	category: "temporadas",
 	date: "2026-10-29",
-	cover: "/gray-whale-close-up-magdalena-bay.jpg",
+	cover: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg",
 	experiences: ["safari-bahia-magdalena", "tour-ballena-gris"],
 	related: ["surgencias", "corriente-de-california", "temperatura-agua-la-paz", "super-nino-2026"],
 	sources: fuentes(S.oisst, S.datosClorofila, S.datosSurgencia, S.cervantes2018, S.torres1995, S.gomez1996, S.gonzalez2012),
@@ -16,7 +16,7 @@ export const magdalenaMesAMes: BlogPost = {
 		metaTitle: "Bahía Magdalena mes a mes: temperatura del agua y plancton",
 		description: "Temperatura del mar, fitoplancton y surgencia en Bahía Magdalena para cada mes, con 30 años de datos satelitales de NOAA y NASA. Qué traje usar y qué pasa en el mar.",
 		excerpt: "¿Qué tan fría está el agua en diciembre? ¿Cuándo florece el plancton? Analizamos décadas de datos satelitales para responderlo mes a mes.",
-		coverAlt: "Ballena gris de cerca en Bahía Magdalena",
+		coverAlt: "Lomo de una ballena gris rompiendo la superficie, con montañas al fondo",
 		answer: "Frente a Bahía Magdalena, el mar promedia unos **18 °C en abril y mayo** (su punto más frío) y unos **26 °C en septiembre** (el más cálido); en la temporada del Sardine Run ronda **24 °C en noviembre y 22.5 °C en diciembre** (1991–2020) [^1]. El fitoplancton es máximo **de mayo a julio** [^2], tras la surgencia más fuerte del año en primavera [^3].",
 		blocks: [
 			{ type: "p", text: "Bahía Magdalena cambia muchísimo a lo largo del año. Para describirlo con datos y no con impresiones, analizamos 30 años de temperatura del mar, 20 años de clorofila vista desde el espacio y el índice de surgencia de NOAA." },
@@ -46,7 +46,7 @@ export const magdalenaMesAMes: BlogPost = {
 		metaTitle: "Magdalena Bay month by month: water temperature and plankton",
 		description: "Sea temperature, phytoplankton and upwelling at Magdalena Bay for every month, from 30 years of NOAA and NASA satellite data. What wetsuit to wear and what's going on.",
 		excerpt: "How cold is the water in December? When does the plankton bloom? We analyzed decades of satellite data to answer it month by month.",
-		coverAlt: "Close-up of a gray whale in Magdalena Bay",
+		coverAlt: "A gray whale back breaking the surface, with mountains behind",
 		answer: "Off Magdalena Bay, the sea averages about **18 °C in April and May** (its coldest) and about **26 °C in September** (its warmest); during Sardine Run season it's around **24 °C in November and 22.5 °C in December** (1991–2020) [^1]. Phytoplankton peaks **from May to July** [^2], after the year's strongest upwelling in spring [^3].",
 		blocks: [
 			{ type: "p", text: "Magdalena Bay changes a lot through the year. To describe it with data rather than impressions, we analyzed 30 years of sea temperature, 20 years of chlorophyll seen from space and NOAA's upwelling index." },

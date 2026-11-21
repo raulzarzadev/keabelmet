@@ -4,7 +4,7 @@ export const ballenaGrisMigracion: BlogPost = {
 	id: "ballena-gris-migracion",
 	category: "fauna",
 	date: "2026-10-29",
-	cover: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg",
+	cover: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg",
 	experiences: ["tour-ballena-gris"],
 	related: ["ballena-gris-temporada"],
 	sources: [
@@ -19,7 +19,7 @@ export const ballenaGrisMigracion: BlogPost = {
 		metaTitle: "¿Por qué las ballenas grises migran a Baja California?",
 		description: "Las ballenas grises viajan cada año desde el Ártico hasta las lagunas de Baja California para reproducirse y dar a luz. Una ballena llamada María recorrió 11,387 km en 149 días. Así es su migración.",
 		excerpt: "Una ballena llamada María nadó 11,387 km en 149 días, de Los Cabos a Alaska. Esta es la historia de uno de los viajes más impresionantes del océano.",
-		coverAlt: "Madre y cría de ballena gris nadando juntas en una laguna de Baja California",
+		coverAlt: "Dos ballenas grises vistas desde el aire",
 		answer: "Las ballenas grises viajan a Baja California **para reproducirse y dar a luz** en sus lagunas tranquilas, y regresan al Ártico a alimentarse en verano [^1]. Es un viaje enorme: unos **16,000 km ida y vuelta**, y en algunos casos más de 22,000 km [^2].",
 		blocks: [
 			{ type: "p", text: "Imagina nadar desde Alaska hasta Baja California, tener a tu cría en una laguna del desierto mexicano y luego regresar nadando, otra vez, hasta el Ártico. Cada año. Eso es lo que hacen las ballenas grises del Pacífico Nororiental." },
@@ -56,7 +56,7 @@ export const ballenaGrisMigracion: BlogPost = {
 		metaTitle: "Why gray whales migrate to Baja California: distance and route",
 		description: "Every year gray whales travel from the Arctic to the lagoons of Baja California to breed and give birth. A whale named María swam 11,387 km in 149 days. Here's how their migration works.",
 		excerpt: "A whale named María swam 11,387 km in 149 days, from Los Cabos to Alaska. This is the story of one of the ocean's most incredible journeys.",
-		coverAlt: "Gray whale mother and calf swimming together in a Baja California lagoon",
+		coverAlt: "Two gray whales seen from above",
 		answer: "Gray whales travel to Baja California **to breed and give birth** in its calm lagoons, then return to the Arctic to feed in summer [^1]. It's an enormous journey: about **10,000 miles (16,000 km) round trip**, and in some cases more than 14,000 miles [^2].",
 		blocks: [
 			{ type: "p", text: "Imagine swimming from Alaska to Baja California, having your calf in a lagoon on the edge of the Mexican desert, and then swimming all the way back to the Arctic. Every year. That's what Eastern North Pacific gray whales do." },

@@ -1121,7 +1121,8 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 		breadcrumb: "Baleine grise Puerto Chale",
 		hero: {
 			image: "/ballena-gris-spyhop-drone.jpg",
-			alt: "Baleine grise passant la tête près d'un bateau à Puerto Chale",
+			imageMobile: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg",
+			alt: "Baleine grise sortant la tête de l'eau",
 			kicker: "Puerto Chale · Baleine grise",
 			title: "Imaginez qu'une baleine de 40 tonnes décide de venir vous saluer",
 			text: "Pas parce que vous l'avez appelée. Pas parce que vous l'avez nourrie. Simplement parce qu'elle l'a voulu. Il existe très peu d'endroits au monde où un animal aussi grand décide volontairement de s'approcher des gens. Puerto Chale en fait partie. Et quand cela se produit, il est impossible de ne pas sourire.",
@@ -1153,7 +1154,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-close-up-magdalena-bay.jpg", alt: "Baleine grise près de la surface à Puerto Chale" },
+				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Deux baleines grises vues du ciel" },
 				quote: "Pendant quelques secondes, toute sensation de peur disparaît. Il ne reste que l'admiration.",
 			},
 			{
@@ -1177,7 +1178,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 							"À l'arrivée, vous rencontrerez le capitaine et nous embarquerons sur un bateau conçu pour parcourir les eaux calmes où les baleines passent l'hiver. Il ne s'écoule pas beaucoup de minutes avant d'entendre le premier souffle. Puis un dos gris qui brise la surface. Plus loin, une queue.",
 							"Et alors commence le plus passionnant.",
 						],
-						media: { src: "/gray-whale-in-ocean.jpg", alt: "Baleine grise brisant la surface à Puerto Chale" },
+						media: { src: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg", alt: "Le dos d'une baleine grise qui fend la surface, avec des montagnes au fond" },
 					},
 					{
 						title: "Nous observons, attendons et laissons les baleines décider",
@@ -1199,7 +1200,7 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaSplit",
-				media: { src: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg", alt: "Mère et petit de baleine grise nageant ensemble à Puerto Chale" },
+				media: { src: "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg", alt: "Une baleine grise sort la tête près du bateau pendant qu'une voyageuse salue" },
 				kicker: "La curiosité existe aussi dans la nature",
 				title: "Cela ne se produit pas toujours. Et c'est précisément pour cela que chaque rencontre est si spéciale.",
 				paragraphs: [
@@ -1327,14 +1328,14 @@ export const storyPagesFr: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-breaching-sunset-baja-california.jpg", alt: "Baleine grise bondissant au coucher du soleil en Basse-Californie" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Nageoire caudale de baleine grise avec marques et cicatrices" },
 				quote: "Certains des moments les plus extraordinaires de la nature ne peuvent pas se planifier. Ils ne peuvent que se recevoir.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/ballena-gris-encuentro.jpg",
-				alt: "Rencontre avec une baleine grise à Puerto Chale",
+				image: "/images/hero/ballena-gris-hero.jpeg",
+				alt: "Baleine grise en surface avec des montagnes au fond",
 				title: "Vous vous souviendrez peut-être de sa taille ou du bruit de son souffle. Mais vous vous souviendrez de l'instant où une baleine a décidé de s'approcher pour vous observer.",
 				text: "Dites-nous quand vous visitez la Basse-Californie du Sud entre janvier et mars, et nous vous aiderons à réserver votre journée avec les baleines grises de Puerto Chale.",
 				primaryLabel: "Vérifier les disponibilités",

@@ -1121,7 +1121,8 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 		breadcrumb: "Gray Whale Puerto Chale",
 		hero: {
 			image: "/ballena-gris-spyhop-drone.jpg",
-			alt: "Gray whale spy-hopping next to a boat in Puerto Chale",
+			imageMobile: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg",
+			alt: "Gray whale spyhopping with its head out of the water",
 			kicker: "Puerto Chale · Gray Whale",
 			title: "Imagine a 40-ton whale deciding to come say hello",
 			text: "Not because you called it. Not because you fed it. Simply because it wanted to. There are very few places in the world where an animal this large voluntarily approaches people. Puerto Chale is one of them. And when it happens, it's impossible not to smile.",
@@ -1153,7 +1154,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-close-up-magdalena-bay.jpg", alt: "Gray whale near the surface in Puerto Chale" },
+				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "Two gray whales seen from above" },
 				quote: "For a few seconds any sense of fear disappears. Only admiration remains.",
 			},
 			{
@@ -1177,7 +1178,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 							"On arrival you'll meet the captain and we'll board a boat designed to cruise the calm waters where the whales spend the winter. It doesn't take many minutes before the first blow. Then a gray back breaking the surface. Farther on, a tail.",
 							"And then the most exciting part begins.",
 						],
-						media: { src: "/gray-whale-in-ocean.jpg", alt: "Gray whale breaking the surface in Puerto Chale" },
+						media: { src: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg", alt: "A gray whale's back breaking the surface, with mountains behind" },
 					},
 					{
 						title: "We observe, wait and let them decide",
@@ -1199,7 +1200,7 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaSplit",
-				media: { src: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg", alt: "Gray whale mother and calf swimming together in Puerto Chale" },
+				media: { src: "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg", alt: "A gray whale spyhops beside the boat as a guest waves" },
 				kicker: "Curiosity exists in nature too",
 				title: "It doesn't happen every time. And that's exactly why every encounter is so special.",
 				paragraphs: [
@@ -1327,14 +1328,14 @@ export const storyPagesEn: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-breaching-sunset-baja-california.jpg", alt: "Gray whale breaching at sunset in Baja California" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "Gray whale fluke with markings and scars" },
 				quote: "Some of nature's most extraordinary moments can't be planned. They can only be received.",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/ballena-gris-encuentro.jpg",
-				alt: "Encounter with a gray whale in Puerto Chale",
+				image: "/images/hero/ballena-gris-hero.jpeg",
+				alt: "Gray whale at the surface with mountains behind",
 				title: "You may remember its size or the sound of its blow. But you'll remember the moment a whale decided to come closer to observe you.",
 				text: "Tell us when you're visiting Baja California Sur between January and March, and we'll help you book your day with the gray whales of Puerto Chale.",
 				primaryLabel: "Check availability",

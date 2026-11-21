@@ -1120,7 +1120,8 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 		breadcrumb: "查莱港灰鲸",
 		hero: {
 			image: "/ballena-gris-spyhop-drone.jpg",
-			alt: "灰鲸在查莱港的船只旁探头",
+			imageMobile: "/images/ballena-gris/ballena-gris-asomando-la-cabeza-vertical.jpg",
+			alt: "灰鲸将头探出水面",
 			kicker: "查莱港 · 灰鲸",
 			title: "想象一头40吨重的鲸鱼决定过来向你打招呼",
 			text: "不是因为你呼唤了它,也不是因为你喂养了它,只是因为它自己想这么做。世界上很少有地方,一种如此庞大的动物会自愿靠近人类。查莱港就是其中之一。而当这一切发生时,你不可能不微笑。",
@@ -1152,7 +1153,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-close-up-magdalena-bay.jpg", alt: "灰鲸在查莱港的近水面处" },
+				media: { src: "/images/ballena-gris/dos-ballenas-grises-desde-dron.jpg", alt: "从空中俯瞰的两头灰鲸" },
 				quote: "有那么几秒钟,任何恐惧感都消失了,只剩下敬畏。",
 			},
 			{
@@ -1176,7 +1177,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 							"到达后,你会认识船长,并登上一艘专为航行在鲸鱼过冬的平静水域而设计的船只。用不了多久你就会听到第一声喷气声,然后是一片灰色的背脊破水而出,再远处是一条尾巴。",
 							"接着,最激动人心的时刻开始了。",
 						],
-						media: { src: "/gray-whale-in-ocean.jpg", alt: "灰鲸在查莱港破水而出" },
+						media: { src: "/images/ballena-gris/lomo-de-ballena-gris-con-montanas.jpg", alt: "灰鲸背部破水而出，远处是群山" },
 					},
 					{
 						title: "我们观察、等待,并让鲸鱼自己决定",
@@ -1198,7 +1199,7 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaSplit",
-				media: { src: "/gray-whale-mother-and-calf-swimming-together-in-ba.jpg", alt: "灰鲸母子在查莱港一起游泳" },
+				media: { src: "/images/ballena-gris/ballena-gris-junto-a-la-lancha.jpg", alt: "一头灰鲸在船边探出头来，一位游客挥手致意" },
 				kicker: "好奇心也存在于大自然中",
 				title: "这并不总是发生。而正因如此,每次相遇都显得如此特别。",
 				paragraphs: [
@@ -1326,14 +1327,14 @@ export const storyPagesZh: Record<string, StoryPageData> = {
 			},
 			{
 				type: "mediaBanner",
-				media: { src: "/gray-whale-breaching-sunset-baja-california.jpg", alt: "灰鲸在南下加利福尼亚日落时跃起" },
+				media: { src: "/images/ballena-gris/cola-de-ballena-gris.jpg", alt: "带有斑痕的灰鲸尾鳍" },
 				quote: "大自然中一些最非凡的时刻是无法计划的,它们只能被接受。",
 				align: "bottom",
 			},
 			{
 				type: "finalCta",
-				image: "/ballena-gris-encuentro.jpg",
-				alt: "在查莱港与灰鲸相遇",
+				image: "/images/hero/ballena-gris-hero.jpeg",
+				alt: "浮出水面的灰鲸，远处是群山",
 				title: "你可能记得它的体型,或它喷气的声音,但你会记得的是那一头决定靠近观察你的鲸鱼。",
 				text: "告诉我们你1月至3月间何时到访南下加利福尼亚,我们会帮你预订与查莱港灰鲸共度的一天。",
 				primaryLabel: "查询空位",
