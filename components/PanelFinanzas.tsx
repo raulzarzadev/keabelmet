@@ -69,7 +69,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 
 	// Quién puso dinero de su bolsa, cuánto se le ha devuelto y cuánto se le debe
 	const people = [...new Set([...Object.keys(sum.contributions), ...Object.keys(sum.refunds)])]
-		.map((who) => ({ who, paid: sum.contributions[who] ?? 0, back: sum.refunds[who] ?? 0, settled: SETTLED_RE.test(who) }))
+		.map((who) => ({ who, paid: sum.contributions[who] ?? 0, back: sum.refunds[who] ?? 0, settled: SETTLED_RE.test(who) || settings.settled.includes(who) }))
 		.sort((a, b) => b.paid - a.paid)
 	const contribTotal = people.reduce((a, p) => a + p.paid, 0)
 	const owedTotal = people.reduce((a, p) => a + (p.settled ? 0 : Math.max(0, p.paid - p.back)), 0)
@@ -282,7 +282,27 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 							<b>{p.who}</b>
 							<span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Pagó de su bolsa</span><span>{money(p.paid)}</span></span>
 							<span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Ya se le devolvió</span><span>{money(p.back)}</span></span>
-							{p.settled ? <span className={s.muted}>Ya saldado fuera de Keabelmet: no se debe nada.</span> : <span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Pendiente</span><b className={p.paid - p.back > 0 ? s.warn : ""}>{money(Math.max(0, p.paid - p.back))}</b></span>}
+							{p.settled ? (
+								<span className={s.muted}>Ya no se le debe nada (saldado fuera de Keabelmet).</span>
+							) : (
+								<span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Pendiente</span><b className={p.paid - p.back > 0 ? s.warn : ""}>{money(Math.max(0, p.paid - p.back))}</b></span>
+							)}
+							{!SETTLED_RE.test(p.who) && (
+								<button
+									type="button"
+									className={s.linkBtn}
+									onClick={async () => {
+										const on = settings.settled.includes(p.who)
+										if (!confirm(on ? `¿Volver a contar lo que pagó ${p.who} como pendiente?` : `¿Marcar que a ${p.who} ya no se le debe nada?`)) return
+										const settled = on ? settings.settled.filter((x) => x !== p.who) : [...settings.settled, p.who]
+										// Solo guarda este cambio (no otros cambios sin guardar del reparto)
+										setSettings((x) => ({ ...x, settled }))
+										if (await post({ action: "saveFin", fin: { ...fin, settled } })) await reload()
+									}}
+								>
+									{settings.settled.includes(p.who) ? "Volver a contarlo como pendiente" : "Ya no se le debe nada"}
+								</button>
+							)}
 						</div>
 					))}
 				</div>

@@ -111,6 +111,8 @@ export interface FinSettings {
 	reparto: RepartoCat[]
 	/** Montos fijos al mes que salen de la utilidad antes de repartir porcentajes. */
 	fixed: FixedCommitment[]
+	/** Personas que pagaron de su bolsa pero a las que ya no se les debe nada (saldado fuera de Keabelmet). */
+	settled: string[]
 	/** Índice de la categoría que junta para la meta (pickup). */
 	goalIndex: number
 	goalName: string
@@ -130,6 +132,7 @@ export const DEFAULT_FIN: FinSettings = {
 		{ name: "Inversión (GBM / Acciones)", pct: 0.25, desc: "Inversión a largo plazo en bolsa" },
 	],
 	fixed: [],
+	settled: [],
 	goalIndex: 0,
 	goalName: "Pickup",
 	goalMin: 250000,
@@ -380,9 +383,11 @@ export function sanitizeFinSettings(raw: unknown): FinSettings {
 	const scenarios = Array.isArray(r.scenarios) && r.scenarios.length
 		? r.scenarios.slice(0, 6).map((s) => ({ name: String(s?.name ?? "").slice(0, 40) || "Escenario", profit: Math.max(0, num(s?.profit, 0)) }))
 		: DEFAULT_FIN.scenarios
+	const settled = Array.isArray(r.settled) ? [...new Set(r.settled.map((x) => String(x ?? "").trim().slice(0, 120)).filter(Boolean))].slice(0, 50) : []
 	return {
 		reparto,
 		fixed,
+		settled,
 		goalIndex: Math.max(0, Math.min(reparto.length - 1, Math.round(num(r.goalIndex, 0)))),
 		goalName: String(r.goalName ?? DEFAULT_FIN.goalName).slice(0, 60),
 		goalMin: Math.max(0, num(r.goalMin, DEFAULT_FIN.goalMin)),
