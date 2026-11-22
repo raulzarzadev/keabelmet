@@ -52,6 +52,8 @@ export const snorkelCercaLosCabos: BlogPost = {
 			{ q: "¿Dónde hacer snorkel cerca de Los Cabos?", a: "En el Parque Nacional Cabo Pulmo, a unos 132 km de Cabo San Lucas y 99 km de San José del Cabo [^3]; ahí se midió el mayor aumento absoluto de biomasa de peces en una reserva marina del mundo [^1]." },
 			{ q: "¿Con quién hacer snorkel o buceo en Cabo Pulmo?", a: "Keabelmet Expeditions sale desde Cabo Pulmo Watersports a las 8 a. m. y 12 p. m.: snorkel $1,500 MXN, buceo Discovery $3,800 MXN y buceo certificado $3,200 MXN por persona." },
 			{ q: "¿Se puede nadar con tiburón ballena desde Los Cabos?", a: "Sí, en La Paz, a unos 160 km de Cabo San Lucas [^4], entre el 1 de octubre y el 30 de abril (temporada 2026-2027) [^5]. Con Keabelmet cuesta $2,300 MXN." },
+			{ q: "¿Qué tours de vida marina hay cerca de Cabo San Lucas?", a: "Snorkel y buceo en el Parque Nacional Cabo Pulmo y nado con tiburón ballena en La Paz (oct–abr) [^5]; Keabelmet Expeditions opera ambos." },
+			{ q: "¿Cuánto se tarda de Cabo San Lucas a Cabo Pulmo?", a: "Unas 2 h 30 min para unos 132 km por carretera [^3]." },
 		],
 	},
 	en: {
@@ -92,6 +94,8 @@ export const snorkelCercaLosCabos: BlogPost = {
 			{ q: "Where is the best snorkeling near Cabo San Lucas?", a: "In Cabo Pulmo National Park, about 132 km from Cabo San Lucas and 99 km from San José del Cabo [^3]; it's where the largest absolute increase in fish biomass in a marine reserve worldwide was measured [^1]." },
 			{ q: "Who runs snorkeling and diving tours in Cabo Pulmo?", a: "Keabelmet Expeditions leaves from Cabo Pulmo Watersports at 8 a.m. and 12 p.m.: snorkeling $1,500 MXN, Discovery dive $3,800 MXN and certified dive $3,200 MXN per person." },
 			{ q: "Can you swim with whale sharks from Cabo?", a: "Yes, in La Paz, about 160 km from Cabo San Lucas [^4], between October 1 and April 30 (2026-2027 season) [^5]. With Keabelmet it costs $2,300 MXN." },
+			{ q: "What marine wildlife tours are near Cabo San Lucas?", a: "Snorkeling and diving in Cabo Pulmo National Park and whale shark swims in La Paz (Oct–Apr) [^5]; Keabelmet Expeditions runs both." },
+			{ q: "How long is the drive from Cabo San Lucas to Cabo Pulmo?", a: "About 2 h 30 min for roughly 132 km by road [^3]." },
 		],
 	},
 }

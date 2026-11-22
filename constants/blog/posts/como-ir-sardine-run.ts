@@ -48,6 +48,8 @@ export const comoIrSardineRun: BlogPost = {
 			{ q: "¿Cómo llego al Sardine Run desde La Paz?", a: "Por carretera a Puerto Chale, unos 178 km [^3]. Con Keabelmet el transporte sale de La Paz a las 5:00 a. m. y el safari empieza a las 8:00 a. m." },
 			{ q: "¿Cuándo es el Sardine Run?", a: "Keabelmet lo opera en noviembre y diciembre; la sardina del Pacífico se reproduce en la región de diciembre a julio, con máximo en enero y febrero [^1]." },
 			{ q: "¿Necesito experiencia para el Sardine Run?", a: "Sí: debes sentirte cómodo nadando en mar abierto y respirando con snorkel." },
+			{ q: "¿Cuánto cuesta el Sardine Run?", a: "Con Keabelmet, $4,500 MXN por persona con transporte redondo desde La Paz, equipo de snorkel y comida incluidos." },
+			{ q: "¿Dónde es el Sardine Run en México?", a: "En Baja California Sur, en el Pacífico frente a Isla Margarita, saliendo de Puerto Chale en Bahía Magdalena, a unos 178 km de La Paz [^3]." },
 		],
 	},
 	en: {
@@ -85,6 +87,8 @@ export const comoIrSardineRun: BlogPost = {
 			{ q: "How do I get to the Sardine Run from La Paz?", a: "By road to Puerto Chale, about 178 km [^3]. With Keabelmet, transport leaves La Paz at 5:00 a.m. and the safari starts at 8:00 a.m." },
 			{ q: "When is the Sardine Run?", a: "Keabelmet runs it in November and December; the Pacific sardine spawns in the region from December to July, peaking in January and February [^1]." },
 			{ q: "Do I need experience for the Sardine Run?", a: "Yes: you need to be comfortable swimming in open water and breathing through a snorkel." },
+			{ q: "How much does the Sardine Run cost?", a: "With Keabelmet, $4,500 MXN per person with round-trip transport from La Paz, snorkel gear and lunch included." },
+			{ q: "Where is the Sardine Run in Mexico?", a: "In Baja California Sur, in the Pacific off Isla Margarita, leaving from Puerto Chale in Magdalena Bay, about 178 km from La Paz [^3]." },
 		],
 	},
 }

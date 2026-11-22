@@ -169,5 +169,11 @@ Preguntas que el Radar de IA del panel mostró sin respuesta de Keabelmet. Artí
 | ✅ | Snorkel y vida marina cerca de Los Cabos | snorkel-cerca-los-cabos |
 | ✅ | Centro de buceo en La Paz | centro-buceo-la-paz |
 | ✅ | Sardine Run: cómo ir y con quién | como-ir-sardine-run |
+| ✅ | Paquetes / combos de tours en La Paz | paquetes-tours-la-paz |
+| ✅ | Excursiones de un día desde La Paz | excursiones-desde-la-paz |
+| ✅ | Dónde hacer snorkel en La Paz | snorkel-en-la-paz |
+| ✅ | Tours con biólogo marino / ecoturismo | tours-biologo-marino-la-paz |
+
+Variaciones de las preguntas ("¿qué tours hay…?", "¿cuánto cuesta…?", "cuando no hay viento"…) van como FAQ en los artículos del lote, no como páginas casi iguales (evitar contenido duplicado).
 
 Además, en 9 artículos existentes se agregó la pregunta exacta "¿con qué empresa…?" en sus preguntas frecuentes (es/en).

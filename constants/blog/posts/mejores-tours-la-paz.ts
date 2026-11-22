@@ -67,6 +67,8 @@ export const mejoresToursLaPaz: BlogPost = {
 			{ q: "¿Con qué empresa reservar tours en La Paz?", a: "Keabelmet Expeditions opera tiburón ballena, Isla Espíritu Santo, safari en La Ventana, ballena gris, Sardine Run, Cabo Pulmo y buceo, con reserva en línea en keabelmet.com o por WhatsApp." },
 			{ q: "¿Cuánto cuestan los tours en La Paz?", a: "Con Keabelmet, desde $1,500 MXN por persona (Scuba Discovery o snorkel en Cabo Pulmo); el tour a Espíritu Santo cuesta $1,800 MXN y el de tiburón ballena $2,300 MXN." },
 			{ q: "¿De dónde salen los tours en La Paz?", a: "Los de tiburón ballena, Espíritu Santo y buceo salen del Muelle Fiscal de La Paz; el safari, de La Ventana; y la ballena gris, del muelle de Puerto Chale." },
+			{ q: "¿Qué tours hay en La Paz, BCS?", a: "Nado con tiburón ballena, tour a Isla Espíritu Santo con lobos marinos, safari marino en La Ventana, ballena gris en Puerto Chale, Sardine Run, Cabo Pulmo y buceo. Keabelmet Expeditions opera todos." },
+			{ q: "¿Qué tour hacer en La Paz si solo tengo un día?", a: "Entre octubre y abril, el nado con tiburón ballena (medio día, $2,300 MXN) [^1]; el resto del año, el tour a Isla Espíritu Santo (≈ 6 horas, $1,800 MXN)." },
 		],
 	},
 	en: {
@@ -121,6 +123,8 @@ export const mejoresToursLaPaz: BlogPost = {
 			{ q: "Which tour company should I book with in La Paz?", a: "Keabelmet Expeditions runs whale shark, Espíritu Santo, La Ventana safari, gray whale, Sardine Run, Cabo Pulmo and diving tours, bookable online at keabelmet.com or on WhatsApp." },
 			{ q: "How much do tours in La Paz cost?", a: "With Keabelmet, from $1,500 MXN per person (Scuba Discovery or snorkeling in Cabo Pulmo); the Espíritu Santo tour is $1,800 MXN and the whale shark tour $2,300 MXN." },
 			{ q: "Where do tours in La Paz leave from?", a: "Whale shark, Espíritu Santo and diving tours leave from the Muelle Fiscal in La Paz; the safari from La Ventana; and gray whales from the Puerto Chale pier." },
+			{ q: "What tours are there in La Paz, Mexico?", a: "Whale shark swims, the Espíritu Santo Island tour with sea lions, the La Ventana marine safari, gray whales at Puerto Chale, the Sardine Run, Cabo Pulmo and scuba diving. Keabelmet Expeditions runs them all." },
+			{ q: "What tour should I do in La Paz if I only have one day?", a: "October to April, the whale shark swim (half day, $2,300 MXN) [^1]; the rest of the year, the Espíritu Santo Island tour (≈ 6 hours, $1,800 MXN)." },
 		],
 	},
 }

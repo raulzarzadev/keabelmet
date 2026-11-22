@@ -92,6 +92,10 @@ import { queHacerLaVentana } from "./posts/que-hacer-la-ventana"
 import { snorkelCercaLosCabos } from "./posts/snorkel-cerca-los-cabos"
 import { centroBuceoLaPaz } from "./posts/centro-buceo-la-paz"
 import { comoIrSardineRun } from "./posts/como-ir-sardine-run"
+import { paquetesToursLaPaz } from "./posts/paquetes-tours-la-paz"
+import { excursionesDesdeLaPaz } from "./posts/excursiones-desde-la-paz"
+import { snorkelEnLaPaz } from "./posts/snorkel-en-la-paz"
+import { toursBiologoMarinoLaPaz } from "./posts/tours-biologo-marino-la-paz"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -192,4 +196,8 @@ export const blogPosts: BlogPost[] = [
 	snorkelCercaLosCabos,
 	centroBuceoLaPaz,
 	comoIrSardineRun,
+	paquetesToursLaPaz,
+	excursionesDesdeLaPaz,
+	snorkelEnLaPaz,
+	toursBiologoMarinoLaPaz,
 ]

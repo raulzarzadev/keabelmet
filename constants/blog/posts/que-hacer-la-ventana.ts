@@ -47,6 +47,8 @@ export const queHacerLaVentana: BlogPost = {
 			{ q: "¿Con quién hacer un safari marino en La Ventana?", a: "Keabelmet Expeditions tiene base en Playa Central de La Ventana y opera el safari marino: unas 6 horas, $3,000 MXN por persona en salida compartida." },
 			{ q: "¿Cuándo hay móbulas en La Ventana?", a: "De marzo a agosto, con un pico en mayo [^1]." },
 			{ q: "¿Qué tan lejos está La Ventana de La Paz?", a: "Unos 48 km, alrededor de una hora en coche [^3]." },
+			{ q: "¿Qué hacer en La Ventana cuando no hay viento?", a: "Un safari marino en lancha para buscar móbulas, delfines, ballenas y tortugas; con Keabelmet sale de Playa Central a las 8:00 a. m. y cuesta $3,000 MXN por persona." },
+			{ q: "¿Hay tours en lancha en La Ventana, BCS?", a: "Sí: el safari marino de Keabelmet Expeditions, de unas 6 horas, para 2 a 8 personas, con guía biólogo marino, equipo de snorkel, neopreno, picnic y fotos." },
 		],
 	},
 	en: {
@@ -83,6 +85,8 @@ export const queHacerLaVentana: BlogPost = {
 			{ q: "Who runs marine safaris in La Ventana?", a: "Keabelmet Expeditions is based at Playa Central in La Ventana and runs the marine safari: about 6 hours, $3,000 MXN per person on a shared trip." },
 			{ q: "When are mobula rays in La Ventana?", a: "From March to August, peaking in May [^1]." },
 			{ q: "How far is La Ventana from La Paz?", a: "About 48 km, roughly an hour by car [^3]." },
+			{ q: "What can you do in La Ventana when there's no wind?", a: "A marine safari by boat to look for mobula rays, dolphins, whales and turtles; with Keabelmet it leaves Playa Central at 8:00 a.m. and costs $3,000 MXN per person." },
+			{ q: "Are there boat tours in La Ventana, Baja?", a: "Yes: Keabelmet Expeditions' marine safari, about 6 hours, for 2 to 8 people, with a marine biologist guide, snorkel gear, wetsuit, picnic and photos." },
 		],
 	},
 }

@@ -55,6 +55,8 @@ export const centroBuceoLaPaz: BlogPost = {
 			{ q: "¿Dónde tomo el curso Open Water en La Paz?", a: "Con Keabelmet, el curso sale del Muelle Fiscal de La Paz, cuesta $10,000 MXN e incluye el eLearning de PADI y 4 inmersiones." },
 			{ q: "¿Puedo bucear en La Paz sin certificación?", a: "Sí, con un instructor: Scuba Discovery desde la playa (máximo 6 m) o buceo Discovery en Espíritu Santo. Con curso introductorio no se pasa de 12 metros [^1]." },
 			{ q: "¿Se puede bucear con lobos marinos todo el año?", a: "No en Los Islotes: del 1 de junio al 31 de agosto se restringe por la temporada reproductiva [^3]." },
+			{ q: "¿Dónde bucear en La Paz, BCS?", a: "En Los Islotes con lobos marinos, en El Bajo de Espíritu Santo [^4] y en los arrecifes del archipiélago. Keabelmet sale del Muelle Fiscal a las 8:00 a. m. con 2 inmersiones." },
+			{ q: "¿Cuánto cuesta bucear en La Paz?", a: "Con Keabelmet: $3,800 MXN dos inmersiones certificado, $4,200 MXN Discovery en Espíritu Santo y $1,500 MXN el Scuba Discovery desde la playa." },
 		],
 	},
 	en: {
@@ -98,6 +100,8 @@ export const centroBuceoLaPaz: BlogPost = {
 			{ q: "Where can I take an Open Water course in La Paz?", a: "With Keabelmet, the course leaves from the Muelle Fiscal in La Paz, costs $10,000 MXN and includes PADI eLearning and 4 dives." },
 			{ q: "Can I dive in La Paz without a certification?", a: "Yes, with an instructor: Scuba Discovery from the beach (6 m max) or a Discovery dive at Espíritu Santo. With an introductory course you don't go below 12 meters [^1]." },
 			{ q: "Can you dive with sea lions year-round?", a: "Not at Los Islotes: from June 1 to August 31 it's restricted during the breeding season [^3]." },
+			{ q: "Where can I scuba dive in La Paz, Mexico?", a: "At Los Islotes with sea lions, El Bajo de Espíritu Santo [^4] and the archipelago reefs. Keabelmet leaves the Muelle Fiscal at 8:00 a.m. for 2 dives." },
+			{ q: "How much does scuba diving in La Paz cost?", a: "With Keabelmet: $3,800 MXN for two certified dives, $4,200 MXN for a Discovery dive at Espíritu Santo and $1,500 MXN for Scuba Discovery from the beach." },
 		],
 	},
 }

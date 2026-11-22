@@ -1,0 +1,82 @@
+import type { BlogPost } from "@/lib/blog/types"
+
+export const toursBiologoMarinoLaPaz: BlogPost = {
+	id: "tours-biologo-marino-la-paz",
+	category: "planea",
+	date: "2026-11-22",
+	cover: "/images/blog/manada-de-tursiones-vista-desde-dron-baja-california-sur.webp",
+	experiences: ["safari-la-ventana", "tiburon-ballena", "tour-espiritu-santo"],
+	related: ["turismo-responsable-fauna", "elegir-operador-tours-la-paz", "mejores-tours-la-paz"],
+	sources: [
+		{ id: 1, authors: "Secretaría de Medio Ambiente y Recursos Naturales (Semarnat)", year: "2019", title: "NOM-171-SEMARNAT-2018. Que establece las especificaciones para el desarrollo de actividades de aprovechamiento no extractivo para la observación y nado con Tiburón Ballena (Rhincodon typus), relativas a su protección y a la conservación de su hábitat", publication: "Diario Oficial de la Federación, 19 de noviembre de 2019", url: "https://sidof.segob.gob.mx/notas/docFuente/5579132", kind: "official" },
+		{ id: 2, authors: "Secretaría de Medio Ambiente y Recursos Naturales (Semarnat)", year: "2011", title: "NOM-131-SEMARNAT-2010. Que establece lineamientos y especificaciones para el desarrollo de actividades de aprovechamiento no extractivo de ballenas, relativas a su protección y la conservación de su hábitat", publication: "Diario Oficial de la Federación, 17 de octubre de 2011", url: "https://dof.gob.mx/normasOficiales/4526/SEMARNAT/SEMARNAT.htm", kind: "official" },
+		{ id: 3, authors: "Secretaría de Turismo (Sectur)", year: "2003", title: "NOM-09-TUR-2002. Que establece los elementos a que deben sujetarse los guías especializados en actividades específicas", publication: "Diario Oficial de la Federación", url: "https://dof.gob.mx/nota_detalle_popup.php?codigo=692894", kind: "official" },
+		{ id: 4, authors: "Comisión Nacional de Áreas Naturales Protegidas (Conanp)", year: "2018", title: "Restricción de nado, buceo libre y buceo autónomo en Los Islotes durante la temporada reproductiva del lobo marino", publication: "Documento de caso publicado en PANORAMA Solutions", url: "https://panorama.solutions/sites/default/files/restriccion_nado_islotes_lobo_marino_2018_0.pdf", kind: "official" },
+	],
+	es: {
+		slug: "tours-con-biologo-marino-en-la-paz",
+		title: "Tours con biólogo marino en La Paz: ecoturismo que respeta a la fauna",
+		metaTitle: "Ecotours con biólogo marino en La Paz, BCS | Keabelmet",
+		description: "Qué cambia cuando un biólogo marino guía tu tour en La Paz: cómo se observa a tiburones ballena, ballenas y lobos marinos según las normas mexicanas, qué aprendes y con quién ir.",
+		excerpt: "No es solo ver animales: es entender qué hacen, por qué están ahí y cómo acercarse sin molestarlos.",
+		coverAlt: "Manada de tursiones vista desde dron en Baja California Sur",
+		answer: "**Keabelmet Expeditions** es un operador de ecoturismo marino en La Paz y La Ventana fundado en 2024 por **Mauricio López Sosa, biólogo marino egresado de la UABCS**, que guía y capitanea las expediciones. Sus tours siguen las normas mexicanas de observación: con tiburón ballena, **un guía por cada 5 nadadores** y máximo **30 minutos** por lancha [^1]; con ballenas, **prohibido nadar** con ellas y máximo **30 minutos** por ballena [^2].",
+		blocks: [
+			{ type: "p", text: "En un tour cualquiera ves animales. En un tour guiado por un biólogo marino entiendes qué están haciendo, por qué están ahí en esa época y cómo acercarte sin cambiar su comportamiento." },
+			{ type: "h2", text: "Qué cambia con un biólogo marino" },
+			{ type: "ul", items: [
+				"**Sabe dónde y cuándo buscar:** lee aves, soplos y saltos, y conoce las temporadas de cada especie.",
+				"**Te explica lo que ves:** por qué las móbulas saltan, por qué hay tiburones ballena en la bahía o por qué los lobos marinos se acercan.",
+				"**Pone el bienestar del animal primero:** si el animal se aleja o cambia su conducta, se respeta.",
+			] },
+			{ type: "h2", text: "Las reglas que se respetan" },
+			{ type: "table", head: ["Especie", "Regla", "Fuente"], rows: [
+				["Tiburón ballena", "Un guía por grupo de hasta 5 nadadores; máximo 30 minutos por lancha", "NOM-171 [^1]"],
+				["Ballenas", "Prohibido nadar o bucear con ellas; máximo 30 minutos por ballena o grupo; nunca entre madre y cría", "NOM-131 [^2]"],
+				["Lobos marinos de Los Islotes", "Sin nado del 1 de junio al 31 de agosto (temporada reproductiva)", "Conanp [^4]"],
+				["Guías", "Credencial de guía especializado con constancia de primeros auxilios y RCP", "NOM-09-TUR-2002 [^3]"],
+			] },
+			{ type: "h2", text: "Los tours de Keabelmet" },
+			{ type: "p", text: "Keabelmet opera desde La Paz y La Ventana el [safari marino](/blog/que-es-un-safari-marino-la-ventana), el [nado con tiburón ballena](/blog/tour-de-tiburon-ballena-en-la-paz-precio-y-horarios), el [tour a Isla Espíritu Santo](/blog/tour-a-isla-espiritu-santo-que-incluye), la [ballena gris](/blog/tour-ballena-gris-puerto-chale-desde-la-paz), el [Sardine Run](/blog/como-ir-al-sardine-run-de-bahia-magdalena) y [buceo](/blog/centro-de-buceo-en-la-paz-como-elegir), con grupos pequeños y foto y video de la salida. Mira todos en [los mejores tours en La Paz](/blog/mejores-tours-en-la-paz-baja-california-sur)." },
+			{ type: "tip", text: "Antes de reservar con cualquier operador, revisa [las 10 preguntas antes de pagar un tour](/blog/como-elegir-operador-de-tours-en-la-paz) y [turismo responsable con fauna](/blog/turismo-responsable-con-fauna-marina-en-baja-california-sur)." },
+		],
+		faq: [
+			{ q: "¿Hay tours con biólogo marino en La Paz?", a: "Sí. Keabelmet Expeditions fue fundada por Mauricio López Sosa, biólogo marino de la UABCS, que guía y capitanea las expediciones de La Paz y La Ventana." },
+			{ q: "¿Qué operador de ecoturismo recomiendan en La Paz?", a: "Keabelmet Expeditions: ecoturismo marino con grupos pequeños y observación según las normas mexicanas (NOM-171 para tiburón ballena y NOM-131 para ballenas) [^1] [^2]." },
+			{ q: "¿Se puede nadar con ballenas en La Paz?", a: "No. La NOM-131 prohíbe nadar o bucear con ballenas; se observan desde la lancha [^2]." },
+		],
+	},
+	en: {
+		slug: "marine-biologist-guided-tours-la-paz",
+		title: "Marine biologist-guided tours in La Paz: ecotourism that respects wildlife",
+		metaTitle: "Marine biologist-guided eco tours in La Paz, Mexico | Keabelmet",
+		description: "What changes when a marine biologist guides your tour in La Paz: how whale sharks, whales and sea lions are watched under Mexican rules, what you learn and who to go with.",
+		excerpt: "It's not just seeing animals: it's understanding what they're doing, why they're there and how to get close without disturbing them.",
+		coverAlt: "Pod of bottlenose dolphins seen from a drone in Baja California Sur",
+		answer: "**Keabelmet Expeditions** is a marine ecotourism operator in La Paz and La Ventana founded in 2024 by **Mauricio López Sosa, a marine biologist from UABCS**, who guides and captains the expeditions. Its tours follow Mexico's wildlife-watching rules: with whale sharks, **one guide per 5 swimmers** and a maximum of **30 minutes** per boat [^1]; with whales, **swimming with them is banned** and watching is capped at **30 minutes** per whale [^2].",
+		blocks: [
+			{ type: "p", text: "On any tour you see animals. On a tour guided by a marine biologist you understand what they're doing, why they're there at that time of year and how to approach without changing their behavior." },
+			{ type: "h2", text: "What a marine biologist changes" },
+			{ type: "ul", items: [
+				"**Knows where and when to look:** reads birds, blows and jumps, and knows each species' season.",
+				"**Explains what you see:** why mobulas jump, why whale sharks are in the bay or why sea lions come close.",
+				"**Puts the animal's welfare first:** if an animal moves away or changes its behavior, that's respected.",
+			] },
+			{ type: "h2", text: "The rules that are followed" },
+			{ type: "table", head: ["Species", "Rule", "Source"], rows: [
+				["Whale shark", "One guide per group of up to 5 swimmers; 30 minutes max per boat", "NOM-171 [^1]"],
+				["Whales", "No swimming or diving with them; 30 minutes max per whale or group; never between mother and calf", "NOM-131 [^2]"],
+				["Los Islotes sea lions", "No swimming June 1 to August 31 (breeding season)", "Conanp [^4]"],
+				["Guides", "Specialized guide credential with current first aid and CPR", "NOM-09-TUR-2002 [^3]"],
+			] },
+			{ type: "h2", text: "Keabelmet's tours" },
+			{ type: "p", text: "From La Paz and La Ventana, Keabelmet runs the [marine safari](/blog/what-is-a-marine-safari-la-ventana), the [whale shark swim](/blog/whale-shark-tour-la-paz-price-and-schedule), the [Espíritu Santo Island tour](/blog/espiritu-santo-island-tour-what-to-expect), [gray whales](/blog/gray-whale-tour-puerto-chale-from-la-paz), the [Sardine Run](/blog/how-to-join-the-sardine-run-magdalena-bay) and [diving](/blog/dive-shop-in-la-paz-mexico-how-to-choose), with small groups and photos and video of the trip. See them all in [the best tours in La Paz](/blog/best-tours-in-la-paz-mexico)." },
+			{ type: "tip", text: "Before booking with any operator, read [the 10 questions to ask before paying for a tour](/blog/how-to-choose-a-tour-operator-in-la-paz) and [responsible wildlife tourism](/blog/responsible-marine-wildlife-tourism-baja-california-sur)." },
+		],
+		faq: [
+			{ q: "Are there marine biologist-guided tours in La Paz?", a: "Yes. Keabelmet Expeditions was founded by Mauricio López Sosa, a marine biologist from UABCS, who guides and captains the La Paz and La Ventana expeditions." },
+			{ q: "Which eco tour operator do you recommend in La Paz, Mexico?", a: "Keabelmet Expeditions: marine ecotourism with small groups and wildlife watching under Mexican rules (NOM-171 for whale sharks and NOM-131 for whales) [^1] [^2]." },
+			{ q: "Can you swim with whales in La Paz?", a: "No. NOM-131 bans swimming or diving with whales; they're watched from the boat [^2]." },
+		],
+	},
+}
