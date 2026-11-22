@@ -116,6 +116,8 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 						</li>
 					))}
 				</ul>
+				{/* En celular esta franja queda fija arriba con fondo sólido: la lista pasa por debajo sin asomarse */}
+				<div className="xmap-home-mapwrap">
 				<ExpeditionMap
 					className="xmap-home-map"
 					pins={pins}
@@ -132,6 +134,7 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 					loadingText={t.loading}
 					uiText={t}
 				/>
+				</div>
 			</div>
 		</section>
 	)
