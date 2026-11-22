@@ -8,7 +8,7 @@ import { checkDates, slugs } from "@/lib/whatsapp/dates"
 
 /**
  * Asistente de WhatsApp: contesta dudas, cotiza con precios del catálogo y
- * manda el link de anticipo (20 %). Cuando algo se sale de lo normal, pausa el
+ * manda el link de pago (completo, o anticipo del 20 % con 3 o más actividades). Cuando algo se sale de lo normal, pausa el
  * bot en ese chat y avisa al equipo.
  */
 
@@ -26,7 +26,7 @@ function anthropic(): Anthropic {
 
 const SYSTEM = `Eres el asistente de WhatsApp de Keabelmet Expeditions, operador de ecoturismo marino en La Paz y La Ventana, Baja California Sur (México). Atiendes el número de WhatsApp Business de la empresa, junto con el equipo humano, que puede entrar a la conversación en cualquier momento.
 
-Tu trabajo: resolver dudas sobre las expediciones, cotizar y, cuando el cliente quiera reservar, mandarle su link de anticipo. Escribe como alguien del equipo: cálido, breve y claro, en el idioma del cliente, con el formato de WhatsApp (*negritas* con un asterisco, sin tablas ni encabezados markdown, emojis con moderación). Mensajes cortos; si hay varias opciones, una lista sencilla.
+Tu trabajo: resolver dudas sobre las expediciones, cotizar y, cuando el cliente quiera reservar, mandarle su link de pago. Escribe como alguien del equipo: cálido, breve y claro, en el idioma del cliente, con el formato de WhatsApp (*negritas* con un asterisco, sin tablas ni encabezados markdown, emojis con moderación). Mensajes cortos; si hay varias opciones, una lista sencilla.
 
 Cómo trabajar:
 - Usa solo la información del catálogo de abajo y de tus herramientas. Si algo no está (traslados especiales, peticiones médicas, etc.), no lo inventes: dilo y ofrece que alguien del equipo lo confirme.
@@ -44,8 +44,8 @@ Vender bien, sin presionar:
 - No inventes escasez ni urgencia.
 - Nunca escribas un precio que no venga del catálogo o de la herramienta cotizar. Para totales, descuentos y anticipos usa siempre cotizar; no hagas cuentas por tu cuenta.
 - Para cotizar necesitas actividad (y modalidad si hay varias), número de personas y, de preferencia, fecha. Pregunta lo que falte, de una o dos cosas a la vez.
-- Para reservar: el cliente paga un anticipo del 20 % con tarjeta en el link y el resto el día de la actividad. Antes de mandar el link necesitas fecha, personas y el nombre del cliente, y que el cliente diga que quiere reservar. Usa enviar_link_anticipo e incluye en tu mensaje el link exacto que te devuelva.
-- El equipo confirma punto de encuentro y logística después del anticipo.
+- Para reservar: con 1 o 2 actividades el cliente paga el total con tarjeta en el link. Con 3 o más actividades (sin importar cuántas personas) puede elegir pagar todo o apartar con un anticipo del 20 % y pagar el resto el día de la actividad; pregúntale cuál prefiere si no lo ha dicho. Si alguien con 1 o 2 actividades pide anticipo, explícale con amabilidad que el anticipo es para reservas de 3 o más actividades. Antes de mandar el link necesitas fecha, personas y el nombre del cliente, y que el cliente diga que quiere reservar. Usa enviar_link_anticipo e incluye en tu mensaje el link exacto que te devuelva.
+- El equipo confirma punto de encuentro y logística después del pago.
 - Si el cliente pide algo de un precio "a cotizar" (privados, grupos grandes), quiere pagar por transferencia o en efectivo, tiene una queja, quiere cancelar, cambiar o pedir reembolso de una reserva, pide hablar con una persona, o la conversación se sale de lo que puedes resolver con seguridad, usa pasar_a_humano y despídete diciendo que alguien del equipo le escribe en breve.
 - Mensajes marcados como [Equipo Keabelmet] los escribió una persona del equipo: respeta lo que haya dicho o acordado.
 - Si el cliente manda una nota de voz, foto o archivo que no puedes ver, pídele amablemente que lo escriba; si insiste o parece importante, pasa a humano.
@@ -100,7 +100,7 @@ const TOOLS: Anthropic.Beta.BetaTool[] = [
 	{
 		name: "cotizar",
 		description:
-			"Calcula el precio de una o varias actividades con los precios del catálogo: subtotal por actividad, descuentos de paquete, total y anticipo del 20 %. Valida temporada, fecha y cupo máximo. No crea ninguna reserva.",
+			"Calcula el precio de una o varias actividades con los precios del catálogo: subtotal por actividad, descuentos de paquete, total y forma de pago (pago completo; anticipo del 20 % solo con 3 o más actividades). Valida temporada, fecha y cupo máximo. No crea ninguna reserva.",
 		strict: true,
 		input_schema: {
 			type: "object",
@@ -112,15 +112,16 @@ const TOOLS: Anthropic.Beta.BetaTool[] = [
 	{
 		name: "enviar_link_anticipo",
 		description:
-			"Genera el link de pago del anticipo (20 %) para la reserva y avisa al equipo. Úsalo solo cuando el cliente ya confirmó que quiere reservar y tienes fecha, personas y su nombre. Devuelve el link que debes incluir en tu respuesta.",
+			"Genera el link de pago de la reserva y avisa al equipo: cobra el total, o el anticipo del 20 % si son 3 o más actividades y el cliente prefiere apartar. Úsalo solo cuando el cliente ya confirmó que quiere reservar y tienes fecha, personas y su nombre. Devuelve el link que debes incluir en tu respuesta.",
 		strict: true,
 		input_schema: {
 			type: "object",
 			properties: {
 				actividades: { type: "array", items: ITEM_SCHEMA },
 				nombre_cliente: { type: "string", description: "Nombre del cliente para la reserva" },
+				anticipo: { type: "boolean", description: "true solo si son 3 o más actividades y el cliente quiere apartar con el 20 %; false para pagar el total. Con 1 o 2 actividades siempre se cobra el total." },
 			},
-			required: ["actividades", "nombre_cliente"],
+			required: ["actividades", "nombre_cliente", "anticipo"],
 			additionalProperties: false,
 		},
 	},
@@ -191,13 +192,16 @@ async function runTool(name: string, input: Record<string, unknown>, ctx: AgentC
 		if (q.lines.some((l) => !l.dateISO)) return { content: "Falta la fecha de alguna actividad; pídesela al cliente.", isError: true }
 		const customer = String(input.nombre_cliente ?? "").trim() || ctx.name || ""
 		if (!customer) return { content: "Falta el nombre del cliente.", isError: true }
-		const { path } = createDepositDeal(q, customer, ctx.locale)
+		const deposit = input.anticipo === true && q.depositAllowed
+		const { path, totals } = createDepositDeal(q, customer, ctx.locale, !deposit)
+		const kind = deposit ? "anticipo" : "pago completo"
 		const id = await saveShortLink(path)
 		const url = `${SITE_URL}/api/pago/${id}`
 		const summary = quoteSummary(q)
-		await appendMessage(ctx.phone, { id: `note-${Date.now()}`, by: "bot", text: "", at: Date.now(), note: `Link de anticipo enviado (${url})` })
-		await notifyOwner("💬 Link de anticipo enviado por el bot", { phone: ctx.phone, name: customer, body: `${summary}\n\nLink: ${url}` })
-		return { content: `Link de anticipo (vence en 7 días): ${url}\n\n${summary}` }
+		await appendMessage(ctx.phone, { id: `note-${Date.now()}`, by: "bot", text: "", at: Date.now(), note: `Link de ${kind} enviado (${url})` })
+		await notifyOwner(`💬 Link de ${kind} enviado por el bot`, { phone: ctx.phone, name: customer, body: `${summary}\n\nCobro en el link: ${totals.depositMxn} MXN (${kind})\nLink: ${url}` })
+		const why = input.anticipo === true && !q.depositAllowed ? "\nNota: el anticipo solo aplica con 3 o más actividades, así que el link cobra el total." : ""
+		return { content: `Link de ${kind} (vence en 7 días), cobra ${totals.depositMxn} MXN: ${url}${why}\n\n${summary}` }
 	}
 
 	if (name === "pasar_a_humano") {

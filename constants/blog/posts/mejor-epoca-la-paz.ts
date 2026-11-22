@@ -63,7 +63,7 @@ export const mejorEpocaLaPaz: BlogPost = {
 				"**Si quieres el Sardine Run:** noviembre y diciembre.",
 			] },
 			{ type: "tip", text: "Si vienes en invierno, combina en un mismo viaje el tiburón ballena (La Paz) con la ballena gris (Puerto Chale). Son dos de los encuentros más especiales del mundo y están a unas horas de distancia." },
-			{ type: "p", text: "¿Ya tienes fechas? [Arma tu reserva](/arma-tu-reserva) con varias actividades y aparta con el 20%." },
+			{ type: "p", text: "¿Ya tienes fechas? [Arma tu reserva](/arma-tu-reserva) con varias actividades; con 3 o más apartas con el 20%." },
 		],
 		faq: [
 			{ q: "¿Cuál es el mes más bonito para ir a La Paz?", a: "Depende del encuentro: mayo para móbulas [^4], febrero para ballenas grises con crías [^3], y de noviembre a marzo para tiburón ballena [^1]." },
@@ -118,7 +118,7 @@ export const mejorEpocaLaPaz: BlogPost = {
 				"**If you want the Sardine Run:** November and December.",
 			] },
 			{ type: "tip", text: "If you come in winter, combine whale sharks (La Paz) with gray whales (Puerto Chale) on the same trip. They're two of the most special encounters in the world, just a few hours apart." },
-			{ type: "p", text: "Got dates? [Build your reservation](/arma-tu-reserva) with several activities and hold it with a 20% deposit." },
+			{ type: "p", text: "Got dates? [Build your reservation](/arma-tu-reserva) with several activities; with 3 or more, hold it with a 20% deposit." },
 		],
 		faq: [
 			{ q: "What's the most beautiful month to visit La Paz?", a: "It depends on the encounter: May for mobula rays [^4], February for gray whales with calves [^3], and November to March for whale sharks [^1]." },

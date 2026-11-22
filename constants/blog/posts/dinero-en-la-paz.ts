@@ -37,7 +37,7 @@ export const dineroEnLaPaz: BlogPost = {
 			{ type: "h2", text: "Cómo pagar los tours" },
 			{ type: "ul", items: [
 				"**Pago en línea con tarjeta** desde la página de cada tour.",
-				"**Apartar con el 20 %** varias actividades en [Arma tu reserva](/arma-tu-reserva) y pagar el resto el día del tour en **efectivo, transferencia o tarjeta**.",
+				"**Apartar con el 20 %** 3 o más actividades en [Arma tu reserva](/arma-tu-reserva) y pagar el resto el día del tour en **efectivo, transferencia o tarjeta**.",
 				"Los precios se cobran en **pesos mexicanos**; tu banco hace la conversión.",
 			] },
 			{ type: "tip", text: "Lleva algo de efectivo en pesos para propinas, snacks y pagos pequeños. Calcula tu viaje en [¿cuánto cuesta un viaje a La Paz?](/blog/cuanto-cuesta-un-viaje-a-la-paz-presupuesto)" },
@@ -46,7 +46,7 @@ export const dineroEnLaPaz: BlogPost = {
 			{ q: "¿Qué moneda se usa en La Paz?", a: "El peso mexicano (MXN) [^1]." },
 			{ q: "¿Cuánto vale un dólar en pesos?", a: "El 19 de noviembre de 2026 el tipo de cambio FIX fue de 19.03 pesos por dólar [^3]." },
 			{ q: "¿Es seguro usar cajeros en La Paz?", a: "Usa cajeros de día, dentro de tiendas o plazas, y no saques grandes cantidades [^2]." },
-			{ q: "¿Puedo pagar los tours con tarjeta?", a: "Sí: en línea con tarjeta, o apartas con el 20 % y pagas el resto en efectivo, transferencia o tarjeta el día del tour." },
+			{ q: "¿Puedo pagar los tours con tarjeta?", a: "Sí: en línea con tarjeta, y si reservas 3 o más actividades puedes apartar con el 20 % y pagar el resto en efectivo, transferencia o tarjeta el día del tour." },
 		],
 	},
 	en: {
@@ -74,7 +74,7 @@ export const dineroEnLaPaz: BlogPost = {
 			{ type: "h2", text: "How to pay for tours" },
 			{ type: "ul", items: [
 				"**Pay online by card** from each tour's page.",
-				"**Hold several activities with 20%** in [Build your reservation](/arma-tu-reserva) and pay the rest on the day of the tour in **cash, bank transfer or card**.",
+				"**Hold 3 or more activities with 20%** in [Build your reservation](/arma-tu-reserva) and pay the rest on the day of the tour in **cash, bank transfer or card**.",
 				"Prices are charged in **Mexican pesos**; your bank does the conversion.",
 			] },
 			{ type: "tip", text: "Carry some cash in pesos for tips, snacks and small purchases. Plan your trip with [how much a trip to La Paz costs](/blog/how-much-does-a-trip-to-la-paz-cost-budget)." },

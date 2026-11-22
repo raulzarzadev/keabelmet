@@ -263,6 +263,7 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 		const items = unpackItems(m.items)
 		const deposit = Number(m.depositMxn) || total
 		const remaining = Number(m.remainingMxn) || 0
+		const full = m.payMode === "full" || remaining === 0
 		return items.map((it, i) => ({
 			...base,
 			id: `${pi.id}#${i}`,
@@ -271,13 +272,13 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 			activityLabel: activityLabel(it.slug) + (optionLabel(it.slug, it.unitAmountMxn, "es") ? ` (${optionLabel(it.slug, it.unitAmountMxn, "es")})` : ""),
 			people: it.people,
 			// Como en tu Excel: el anticipo y el saldo van en el primer renglón del paquete.
-			paidFull: null,
-			deposit: i === 0 ? deposit : null,
-			settled: null,
-			balance: i === 0 ? remaining : null,
+			paidFull: full && i === 0 ? Number(m.totalMxn) || total : null,
+			deposit: full ? "nd" : i === 0 ? deposit : null,
+			settled: full ? "si" : null,
+			balance: full ? "nd" : i === 0 ? remaining : null,
 			transport: it.ride ? "si" : "",
 			cost: defaultCost(it.slug, it.people, it.unitAmountMxn * it.people),
-			notes: items.length > 1 ? `Paquete con anticipo (${items.length} actividades), folio ${base.folio}` : "",
+			notes: items.length > 1 ? `Paquete ${full ? "pagado completo" : "con anticipo"} (${items.length} actividades), folio ${base.folio}` : "",
 		}))
 	}
 
@@ -292,10 +293,11 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 				activity: "otro",
 				activityLabel: deal?.title || "Reserva personalizada",
 				people: 0,
-				paidFull: null,
-				deposit: totals?.depositMxn ?? total,
-				settled: null,
-				balance: totals?.remainingMxn ?? null,
+				// Deal pagado completo (p. ej. link del bot con 1 o 2 actividades): queda liquidado.
+				paidFull: totals && totals.remainingMxn <= 0 ? totals.totalMxn : null,
+				deposit: totals && totals.remainingMxn <= 0 ? "nd" : totals?.depositMxn ?? total,
+				settled: totals && totals.remainingMxn <= 0 ? "si" : null,
+				balance: totals && totals.remainingMxn <= 0 ? "nd" : totals?.remainingMxn ?? null,
 				notes: deal
 					? `Deal: ${deal.lines.map((l) => `${l.label} ($${l.amountMxn.toLocaleString("en-US")})`).join("; ")}${deal.endISO ? `. Hasta ${deal.endISO}` : ""}. Revisa fechas y personas.`
 					: "Deal: revisa los detalles en el correo.",

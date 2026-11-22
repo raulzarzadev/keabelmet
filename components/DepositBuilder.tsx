@@ -13,6 +13,8 @@ import { useCart } from "@/contexts/CartContext"
 import type { Locale } from "@/lib/i18n"
 
 const DEPOSIT_RATE = 0.2
+/** Igual que lib/deposit.ts: el anticipo solo se ofrece con 3 o más actividades. */
+const DEPOSIT_MIN_ITEMS = 3
 const MAX_ITEMS = 6
 
 function stripeLocale(locale: string): StripeElementLocale {
@@ -35,14 +37,16 @@ interface UI {
 	payBtn: string; processing: string; secure: string; back: string; pay: string;
 	okTitle: string; okText: string; close: string; emailSent: string;
 	errItems: string; errDate: string; errName: string; errEmail: string; errPhone: string; errGeneric: string;
+	dueToday: string; payFullBtn: string; depositHint: string; modeTitle: string; modeFull: string; modeDeposit: string;
+	okTitleFull: string; okTextFull: string; paidFull: string; payFull: string;
 }
 
 const copy: Record<string, UI> = {
-	es: { title: "Arma tu reserva", sub: "Elige tus actividades, aparta con el 20% y paga el resto el día de tus tours.", pick: "Elige tus actividades", add: "Agregar", inCart: "Agregada", yourTrip: "Tu reserva", empty: "Aún no has agregado actividades.", option: "Opción", refresher: "Buceo certificado: si no has buceado en los últimos 6 meses, el centro de buceo puede cobrar $600 MXN extra por un refresher.", date: "Fecha", people: "Personas", per: "persona", season: "Temporada", remove: "Quitar", from: "desde", name: "Nombre completo", email: "Correo electrónico", phone: "Teléfono / WhatsApp", namePh: "Tu nombre", phonePh: "+52 …", subtotal: "Subtotal", discount: "Descuento de paquete", total: "Total", deposit: "Anticipo a pagar hoy (20%)", remaining: "Restante (el día del tour)", payNote: "El restante lo pagas en efectivo, transferencia o tarjeta el día de tus tours.", payBtn: "Apartar con 20%", processing: "Procesando…", secure: "Pago seguro procesado por Stripe", back: "← Editar", pay: "Pagar anticipo", okTitle: "¡Tu reserva está apartada!", okText: "Te enviamos un correo de bienvenida con el resumen, el calendario de todas tus actividades y el restante por liquidar.", close: "Cerrar", emailSent: "Revisa tu correo (y spam).", errItems: "Agrega al menos una actividad con su fecha.", errDate: "Elige una fecha futura y en temporada para cada actividad.", errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp." },
-	en: { title: "Build your reservation", sub: "Pick your activities, reserve with 20% and pay the rest on the day of your tours.", pick: "Choose your activities", add: "Add", inCart: "Added", yourTrip: "Your reservation", empty: "You haven't added any activities yet.", option: "Option", refresher: "Certified diving: if you haven't dived in the last 6 months, the dive center may charge an extra $600 MXN for a refresher.", date: "Date", people: "People", per: "person", season: "Season", remove: "Remove", from: "from", name: "Full name", email: "Email", phone: "Phone / WhatsApp", namePh: "Your name", phonePh: "+1 …", subtotal: "Subtotal", discount: "Package discount", total: "Total", deposit: "Deposit due today (20%)", remaining: "Balance (day of tour)", payNote: "You pay the balance in cash, transfer or card on the day of your tours.", payBtn: "Reserve with 20%", processing: "Processing…", secure: "Secure payment processed by Stripe", back: "← Edit", pay: "Pay deposit", okTitle: "Your reservation is held!", okText: "We've sent you a welcome email with the summary, the calendar of all your activities and the balance due.", close: "Close", emailSent: "Check your email (and spam).", errItems: "Add at least one activity with its date.", errDate: "Pick a future, in-season date for each activity.", errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp." },
-	fr: { title: "Composez votre réservation", sub: "Choisissez vos activités, réservez avec 20% et payez le reste le jour de vos tours.", pick: "Choisissez vos activités", add: "Ajouter", inCart: "Ajoutée", yourTrip: "Votre réservation", empty: "Vous n'avez pas encore ajouté d'activités.", option: "Option", refresher: "Plongée certifiée : si vous n'avez pas plongé au cours des 6 derniers mois, le centre de plongée peut facturer 600 MXN de plus pour un refresher.", date: "Date", people: "Personnes", per: "personne", season: "Saison", remove: "Retirer", from: "dès", name: "Nom complet", email: "E-mail", phone: "Téléphone / WhatsApp", namePh: "Votre nom", phonePh: "+33 …", subtotal: "Sous-total", discount: "Remise forfait", total: "Total", deposit: "Acompte à payer aujourd'hui (20%)", remaining: "Solde (le jour du tour)", payNote: "Vous réglez le solde en espèces, virement ou carte le jour de vos tours.", payBtn: "Réserver avec 20%", processing: "Traitement…", secure: "Paiement sécurisé traité par Stripe", back: "← Modifier", pay: "Payer l'acompte", okTitle: "Votre réservation est enregistrée !", okText: "Nous vous avons envoyé un e-mail de bienvenue avec le résumé, l'agenda de toutes vos activités et le solde à régler.", close: "Fermer", emailSent: "Vérifiez votre e-mail (et les spams).", errItems: "Ajoutez au moins une activité avec sa date.", errDate: "Choisissez une date future et en saison pour chaque activité.", errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp." },
-	zh: { title: "定制你的预订", sub: "选择活动，先付20%预订，其余在行程当天支付。", pick: "选择你的活动", add: "添加", inCart: "已添加", yourTrip: "你的预订", empty: "你还没有添加任何活动。", option: "选项", refresher: "认证潜水:如果你在过去6个月内没有潜过水,潜水中心可能会额外收取600墨西哥比索的复习课程(Refresher)费用。", date: "日期", people: "人数", per: "人", season: "季节", remove: "移除", from: "起", name: "全名", email: "电子邮箱", phone: "电话 / WhatsApp", namePh: "你的姓名", phonePh: "+86 …", subtotal: "小计", discount: "套餐折扣", total: "总计", deposit: "今天支付的定金（20%）", remaining: "余额（行程当天）", payNote: "余额在行程当天以现金、转账或刷卡支付。", payBtn: "付20%预订", processing: "处理中…", secure: "由 Stripe 处理的安全支付", back: "← 编辑", pay: "支付定金", okTitle: "你的预订已保留！", okText: "我们已向你发送欢迎邮件，内含摘要、所有活动的日历以及待付余额。", close: "关闭", emailSent: "请查看你的邮箱（及垃圾邮件）。", errItems: "请至少添加一个活动及其日期。", errDate: "请为每个活动选择一个未来且在季节内的日期。", errName: "请输入你的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。" },
-	ca: { title: "Munta la teva reserva", sub: "Tria les teves activitats, aparta amb el 20% i paga la resta el dia dels teus tours.", pick: "Tria les teves activitats", add: "Afegir", inCart: "Afegida", yourTrip: "La teva reserva", empty: "Encara no has afegit activitats.", option: "Opció", refresher: "Busseig certificat: si no has bussejat en els últims 6 mesos, el centre de busseig pot cobrar 600 MXN més per un refresher.", date: "Data", people: "Persones", per: "persona", season: "Temporada", remove: "Treure", from: "des de", name: "Nom complet", email: "Correu electrònic", phone: "Telèfon / WhatsApp", namePh: "El teu nom", phonePh: "+34 …", subtotal: "Subtotal", discount: "Descompte de paquet", total: "Total", deposit: "Bestreta a pagar avui (20%)", remaining: "Pendent (el dia del tour)", payNote: "El pendent el pagues en efectiu, transferència o targeta el dia dels teus tours.", payBtn: "Apartar amb 20%", processing: "Processant…", secure: "Pagament segur processat per Stripe", back: "← Editar", pay: "Pagar bestreta", okTitle: "La teva reserva està apartada!", okText: "T'hem enviat un correu de benvinguda amb el resum, el calendari de totes les teves activitats i el pendent de liquidar.", close: "Tancar", emailSent: "Revisa el teu correu (i el correu brossa).", errItems: "Afegeix almenys una activitat amb la seva data.", errDate: "Tria una data futura i en temporada per a cada activitat.", errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp." },
+	es: { title: "Arma tu reserva", sub: "Elige tus actividades y paga en línea. Con 3 o más actividades puedes apartar con solo el 20%.", pick: "Elige tus actividades", add: "Agregar", inCart: "Agregada", yourTrip: "Tu reserva", empty: "Aún no has agregado actividades.", option: "Opción", refresher: "Buceo certificado: si no has buceado en los últimos 6 meses, el centro de buceo puede cobrar $600 MXN extra por un refresher.", date: "Fecha", people: "Personas", per: "persona", season: "Temporada", remove: "Quitar", from: "desde", name: "Nombre completo", email: "Correo electrónico", phone: "Teléfono / WhatsApp", namePh: "Tu nombre", phonePh: "+52 …", subtotal: "Subtotal", discount: "Descuento de paquete", total: "Total", deposit: "Anticipo a pagar hoy (20%)", remaining: "Restante (el día del tour)", payNote: "El restante lo pagas en efectivo, transferencia o tarjeta el día de tus tours.", payBtn: "Apartar con 20%", processing: "Procesando…", secure: "Pago seguro procesado por Stripe", back: "← Editar", pay: "Pagar anticipo", okTitle: "¡Tu reserva está apartada!", okText: "Te enviamos un correo de bienvenida con el resumen, el calendario de todas tus actividades y el restante por liquidar.", close: "Cerrar", emailSent: "Revisa tu correo (y spam).", errItems: "Agrega al menos una actividad con su fecha.", errDate: "Elige una fecha futura y en temporada para cada actividad.", errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.", dueToday: "A pagar hoy", payFullBtn: "Pagar", depositHint: "Con 3 o más actividades puedes apartar con solo el 20% y pagar el resto el día del tour.", modeTitle: "¿Cómo quieres pagar?", modeFull: "Pagar todo hoy", modeDeposit: "Apartar con 20%", okTitleFull: "¡Tu reserva está confirmada!", okTextFull: "Te enviamos un correo de bienvenida con el resumen y el calendario de todas tus actividades.", paidFull: "Pagado", payFull: "Pagar" },
+	en: { title: "Build your reservation", sub: "Pick your activities and pay online. With 3 or more activities you can reserve with just 20%.", pick: "Choose your activities", add: "Add", inCart: "Added", yourTrip: "Your reservation", empty: "You haven't added any activities yet.", option: "Option", refresher: "Certified diving: if you haven't dived in the last 6 months, the dive center may charge an extra $600 MXN for a refresher.", date: "Date", people: "People", per: "person", season: "Season", remove: "Remove", from: "from", name: "Full name", email: "Email", phone: "Phone / WhatsApp", namePh: "Your name", phonePh: "+1 …", subtotal: "Subtotal", discount: "Package discount", total: "Total", deposit: "Deposit due today (20%)", remaining: "Balance (day of tour)", payNote: "You pay the balance in cash, transfer or card on the day of your tours.", payBtn: "Reserve with 20%", processing: "Processing…", secure: "Secure payment processed by Stripe", back: "← Edit", pay: "Pay deposit", okTitle: "Your reservation is held!", okText: "We've sent you a welcome email with the summary, the calendar of all your activities and the balance due.", close: "Close", emailSent: "Check your email (and spam).", errItems: "Add at least one activity with its date.", errDate: "Pick a future, in-season date for each activity.", errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp.", dueToday: "Due today", payFullBtn: "Pay", depositHint: "With 3 or more activities you can reserve with just 20% and pay the rest on the day of your tour.", modeTitle: "How would you like to pay?", modeFull: "Pay in full today", modeDeposit: "Reserve with 20%", okTitleFull: "Your reservation is confirmed!", okTextFull: "We've sent you a welcome email with the summary and the calendar of all your activities.", paidFull: "Paid", payFull: "Pay" },
+	fr: { title: "Composez votre réservation", sub: "Choisissez vos activités et payez en ligne. Avec 3 activités ou plus, vous pouvez réserver avec seulement 20%.", pick: "Choisissez vos activités", add: "Ajouter", inCart: "Ajoutée", yourTrip: "Votre réservation", empty: "Vous n'avez pas encore ajouté d'activités.", option: "Option", refresher: "Plongée certifiée : si vous n'avez pas plongé au cours des 6 derniers mois, le centre de plongée peut facturer 600 MXN de plus pour un refresher.", date: "Date", people: "Personnes", per: "personne", season: "Saison", remove: "Retirer", from: "dès", name: "Nom complet", email: "E-mail", phone: "Téléphone / WhatsApp", namePh: "Votre nom", phonePh: "+33 …", subtotal: "Sous-total", discount: "Remise forfait", total: "Total", deposit: "Acompte à payer aujourd'hui (20%)", remaining: "Solde (le jour du tour)", payNote: "Vous réglez le solde en espèces, virement ou carte le jour de vos tours.", payBtn: "Réserver avec 20%", processing: "Traitement…", secure: "Paiement sécurisé traité par Stripe", back: "← Modifier", pay: "Payer l'acompte", okTitle: "Votre réservation est enregistrée !", okText: "Nous vous avons envoyé un e-mail de bienvenue avec le résumé, l'agenda de toutes vos activités et le solde à régler.", close: "Fermer", emailSent: "Vérifiez votre e-mail (et les spams).", errItems: "Ajoutez au moins une activité avec sa date.", errDate: "Choisissez une date future et en saison pour chaque activité.", errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp.", dueToday: "À payer aujourd'hui", payFullBtn: "Payer", depositHint: "Avec 3 activités ou plus, vous pouvez réserver avec seulement 20% et payer le reste le jour du tour.", modeTitle: "Comment souhaitez-vous payer ?", modeFull: "Tout payer aujourd'hui", modeDeposit: "Réserver avec 20%", okTitleFull: "Votre réservation est confirmée !", okTextFull: "Nous vous avons envoyé un e-mail de bienvenue avec le résumé et l'agenda de toutes vos activités.", paidFull: "Payé", payFull: "Payer" },
+	zh: { title: "定制你的预订", sub: "选择活动并在线支付。预订3项或以上活动时，可先付20%定金。", pick: "选择你的活动", add: "添加", inCart: "已添加", yourTrip: "你的预订", empty: "你还没有添加任何活动。", option: "选项", refresher: "认证潜水:如果你在过去6个月内没有潜过水,潜水中心可能会额外收取600墨西哥比索的复习课程(Refresher)费用。", date: "日期", people: "人数", per: "人", season: "季节", remove: "移除", from: "起", name: "全名", email: "电子邮箱", phone: "电话 / WhatsApp", namePh: "你的姓名", phonePh: "+86 …", subtotal: "小计", discount: "套餐折扣", total: "总计", deposit: "今天支付的定金（20%）", remaining: "余额（行程当天）", payNote: "余额在行程当天以现金、转账或刷卡支付。", payBtn: "付20%预订", processing: "处理中…", secure: "由 Stripe 处理的安全支付", back: "← 编辑", pay: "支付定金", okTitle: "你的预订已保留！", okText: "我们已向你发送欢迎邮件，内含摘要、所有活动的日历以及待付余额。", close: "关闭", emailSent: "请查看你的邮箱（及垃圾邮件）。", errItems: "请至少添加一个活动及其日期。", errDate: "请为每个活动选择一个未来且在季节内的日期。", errName: "请输入你的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。", dueToday: "今天支付", payFullBtn: "支付", depositHint: "预订3项或以上活动时，可先付20%定金，其余在行程当天支付。", modeTitle: "选择付款方式", modeFull: "今天全额支付", modeDeposit: "先付20%定金", okTitleFull: "你的预订已确认！", okTextFull: "我们已向你发送欢迎邮件，内含摘要和所有活动的日历。", paidFull: "已付", payFull: "支付" },
+	ca: { title: "Munta la teva reserva", sub: "Tria les teves activitats i paga en línia. Amb 3 activitats o més pots apartar amb només el 20%.", pick: "Tria les teves activitats", add: "Afegir", inCart: "Afegida", yourTrip: "La teva reserva", empty: "Encara no has afegit activitats.", option: "Opció", refresher: "Busseig certificat: si no has bussejat en els últims 6 mesos, el centre de busseig pot cobrar 600 MXN més per un refresher.", date: "Data", people: "Persones", per: "persona", season: "Temporada", remove: "Treure", from: "des de", name: "Nom complet", email: "Correu electrònic", phone: "Telèfon / WhatsApp", namePh: "El teu nom", phonePh: "+34 …", subtotal: "Subtotal", discount: "Descompte de paquet", total: "Total", deposit: "Bestreta a pagar avui (20%)", remaining: "Pendent (el dia del tour)", payNote: "El pendent el pagues en efectiu, transferència o targeta el dia dels teus tours.", payBtn: "Apartar amb 20%", processing: "Processant…", secure: "Pagament segur processat per Stripe", back: "← Editar", pay: "Pagar bestreta", okTitle: "La teva reserva està apartada!", okText: "T'hem enviat un correu de benvinguda amb el resum, el calendari de totes les teves activitats i el pendent de liquidar.", close: "Tancar", emailSent: "Revisa el teu correu (i el correu brossa).", errItems: "Afegeix almenys una activitat amb la seva data.", errDate: "Tria una data futura i en temporada per a cada activitat.", errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp.", dueToday: "A pagar avui", payFullBtn: "Pagar", depositHint: "Amb 3 activitats o més pots apartar amb només el 20% i pagar la resta el dia del tour.", modeTitle: "Com vols pagar?", modeFull: "Pagar-ho tot avui", modeDeposit: "Apartar amb 20%", okTitleFull: "La teva reserva està confirmada!", okTextFull: "T'hem enviat un correu de benvinguda amb el resum i el calendari de totes les teves activitats.", paidFull: "Pagat", payFull: "Pagar" },
 }
 
 export default function DepositBuilder({ locale = "es", activities }: { locale?: Locale; activities: BookableActivity[] }) {
@@ -56,6 +60,8 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 	const [folio, setFolio] = useState("")
 	const [totals, setTotals] = useState({ subtotal: 0, discount: 0, total: 0, deposit: 0, remaining: 0 })
 	const [err, setErr] = useState<string | null>(null)
+	const [payChoice, setPayChoice] = useState<"full" | "deposit">("full")
+	const [paidMode, setPaidMode] = useState<"full" | "deposit">("full")
 	const [busy, setBusy] = useState(false)
 
 	const itemRide = (it: { slug: string; people: number; ride?: boolean }) => (it.ride && rideAddonAvailable(it.slug) ? rideAddonMxn(it.slug, it.people) : 0)
@@ -65,7 +71,10 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 		[cart, locale],
 	)
 	const total = subtotal - discount
-	const deposit = Math.round(total * DEPOSIT_RATE)
+	// Pago completo por defecto; con 3+ actividades el cliente puede elegir apartar con 20%.
+	const canDeposit = cart.length >= DEPOSIT_MIN_ITEMS
+	const payMode = canDeposit ? payChoice : "full"
+	const deposit = payMode === "deposit" ? Math.round(total * DEPOSIT_RATE) : total
 	const remaining = total - deposit
 
 	const optionsBySlug = useMemo(() => new Map(activities.map((a) => [a.slug, a.options])), [activities])
@@ -125,13 +134,14 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					items: cart.map((it) => ({ slug: it.slug, cardName: it.cardName, expeditionName: it.title, unitAmountMxn: it.unitAmountMxn, people: it.people, dateISO: it.dateISO, ride: !!it.ride && rideAddonAvailable(it.slug) })),
-					customerName: name.trim(), customerEmail: email.trim(), customerPhone: phone.trim(), locale,
+					customerName: name.trim(), customerEmail: email.trim(), customerPhone: phone.trim(), locale, payMode,
 				}),
 			})
 			const data = await res.json()
 			if (!res.ok) throw new Error(data.error || "init")
 			setClientSecret(data.clientSecret)
 			setFolio(data.folio)
+			setPaidMode(data.payMode === "deposit" ? "deposit" : "full")
 			setTotals({ subtotal: data.subtotalMxn ?? subtotal, discount: data.discountMxn ?? discount, total: data.totalMxn ?? total, deposit: data.depositMxn ?? deposit, remaining: data.remainingMxn ?? remaining })
 			setStep("pay")
 		} catch (e2) {
@@ -154,11 +164,12 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 		: undefined
 
 	if (step === "result") {
+		const fullPaid = paidMode === "full" || totals.remaining <= 0
 		return (
 			<div className="dep-result">
 				<div className="dep-result-badge">✓</div>
-				<h2>{t.okTitle}</h2>
-				<p className="dep-result-text">{t.okText}</p>
+				<h2>{fullPaid ? t.okTitleFull : t.okTitle}</h2>
+				<p className="dep-result-text">{fullPaid ? t.okTextFull : t.okText}</p>
 				<div className="dep-result-folio">{folio}</div>
 				<div className="dep-sum">
 					{totals.discount > 0 && (
@@ -168,10 +179,10 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 						</>
 					)}
 					<div className="dep-sum-row"><span>{t.total}</span><strong>{formatMxn(totals.total)} MXN</strong></div>
-					<div className="dep-sum-row dep-sum-paid"><span>{t.deposit}</span><strong>{formatMxn(totals.deposit)} MXN</strong></div>
-					<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(totals.remaining)} MXN</strong></div>
+					<div className="dep-sum-row dep-sum-paid"><span>{fullPaid ? t.paidFull : t.deposit}</span><strong>{formatMxn(totals.deposit)} MXN</strong></div>
+					{!fullPaid && <div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(totals.remaining)} MXN</strong></div>}
 				</div>
-				<p className="dep-note">💵 {t.payNote}</p>
+				{!fullPaid && <p className="dep-note">💵 {t.payNote}</p>}
 				<p className="dep-email-sent">📧 {t.emailSent}</p>
 			</div>
 		)
@@ -182,10 +193,10 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 			<div className="dep-pay">
 				<div className="dep-pay-head">
 					<button type="button" className="checkout-back" onClick={() => setStep("build")}>{t.back}</button>
-					<div className="dep-pay-amount"><span>{t.deposit}</span><strong>{formatMxn(totals.deposit)} MXN</strong></div>
+					<div className="dep-pay-amount"><span>{paidMode === "deposit" ? t.deposit : t.dueToday}</span><strong>{formatMxn(totals.deposit)} MXN</strong></div>
 				</div>
 				<Elements stripe={getStripeClient()} options={options}>
-					<DepositPaymentForm locale={locale} emailDefault={email} returnUrl={`${window.location.origin}/${locale}/arma-tu-reserva`} onDone={() => { clearCart(); setStep("result") }} />
+					<DepositPaymentForm locale={locale} full={paidMode !== "deposit"} emailDefault={email} returnUrl={`${window.location.origin}/${locale}/arma-tu-reserva`} onDone={() => { clearCart(); setStep("result") }} />
 				</Elements>
 			</div>
 		)
@@ -295,16 +306,37 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 										))}
 									</>
 								)}
-								<div className="dep-sum-row"><span>{t.total}</span><strong>{formatMxn(total)} MXN</strong></div>
-								<div className="dep-sum-row dep-sum-paid"><span>{t.deposit}</span><strong>{formatMxn(deposit)} MXN</strong></div>
-								<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(remaining)} MXN</strong></div>
+								<div className={`dep-sum-row${payMode === "full" ? " dep-sum-paid" : ""}`}><span>{payMode === "full" ? t.dueToday : t.total}</span><strong>{formatMxn(total)} MXN</strong></div>
+								{payMode === "deposit" && (
+									<>
+										<div className="dep-sum-row dep-sum-paid"><span>{t.deposit}</span><strong>{formatMxn(deposit)} MXN</strong></div>
+										<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(remaining)} MXN</strong></div>
+									</>
+								)}
 							</div>
-							<p className="dep-note">💵 {t.payNote}</p>
+							{canDeposit ? (
+								<fieldset className="dep-mode">
+									<legend>{t.modeTitle}</legend>
+									<label className={payMode === "full" ? "is-on" : ""}>
+										<input type="radio" name="dep-mode" checked={payMode === "full"} onChange={() => setPayChoice("full")} />
+										<span>{t.modeFull}</span>
+										<strong>{formatMxn(total)} MXN</strong>
+									</label>
+									<label className={payMode === "deposit" ? "is-on" : ""}>
+										<input type="radio" name="dep-mode" checked={payMode === "deposit"} onChange={() => setPayChoice("deposit")} />
+										<span>{t.modeDeposit}</span>
+										<strong>{formatMxn(Math.round(total * DEPOSIT_RATE))} MXN</strong>
+									</label>
+								</fieldset>
+							) : (
+								<p className="dep-note">💡 {t.depositHint}</p>
+							)}
+							{payMode === "deposit" && <p className="dep-note">💵 {t.payNote}</p>}
 							<label className="res-field"><span>{t.name}</span><input type="text" value={name} placeholder={t.namePh} onChange={(e) => setName(e.target.value)} /></label>
 							<label className="res-field"><span>{t.email}</span><input type="email" value={email} placeholder="tu@correo.com" onChange={(e) => setEmail(e.target.value)} /></label>
 							<label className="res-field"><span>{t.phone}</span><input type="tel" value={phone} placeholder={t.phonePh} onChange={(e) => setPhone(e.target.value)} /></label>
 							{err && <p className="checkout-error">⚠️ {err}</p>}
-							<button type="submit" className="btn btn-teal dep-pay-btn" disabled={busy}>{busy ? t.processing : `${t.payBtn} · ${formatMxn(deposit)} MXN`}</button>
+							<button type="submit" className="btn btn-teal dep-pay-btn" disabled={busy}>{busy ? t.processing : `${payMode === "deposit" ? t.payBtn : t.payFullBtn} · ${formatMxn(deposit)} MXN`}</button>
 						</form>
 					)}
 				</aside>
@@ -313,7 +345,7 @@ export default function DepositBuilder({ locale = "es", activities }: { locale?:
 	)
 }
 
-function DepositPaymentForm({ locale, emailDefault, returnUrl, onDone }: { locale: string; emailDefault: string; returnUrl: string; onDone: () => void }) {
+function DepositPaymentForm({ locale, full, emailDefault, returnUrl, onDone }: { locale: string; full: boolean; emailDefault: string; returnUrl: string; onDone: () => void }) {
 	const t = copy[locale] ?? copy.es
 	const stripe = useStripe()
 	const elements = useElements()
@@ -337,7 +369,7 @@ function DepositPaymentForm({ locale, emailDefault, returnUrl, onDone }: { local
 			<LinkAuthenticationElement options={{ defaultValues: { email: emailDefault } }} onChange={(e) => setEmail(e.value.email)} />
 			<PaymentElement options={{ layout: "tabs" }} />
 			{message && <p className="checkout-error">⚠️ {message}</p>}
-			<button type="submit" className="btn btn-teal checkout-submit" disabled={!stripe || submitting}>{submitting ? t.processing : t.pay}</button>
+			<button type="submit" className="btn btn-teal checkout-submit" disabled={!stripe || submitting}>{submitting ? t.processing : full ? t.payFull : t.pay}</button>
 			<p className="checkout-secure">🔒 {t.secure}</p>
 		</form>
 	)

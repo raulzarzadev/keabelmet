@@ -7,6 +7,13 @@ import { rideAddonAvailable, rideAddonMxn } from "@/lib/ride-addon"
 
 /** Anticipo: 20% del total; el resto se liquida el día del tour. */
 export const DEPOSIT_RATE = 0.2
+/** El anticipo solo se ofrece con 3 o más actividades en la misma reserva; si no, se paga completo. */
+export const DEPOSIT_MIN_ITEMS = 3
+export type PayMode = "full" | "deposit"
+
+export function canPayDeposit(itemCount: number): boolean {
+	return itemCount >= DEPOSIT_MIN_ITEMS
+}
 /** Máximo de actividades por reserva (acotado para que quepa en la metadata de Stripe). */
 export const MAX_DEPOSIT_ITEMS = 6
 
@@ -65,7 +72,9 @@ export function validateDepositItem(raw: unknown): DepositItem {
 export function computeDeposit(
 	items: DepositItem[],
 	locale: Locale = defaultLocale,
+	mode: PayMode = "full",
 ): {
+	payMode: PayMode
 	subtotalMxn: number
 	discountMxn: number
 	totalMxn: number
@@ -76,8 +85,10 @@ export function computeDeposit(
 	const subtotalMxn = items.reduce((s, it) => s + it.subtotalMxn, 0)
 	const { discountMxn, applied } = computePackageDiscount(items, locale)
 	const totalMxn = subtotalMxn - discountMxn
-	const depositMxn = Math.round(totalMxn * DEPOSIT_RATE)
-	return { subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn: totalMxn - depositMxn, packages: applied }
+	// El servidor decide: aunque pidan anticipo, con menos de 3 actividades se cobra completo.
+	const payMode: PayMode = mode === "deposit" && canPayDeposit(items.length) ? "deposit" : "full"
+	const depositMxn = payMode === "deposit" ? Math.round(totalMxn * DEPOSIT_RATE) : totalMxn
+	return { payMode, subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn: totalMxn - depositMxn, packages: applied }
 }
 
 /** Serialización compacta de los items para la metadata de Stripe (≤500 chars). */

@@ -1699,3 +1699,10 @@ body.has-book-bar .wa-float { bottom: 94px; }
   .xmap-months::-webkit-scrollbar { display: none; }
   .xmap-months button, .xmap-months-q { flex: none; }
 }
+/* Carrito: elegir pago completo o anticipo (solo con 3+ actividades) */
+.dep-mode { border:0; padding:0; margin:14px 0 0; display:flex; flex-direction:column; gap:8px; }
+.dep-mode legend { color:var(--sand); font-size:13px; font-weight:600; margin-bottom:6px; padding:0; }
+.dep-mode label { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; border:1px solid rgba(244,239,228,0.16); border-radius:12px; padding:11px 13px; cursor:pointer; color:var(--sand); font-size:14px; background:rgba(244,239,228,0.03); }
+.dep-mode label.is-on { border-color:var(--teal); background:rgba(40,194,160,0.1); }
+.dep-mode input { accent-color:var(--teal); width:16px; height:16px; margin:0; }
+.dep-mode strong { color:var(--teal); white-space:nowrap; }

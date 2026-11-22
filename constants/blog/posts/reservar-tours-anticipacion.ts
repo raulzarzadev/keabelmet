@@ -46,7 +46,7 @@ export const reservarToursAnticipacion: BlogPost = {
 				"Dejar **uno o dos días libres** para reprogramar.",
 				"Reservar con un operador que te deje **reprogramar o recibir reembolso** si el mar no permite salir.",
 			] },
-			{ type: "tip", text: "En Keabelmet puedes apartar varias actividades con el 20 % en [Arma tu reserva](/arma-tu-reserva) y pagar el resto el día del tour. La cancelación con reembolso es hasta 24 horas antes de la salida." },
+			{ type: "tip", text: "En Keabelmet puedes apartar 3 o más actividades con el 20 % en [Arma tu reserva](/arma-tu-reserva) y pagar el resto el día del tour. La cancelación con reembolso es hasta 24 horas antes de la salida." },
 		],
 		faq: [
 			{ q: "¿Con cuánta anticipación debo reservar el tour de tiburón ballena?", a: "En fechas festivas, con varios días; los grupos son de máximo 5 nadadores por guía [^2]. Fuera de esas fechas suele haber lugar de un día para otro." },
@@ -88,7 +88,7 @@ export const reservarToursAnticipacion: BlogPost = {
 				"Leave **one or two free days** to reschedule.",
 				"Book with an operator that lets you **reschedule or get a refund** if the sea doesn't allow the trip.",
 			] },
-			{ type: "tip", text: "With Keabelmet you can hold several activities with 20% in [Build your reservation](/arma-tu-reserva) and pay the rest on the day of the tour. Refundable cancellation is available up to 24 hours before departure." },
+			{ type: "tip", text: "With Keabelmet you can hold 3 or more activities with 20% in [Build your reservation](/arma-tu-reserva) and pay the rest on the day of the tour. Refundable cancellation is available up to 24 hours before departure." },
 		],
 		faq: [
 			{ q: "How far in advance should I book the whale shark tour?", a: "On holiday dates, several days ahead; groups are up to 5 swimmers per guide [^2]. Outside those dates there's usually space the day before." },

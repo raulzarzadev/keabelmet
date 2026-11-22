@@ -8,6 +8,9 @@ import { SITE_URL } from "@/lib/seo"
 import { rideAddonAvailable, rideAddonMxn, rideRoute } from "@/lib/ride-addon"
 import type { Locale } from "@/lib/i18n"
 
+/** Igual que el carrito (lib/deposit.ts): anticipo solo con 3 o más actividades. */
+const DEPOSIT_MIN_ACTIVITIES = 3
+
 /**
  * Catálogo y cotizaciones del bot. Todo precio sale de las tarjetas de precio
  * de las páginas de expedición (la misma fuente que valida el cobro en el
@@ -173,6 +176,9 @@ export interface Quote {
 	depositMxn: number
 	remainingMxn: number
 	warnings: string[]
+	/** Actividades (sin contar transporte). Con 3 o más se puede apartar con anticipo. */
+	activityCount: number
+	depositAllowed: boolean
 }
 
 export type QuoteResult = Quote | { ok: false; error: string }
@@ -272,7 +278,10 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 
 	const totalMxn = lines.reduce((s, l) => s + l.netMxn, 0)
 	const discountMxn = lines.reduce((s, l) => s + l.discountMxn, 0)
-	const depositMxn = Math.round(totalMxn * DEAL_DEPOSIT_RATE)
+	// Igual que el carrito: el anticipo solo se ofrece con 3 o más actividades; si no, se paga completo.
+	const activityCount = lines.filter((l) => !l.extra).length
+	const depositAllowed = activityCount >= DEPOSIT_MIN_ACTIVITIES
+	const depositMxn = depositAllowed ? Math.round(totalMxn * DEAL_DEPOSIT_RATE) : totalMxn
 	// Logística: actividades de día completo no se combinan con otra el mismo día.
 	const byDate = new Map<string, QuoteLine[]>()
 	for (const l of lines) if (l.dateISO) byDate.set(l.dateISO, [...(byDate.get(l.dateISO) ?? []), l])
@@ -286,8 +295,8 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 				: `${date}: dos actividades el mismo día; confirma con el equipo que los horarios no se crucen o muévela a otro día.`,
 		)
 	}
-	if (lines.some((l) => !l.dateISO)) warnings.push("Falta la fecha de alguna actividad: pídela antes de generar el link de anticipo.")
-	return { ok: true, lines, totalMxn, discountMxn, depositMxn, remainingMxn: totalMxn - depositMxn, warnings }
+	if (lines.some((l) => !l.dateISO)) warnings.push("Falta la fecha de alguna actividad: pídela antes de generar el link de pago.")
+	return { ok: true, lines, totalMxn, discountMxn, depositMxn, remainingMxn: totalMxn - depositMxn, warnings, activityCount, depositAllowed }
 }
 
 export function quoteSummary(q: Quote): string {
@@ -299,16 +308,20 @@ export function quoteSummary(q: Quote): string {
 	return [
 		...rows,
 		`Total: ${mxn(q.totalMxn)}${q.discountMxn ? ` (ahorro ${mxn(q.discountMxn)})` : ""}`,
-		`Anticipo para apartar (${Math.round(DEAL_DEPOSIT_RATE * 100)}%): ${mxn(q.depositMxn)} · Resto el día de la actividad: ${mxn(q.remainingMxn)}`,
+		q.depositAllowed
+			? `Forma de pago: el total en el link, o apartar con anticipo del ${Math.round(DEAL_DEPOSIT_RATE * 100)}% (${mxn(q.depositMxn)}) y el resto el día de la actividad (${mxn(q.remainingMxn)}), porque son ${q.activityCount} actividades.`
+			: `Forma de pago: el total (${mxn(q.totalMxn)}) en el link. El anticipo del ${Math.round(DEAL_DEPOSIT_RATE * 100)}% solo aplica con ${DEPOSIT_MIN_ACTIVITIES} o más actividades.`,
 		...q.warnings.map((w) => `Aviso: ${w}`),
 	].join("\n")
 }
 
 /**
- * Deal firmado de anticipo (página /deal) con los montos del catálogo. Vence en
- * 7 días. Devuelve la ruta completa; el bot la guarda tras un link corto.
+ * Deal firmado (página /deal) con los montos del catálogo: pago completo, o
+ * anticipo del 20 % si son 3 o más actividades y el cliente lo prefiere. Vence
+ * en 7 días. Devuelve la ruta completa; el bot la guarda tras un link corto.
  */
-export function createDepositDeal(q: Quote, customerName: string, locale: Locale = "es"): { path: string; totals: ReturnType<typeof computeDealTotals> } {
+export function createDepositDeal(q: Quote, customerName: string, locale: Locale = "es", payFull = true): { path: string; totals: ReturnType<typeof computeDealTotals> } {
+	const deposit = q.depositAllowed && !payFull
 	const lines: DealLine[] = q.lines.map((l) => ({
 		label: [
 			l.label,
@@ -329,11 +342,11 @@ export function createDepositDeal(q: Quote, customerName: string, locale: Locale
 		title: name ? `Reserva de ${name}` : "Tu reserva Keabelmet",
 		subtitle: "Cotización por WhatsApp",
 		lines,
-		depositRate: DEAL_DEPOSIT_RATE,
+		depositRate: deposit ? DEAL_DEPOSIT_RATE : 1,
 		startISO: dates[0],
 		endISO: dates.length > 1 ? dates[dates.length - 1] : undefined,
 		includes: includes.join("\n").slice(0, 1200) || undefined,
-		note: "El equipo de Keabelmet confirma contigo punto de encuentro y logística después de tu anticipo.",
+		note: `El equipo de Keabelmet confirma contigo punto de encuentro y logística después de tu ${deposit ? "anticipo" : "pago"}.`,
 		photos,
 		exp: Date.now() + 7 * 24 * 3600 * 1000,
 	}
