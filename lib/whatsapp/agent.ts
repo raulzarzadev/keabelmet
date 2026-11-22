@@ -12,6 +12,9 @@ import { checkDates, slugs } from "@/lib/whatsapp/dates"
  * bot en ese chat y avisa al equipo.
  */
 
+/** Empresa hermana de viajes completos todo incluido (antes Con Gorra; mismo dominio por ahora). */
+const ARGO_URL = "https://congorraexpeditions.com/"
+
 const MODEL = "claude-opus-5-5"
 const MAX_TURNS = 6
 
@@ -46,6 +49,13 @@ Vender bien, sin presionar:
 - Si el cliente pide algo de un precio "a cotizar" (privados, grupos grandes), quiere pagar por transferencia o en efectivo, tiene una queja, quiere cancelar, cambiar o pedir reembolso de una reserva, pide hablar con una persona, o la conversación se sale de lo que puedes resolver con seguridad, usa pasar_a_humano y despídete diciendo que alguien del equipo le escribe en breve.
 - Mensajes marcados como [Equipo Keabelmet] los escribió una persona del equipo: respeta lo que haya dicho o acordado.
 - Si el cliente manda una nota de voz, foto o archivo que no puedes ver, pídele amablemente que lo escriba; si insiste o parece importante, pasa a humano.
+
+Viajes completos (Argo Navis Expeditions):
+- Argo Navis Expeditions (${ARGO_URL}) es la empresa hermana de Keabelmet, del mismo equipo (Mau, biólogo marino, y Jaime): viajes de varios días TODO INCLUIDO en Baja California Sur (transporte, hospedaje, comidas, guía y experiencias), en grupos pequeños de hasta 8 personas (se puede ir solo y compartir grupo) o privados a la medida. Ejemplos: Viviendo La Ventana, ballena gris en López Mateos, buceo y expediciones privadas. Keabelmet vende actividades sueltas por día; Argo Navis arma el viaje completo.
+- Señales de que el cliente busca un viaje completo: habla de varios días o una semana, pregunta por hospedaje, comidas, "todo incluido" o "paquete con hotel", quiere que le armen el itinerario completo, o planea con mucha anticipación (más de ~6 semanas) un viaje de varios días a la zona. La anticipación sola no basta: quien pregunta por un tour suelto para dentro de tres meses es cliente normal de Keabelmet.
+- Ante esas señales, califica con una o dos preguntas (no un interrogatorio): ¿cuántos días y cuántas personas?, ¿buscan que les incluyamos hospedaje, comidas y traslados, o solo las actividades? Si ya lo dijo, no lo vuelvas a preguntar.
+- Si solo quiere actividades (ya tiene hospedaje), sigue normal con Keabelmet: cotiza y arma sus días.
+- Si quiere el viaje completo: preséntale Argo Navis en dos o tres frases y comparte el link ${ARGO_URL}, pregúntale qué le gustaría ver y su rango de fechas si falta, y usa registrar_viaje_completo con lo que sepas. Luego despídete diciendo que Mau o Jaime le escriben para armarle el viaje. No inventes precios, fechas de salida ni itinerarios de Argo Navis: no están en tu catálogo.
 
 Web: ${SITE_URL} · Instagram: @keabelmet__expeditions · Correo: contacto@keabelmet.com`
 
@@ -129,6 +139,24 @@ const TOOLS: Anthropic.Beta.BetaTool[] = [
 			additionalProperties: false,
 		},
 	},
+	{
+		name: "registrar_viaje_completo",
+		description:
+			"Registra a un cliente que busca un viaje completo de varios días todo incluido (Argo Navis Expeditions): avisa a Mau y Jaime con sus datos y pausa el asistente en esta conversación para que ellos le armen el viaje. Úsalo después de compartirle el link de Argo Navis.",
+		strict: true,
+		input_schema: {
+			type: "object",
+			properties: {
+				fechas: { type: "string", description: "Fechas o rango aproximado (p. ej. 'marzo 2027, una semana'); cadena vacía si no se sabe" },
+				personas: { type: "string", description: "Cuántas personas y quiénes (pareja, familia con niños, amigos…); cadena vacía si no se sabe" },
+				dias: { type: "string", description: "Cuántos días o noches; cadena vacía si no se sabe" },
+				intereses: { type: "string", description: "Qué quiere ver o hacer (ballenas, buceo, tiburón ballena, relajarse…)" },
+				notas: { type: "string", description: "Presupuesto, hospedaje que ya tenga, de dónde viene, idioma u otros detalles útiles" },
+			},
+			required: ["fechas", "personas", "dias", "intereses", "notas"],
+			additionalProperties: false,
+		},
+	},
 ]
 
 export interface AgentContext {
@@ -183,6 +211,25 @@ async function runTool(name: string, input: Record<string, unknown>, ctx: AgentC
 		})
 		await notifyOwner("🙋 Un cliente necesita atención", { phone: ctx.phone, name: ctx.name, body: `Motivo: ${motivo}\n\n${resumen}` })
 		return { content: "Listo: el asistente queda en pausa en este chat y el equipo ya fue avisado. Despídete en una o dos frases.", handoff: true }
+	}
+
+	if (name === "registrar_viaje_completo") {
+		const field = (k: string) => String(input[k] ?? "").trim().slice(0, 400) || "—"
+		const resumen = [
+			`Fechas: ${field("fechas")}`,
+			`Personas: ${field("personas")}`,
+			`Días: ${field("dias")}`,
+			`Quiere: ${field("intereses")}`,
+			`Notas: ${field("notas")}`,
+		].join("\n")
+		await updateConversation(ctx.phone, {
+			pausedUntil: Date.now() + PAUSE_FOREVER_MS,
+			pauseReason: "handoff",
+			needsHuman: true,
+			handoffSummary: `🧭 Viaje completo (Argo Navis)\n${resumen}`,
+		})
+		await notifyOwner("🧭 Lead de viaje completo para Argo Navis", { phone: ctx.phone, name: ctx.name, body: resumen })
+		return { content: "Listo: Mau y Jaime ya tienen sus datos y el asistente queda en pausa en este chat. Despídete en una o dos frases diciendo que ellos le escriben para armarle el viaje.", handoff: true }
 	}
 
 	return { content: `Herramienta desconocida: ${name}`, isError: true }
