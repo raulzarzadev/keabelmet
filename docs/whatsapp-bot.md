@@ -9,11 +9,12 @@ Cliente ──WhatsApp──▶ Meta ──webhook──▶ /api/whatsapp/webhoo
                                               │  guarda el mensaje (Upstash Redis)
                                               │  espera 6 s por si llegan más mensajes seguidos
                                               ▼
-                                        Claude (claude-opus-5-5) + 4 herramientas
+                                        Claude (claude-opus-5-5) + 5 herramientas
                                           · revisar_fechas     → temporada, calendario de salidas y clima (Open-Meteo + link Windy)
                                           · cotizar            → precios del catálogo, paquetes, temporada, cupo, choques de logística
                                           · enviar_link_anticipo → link /api/pago/<id> → página /deal firmada
                                           · pasar_a_humano     → pausa el bot en ese chat + correo al equipo
+                                          · registrar_viaje_completo → lead de viaje todo incluido para Argo Navis + correo
                                               │
                                               ▼
                                   Dualhook (API compatible con Meta) ──▶ Cliente
@@ -39,6 +40,7 @@ Cliente ──WhatsApp──▶ Meta ──webhook──▶ /api/whatsapp/webhoo
   - Los nombres de clientes del calendario nunca se le pasan a Claude.
 - **Logística:** el bot sabe que Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo, avisa si dos actividades caen el mismo día y ordena itinerarios de varios días. Traslados desde otras ciudades los pasa al equipo.
 - **Ventas:** sugiere una vez el paquete con descuento cuando aplica y siempre cierra con un siguiente paso concreto.
+- **Viajes completos → Argo Navis:** si el cliente busca varios días con hospedaje, comidas o "todo incluido" (o planea con mucha anticipación un viaje de varios días), el bot le hace una o dos preguntas para confirmarlo. Si de verdad quiere el viaje completo, le comparte el link de Argo Navis Expeditions y usa `registrar_viaje_completo`. Esa herramienta te manda un correo "🧭 Lead de viaje completo" con fechas, personas, días e intereses, y pausa el bot en ese chat para que Mau o Jaime le escriban. Si solo quiere actividades sueltas, sigue normal con Keabelmet. El link está en `ARGO_URL` (`lib/whatsapp/agent.ts`); cámbialo ahí cuando Argo Navis tenga dominio propio.
 
 ## Configuración (una sola vez)
 
