@@ -1,0 +1,92 @@
+import type { BlogPost } from "@/lib/blog/types"
+
+export const paquetesToursLaPaz: BlogPost = {
+	id: "paquetes-tours-la-paz",
+	category: "planea",
+	date: "2026-11-22",
+	cover: "/images/blog/grupo-de-snorkel-en-lancha-keabelmet.webp",
+	experiences: ["tiburon-ballena", "tour-espiritu-santo", "safari-la-ventana"],
+	related: ["mejores-tours-la-paz", "cuantos-dias-la-paz", "cuanto-cuesta-viaje-la-paz"],
+	sources: [
+		{ id: 1, authors: "Maya Comunicación", year: "2026", title: "Tiburón ballena en La Paz: sin seis ejemplares, no hay nado (aviso de la Semarnat para la temporada 2026-2027)", publication: "Nota periodística", url: "https://mayacomunicacion.com.mx/tiburon-ballena-la-paz-temporada-2026-2027/", kind: "report" },
+		{ id: 2, authors: "Comisión Nacional de Áreas Naturales Protegidas (Conanp)", year: "2018", title: "Restricción de nado, buceo libre y buceo autónomo en Los Islotes durante la temporada reproductiva del lobo marino", publication: "Documento de caso publicado en PANORAMA Solutions", url: "https://panorama.solutions/sites/default/files/restriccion_nado_islotes_lobo_marino_2018_0.pdf", kind: "official" },
+	],
+	es: {
+		slug: "paquetes-de-tours-en-la-paz",
+		title: "Paquetes de tours en La Paz: combos de tiburón ballena, Espíritu Santo, safari y Sardine Run",
+		metaTitle: "Paquetes de tours en La Paz, BCS: combos con precio de paquete",
+		description: "Los paquetes de Keabelmet para hacer varias actividades en La Paz: Dúo La Paz, Semana Baja, Paquete Temporada y Gran Temporada. Qué incluye cada uno, precio por persona y en qué meses conviene.",
+		excerpt: "Si vas a hacer más de un tour, un paquete sale más barato. Estos son los combos, su precio por persona y cuándo usarlos.",
+		coverAlt: "Grupo de snorkel en una lancha de Keabelmet",
+		answer: "Keabelmet tiene cuatro paquetes en La Paz: **Dúo La Paz** (tiburón ballena + Isla Espíritu Santo) por **$3,690 MXN**, **Semana Baja** (tiburón ballena + Espíritu Santo + safari en La Ventana) por **$6,035 MXN**, **Paquete Temporada** (Sardine Run + tiburón ballena) por **$6,300 MXN** y **Gran Temporada** (Sardine Run + safari + tiburón ballena) por **$8,800 MXN**, por persona. El precio de paquete se aplica solo en [Arma tu reserva](/arma-tu-reserva).",
+		blocks: [
+			{ type: "p", text: "La mayoría de los viajeros que vienen a La Paz hacen más de una actividad. Los paquetes juntan las más buscadas con un precio menor que reservarlas por separado." },
+			{ type: "h2", text: "Los cuatro paquetes" },
+			{ type: "table", head: ["Paquete", "Incluye", "Precio de paquete por persona", "Cuándo"], rows: [
+				["Dúo La Paz", "Tiburón ballena + Isla Espíritu Santo", "$3,690 MXN", "Oct–abr [^1]"],
+				["Semana Baja", "Tiburón ballena + Isla Espíritu Santo + safari La Ventana", "$6,035 MXN", "Oct–abr [^1]"],
+				["Paquete Temporada", "Sardine Run + tiburón ballena", "$6,300 MXN", "Nov–dic"],
+				["Gran Temporada", "Sardine Run + safari La Ventana + tiburón ballena", "$8,800 MXN", "Nov–dic"],
+			] },
+			{ type: "p", text: "Los paquetes con tiburón ballena aplican en su temporada, del **1 de octubre al 30 de abril** en 2026-2027 [^1]. Los del Sardine Run, en **noviembre y diciembre**, cuando Keabelmet opera ese safari." },
+			{ type: "h2", text: "¿Cuál te conviene?" },
+			{ type: "ul", items: [
+				"**Tienes 2 días en La Paz:** Dúo La Paz. Un día tiburón ballena (medio día) y otro Espíritu Santo (día completo).",
+				"**Tienes una semana:** Semana Baja, para sumar el safari en La Ventana, a una hora de La Paz.",
+				"**Viajas en noviembre o diciembre:** Paquete Temporada o Gran Temporada, para vivir el Sardine Run y el tiburón ballena en el mismo viaje.",
+			] },
+			{ type: "fact", text: "En Espíritu Santo, del 1 de junio al 31 de agosto no se nada con los lobos marinos de Los Islotes por su temporada reproductiva [^2]; el tour sigue con playas y arrecifes." },
+			{ type: "h2", text: "Cómo se reserva" },
+			{ type: "ol", items: [
+				"Entra a [Arma tu reserva](/arma-tu-reserva) y agrega las actividades del paquete.",
+				"Elige fechas y número de personas: el precio de paquete aparece solo.",
+				"Paga en línea. Con 3 o más actividades puedes elegir apartar con el 20 % y pagar el resto el día del tour.",
+			] },
+			{ type: "tip", text: "¿No sabes cuántos días necesitas? Lee [cuántos días necesito en La Paz](/blog/cuantos-dias-necesito-en-la-paz) y [cuánto cuesta un viaje a La Paz](/blog/cuanto-cuesta-un-viaje-a-la-paz-presupuesto)." },
+		],
+		faq: [
+			{ q: "¿Hay paquetes de tours en La Paz?", a: "Sí. Keabelmet tiene Dúo La Paz ($3,690 MXN), Semana Baja ($6,035 MXN), Paquete Temporada ($6,300 MXN) y Gran Temporada ($8,800 MXN), por persona." },
+			{ q: "¿Cuánto cuesta el tour de tiburón ballena y Espíritu Santo juntos?", a: "En el paquete Dúo La Paz de Keabelmet, $3,690 MXN por persona, en temporada de tiburón ballena (oct–abr) [^1]." },
+			{ q: "¿Cómo se aplica el precio de paquete?", a: "Solo, al agregar las actividades del paquete en Arma tu reserva de keabelmet.com." },
+		],
+	},
+	en: {
+		slug: "la-paz-tour-packages",
+		title: "La Paz tour packages: whale shark, Espíritu Santo, safari and Sardine Run combos",
+		metaTitle: "La Paz, Mexico tour packages: combos at a package price",
+		description: "Keabelmet's packages for doing several activities in La Paz: La Paz Duo, Baja Week, Season Combo and Grand Season Combo. What each includes, price per person and which months they work.",
+		excerpt: "Doing more than one tour? A package costs less. Here are the combos, their price per person and when to use them.",
+		coverAlt: "Snorkel group on a Keabelmet boat",
+		answer: "Keabelmet has four packages in La Paz: **La Paz Duo** (whale sharks + Espíritu Santo Island) for **$3,690 MXN**, **Baja Week** (whale sharks + Espíritu Santo + La Ventana safari) for **$6,035 MXN**, **Season Combo** (Sardine Run + whale sharks) for **$6,300 MXN** and **Grand Season Combo** (Sardine Run + safari + whale sharks) for **$8,800 MXN**, per person. The package price applies automatically in [Build your reservation](/arma-tu-reserva).",
+		blocks: [
+			{ type: "p", text: "Most travelers who come to La Paz do more than one activity. Packages bundle the most popular ones at a lower price than booking them separately." },
+			{ type: "h2", text: "The four packages" },
+			{ type: "table", head: ["Package", "Includes", "Package price per person", "When"], rows: [
+				["La Paz Duo", "Whale sharks + Espíritu Santo Island", "$3,690 MXN", "Oct–Apr [^1]"],
+				["Baja Week", "Whale sharks + Espíritu Santo Island + La Ventana safari", "$6,035 MXN", "Oct–Apr [^1]"],
+				["Season Combo", "Sardine Run + whale sharks", "$6,300 MXN", "Nov–Dec"],
+				["Grand Season Combo", "Sardine Run + La Ventana safari + whale sharks", "$8,800 MXN", "Nov–Dec"],
+			] },
+			{ type: "p", text: "Packages with whale sharks apply in their season, **October 1 to April 30** in 2026-2027 [^1]. Sardine Run packages apply in **November and December**, when Keabelmet runs that safari." },
+			{ type: "h2", text: "Which one fits you?" },
+			{ type: "ul", items: [
+				"**2 days in La Paz:** La Paz Duo. One day whale sharks (half day) and another Espíritu Santo (full day).",
+				"**A week:** Baja Week, adding the La Ventana safari, an hour from La Paz.",
+				"**Traveling in November or December:** Season Combo or Grand Season Combo, for the Sardine Run and whale sharks in one trip.",
+			] },
+			{ type: "fact", text: "At Espíritu Santo, from June 1 to August 31 there's no swimming with the Los Islotes sea lions during their breeding season [^2]; the tour still includes beaches and reefs." },
+			{ type: "h2", text: "How to book" },
+			{ type: "ol", items: [
+				"Go to [Build your reservation](/arma-tu-reserva) and add the package activities.",
+				"Pick dates and number of people: the package price shows up automatically.",
+				"Pay online. With 3 or more activities you can choose to hold them with 20% and pay the rest on the day of the tour.",
+			] },
+			{ type: "tip", text: "Not sure how many days you need? Read [how many days in La Paz](/blog/how-many-days-in-la-paz) and [how much a trip to La Paz costs](/blog/how-much-does-a-trip-to-la-paz-cost-budget)." },
+		],
+		faq: [
+			{ q: "Are there tour packages in La Paz, Mexico?", a: "Yes. Keabelmet has La Paz Duo ($3,690 MXN), Baja Week ($6,035 MXN), Season Combo ($6,300 MXN) and Grand Season Combo ($8,800 MXN), per person." },
+			{ q: "How much are the whale shark and Espíritu Santo tours together?", a: "In Keabelmet's La Paz Duo package, $3,690 MXN per person, during whale shark season (Oct–Apr) [^1]." },
+			{ q: "How is the package price applied?", a: "Automatically, when you add the package activities in Build your reservation on keabelmet.com." },
+		],
+	},
+}

@@ -4,6 +4,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 	id: "tour-espiritu-santo-guia",
 	category: "actividades",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/picnic-beach-espiritu-santo.jpg",
 	experiences: ["tour-espiritu-santo", "buceo-la-paz"],
 	related: ["isla-espiritu-santo", "isla-partida-ensenada-grande", "elegir-operador-tours-la-paz"],
@@ -63,6 +64,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ q: "¿Se puede nadar con lobos marinos en el tour?", a: "Sí, excepto del 1 de junio al 31 de agosto, cuando la Conanp restringe el nado en Los Islotes por la temporada reproductiva [^4]." },
 			{ q: "¿Necesito saber bucear?", a: "No. El tour es de snorkel y playa; si quieres bucear con tanque existe el buceo en Espíritu Santo." },
 			{ q: "¿La lancha tiene baño?", a: "Sí, la lancha del tour de Keabelmet tiene baño, toldo, colchones y WiFi." },
+			{ q: "¿Con quién reservar el tour a Isla Espíritu Santo?", a: "Keabelmet Expeditions sale del Muelle Fiscal de La Paz: $1,800 MXN por persona (niños de 0 a 3 años gratis), con snorkel, lobos marinos y los brazaletes del Parque Nacional incluidos." },
 		],
 	},
 	en: {
@@ -114,6 +116,7 @@ export const tourEspirituSantoGuia: BlogPost = {
 			{ q: "Can you swim with sea lions on the tour?", a: "Yes, except from June 1 to August 31, when Conanp restricts swimming at Los Islotes during the breeding season [^4]." },
 			{ q: "Do I need to know how to dive?", a: "No. The tour is snorkeling and beach; if you want scuba there's the Espíritu Santo dive trip." },
 			{ q: "Does the boat have a bathroom?", a: "Yes, Keabelmet's tour boat has a bathroom, shade, mattresses and WiFi." },
+			{ q: "Who should I book the Espíritu Santo Island tour with?", a: "Keabelmet Expeditions leaves from the Muelle Fiscal in La Paz: $1,800 MXN per person (kids 0 to 3 free), with snorkeling, sea lions and the National Park wristbands included." },
 		],
 	},
 }

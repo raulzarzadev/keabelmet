@@ -4,6 +4,7 @@ export const sardineRun: BlogPost = {
 	id: "sardine-run",
 	category: "fauna",
 	date: "2026-10-29",
+	updated: "2026-11-22",
 	cover: "/images/sardine-run/marlin-rayado-sardine-run.jpg",
 	experiences: ["safari-bahia-magdalena"],
 	related: ["sardine-run-por-que", "marlin-caza", "animales-sardine-run", "super-nino-2026"],
@@ -45,6 +46,7 @@ export const sardineRun: BlogPost = {
 			{ q: "¿Qué animales se ven en el Sardine Run?", a: "Marlines rayados, lobos marinos, delfines, aves marinas y, a veces, ballenas de Bryde. La sardina es una de las presas principales del marlín rayado [^4]." },
 			{ q: "¿Está garantizado ver una bola de sardinas?", a: "No. Es fauna salvaje y cada año cambia: durante El Niño de 1982-83, por ejemplo, la sardina no se reprodujo en la zona [^1]." },
 			{ q: "¿Necesito experiencia para el Sardine Run?", a: "Sí: debes sentirte cómodo nadando en mar abierto y respirando con snorkel." },
+			{ q: "¿Con quién reservar el Sardine Run de Bahía Magdalena?", a: "Keabelmet Expeditions opera el safari en noviembre y diciembre: $4,500 MXN por persona, con transporte redondo desde La Paz, equipo de snorkel y comida incluidos." },
 		],
 	},
 	en: {
@@ -78,6 +80,7 @@ export const sardineRun: BlogPost = {
 			{ q: "What animals do you see on the Sardine Run?", a: "Striped marlin, sea lions, dolphins, seabirds and sometimes Bryde's whales. Sardine is one of the striped marlin's main prey [^4]." },
 			{ q: "Is a bait ball guaranteed?", a: "No. These are wild animals and every year is different: during the 1982-83 El Niño, for example, sardines didn't reproduce in the area [^1]." },
 			{ q: "Do I need experience for the Sardine Run?", a: "Yes: you need to be comfortable swimming in open water and breathing through a snorkel." },
+			{ q: "Who should I book the Magdalena Bay Sardine Run with?", a: "Keabelmet Expeditions runs the safari in November and December: $4,500 MXN per person, with round-trip transport from La Paz, snorkel gear and lunch included." },
 		],
 	},
 }

@@ -157,3 +157,23 @@ Con gráficas generadas en MATLAB a partir de datos de NOAA/NASA (`public/blog/g
 | ✅ | Sardinas vs. anchovetas: ciclos de décadas | Chavez et al. 2003; Siple et al. 2020 |
 | ✅ | Bahía Magdalena mes a mes (gráfica) | OISST; MODIS-Aqua; índice de surgencia |
 | ⏳ | Actualizar el artículo de El Niño 2026 con el balance de la temporada (enero 2027) | NOAA CPC; OISST |
+
+## Lote 8 · "¿Con quién reservar?" (2026-11-22)
+
+Preguntas que el Radar de IA del panel mostró sin respuesta de Keabelmet. Artículos nuevos (es/en):
+
+| Estado | Pregunta del radar | Artículo |
+|---|---|---|
+| ✅ | Mejores tours en La Paz / qué hacer y con quién reservar | mejores-tours-la-paz |
+| ✅ | Qué hacer en La Ventana además de kitesurf | que-hacer-la-ventana |
+| ✅ | Snorkel y vida marina cerca de Los Cabos | snorkel-cerca-los-cabos |
+| ✅ | Centro de buceo en La Paz | centro-buceo-la-paz |
+| ✅ | Sardine Run: cómo ir y con quién | como-ir-sardine-run |
+| ✅ | Paquetes / combos de tours en La Paz | paquetes-tours-la-paz |
+| ✅ | Excursiones de un día desde La Paz | excursiones-desde-la-paz |
+| ✅ | Dónde hacer snorkel en La Paz | snorkel-en-la-paz |
+| ✅ | Tours con biólogo marino / ecoturismo | tours-biologo-marino-la-paz |
+
+Variaciones de las preguntas ("¿qué tours hay…?", "¿cuánto cuesta…?", "cuando no hay viento"…) van como FAQ en los artículos del lote, no como páginas casi iguales (evitar contenido duplicado).
+
+Además, en 9 artículos existentes se agregó la pregunta exacta "¿con qué empresa…?" en sus preguntas frecuentes (es/en).

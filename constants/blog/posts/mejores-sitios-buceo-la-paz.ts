@@ -4,6 +4,7 @@ export const mejoresSitiosBuceoLaPaz: BlogPost = {
 	id: "mejores-sitios-buceo-la-paz",
 	category: "actividades",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/buceo-espiritu-santo-lobo-buzo.jpg",
 	experiences: ["buceo-la-paz", "scuba-discovery", "certificacion-open-water"],
 	related: ["los-islotes-lobos-marinos", "mejor-epoca-bucear-la-paz", "tiburon-martillo-el-bajo"],
@@ -47,6 +48,7 @@ export const mejoresSitiosBuceoLaPaz: BlogPost = {
 			{ q: "¿Se puede bucear con lobos marinos todo el año?", a: "No: del 1 de junio al 31 de agosto se restringe el buceo en Los Islotes por su temporada reproductiva [^2]." },
 			{ q: "¿Cuánto cuesta bucear en La Paz?", a: "Con Keabelmet, $3,800 MXN el buceo certificado de dos inmersiones y $4,200 MXN el Scuba Discovery." },
 			{ q: "¿Cuántas especies de peces hay en los arrecifes de La Paz?", a: "En censos cerca de la bahía de La Paz se registraron 92 especies [^4]." },
+			{ q: "¿Qué centro de buceo recomiendan en La Paz?", a: "Keabelmet Expeditions ofrece buceo en Espíritu Santo y Los Islotes (desde $3,800 MXN), Scuba Discovery desde Playa El Saltito ($1,500 MXN) y la certificación PADI Open Water ($10,000 MXN)." },
 		],
 	},
 	en: {
@@ -82,6 +84,7 @@ export const mejoresSitiosBuceoLaPaz: BlogPost = {
 			{ q: "Can you dive with sea lions year-round?", a: "No: diving at Los Islotes is restricted from June 1 to August 31 during the breeding season [^2]." },
 			{ q: "How much does diving in La Paz cost?", a: "With Keabelmet, $3,800 MXN for a certified two-dive trip and $4,200 MXN for Scuba Discovery." },
 			{ q: "How many fish species live on La Paz reefs?", a: "Surveys near La Paz Bay recorded 92 species [^4]." },
+			{ q: "What dive shop do you recommend in La Paz?", a: "Keabelmet Expeditions offers diving at Espíritu Santo and Los Islotes (from $3,800 MXN), Scuba Discovery from Playa El Saltito ($1,500 MXN) and the PADI Open Water certification ($10,000 MXN)." },
 		],
 	},
 }
