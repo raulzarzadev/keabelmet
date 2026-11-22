@@ -46,6 +46,12 @@ interface UI {
 	errEmail: string
 	errPhone: string
 	errGeneric: string
+	dueToday: string
+	payBtnFull: string
+	payFull: string
+	okTitleFull: string
+	okTextFull: string
+	paidFull: string
 }
 
 const copy: Record<string, UI> = {
@@ -58,6 +64,7 @@ const copy: Record<string, UI> = {
 		okTitle: "¡Tu reserva está apartada!", okText: "Te enviamos un correo de bienvenida con el resumen, el calendario y el restante por liquidar.",
 		emailSent: "Revisa tu correo (y spam).",
 		errName: "Escribe tu nombre.", errEmail: "Correo inválido.", errPhone: "Teléfono inválido.", errGeneric: "No pudimos iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.",
+		dueToday: "Total a pagar hoy", payBtnFull: "Pagar ahora", payFull: "Pagar", okTitleFull: "¡Tu reserva está confirmada!", okTextFull: "Te enviamos un correo de bienvenida con el resumen y el calendario de tu reserva.", paidFull: "Pagado",
 	},
 	en: {
 		heading: "Your reservation", breakdown: "Breakdown", total: "Group total", deposit: "Deposit due today", remaining: "Balance (day of your tours)",
@@ -68,6 +75,7 @@ const copy: Record<string, UI> = {
 		okTitle: "Your reservation is held!", okText: "We've sent you a welcome email with the summary, the calendar and the balance due.",
 		emailSent: "Check your email (and spam).",
 		errName: "Enter your name.", errEmail: "Invalid email.", errPhone: "Invalid phone.", errGeneric: "We couldn't start the payment. Try again or message us on WhatsApp.",
+		dueToday: "Total due today", payBtnFull: "Pay now", payFull: "Pay", okTitleFull: "Your reservation is confirmed!", okTextFull: "We've sent you a welcome email with the summary and the calendar of your reservation.", paidFull: "Paid",
 	},
 	fr: {
 		heading: "Votre réservation", breakdown: "Détail", total: "Total du groupe", deposit: "Acompte à payer aujourd'hui", remaining: "Solde (le jour de vos tours)",
@@ -78,6 +86,7 @@ const copy: Record<string, UI> = {
 		okTitle: "Votre réservation est enregistrée !", okText: "Nous vous avons envoyé un e-mail de bienvenue avec le résumé, l'agenda et le solde à régler.",
 		emailSent: "Vérifiez votre e-mail (et les spams).",
 		errName: "Indiquez votre nom.", errEmail: "E-mail invalide.", errPhone: "Téléphone invalide.", errGeneric: "Nous n'avons pas pu démarrer le paiement. Réessayez ou écrivez-nous sur WhatsApp.",
+		dueToday: "Total à payer aujourd'hui", payBtnFull: "Payer maintenant", payFull: "Payer", okTitleFull: "Votre réservation est confirmée !", okTextFull: "Nous vous avons envoyé un e-mail de bienvenue avec le résumé et l'agenda de votre réservation.", paidFull: "Payé",
 	},
 	zh: {
 		heading: "你的预订", breakdown: "明细", total: "团队总计", deposit: "今天支付的定金", remaining: "余额（行程当天）",
@@ -88,6 +97,7 @@ const copy: Record<string, UI> = {
 		okTitle: "你的预订已保留！", okText: "我们已向你发送欢迎邮件，内含摘要、日历以及待付余额。",
 		emailSent: "请查看你的邮箱（及垃圾邮件）。",
 		errName: "请输入你的姓名。", errEmail: "邮箱无效。", errPhone: "电话无效。", errGeneric: "无法开始付款。请重试或通过 WhatsApp 联系我们。",
+		dueToday: "今天支付总额", payBtnFull: "立即支付", payFull: "支付", okTitleFull: "你的预订已确认！", okTextFull: "我们已向你发送欢迎邮件，内含预订摘要和日历。", paidFull: "已付",
 	},
 	ca: {
 		heading: "La teva reserva", breakdown: "Desglossament", total: "Total del grup", deposit: "Bestreta a pagar avui", remaining: "Pendent (el dia dels teus tours)",
@@ -98,6 +108,7 @@ const copy: Record<string, UI> = {
 		okTitle: "La teva reserva està apartada!", okText: "T'hem enviat un correu de benvinguda amb el resum, el calendari i el pendent de liquidar.",
 		emailSent: "Revisa el teu correu (i el correu brossa).",
 		errName: "Escriu el teu nom.", errEmail: "Correu no vàlid.", errPhone: "Telèfon no vàlid.", errGeneric: "No hem pogut iniciar el pagament. Torna-ho a provar o escriu-nos per WhatsApp.",
+		dueToday: "Total a pagar avui", payBtnFull: "Pagar ara", payFull: "Pagar", okTitleFull: "La teva reserva està confirmada!", okTextFull: "T'hem enviat un correu de benvinguda amb el resum i el calendari de la teva reserva.", paidFull: "Pagat",
 	},
 }
 
@@ -112,6 +123,8 @@ function lines2(text: string) {
 
 export default function DealCheckout({ deal, token, locale = "es" }: { deal: DealView; token: string; locale?: string }) {
 	const t = copy[locale] ?? copy.es
+	// Sin restante: es un pago completo (p. ej. link del bot con 1 o 2 actividades).
+	const full = deal.remainingMxn <= 0
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [phone, setPhone] = useState("")
@@ -168,15 +181,15 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 				<div className="dep-result">
 					{cover && <div className="deal-result-cover" role="img" aria-label={cover.label} style={{ backgroundImage: `url("${cover.src}")` }} />}
 					<div className="dep-result-badge">✓</div>
-					<h2>{t.okTitle}</h2>
-					<p className="dep-result-text">{t.okText}</p>
+					<h2>{full ? t.okTitleFull : t.okTitle}</h2>
+					<p className="dep-result-text">{full ? t.okTextFull : t.okText}</p>
 					<div className="dep-result-folio">{folio}</div>
 					<div className="dep-sum">
 						<div className="dep-sum-row"><span>{t.total}</span><strong>{formatMxn(deal.totalMxn)} MXN</strong></div>
-						<div className="dep-sum-row dep-sum-paid"><span>{t.deposit}</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
-						<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(deal.remainingMxn)} MXN</strong></div>
+						<div className="dep-sum-row dep-sum-paid"><span>{full ? t.paidFull : t.deposit}</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
+						{!full && <div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(deal.remainingMxn)} MXN</strong></div>}
 					</div>
-					<p className="dep-note">💵 {t.payNote}</p>
+					{!full && <p className="dep-note">💵 {t.payNote}</p>}
 					<p className="dep-email-sent">📧 {t.emailSent}</p>
 				</div>
 			</div>
@@ -189,10 +202,10 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 				<div className="dep-pay">
 					<div className="dep-pay-head">
 						<button type="button" className="checkout-back" onClick={() => setStep("view")}>{t.back}</button>
-						<div className="dep-pay-amount"><span>{t.deposit}</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
+						<div className="dep-pay-amount"><span>{full ? t.dueToday : t.deposit}</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
 					</div>
 					<Elements stripe={getStripeClient()} options={options}>
-						<DealPaymentForm locale={locale} emailDefault={email} returnUrl={window.location.href.split("#")[0]} onDone={() => setStep("result")} />
+						<DealPaymentForm locale={locale} full={full} emailDefault={email} returnUrl={window.location.href.split("#")[0]} onDone={() => setStep("result")} />
 					</Elements>
 				</div>
 			</div>
@@ -237,11 +250,17 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 				</table>
 
 				<div className="dep-sum">
-					<div className="dep-sum-row"><span>{t.total}</span><strong>{formatMxn(deal.totalMxn)} MXN</strong></div>
-					<div className="dep-sum-row dep-sum-paid"><span>{t.deposit} ({pct}%)</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
-					<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(deal.remainingMxn)} MXN</strong></div>
+					{full ? (
+						<div className="dep-sum-row dep-sum-paid"><span>{t.dueToday}</span><strong>{formatMxn(deal.totalMxn)} MXN</strong></div>
+					) : (
+						<>
+							<div className="dep-sum-row"><span>{t.total}</span><strong>{formatMxn(deal.totalMxn)} MXN</strong></div>
+							<div className="dep-sum-row dep-sum-paid"><span>{t.deposit} ({pct}%)</span><strong>{formatMxn(deal.depositMxn)} MXN</strong></div>
+							<div className="dep-sum-row"><span>{t.remaining}</span><strong>{formatMxn(deal.remainingMxn)} MXN</strong></div>
+						</>
+					)}
 				</div>
-				<p className="dep-note">💵 {t.payNote}</p>
+				{!full && <p className="dep-note">💵 {t.payNote}</p>}
 				{deal.note && <p className="deal-note-extra">{deal.note}</p>}
 
 				{(deal.includes || deal.excludes) && (
@@ -266,14 +285,14 @@ export default function DealCheckout({ deal, token, locale = "es" }: { deal: Dea
 					<label className="res-field"><span>{t.email}</span><input type="email" value={email} placeholder="tu@correo.com" onChange={(e) => setEmail(e.target.value)} /></label>
 					<label className="res-field"><span>{t.phone}</span><input type="tel" value={phone} placeholder={t.phonePh} onChange={(e) => setPhone(e.target.value)} /></label>
 					{err && <p className="checkout-error">⚠️ {err}</p>}
-					<button type="submit" className="btn btn-teal dep-pay-btn" disabled={busy}>{busy ? t.processing : `${t.payBtn} · ${formatMxn(deal.depositMxn)} MXN`}</button>
+					<button type="submit" className="btn btn-teal dep-pay-btn" disabled={busy}>{busy ? t.processing : `${full ? t.payBtnFull : t.payBtn} · ${formatMxn(deal.depositMxn)} MXN`}</button>
 				</form>
 			</div>
 		</div>
 	)
 }
 
-function DealPaymentForm({ locale, emailDefault, returnUrl, onDone }: { locale: string; emailDefault: string; returnUrl: string; onDone: () => void }) {
+function DealPaymentForm({ locale, full, emailDefault, returnUrl, onDone }: { locale: string; full: boolean; emailDefault: string; returnUrl: string; onDone: () => void }) {
 	const t = copy[locale] ?? copy.es
 	const stripe = useStripe()
 	const elements = useElements()
@@ -297,7 +316,7 @@ function DealPaymentForm({ locale, emailDefault, returnUrl, onDone }: { locale: 
 			<LinkAuthenticationElement options={{ defaultValues: { email: emailDefault } }} onChange={(e) => setEmail(e.value.email)} />
 			<PaymentElement options={{ layout: "tabs" }} />
 			{message && <p className="checkout-error">⚠️ {message}</p>}
-			<button type="submit" className="btn btn-teal checkout-submit" disabled={!stripe || submitting}>{submitting ? t.processing : t.pay}</button>
+			<button type="submit" className="btn btn-teal checkout-submit" disabled={!stripe || submitting}>{submitting ? t.processing : full ? t.payFull : t.pay}</button>
 			<p className="checkout-secure">🔒 {t.secure}</p>
 		</form>
 	)

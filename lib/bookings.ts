@@ -293,10 +293,11 @@ export function bookingsFromPaymentIntent(pi: Stripe.PaymentIntent): Booking[] {
 				activity: "otro",
 				activityLabel: deal?.title || "Reserva personalizada",
 				people: 0,
-				paidFull: null,
-				deposit: totals?.depositMxn ?? total,
-				settled: null,
-				balance: totals?.remainingMxn ?? null,
+				// Deal pagado completo (p. ej. link del bot con 1 o 2 actividades): queda liquidado.
+				paidFull: totals && totals.remainingMxn <= 0 ? totals.totalMxn : null,
+				deposit: totals && totals.remainingMxn <= 0 ? "nd" : totals?.depositMxn ?? total,
+				settled: totals && totals.remainingMxn <= 0 ? "si" : null,
+				balance: totals && totals.remainingMxn <= 0 ? "nd" : totals?.remainingMxn ?? null,
 				notes: deal
 					? `Deal: ${deal.lines.map((l) => `${l.label} ($${l.amountMxn.toLocaleString("en-US")})`).join("; ")}${deal.endISO ? `. Hasta ${deal.endISO}` : ""}. Revisa fechas y personas.`
 					: "Deal: revisa los detalles en el correo.",

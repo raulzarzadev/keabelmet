@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
 		const paymentIntent = await stripe.paymentIntents.create({
 			amount: Math.round(depositMxn * 100),
 			currency: "mxn",
-			description: `Keabelmet · Anticipo deal · ${deal.title}`.slice(0, 500),
+			description: `Keabelmet · ${remainingMxn <= 0 ? "Pago completo" : "Anticipo"} deal · ${deal.title}`.slice(0, 500),
 			receipt_email: emailRaw,
 			automatic_payment_methods: { enabled: true },
 			metadata: {
