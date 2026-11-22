@@ -131,3 +131,7 @@
 .lgSales { background: var(--teal); }
 .lgCosts { background: #c98a5e; }
 .lgDot { background: var(--sand); border-radius: 50% !important; }
+
+.modeBtn { min-width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--teal-dim); background: rgba(40, 194, 160, 0.12); color: var(--teal); font: inherit; font-weight: 700; cursor: pointer; }
+.modeBtn:hover { background: var(--teal); color: var(--ink); }
+.amountIn { width: 120px; }

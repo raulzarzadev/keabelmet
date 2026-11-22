@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 import s from "./ReservasPanel.module.css"
 import {
 	COMBINED_REPARTO,
+	isFixedCat,
 	COMPANY_ACCOUNT,
 	MOVEMENT_KINDS,
 	OPEX_CATEGORIES,
@@ -41,7 +42,9 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 	const sum = useMemo(() => yearSummary(bookings, expenses, settings, year), [bookings, expenses, settings, year])
 	const yearMoves = expenses.filter((e) => e.dateISO.startsWith(String(year))).sort((a, b) => a.dateISO.localeCompare(b.dateISO) || a.createdAt - b.createdAt)
 	const shownMoves = filter === "todos" ? yearMoves : yearMoves.filter((e) => kindOf(e) === filter)
-	const pctTotal = settings.reparto.reduce((a, c) => a + c.pct, 0)
+	// Solo los destinos por porcentaje deben sumar 100%
+	const pctCats = settings.reparto.filter((c) => !isFixedCat(c))
+	const pctTotal = pctCats.reduce((a, c) => a + c.pct, 0)
 	const t = sum.totals
 	const payers = useMemo(() => [...new Set([COMPANY_ACCOUNT, ...expenses.map(payerOf)])], [expenses])
 	const destinos = [...settings.fixed.map((f) => f.name), ...settings.reparto.map((c) => c.name)]
@@ -52,6 +55,12 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 	}
 	function setCat(i: number, k: "pct" | "name" | "desc", v: string) {
 		change({ ...settings, reparto: settings.reparto.map((c, j) => (j === i ? { ...c, [k]: k === "pct" ? Math.max(0, Math.min(100, Number(v) || 0)) / 100 : v } : c)) })
+	}
+	function setAmount(i: number, v: string) {
+		change({ ...settings, reparto: settings.reparto.map((c, j) => (j === i ? { ...c, amount: Math.max(0, Number(String(v).replace(/[$,\s]/g, "")) || 0) } : c)) })
+	}
+	function toggleMode(i: number) {
+		change({ ...settings, reparto: settings.reparto.map((c, j) => (j === i ? (isFixedCat(c) ? { name: c.name, pct: c.pct, desc: c.desc } : { ...c, mode: "fixed", amount: c.amount ?? 0 }) : c)) })
 	}
 	function setFixed(i: number, k: "monthly" | "name" | "desc", v: string) {
 		change({ ...settings, fixed: settings.fixed.map((f, j) => (j === i ? { ...f, [k]: k === "monthly" ? Math.max(0, Number(v) || 0) : v } : f)) })
@@ -146,7 +155,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 				<button className={s.btn} onClick={() => { if (confirm("¿Cargar el reparto combinado (tu panel + la plantilla de Jaime)? Revisa y luego Guardar.")) change({ ...settings, ...COMBINED_REPARTO, fixed: settings.fixed.length ? settings.fixed : COMBINED_REPARTO.fixed }) }}>Usar reparto combinado</button>
 			</div>
 			<p className={s.muted}>
-				Cada mes, de la <b>utilidad real</b> (ya sin gastos de operación) primero salen los compromisos fijos y lo que queda se reparte con estos porcentajes. Deben sumar 100%: ahora suman <b className={Math.abs(pctTotal - 1) > 0.001 ? s.warn : ""}>{pct(pctTotal)}</b>.
+				Cada mes, de la <b>utilidad real</b> (ya sin gastos de operación) primero salen los compromisos fijos y los destinos con monto fijo, y lo que queda se reparte con los porcentajes. Toca el <b>%</b> o el <b>$</b> de un destino para cambiarlo entre porcentaje y monto fijo al mes. Los porcentajes deben sumar 100%: ahora suman <b className={pctCats.length && Math.abs(pctTotal - 1) > 0.001 ? s.warn : ""}>{pct(pctTotal)}</b>.
 			</p>
 			<h4 className={s.subh}>Compromisos fijos al mes</h4>
 			<div className={s.cats}>
@@ -160,14 +169,22 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 				))}
 				<button type="button" className={`${s.cat} ${s.addCat}`} onClick={() => change({ ...settings, fixed: [...settings.fixed, { name: "Nuevo compromiso", monthly: 0, desc: "" }] })}>+ Compromiso fijo</button>
 			</div>
-			<h4 className={s.subh}>Porcentajes</h4>
+			<h4 className={s.subh}>Destinos (porcentaje o monto fijo)</h4>
 			<div className={s.cats}>
 				{settings.reparto.map((c, i) => (
 					<label key={i} className={s.cat}>
 						<input className={s.input} value={c.name} onChange={(e) => setCat(i, "name", e.target.value)} />
-						<span className={s.row}>
-							<input className={`${s.input} ${s.pctIn}`} type="number" min={0} max={100} step={1} value={Math.round(c.pct * 1000) / 10} onChange={(e) => setCat(i, "pct", e.target.value)} />%
-						</span>
+						{isFixedCat(c) ? (
+							<span className={s.row}>
+								<button type="button" className={s.modeBtn} title="Cambiar a porcentaje" onClick={(e) => { e.preventDefault(); toggleMode(i) }}>$</button>
+								<input className={`${s.input} ${s.amountIn}`} inputMode="decimal" value={c.amount || ""} placeholder="0" onChange={(e) => setAmount(i, e.target.value)} /> al mes
+							</span>
+						) : (
+							<span className={s.row}>
+								<input className={`${s.input} ${s.pctIn}`} type="number" min={0} max={100} step={1} value={Math.round(c.pct * 1000) / 10} onChange={(e) => setCat(i, "pct", e.target.value)} />
+								<button type="button" className={s.modeBtn} title="Cambiar a monto fijo al mes" onClick={(e) => { e.preventDefault(); toggleMode(i) }}>%</button>
+							</span>
+						)}
 						<input className={`${s.input} ${s.descIn}`} value={c.desc} placeholder="Para qué es" onChange={(e) => setCat(i, "desc", e.target.value)} />
 						{settings.reparto.length > 1 && (
 							<button type="button" className={s.linkBtn} onClick={() => change({ ...settings, reparto: settings.reparto.filter((_, j) => j !== i), goalIndex: Math.max(0, settings.goalIndex - (i < settings.goalIndex ? 1 : 0)) })}>Quitar</button>
