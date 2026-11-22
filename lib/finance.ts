@@ -69,8 +69,17 @@ export function sanitizeExpense(input: Record<string, unknown>, base?: Expense |
 	const qty = numOrNull(input.qty)
 	const total = numOrNull(input.total) ?? (unitPrice !== null && qty !== null ? unitPrice * qty : null)
 	if (total === null) throw new Error("Falta el total")
+	const kinds = ["operacion", "equipo", "reparto", "pagoArgo", "reembolso"] as const
+	const kind = kinds.find((k) => k === input.kind) ?? base?.kind
+	const argo = numOrNull(input.argoPct)
+	// argoPct puede venir como 0–1 o como porcentaje (0–100)
+	const argoPct = argo === null ? undefined : Math.max(0, Math.min(1, argo > 1 ? argo / 100 : argo))
 	const now = Date.now()
 	return {
+		kind,
+		paidFrom: input.paidFrom !== undefined ? str(input.paidFrom, 120) : base?.paidFrom,
+		argoPct: kind === "operacion" || kind === "equipo" ? argoPct || undefined : undefined,
+		destino: kind === "reparto" || kind === "reembolso" ? str(input.destino, 120) : undefined,
 		id: base?.id ?? newId("g"),
 		dateISO,
 		item: str(input.item, 160),
