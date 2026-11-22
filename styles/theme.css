@@ -1662,7 +1662,8 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .xmap-months button:hover { color: var(--sand); border-color: var(--sand-dim); }
 .xmap-months button.on { background: var(--teal); border-color: var(--teal); color: var(--ink); font-weight: 700; }
 .xmap-home-grid { display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 20px; }
-.xmap-home-map { min-height: 560px; }
+.xmap-home-mapwrap { display: flex; min-width: 0; }
+.xmap-home-mapwrap > .xmap-home-map { flex: 1; min-height: 560px; }
 .xmap-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; max-height: 560px; overflow-y: auto; padding-right: 4px; }
 .xmap-item { width: 100%; display: flex; gap: 12px; align-items: center; text-align: left; background: var(--ink-2); border: 1px solid var(--line); border-radius: 16px; padding: 8px; cursor: pointer; color: inherit; font-family: inherit; transition: border-color .2s ease, background .2s ease; }
 .xmap-item:hover { border-color: var(--sand-dim); }
@@ -1678,8 +1679,13 @@ body.has-book-bar .wa-float { bottom: 94px; }
   .xmap-home { padding: 60px 20px; }
   .xmap-home-grid { grid-template-columns: 1fr; }
   /* Celular: el mapa se queda fijo arriba mientras bajas por la lista */
-  .xmap-home-map { order: -1; min-height: 0; height: 40vh; position: sticky; top: 76px; z-index: 5; box-shadow: 0 14px 28px rgba(8,21,31,0.85); }
-  .xmap-list li { scroll-margin-top: calc(40vh + 92px); }
+  /* Franja fija: fondo sólido de lado a lado, pegada al encabezado, con desvanecido abajo */
+  .xmap-home-mapwrap { order: -1; position: sticky; top: 66px; z-index: 5; background: var(--ink); margin: 0 -20px; padding: 10px 20px 14px; }
+  .xmap-home-mapwrap::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 22px; background: linear-gradient(to bottom, var(--ink), rgba(8,21,31,0)); pointer-events: none; }
+  .xmap-home-mapwrap > .xmap-home-map { min-height: 0; height: 38vh; }
+  .xmap-list li { scroll-margin-top: calc(38vh + 112px); }
+  /* Menos amontonado: solo el nombre del punto elegido; el traslado ya se explica en la tarjeta */
+  .xmap-home-map .xmap-pin:not(.on) .xmap-label, .xmap-home-map .xmap-route-label { display: none; }
   .xmap-list { max-height: none; overflow: visible; }
   .xmap-months { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
   .xmap-months::-webkit-scrollbar { display: none; }
