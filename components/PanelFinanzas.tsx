@@ -174,6 +174,8 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 			</div>
 			{cut.missingCost > 0 && <p className={s.muted}>Ojo: en {cutName} hay {cut.missingCost} reservas sin costo ({money(cut.salesNoCost)} en ventas) que todavía no cuentan en la utilidad.</p>}
 			{cut.netProfit <= 0 && (cut.sales || cut.opex) ? <p className={s.muted}>En {cutName} no hubo utilidad, así que no toca separar nada.</p> : null}
+			<div className={s.repGrid}>
+			<div className={s.repCards}>
 			<h4 className={s.subh}>Compromisos fijos al mes</h4>
 			<div className={s.cats}>
 				{settings.fixed.map((f, i) => (
@@ -211,6 +213,9 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 					</label>
 				))}
 				<button type="button" className={`${s.cat} ${s.addCat}`} onClick={() => change({ ...settings, reparto: [...settings.reparto, { name: "Nuevo destino", pct: 0, desc: "" }] })}>+ Destino</button>
+			</div>
+			</div>
+			<RepartoDonut settings={settings} cut={cut} monthName={cutName} pctTotal={pctTotal} />
 			</div>
 			{saveBar}
 
@@ -545,5 +550,135 @@ function CutAmount({ month, value, of }: { month: string; value: number; of?: nu
 			En {month}: <b>{money(value)}</b>
 			{short && <span className={s.warn}> de {money(of)} (no alcanzó)</span>}
 		</span>
+	)
+}
+
+/**
+ * Colores de los destinos, en orden fijo por posición (no por tamaño): paleta
+ * categórica validada para modo oscuro sobre el fondo del panel (contraste y
+ * daltonismo). Los compromisos fijos van en tonos neutros.
+ */
+const DEST_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#0ca30c", "#9085e9", "#e66767"]
+const FIXED_TONES = ["#8f897c", "#c2bba9", "#6f6a5f", "#a9a293"]
+const OTHER_COLOR = "#5d6b73"
+
+interface Slice {
+	key: string
+	name: string
+	value: number
+	color: string
+	group: "fijo" | "destino"
+}
+
+function RepartoDonut({ settings, cut, monthName, pctTotal }: { settings: FinSettings; cut: ReturnType<typeof yearSummary>["months"][number]; monthName: string; pctTotal: number }) {
+	const [hover, setHover] = useState<string | null>(null)
+	// Con utilidad: pesos reales del mes. Sin utilidad: solo cómo quedan los porcentajes.
+	const byMoney = cut.netProfit > 0
+	const slices: Slice[] = []
+	if (byMoney) {
+		settings.fixed.forEach((fx, i) => slices.push({ key: "f" + i, name: fx.name, value: cut.fixedSplit[i] ?? 0, color: FIXED_TONES[i % FIXED_TONES.length], group: "fijo" }))
+	}
+	let other = 0
+	settings.reparto.forEach((c, i) => {
+		const v = byMoney ? cut.reparto[i] ?? 0 : isFixedCat(c) ? 0 : c.pct
+		// Del destino 9 en adelante se juntan en "Otros destinos" (8 colores como máximo)
+		if (i >= DEST_COLORS.length) other += v
+		else slices.push({ key: "d" + i, name: c.name, value: v, color: DEST_COLORS[i], group: "destino" })
+	})
+	if (other > 0) slices.push({ key: "otros", name: "Otros destinos", value: other, color: OTHER_COLOR, group: "destino" })
+	const shown = slices.filter((x) => x.value > 0.0001)
+
+	const base = byMoney ? cut.netProfit : 1
+	const assigned = shown.reduce((a, x) => a + x.value, 0)
+	const free = Math.max(0, base - assigned)
+	const over = assigned - base > base * 0.001
+	const ringTotal = Math.max(base, assigned)
+	const share = (v: number) => (base > 0 ? v / base : 0)
+	const fmt = (v: number) => (byMoney ? money(v) : pct(v))
+
+	// Anillo: cada rebanada es un trazo del círculo con 2px de separación
+	const R0 = 80
+	const C = 2 * Math.PI * R0
+	const GAP = shown.length > 1 ? 2 : 0
+	let offset = 0
+	const arcs = shown.map((x) => {
+		const len = (x.value / ringTotal) * C
+		const a = { ...x, dash: Math.max(0.5, len - GAP), offset }
+		offset += len
+		return a
+	})
+	const active = shown.find((x) => x.key === hover)
+
+	return (
+		<aside className={s.repChart}>
+			<p className={s.subh} style={{ marginTop: 0 }}>{byMoney ? `Reparto de ${monthName}` : "Reparto por porcentajes"}</p>
+			<div className={s.donutWrap}>
+				<svg viewBox="0 0 200 200" className={s.donut} role="img" aria-label={`Reparto de ${monthName}: ${shown.map((x) => `${x.name} ${pct(share(x.value))}`).join(", ")}`}>
+					<circle cx="100" cy="100" r={R0} className={s.donutTrack} />
+					<g transform="rotate(-90 100 100)">
+						{arcs.map((a) => (
+							<circle
+								key={a.key}
+								cx="100"
+								cy="100"
+								r={R0}
+								fill="none"
+								stroke={a.color}
+								strokeWidth={hover === a.key ? 30 : 24}
+								strokeDasharray={`${a.dash} ${C - a.dash}`}
+								strokeDashoffset={-a.offset}
+								onMouseEnter={() => setHover(a.key)}
+								onMouseLeave={() => setHover(null)}
+								style={{ opacity: hover && hover !== a.key ? 0.45 : 1, transition: "opacity .15s, stroke-width .15s", cursor: "default" }}
+							>
+								<title>{`${a.name}: ${fmt(a.value)} (${pct(share(a.value))})`}</title>
+							</circle>
+						))}
+					</g>
+				</svg>
+				<div className={s.donutCenter}>
+					{active ? (
+						<>
+							<small>{active.name}</small>
+							<b>{pct(share(active.value))}</b>
+							{byMoney && <small>{money(active.value)}</small>}
+						</>
+					) : (
+						<>
+							<b className={over ? s.warn : ""}>{pct(share(assigned))}</b>
+							<small>{over ? "te pasas del 100%" : free > base * 0.001 ? "asignado" : "asignado ✓"}</small>
+							{byMoney ? <small>de {money(base)}</small> : <small>sin utilidad en {monthName}</small>}
+						</>
+					)}
+				</div>
+			</div>
+			{!byMoney && <p className={s.muted}>En {monthName} no hubo utilidad: el círculo muestra solo cómo se reparten los porcentajes (los montos fijos se cubren primero cuando haya utilidad).</p>}
+			{byMoney && Math.abs(pctTotal - 1) > 0.001 && <p className={s.muted}>Los porcentajes suman {pct(pctTotal)}{pctTotal < 1 ? `: falta asignar ${pct(1 - pctTotal)} de lo que queda` : ": se pasan del 100%"}.</p>}
+			<ul className={s.donutLegend}>
+				{(["fijo", "destino"] as const).map((g) =>
+					shown.some((x) => x.group === g) ? (
+						<li key={g} className={s.donutGroup}>{g === "fijo" ? "Compromisos fijos" : "Destinos"}</li>
+					) : null,
+				).flatMap((head, gi) => {
+					const g = gi === 0 ? "fijo" : "destino"
+					return [head, ...shown.filter((x) => x.group === g).map((x) => (
+						<li key={x.key} className={hover === x.key ? s.donutOn : ""} onMouseEnter={() => setHover(x.key)} onMouseLeave={() => setHover(null)}>
+							<i style={{ background: x.color }} />
+							<span>{x.name}</span>
+							<em>{pct(share(x.value))}</em>
+							{byMoney && <b>{money(x.value)}</b>}
+						</li>
+					))]
+				})}
+				{free > base * 0.001 && (
+					<li className={s.donutFree}>
+						<i />
+						<span>Sin asignar</span>
+						<em>{pct(share(free))}</em>
+						{byMoney && <b>{money(free)}</b>}
+					</li>
+				)}
+			</ul>
+		</aside>
 	)
 }

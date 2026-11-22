@@ -161,3 +161,25 @@
 .cutBar b { color: var(--sand); }
 .cutAmt { font-size: 0.85rem; color: var(--sand-dim); border-top: 1px dashed var(--line); padding-top: 6px; margin-top: 2px; }
 .cutAmt b { color: var(--teal); font-size: 1rem; }
+
+/* Reparto: casillas + gráfica circular al lado */
+.repGrid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; align-items: start; }
+.repCards { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.repChart { position: sticky; top: 96px; border: 1px solid var(--line); background: var(--ink-2); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.donutWrap { position: relative; width: 100%; max-width: 240px; margin: 0 auto; }
+.donut { width: 100%; height: auto; display: block; }
+.donutTrack { fill: none; stroke: var(--line); stroke-width: 24; }
+.donutCenter { position: absolute; inset: 22%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; pointer-events: none; gap: 1px; }
+.donutCenter b { font-size: 1.5rem; color: var(--sand); line-height: 1.1; }
+.donutCenter small { font-size: 0.75rem; color: var(--sand-dim); line-height: 1.25; overflow-wrap: anywhere; }
+.donutLegend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; font-size: 0.82rem; }
+.donutLegend li { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto auto; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 6px; }
+.donutLegend li i { width: 12px; height: 12px; border-radius: 3px; }
+.donutLegend li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--sand); }
+.donutLegend li em { font-style: normal; color: var(--sand-dim); }
+.donutLegend li b { color: var(--sand); font-weight: 600; min-width: 64px; text-align: right; }
+.donutLegend li.donutGroup { display: block; color: var(--sand-dim); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 6px 2px; }
+.donutLegend li.donutOn { background: rgba(244, 239, 228, 0.07); }
+.donutFree i { border: 1px dashed var(--sand-dim); background: transparent; }
+.donutFree span, .donutFree em, .donutFree b { color: var(--sand-dim) !important; }
+@media (max-width: 980px) { .repGrid { grid-template-columns: 1fr; } .repChart { position: static; } }
