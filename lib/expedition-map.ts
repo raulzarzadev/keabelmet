@@ -178,6 +178,8 @@ export function directionsUrl(p: MapPoint): string {
 /** Textos del mapa en los 5 idiomas. */
 export const MAP_TEXT = {
 	es: {
+		monthResult: "En {m} salen {n} de {total} expediciones",
+		outOfSeason: "Fuera de temporada",
 		kicker: "Dónde empieza tu aventura",
 		gestureMobile: "Usa dos dedos para mover el mapa",
 		gestureWin: "Usa Ctrl + rueda del ratón para hacer zoom",
@@ -218,6 +220,8 @@ export const MAP_TEXT = {
 		months: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
 	},
 	en: {
+		monthResult: "{n} of {total} expeditions run in {m}",
+		outOfSeason: "Out of season",
 		kicker: "Where your adventure starts",
 		gestureMobile: "Use two fingers to move the map",
 		gestureWin: "Use Ctrl + scroll to zoom the map",
@@ -258,6 +262,8 @@ export const MAP_TEXT = {
 		months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 	},
 	fr: {
+		monthResult: "En {m}, {n} expéditions sur {total} partent",
+		outOfSeason: "Hors saison",
 		kicker: "Là où commence votre aventure",
 		gestureMobile: "Utilisez deux doigts pour déplacer la carte",
 		gestureWin: "Utilisez Ctrl + molette pour zoomer",
@@ -298,6 +304,8 @@ export const MAP_TEXT = {
 		months: ["Janv", "Févr", "Mars", "Avr", "Mai", "Juin", "Juil", "Août", "Sept", "Oct", "Nov", "Déc"],
 	},
 	zh: {
+		monthResult: "{m}有 {n}/{total} 项探险出发",
+		outOfSeason: "非当季",
 		kicker: "你的冒险从这里开始",
 		gestureMobile: "用两根手指移动地图",
 		gestureWin: "按住 Ctrl 并滚动鼠标滚轮缩放地图",
@@ -338,6 +346,8 @@ export const MAP_TEXT = {
 		months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
 	},
 	ca: {
+		monthResult: "Mes de {m}: surten {n} de {total} expedicions",
+		outOfSeason: "Fora de temporada",
 		kicker: "On comença la teva aventura",
 		gestureMobile: "Fes servir dos dits per moure el mapa",
 		gestureWin: "Fes servir Ctrl + roda del ratolí per fer zoom",

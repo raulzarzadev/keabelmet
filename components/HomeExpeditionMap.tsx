@@ -59,16 +59,21 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 		return out
 	}, [locale])
 
-	const visible = month ? rows.filter((r) => r.months.includes(month)) : rows
-	const sel = visible.find((r) => r.id === active) ?? null
+	const inMonth = (r: Row) => !month || r.months.includes(month)
+	const visible = rows.filter(inMonth)
+	// Con un mes elegido, las que no salen no desaparecen: bajan al final, atenuadas
+	const listed = month ? [...visible, ...rows.filter((r) => !inMonth(r))] : rows
+	const sel = rows.find((r) => r.id === active) ?? null
 	const selInfo = sel ? EXPEDITION_MAP[sel.id]! : null
 
 	const pins = useMemo<MapPin[]>(() => {
 		const byPoint = new Map<PointId, number>()
 		for (const r of visible) byPoint.set(r.point, (byPoint.get(r.point) ?? 0) + 1)
-		return [...byPoint.entries()].map(([pid, n]) => ({ id: pid, lng: POINTS[pid].lng, lat: POINTS[pid].lat, label: POINTS[pid].place[locale], badge: String(n) }))
+		// La elegida siempre tiene su punto, aunque esté fuera de temporada
+		if (sel && !byPoint.has(sel.point)) byPoint.set(sel.point, 0)
+		return [...byPoint.entries()].map(([pid, n]) => ({ id: pid, lng: POINTS[pid].lng, lat: POINTS[pid].lat, label: POINTS[pid].place[locale], badge: n ? String(n) : "·" }))
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [visible.map((r) => r.id).join(","), locale])
+	}, [visible.map((r) => r.id).join(","), sel?.point, locale])
 
 	const areas = useMemo<MapArea[]>(() => {
 		if (!selInfo?.zone) return []
@@ -76,6 +81,13 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 		return [{ id: selInfo.zone, lng: z.lng, lat: z.lat, radiusKm: z.radiusKm, polygon: z.polygon, label: z.name[locale] }]
 	}, [selInfo, locale])
 
+	const monthName = (m: number) => {
+		try {
+			return new Intl.DateTimeFormat(locale === "zh" ? "zh-CN" : locale, { month: "long" }).format(new Date(2026, m - 1, 1))
+		} catch {
+			return t.months[m - 1]
+		}
+	}
 	const season = (m: number[]) => (m.length >= 12 ? t.allMonths : `${t.months[m[0] - 1]}–${t.months[m[m.length - 1] - 1]}`)
 
 	return (
@@ -92,18 +104,27 @@ export default function HomeExpeditionMap({ locale }: { locale: Locale }) {
 					<button key={m} type="button" className={month === i + 1 ? "on" : ""} onClick={() => setMonth(i + 1)}>{m}</button>
 				))}
 			</div>
+			{month && (
+				<p className="xmap-month-result" aria-live="polite">
+					{t.monthResult.replace("{m}", monthName(month)).replace("{n}", String(visible.length)).replace("{total}", String(rows.length))}
+				</p>
+			)}
 			<div className="xmap-home-grid">
 				<ul className="xmap-list" ref={listRef}>
 					{visible.length === 0 && <li className="xmap-empty">{t.noneInMonth}</li>}
-					{visible.map((r) => (
+					{listed.map((r) => (
 						<li key={r.id} data-id={r.id}>
-							<button type="button" className={`xmap-item${active === r.id ? " on" : ""}`} onClick={() => setActive(active === r.id ? null : r.id)} aria-pressed={active === r.id}>
+							<button type="button" className={`xmap-item${active === r.id ? " on" : ""}${inMonth(r) ? "" : " out"}`} onClick={() => setActive(active === r.id ? null : r.id)} aria-pressed={active === r.id}>
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img src={r.image} alt="" loading="lazy" decoding="async" />
 								<span className="xmap-item-body">
 									<strong>{r.title}</strong>
 									<span className="xmap-item-meta">{POINTS[r.point].place[locale]} · {season(r.months)}</span>
-									{r.fromMxn != null && <span className="xmap-item-price">{t.from} <Price amount={r.fromMxn} /></span>}
+									{inMonth(r) ? (
+										r.fromMxn != null && <span className="xmap-item-price">{t.from} <Price amount={r.fromMxn} /></span>
+									) : (
+										<span className="xmap-item-out">{t.outOfSeason}</span>
+									)}
 								</span>
 							</button>
 							{active === r.id && (
