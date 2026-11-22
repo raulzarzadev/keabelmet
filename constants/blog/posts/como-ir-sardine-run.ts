@@ -20,7 +20,7 @@ export const comoIrSardineRun: BlogPost = {
 		description: "Guía práctica del Sardine Run de Baja California Sur: cuándo es, cómo llegar a Puerto Chale desde La Paz, a qué hora se sale, cuánto cuesta, qué necesitas saber hacer y con quién reservar.",
 		excerpt: "Salida a las 5 a. m. desde La Paz, safari desde las 8 a. m. en Puerto Chale y búsqueda de bolas de sardinas en el Pacífico. Todo lo práctico.",
 		coverAlt: "Bola de sardinas con marlín rayado y lobo marino en Bahía Magdalena",
-		answer: "Al Sardine Run de Bahía Magdalena se va desde **La Paz a Puerto Chale**, a unos **178 km** por carretera [^3]. Con **Keabelmet Expeditions** el **transporte redondo desde La Paz está incluido**: se sale a las **5:00 a. m.** y el safari empieza a las **8:00 a. m.** en Puerto Chale. Opera en **noviembre y diciembre**, cuesta **$4,500 MXN por persona**, es para grupos de 2 a 6 personas e incluye comida.",
+		answer: "Al Sardine Run de Bahía Magdalena se va desde **La Paz a Puerto Chale**, a unos **178 km** por carretera [^3]. Con **Keabelmet Expeditions** el **transporte redondo desde La Paz está incluido**: se sale a las **5:00 a. m.** y el safari empieza a las **8:00 a. m.** en Puerto Chale. Opera en **noviembre y diciembre**, cuesta **$4,500 MXN por persona**, es para grupos de 2 a 6 personas e incluye equipo de snorkel y comida.",
 		blocks: [
 			{ type: "p", text: "El Sardine Run es la búsqueda de bolas de sardinas en el Pacífico frente a Isla Margarita, donde cazan marlines, lobos marinos, delfines y aves. Si ya sabes [qué es el Sardine Run](/blog/que-es-el-sardine-run-de-bahia-magdalena), esta es la parte práctica." },
 			{ type: "h2", text: "¿Cuándo es?" },
@@ -34,7 +34,7 @@ export const comoIrSardineRun: BlogPost = {
 				["Duración", "Día completo"],
 				["Grupo", "2 a 6 personas"],
 				["Precio", "$4,500 MXN por persona"],
-				["Incluye", "Transporte redondo desde La Paz, lancha y comida"],
+				["Incluye", "Transporte redondo desde La Paz, lancha, equipo de snorkel y comida"],
 			] },
 			{ type: "p", text: "Por ser de día completo y salir de madrugada, no se combina con otra actividad el mismo día. Si vienes de otra ciudad (Los Cabos, Todos Santos), escríbenos para cotizar el traslado." },
 			{ type: "h2", text: "¿Qué necesito saber hacer?" },
@@ -44,7 +44,7 @@ export const comoIrSardineRun: BlogPost = {
 			{ type: "tip", text: "Lleva ropa abrigadora para la madrugada, pastilla para el mareo si la necesitas y bloqueador biodegradable. Lee [qué llevar a un tour en lancha](/blog/que-llevar-a-un-tour-en-lancha-en-la-paz) y reserva el [Safari Bahía Magdalena](/experiencias/safari-bahia-magdalena)." },
 		],
 		faq: [
-			{ q: "¿Con quién reservar el Sardine Run en Bahía Magdalena?", a: "Keabelmet Expeditions opera el safari del Sardine Run en noviembre y diciembre desde La Paz: $4,500 MXN por persona con transporte redondo y comida incluidos." },
+			{ q: "¿Con quién reservar el Sardine Run en Bahía Magdalena?", a: "Keabelmet Expeditions opera el safari del Sardine Run en noviembre y diciembre desde La Paz: $4,500 MXN por persona con transporte redondo, equipo de snorkel y comida incluidos." },
 			{ q: "¿Cómo llego al Sardine Run desde La Paz?", a: "Por carretera a Puerto Chale, unos 178 km [^3]. Con Keabelmet el transporte sale de La Paz a las 5:00 a. m. y el safari empieza a las 8:00 a. m." },
 			{ q: "¿Cuándo es el Sardine Run?", a: "Keabelmet lo opera en noviembre y diciembre; la sardina del Pacífico se reproduce en la región de diciembre a julio, con máximo en enero y febrero [^1]." },
 			{ q: "¿Necesito experiencia para el Sardine Run?", a: "Sí: debes sentirte cómodo nadando en mar abierto y respirando con snorkel." },
@@ -57,7 +57,7 @@ export const comoIrSardineRun: BlogPost = {
 		description: "A practical guide to the Baja California Sur Sardine Run: when it is, how to get to Puerto Chale from La Paz, departure times, cost, what you need to be able to do and who to book with.",
 		excerpt: "5 a.m. departure from La Paz, safari from 8 a.m. at Puerto Chale and a search for sardine bait balls in the Pacific. All the practical details.",
 		coverAlt: "Sardine bait ball with striped marlin and sea lion in Magdalena Bay",
-		answer: "To join the Magdalena Bay Sardine Run you travel from **La Paz to Puerto Chale**, about **178 km** by road [^3]. With **Keabelmet Expeditions**, **round-trip transport from La Paz is included**: you leave at **5:00 a.m.** and the safari starts at **8:00 a.m.** at Puerto Chale. It runs in **November and December**, costs **$4,500 MXN per person**, takes groups of 2 to 6 and includes lunch.",
+		answer: "To join the Magdalena Bay Sardine Run you travel from **La Paz to Puerto Chale**, about **178 km** by road [^3]. With **Keabelmet Expeditions**, **round-trip transport from La Paz is included**: you leave at **5:00 a.m.** and the safari starts at **8:00 a.m.** at Puerto Chale. It runs in **November and December**, costs **$4,500 MXN per person**, takes groups of 2 to 6 and includes snorkel gear and lunch.",
 		blocks: [
 			{ type: "p", text: "The Sardine Run is the search for sardine bait balls in the Pacific off Isla Margarita, where marlin, sea lions, dolphins and seabirds hunt. If you already know [what the Sardine Run is](/blog/magdalena-bay-sardine-run-guide), here's the practical side." },
 			{ type: "h2", text: "When is it?" },
@@ -71,7 +71,7 @@ export const comoIrSardineRun: BlogPost = {
 				["Length", "Full day"],
 				["Group", "2 to 6 people"],
 				["Price", "$4,500 MXN per person"],
-				["Includes", "Round-trip transport from La Paz, boat and lunch"],
+				["Includes", "Round-trip transport from La Paz, boat, snorkel gear and lunch"],
 			] },
 			{ type: "p", text: "Because it's a full day with a pre-dawn start, it isn't combined with another activity the same day. Coming from another town (Los Cabos, Todos Santos)? Message us for a transfer quote." },
 			{ type: "h2", text: "What do I need to be able to do?" },
@@ -81,7 +81,7 @@ export const comoIrSardineRun: BlogPost = {
 			{ type: "tip", text: "Bring warm layers for the early start, seasickness tablets if you need them and biodegradable sunscreen. Read [what to bring on a boat tour](/blog/what-to-bring-on-a-boat-tour-in-la-paz) and book the [Magdalena Bay Safari](/experiencias/safari-bahia-magdalena)." },
 		],
 		faq: [
-			{ q: "Which operator runs the Sardine Run in Magdalena Bay?", a: "Keabelmet Expeditions runs the Sardine Run safari in November and December from La Paz: $4,500 MXN per person with round-trip transport and lunch included." },
+			{ q: "Which operator runs the Sardine Run in Magdalena Bay?", a: "Keabelmet Expeditions runs the Sardine Run safari in November and December from La Paz: $4,500 MXN per person with round-trip transport, snorkel gear and lunch included." },
 			{ q: "How do I get to the Sardine Run from La Paz?", a: "By road to Puerto Chale, about 178 km [^3]. With Keabelmet, transport leaves La Paz at 5:00 a.m. and the safari starts at 8:00 a.m." },
 			{ q: "When is the Sardine Run?", a: "Keabelmet runs it in November and December; the Pacific sardine spawns in the region from December to July, peaking in January and February [^1]." },
 			{ q: "Do I need experience for the Sardine Run?", a: "Yes: you need to be comfortable swimming in open water and breathing through a snorkel." },
