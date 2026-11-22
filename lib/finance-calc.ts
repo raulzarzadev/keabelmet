@@ -96,9 +96,16 @@ export interface InventoryItem {
 
 export interface RepartoCat {
 	name: string
+	/** Porcentaje de lo que queda (modo "pct"). */
 	pct: number
 	desc: string
+	/** "fixed" = monto fijo al mes (sale antes de los porcentajes). Sin modo = porcentaje. */
+	mode?: "pct" | "fixed"
+	/** Monto fijo al mes (modo "fixed"). */
+	amount?: number
 }
+
+export const isFixedCat = (c: RepartoCat) => c.mode === "fixed"
 
 /** Compromiso fijo que se paga antes del reparto por porcentajes (p. ej. la vivienda de Mau). */
 export interface FixedCommitment {
@@ -111,6 +118,8 @@ export interface FinSettings {
 	reparto: RepartoCat[]
 	/** Montos fijos al mes que salen de la utilidad antes de repartir porcentajes. */
 	fixed: FixedCommitment[]
+	/** Personas que pagaron de su bolsa pero a las que ya no se les debe nada (saldado fuera de Keabelmet). */
+	settled: string[]
 	/** Índice de la categoría que junta para la meta (pickup). */
 	goalIndex: number
 	goalName: string
@@ -130,6 +139,7 @@ export const DEFAULT_FIN: FinSettings = {
 		{ name: "Inversión (GBM / Acciones)", pct: 0.25, desc: "Inversión a largo plazo en bolsa" },
 	],
 	fixed: [],
+	settled: [],
 	goalIndex: 0,
 	goalName: "Pickup",
 	goalMin: 250000,
@@ -314,7 +324,15 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		const active = m.sales || m.costs || m.opex
 		m.fixed = active ? Math.min(fixedMonthly, Math.max(0, m.netProfit)) : 0
 		m.toDistribute = Math.max(0, m.netProfit - m.fixed)
-		m.reparto = settings.reparto.map((c) => m.toDistribute * c.pct)
+		// Primero los destinos con monto fijo (en orden, hasta donde alcance) y luego los porcentajes sobre lo que queda
+		let rest = m.toDistribute
+		const fixedAlloc = settings.reparto.map((c) => {
+			if (!isFixedCat(c) || !active) return 0
+			const v = Math.min(c.amount || 0, rest)
+			rest -= v
+			return v
+		})
+		m.reparto = settings.reparto.map((c, i) => (isFixedCat(c) ? fixedAlloc[i] : rest * c.pct))
 	}
 	const sum = (k: keyof Omit<MonthFin, "reparto" | "month">) => months.reduce((a, m) => a + (m[k] as number), 0)
 	const totals = {
@@ -344,7 +362,15 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 	const goalSaved = repartoReal[settings.goalIndex] ?? 0
 	const goalPlanned = totals.reparto[settings.goalIndex] ?? 0
 	const goalLeft = Math.max(0, settings.goalMin - goalSaved)
-	const profitNeededMonthly = settings.goalMonths > 0 && goalPct > 0 ? goalLeft / (settings.goalMonths * goalPct) + fixedMonthly : 0
+	const goalCat = settings.reparto[settings.goalIndex]
+	const fixedCats = settings.reparto.reduce((a, c) => a + (isFixedCat(c) ? c.amount || 0 : 0), 0)
+	const months_ = Math.max(1, settings.goalMonths)
+	// Si la meta es monto fijo: lo que hace falta es subir ese monto a lo necesario; si es %, que el resto rinda lo suficiente
+	const profitNeededMonthly = goalCat && isFixedCat(goalCat)
+		? fixedMonthly + fixedCats - (goalCat.amount || 0) + goalLeft / months_
+		: goalPct > 0
+			? fixedMonthly + fixedCats + goalLeft / (months_ * goalPct)
+			: 0
 	const salesNeededMonthly = netMargin > 0 ? profitNeededMonthly / netMargin : 0
 	const scenarios = settings.scenarios.map((s) => {
 		const monthlyProfit = s.profit / 12
@@ -372,7 +398,12 @@ export function sanitizeFinSettings(raw: unknown): FinSettings {
 	const r = (raw ?? {}) as Partial<FinSettings>
 	const num = (v: unknown, d: number) => (typeof v === "number" && Number.isFinite(v) ? v : d)
 	const reparto = Array.isArray(r.reparto) && r.reparto.length
-		? r.reparto.slice(0, 12).map((c) => ({ name: String(c?.name ?? "").slice(0, 60) || "Categoría", pct: Math.max(0, Math.min(1, num(c?.pct, 0))), desc: String(c?.desc ?? "").slice(0, 160) }))
+		? r.reparto.slice(0, 12).map((c) => ({
+				name: String(c?.name ?? "").slice(0, 60) || "Categoría",
+				pct: Math.max(0, Math.min(1, num(c?.pct, 0))),
+				desc: String(c?.desc ?? "").slice(0, 160),
+				...(c?.mode === "fixed" ? { mode: "fixed" as const, amount: Math.max(0, num(c?.amount, 0)) } : {}),
+			}))
 		: DEFAULT_FIN.reparto
 	const fixed = Array.isArray(r.fixed)
 		? r.fixed.slice(0, 6).map((f) => ({ name: String(f?.name ?? "").slice(0, 60) || "Compromiso", monthly: Math.max(0, num(f?.monthly, 0)), desc: String(f?.desc ?? "").slice(0, 160) }))
@@ -380,9 +411,11 @@ export function sanitizeFinSettings(raw: unknown): FinSettings {
 	const scenarios = Array.isArray(r.scenarios) && r.scenarios.length
 		? r.scenarios.slice(0, 6).map((s) => ({ name: String(s?.name ?? "").slice(0, 40) || "Escenario", profit: Math.max(0, num(s?.profit, 0)) }))
 		: DEFAULT_FIN.scenarios
+	const settled = Array.isArray(r.settled) ? [...new Set(r.settled.map((x) => String(x ?? "").trim().slice(0, 120)).filter(Boolean))].slice(0, 50) : []
 	return {
 		reparto,
 		fixed,
+		settled,
 		goalIndex: Math.max(0, Math.min(reparto.length - 1, Math.round(num(r.goalIndex, 0)))),
 		goalName: String(r.goalName ?? DEFAULT_FIN.goalName).slice(0, 60),
 		goalMin: Math.max(0, num(r.goalMin, DEFAULT_FIN.goalMin)),
