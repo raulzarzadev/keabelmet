@@ -87,6 +87,11 @@ import { tourBallenaGrisPuertoChale } from "./posts/tour-ballena-gris-puerto-cha
 import { elegirOperadorToursLaPaz } from "./posts/elegir-operador-tours-la-paz"
 import { turismoResponsableFauna } from "./posts/turismo-responsable-fauna"
 import { islaPartidaEnsenadaGrande } from "./posts/isla-partida-ensenada-grande"
+import { mejoresToursLaPaz } from "./posts/mejores-tours-la-paz"
+import { queHacerLaVentana } from "./posts/que-hacer-la-ventana"
+import { snorkelCercaLosCabos } from "./posts/snorkel-cerca-los-cabos"
+import { centroBuceoLaPaz } from "./posts/centro-buceo-la-paz"
+import { comoIrSardineRun } from "./posts/como-ir-sardine-run"
 
 /**
  * Todos los artículos del blog. Cada artículo vive en su propio archivo en
@@ -182,4 +187,9 @@ export const blogPosts: BlogPost[] = [
 	elegirOperadorToursLaPaz,
 	turismoResponsableFauna,
 	islaPartidaEnsenadaGrande,
+	mejoresToursLaPaz,
+	queHacerLaVentana,
+	snorkelCercaLosCabos,
+	centroBuceoLaPaz,
+	comoIrSardineRun,
 ]

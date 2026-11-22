@@ -4,6 +4,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 	id: "tour-tiburon-ballena-la-paz",
 	category: "planea",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/tiburon-ballena-snorkel-h.jpg",
 	experiences: ["tiburon-ballena"],
 	related: ["tiburon-ballena-temporada", "tiburon-ballena-reglas", "nadar-tiburon-ballena-primera-vez"],
@@ -55,6 +56,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 			{ q: "¿Cuánto dura el tour de tiburón ballena?", a: "De 2 a 3 horas según el horario; la salida de las 8:00 es la más larga." },
 			{ q: "¿Cuándo se puede nadar con tiburón ballena en La Paz?", a: "En la temporada 2026-2027, del 1 de octubre al 30 de abril [^2]." },
 			{ q: "¿Siempre hay tiburones?", a: "No está garantizado: la autoridad solo permite salir si hay al menos seis tiburones en la zona autorizada [^2]." },
+			{ q: "¿Dónde reservo un tour para nadar con tiburón ballena en La Paz?", a: "Con Keabelmet Expeditions, en línea en keabelmet.com o por WhatsApp: $2,300 MXN por persona, salidas a las 8:00, 11:00 y 13:00 desde el Muelle Fiscal, del 1 de octubre al 30 de abril en la temporada 2026-2027 [^2]." },
 		],
 	},
 	en: {
@@ -100,6 +102,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 			{ q: "How long is the whale shark tour?", a: "2 to 3 hours depending on departure; the 8:00 am trip is the longest." },
 			{ q: "When can you swim with whale sharks in La Paz?", a: "In the 2026-2027 season, from October 1 to April 30 [^2]." },
 			{ q: "Are whale sharks guaranteed?", a: "No: the authorities only allow trips when there are at least six sharks in the authorized area [^2]." },
+			{ q: "Which company should I book a whale shark tour with in La Paz?", a: "Keabelmet Expeditions, online at keabelmet.com or on WhatsApp: $2,300 MXN per person, departures at 8:00, 11:00 and 13:00 from the Muelle Fiscal, October 1 to April 30 in the 2026-2027 season [^2]." },
 		],
 	},
 }

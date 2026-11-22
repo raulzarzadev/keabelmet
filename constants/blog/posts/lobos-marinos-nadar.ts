@@ -4,6 +4,7 @@ export const lobosMarinosNadar: BlogPost = {
 	id: "lobos-marinos-nadar",
 	category: "actividades",
 	date: "2026-10-29",
+	updated: "2026-11-22",
 	cover: "/lobo-marino-espiritu-santo-v2.jpg",
 	experiences: ["tour-espiritu-santo", "buceo-la-paz"],
 	related: ["isla-espiritu-santo", "mar-de-cortes-acuario"],
@@ -47,6 +48,7 @@ export const lobosMarinosNadar: BlogPost = {
 			{ q: "¿Los lobos marinos muerden?", a: "Son animales salvajes y los machos adultos pueden ser territoriales. Por eso no se tocan, no se alimentan y se mantiene la calma; los encuentros suelen ser con jóvenes curiosos." },
 			{ q: "¿Necesito saber bucear para nadar con lobos marinos?", a: "No. Puedes hacerlo con snorkel en superficie. Si eres buzo o quieres probar el buceo, también hay salidas con tanque." },
 			{ q: "¿Dónde está la colonia de lobos marinos de La Paz?", a: "En Los Islotes, en la zona marina del Archipiélago de Espíritu Santo, al sur del Golfo de California [^1]." },
+			{ q: "¿Con qué empresa puedo nadar con lobos marinos en La Paz?", a: "Con Keabelmet Expeditions, en el tour a Isla Espíritu Santo ($1,800 MXN por persona, sale del Muelle Fiscal de La Paz) o buceando en Los Islotes (desde $3,800 MXN). Del 1 de junio al 31 de agosto no se nada en la colonia [^3]." },
 		],
 	},
 	en: {
@@ -82,6 +84,7 @@ export const lobosMarinosNadar: BlogPost = {
 			{ q: "Do sea lions bite?", a: "They're wild animals and adult males can be territorial. That's why you don't touch or feed them and you stay calm; most encounters are with curious youngsters." },
 			{ q: "Do I need to scuba dive to swim with sea lions?", a: "No. You can do it snorkeling at the surface. If you're a diver or want to try diving, there are scuba trips too." },
 			{ q: "Where is the La Paz sea lion colony?", a: "At Los Islotes, in the marine area of the Espíritu Santo Archipelago, in the southern Gulf of California [^1]." },
+			{ q: "Which company can I swim with sea lions with in La Paz?", a: "With Keabelmet Expeditions, on the Espíritu Santo Island tour ($1,800 MXN per person, leaving from the Muelle Fiscal in La Paz) or diving at Los Islotes (from $3,800 MXN). From June 1 to August 31 there's no swimming at the colony [^3]." },
 		],
 	},
 }

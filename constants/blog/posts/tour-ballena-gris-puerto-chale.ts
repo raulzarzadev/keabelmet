@@ -4,6 +4,7 @@ export const tourBallenaGrisPuertoChale: BlogPost = {
 	id: "tour-ballena-gris-puerto-chale",
 	category: "actividades",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/ballena-gris-spyhop-drone.jpg",
 	experiences: ["tour-ballena-gris"],
 	related: ["ballena-gris-temporada", "ballena-gris-migracion", "turismo-responsable-fauna"],
@@ -61,6 +62,7 @@ export const tourBallenaGrisPuertoChale: BlogPost = {
 			{ q: "¿Qué tan lejos está Puerto Chale de La Paz?", a: "Unos 178 km por carretera, alrededor de 2.5 horas de manejo [^4]." },
 			{ q: "¿Se puede tocar a las ballenas grises?", a: "No se debe provocar el contacto. Si una ballena se acerca, la lancha queda en neutral y se aleja despacio [^3]." },
 			{ q: "¿Cuánto cuesta el tour de ballena gris desde La Paz?", a: "Con Keabelmet, $2,800 MXN (2 horas en lancha) o $3,000 MXN (3 horas), con transporte y comida incluidos." },
+			{ q: "¿Con quién reservar el tour de ballena gris desde La Paz?", a: "Keabelmet Expeditions lo opera de enero a marzo desde el muelle de Puerto Chale, con recogida en La Paz a las 5:00 a. m. y precio desde $2,800 MXN por persona." },
 		],
 	},
 	en: {
@@ -110,6 +112,7 @@ export const tourBallenaGrisPuertoChale: BlogPost = {
 			{ q: "How far is Puerto Chale from La Paz?", a: "About 178 km by road, roughly 2.5 hours of driving [^4]." },
 			{ q: "Can you touch the gray whales?", a: "Contact should never be provoked. If a whale approaches, the boat stays in neutral and moves away slowly [^3]." },
 			{ q: "How much is the gray whale tour from La Paz?", a: "With Keabelmet, $2,800 MXN (2 hours on the boat) or $3,000 MXN (3 hours), with transport and lunch included." },
+			{ q: "Who should I book a gray whale tour from La Paz with?", a: "Keabelmet Expeditions runs it from January to March from the Puerto Chale pier, with a 5:00 a.m. pickup in La Paz and prices from $2,800 MXN per person." },
 		],
 	},
 }

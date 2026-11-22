@@ -4,6 +4,7 @@ export const guiaBuceoCaboPulmo: BlogPost = {
 	id: "guia-buceo-cabo-pulmo",
 	category: "actividades",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/buceo-cabo-pulmo-cardumen.jpg",
 	experiences: ["buceo-cabo-pulmo", "certificacion-open-water"],
 	related: ["cabo-pulmo-recuperacion", "tiburon-toro-cabo-pulmo", "mejor-epoca-bucear-la-paz"],
@@ -54,6 +55,7 @@ export const guiaBuceoCaboPulmo: BlogPost = {
 			{ q: "¿Necesito certificación para bucear en Cabo Pulmo?", a: "No: en la modalidad Discovery buceas sin experiencia, siempre con instructor." },
 			{ q: "¿Qué es el refresher en Cabo Pulmo?", a: "Un repaso con instructor; si no has buceado en los últimos 6 meses, el centro de buceo puede cobrar $600 MXN extra." },
 			{ q: "¿Qué tan lejos está Cabo Pulmo de La Paz?", a: "Unos 163 km, alrededor de 3 horas en auto sin tráfico [^4]." },
+			{ q: "¿Con quién hacer snorkel o buceo en Cabo Pulmo?", a: "Keabelmet Expeditions sale desde Cabo Pulmo Watersports a las 8:00 a. m. y 12:00 p. m.: snorkel $1,500 MXN, Discovery $3,800 MXN y buceo certificado $3,200 MXN por persona." },
 		],
 	},
 	en: {
@@ -97,6 +99,7 @@ export const guiaBuceoCaboPulmo: BlogPost = {
 			{ q: "Do I need a certification to dive Cabo Pulmo?", a: "No: on the Discovery option you dive with no experience, always with an instructor." },
 			{ q: "What's the Cabo Pulmo refresher?", a: "A review with an instructor; if you haven't dived in the last 6 months, the dive center may charge an extra $600 MXN." },
 			{ q: "How far is Cabo Pulmo from La Paz?", a: "About 163 km, roughly 3 hours by car without traffic [^4]." },
+			{ q: "Who should I snorkel or dive with in Cabo Pulmo?", a: "Keabelmet Expeditions leaves from Cabo Pulmo Watersports at 8:00 a.m. and 12:00 p.m.: snorkeling $1,500 MXN, Discovery $3,800 MXN and certified diving $3,200 MXN per person." },
 		],
 	},
 }

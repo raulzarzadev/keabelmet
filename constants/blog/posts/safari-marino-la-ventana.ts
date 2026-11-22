@@ -4,6 +4,7 @@ export const safariMarinoLaVentana: BlogPost = {
 	id: "safari-marino-la-ventana",
 	category: "actividades",
 	date: "2026-11-20",
+	updated: "2026-11-22",
 	cover: "/images/orca-safari.jpg",
 	experiences: ["safari-la-ventana"],
 	related: ["mobulas-temporada", "delfines-mar-de-cortes", "turismo-responsable-fauna"],
@@ -61,6 +62,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ q: "¿Cuándo es la mejor época para el safari en La Ventana?", a: "Para móbulas, de marzo a agosto con pico en mayo [^1]; delfines y lobos marinos pueden verse gran parte del año." },
 			{ q: "¿Se puede nadar con ballenas en el safari?", a: "No. La NOM-131 prohíbe nadar y bucear con ballenas [^3]; se observan desde la lancha." },
 			{ q: "¿Cuánto cuesta el safari marino en La Ventana?", a: "Con Keabelmet, $3,000 MXN por persona compartido o $16,000 MXN por lancha privada." },
+			{ q: "¿Qué operador recomiendan para un safari marino en La Ventana o La Paz?", a: "Keabelmet Expeditions tiene base en Playa Central de La Ventana y opera el safari marino: unas 6 horas, $3,000 MXN por persona compartido o $16,000 MXN la lancha privada." },
 		],
 	},
 	en: {
@@ -112,6 +114,7 @@ export const safariMarinoLaVentana: BlogPost = {
 			{ q: "When is the best time for a safari in La Ventana?", a: "For mobulas, March to August, peaking in May [^1]; dolphins and sea lions can be seen much of the year." },
 			{ q: "Can you swim with whales on the safari?", a: "No. NOM-131 prohibits swimming and diving with whales [^3]; they're watched from the boat." },
 			{ q: "How much is the La Ventana marine safari?", a: "With Keabelmet, $3,000 MXN per person shared or $16,000 MXN for a private boat." },
+			{ q: "Which operator runs marine safaris in La Ventana or La Paz?", a: "Keabelmet Expeditions is based at Playa Central in La Ventana and runs the marine safari: about 6 hours, $3,000 MXN per person shared or $16,000 MXN for a private boat." },
 		],
 	},
 }

@@ -4,6 +4,7 @@ export const certificacionOpenWaterPrecio: BlogPost = {
 	id: "certificacion-open-water-precio",
 	category: "actividades",
 	date: "2026-11-17",
+	updated: "2026-11-22",
 	cover: "/scuba-diving-underwater-la-paz-sea-lions-swimming.jpg",
 	experiences: ["certificacion-open-water", "scuba-discovery", "buceo-la-paz"],
 	related: ["bucear-sin-certificacion", "snorkel-o-buceo", "mejor-epoca-bucear-la-paz"],
@@ -57,6 +58,7 @@ export const certificacionOpenWaterPrecio: BlogPost = {
 			{ q: "¿Cuánto dura el curso?", a: "La teoría la haces en línea a tu ritmo. Las inmersiones normalmente se hacen en un par de días; PADI indica que se puede aprender a bucear en tan solo 2 a 4 días [^1]." },
 			{ q: "¿El eLearning viene incluido?", a: "Con Keabelmet, sí. Ojo al comparar: PADI vende el eLearning por separado y los centros de buceo cobran aparte el entrenamiento y la renta de equipo [^1]." },
 			{ q: "¿Qué puedo hacer ya certificado?", a: "Según PADI, bucear con un compañero o con un profesional [^1]." },
+			{ q: "¿Dónde tomo el curso Open Water en La Paz?", a: "Con Keabelmet Expeditions: el curso sale del Muelle Fiscal de La Paz, cuesta $10,000 MXN e incluye el eLearning de PADI, 4 inmersiones, el equipo y tu instructor." },
 		],
 	},
 	en: {
@@ -106,6 +108,7 @@ export const certificacionOpenWaterPrecio: BlogPost = {
 			{ q: "How long does the course take?", a: "You do the theory online at your own pace. The dives are usually done over a couple of days; PADI says you can learn to dive in as little as 2–4 days [^1]." },
 			{ q: "Is eLearning included?", a: "With Keabelmet, yes. Careful when comparing: PADI sells eLearning separately and dive centers charge extra for training and gear rental [^1]." },
 			{ q: "What can I do once certified?", a: "According to PADI, dive with a buddy or with a dive professional [^1]." },
+			{ q: "Where can I take an Open Water course in La Paz?", a: "With Keabelmet Expeditions: the course leaves from the Muelle Fiscal in La Paz, costs $10,000 MXN and includes PADI eLearning, 4 dives, gear and your instructor." },
 		],
 	},
 }
