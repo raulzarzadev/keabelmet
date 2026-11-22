@@ -10,6 +10,7 @@ import { PACKAGES } from "@/lib/packages"
 import TestiCarousel from "@/components/TestiCarousel"
 import { Price } from "@/contexts/CurrencyContext"
 import HomeExpeditionMap from "@/components/HomeExpeditionMap"
+import { homeMapRows } from "@/lib/home-map-rows"
 import { homeContent } from "@/constants/home-content"
 import { WHATSAPP_NUMBER } from "@/config/whatsapp"
 
@@ -74,8 +75,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     return pkgDef.slugs.reduce((sum, slug) => sum + (fromBySlug.get(slug) ?? 0) - (pkgDef.perPersonOffMxn?.[slug] ?? 0), 0)
   }
   const comboCards = [
-    { id: "temporada", image: "/images/paquetes/lobo-marino-bola-de-sardinas-sardine-run.webp", featured: false },
-    { id: "gran-temporada", image: "/images/paquetes/marlin-rayado-sardine-run-bahia-magdalena.webp", featured: true },
+    { id: "temporada", image: "/images/paquetes/lobo-marino-bola-de-sardinas-sardine-run.webp", featured: false, alt: { es: "Lobo marino nadando junto a una bola de sardinas en el Sardine Run", en: "Sea lion swimming by a sardine bait ball during the Sardine Run", fr: "Otarie nageant près d'une boule de sardines pendant le Sardine Run", zh: "沙丁鱼大迁徙中在沙丁鱼球旁游动的海狮", ca: "Lleó marí nedant al costat d'una bola de sardines durant el Sardine Run" } as Record<string, string> },
+    { id: "gran-temporada", image: "/images/paquetes/marlin-rayado-sardine-run-bahia-magdalena.webp", featured: true, alt: { es: "Marlín rayado cazando en el Sardine Run de Bahía Magdalena", en: "Striped marlin hunting during the Sardine Run in Magdalena Bay", fr: "Marlin rayé chassant pendant le Sardine Run dans la baie Magdalena", zh: "马格达莱纳湾沙丁鱼大迁徙中捕猎的条纹四鳍旗鱼", ca: "Marlí ratllat caçant durant el Sardine Run a la badia Magdalena" } as Record<string, string> },
   ]
   type ComboItem = { name: string; badge: string; days: string; activities: string[] }
   const packagesT: Record<string, { kicker: string; title: string; sub: string; perPerson: string; priceLabel: string; note: string; cta: string; items: Record<string, ComboItem>; customBadge: string; customTitle: string; customText: string; customCta: string }> = {
@@ -257,7 +258,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* MAPA DE EXPEDICIONES */}
-      <HomeExpeditionMap locale={locale} />
+      <HomeExpeditionMap locale={locale} rows={homeMapRows(locale)} />
 
       {/* PAQUETES */}
       <section className="packages" id="paquetes">
@@ -274,7 +275,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             return (
               <div key={card.id} className={`pkg-card pkg-photo${card.featured ? " pkg-featured" : ""}`}>
                 <div className="pkg-bg" aria-hidden="true">
-                  <Image src={card.image} alt="" fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
+                  <Image src={card.image} alt={card.alt[locale] ?? card.alt.es} fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="pkg-body">
                   <span className="pkg-badge">{combo.badge}</span>
@@ -295,7 +296,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           })}
           <div className="pkg-card pkg-photo pkg-custom">
             <div className="pkg-bg" aria-hidden="true">
-              <Image src="/espiritu-santo-aerea.jpg" alt="" fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
+              <Image src="/espiritu-santo-aerea.jpg" alt={({ es: "Vista aérea de Isla Espíritu Santo", en: "Aerial view of Espíritu Santo Island", fr: "Vue aérienne de l'île Espíritu Santo", zh: "圣灵岛航拍", ca: "Vista aèria de l'illa Espíritu Santo" } as Record<string, string>)[locale] ?? "Vista aérea de Isla Espíritu Santo"} fill sizes="(max-width: 860px) 100vw, 420px" style={{ objectFit: "cover" }} />
             </div>
             <div className="pkg-body">
               <span className="pkg-badge">{pk.customBadge}</span>

@@ -1,4 +1,18 @@
-@import 'tailwindcss';
+/* Tailwind solo escanea el código que sí se usa: los componentes ui/ de shadcn, sections/ y galerías viejas
+   ya no se importan en ninguna página y le agregaban ~70 KB de CSS que bloquea la primera pintura. */
+@import 'tailwindcss' source(none);
+@source "../app";
+@source "../components";
+@source "../contexts";
+@source not "../components/ui";
+@source not "../components/sections";
+@source not "../components/safari-landing.tsx";
+@source not "../components/safari-bahia-magdalena.tsx";
+@source not "../components/premium-gallery.tsx";
+@source not "../components/gallery-swipeable.tsx";
+@source not "../components/gallery-lightbox.tsx";
+@source not "../components/contacts-links.tsx";
+@source not "../components/social-links.tsx";
 
 @layer components {
   .container {

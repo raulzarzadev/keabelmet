@@ -76,7 +76,7 @@ export default function TestiCarousel({ items, locale = "es" }: { items: Item[];
       <div className="testi-all-wrap">
         <a className="testi-all" href={REVIEWS_URL} target="_blank" rel="noopener noreferrer">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/google.png" alt="" width={18} height={18} />
+          <img src="/icons/google.png" alt="Google" width={18} height={18} loading="lazy" decoding="async" />
           {allLabel[locale] ?? allLabel.es}
         </a>
       </div>
