@@ -556,10 +556,9 @@ function CutAmount({ month, value, of }: { month: string; value: number; of?: nu
 /**
  * Colores de los destinos, en orden fijo por posición (no por tamaño): paleta
  * categórica validada para modo oscuro sobre el fondo del panel (contraste y
- * daltonismo). Los compromisos fijos van en tonos neutros.
+ * daltonismo).
  */
 const DEST_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#0ca30c", "#9085e9", "#e66767"]
-const FIXED_TONES = ["#8f897c", "#c2bba9", "#6f6a5f", "#a9a293"]
 const OTHER_COLOR = "#5d6b73"
 
 interface Slice {
@@ -567,28 +566,28 @@ interface Slice {
 	name: string
 	value: number
 	color: string
-	group: "fijo" | "destino"
 }
 
+/**
+ * El 100 % del círculo es lo que queda por repartir DESPUÉS de los compromisos
+ * fijos; arriba se muestra la resta (utilidad − compromisos = por repartir).
+ */
 function RepartoDonut({ settings, cut, monthName, pctTotal }: { settings: FinSettings; cut: ReturnType<typeof yearSummary>["months"][number]; monthName: string; pctTotal: number }) {
 	const [hover, setHover] = useState<string | null>(null)
-	// Con utilidad: pesos reales del mes. Sin utilidad: solo cómo quedan los porcentajes.
-	const byMoney = cut.netProfit > 0
+	// Con algo por repartir: pesos reales del mes. Si no: solo cómo quedan los porcentajes.
+	const byMoney = cut.toDistribute > 0
 	const slices: Slice[] = []
-	if (byMoney) {
-		settings.fixed.forEach((fx, i) => slices.push({ key: "f" + i, name: fx.name, value: cut.fixedSplit[i] ?? 0, color: FIXED_TONES[i % FIXED_TONES.length], group: "fijo" }))
-	}
 	let other = 0
 	settings.reparto.forEach((c, i) => {
 		const v = byMoney ? cut.reparto[i] ?? 0 : isFixedCat(c) ? 0 : c.pct
 		// Del destino 9 en adelante se juntan en "Otros destinos" (8 colores como máximo)
 		if (i >= DEST_COLORS.length) other += v
-		else slices.push({ key: "d" + i, name: c.name, value: v, color: DEST_COLORS[i], group: "destino" })
+		else slices.push({ key: "d" + i, name: c.name, value: v, color: DEST_COLORS[i] })
 	})
-	if (other > 0) slices.push({ key: "otros", name: "Otros destinos", value: other, color: OTHER_COLOR, group: "destino" })
+	if (other > 0) slices.push({ key: "otros", name: "Otros destinos", value: other, color: OTHER_COLOR })
 	const shown = slices.filter((x) => x.value > 0.0001)
 
-	const base = byMoney ? cut.netProfit : 1
+	const base = byMoney ? cut.toDistribute : 1
 	const assigned = shown.reduce((a, x) => a + x.value, 0)
 	const free = Math.max(0, base - assigned)
 	const over = assigned - base > base * 0.001
@@ -608,10 +607,18 @@ function RepartoDonut({ settings, cut, monthName, pctTotal }: { settings: FinSet
 		return a
 	})
 	const active = shown.find((x) => x.key === hover)
+	const hadProfit = cut.netProfit > 0
 
 	return (
 		<aside className={s.repChart}>
 			<p className={s.subh} style={{ marginTop: 0 }}>{byMoney ? `Reparto de ${monthName}` : "Reparto por porcentajes"}</p>
+			{hadProfit && (
+				<div className={s.donutPre}>
+					<span>Utilidad real</span><b>{money(cut.netProfit)}</b>
+					<span>− Compromisos fijos</span><b>−{money(cut.fixed)}</b>
+					<span className={s.donutPreTotal}>= Por repartir (100%)</span><b className={s.donutPreTotal}>{money(cut.toDistribute)}</b>
+				</div>
+			)}
 			<div className={s.donutWrap}>
 				<svg viewBox="0 0 200 200" className={s.donut} role="img" aria-label={`Reparto de ${monthName}: ${shown.map((x) => `${x.name} ${pct(share(x.value))}`).join(", ")}`}>
 					<circle cx="100" cy="100" r={R0} className={s.donutTrack} />
@@ -647,29 +654,28 @@ function RepartoDonut({ settings, cut, monthName, pctTotal }: { settings: FinSet
 						<>
 							<b className={over ? s.warn : ""}>{pct(share(assigned))}</b>
 							<small>{over ? "te pasas del 100%" : free > base * 0.001 ? "asignado" : "asignado ✓"}</small>
-							{byMoney ? <small>de {money(base)}</small> : <small>sin utilidad en {monthName}</small>}
+							{byMoney ? <small>de {money(base)}</small> : <small>{hadProfit ? "no quedó para repartir" : `sin utilidad en ${monthName}`}</small>}
 						</>
 					)}
 				</div>
 			</div>
-			{!byMoney && <p className={s.muted}>En {monthName} no hubo utilidad: el círculo muestra solo cómo se reparten los porcentajes (los montos fijos se cubren primero cuando haya utilidad).</p>}
-			{byMoney && Math.abs(pctTotal - 1) > 0.001 && <p className={s.muted}>Los porcentajes suman {pct(pctTotal)}{pctTotal < 1 ? `: falta asignar ${pct(1 - pctTotal)} de lo que queda` : ": se pasan del 100%"}.</p>}
+			{!byMoney && (
+				<p className={s.muted}>
+					{hadProfit
+						? `En ${monthName} la utilidad solo alcanzó para los compromisos fijos: el círculo muestra cómo se reparten los porcentajes cuando sobre dinero.`
+						: `En ${monthName} no hubo utilidad: el círculo muestra solo cómo se reparten los porcentajes.`}
+				</p>
+			)}
+			{byMoney && Math.abs(pctTotal - 1) > 0.001 && <p className={s.muted}>Los porcentajes suman {pct(pctTotal)}{pctTotal < 1 ? `: falta asignar ${pct(1 - pctTotal)}` : ": se pasan del 100%"}.</p>}
 			<ul className={s.donutLegend}>
-				{(["fijo", "destino"] as const).map((g) =>
-					shown.some((x) => x.group === g) ? (
-						<li key={g} className={s.donutGroup}>{g === "fijo" ? "Compromisos fijos" : "Destinos"}</li>
-					) : null,
-				).flatMap((head, gi) => {
-					const g = gi === 0 ? "fijo" : "destino"
-					return [head, ...shown.filter((x) => x.group === g).map((x) => (
-						<li key={x.key} className={hover === x.key ? s.donutOn : ""} onMouseEnter={() => setHover(x.key)} onMouseLeave={() => setHover(null)}>
-							<i style={{ background: x.color }} />
-							<span>{x.name}</span>
-							<em>{pct(share(x.value))}</em>
-							{byMoney && <b>{money(x.value)}</b>}
-						</li>
-					))]
-				})}
+				{shown.map((x) => (
+					<li key={x.key} className={hover === x.key ? s.donutOn : ""} onMouseEnter={() => setHover(x.key)} onMouseLeave={() => setHover(null)}>
+						<i style={{ background: x.color }} />
+						<span>{x.name}</span>
+						<em>{pct(share(x.value))}</em>
+						{byMoney && <b>{money(x.value)}</b>}
+					</li>
+				))}
 				{free > base * 0.001 && (
 					<li className={s.donutFree}>
 						<i />
