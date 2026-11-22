@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import s from "./ReservasPanel.module.css"
 import PanelFinanzas from "./PanelFinanzas"
 import PanelInventario from "./PanelInventario"
+import PanelRadarIA from "./PanelRadarIA"
 import { DEFAULT_FIN, collectedOf, pendingOf, saleOf, type Expense, type FinSettings, type InventoryItem } from "@/lib/finance-calc"
 
 type Cell = string | number | null
@@ -120,7 +121,7 @@ export default function ReservasPanel() {
 	const [y, setY] = useState(t0.y)
 	const [m, setM] = useState(t0.m)
 	const [view, setView] = useState<"cal" | "list">("cal")
-	const [tab, setTab] = useState<"res" | "fin" | "inv">("res")
+	const [tab, setTab] = useState<"res" | "fin" | "inv" | "ia">("res")
 	const [day, setDay] = useState<string>(t0.iso)
 	const [edit, setEdit] = useState<Booking | null>(null)
 	const [showCancelled, setShowCancelled] = useState(false)
@@ -277,6 +278,7 @@ export default function ReservasPanel() {
 						<button className={tab === "res" ? s.tabOn : ""} onClick={() => setTab("res")}>Reservas</button>
 						<button className={tab === "fin" ? s.tabOn : ""} onClick={() => setTab("fin")}>Finanzas</button>
 						<button className={tab === "inv" ? s.tabOn : ""} onClick={() => setTab("inv")}>Inventario</button>
+						<button className={tab === "ia" ? s.tabOn : ""} onClick={() => setTab("ia")}>Radar IA</button>
 					</div>
 				</div>
 				<div className={s.row}>
@@ -307,6 +309,7 @@ export default function ReservasPanel() {
 			{tab === "fin" && (
 				<PanelFinanzas bookings={all} expenses={state.expenses ?? []} fin={state.fin ?? DEFAULT_FIN} post={post} reload={() => load()} />
 			)}
+			{tab === "ia" && <PanelRadarIA />}
 			{tab === "inv" && <PanelInventario items={state.inventory ?? []} post={post} reload={() => load()} />}
 
 			{tab === "res" && (<>
