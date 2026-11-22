@@ -96,18 +96,22 @@ export interface MapZone {
  * zona habitual del recorrido.
  */
 const ZONE_LA_VENTANA: [number, number][] = [[-109.9064,24.432],[-110.0212,24.3947],[-110.1195,24.3247],[-110.1359,24.2781],[-110.0649,24.2221],[-110.0048,24.1662],[-109.9829,24.0915],[-109.9228,24.0216],[-109.8354,23.9796],[-109.8135,23.905],[-109.7152,23.905],[-109.584,24.0169],[-109.5731,24.0915],[-109.6715,24.2035],[-109.7589,24.3341],[-109.8791,24.4273]]
-/** Snorkel y buceo: alrededor de Isla Partida e Isla Espíritu Santo. */
-const ZONE_ESPIRITU_SANTO: [number, number][] = [[-110.4305,24.5337],[-110.4001,24.4902],[-110.387,24.4427],[-110.374,24.3952],[-110.3609,24.3793],[-110.3262,24.3734],[-110.287,24.3872],[-110.2718,24.407],[-110.274,24.4427],[-110.2957,24.4902],[-110.3218,24.5377],[-110.3479,24.5575],[-110.3783,24.5614],[-110.4131,24.5496]]
+/** Snorkel y buceo: Espíritu Santo y Partida, Los Islotes y El Bajo (seamount Marisla, ~24°42'N 110°18'W). */
+const ZONE_ESPIRITU_SANTO: [number, number][] = [[-110.345,24.35],[-110.385,24.36],[-110.42,24.42],[-110.445,24.5],[-110.445,24.58],[-110.425,24.625],[-110.37,24.66],[-110.33,24.73],[-110.28,24.735],[-110.255,24.7],[-110.27,24.62],[-110.255,24.52],[-110.26,24.43],[-110.3,24.37]]
+/** Cabo Pulmo: franja de mar frente a la costa, al este del pueblo (dibujo de Keabelmet). */
+const ZONE_CABO_PULMO: [number, number][] = [[-109.4247,23.4544],[-109.4032,23.4637],[-109.3918,23.4518],[-109.3832,23.428],[-109.3804,23.4148],[-109.3875,23.3977],[-109.4089,23.3963],[-109.4189,23.4069],[-109.4247,23.4175],[-109.4232,23.4333]]
+/** Ballena gris: laguna al oeste de Puerto Chale, bajando hacia la boca (dibujo de Keabelmet). */
+const ZONE_BALLENA_GRIS: [number, number][] = [[-111.5546,24.4228],[-111.5809,24.4401],[-111.6178,24.4688],[-111.6283,24.5024],[-111.6651,24.512],[-111.7072,24.5072],[-111.7335,24.4832],[-111.7283,24.4496],[-111.6914,24.4161],[-111.6809,24.3825],[-111.6862,24.3394],[-111.6546,24.3873],[-111.6072,24.4017],[-111.5704,24.4161]]
 /** Tiburón ballena: franja de la bahía a lo largo de la orilla norte de El Mogote, hacia el oeste. */
 const ZONE_TIBURON_BALLENA: [number, number][] = [[-110.5056,24.2234],[-110.4221,24.2093],[-110.3316,24.1967],[-110.3253,24.1905],[-110.3264,24.1795],[-110.3455,24.1716],[-110.4221,24.1811],[-110.5091,24.2046]]
 const ZONE_SARDINE_RUN: [number, number][] = [[-111.5546,24.4228],[-111.7016,24.4056],[-111.9285,24.4583],[-112.1644,24.4745],[-112.2551,24.3453],[-112.2642,24.2322],[-112.11,24.1433],[-111.8377,24.0706],[-111.6562,23.8929],[-111.511,23.8444],[-111.3477,23.8202],[-111.2207,23.9252],[-111.1571,24.0868],[-111.2025,24.2],[-111.3477,24.3129],[-111.4747,24.4018]]
 
 export const ZONES: Record<ZoneId, MapZone> = {
 	"bahia-la-paz": { lng: -110.42, lat: 24.196, radiusKm: 0, polygon: ZONE_TIBURON_BALLENA, name: { es: "Bahía de La Paz, frente a El Mogote", en: "Bay of La Paz, off El Mogote", fr: "Baie de La Paz, au large d'El Mogote", zh: "拉巴斯湾，El Mogote 外侧", ca: "Badia de La Paz, davant d'El Mogote" } },
-	"espiritu-santo": { lng: -110.35, lat: 24.575, radiusKm: 0, polygon: ZONE_ESPIRITU_SANTO, name: { es: "Islas Espíritu Santo y Partida", en: "Espíritu Santo & Partida islands", fr: "Îles Espíritu Santo et Partida", zh: "圣灵岛与帕尔蒂达岛", ca: "Illes Espíritu Santo i Partida" } },
+	"espiritu-santo": { lng: -110.3, lat: 24.755, radiusKm: 0, polygon: ZONE_ESPIRITU_SANTO, name: { es: "Espíritu Santo, Los Islotes y El Bajo", en: "Espíritu Santo, Los Islotes & El Bajo", fr: "Espíritu Santo, Los Islotes et El Bajo", zh: "圣灵岛、Los Islotes 与 El Bajo", ca: "Espíritu Santo, Los Islotes i El Bajo" } },
 	cerralvo: { lng: -109.85, lat: 24.45, radiusKm: 0, polygon: ZONE_LA_VENTANA, name: { es: "Alrededor de Isla Cerralvo", en: "Around Cerralvo Island", fr: "Autour de l'île Cerralvo", zh: "塞拉尔沃岛周边", ca: "Al voltant de l'illa Cerralvo" } },
-	"cabo-pulmo": { lng: -109.41, lat: 23.43, radiusKm: 4, name: { es: "Parque Nacional Cabo Pulmo", en: "Cabo Pulmo National Park", fr: "Parc national de Cabo Pulmo", zh: "卡波普尔莫国家公园", ca: "Parc Nacional Cabo Pulmo" } },
-	"bahia-magdalena": { lng: -111.66, lat: 24.42, radiusKm: 10, name: { es: "Bahía Magdalena", en: "Magdalena Bay", fr: "Baie Magdalena", zh: "马格达莱纳湾", ca: "Badia Magdalena" } },
+	"cabo-pulmo": { lng: -109.403, lat: 23.474, radiusKm: 0, polygon: ZONE_CABO_PULMO, name: { es: "Parque Nacional Cabo Pulmo", en: "Cabo Pulmo National Park", fr: "Parc national de Cabo Pulmo", zh: "卡波普尔莫国家公园", ca: "Parc Nacional Cabo Pulmo" } },
+	"bahia-magdalena": { lng: -111.665, lat: 24.527, radiusKm: 0, polygon: ZONE_BALLENA_GRIS, name: { es: "Bahía Magdalena", en: "Magdalena Bay", fr: "Baie Magdalena", zh: "马格达莱纳湾", ca: "Badia Magdalena" } },
 	"sardine-run": { lng: -111.75, lat: 24.12, radiusKm: 0, polygon: ZONE_SARDINE_RUN, name: { es: "Pacífico frente a Isla Margarita", en: "Pacific off Isla Margarita", fr: "Pacifique au large de l'île Margarita", zh: "玛格丽塔岛外的太平洋", ca: "Pacífic davant l'illa Margarita" } },
 }
 
