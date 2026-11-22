@@ -389,8 +389,10 @@ const depositT: Record<string, {
 	subject: string; hello: string; intro: string; folio: string; activities: string; people: string;
 	subtotal: string; discount: string;
 	total: string; paid: string; remaining: string; payRest: string; calNote: string; follow: string; footer: string;
+	subjectFull: string; introFull: string; paidFull: string;
 }> = {
 	es: {
+		subjectFull: "¡Bienvenido/a! Tu reserva en Keabelmet está confirmada", introFull: "Tu aventura en la Baja ya está confirmada y pagada. Guarda este correo con el resumen de tus actividades.", paidFull: "Pagado", 
 		subject: "¡Bienvenido/a! Tu reserva en Keabelmet está apartada",
 		hello: "¡Bienvenido/a", intro: "Tu aventura en la Baja ya está apartada. Guarda este correo con el resumen de tus actividades.",
 		folio: "Folio de reserva", activities: "Tus actividades", people: "personas",
@@ -400,10 +402,10 @@ const depositT: Record<string, {
 		calNote: "Adjuntamos un archivo (.ics) con todas tus actividades para agregarlas a tu calendario.",
 		follow: "Síguenos", footer: "Keabelmet Expeditions · La Paz, Baja California Sur",
 	},
-	en: { subject: "Welcome! Your Keabelmet reservation is held", hello: "Welcome", intro: "Your Baja adventure is reserved. Keep this email with the summary of your activities.", folio: "Booking reference", activities: "Your activities", people: "people", subtotal: "Subtotal", discount: "Package discount", total: "Total", paid: "Deposit paid (20%)", remaining: "Balance due", payRest: "You can pay the balance in cash, bank transfer or card on the day of your tours.", calNote: "We've attached a file (.ics) with all your activities to add them to your calendar.", follow: "Follow us", footer: "Keabelmet Expeditions · La Paz, Baja California Sur" },
-	fr: { subject: "Bienvenue ! Votre réservation Keabelmet est enregistrée", hello: "Bienvenue", intro: "Votre aventure en Basse-Californie est réservée. Conservez cet e-mail avec le résumé de vos activités.", folio: "Référence de réservation", activities: "Vos activités", people: "personnes", subtotal: "Sous-total", discount: "Remise forfait", total: "Total", paid: "Acompte payé (20%)", remaining: "Solde à régler", payRest: "Vous pouvez régler le solde en espèces, virement ou carte le jour de vos tours.", calNote: "Nous avons joint un fichier (.ics) avec toutes vos activités pour les ajouter à votre agenda.", follow: "Suivez-nous", footer: "Keabelmet Expeditions · La Paz, Basse-Californie du Sud" },
-	zh: { subject: "欢迎！您的 Keabelmet 预订已保留", hello: "欢迎", intro: "您的下加州之旅已保留。请保存此邮件及活动摘要。", folio: "预订编号", activities: "您的活动", people: "人", subtotal: "小计", discount: "套餐折扣", total: "总计", paid: "已付定金（20%）", remaining: "待付余额", payRest: "余额可在行程当天以现金、转账或刷卡支付。", calNote: "我们附上了一个文件（.ics），包含您的所有活动，可添加到日历。", follow: "关注我们", footer: "Keabelmet Expeditions · 拉巴斯，南下加利福尼亚" },
-	ca: { subject: "Benvingut/da! La teva reserva a Keabelmet està apartada", hello: "Benvingut/da", intro: "La teva aventura a la Baixa ja està apartada. Guarda aquest correu amb el resum de les teves activitats.", folio: "Foli de reserva", activities: "Les teves activitats", people: "persones", subtotal: "Subtotal", discount: "Descompte de paquet", total: "Total", paid: "Bestreta pagada (20%)", remaining: "Pendent de liquidar", payRest: "El pendent el pots pagar en efectiu, transferència o targeta el dia dels teus tours.", calNote: "Adjuntem un fitxer (.ics) amb totes les teves activitats per afegir-les al calendari.", follow: "Segueix-nos", footer: "Keabelmet Expeditions · La Paz, Baixa Califòrnia Sud" },
+	en: { subjectFull: "Welcome! Your Keabelmet reservation is confirmed", introFull: "Your Baja adventure is confirmed and paid. Keep this email with the summary of your activities.", paidFull: "Paid", subject: "Welcome! Your Keabelmet reservation is held", hello: "Welcome", intro: "Your Baja adventure is reserved. Keep this email with the summary of your activities.", folio: "Booking reference", activities: "Your activities", people: "people", subtotal: "Subtotal", discount: "Package discount", total: "Total", paid: "Deposit paid (20%)", remaining: "Balance due", payRest: "You can pay the balance in cash, bank transfer or card on the day of your tours.", calNote: "We've attached a file (.ics) with all your activities to add them to your calendar.", follow: "Follow us", footer: "Keabelmet Expeditions · La Paz, Baja California Sur" },
+	fr: { subjectFull: "Bienvenue ! Votre réservation Keabelmet est confirmée", introFull: "Votre aventure en Basse-Californie est confirmée et payée. Conservez cet e-mail avec le résumé de vos activités.", paidFull: "Payé", subject: "Bienvenue ! Votre réservation Keabelmet est enregistrée", hello: "Bienvenue", intro: "Votre aventure en Basse-Californie est réservée. Conservez cet e-mail avec le résumé de vos activités.", folio: "Référence de réservation", activities: "Vos activités", people: "personnes", subtotal: "Sous-total", discount: "Remise forfait", total: "Total", paid: "Acompte payé (20%)", remaining: "Solde à régler", payRest: "Vous pouvez régler le solde en espèces, virement ou carte le jour de vos tours.", calNote: "Nous avons joint un fichier (.ics) avec toutes vos activités pour les ajouter à votre agenda.", follow: "Suivez-nous", footer: "Keabelmet Expeditions · La Paz, Basse-Californie du Sud" },
+	zh: { subjectFull: "欢迎！您的 Keabelmet 预订已确认", introFull: "您的下加州之旅已确认并付清。请保存此邮件及活动摘要。", paidFull: "已付", subject: "欢迎！您的 Keabelmet 预订已保留", hello: "欢迎", intro: "您的下加州之旅已保留。请保存此邮件及活动摘要。", folio: "预订编号", activities: "您的活动", people: "人", subtotal: "小计", discount: "套餐折扣", total: "总计", paid: "已付定金（20%）", remaining: "待付余额", payRest: "余额可在行程当天以现金、转账或刷卡支付。", calNote: "我们附上了一个文件（.ics），包含您的所有活动，可添加到日历。", follow: "关注我们", footer: "Keabelmet Expeditions · 拉巴斯，南下加利福尼亚" },
+	ca: { subjectFull: "Benvingut/da! La teva reserva a Keabelmet està confirmada", introFull: "La teva aventura a la Baixa ja està confirmada i pagada. Guarda aquest correu amb el resum de les teves activitats.", paidFull: "Pagat", subject: "Benvingut/da! La teva reserva a Keabelmet està apartada", hello: "Benvingut/da", intro: "La teva aventura a la Baixa ja està apartada. Guarda aquest correu amb el resum de les teves activitats.", folio: "Foli de reserva", activities: "Les teves activitats", people: "persones", subtotal: "Subtotal", discount: "Descompte de paquet", total: "Total", paid: "Bestreta pagada (20%)", remaining: "Pendent de liquidar", payRest: "El pendent el pots pagar en efectiu, transferència o targeta el dia dels teus tours.", calNote: "Adjuntem un fitxer (.ics) amb totes les teves activitats per afegir-les al calendari.", follow: "Segueix-nos", footer: "Keabelmet Expeditions · La Paz, Baixa Califòrnia Sud" },
 }
 
 function buildDepositIcs(d: DepositEmailData): string {
@@ -412,7 +414,7 @@ function buildDepositIcs(d: DepositEmailData): string {
 	d.items.forEach((it, idx) => {
 		const loc = LOCATION_BY_SLUG[it.slug] ?? "La Paz, Baja California Sur, México"
 		const title = `Keabelmet: ${it.expeditionName} — ${d.customerName} (${it.people} pers.)`
-		const desc = [`Folio: ${d.folio}`, `Cliente: ${d.customerName}`, `Personas: ${it.people}`, `Total reserva: ${formatMxn(d.totalMxn)} MXN`, `Anticipo pagado: ${formatMxn(d.depositMxn)} MXN`, `Restante por liquidar: ${formatMxn(d.remainingMxn)} MXN`].join("\n")
+		const desc = [`Folio: ${d.folio}`, `Cliente: ${d.customerName}`, `Personas: ${it.people}`, `Total reserva: ${formatMxn(d.totalMxn)} MXN`, ...(d.remainingMxn > 0 ? [`Anticipo pagado: ${formatMxn(d.depositMxn)} MXN`, `Restante por liquidar: ${formatMxn(d.remainingMxn)} MXN`] : ["Pagado completo"])].join("\n")
 		lines.push("BEGIN:VEVENT", `UID:${d.folio}-${idx}@keabelmet.com`, `DTSTAMP:${now}`, `DTSTART;VALUE=DATE:${icsDate(it.dateISO)}`, `DTEND;VALUE=DATE:${icsDate(it.dateISO, 1)}`, `SUMMARY:${icsEscape(title)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(loc)}`, "STATUS:CONFIRMED", "SEQUENCE:0", "TRANSP:TRANSPARENT", "END:VEVENT")
 	})
 	lines.push("END:VCALENDAR")
@@ -421,6 +423,7 @@ function buildDepositIcs(d: DepositEmailData): string {
 
 function buildDepositHtml(d: DepositEmailData): string {
 	const L = depositT[d.locale] ?? depositT.es
+	const full = d.remainingMxn <= 0
 	const ink = "#0d222f", card = "#0f2836", teal = "#28c2a0", sand = "#f4efe4", dim = "#a9c0cc", line = "rgba(244,239,228,0.14)"
 	const hero = heroUrl(d.items[0]?.slug)
 	const iconBtn = (href: string, icon: string, alt: string) =>
@@ -436,7 +439,7 @@ function buildDepositHtml(d: DepositEmailData): string {
 	<tr><td style="padding:26px 30px 6px;text-align:center">
 		<img src="${SITE_URL}/logo.png" width="56" height="56" alt="Keabelmet" style="display:block;width:56px;height:56px;margin:0 auto 12px;border-radius:50%;border:2px solid rgba(244,239,228,0.16)" />
 		<h1 style="margin:6px 0 0;color:${sand};font-size:23px;font-weight:800">${L.hello}, ${d.customerName}!</h1>
-		<p style="color:${dim};font-size:14px;line-height:1.55;margin:10px 0 18px">${L.intro}</p>
+		<p style="color:${dim};font-size:14px;line-height:1.55;margin:10px 0 18px">${full ? L.introFull : L.intro}</p>
 	</td></tr>
 	<tr><td style="padding:0 30px">
 		<div style="background:rgba(40,194,160,0.1);border:1px dashed rgba(40,194,160,0.5);border-radius:14px;padding:14px;text-align:center">
@@ -452,13 +455,13 @@ function buildDepositHtml(d: DepositEmailData): string {
 		<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 			${d.discountMxn && d.discountMxn > 0 ? `${sumRow(L.subtotal, `${formatMxn(d.subtotalMxn ?? d.totalMxn + d.discountMxn)} MXN`)}<tr><td style="padding:9px 0;color:${teal};font-size:13px;font-weight:600">🎁 ${L.discount}</td><td style="padding:9px 0;text-align:right;color:${teal};font-size:14px;font-weight:700">−${formatMxn(d.discountMxn)} MXN</td></tr>` : ""}
 			${sumRow(L.total, `${formatMxn(d.totalMxn)} MXN`)}
-			${sumRow(L.paid, `${formatMxn(d.depositMxn)} MXN`, true)}
-			${sumRow(L.remaining, `${formatMxn(d.remainingMxn)} MXN`)}
+			${sumRow(full ? L.paidFull : L.paid, `${formatMxn(d.depositMxn)} MXN`, true)}
+			${full ? "" : sumRow(L.remaining, `${formatMxn(d.remainingMxn)} MXN`)}
 		</table>
 	</td></tr>
-	<tr><td style="padding:6px 30px 2px">
+	${full ? "" : `<tr><td style="padding:6px 30px 2px">
 		<p style="background:rgba(244,239,228,0.04);border:1px solid ${line};border-radius:12px;padding:12px 14px;color:${sand};font-size:13px;line-height:1.5;margin:0">💵 ${L.payRest}</p>
-	</td></tr>
+	</td></tr>`}
 	<tr><td style="padding:12px 30px 6px"><p style="color:${dim};font-size:12px;line-height:1.5;margin:0">📅 ${L.calNote}</p></td></tr>
 	<tr><td style="padding:16px 30px 24px;text-align:center;border-top:1px solid ${line}">
 		<div style="color:${dim};font-size:12px;margin:10px 0 10px">${L.follow}</div>
@@ -469,6 +472,7 @@ function buildDepositHtml(d: DepositEmailData): string {
 }
 
 function buildDepositOwnerHtml(d: DepositEmailData): string {
+	const full = d.remainingMxn <= 0
 	const ink = "#0d222f", sand = "#f4efe4", dim = "#cdc6b4", teal = "#28c2a0", line = "rgba(244,239,228,0.14)"
 	const waNum = (d.customerPhone || "").replace(/[^\d]/g, "")
 	const itemRow = (it: DepositVoucherItem) =>
@@ -479,15 +483,15 @@ function buildDepositOwnerHtml(d: DepositEmailData): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${ink};padding:24px 0"><tr><td align="center">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#0f2734;border:1px solid ${line};border-radius:16px;overflow:hidden">
 	<tr><td style="padding:26px 32px 8px">
-		<div style="color:${teal};font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">Nueva reserva con anticipo</div>
+		<div style="color:${teal};font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">${full ? "Nueva reserva pagada completa" : "Nueva reserva con anticipo"}</div>
 		<h1 style="color:${sand};font-size:22px;margin:8px 0 2px">🎉 ${d.customerName} · ${d.items.length} actividad(es)</h1>
 	</td></tr>
 	<tr><td style="padding:10px 32px 2px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${d.items.map(itemRow).join("")}</table></td></tr>
 	<tr><td style="padding:12px 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 		${d.discountMxn && d.discountMxn > 0 ? row("Descuento de paquete", `−${formatMxn(d.discountMxn)} MXN`) : ""}
 		${row("Total", `${formatMxn(d.totalMxn)} MXN`)}
-		${row("Anticipo pagado (20%)", `${formatMxn(d.depositMxn)} MXN`, true)}
-		${row("Restante por liquidar", `${formatMxn(d.remainingMxn)} MXN`)}
+		${row(full ? "Pagado" : "Anticipo pagado (20%)", `${formatMxn(d.depositMxn)} MXN`, true)}
+		${full ? "" : row("Restante por liquidar", `${formatMxn(d.remainingMxn)} MXN`)}
 	</table></td></tr>
 	<tr><td style="padding:6px 32px 4px">
 		<div style="color:${teal};font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:8px">Contacto del cliente</div>
@@ -498,7 +502,7 @@ function buildDepositOwnerHtml(d: DepositEmailData): string {
 			<tr><td style="padding:9px 0;color:${dim};font-size:13px">Correo</td><td style="padding:9px 0;text-align:right"><a href="mailto:${d.customerEmail}" style="color:${teal};font-size:14px;text-decoration:none">${d.customerEmail}</a></td></tr>
 		</table>
 	</td></tr>
-	<tr><td style="padding:10px 32px 26px" align="center"><p style="color:${dim};font-size:12px;margin:0">Adjuntamos el .ics con todas las actividades. El restante (${formatMxn(d.remainingMxn)} MXN) se cobra el día del tour.</p></td></tr>
+	<tr><td style="padding:10px 32px 26px" align="center"><p style="color:${dim};font-size:12px;margin:0">Adjuntamos el .ics con todas las actividades.${full ? " Ya está pagada completa." : ` El restante (${formatMxn(d.remainingMxn)} MXN) se cobra el día del tour.`}</p></td></tr>
 </table></td></tr></table></body></html>`
 }
 
@@ -512,7 +516,7 @@ export async function sendDepositEmail(d: DepositEmailData): Promise<{ ok: boole
 		const { data, error } = await resend.emails.send({
 			from: FROM,
 			to: [d.customerEmail],
-			subject: L.subject,
+			subject: d.remainingMxn <= 0 ? L.subjectFull : L.subject,
 			html: buildDepositHtml(d),
 			attachments: [{ filename: "actividades.ics", content: Buffer.from(ics, "utf8"), contentType: "text/calendar; charset=UTF-8" }],
 		})
@@ -731,7 +735,9 @@ export async function sendDepositOwnerNotification(d: DepositEmailData): Promise
 		const { data, error } = await resend.emails.send({
 			from: FROM,
 			to,
-			subject: `🎉 Nueva reserva con anticipo: ${d.customerName} · ${d.items.length} act. · ${formatMxn(d.depositMxn)} de ${formatMxn(d.totalMxn)}`,
+			subject: d.remainingMxn <= 0
+				? `🎉 Nueva reserva pagada: ${d.customerName} · ${d.items.length} act. · ${formatMxn(d.totalMxn)}`
+				: `🎉 Nueva reserva con anticipo: ${d.customerName} · ${d.items.length} act. · ${formatMxn(d.depositMxn)} de ${formatMxn(d.totalMxn)}`,
 			html: buildDepositOwnerHtml(d),
 			attachments: [{ filename: "actividades.ics", content: Buffer.from(ics, "utf8"), contentType: "text/calendar; charset=UTF-8" }],
 		})

@@ -48,7 +48,7 @@ export const cuantosDiasLaPaz: BlogPost = {
 				"**Marzo–agosto:** suma móbulas en La Ventana [^3].",
 				"**Noviembre–diciembre:** considera el Sardine Run en Bahía Magdalena.",
 			] },
-			{ type: "p", text: "Revisa [la mejor época para visitar La Paz](/blog/mejor-epoca-para-visitar-la-paz) y, cuando tengas tu plan, [arma tu reserva](/arma-tu-reserva) con varias actividades apartando con el 20%." },
+			{ type: "p", text: "Revisa [la mejor época para visitar La Paz](/blog/mejor-epoca-para-visitar-la-paz) y, cuando tengas tu plan, [arma tu reserva](/arma-tu-reserva) con varias actividades (con 3 o más apartas con el 20%)." },
 		],
 		faq: [
 			{ q: "¿2 días son suficientes para La Paz?", a: "Alcanzan para una salida al mar, pero recomendamos mínimo 3 días para combinar Espíritu Santo y tiburón ballena (en temporada) sin prisas." },
@@ -92,7 +92,7 @@ export const cuantosDiasLaPaz: BlogPost = {
 				"**March–August:** add mobula rays in La Ventana [^3].",
 				"**November–December:** consider the Sardine Run in Magdalena Bay.",
 			] },
-			{ type: "p", text: "Check [the best time to visit La Paz](/blog/best-time-to-visit-la-paz-mexico) and, once you have your plan, [build your reservation](/arma-tu-reserva) with several activities and a 20% deposit." },
+			{ type: "p", text: "Check [the best time to visit La Paz](/blog/best-time-to-visit-la-paz-mexico) and, once you have your plan, [build your reservation](/arma-tu-reserva) with several activities (with 3 or more, a 20% deposit holds it)." },
 		],
 		faq: [
 			{ q: "Are 2 days enough for La Paz?", a: "Enough for one sea trip, but we recommend at least 3 days to combine Espíritu Santo and whale sharks (in season) without rushing." },

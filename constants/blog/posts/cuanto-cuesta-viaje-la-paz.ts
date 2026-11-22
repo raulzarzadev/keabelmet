@@ -43,7 +43,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 				["Temporada (nov–dic)", "Sardine Run + tiburón ballena", "$6,300 MXN", "$331"],
 				["Gran Temporada (nov–dic)", "Sardine Run + Safari La Ventana + tiburón ballena", "$8,800 MXN", "$462"],
 			] },
-			{ type: "p", text: "Los descuentos se aplican solos en [Arma tu reserva](/arma-tu-reserva), donde apartas con el 20 % y pagas el resto el día del tour." },
+			{ type: "p", text: "Los descuentos se aplican solos en [Arma tu reserva](/arma-tu-reserva), donde pagas en línea y, si reservas 3 o más actividades, puedes apartar con el 20 % y pagar el resto el día del tour." },
 			{ type: "h2", text: "Ejemplos de presupuesto solo en tours" },
 			{ type: "ul", items: [
 				"**3 días (lo esencial):** tiburón ballena + Espíritu Santo con el Dúo La Paz: **$3,690 MXN** (≈ US$194).",
@@ -93,7 +93,7 @@ export const cuantoCuestaViajeLaPaz: BlogPost = {
 				["Season Combo (Nov–Dec)", "Sardine Run + whale sharks", "$6,300 MXN", "$331"],
 				["Grand Season Combo (Nov–Dec)", "Sardine Run + La Ventana Safari + whale sharks", "$8,800 MXN", "$462"],
 			] },
-			{ type: "p", text: "Discounts apply automatically in [Build your reservation](/arma-tu-reserva), where you hold your spot with 20% and pay the rest on the day of the tour." },
+			{ type: "p", text: "Discounts apply automatically in [Build your reservation](/arma-tu-reserva), where you pay online and, if you book 3 or more activities, you can hold your spot with 20% and pay the rest on the day of the tour." },
 			{ type: "h2", text: "Sample tour-only budgets" },
 			{ type: "ul", items: [
 				"**3 days (the essentials):** whale sharks + Espíritu Santo with the La Paz Duo: **$3,690 MXN** (≈ US$194).",

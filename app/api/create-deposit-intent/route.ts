@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 		return bad("JSON inválido")
 	}
 
-	const { items, customerName, customerEmail, customerPhone, locale } = (body ?? {}) as Record<string, unknown>
+	const { items, customerName, customerEmail, customerPhone, locale, payMode: payModeRaw } = (body ?? {}) as Record<string, unknown>
 
 	if (!Array.isArray(items) || items.length === 0) return bad("Agrega al menos una actividad")
 	if (items.length > MAX_DEPOSIT_ITEMS) return bad(`Máximo ${MAX_DEPOSIT_ITEMS} actividades por reserva`)
@@ -39,9 +39,10 @@ export async function POST(req: NextRequest) {
 	if (phone.length < 7) return bad("Teléfono inválido")
 
 	const loc = typeof locale === "string" ? locale : "es"
-	const { subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn, packages } = computeDeposit(
+	const { payMode, subtotalMxn, discountMxn, totalMxn, depositMxn, remainingMxn, packages } = computeDeposit(
 		validated,
 		loc as Parameters<typeof computeDeposit>[1],
+		payModeRaw === "deposit" ? "deposit" : "full",
 	)
 	if (depositMxn <= 0) return bad("Total inválido")
 
@@ -55,11 +56,12 @@ export async function POST(req: NextRequest) {
 		const paymentIntent = await stripe.paymentIntents.create({
 			amount: Math.round(depositMxn * 100),
 			currency: "mxn",
-			description: `Keabelmet · Anticipo ${Math.round(DEPOSIT_RATE * 100)}% · ${validated.length} actividad(es)`.slice(0, 500),
+			description: `Keabelmet · ${payMode === "deposit" ? `Anticipo ${Math.round(DEPOSIT_RATE * 100)}%` : "Pago completo"} · ${validated.length} actividad(es)`.slice(0, 500),
 			receipt_email: emailRaw,
 			automatic_payment_methods: { enabled: true },
 			metadata: {
 				kind: "deposit",
+				payMode,
 				items: packed,
 				itemCount: String(validated.length),
 				subtotalMxn: String(subtotalMxn),
@@ -79,6 +81,7 @@ export async function POST(req: NextRequest) {
 			clientSecret: paymentIntent.client_secret,
 			paymentIntentId: paymentIntent.id,
 			folio: folioFromPaymentIntent(paymentIntent.id),
+			payMode,
 			subtotalMxn,
 			discountMxn,
 			totalMxn,

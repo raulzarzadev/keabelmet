@@ -44,7 +44,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 			{ type: "h2", text: "Cómo reservar" },
 			{ type: "ul", items: [
 				"**Paga en línea** desde la [página del tour](/experiencias/tiburon-ballena) con tarjeta.",
-				"**O combínalo** con otras actividades en [Arma tu reserva](/arma-tu-reserva) y aparta con el 20 %.",
+				"**O combínalo** con otras actividades en [Arma tu reserva](/arma-tu-reserva): con 3 o más actividades apartas con el 20 %.",
 				"**Cancelación con reembolso** hasta 24 horas antes de la salida.",
 			] },
 			{ type: "tip", text: "¿Vas a hacer también el Sardine Run en noviembre o diciembre? Con el **Paquete Temporada** te llevas las dos experiencias por $6,300 MXN por persona." },
@@ -89,7 +89,7 @@ export const tourTiburonBallenaLaPaz: BlogPost = {
 			{ type: "h2", text: "How to book" },
 			{ type: "ul", items: [
 				"**Pay online** from the [tour page](/experiencias/tiburon-ballena) by card.",
-				"**Or combine it** with other activities in [Build your reservation](/arma-tu-reserva) and hold it with 20%.",
+				"**Or combine it** with other activities in [Build your reservation](/arma-tu-reserva): with 3 or more activities, hold it with 20%.",
 				"**Refundable cancellation** up to 24 hours before departure.",
 			] },
 			{ type: "tip", text: "Also doing the Sardine Run in November or December? With the **Season Combo** you get both experiences for $6,300 MXN per person." },

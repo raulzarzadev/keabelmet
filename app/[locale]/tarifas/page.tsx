@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 const ui: Record<Locale, { from: string; perPerson: string; season: string; details: string; build: string; buildText: string }> = {
-  es: { from: "Desde", perPerson: "por persona", season: "Temporada", details: "Ver la experiencia", build: "Arma tu reserva", buildText: "¿Quieres hacer varias? Elige tus actividades y aparta todo con solo el 20%." },
-  en: { from: "From", perPerson: "per person", season: "Season", details: "See the experience", build: "Build your booking", buildText: "Want to do several? Pick your activities and reserve them all with just 20%." },
-  fr: { from: "À partir de", perPerson: "par personne", season: "Saison", details: "Voir l'expérience", build: "Composez votre réservation", buildText: "Plusieurs activités ? Choisissez-les et réservez le tout avec seulement 20 %." },
-  zh: { from: "起价", perPerson: "每人", season: "季节", details: "查看行程", build: "定制预订", buildText: "想参加多个行程？选择活动，只需付20%即可全部预订。" },
-  ca: { from: "Des de", perPerson: "per persona", season: "Temporada", details: "Veure l'experiència", build: "Munta la teva reserva", buildText: "Vols fer-ne diverses? Tria les teves activitats i aparta-ho tot amb només el 20%." },
+  es: { from: "Desde", perPerson: "por persona", season: "Temporada", details: "Ver la experiencia", build: "Arma tu reserva", buildText: "¿Quieres hacer varias? Elige tus actividades y paga en línea; con 3 o más apartas todo con solo el 20%." },
+  en: { from: "From", perPerson: "per person", season: "Season", details: "See the experience", build: "Build your booking", buildText: "Want to do several? Pick your activities and pay online; with 3 or more, reserve them all with just 20%." },
+  fr: { from: "À partir de", perPerson: "par personne", season: "Saison", details: "Voir l'expérience", build: "Composez votre réservation", buildText: "Plusieurs activités ? Choisissez-les et payez en ligne ; dès 3, réservez le tout avec seulement 20 %." },
+  zh: { from: "起价", perPerson: "每人", season: "季节", details: "查看行程", build: "定制预订", buildText: "想参加多个行程？选择活动并在线支付；预订3项或以上只需先付20%。" },
+  ca: { from: "Des de", perPerson: "per persona", season: "Temporada", details: "Veure l'experiència", build: "Munta la teva reserva", buildText: "Vols fer-ne diverses? Tria les teves activitats i paga en línia; amb 3 o més aparta-ho tot amb només el 20%." },
 }
 
 export default async function Tarifas({ params }: { params: Promise<{ locale: string }> }) {
