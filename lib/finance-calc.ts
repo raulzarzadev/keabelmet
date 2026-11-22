@@ -234,6 +234,8 @@ export interface MonthFin {
 	netProfit: number
 	/** Compromisos fijos del mes (vivienda de Mau…). */
 	fixed: number
+	/** Cuánto cubre la utilidad de cada compromiso fijo, en orden. */
+	fixedSplit: number[]
 	/** Lo que queda para repartir por porcentajes. */
 	toDistribute: number
 	reparto: number[]
@@ -257,6 +259,7 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		expenses: 0,
 		netProfit: 0,
 		fixed: 0,
+		fixedSplit: settings.fixed.map(() => 0),
 		toDistribute: 0,
 		reparto: settings.reparto.map(() => 0),
 	}))
@@ -323,6 +326,13 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		m.netProfit = m.profit - m.opex
 		const active = m.sales || m.costs || m.opex
 		m.fixed = active ? Math.min(fixedMonthly, Math.max(0, m.netProfit)) : 0
+		// Cada compromiso en orden, hasta donde alcance la utilidad
+		let left = m.fixed
+		m.fixedSplit = settings.fixed.map((f) => {
+			const v = Math.min(f.monthly || 0, left)
+			left -= v
+			return v
+		})
 		m.toDistribute = Math.max(0, m.netProfit - m.fixed)
 		// Primero los destinos con monto fijo (en orden, hasta donde alcance) y luego los porcentajes sobre lo que queda
 		let rest = m.toDistribute
@@ -334,7 +344,7 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		})
 		m.reparto = settings.reparto.map((c, i) => (isFixedCat(c) ? fixedAlloc[i] : rest * c.pct))
 	}
-	const sum = (k: keyof Omit<MonthFin, "reparto" | "month">) => months.reduce((a, m) => a + (m[k] as number), 0)
+	const sum = (k: keyof Omit<MonthFin, "reparto" | "fixedSplit" | "month">) => months.reduce((a, m) => a + (m[k] as number), 0)
 	const totals = {
 		bookings: sum("bookings"),
 		people: sum("people"),

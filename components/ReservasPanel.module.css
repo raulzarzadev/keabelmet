@@ -154,3 +154,10 @@
 .radarTable td { white-space: normal; vertical-align: top; }
 .radarTable td:first-child { min-width: 200px; }
 .radarTable td:nth-child(2), .radarTable td:nth-child(4) { white-space: nowrap; }
+
+/* Corte del mes en el reparto */
+.cutBar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; border: 1px solid var(--teal-dim); background: var(--ink-2); border-radius: 12px; padding: 10px 14px; font-size: 0.9rem; color: var(--sand-dim); }
+.cutBar select { width: auto; }
+.cutBar b { color: var(--sand); }
+.cutAmt { font-size: 0.85rem; color: var(--sand-dim); border-top: 1px dashed var(--line); padding-top: 6px; margin-top: 2px; }
+.cutAmt b { color: var(--teal); font-size: 1rem; }

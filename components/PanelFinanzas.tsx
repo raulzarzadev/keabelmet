@@ -39,6 +39,8 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 	const [settings, setSettings] = useState<FinSettings>(fin)
 	const [dirty, setDirty] = useState(false)
 	const [filter, setFilter] = useState<MovementKind | "todos">("todos")
+	// Mes del corte: el actual en el año en curso; en otros años, diciembre.
+	const [cutMonth, setCutMonth] = useState(new Date().getMonth() + 1)
 	const sum = useMemo(() => yearSummary(bookings, expenses, settings, year), [bookings, expenses, settings, year])
 	const yearMoves = expenses.filter((e) => e.dateISO.startsWith(String(year))).sort((a, b) => a.dateISO.localeCompare(b.dateISO) || a.createdAt - b.createdAt)
 	const shownMoves = filter === "todos" ? yearMoves : yearMoves.filter((e) => kindOf(e) === filter)
@@ -48,6 +50,8 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 	const t = sum.totals
 	const payers = useMemo(() => [...new Set([COMPANY_ACCOUNT, ...expenses.map(payerOf)])], [expenses])
 	const destinos = [...settings.fixed.map((f) => f.name), ...settings.reparto.map((c) => c.name)]
+	const cut = sum.months[Math.min(12, Math.max(1, cutMonth)) - 1]
+	const cutName = MONTHS[cut.month - 1].toLowerCase()
 
 	function change(next: FinSettings) {
 		setDirty(true)
@@ -157,6 +161,19 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 			<p className={s.muted}>
 				Cada mes, de la <b>utilidad real</b> (ya sin gastos de operación) primero salen los compromisos fijos y los destinos con monto fijo, y lo que queda se reparte con los porcentajes. Toca el <b>%</b> o el <b>$</b> de un destino para cambiarlo entre porcentaje y monto fijo al mes. Los porcentajes deben sumar 100%: ahora suman <b className={pctCats.length && Math.abs(pctTotal - 1) > 0.001 ? s.warn : ""}>{pct(pctTotal)}</b>.
 			</p>
+					<div className={s.cutBar}>
+				<label className={s.row}>
+					Corte de
+					<select className={s.input} value={cut.month} onChange={(e) => setCutMonth(Number(e.target.value))}>
+						{MONTHS.map((n, i) => <option key={i} value={i + 1}>{n} {year}</option>)}
+					</select>
+				</label>
+				<span>Utilidad real: <b className={cut.netProfit < 0 ? s.bad : ""}>{money(cut.netProfit)}</b></span>
+				<span>Compromisos fijos: <b>{money(cut.fixed)}</b></span>
+				<span>Por repartir: <b>{money(cut.toDistribute)}</b></span>
+			</div>
+			{cut.missingCost > 0 && <p className={s.muted}>Ojo: en {cutName} hay {cut.missingCost} reservas sin costo ({money(cut.salesNoCost)} en ventas) que todavía no cuentan en la utilidad.</p>}
+			{cut.netProfit <= 0 && (cut.sales || cut.opex) ? <p className={s.muted}>En {cutName} no hubo utilidad, así que no toca separar nada.</p> : null}
 			<h4 className={s.subh}>Compromisos fijos al mes</h4>
 			<div className={s.cats}>
 				{settings.fixed.map((f, i) => (
@@ -164,6 +181,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 						<input className={s.input} value={f.name} onChange={(e) => setFixed(i, "name", e.target.value)} />
 						<span className={s.row}>$<input className={`${s.input} ${s.pctIn}`} inputMode="decimal" value={f.monthly || ""} placeholder="0" onChange={(e) => setFixed(i, "monthly", e.target.value)} /> al mes</span>
 						<span className={s.muted}>{f.desc}</span>
+						<CutAmount month={cutName} value={cut.fixedSplit[i] ?? 0} of={f.monthly || 0} />
 						<button type="button" className={s.linkBtn} onClick={() => change({ ...settings, fixed: settings.fixed.filter((_, j) => j !== i) })}>Quitar</button>
 					</label>
 				))}
@@ -186,6 +204,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 							</span>
 						)}
 						<input className={`${s.input} ${s.descIn}`} value={c.desc} placeholder="Para qué es" onChange={(e) => setCat(i, "desc", e.target.value)} />
+						<CutAmount month={cutName} value={cut.reparto[i] ?? 0} of={isFixedCat(c) ? c.amount || 0 : undefined} />
 						{settings.reparto.length > 1 && (
 							<button type="button" className={s.linkBtn} onClick={() => change({ ...settings, reparto: settings.reparto.filter((_, j) => j !== i), goalIndex: Math.max(0, settings.goalIndex - (i < settings.goalIndex ? 1 : 0)) })}>Quitar</button>
 						)}
@@ -515,5 +534,16 @@ function MoveEditor({ move, payers, destinos, onSave, onDelete, onClose }: { mov
 				</div>
 			</form>
 		</div>
+	)
+}
+
+/** Lo que le toca a un compromiso o destino en el mes del corte. `of`: monto fijo pedido (si no alcanzó, se muestra). */
+function CutAmount({ month, value, of }: { month: string; value: number; of?: number }) {
+	const short = of !== undefined && of > 0 && value < of - 0.5
+	return (
+		<span className={s.cutAmt}>
+			En {month}: <b>{money(value)}</b>
+			{short && <span className={s.warn}> de {money(of)} (no alcanzó)</span>}
+		</span>
 	)
 }
