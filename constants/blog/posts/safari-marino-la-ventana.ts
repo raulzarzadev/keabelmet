@@ -53,6 +53,7 @@ export const safariMarinoLaVentana: BlogPost = {
 				["Punto de encuentro", "Keabelmet Expeditions, La Ventana"],
 				["Transporte desde La Paz", "Opcional, $1,000 MXN (hasta 4 personas)"],
 			] },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-aguas-azules-la-ventana.webp", alt: "Tortuga marina nadando en aguas abiertas de azul profundo", caption: "Una tortuga marina en La Ventana. Foto: Keabelmet." },
 			{ type: "tip", text: "La lancha del safari no tiene baño: usa el sanitario antes de salir. Si te mareas, lee [consejos contra el mareo](/blog/me-voy-a-marear-en-la-lancha-consejos). Reserva el [safari en La Ventana](/experiencias/safari-la-ventana)." },
 		],
 		faq: [
@@ -103,6 +104,7 @@ export const safariMarinoLaVentana: BlogPost = {
 				["Meeting point", "Keabelmet Expeditions, La Ventana"],
 				["Transport from La Paz", "Optional, $1,000 MXN (up to 4 people)"],
 			] },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-aguas-azules-la-ventana.webp", alt: "Sea turtle swimming in deep blue open water", caption: "A sea turtle in La Ventana. Photo: Keabelmet." },
 			{ type: "tip", text: "The safari boat has no bathroom: use the restroom before leaving. If you get seasick, read [seasickness tips](/blog/will-i-get-seasick-on-the-boat-tips). Book the [La Ventana safari](/experiencias/safari-la-ventana)." },
 		],
 		faq: [

@@ -4,7 +4,7 @@ export const tortugasMarinasBcs: BlogPost = {
 	id: "tortugas-marinas-bcs",
 	category: "fauna",
 	date: "2026-11-20",
-	cover: "/espiritu-santo-island-pristine-beach-turquoise-wat.jpg",
+	cover: "/images/blog/tortuga-marina-nadando-en-la-reina-la-ventana.webp",
 	experiences: ["buceo-cabo-pulmo", "tour-espiritu-santo"],
 	related: ["mar-de-cortes-acuario", "delfines-mar-de-cortes", "bloqueador-biodegradable"],
 	sources: [
@@ -21,7 +21,7 @@ export const tortugasMarinasBcs: BlogPost = {
 		metaTitle: "Tortugas marinas en La Paz y Baja California Sur: especies y dónde verlas",
 		description: "Baja California Sur es hábitat de cinco de las siete especies de tortugas marinas del mundo. Tortuga prieta, caguama, carey y más: qué dicen los estudios y cómo verlas sin dañarlas.",
 		excerpt: "Cinco de las siete especies de tortugas marinas usan las aguas de Baja California Sur. Te contamos cuáles son, qué las amenaza y cómo verlas con respeto.",
-		coverAlt: "Playa de agua turquesa en Isla Espíritu Santo, Baja California Sur",
+		coverAlt: "Tortuga marina nadando sobre el arrecife de La Reina, en La Ventana",
 		answer: "Baja California Sur es hábitat de **cinco de las siete especies** de tortugas marinas del mundo [^1]. Las más estudiadas son la **tortuga prieta** (la forma del Pacífico oriental de la tortuga verde), que se alimenta en las bahías y lagunas de la península [^2], y la **caguama**, que llega desde playas de **Japón** a alimentarse al Golfo de Ulloa [^3]. También hay **carey**, una especie en peligro crítico [^5].",
 		blocks: [
 			{ type: "p", text: "Encontrarte una tortuga mientras haces snorkel es de esos momentos que no se olvidan. En Baja California Sur es posible porque sus costas son zonas de alimentación muy importantes para varias especies." },
@@ -33,13 +33,14 @@ export const tortugasMarinasBcs: BlogPost = {
 			{ type: "h3", text: "Carey" },
 			{ type: "p", text: "La carey está clasificada como **En Peligro Crítico** por la UICN y su población cayó más de **80 %** en el último siglo [^5]. En el noroeste de México se identificaron **52 sitios** con registros de carey, sobre todo juveniles en arrecifes rocosos y manglares, y el **71 %** de esos sitios no está protegido [^5]." },
 			{ type: "fact", text: "Las tortugas usan Baja California Sur sobre todo para **alimentarse y crecer**: la gran mayoría de las que se encuentran en sus bahías son juveniles [^2]." },
-			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-la-reina-la-ventana.webp", alt: "Tortuga marina nadando sobre un arrecife rocoso con peces al fondo", caption: "Una tortuga marina nada sobre el arrecife de La Reina, durante el safari en La Ventana. Foto: Keabelmet." },
+			{ type: "img", src: "/images/blog/tortuga-marina-vista-desde-arriba-la-ventana.webp", alt: "Tortuga marina vista desde arriba nadando sobre el arrecife", caption: "Una tortuga marina en La Ventana. Foto: Keabelmet." },
 			{ type: "h2", text: "Lo que las amenaza" },
 			{ type: "ul", items: [
 				"**Captura incidental en redes:** de 2005 a 2006 murieron entre **1,500 y 2,950 caguamas al año** en dos flotas pesqueras observadas en la región [^4].",
 				"**Consumo ilegal:** de 2006 a 2008 se encontraron **1,014** tortugas muertas en Baja California Sur y se había consumido la carne de casi la mitad; la tortuga prieta fue la más buscada (**77 %**) [^6].",
 				"**Comercio en mercado negro:** el consumo aumenta en la Cuaresma y todavía hay lugares que venden su carne [^6].",
 			] },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-aguas-azules-la-ventana.webp", alt: "Tortuga marina nadando en aguas abiertas de azul profundo", caption: "Una tortuga marina en aguas abiertas de La Ventana. Foto: Keabelmet." },
 			{ type: "h2", text: "Cómo verlas sin dañarlas" },
 			{ type: "ul", items: [
 				"No las toques, no las persigas y no les cortes el paso cuando suben a respirar.",
@@ -63,7 +64,7 @@ export const tortugasMarinasBcs: BlogPost = {
 		metaTitle: "Sea turtles in La Paz & Baja California Sur: species and where to see them",
 		description: "Baja California Sur provides habitat for five of the world's seven sea turtle species. Black turtles, loggerheads, hawksbills and more: what the studies say and how to see them without harming them.",
 		excerpt: "Five of the seven sea turtle species use the waters of Baja California Sur. Here's which ones, what threatens them and how to see them respectfully.",
-		coverAlt: "Turquoise-water beach on Espíritu Santo Island, Baja California Sur",
+		coverAlt: "Sea turtle swimming over the La Reina reef in La Ventana",
 		answer: "Baja California Sur provides habitat for **five of the world's seven** sea turtle species [^1]. The best studied are the **black turtle** (the eastern Pacific form of the green turtle), which feeds in the peninsula's bays and lagoons [^2], and the **loggerhead**, which comes from nesting beaches in **Japan** to feed in the Gulf of Ulloa [^3]. There are also **hawksbills**, a critically endangered species [^5].",
 		blocks: [
 			{ type: "p", text: "Running into a sea turtle while snorkeling is one of those moments you never forget. In Baja California Sur it's possible because its coasts are key feeding grounds for several species." },
@@ -75,13 +76,14 @@ export const tortugasMarinasBcs: BlogPost = {
 			{ type: "h3", text: "Hawksbill" },
 			{ type: "p", text: "The hawksbill is listed as **Critically Endangered** by the IUCN and its population fell by more than **80%** in the last century [^5]. In northwest Mexico, **52 sites** with hawksbill records were identified, mostly juveniles on rocky reefs and in mangroves, and **71%** of those sites are unprotected [^5]." },
 			{ type: "fact", text: "Turtles use Baja California Sur mainly to **feed and grow**: the vast majority found in its bays are juveniles [^2]." },
-			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-la-reina-la-ventana.webp", alt: "Sea turtle swimming over a rocky reef with fish in the background", caption: "A sea turtle swims over the La Reina reef during the La Ventana safari. Photo: Keabelmet." },
+			{ type: "img", src: "/images/blog/tortuga-marina-vista-desde-arriba-la-ventana.webp", alt: "Sea turtle seen from above swimming over the reef", caption: "A sea turtle in La Ventana. Photo: Keabelmet." },
 			{ type: "h2", text: "What threatens them" },
 			{ type: "ul", items: [
 				"**Bycatch in nets:** in 2005–2006, between **1,500 and 2,950 loggerheads a year** died in two observed fishing fleets in the region [^4].",
 				"**Illegal consumption:** from 2006 to 2008, **1,014** dead turtles were found in Baja California Sur and the meat of nearly half had been eaten; black turtles were the most sought after (**77%**) [^6].",
 				"**Black-market trade:** consumption rises during Lent and some places still sell turtle meat [^6].",
 			] },
+			{ type: "img", src: "/images/blog/tortuga-marina-nadando-en-aguas-azules-la-ventana.webp", alt: "Sea turtle swimming in deep blue open water", caption: "A sea turtle in the open water off La Ventana. Photo: Keabelmet." },
 			{ type: "h2", text: "How to see them without harming them" },
 			{ type: "ul", items: [
 				"Don't touch or chase them, and don't block their way when they come up to breathe.",
