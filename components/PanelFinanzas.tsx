@@ -26,7 +26,9 @@ const todayISO = () => {
 	const d = new Date()
 	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
 }
-const KIND_LABEL: Record<MovementKind, string> = { operacion: "Operación", equipo: "Equipo", reparto: "Reparto", pagoArgo: "Pago de Argo" }
+/** Quien pagó con dinero ya saldado fuera de Keabelmet: cuenta como dinero de fuera, pero no se le debe. */
+const SETTLED_RE = /externo|saldado/i
+const KIND_LABEL: Record<MovementKind, string> = { operacion: "Operación", equipo: "Equipo", reparto: "Reparto", pagoArgo: "Pago de Argo", reembolso: "Reembolso" }
 
 type Post = (body: Record<string, unknown>) => Promise<unknown>
 
@@ -65,8 +67,12 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 	const newMove = (kind: MovementKind, extra: Partial<Expense> = {}) =>
 		setEditExp({ dateISO: todayISO(), kind, paidFrom: kind === "pagoArgo" ? "Argo Navis" : COMPANY_ACCOUNT, ...extra })
 
-	const contributions = Object.entries(sum.contributions).sort((a, b) => b[1] - a[1])
-	const contribTotal = contributions.reduce((a, [, v]) => a + v, 0)
+	// Quién puso dinero de su bolsa, cuánto se le ha devuelto y cuánto se le debe
+	const people = [...new Set([...Object.keys(sum.contributions), ...Object.keys(sum.refunds)])]
+		.map((who) => ({ who, paid: sum.contributions[who] ?? 0, back: sum.refunds[who] ?? 0, settled: SETTLED_RE.test(who) }))
+		.sort((a, b) => b.paid - a.paid)
+	const contribTotal = people.reduce((a, p) => a + p.paid, 0)
+	const owedTotal = people.reduce((a, p) => a + (p.settled ? 0 : Math.max(0, p.paid - p.back)), 0)
 
 	return (
 		<div className={s.fin}>
@@ -84,7 +90,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 				<Kpi label="Compras de equipo" value={money(t.expenses)} sub="Inversión en la empresa" />
 				<Kpi label="Por cobrar a clientes" value={money(t.pending)} />
 				<Kpi label="Argo Navis le debe" value={money(sum.argo.owes)} sub="Gastos compartidos pendientes" />
-				<Kpi label="Aportado por socios" value={money(contribTotal)} sub="Pagado de su bolsa" />
+				<Kpi label="Pagado de fuera de la caja" value={money(contribTotal)} sub={owedTotal ? `Pendiente de devolver ${money(owedTotal)}` : "Pagado de la bolsa de alguien"} />
 			</div>
 			{t.missingCost > 0 && (
 				<p className={s.notice}>Hay {t.missingCost} reservas sin costo de proveedor ({money(t.salesNoCost)} en ventas). No cuentan en la utilidad ni en el reparto hasta que captures su costo (Reservas → abre la reserva → Costo).</p>
@@ -230,11 +236,12 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 					<button className={s.btn} onClick={() => newMove("equipo")}>+ Compra de equipo</button>
 					<button className={s.btn} onClick={() => newMove("reparto")}>+ Reparto</button>
 					<button className={s.btn} onClick={() => newMove("pagoArgo", { item: "Pago de Argo Navis" })}>+ Pago de Argo</button>
+					<button className={s.btn} onClick={() => newMove("reembolso", { item: "Reembolso" })}>+ Reembolso</button>
 				</div>
 			</div>
 			<p className={s.muted}>Todo lo que sale de la cuenta de Keabelmet (Banregio) o de la bolsa de un socio. Las reservas y sus costos ya se suman solos desde la pestaña Reservas.</p>
 			<div className={s.row}>
-				{(["todos", "operacion", "equipo", "reparto", "pagoArgo"] as const).map((k) => (
+				{(["todos", "operacion", "equipo", "reparto", "pagoArgo", "reembolso"] as const).map((k) => (
 					<button key={k} className={`${s.btn} ${filter === k ? s.btnOn : ""}`} onClick={() => setFilter(k)}>{k === "todos" ? "Todos" : KIND_LABEL[k]}</button>
 				))}
 			</div>
@@ -250,7 +257,7 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 									<td>{e.dateISO}</td>
 									<td>{KIND_LABEL[k]}</td>
 									<td>{e.item}</td>
-									<td>{k === "reparto" ? e.destino : e.category}</td>
+									<td>{k === "reparto" ? e.destino : k === "reembolso" ? `A ${e.destino ?? ""}` : e.category}</td>
 									<td>{money(e.total)}</td>
 									<td>{k === "operacion" || k === "equipo" ? money(keabelmetShare(e)) : ""}</td>
 									<td>{payerOf(e)}</td>
@@ -267,11 +274,16 @@ export default function PanelFinanzas({ bookings, expenses, fin, post, reload }:
 
 			<div className={s.twoCols}>
 				<div className={s.card}>
-					<h3>Aportaciones de los socios ({year})</h3>
-					<p className={s.muted}>Lo que pagaron de su bolsa para Keabelmet. Sirve para saber qué ha puesto cada quien cuando decidan sus porcentajes.</p>
-					{contributions.length === 0 && <p className={s.muted}>Nada este año.</p>}
-					{contributions.map(([who, v]) => (
-						<p key={who} className={s.row} style={{ justifyContent: "space-between" }}><span>{who}</span><b>{money(v)}</b></p>
+					<h3>Dinero que no salió de la cuenta de Keabelmet ({year})</h3>
+					<p className={s.muted}>Lo que alguien pagó de su bolsa (socios o gente de fuera, como el equipo que se pagó con dinero externo), cuánto se le ha devuelto con "+ Reembolso" y cuánto se le debe.</p>
+					{people.length === 0 && <p className={s.muted}>Nada este año.</p>}
+					{people.map((p) => (
+						<div key={p.who} className={s.pvr}>
+							<b>{p.who}</b>
+							<span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Pagó de su bolsa</span><span>{money(p.paid)}</span></span>
+							<span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Ya se le devolvió</span><span>{money(p.back)}</span></span>
+							{p.settled ? <span className={s.muted}>Ya saldado fuera de Keabelmet: no se debe nada.</span> : <span className={s.row} style={{ justifyContent: "space-between" }}><span className={s.muted}>Pendiente</span><b className={p.paid - p.back > 0 ? s.warn : ""}>{money(Math.max(0, p.paid - p.back))}</b></span>}
+						</div>
 					))}
 				</div>
 				<div className={s.card}>
@@ -392,7 +404,7 @@ function MoveEditor({ move, payers, destinos, onSave, onDelete, onClose }: { mov
 				onClick={(ev) => ev.stopPropagation()}
 				onSubmit={(ev) => {
 					ev.preventDefault()
-					onSave({ ...e, investor: isSpend ? e.paidFrom ?? "" : e.investor ?? "", item: e.item || (k === "reparto" ? e.destino : k === "pagoArgo" ? "Pago de Argo Navis" : "") || "" })
+					onSave({ ...e, investor: isSpend ? e.paidFrom ?? "" : e.investor ?? "", item: e.item || (k === "reparto" ? e.destino : k === "pagoArgo" ? "Pago de Argo Navis" : k === "reembolso" ? `Reembolso a ${e.destino ?? ""}` : "") || "" })
 				}}
 			>
 				<div className={s.detailHead}><h3>{e.id ? "Editar movimiento" : "Nuevo movimiento"}</h3></div>
@@ -405,7 +417,13 @@ function MoveEditor({ move, payers, destinos, onSave, onDelete, onClose }: { mov
 						<span className={s.muted}>{MOVEMENT_KINDS.find((m) => m.id === k)?.hint}</span>
 					</label>
 					<label>Fecha<input className={s.input} type="date" required value={val("dateISO")} onChange={(x) => set("dateISO", x.target.value)} /></label>
-					{k === "reparto" ? (
+					{k === "reembolso" ? (
+						<label>
+							¿A quién se le devolvió?
+							<input className={s.input} list="mv-payers" required value={val("destino")} onChange={(x) => set("destino", x.target.value)} />
+							<datalist id="mv-payers">{payers.filter((p) => p !== COMPANY_ACCOUNT).map((p) => <option key={p} value={p} />)}</datalist>
+						</label>
+					) : k === "reparto" ? (
 						<label>
 							Destino
 							<select className={s.input} required value={val("destino")} onChange={(x) => set("destino", x.target.value)}>
@@ -420,7 +438,7 @@ function MoveEditor({ move, payers, destinos, onSave, onDelete, onClose }: { mov
 							<datalist id="mv-cats">{(k === "operacion" ? OPEX_CATEGORIES : ["Equipo Safaris", "Equipo Buceo", "Ilustraciones y material", "Embarcación"]).map((c) => <option key={c} value={c} />)}</datalist>
 						</label>
 					) : <span />}
-					<label className={s.full}>{k === "reparto" || k === "pagoArgo" ? "Concepto (opcional)" : "Concepto"}<input className={s.input} value={val("item")} onChange={(x) => set("item", x.target.value)} placeholder={k === "reparto" ? "Transferencia al apartado…" : ""} /></label>
+					<label className={s.full}>{k === "reparto" || k === "pagoArgo" || k === "reembolso" ? "Concepto (opcional)" : "Concepto"}<input className={s.input} value={val("item")} onChange={(x) => set("item", x.target.value)} placeholder={k === "reparto" ? "Transferencia al apartado…" : ""} /></label>
 					{k === "equipo" && (
 						<>
 							<label>Precio unitario<input className={s.input} inputMode="decimal" value={val("unitPrice")} onChange={(x) => set("unitPrice", x.target.value)} /></label>
@@ -435,7 +453,7 @@ function MoveEditor({ move, payers, destinos, onSave, onDelete, onClose }: { mov
 								¿De dónde salió el dinero?
 								<input className={s.input} list="mv-payers" value={val("paidFrom")} onChange={(x) => set("paidFrom", x.target.value)} />
 								<datalist id="mv-payers">{payers.map((p) => <option key={p} value={p} />)}</datalist>
-								<span className={s.muted}>"{COMPANY_ACCOUNT}" = la Banregio de la empresa. Si pagó un socio de su bolsa, pon su nombre: cuenta como aportación.</span>
+								<span className={s.muted}>"{COMPANY_ACCOUNT}" = la Banregio de la empresa. Si pagó alguien de su bolsa, pon su nombre: Keabelmet se lo debe hasta registrar un reembolso. Si ya se saldó con dinero de fuera, escribe "Dinero externo (saldado)".</span>
 							</label>
 							<label className={s.full}>
 								<span className={s.row}>

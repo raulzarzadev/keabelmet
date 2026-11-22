@@ -25,14 +25,16 @@ export interface FinBooking {
  * - equipo: compra de equipo o activos (inversión; no se resta de la utilidad de operación)
  * - reparto: dinero que de verdad se separó o se pagó a un destino del reparto
  * - pagoArgo: Argo Navis le pagó a Keabelmet su parte de gastos compartidos
+ * - reembolso: Keabelmet le devolvió dinero a quien pagó algo de su bolsa
  */
-export type MovementKind = "operacion" | "equipo" | "reparto" | "pagoArgo"
+export type MovementKind = "operacion" | "equipo" | "reparto" | "pagoArgo" | "reembolso"
 
 export const MOVEMENT_KINDS: { id: MovementKind; label: string; hint: string }[] = [
 	{ id: "operacion", label: "Gasto de operación", hint: "Gasolina extra, publicidad, Google, Lightroom, comisiones de Stripe, teléfono…" },
 	{ id: "equipo", label: "Compra de equipo", hint: "Neoprenos, visores, equipo de buceo… (inversión)" },
 	{ id: "reparto", label: "Reparto (dinero separado)", hint: "Lo que de verdad se apartó o se pagó a un destino del reparto" },
 	{ id: "pagoArgo", label: "Pago de Argo Navis", hint: "Argo Navis le pagó a Keabelmet su parte de gastos compartidos" },
+	{ id: "reembolso", label: "Reembolso", hint: "Keabelmet le devolvió dinero a alguien que pagó algo de su bolsa" },
 ]
 
 /** Cuenta de la empresa (Banregio de Mau, donde deposita Stripe). Lo demás es dinero personal = aportación. */
@@ -72,7 +74,7 @@ export interface Expense {
 	paidFrom?: string
 	/** Parte de Argo Navis en un gasto compartido (0–1). */
 	argoPct?: number
-	/** Destino del reparto (solo para kind = "reparto"). */
+	/** Destino del reparto (kind = "reparto") o a quién se le devolvió (kind = "reembolso"). */
 	destino?: string
 	imported?: boolean
 	createdAt: number
@@ -146,7 +148,7 @@ export const DEFAULT_FIN: FinSettings = {
  * crecimiento. Es un punto de partida: los porcentajes se ajustan en el panel.
  */
 export const COMBINED_REPARTO: Pick<FinSettings, "reparto" | "fixed" | "goalIndex"> = {
-	fixed: [{ name: "Vivienda Mau", monthly: 0, desc: "Renta de Mau en La Paz: pon el monto mensual" }],
+	fixed: [{ name: "Sostén de Mau", monthly: 0, desc: "Renta y gastos de vida de Mau en La Paz: pon el monto mensual" }],
 	reparto: [
 		{ name: "Impuestos (apartado)", pct: 0.1, desc: "Para IVA/ISR: ajústalo con su contador" },
 		{ name: "Fondo de emergencia", pct: 0.1, desc: "Meta: unos 3 meses de gastos fijos (temporada baja)" },
@@ -273,6 +275,7 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 	const repartoReal = settings.reparto.map(() => 0)
 	const otherReparto: Record<string, number> = {}
 	const contributions: Record<string, number> = {}
+	const refunds: Record<string, number> = {}
 	let argoShare = 0
 	let argoPaid = 0
 	for (const e of expenses) {
@@ -282,6 +285,11 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		const payer = payerOf(e)
 		if (k === "pagoArgo") {
 			argoPaid += e.total || 0
+			continue
+		}
+		if (k === "reembolso") {
+			const who = (e.destino || "Sin nombre").trim()
+			refunds[who] = (refunds[who] ?? 0) + (e.total || 0)
 			continue
 		}
 		if (k === "reparto") {
@@ -353,6 +361,7 @@ export function yearSummary(bookings: FinBooking[], expenses: Expense[], setting
 		repartoReal,
 		otherReparto,
 		contributions,
+		refunds,
 		argo: { share: argoShare, paid: argoPaid, owes: Math.max(0, argoShare - argoPaid) },
 		goal: { saved: goalSaved, planned: goalPlanned, left: goalLeft, pctMin: settings.goalMin ? goalSaved / settings.goalMin : 0, pctMax: settings.goalMax ? goalSaved / settings.goalMax : 0, profitNeededMonthly, salesNeededMonthly, toursNeededMonthly: ticket ? salesNeededMonthly / ticket : 0 },
 		scenarios,
