@@ -1675,6 +1675,14 @@ body.has-book-bar .wa-float { bottom: 94px; }
 .xmap-item-price { color: var(--teal); font-size: 13px; font-weight: 700; }
 .xmap-item-more { display: flex; flex-direction: column; gap: 4px; padding: 10px 14px 4px; color: var(--sand-dim); font-size: 13px; }
 .xmap-empty { color: var(--sand-dim); font-size: 14px; padding: 12px 4px; }
+.xmap-month-result { color: var(--teal); font-size: 14px; font-weight: 600; margin: -8px 0 16px; }
+.xmap-item.out { opacity: .5; }
+.xmap-item.out:hover, .xmap-item.out.on { opacity: .85; }
+.xmap-item-out { color: var(--sand-dim); font-size: 12.5px; font-weight: 600; }
+.xmap-list { scrollbar-width: thin; scrollbar-color: rgba(244,239,228,0.22) transparent; }
+.xmap-list::-webkit-scrollbar { width: 6px; }
+.xmap-list::-webkit-scrollbar-track { background: transparent; }
+.xmap-list::-webkit-scrollbar-thumb { background: rgba(244,239,228,0.22); border-radius: 999px; }
 @media (max-width: 900px) {
   .xmap-home { padding: 60px 20px; }
   .xmap-home-grid { grid-template-columns: 1fr; }
