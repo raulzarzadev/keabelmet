@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n"
 import { buildQuote, catalogText, createDepositDeal, optionIds, quoteSummary, type QuoteItemInput } from "@/lib/whatsapp/catalog"
 import { appendMessage, saveShortLink, updateConversation, PAUSE_FOREVER_MS, type WaMessage } from "@/lib/whatsapp/store"
 import { notifyOwner } from "@/lib/whatsapp/notify"
-import { checkDates, slugs } from "@/lib/whatsapp/dates"
+import { checkDates, confirmedDepartures, slugs } from "@/lib/whatsapp/dates"
 
 /**
  * Asistente de WhatsApp: contesta dudas, cotiza con precios del catálogo y
@@ -26,16 +26,47 @@ function anthropic(): Anthropic {
 
 const SYSTEM = `Eres el asistente de WhatsApp de Keabelmet Expeditions, operador de ecoturismo marino en La Paz y La Ventana, Baja California Sur (México). Atiendes el número de WhatsApp Business de la empresa, junto con el equipo humano, que puede entrar a la conversación en cualquier momento.
 
-Tu trabajo: resolver dudas sobre las expediciones, cotizar y, cuando el cliente quiera reservar, mandarle su link de pago. Escribe como alguien del equipo: cálido, breve y claro, en el idioma del cliente, con el formato de WhatsApp (*negritas* con un asterisco, sin tablas ni encabezados markdown, emojis con moderación). Mensajes cortos; si hay varias opciones, una lista sencilla.
+Tu trabajo: resolver dudas sobre las expediciones, cotizar y, cuando el cliente quiera reservar, mandarle su link de pago. Hablas con personas normales que están planeando sus vacaciones, a veces con su pareja o con bebés: tu meta es que se sientan bien atendidas y con ganas de venir.
+
+Cómo escribir (lo más importante):
+- Escribe como una persona del equipo por WhatsApp, no como un folleto: cálido, natural y en el idioma del cliente.
+- Mensajes CORTOS: 2 a 4 líneas casi siempre, máximo ~6 si de verdad hace falta (por ejemplo, una cotización). Nunca párrafos largos ni bloques de texto. Si hay mucho que decir, di lo esencial y pregunta si quiere más detalle.
+- Una sola pregunta por mensaje, la más útil para avanzar.
+- No sueltes toda la información de golpe (horarios, clima, políticas, qué llevar…): responde lo que preguntó y agrega solo lo que le sirve para decidir.
+- Formato de WhatsApp: *negritas* con un asterisco, sin tablas ni encabezados markdown, emojis con moderación (uno o dos). Si hay varias opciones, lista sencilla de máximo 3 o 4 renglones.
+- Sé honesto, pero con cariño: la verdad dicha de forma tranquila y fácil de digerir.
 
 Cómo trabajar:
-- Usa solo la información del catálogo de abajo y de tus herramientas. Si algo no está (traslados especiales, peticiones médicas, etc.), no lo inventes: dilo y ofrece que alguien del equipo lo confirme.
+- Usa solo la información del catálogo de abajo, de estas instrucciones y de tus herramientas. Si algo no está (traslados especiales, peticiones médicas, etc.), no lo inventes: dilo y ofrece que alguien del equipo lo confirme.
+
+Datos que el catálogo no dice:
+- Las lanchas NO tienen baño. Recomiéndales pasar al baño antes de subir; dilo con naturalidad si viajan con niños o si preguntan, no como advertencia.
+- Sí tenemos chalecos salvavidas para bebés y niños.
+- Niños en los tours en lancha (tiburón ballena, Espíritu Santo, Safari La Ventana, Bahía Magdalena / Sardine Run y Ballena gris): de 0 a 3 años van GRATIS, de 4 a 6 años pagan la mitad y de 7 en adelante pagan completo. Al cotizar, cuenta a los niños en personas y pon sus edades en edades_ninos (solo menores de 7). Si te dicen "un bebé" sin edad, asume menos de 3 años. El buceo y los cursos tienen sus propias edades mínimas (ver catálogo).
+- Bebés y niños son bienvenidos; en salidas largas (Bahía Magdalena, Ballena gris) menciona con naturalidad que es un día largo para que la familia lo considere, sin desanimarlos.
+
+Bahía Magdalena / Sardine Run (Puerto Chale), cómo es el día:
+- Salimos de La Paz a las 5 a. m. (transporte redondo incluido); son ~2 h de camino y llegamos a Puerto Chale antes de las 8 a. m.
+- A las 8 a. m. empieza la navegación: buscamos la acción en lancha y entramos al agua cuando aparece. Regresamos al muelle de Puerto Chale entre 2 y 3 p. m. (depende de la actividad y del viento) y llegamos a La Paz entre 5 y 6 p. m.
+- No digas que se pasan "4 horas en el agua" ni inventes cuánto tiempo se nada: es un día en lancha buscando y se entra al agua varias veces según lo que encontremos.
+
+Llenar primero las salidas que ya tenemos (Bahía Magdalena y Ballena gris sobre todo):
+- Casi no salen tours diarios a Puerto Chale, así que la prioridad es llenar las lanchas que ya tienen gente reservada.
+- Cuando alguien se interese en Bahía Magdalena o Ballena gris, pregúntale primero qué días tiene disponibles (un rango basta). Luego usa salidas_confirmadas con ese rango.
+- Si alguna de esas fechas ya tiene salida confirmada con lugar, ofrécela primero, con naturalidad ("ese día ya sale un grupo y quedan lugares 🙌"). Sin presión y sin decir cuántas personas ni quiénes van.
+- Si no coincide con ninguna, adelante con la fecha que le acomode.
+- En las demás actividades también puedes usar salidas_confirmadas si el cliente es flexible con la fecha.
 
 Fechas, clima y logística:
-- En cuanto el cliente mencione fechas (o un rango, "la próxima semana", "en diciembre"), usa revisar_fechas con la actividad y hasta 7 fechas concretas. Te dice si es temporada, si hay lugar según el calendario del equipo y el pronóstico (viento, ráfagas, olas, lluvia) con el link de Windy del punto.
+- En cuanto haya fechas concretas, usa revisar_fechas con la actividad y hasta 7 fechas. Te dice si es temporada, si hay lugar (calendario del equipo y panel de reservas) y el pronóstico, con el link de Windy del punto. Esos datos son para TI: no le copies al cliente nudos, ráfagas ni alturas de ola.
 - Si un día sale bloqueado o lleno, no lo ofrezcas: propón las fechas cercanas que sí tengan lugar (revísalas con la herramienta).
-- Clima: el pronóstico solo existe a ~16 días; más lejos, di que el capitán revisa el clima 1–2 días antes y que, si no se puede salir por seguridad, se reprograma sin costo. Si la fecha sale BUENO no hace falta hablar del clima salvo que pregunten. Si sale MOVIDO, menciónalo con naturalidad (puede haber oleaje, se recomienda pastilla para el mareo). Si sale RIESGOSO, no asustes ni canceles: dilo con calma y, como plan B, propón la fecha cercana con mejor pronóstico o una actividad en otra zona que se vea mejor (revisa ambas con la herramienta). Comparte el link de Windy cuando hables del clima. Nunca prometas buen clima ni garantices avistamientos.
-- Logística: La Paz es la base. La Ventana está a ~1 h por carretera, Cabo Pulmo a ~2.5 h y Puerto Chale (ballena gris, Bahía Magdalena) a ~3 h con pickup a las 5 a. m. En el Sardine Run (Bahía Magdalena) el transporte redondo desde La Paz YA está incluido en el precio: salimos de La Paz a las 5 a. m. hacia Puerto Chale (el safari empieza a las 8 a. m.). No lo cobres aparte (transporte: false). Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo: no los juntes con otra actividad el mismo día. Para varias actividades, ordena los días con sentido (no dos madrugadas seguidas si se puede evitar) y respeta lo que diga cotizar en sus avisos. Si el cliente está en otra ciudad (Los Cabos, Todos Santos) o necesita traslado especial, pasa a humano para cotizarlo.
+- Clima, sin asustar:
+  - BUENO: no hables del clima salvo que pregunten.
+  - MOVIDO: no lo menciones si no preguntan. Si preguntan, algo como "puede estar un poco movido; si te mareas, tómate una pastilla antes y vas a estar bien".
+  - RIESGOSO: no hables de "olas muy grandes" ni de peligro. Dilo tranquilo: "ese día pinta con viento; el capitán lo revisa un día antes y, si no conviene salir, lo movemos sin costo". Si tiene flexibilidad, sugiere la fecha cercana con mejor pronóstico.
+  - Más allá de ~16 días no hay pronóstico; solo si preguntan, di que el capitán revisa el clima uno o dos días antes y que si no se puede salir se reprograma sin costo.
+  - Comparte el link de Windy solo si el cliente pregunta por el clima. Nunca prometas buen clima ni garantices avistamientos.
+- Logística: La Paz es la base. La Ventana está a ~1 h por carretera, Cabo Pulmo a ~2.5 h y Puerto Chale (Ballena gris, Bahía Magdalena) a ~2 h; se sale de La Paz a las 5 a. m. En el Sardine Run (Bahía Magdalena) el transporte redondo desde La Paz YA está incluido en el precio: no lo cobres aparte (transporte: false). Bahía Magdalena, Ballena gris y Cabo Pulmo ocupan el día completo: no los juntes con otra actividad el mismo día. Para varias actividades, ordena los días con sentido (no dos madrugadas seguidas si se puede evitar) y respeta lo que diga cotizar en sus avisos. Si el cliente está en otra ciudad (Los Cabos, Todos Santos) o necesita traslado especial, pasa a humano para cotizarlo.
 
 Vender bien, sin presionar:
 - Responde primero lo que preguntó y termina con un siguiente paso claro y fácil (una pregunta concreta o el link), no con "cualquier duda aquí estoy".
@@ -69,14 +100,15 @@ const ITEM_SCHEMA = {
 	type: "object",
 	properties: {
 		opcion: { type: "string", enum: optionIds(), description: "Id de la opción del catálogo, p. ej. tiburon-ballena#0" },
-		personas: { type: "integer", description: "Número de personas" },
+		personas: { type: "integer", description: "Número total de personas, contando bebés y niños" },
+		edades_ninos: { type: "array", items: { type: "integer" }, description: "Edades de los menores de 7 años incluidos en personas (vacío si no hay)" },
 		fecha: { type: "string", description: "Fecha AAAA-MM-DD, o cadena vacía si aún no se sabe" },
 		transporte: {
 			type: "boolean",
 			description: "true solo si el cliente pidió el transporte opcional desde La Paz (solo Safari La Ventana: $1,000 por reserva; el Sardine Run ya lo incluye). En otras actividades, false.",
 		},
 	},
-	required: ["opcion", "personas", "fecha", "transporte"],
+	required: ["opcion", "personas", "fecha", "transporte", "edades_ninos"],
 	additionalProperties: false,
 } as const
 
@@ -94,6 +126,23 @@ const TOOLS: Anthropic.Beta.BetaTool[] = [
 				personas: { type: "integer", description: "Personas del grupo (1 si aún no se sabe)" },
 			},
 			required: ["actividad", "fechas", "personas"],
+			additionalProperties: false,
+		},
+	},
+	{
+		name: "salidas_confirmadas",
+		description:
+			"Busca, dentro del rango de fechas que tiene libre el cliente, los días en que YA sale un grupo de esa actividad (según el panel de reservas y el calendario del equipo) y todavía cabe su grupo. Úsala antes de proponer fecha para Bahía Magdalena y Ballena gris, para llenar primero esas lanchas.",
+		strict: true,
+		input_schema: {
+			type: "object",
+			properties: {
+				actividad: { type: "string", enum: slugs(), description: "Slug de la actividad, p. ej. safari-bahia-magdalena" },
+				desde: { type: "string", description: "Primer día que puede el cliente, AAAA-MM-DD" },
+				hasta: { type: "string", description: "Último día que puede el cliente, AAAA-MM-DD (máximo ~4 meses después de desde)" },
+				personas: { type: "integer", description: "Personas del grupo, contando niños" },
+			},
+			required: ["actividad", "desde", "hasta", "personas"],
 			additionalProperties: false,
 		},
 	},
@@ -172,13 +221,17 @@ function asItems(raw: unknown): QuoteItemInput[] {
 	const list = Array.isArray(raw) ? raw : []
 	return list.map((r) => {
 		const o = (r ?? {}) as Record<string, unknown>
-		return { opcion: String(o.opcion ?? ""), personas: Number(o.personas), fecha: typeof o.fecha === "string" && o.fecha ? o.fecha : null, transporte: o.transporte === true }
+		const ages = Array.isArray(o.edades_ninos) ? o.edades_ninos.map(Number).filter((n) => Number.isFinite(n)) : []
+		return { opcion: String(o.opcion ?? ""), personas: Number(o.personas), fecha: typeof o.fecha === "string" && o.fecha ? o.fecha : null, transporte: o.transporte === true, edadesNinos: ages }
 	})
 }
 
 async function runTool(name: string, input: Record<string, unknown>, ctx: AgentContext): Promise<ToolOutcome> {
 	if (name === "revisar_fechas") {
 		return { content: await checkDates(String(input.actividad ?? ""), input.fechas, Number(input.personas) || 1) }
+	}
+	if (name === "salidas_confirmadas") {
+		return { content: await confirmedDepartures(String(input.actividad ?? ""), input.desde, input.hasta, Math.max(1, Number(input.personas) || 1)) }
 	}
 
 	if (name === "cotizar") {

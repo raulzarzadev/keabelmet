@@ -1,4 +1,5 @@
 import { getSeason } from "@/lib/expedition-seasons"
+import { kvConfigured, listBookings } from "@/lib/bookings"
 
 /**
  * Disponibilidad desde Google Calendar, leída por la "dirección secreta en
@@ -150,8 +151,39 @@ export function availabilityFrom(events: CalEvent[] | null, slug: string, dates:
 	})
 }
 
+/** Personas reservadas por día en el panel de reservas (Stripe + capturadas a mano). */
+async function panelPeople(slug: string): Promise<Map<string, number> | null> {
+	try {
+		if (!kvConfigured()) return null
+		const out = new Map<string, number>()
+		for (const b of await listBookings()) {
+			if (b.status !== "active" || b.activity !== slug || !b.people) continue
+			out.set(b.dateISO, (out.get(b.dateISO) ?? 0) + b.people)
+		}
+		return out
+	} catch (err) {
+		console.error("[whatsapp] panel de reservas", err)
+		return null
+	}
+}
+
+/**
+ * Calendario + panel de reservas. La misma reserva puede estar en los dos,
+ * así que por día se toma el mayor de ambos conteos (no se suman).
+ */
 export async function availabilityFor(slug: string, dates: string[]): Promise<DayAvailability[]> {
-	return availabilityFrom(await loadEvents(), slug, dates)
+	const [events, panel] = await Promise.all([loadEvents(), panelPeople(slug)])
+	const base = availabilityFrom(events, slug, dates)
+	if (!panel) return base
+	return base.map((a) => ({ ...a, known: true, bookedPeople: Math.max(a.bookedPeople, panel.get(a.date) ?? 0) }))
+}
+
+/** Días entre desde y hasta (máx. 120) en que ya sale un grupo de esa actividad y aún cabe gente. */
+export async function departuresWithRoom(slug: string, from: string, to: string, people: number): Promise<DayAvailability[]> {
+	const dates: string[] = []
+	for (let d = from; d <= to && dates.length < 120; d = addDays(d, 1)) dates.push(d)
+	const all = await availabilityFor(slug, dates)
+	return all.filter((a) => a.bookedPeople > 0 && !a.blocked && !a.full && a.bookedPeople + people <= a.maxPeople)
 }
 
 export function describeAvailability(a: DayAvailability, people: number): string {
@@ -160,6 +192,7 @@ export function describeAvailability(a: DayAvailability, people: number): string
 	if (a.full) return "LLENO ese día"
 	if (a.bookedPeople && a.bookedPeople + people > a.maxPeople)
 		return `ya hay ${a.bookedPeople} personas anotadas (máximo ${a.maxPeople} por salida): el equipo debe confirmar si cabe el grupo`
-	if (a.bookedPeople) return `con lugar (ya hay ${a.bookedPeople} personas anotadas; salida confirmada con grupo)`
+	if (a.bookedPeople)
+		return `con lugar y SALIDA YA CONFIRMADA (ya van ${a.bookedPeople} personas, quedan ${a.maxPeople - a.bookedPeople} lugares): fecha prioritaria para ofrecer`
 	return "con lugar (sin reservas anotadas aún)"
 }
