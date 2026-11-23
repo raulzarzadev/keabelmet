@@ -1,6 +1,6 @@
 import { experiences } from "@/constants/experiences"
 import { isDateInSeason, seasonLabel } from "@/lib/expedition-seasons"
-import { availabilityFor, describeAvailability } from "@/lib/whatsapp/availability"
+import { availabilityFor, departuresWithRoom, describeAvailability } from "@/lib/whatsapp/availability"
 import { describeForecast, forecastFor, FORECAST_DAYS, windyUrl } from "@/lib/whatsapp/weather"
 
 /** Herramienta revisar_fechas: temporada + calendario + clima en un solo paso. */
@@ -61,4 +61,25 @@ export async function checkDates(slug: string, rawDates: unknown, people: number
 	if (windy && forecastable.length) lines.push(`Mapa del clima en Windy: ${windy}`)
 	lines.push("(Viento en nudos en el horario de la actividad. Calificación orientativa: la salida la decide el capitán.)")
 	return lines.join("\n")
+}
+
+/**
+ * Herramienta salidas_confirmadas: días del rango del cliente en que ya sale un
+ * grupo de esa actividad y todavía cabe el suyo. Sirve para llenar primero las
+ * lanchas que ya salen (sobre todo Bahía Magdalena y Ballena gris).
+ */
+export async function confirmedDepartures(slug: string, rawFrom: unknown, rawTo: unknown, people: number): Promise<string> {
+	const exp = experiences.find((e) => e.slug === slug)
+	if (!exp) return `Actividad desconocida: ${slug}`
+	const iso = (v: unknown) => (typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) ? v : "")
+	const today = todayISO()
+	let from = iso(rawFrom) || today
+	if (from < today) from = today
+	const to = iso(rawTo) || from
+	if (to < from) return "El rango de fechas no es válido (desde debe ser antes de hasta)."
+	const found = (await departuresWithRoom(slug, from, to, people)).filter((a) => isDateInSeason(slug, a.date))
+	if (!found.length)
+		return `${exp.i18n.es.title}: no hay salidas ya confirmadas con lugar entre ${from} y ${to} para ${people} ${people === 1 ? "persona" : "personas"}. Ofrece la fecha que más le acomode al cliente (revísala con revisar_fechas).`
+	const lines = found.map((a) => `• ${weekday(a.date)} (${a.date}): ya van ${a.bookedPeople}, quedan ${a.maxPeople - a.bookedPeople} lugares`)
+	return [`${exp.i18n.es.title}: salidas YA CONFIRMADAS con lugar entre ${from} y ${to} (ofrécelas primero):`, ...lines, "Revisa el clima de la que elija con revisar_fechas."].join("\n")
 }

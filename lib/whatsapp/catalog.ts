@@ -146,10 +146,31 @@ export function catalogText(): string {
 
 export interface QuoteItemInput {
 	opcion: string
+	/** Total de personas, contando bebés y niños. */
 	personas: number
 	fecha?: string | null
 	/** Transporte opcional desde La Paz (solo expediciones que lo ofrecen). */
 	transporte?: boolean
+	/** Edades de los menores de 7 años incluidos en personas (para tarifa de niños). */
+	edadesNinos?: number[]
+}
+
+/**
+ * Tarifa de niños en los tours en lancha (precio por persona): de 0 a 3 años
+ * gratis, de 4 a 6 años mitad de precio, de 7 en adelante precio completo.
+ * Ajusta las edades aquí si cambia la política.
+ */
+export const KIDS_FREE_MAX_AGE = 3
+export const KIDS_HALF_MAX_AGE = 6
+const KIDS_PRICING = new Set(["tiburon-ballena", "safari-bahia-magdalena", "safari-la-ventana", "tour-ballena-gris", "tour-espiritu-santo"])
+
+function kidsBreakdown(slug: string, people: number, ages: number[] | undefined): { free: number; half: number; note?: string } {
+	const kids = (ages ?? []).filter((a) => Number.isFinite(a) && a >= 0 && a <= KIDS_HALF_MAX_AGE).slice(0, Math.max(0, people - 1))
+	if (!kids.length || !KIDS_PRICING.has(slug)) return { free: 0, half: 0 }
+	const free = kids.filter((a) => a <= KIDS_FREE_MAX_AGE).length
+	const half = kids.length - free
+	const parts = [free ? `${free} ${free === 1 ? "bebé gratis" : "bebés gratis"}` : "", half ? `${half} ${half === 1 ? "niño a mitad de precio" : "niños a mitad de precio"}` : ""].filter(Boolean)
+	return { free, half, note: parts.join(", ") }
 }
 
 export interface QuoteLine {
@@ -166,6 +187,10 @@ export interface QuoteLine {
 	netMxn: number
 	/** Renglón de transporte opcional (no lleva descuento de paquete). */
 	extra?: boolean
+	/** Personas que pagan precio completo (para paquetes). */
+	fullPayers?: number
+	/** "1 bebé gratis, 1 niño a mitad de precio". */
+	kidsNote?: string
 }
 
 export interface Quote {
@@ -216,7 +241,11 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 				return { ok: false, error: `${it.fecha} está fuera de temporada de ${opt.activity} (${seasonLabel(opt.slug, "es")}).` }
 			dateISO = it.fecha
 		}
-		const gross = opt.perBoat ? opt.amountMxn : opt.amountMxn * people
+		const kids = opt.perBoat ? { free: 0, half: 0 } : kidsBreakdown(opt.slug, people, it.edadesNinos)
+		const fullPayers = people - kids.free - kids.half
+		const gross = opt.perBoat ? opt.amountMxn : opt.amountMxn * fullPayers + Math.round(opt.amountMxn / 2) * kids.half
+		if (!opt.perBoat && !KIDS_PRICING.has(opt.slug) && (it.edadesNinos ?? []).some((a) => a < 7))
+			warnings.push(`${opt.activity}: no hay tarifa de niños y tiene edad mínima; revisa el catálogo o pásalo al equipo.`)
 		lines.push({
 			optionId: opt.id,
 			slug: opt.slug,
@@ -228,6 +257,8 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 			grossMxn: gross,
 			discountMxn: 0,
 			netMxn: gross,
+			fullPayers,
+			kidsNote: kids.note,
 		})
 	}
 
@@ -235,7 +266,8 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 	// para que cada renglón del link de pago muestre su monto neto.
 	const perPerson = lines.filter((l) => !l.perBoat)
 	const { applied } = computePackageDiscount(
-		perPerson.map((l) => ({ slug: l.slug, unitAmountMxn: l.unitMxn, people: l.people })),
+		// Los descuentos de paquete van solo sobre quienes pagan precio completo.
+		perPerson.map((l) => ({ slug: l.slug, unitAmountMxn: l.unitMxn, people: l.fullPayers ?? l.people })),
 		locale,
 	)
 	for (const pkg of applied) {
@@ -301,7 +333,13 @@ export function buildQuote(items: QuoteItemInput[], locale: Locale = "es"): Quot
 
 export function quoteSummary(q: Quote): string {
 	const rows = q.lines.map((l) => {
-		const qty = l.extra ? `${l.people} ${l.people === 1 ? "persona" : "personas"}` : l.perBoat ? "embarcación completa" : `${l.people} × ${mxn(l.unitMxn)}`
+		const qty = l.extra
+			? `${l.people} ${l.people === 1 ? "persona" : "personas"}`
+			: l.perBoat
+				? "embarcación completa"
+				: l.kidsNote
+					? `${l.people} personas (${l.kidsNote}) · ${mxn(l.unitMxn)} precio completo`
+					: `${l.people} × ${mxn(l.unitMxn)}`
 		const disc = l.discountMxn ? ` (−${mxn(l.discountMxn)} ${l.discountLabel})` : ""
 		return `• ${l.label}${l.dateISO ? ` · ${l.dateISO}` : ""}: ${qty} = ${mxn(l.netMxn)}${disc}`
 	})
@@ -325,7 +363,7 @@ export function createDepositDeal(q: Quote, customerName: string, locale: Locale
 	const lines: DealLine[] = q.lines.map((l) => ({
 		label: [
 			l.label,
-			l.perBoat && !l.extra ? "embarcación" : `${l.people} ${l.people === 1 ? "persona" : "personas"}`,
+			l.perBoat && !l.extra ? "embarcación" : `${l.people} ${l.people === 1 ? "persona" : "personas"}${l.kidsNote ? ` (${l.kidsNote})` : ""}`,
 			l.dateISO,
 			l.discountLabel,
 		]
