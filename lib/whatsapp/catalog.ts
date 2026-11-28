@@ -156,11 +156,11 @@ export interface QuoteItemInput {
 }
 
 /**
- * Tarifa de niños en los tours en lancha (precio por persona): de 0 a 3 años
- * gratis, de 4 a 6 años mitad de precio, de 7 en adelante precio completo.
+ * Tarifa de niños en los tours en lancha (precio por persona): menores de 3
+ * años gratis, de 3 a 6 años mitad de precio, de 7 en adelante precio completo.
  * Ajusta las edades aquí si cambia la política.
  */
-export const KIDS_FREE_MAX_AGE = 3
+export const KIDS_FREE_MAX_AGE = 2
 export const KIDS_HALF_MAX_AGE = 6
 const KIDS_PRICING = new Set(["tiburon-ballena", "safari-bahia-magdalena", "safari-la-ventana", "tour-ballena-gris", "tour-espiritu-santo"])
 
