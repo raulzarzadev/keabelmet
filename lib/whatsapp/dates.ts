@@ -51,7 +51,7 @@ export async function checkDates(slug: string, rawDates: unknown, people: number
 		const a = avail.find((x) => x.date === d)
 		const f = forecast?.find((x) => x.date === d)
 		const clima = f
-			? describeForecast(f)
+			? describeForecast(f, slug)
 			: daysBetween(today, d) >= FORECAST_DAYS
 				? "aún sin pronóstico (muy lejano; el capitán lo revisa 1–2 días antes)"
 				: "pronóstico no disponible por ahora"

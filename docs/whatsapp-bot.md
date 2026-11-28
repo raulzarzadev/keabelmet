@@ -28,7 +28,11 @@ Cliente ──WhatsApp──▶ Meta ──webhook──▶ /api/whatsapp/webhoo
 ## Fechas, clima y logística
 
 - **Clima:** para cada fecha (hasta 16 días adelante) el bot consulta viento, ráfagas, oleaje y lluvia en el punto de la actividad y en su horario, con **Open-Meteo** (gratis, mismos modelos que Windy: ECMWF, GFS, ICON). Califica el día como BUENO, MOVIDO o RIESGOSO y le manda al cliente el link de **Windy** de ese punto. Con RIESGOSO propone otra fecha o actividad (plan B); nunca cancela: la salida la decide el capitán.
-  - Umbrales orientativos (`lib/whatsapp/weather.ts`): MOVIDO si viento > 12 nudos, ráfagas > 18 u olas > 1 m; RIESGOSO si viento > 18, ráfagas > 25 u olas > 1.8 m. Ajústalos ahí si los capitanes usan otros.
+  - Cómo califica (criterio de los capitanes, en `SPOTS` de `lib/whatsapp/weather.ts`): manda el **viento sostenido de la mañana** (de la salida a las 11 h). Si entre 10 y 11 pinta bien, el día pinta bien; lo que sube después de mediodía se informa, pero no cambia la calificación.
+    - Tiburón ballena, Espíritu Santo y buceo en La Paz: tranquilo hasta 8 nudos, movido desde 9, no se sale desde 14.
+    - La Ventana, Bahía Magdalena y Ballena gris: tranquilo hasta 8, no se sale desde 12. Cabo Pulmo: no se sale desde 13.
+    - Viento del oeste en el Golfo (lo tapa la tierra): se toleran 4 nudos más. Viento del norte en Bahía Magdalena: 2 nudos menos.
+    - Ráfagas y olas son respaldo nuestro, porque los capitanes no usan cifras: ráfagas 10 nudos arriba del límite pasan a RIESGOSO. Olas en el Golfo: movido > 1 m, riesgoso > 1.8 m. En el Pacífico cuenta el periodo: mar de fondo largo (≥ 11 s) pesa menos, ola corta (< 8 s) pesa más; movido > 2 m, riesgoso > 3 m. En Ballena gris (dentro del estero) no se cuentan olas.
   - Puntos y horarios de cada actividad: `SPOTS` en el mismo archivo.
   - No se usa la API de Windy directo: la llave gratis devuelve datos alterados a propósito (solo para pruebas) y la real cuesta 990 € al año.
 - **Disponibilidad (Google Calendar):** el bot lee el calendario de salidas del equipo. Cómo anotar los eventos:
