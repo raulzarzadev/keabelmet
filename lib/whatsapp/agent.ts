@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n"
 import { buildQuote, catalogText, createDepositDeal, optionIds, quoteSummary, type QuoteItemInput } from "@/lib/whatsapp/catalog"
 import { appendMessage, saveShortLink, updateConversation, PAUSE_FOREVER_MS, type WaMessage } from "@/lib/whatsapp/store"
 import { notifyOwner } from "@/lib/whatsapp/notify"
-import { checkDates, confirmedDepartures, slugs } from "@/lib/whatsapp/dates"
+import { checkDates, confirmedDepartures, shortNoticeIssue, slugs } from "@/lib/whatsapp/dates"
 
 /**
  * Asistente de WhatsApp: contesta dudas, cotiza con precios del catálogo y
@@ -64,6 +64,7 @@ Llenar primero las salidas que ya tenemos (Bahía Magdalena y Ballena gris sobre
 
 Fechas, clima y logística:
 - En cuanto haya fechas concretas, usa revisar_fechas con la actividad y hasta 7 fechas. Te dice si es temporada, si hay lugar (calendario del equipo y panel de reservas) y el pronóstico, con el link de Windy del punto. Esos datos son para TI: no le copies al cliente nudos, ráfagas ni alturas de ola.
+- Bahía Magdalena / Sardine Run sale con mínimo 4 personas. Si la fecha es hoy o mañana (menos de 2 días) y no se juntan 4 con las reservas que ya hay, no confirmes ni mandes link: dile con calma que lo revisas con el equipo y usa pasar_a_humano. Con 2 días o más de anticipación, adelante normal. Las demás actividades salen siempre que el clima lo permita, sin mínimo.
 - Nunca digas que una salida está confirmada o que "sí sale" un día si revisar_fechas o salidas_confirmadas no lo muestran como salida confirmada. Si el cliente tiene que cancelar o mover otra cosa para venir, dile con claridad que la salida aún no está confirmada y pasa a humano para que el equipo la confirme.
 - Si un día sale bloqueado o lleno, no lo ofrezcas: propón las fechas cercanas que sí tengan lugar (revísalas con la herramienta).
 - Clima, sin asustar:
@@ -250,6 +251,11 @@ async function runTool(name: string, input: Record<string, unknown>, ctx: AgentC
 		const q = buildQuote(asItems(input.actividades), ctx.locale)
 		if (!q.ok) return { content: q.error, isError: true }
 		if (q.lines.some((l) => !l.dateISO)) return { content: "Falta la fecha de alguna actividad; pídesela al cliente.", isError: true }
+		for (const l of q.lines) {
+			if (l.extra || !l.dateISO) continue
+			const rush = await shortNoticeIssue(l.slug, l.dateISO, l.people)
+			if (rush) return { content: rush, isError: true }
+		}
 		const customer = String(input.nombre_cliente ?? "").trim() || ctx.name || ""
 		if (!customer) return { content: "Falta el nombre del cliente.", isError: true }
 		const deposit = input.anticipo === true && q.depositAllowed

@@ -8,6 +8,26 @@ import { describeForecast, forecastFor, FORECAST_DAYS, windyUrl } from "@/lib/wh
 const TZ = "America/Mazatlan"
 const MAX_DATES = 7
 
+/**
+ * Bahía Magdalena sale con mínimo 4 personas. Con menos de 2 días de anticipación
+ * el equipo tiene que revisar si junta el grupo: el bot no confirma ni cobra.
+ * (Las demás actividades salen siempre que el clima lo permita.)
+ */
+export const SHORT_NOTICE: Record<string, { minPeople: number; days: number }> = {
+	"safari-bahia-magdalena": { minPeople: 4, days: 2 },
+}
+
+/** Si la fecha es de último minuto y el grupo no llega al mínimo, devuelve el aviso; si no, null. */
+export async function shortNoticeIssue(slug: string, date: string, people: number): Promise<string | null> {
+	const rule = SHORT_NOTICE[slug]
+	if (!rule) return null
+	if (daysBetween(todayISO(), date) >= rule.days) return null
+	const [a] = await availabilityFor(slug, [date])
+	const total = (a?.bookedPeople ?? 0) + people
+	if (total >= rule.minPeople) return null
+	return `ÚLTIMO MINUTO: faltan menos de ${rule.days} días y la salida necesita mínimo ${rule.minPeople} personas (con este grupo serían ${total}). No confirmes ni mandes link de pago: dile al cliente que lo revisas con el equipo y usa pasar_a_humano.`
+}
+
 export function slugs(): string[] {
 	return experiences.map((e) => e.slug)
 }
@@ -55,7 +75,8 @@ export async function checkDates(slug: string, rawDates: unknown, people: number
 			: daysBetween(today, d) >= FORECAST_DAYS
 				? "aún sin pronóstico (muy lejano; el capitán lo revisa 1–2 días antes)"
 				: "pronóstico no disponible por ahora"
-		lines.push(`• ${weekday(d)} (${d}): ${a ? describeAvailability(a, people) : "sin dato de calendario"}. Clima: ${clima}.`)
+		const rush = await shortNoticeIssue(slug, d, people)
+		lines.push(`• ${weekday(d)} (${d}): ${a ? describeAvailability(a, people) : "sin dato de calendario"}. Clima: ${clima}.${rush ? ` ${rush}` : ""}`)
 	}
 	const windy = windyUrl(slug)
 	if (windy && forecastable.length) lines.push(`Mapa del clima en Windy: ${windy}`)
