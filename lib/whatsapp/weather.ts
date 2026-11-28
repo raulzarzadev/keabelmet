@@ -1,8 +1,10 @@
 /**
  * Pronóstico por actividad para el bot de WhatsApp.
  *
- * Datos: Open-Meteo (gratis, sin llave; usa los mismos modelos globales que
- * Windy: ECMWF, GFS, ICON) para viento, ráfagas, lluvia y oleaje. El link de
+ * Datos: Open-Meteo (gratis, sin llave). El viento sale del modelo ECMWF, el
+ * mismo que Windy muestra por defecto (el "best match" de Open-Meteo en esta
+ * zona usa GFS y daba días tranquilos que en Windy salían fuertes). Si ECMWF
+ * falla, se usa el best match. Lluvia, temperatura y oleaje: best match. El link de
  * Windy del punto se comparte solo si el cliente pregunta por el clima.
  *
  * El bot nunca cancela ni confirma por el clima: informa y, si se ve mal,
@@ -72,6 +74,9 @@ const NORTH_PENALTY_KN = 2
 const MORNING_END_HOUR = 11
 /** Ráfagas: solo pasan a RIESGOSO si superan el límite de la zona por esto. */
 const GUST_MARGIN_KN = 10
+
+/** Modelo de viento (el de Windy por defecto). */
+const WIND_MODEL = "ecmwf_ifs025"
 
 /** Más allá de esto Open-Meteo ya no da pronóstico. */
 export const FORECAST_DAYS = 16
@@ -171,13 +176,15 @@ export async function forecastFor(slug: string, dates: string[]): Promise<DayFor
 	const sorted = [...dates].sort()
 	const range = `start_date=${sorted[0]}&end_date=${sorted[sorted.length - 1]}`
 	const base = `latitude=${spot.lat}&longitude=${spot.lon}&timezone=${encodeURIComponent(TZ)}&${range}`
-	const [weather, marine] = await Promise.all([
-		getJson(
-			`https://api.open-meteo.com/v1/forecast?${base}&hourly=wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation_probability,temperature_2m&wind_speed_unit=kn`,
-		),
+	const windVars = "hourly=wind_speed_10m,wind_gusts_10m,wind_direction_10m&wind_speed_unit=kn"
+	const [ecmwf, weather, marine] = await Promise.all([
+		getJson(`https://api.open-meteo.com/v1/forecast?${base}&${windVars}&models=${WIND_MODEL}`),
+		getJson(`https://api.open-meteo.com/v1/forecast?${base}&hourly=wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation_probability,temperature_2m&wind_speed_unit=kn`),
 		spot.waves ? getJson(`https://marine-api.open-meteo.com/v1/marine?${base}&hourly=wave_height,wave_period`) : Promise.resolve(null),
 	])
 	if (!weather?.hourly) return null
+	const hasEcmwf = (ecmwf?.hourly?.wind_speed_10m ?? []).some((v) => typeof v === "number")
+	const windSrc = hasEcmwf ? ecmwf!.hourly : weather.hourly
 
 	const morningEnd = Math.min(spot.toHour, MORNING_END_HOUR)
 	const pick = (h: Hourly | undefined, key: string, date: string, from: number, to: number): (number | null)[] => {
@@ -192,16 +199,16 @@ export async function forecastFor(slug: string, dates: string[]): Promise<DayFor
 
 	return dates.map((date) => {
 		const am = (h: Hourly | undefined, key: string) => pick(h, key, date, spot.fromHour, morningEnd)
-		const wind = am(weather.hourly, "wind_speed_10m")
+		const wind = am(windSrc, "wind_speed_10m")
 		const windKn = maxOf(wind)
-		const afternoonKn = morningEnd < spot.toHour ? maxOf(pick(weather.hourly, "wind_speed_10m", date, morningEnd + 1, spot.toHour)) : null
-		const gustKn = maxOf(am(weather.hourly, "wind_gusts_10m"))
+		const afternoonKn = morningEnd < spot.toHour ? maxOf(pick(windSrc, "wind_speed_10m", date, morningEnd + 1, spot.toHour)) : null
+		const gustKn = maxOf(am(windSrc, "wind_gusts_10m"))
 		const waves = am(marine?.hourly, "wave_height")
 		const waveM = maxOf(waves)
 		const iWave = waveM == null ? -1 : waves.indexOf(waveM)
 		const period = iWave >= 0 ? am(marine?.hourly, "wave_period")[iWave] : null
 		// Dirección a la hora de más viento de la mañana.
-		const dirs = am(weather.hourly, "wind_direction_10m")
+		const dirs = am(windSrc, "wind_direction_10m")
 		const iMax = windKn == null ? -1 : wind.indexOf(windKn)
 		const dir = iMax >= 0 ? dirs[iMax] : null
 		const f = {

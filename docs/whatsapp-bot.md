@@ -27,7 +27,7 @@ Cliente ──WhatsApp──▶ Meta ──webhook──▶ /api/whatsapp/webhoo
 
 ## Fechas, clima y logística
 
-- **Clima:** para cada fecha (hasta 16 días adelante) el bot consulta viento, ráfagas, oleaje y lluvia en el punto de la actividad y en su horario, con **Open-Meteo** (gratis, mismos modelos que Windy: ECMWF, GFS, ICON). Califica el día como BUENO, MOVIDO o RIESGOSO y le manda al cliente el link de **Windy** de ese punto. Con RIESGOSO propone otra fecha o actividad (plan B); nunca cancela: la salida la decide el capitán.
+- **Clima:** para cada fecha (hasta 16 días adelante) el bot consulta viento, ráfagas, oleaje y lluvia en el punto de la actividad y en su horario, con **Open-Meteo** (gratis). El viento sale del modelo **ECMWF**, el mismo que Windy muestra por defecto; el modelo automático de Open-Meteo usa GFS en esta zona y no coincidía con Windy. Califica el día como BUENO, MOVIDO o RIESGOSO y le manda al cliente el link de **Windy** de ese punto. Con RIESGOSO propone otra fecha o actividad (plan B); nunca cancela: la salida la decide el capitán.
   - Cómo califica (criterio de los capitanes, en `SPOTS` de `lib/whatsapp/weather.ts`): manda el **viento sostenido de la mañana** (de la salida a las 11 h). Si entre 10 y 11 pinta bien, el día pinta bien; lo que sube después de mediodía se informa, pero no cambia la calificación.
     - Tiburón ballena, Espíritu Santo y buceo en La Paz: tranquilo hasta 8 nudos, movido desde 9, no se sale desde 14.
     - La Ventana, Bahía Magdalena y Ballena gris: tranquilo hasta 8, no se sale desde 12. Cabo Pulmo: no se sale desde 13.
